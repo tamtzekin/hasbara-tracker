@@ -1,0 +1,102 @@
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+function App() {
+  // Tag filtering function
+  const filterItems = (category, event) => { // Pass the event as an argument
+    // Get all items
+    const items = document.querySelectorAll('.filtered-item');
+
+    // Hide all items
+    items.forEach((item) => {
+      item.style.display = 'none';
+    });
+
+    // If the category is 'all', show all items
+    if (category === 'all') {
+      items.forEach((item) => {
+        item.style.display = 'block';
+      });
+    } else {
+      // Show only items with the selected category
+      const selectedItems = document.querySelectorAll('.' + category);
+      selectedItems.forEach((item) => {
+        item.style.display = 'block';
+      });
+    }
+
+    // Remove the 'active' class from all buttons
+    document.querySelectorAll('button').forEach((button) => {
+      button.classList.remove('active');
+    });
+
+    // Add the 'active' class to the clicked button
+    event.target.classList.add('active');
+  };
+
+  // Render page
+  return (
+    // render jsx
+    <>
+      <h1>
+        Hasbara Tracker
+        <span className="dots"></span>
+      </h1>
+      <div>
+        A database of Israeli state fabrications and unsubstantiated claims since 7 Oct 2023 and the ongoing genocide in Gaza.
+        <br />
+        <br />
+
+        {/* Filter buttons */}
+        <button onClick={(event) => filterItems('all', event)}>All</button>
+        <button onClick={(event) => filterItems('oct7', event)}>Oct 7</button>
+        <button onClick={(event) => filterItems('death', event)}>Death</button>
+        <button onClick={(event) => filterItems('hospitals', event)}>Hospitals</button>
+        <button onClick={(event) => filterItems('alahli', event)}>Al Ahli</button>
+        <button onClick={(event) => filterItems('fabricatedav', event)}>Fabricated audio and video</button>
+        <button onClick={(event) => filterItems('pallywood', event)}>Pallywood</button>
+        <button onClick={(event) => filterItems('documents', event)}>Documents and items</button>
+
+
+        {/* <button onClick={(event) => filterItems('category3', event)}>Category 3</button> */}
+
+        {/* Items to filter */}
+        <div className="filtered-item oct7 death">Claim: Forty beheaded babies</div>
+        <div className="filtered-item oct7">Claim: Fetus removed from pregnant woman</div>
+        <div className="filtered-item oct7">Claim: Babies hung on clotheslines</div>
+        <div className="filtered-item oct7">Claim: ‘Little Mary Janes’ and pink blood</div>
+        <div className="filtered-item oct7 documents">Claim: Hamas left an ISIS flag</div>
+
+        <div className="filtered-item death">Claim: Revisions of number of Israelis killed</div>
+
+        <div className="filtered-item hospitals">Claim: Israeli president denies it is striking Al-Shifa hospital</div>
+        <div className="filtered-item hospitals">Claim: Hamas tunnel found at the Qatari Hospital</div>
+
+        <div className="filtered-item alahli hospitals">Claim: Al-Ahli Hospital was hit by stray Islamic Jihad rockets fired from a cemetery</div>
+
+        <div className="filtered-item fabricatedav hospitals alahli">Claim: Hamas operatives discussing Palestinian Islamic Jihad's responsibility for the al-Ahli Arab Baptist Hospital massacre</div>
+        
+        <div className="filtered-item fabricatedav">Claim: Nurse at Al-Shifa Hospital blaming Hamas</div>
+      
+        <div className="filtered-item pallywood">Claim: Dead Palestinian children are dolls</div>
+        <div className="filtered-item pallywood">Claim: Saleh Aljafarawi is a propagandist / Mr FAFO
+</div>
+
+        <div className="filtered-item documents">Claim: Isaac Herzog says Mein Kampf found in child's bedroom</div>
+      </div>
+
+      <script>
+        {`
+          function filterItems(category, event) {
+            // Your filtering logic here
+          }
+        `}
+      </script>
+      
+    </>
+
+  );
+}
+
+export default App;

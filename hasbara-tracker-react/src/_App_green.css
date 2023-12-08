@@ -16,23 +16,14 @@
 
 h1 {
   font-family: 'LoRes_Regular';
-  font-size: 1.9em;
-  position: absolute;
-  left: 5%;
-  top: 4%;
-}
-
-h2 {
-  text-align: left;
-  font-family: 'AcuminPro_WideSemibold';
+  font-size: 3.3em;
 }
 
 body {
-  background-color: #cbcbcb;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.3em;
-  margin: 15% 26% 5% 29%;
-  text-align: left;
+  background-color: #01a824;
+  font-family: 'AcuminPro_WideSemibold';
+  font-size: 1.5em;
+  margin: 10% 45% 5% 5%;
 }
 
 .investigating {
@@ -112,7 +103,7 @@ body {
 
       /* Add styling for the active state of the button */
       .active {
-          background-color: #9DFF20;
-          color: black;
+          background-color: #4CAF50;
+          color: white;
           font-style: oblique;
       }

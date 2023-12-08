@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/hasbara-tracker-react/src/App.css">
+
+<style> 
+.arrow {
+    color: #345c00;
+    font-size: 2em;
+}
+
+.date {
+  color: #345c00;
+  font-size: 0.7em;
+}
+
+.claim {
+    font-style: oblique;
+    font-size: 0.9em;
+    letter-spacing: 1.5px;
+}
+
+.context {
+  font-size: 0.9em;
+}
+
+.debunked {
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+table {
+    /* font-family: 'AcuminPro_WideSemibold';  */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-top: 2px solid #345c00;
+    /* border-collapse: collapse; */
+    width: 100% - 2*20%;
+    /* border-color: transparent; */
+    margin-top: 5%;
+}
+
+td {
+ /* border: 2.1px solid black; */
+ border-bottom: 2.5px dotted grey;
+ padding: 15px;
+ text-align: left;
+}
+
+th {
+border: 2.1px none;
+ padding: 10px;
+ text-align: left;
+
+}
+
+@font-face {
+  font-family: 'LoRes_Regular';
+  src: url("/assets/fonts/lores12ot-regular-webfont.woff2") format('woff2'),
+       url("/assets/fonts/lores12ot-regular-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AcuminPro_WideSemibold';
+  src: url("/assets/fonts/acumin_pro_wide_semibold-webfont.woff2") format('woff2'),
+       url("/assets/fonts/acumin_pro_wide_semibold-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  /* font-family: 'LoRes_Regular'; */
+  font-family: monospace;
+  font-size: 2em;
+}
+
+/* This is updated for table */
+body {
+  /* background-color: #2e8b42; */
+  background-color: #cbcbcb;
+  /* font-family: 'AcuminPro_WideSemibold'; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: 1.2em;
+  margin: 5% 5% 5% 5%;
+}
+
+.investigating {
+    background-color: black;
+}
+
+
+      /* Define the animation */
+      @keyframes blink {
+          0% {
+              opacity: 0; /* All dots are invisible at the start */
+          }
+          25% {
+              opacity: 1; /* First dot appears */
+          }
+          50% {
+              opacity: 1; /* Second dot appears */
+          }
+          75% {
+              opacity: 1; /* Third dot appears */
+          }
+          100% {
+              opacity: 1; /* All dots are visible at the end */
+          }
+      }
+
+      /* Dots animation */
+      @keyframes blink-in {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      /* Add styling to buttons with rounded corners and transparent backgrounds */
+      button {
+          padding: 10px;
+          margin: 5px;
+          cursor: crosshair;
+          border: dotted black;
+          border-radius: 5px; /* Set border-radius for rounded corners */
+          background-color: transparent; /* Set transparent background */
+          font-size: 0.8em;
+      }
+
+      /* Add styling to the filtered items */
+      .filtered-item {
+          display: none;
+          margin-top: 2.5%;
+          font-family: monospace;
+      }
+
+      a {
+        color: grey;
+      }
+
+      a:hover {
+        /* color: whitesmoke; */
+        font-style: oblique;
+      }
+      
+      a::selection {
+        background: #000;
+        color: whitesmoke;
+      }
+
+      ::selection {
+          background: #000;
+          color: #000;
+      }
+
+
+      /* Add styling for the active state of the button */
+      .active {
+          background-color: #4CAF50;
+          color: white;
+          font-style: oblique;
+      }
+
+
+        /* Style for the modal overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(6, 5, 5, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Style for the modal content */
+        .modal-content {
+            background: #fff;
+            padding: 200px;
+            border-radius: 5px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+        }
+
+        .modal-content video {
+    width: 1000px; /* Adjust width as needed */
+    height: 750px; /* Adjust height as needed */
+}
+
+        /* Style for the close button */
+        .close-btn {
+          font-size: 80px;
+            position: absolute;
+            top: 28%;
+            right: 40%;
+            cursor: pointer;
+            color: #01a824;
+        }
+
+</style>
+
+
+
+</head>
+
+<body>
+    <div class="arrow">⭪</div>
+    <h1>Claim: Forty beheaded babies</h1>
+    
+<table>
+ <tr>
+  <td><div class="date">OCT 10, 2023</div></td>
+  <td>Nic Robertson of CNN: Nic Robertson recalls being brought to Kfar Aza to witness the brutality Hamas brought on the community. He describes it as “ISIS-style executions” where they were “cutting the heads off of people” including babies and killing their pets. One family hid their kids in a cupboard while they tried to distract the attackers. They were killed, but the distraction worked.</td>
+  <td> <a href="#" onclick="openModal('./nic robertson cnn.mp4')">    <!-- JavaScript for modal functionality -->
+    <script>
+      // Define functions in the global scope
+      function openModal(videoLink) {
+          document.querySelector('#videoModal iframe').src = videoLink;
+          document.getElementById('videoModal').style.display = 'flex';
+      }
+  
+      function closeModal() {
+          document.querySelector('#videoModal iframe').src = '';
+          document.getElementById('videoModal').style.display = 'none';
+      }
+  
+  </script>CNN: IDF, women, toddlers, elderly "butchered" by Hamas in Kfar Aza</a></td>
+  <td><div class="claim">CLAIM</div></td>
+  <td>VIDEO LINK</td>
+ </tr>
+ <!-- Repeat the above row 19 more times -->
+ <tr>
+  <td><div class="date">OCT 10, 2023</div></td>
+  <td>Joe Biden claimed he saw ‘pictures of terrorists beheading babies’.</td>
+  <td><a href="https://archive.ph/UN3Jd">archive.ph/UN3Jd</a></td>
+  <td><div class="claim">CLAIM</div></td>
+  <td>VIDEO LINK</td>
+ </tr>
+ <!-- ... -->
+
+ <tr>
+    <td><div class="date">OCT 10, 2023</div></td>
+    <td>Babies and toddlers were found with their “heads decapitated” in Kfar Aza in southern Israel after Hamas' attacks in the kibbutz over the weekend, a spokesperson for Israel's prime minister says. Nicole Zedeck, a reporter with Tel Aviv-based news channel i24 from her interview with Israeli reserve soldier David Ben Zion.</td>
+    <td><a href="https://archive.ph/QeCXs">archive.ph/QeCXs</a><br><br><a href="https://archive.ph/AhYIH">https://archive.ph/AhYIH</a></td>
+    <td><div class="claim">CLAIM</div></td>
+    <td>VIDEO LINK</td>
+
+   </tr>
+
+   <tr>
+    <td><div class="date">OCT 11, 2023</div></td>
+    <td>After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim. The Grayzone has identified Ben Zion as a fanatical settler leader who incited riots by demanding a Palestinian town be “wiped out”.</td>
+    <td><a href="https://archive.is/NcD6m">archive.is/NcD6m</a></td>
+    <td><div class="contex">CONTEXT</div><br><br><div class="debunked">DEBUNKED</div></td>
+    <td>VIDEO LINK</td>
+
+   </tr>
+
+   <tr>
+    <td><div class="date">OCT 11, 2023</div></td>
+    <td>Tal Heinrich spokesperson for the Israeli Prime Minister’s Office ‘confirmed’ soldiers on the ground had been dealing with babies who had been decapitated to LBC in the UK</td>
+    <td><a href="https://archive.is/UwDCO">archive.is/UwDCO</a></td>
+    <td><div class="claim">CLAIM</div></td>
+    <td>VIDEO LINK</td>
+
+   </tr>
+
+   <tr>
+    <td><div class="date">OCT 11, 2023</div></td>
+    <td>Business Insider: IDF says it won’t back up its claim that Hamas decapitated babies in Israel because it is ‘disrespectful for the dead’.</td>
+    <td><a href="https://archive.ph/Otjey">archive.ph/Otjey</a></td>
+    <td><div class="debunked">DEBUNKED</div></td>
+    <td>VIDEO LINK</td>
+
+   </tr>
+
+   <tr>
+    <td><div class="date">OCT 11, 2023</div></td>
+    <td>Sara Sidner of CNN retracts.</td>
+    <td><a href="https://archive.is/rom8W">archive.is/rom8W</a></td>
+    <td><div class="debunked">DEBUNKED</div></td>
+    <td>VIDEO LINK</td>
+
+   </tr>
+
+   <tr>
+    <td><div class="date">OCT 11, 2023</div></td>
+    <td>Sara Sidner of CNN.</td>
+    <td><a href="https://archive.ph/wpEIM">archive.ph/wpEIM</a></td>
+    <td><div class="claim">CLAIM</div></td>
+    <td>VIDEO LINK</td>
+
+   </tr>
+
+   <tr>
+    <td><div class="date">OCT 12, 2023</div></td>
+    <td>CNN official retraction.</td>
+    <td><a href="https://archive.ph/S0ZA3">archive.ph/S0ZA3</a></td>
+    <td><div class="debunked">DEBUNKED</div></td>
+    <td>VIDEO LINK</td>
+
+   </tr>
+
+   <tr>
+    <td><div class="date">OCT 12, 2023</div></td>
+    <td>Jerusalem.</td>
+    <td><a href="https://archive.ph/9c9L0">archive.ph/9c9L0</a></td>
+    <td><div class="claim">CLAIM</div></td>
+    <td>VIDEO LINK</td>
+
+   </tr>
+
+   <tr>
+    <td><div class="date">OCT 13, 2023</div></td>
+    <td>Al Jazeera: When journalists asked a spokesman for the Israeli military about the story, the reply was, “We cannot confirm but you can assume it happened.”</td>
+    <td><a href="https://archive.ph/RNLTs">archive.ph/RNLTs</a></td>
+    <td><div class="debunked">DEBUNKED</div></td>
+    <td>VIDEO LINK</td>
+
+   </tr>
+</table>
+
+    <!-- Modal overlay -->
+    <div id="videoModal" class="modal-overlay">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()">&times;</span>
+          <!-- Embed your video here -->
+          <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+  </div>
+
+      <!-- JavaScript for modal functionality -->
+    <script>
+      // Define functions in the global scope
+      function openModal(videoLink) {
+          document.querySelector('#videoModal iframe').src = videoLink;
+          document.getElementById('videoModal').style.display = 'flex';
+      }
+  
+      function closeModal() {
+          document.querySelector('#videoModal iframe').src = '';
+          document.getElementById('videoModal').style.display = 'none';
+      }
+  
+      document.addEventListener("DOMContentLoaded", function() {
+          // Your existing code...
+      });
+  </script>
+
+</body>
+</html>

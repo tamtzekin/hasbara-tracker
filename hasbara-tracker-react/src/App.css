@@ -26,6 +26,10 @@ body {
   margin: 10% 45% 5% 5%;
 }
 
+.investigating {
+    background-color: black;
+}
+
 
       /* Define the animation */
       @keyframes blink {
@@ -74,12 +78,33 @@ body {
       /* Add styling to the filtered items */
       .filtered-item {
           display: none;
-          padding-top: 2.5%;
+          margin-top: 2.5%;
           font-family: monospace;
       }
+
+      a {
+        color: black;
+      }
+
+      a:hover {
+        color: whitesmoke;
+        font-style: italic;
+      }
+      
+      a::selection {
+        background: #000;
+        color: whitesmoke;
+      }
+
+      ::selection {
+          background: #000;
+          color: #000;
+      }
+
 
       /* Add styling for the active state of the button */
       .active {
           background-color: #4CAF50;
           color: white;
+          font-style: oblique;
       }

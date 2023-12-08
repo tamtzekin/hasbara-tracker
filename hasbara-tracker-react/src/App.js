@@ -49,7 +49,7 @@ function App() {
         <br />
 
         {/* Filter buttons */}
-        <button onClick={(event) => filterItems('all', event)}>All</button>
+        <button onClick={(event) => filterItems('all', event)}>*ALL*</button>
         <button onClick={(event) => filterItems('oct7', event)}>Oct 7</button>
         <button onClick={(event) => filterItems('death', event)}>Death</button>
         <button onClick={(event) => filterItems('hospitals', event)}>Hospitals</button>
@@ -62,28 +62,28 @@ function App() {
         {/* <button onClick={(event) => filterItems('category3', event)}>Category 3</button> */}
 
         {/* Items to filter */}
-        <div className="filtered-item oct7 death">Claim: Forty beheaded babies</div>
-        <div className="filtered-item oct7">Claim: Fetus removed from pregnant woman</div>
-        <div className="filtered-item oct7">Claim: Babies hung on clotheslines</div>
-        <div className="filtered-item oct7">Claim: ‘Little Mary Janes’ and pink blood</div>
-        <div className="filtered-item oct7 documents">Claim: Hamas left an ISIS flag</div>
+        <div className="filtered-item oct7 death"><a href="">Claim: Forty beheaded babies</a></div>
+        <div className="filtered-item oct7 investigating">Claim: Fetus removed from pregnant woman</div>
+        <div className="filtered-item oct7 investigating">Claim: Babies hung on clotheslines</div>
+        <div className="filtered-item oct7 investigating">Claim: ‘Little Mary Janes’ and pink blood</div>
+        <div className="filtered-item oct7 documents investigating">Claim: Hamas left an ISIS flag</div>
 
-        <div className="filtered-item death">Claim: Revisions of number of Israelis killed</div>
+        <div className="filtered-item death investigating">Claim: Revisions of number of Israelis killed</div>
 
-        <div className="filtered-item hospitals">Claim: Israeli president denies it is striking Al-Shifa hospital</div>
-        <div className="filtered-item hospitals">Claim: Hamas tunnel found at the Qatari Hospital</div>
+        <div className="filtered-item hospitals investigating">Claim: Israeli president denies it is striking Al-Shifa hospital</div>
+        <div className="filtered-item hospitals investigating">Claim: Hamas tunnel found at the Qatari Hospital</div>
 
-        <div className="filtered-item alahli hospitals">Claim: Al-Ahli Hospital was hit by stray Islamic Jihad rockets fired from a cemetery</div>
+        <div className="filtered-item alahli hospitals investigating">Claim: Al-Ahli Hospital was hit by stray Islamic Jihad rockets fired from a cemetery</div>
 
-        <div className="filtered-item fabricatedav hospitals alahli">Claim: Hamas operatives discussing Palestinian Islamic Jihad's responsibility for the al-Ahli Arab Baptist Hospital massacre</div>
+        <div className="filtered-item fabricatedav hospitals alahli investigating">Claim: Hamas operatives discussing Palestinian Islamic Jihad's responsibility for the al-Ahli Arab Baptist Hospital massacre</div>
         
-        <div className="filtered-item fabricatedav">Claim: Nurse at Al-Shifa Hospital blaming Hamas</div>
+        <div className="filtered-item fabricatedav investigating">Claim: Nurse at Al-Shifa Hospital blaming Hamas</div>
       
-        <div className="filtered-item pallywood">Claim: Dead Palestinian children are dolls</div>
-        <div className="filtered-item pallywood">Claim: Saleh Aljafarawi is a propagandist / Mr FAFO
+        <div className="filtered-item pallywood investigating">Claim: Dead Palestinian children are dolls</div>
+        <div className="filtered-item pallywood investigating">Claim: Saleh Aljafarawi is a propagandist / Mr FAFO
 </div>
 
-        <div className="filtered-item documents">Claim: Isaac Herzog says Mein Kampf found in child's bedroom</div>
+        <div className="filtered-item documents investigating">Claim: Isaac Herzog says Mein Kampf found in child's bedroom</div>
       </div>
 
       <script>

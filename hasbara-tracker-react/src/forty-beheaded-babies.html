@@ -33,7 +33,7 @@
 table {
     /* font-family: 'AcuminPro_WideSemibold';  */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-top: 2px solid #345c00;
+    border-top: 2px solid #9dff20;
     /* border-collapse: collapse; */
     width: 100% - 2*20%;
     /* border-color: transparent; */
@@ -43,7 +43,7 @@ table {
 td {
  /* border: 2.1px solid black; */
  border-bottom: 2.5px dotted grey;
- padding: 15px;
+ padding: 20px;
  text-align: left;
 }
 
@@ -142,12 +142,13 @@ body {
       }
 
       a {
-        color: grey;
+        color: #345c00;
+        font-size: 13.5px;
       }
 
       a:hover {
-        /* color: whitesmoke; */
-        font-style: oblique;
+        color: whitesmoke;
+        /* font-style: oblique; */
       }
       
       a::selection {
@@ -163,7 +164,7 @@ body {
 
       /* Add styling for the active state of the button */
       .active {
-          background-color: #4CAF50;
+          background-color: #9dff20;
           color: white;
           font-style: oblique;
       }
@@ -177,35 +178,83 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(6, 5, 5, 0.8);
+            background: rgba(0, 0, 0, 0.99);
             justify-content: center;
             align-items: center;
-            z-index: 1000;
+            /* z-index: 1000; */
         }
 
-        /* Style for the modal content */
-        .modal-content {
-            background: #fff;
-            padding: 200px;
-            border-radius: 5px;
-            max-width: 90%;
-            max-height: 90%;
-            overflow: auto;
+.modal-content.video-link {
+            background: none;  
+            /* padding: 20px; */
+            /* position: relative; */
+            /* background: none; */
+            /* max-width: 80%; */
+            /* max-height: 100%; */
+            /* overflow: auto; */
+            overflow-y: hidden;
+            width: 46%;
+            height: 100%;
         }
 
-        .modal-content video {
-    width: 1000px; /* Adjust width as needed */
-    height: 750px; /* Adjust height as needed */
+.modal-content.img-link {
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background: #fff;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 35%; /* Remove padding for a cleaner look */
+    box-sizing: border-box;
+    /*! margin: 20px; */
+}
+
+.modal-content.img-link img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.modal-content.tweet-link {
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background: #fff;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 5% 0 0 38%; /* Remove padding for a cleaner look */
+    box-sizing: border-box;
+    /*! margin: 20px; */
+}
+
+.modal-content.tweet-link img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.modal-open {
+    overflow: hidden;
 }
 
         /* Style for the close button */
         .close-btn {
-          font-size: 80px;
-            position: absolute;
-            top: 28%;
-            right: 40%;
+          position: absolute;  
+          font-size: 12vw;
+
+            top: -5%;
+            right: 1%;
+            margin: 10px;
             cursor: pointer;
-            color: #01a824;
+            color: #9dff20;
         }
 
 </style>
@@ -219,115 +268,93 @@ body {
     <h1>Claim: Forty beheaded babies</h1>
     
 <table>
- <tr>
-  <td><div class="date">OCT 10, 2023</div></td>
-  <td>Nic Robertson of CNN: Nic Robertson recalls being brought to Kfar Aza to witness the brutality Hamas brought on the community. He describes it as “ISIS-style executions” where they were “cutting the heads off of people” including babies and killing their pets. One family hid their kids in a cupboard while they tried to distract the attackers. They were killed, but the distraction worked.</td>
-  <td> <a href="#" onclick="openModal('./nic robertson cnn.mp4')">    <!-- JavaScript for modal functionality -->
-    <script>
-      // Define functions in the global scope
-      function openModal(videoLink) {
-          document.querySelector('#videoModal iframe').src = videoLink;
-          document.getElementById('videoModal').style.display = 'flex';
-      }
-  
-      function closeModal() {
-          document.querySelector('#videoModal iframe').src = '';
-          document.getElementById('videoModal').style.display = 'none';
-      }
-  
-  </script>CNN: IDF, women, toddlers, elderly "butchered" by Hamas in Kfar Aza</a></td>
-  <td><div class="claim">CLAIM</div></td>
-  <td>VIDEO LINK</td>
- </tr>
+  <tr>
+    <td>DATE</div></td>
+    <td>DESCRIPTION</td>
+    <td>SOURCE</td>
+    <td>CLAIM / DEBUNKED</td>
+   </tr>
+
+   <tr>
+    <td><div class="date">OCT 10, 2023</div></td>
+    <td>Babies and toddlers were found with their “heads decapitated” in Kfar Aza in southern Israel after Hamas’ attacks in the kibbutz over the weekend, a spokesperson for Israel's prime minister says. Nicole Zedeck, a reporter with Tel Aviv-based news channel i24 from her interview with Israeli reserve soldier David Ben Zion.</td>
+    <td><a href="#" onclick="openModal(event, './files/i24NEWS_10Oct.mp4', 'video-link')">i24NEWS: ‘HORROR SCENES AT KIBBUTZ LIBERATED FROM HAMAS’</a><br><br>
+      <a href="#" onclick="openModal(event, './files/X_NicoleZedeck_10Oct.png', 'tweet-link')">Nicole Zedeck on X</a></td>
+    <td><div class="claim">CLAIM</div></td>
+  </tr>
+
+
  <!-- Repeat the above row 19 more times -->
  <tr>
   <td><div class="date">OCT 10, 2023</div></td>
   <td>Joe Biden claimed he saw ‘pictures of terrorists beheading babies’.</td>
-  <td><a href="https://archive.ph/UN3Jd">archive.ph/UN3Jd</a></td>
+<td><a href="#" onclick="openModal(event, './files/Fox_Biden_10Oct.mp4', 'video-link')">Fox News: ‘BIDEN MAKING REMARKS ON U.S. SUPPORT FOR ISRAEL’</a></td>
   <td><div class="claim">CLAIM</div></td>
-  <td>VIDEO LINK</td>
  </tr>
  <!-- ... -->
 
  <tr>
-    <td><div class="date">OCT 10, 2023</div></td>
-    <td>Babies and toddlers were found with their “heads decapitated” in Kfar Aza in southern Israel after Hamas' attacks in the kibbutz over the weekend, a spokesperson for Israel's prime minister says. Nicole Zedeck, a reporter with Tel Aviv-based news channel i24 from her interview with Israeli reserve soldier David Ben Zion.</td>
-    <td><a href="https://archive.ph/QeCXs">archive.ph/QeCXs</a><br><br><a href="https://archive.ph/AhYIH">https://archive.ph/AhYIH</a></td>
-    <td><div class="claim">CLAIM</div></td>
-    <td>VIDEO LINK</td>
+  <td><div class="date">OCT 10, 2023</div></td>
+  <td>Nic Robertson of CNN: Nic Robertson recalls being brought to Kfar Aza to witness the brutality Hamas brought on the community. He describes it as “ISIS-style executions” where they were “cutting the heads off of people” including babies and killing their pets. One family hid their kids in a cupboard while they tried to distract the attackers. They were killed, but the distraction worked.</td>
+  <td><a href="#" onclick="openModal(event, './files/CNN_NicRobertson_10Oct.mp4', 'video-link')">CNN: ‘IDF, WOMEN, TODDLERS, ELDERLY “BUTCHERED” BY HAMAS IN KFAR AZA’</a></td>
+  <td><div class="claim">CLAIM</div></td>
+ </tr>
 
-   </tr>
+ <tr>
+  <td><div class="date">OCT 11, 2023</div></td>
+  <td>Sara Sidner of CNN.</td>
+  <td><a href="#" onclick="openModal(event, './files/CNNTV_12Oct.mp4', 'video-link')">CNN: ‘NETANHAYU’S OFFICE RELEASES PHOTOS OF “BABIES MURDERED AND BURNED” BY HAMAS’</a></td>
+  <td><div class="claim">CLAIM</div></td>
+ </tr>
+
+ <tr>
+  <td><div class="date">OCT 11, 2023</div></td>
+  <td>Sara Sidner of CNN retracts.</td>
+  <td><a href="#" onclick="openModal(event, './files/X_SaraSidner_12Oct.png', 'tweet-link')">Sara Sidner on X</a></td>
+  <td><div class="debunked">DEBUNKED</div></td>
+ </tr>
+
+ <tr>
+  <td><div class="date">OCT 11, 2023</div></td>
+  <td>Business Insider: IDF says it won’t back up its claim that Hamas decapitated babies in Israel because it is ‘disrespectful for the dead’.</td>
+  <td><a href="#" onclick="openModal(event, './files/BusinessInsider_11Oct.png', 'img-link')">Business Insider: ‘IDF says it won't back up its claim that Hamas decapitated babies in Israel because it is 'disrespectful for the dead'’</a></td>
+  <td><div class="debunked">DEBUNKED</div></td>
+ </tr>
+
+ <tr>
+  <td><div class="date">OCT 11, 2023</div></td>
+  <td>Tal Heinrich spokesperson for the Israeli Prime Minister’s Office ‘confirmed’ soldiers on the ground had been dealing with babies who had been decapitated to LBC in the UK</td>
+  <td><a href="#" onclick="openModal(event, './files/LBC_11Oct.mp4', 'video-link')">LBC: ‘Toddlers, babies with their heads cut off’</a></td>
+  <td><div class="claim">CLAIM</div></td>
+ </tr>
 
    <tr>
     <td><div class="date">OCT 11, 2023</div></td>
     <td>After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim. The Grayzone has identified Ben Zion as a fanatical settler leader who incited riots by demanding a Palestinian town be “wiped out”.</td>
-    <td><a href="https://archive.is/NcD6m">archive.is/NcD6m</a></td>
+    <td><a href="#" onclick="openModal(event,'./files/Metro_11Oct2023.webp', 'img-link')">Metro: ‘40 BABIES MURDERED BY HAMAS’</a></td>
     <td><div class="contex">CONTEXT</div><br><br><div class="debunked">DEBUNKED</div></td>
-    <td>VIDEO LINK</td>
-
    </tr>
+
 
    <tr>
-    <td><div class="date">OCT 11, 2023</div></td>
-    <td>Tal Heinrich spokesperson for the Israeli Prime Minister’s Office ‘confirmed’ soldiers on the ground had been dealing with babies who had been decapitated to LBC in the UK</td>
-    <td><a href="https://archive.is/UwDCO">archive.is/UwDCO</a></td>
-    <td><div class="claim">CLAIM</div></td>
-    <td>VIDEO LINK</td>
-
-   </tr>
-
-   <tr>
-    <td><div class="date">OCT 11, 2023</div></td>
-    <td>Business Insider: IDF says it won’t back up its claim that Hamas decapitated babies in Israel because it is ‘disrespectful for the dead’.</td>
-    <td><a href="https://archive.ph/Otjey">archive.ph/Otjey</a></td>
-    <td><div class="debunked">DEBUNKED</div></td>
-    <td>VIDEO LINK</td>
-
-   </tr>
-
-   <tr>
-    <td><div class="date">OCT 11, 2023</div></td>
-    <td>Sara Sidner of CNN retracts.</td>
-    <td><a href="https://archive.is/rom8W">archive.is/rom8W</a></td>
-    <td><div class="debunked">DEBUNKED</div></td>
-    <td>VIDEO LINK</td>
-
-   </tr>
-
-   <tr>
-    <td><div class="date">OCT 11, 2023</div></td>
-    <td>Sara Sidner of CNN.</td>
-    <td><a href="https://archive.ph/wpEIM">archive.ph/wpEIM</a></td>
-    <td><div class="claim">CLAIM</div></td>
-    <td>VIDEO LINK</td>
-
-   </tr>
+   <td><div class="date">OCT 12, 2023</div></td>
+   <td>Jerusalem Post</td>
+   <td><a href="#" onclick="openModal(event, './files/JersualemPost_12Oct.png', 'tweet-link')">The Jerusalem Post on X</a></td>
+   <td><div class="claim">CLAIM</div></td>
+  </tr>
 
    <tr>
     <td><div class="date">OCT 12, 2023</div></td>
     <td>CNN official retraction.</td>
-    <td><a href="https://archive.ph/S0ZA3">archive.ph/S0ZA3</a></td>
+    <td><a href="#" onclick="openModal(event, './files/CNN_12Oct.png', 'img-link')">CNN: ‘Israeli official says government cannot confirm babies were beheaded in Hamas attack’</a></td>
     <td><div class="debunked">DEBUNKED</div></td>
-    <td>VIDEO LINK</td>
-
-   </tr>
-
-   <tr>
-    <td><div class="date">OCT 12, 2023</div></td>
-    <td>Jerusalem.</td>
-    <td><a href="https://archive.ph/9c9L0">archive.ph/9c9L0</a></td>
-    <td><div class="claim">CLAIM</div></td>
-    <td>VIDEO LINK</td>
-
    </tr>
 
    <tr>
     <td><div class="date">OCT 13, 2023</div></td>
     <td>Al Jazeera: When journalists asked a spokesman for the Israeli military about the story, the reply was, “We cannot confirm but you can assume it happened.”</td>
-    <td><a href="https://archive.ph/RNLTs">archive.ph/RNLTs</a></td>
+    <td><a href="#" onclick="openModal(event, './files/AlJazeera_13Oct.png', 'img-link')">Al Jazeera: ‘Watching the watchdogs: Babies and truth die together in Israel-Palestine’</a></td>
     <td><div class="debunked">DEBUNKED</div></td>
-    <td>VIDEO LINK</td>
-
    </tr>
 </table>
 
@@ -341,17 +368,33 @@ body {
       </div>
   </div>
 
-      <!-- JavaScript for modal functionality -->
+    <!-- JavaScript for modal functionality -->
     <script>
-      // Define functions in the global scope
-      function openModal(videoLink) {
-          document.querySelector('#videoModal iframe').src = videoLink;
-          document.getElementById('videoModal').style.display = 'flex';
-      }
+        // Define functions in the global scope
+        function openModal(event, videoLink, fileType) {
+        // Set the modal-content class based on the file type
+            const modalContent = document.querySelector('#videoModal .modal-content');
+            modalContent.className = 'modal-content ' + fileType;
+
+            // Set the video source
+            document.querySelector('#videoModal iframe').src = videoLink;
+    
+            // Display the modal
+            document.getElementById('videoModal').style.display = 'flex';
+
+            // Lock the main page scrollbar when modal is open
+            document.body.classList.add('modal-open');
+
+            // Prevents page from bumping to top when modal is open
+            event.preventDefault();
+        }
   
       function closeModal() {
           document.querySelector('#videoModal iframe').src = '';
           document.getElementById('videoModal').style.display = 'none';
+
+            // Unlock page scrollbar when modal is closed
+            document.body.classList.remove('modal-open');
       }
   
       document.addEventListener("DOMContentLoaded", function() {

@@ -8,7 +8,6 @@ import VideoPlayer from './VideoPlayer';
 const ClaimA = () => {
   return (
     <>
-
       <Link to="/claims"><div className="arrow">⭪</div></Link>
       <h1 class="claim-heading">Claim: Forty beheaded babies</h1>
 
@@ -27,7 +26,7 @@ const ClaimA = () => {
         <tr>
     <td><div class="date">OCT 10, 2023</div></td>
     <td>Babies and toddlers were found with their “heads decapitated” in Kfar Aza in southern Israel after Hamas’ attacks in the kibbutz over the weekend, a spokesperson for Israel's prime minister says. Nicole Zedeck, a reporter with Tel Aviv-based news channel i24 from her interview with Israeli reserve soldier David Ben Zion.</td>
-    <td><VideoPlayer videoLink="../../public/files/i24NEWS_10Oct.mp4"><a href="#">i24NEWS: ‘HORROR SCENES AT KIBBUTZ LIBERATED FROM HAMAS’</a></VideoPlayer><br />
+    <td><VideoPlayer videoLink="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"><a href="#">i24NEWS: ‘HORROR SCENES AT KIBBUTZ LIBERATED FROM HAMAS’</a></VideoPlayer><br />
     <br />
 
     <a href="#">Nicole Zedeck on X</a></td>

@@ -23,12 +23,8 @@ const App = () => {
             <Router>
     
                 <NavBar />
-                <span class="header-container">
-                <h1>Hasbara Tracker</h1>
-                <span id="dots">. . . . . . . . . . . . . . . </span>
-                </span>
                 
-                {/* <Homepage /> */}
+                <Homepage />
                 <VideoPlayer />
                 <Routes>
                     <Route path="/homepage" element={<Homepage />} />

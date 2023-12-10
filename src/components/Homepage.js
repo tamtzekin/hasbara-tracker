@@ -14,13 +14,12 @@ const Homepage = () => {
 
   return (
     <>
+                <span class="header-container">
+                <h1>Hasbara Tracker</h1>
+                <span id="dots">. . . . . . . . . . . . . . . </span>
+                </span>
 
-
-          {/* <div className="navbar">
-            <Link to="/about" onClick={handleClick}>About</Link>
-            <Link to="/claims" onClick={handleClick}>Claims</Link>
-            <a href="">Volunteer</a>
-          </div>
+          {/* 
 
     {showFilterDisplay ? (
         <FilterDisplay />

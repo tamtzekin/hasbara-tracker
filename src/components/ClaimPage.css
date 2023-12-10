@@ -142,11 +142,11 @@ body {
       }
 
       /* Add styling to the filtered items */
-      .filtered-item {
+      /* .filtered-item {
           display: none;
           margin-top: 2.5%;
-          font-family: monospace;
-      }
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      } */
 
       table.a {
         color: #345c00;

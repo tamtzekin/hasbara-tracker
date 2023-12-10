@@ -70,7 +70,7 @@ button {
 a::selection {
   background: #000;
   color: whitesmoke;
-} */
+}
 
 ::selection {
   background: #9dff20;

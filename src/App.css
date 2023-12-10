@@ -23,9 +23,11 @@ h1 {
 }
 
 h2 {
-  text-align: left;
-  font-family: 'AcuminPro_WideSemibold';
-}
+    text-align: left;
+    font-family: 'AcuminPro_WideSemibold';
+    position: relative;
+    margin: 0 0 2% 0; 
+  }
 
 body {
   background-color: #cbcbcb;
@@ -70,6 +72,18 @@ body {
       opacity: 0;
   }
 }
+
+
+#dots {
+    font-family: 'LoRes_Regular';
+    font-size: 2.1em;
+    position: absolute;
+    left: 19%;
+    top: 45px;
+    width: 100%;
+  
+}
+
 
 button {
   padding: 10px;
@@ -132,4 +146,29 @@ a::selection {
 
 .navbar a:hover {
   text-decoration: underline;
+}
+
+.content-container {
+        position: absolute;
+        left: 20%;
+        margin: 12% 30% 0 12%;
+}
+
+.header-container {
+    position: absolute;
+    margin: 1% 10% 10% 1%;
+    width: 100%;
+}
+
+.claims-heading {
+    /* position: absolute; */
+    /* top: 1%; */
+    /* left: 31%; */
+    /* margin-top: 250px; */
+}
+
+.filters {
+    /* position: absolute; */
+    /* left: 20%; */
+    /* margin: 12% 30% 0 12.8%; */
 }

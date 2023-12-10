@@ -7,40 +7,6 @@ h1 {
   width: 100%;
 }
 
-h2 {
-  text-align: left;
-  font-family: 'AcuminPro_WideSemibold';
-  position: relative;
-  margin: 12% 0 0 30%; 
-  padding: 1%;
-}
-
-.about {
-  margin-top: 250px;
-}
-
-.claims-heading {
-    position: absolute;
-    top: 1%;
-    left: 31%;
-    margin-top: 250px;
-}
-
-.filters {
-    position: absolute;
-    left: 20%;
-    margin: 12% 30% 0 12.8%;
-}
-
-#dots {
-    font-family: 'LoRes_Regular';
-    font-size: 2.1em;
-    position: absolute;
-    left: 19%;
-    top: 14%;
-    width: 100%;
-  
-}
 
 /* body {
   background-color: #cbcbcb;

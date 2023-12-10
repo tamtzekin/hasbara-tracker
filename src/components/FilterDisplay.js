@@ -39,7 +39,8 @@ const FilterDisplay = () => {
   
     return (
     <>
-        <span class="claims-heading"><h2>Claims</h2></span>
+    <span class="content-container">
+        <h2>Claims</h2>
 
     <div class="filters">
         {/* Filters */}
@@ -84,7 +85,7 @@ const FilterDisplay = () => {
             }
         `}
         </script> */}
-
+</span>
         </>
   
   

@@ -7,7 +7,7 @@ const ClaimA = () => {
   return (
     <>
 
-      <Link to="/claims"><div className="arrow">⭪</div></Link>
+<Link to="/claims"><span className="arrow">⭪</span></Link>
       <h1 class="claim-heading">Claim: Forty beheaded babies</h1>
 
 <span class="table-container">

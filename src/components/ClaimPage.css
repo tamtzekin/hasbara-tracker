@@ -265,19 +265,19 @@ body {
         }
 
 .hover-preview {
-    padding: 5px;
+    /* padding: 5px; */
 }
 
-arrow {
+.arrow {
   font-size: 3em;
-}
-
-a arrow {
-  color: black;
   text-decoration: none;
 }
 
-a arrow:hover {
-    text-decoration: underline dotted;
+.arrow:hover {
+    text-decoration: none;
     color: #9dff20;
+}
+
+.arrow a {
+    text-decoration: none;
 }

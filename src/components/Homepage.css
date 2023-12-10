@@ -7,44 +7,11 @@ h1 {
   width: 100%;
 }
 
-/* Define the animation */
-@keyframes blink {
-  0% {
-      opacity: 0; /* All dots are invisible at the start */
-  }
-  25% {
-      opacity: 1; /* First dot appears */
-  }
-  50% {
-      opacity: 1; /* Second dot appears */
-  }
-  75% {
-      opacity: 1; /* Third dot appears */
-  }
-  100% {
-      opacity: 1; /* All dots are visible at the end */
-  }
-}
-
-/* Dots animation */
-@keyframes blink-in {
-  0% {
-      opacity: 0;
-  }
-  50% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-  }
-}
-
 ::selection {
   background: #000;
   color: #000;
 }
 
-/* Button active state */
 .active {
   background-color: #9dff20;
   color: black;

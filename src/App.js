@@ -22,7 +22,6 @@ const App = () => {
     
                 <NavBar />
                 
-                <Homepage />
                 <VideoPlayer />
                 <Routes>
                     <Route path="/homepage" element={<Homepage />} />

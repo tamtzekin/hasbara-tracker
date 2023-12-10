@@ -7,7 +7,7 @@ const NavBar= () =>{
     <span class="header-container">
   <div class="navbar">
     <li>
-      <Link to="/about">About</Link>
+      <Link to="/homepage">Home</Link>
     </li>
 
     <li>

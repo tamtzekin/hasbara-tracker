@@ -10,7 +10,6 @@ const ClaimA = () => {
     <>
       <Link to="/claims"><div className="arrow">⭪</div></Link>
       <h1 class="claim-heading">Claim: Forty beheaded babies</h1>
-
 <span class="table-container">
       <table>
         <thead>
@@ -36,7 +35,7 @@ const ClaimA = () => {
  <tr>
   <td><div class="date">OCT 10, 2023</div></td>
   <td>Joe Biden claimed he saw ‘pictures of terrorists beheading babies’.</td>
-<td><VideoPlayer videoLink="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"><a href="#">Fox News: ‘BIDEN MAKING REMARKS ON U.S. SUPPORT FOR ISRAEL’</a></VideoPlayer></td>
+<td><VideoPlayer videoLink="../../public/files/Fox_Biden_10Oct.mp4"><a href="#">Fox News: ‘BIDEN MAKING REMARKS ON U.S. SUPPORT FOR ISRAEL’</a></VideoPlayer></td>
   <td><div class="claim">CLAIM</div></td>
  </tr>
 

@@ -1,6 +1,10 @@
-.arrow {
-    color: #345c00;
-    font-size: 2em;
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .date {
@@ -259,3 +263,21 @@ body {
             cursor: pointer;
             color: #9dff20;
         }
+
+.hover-preview {
+    padding: 5px;
+}
+
+arrow {
+  font-size: 3em;
+}
+
+a arrow {
+  color: black;
+  text-decoration: none;
+}
+
+a arrow:hover {
+    text-decoration: underline dotted;
+    color: #9dff20;
+}

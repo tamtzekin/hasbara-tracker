@@ -50,13 +50,6 @@ h1 {
   }
 }
 
-a {
-  color: black;
-}
-
-a:hover {
-    text-decoration: underline dotted;
-}
 
 /* a::selection {
   background: #000;
@@ -71,7 +64,7 @@ a:hover {
 
 /* Button active state */
 .active {
-  background-color: #9DFF20;
+  background-color: #9dff20;
   color: black;
   font-style: oblique;
 }

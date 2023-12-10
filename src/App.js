@@ -10,19 +10,29 @@ import NavBar from './components/NavBar';
 import FilterDisplay from './components/FilterDisplay';
 import VolunteerForm from './components/VolunteerForm';
 import ClaimA from './components/ClaimA';
- 
+import VideoPlayer from './components/VideoPlayer';
+
+
+
 const App = () => {
+
+    const videoLink = 'https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4'; // Replace with the actual path to your video
+
     return (
     <>
             <Router>
+
                 <NavBar />
-                <Homepage />
+                <h1>Hasbara Tracker</h1>
+                {/* <Homepage /> */}
+                <VideoPlayer />
                 <Routes>
                     <Route path="/homepage" element={<Homepage />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/claims" element={<FilterDisplay />} />
                     <Route path="/volunteer" element={<VolunteerForm />} />
                     <Route path="/claim-a" element={<ClaimA />} />
+
                 </Routes>
             </Router>
             

@@ -1,5 +1,5 @@
 TO DO 
-- hover to preview, click to go out (to archive.ph links)
+- when the active video modal is clicked, take out to external source
 - volunteer form
 - text modals to expand 
 - Git lfs
@@ -9,3 +9,4 @@ DONE
 - click the link (called headline or something else) and it opens a video, or a preview image of the article 
 - heading for eachc olumn
 - basic page routing
+- hover to preview, click to go out (to archive.ph links)

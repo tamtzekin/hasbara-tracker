@@ -102,15 +102,6 @@ button {
   font-family: monospace;
 }
 
-/* a {
-  color: black;
-} */
-
-/* a:hover {
-  color: whitesmoke;
-  font-style: italic;
-}
-
 a::selection {
   background: #000;
   color: whitesmoke;

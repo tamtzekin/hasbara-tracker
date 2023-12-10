@@ -27,7 +27,7 @@ h2 {
     font-family: 'AcuminPro_WideSemibold';
     position: relative;
     margin: 0 0 2% 0; 
-  }
+}
 
 body {
   background-color: #cbcbcb;
@@ -41,39 +41,6 @@ body {
   background-color: black;
 }
 
-/* Define the animation */
-@keyframes blink {
-  0% {
-      opacity: 0; /* All dots are invisible at the start */
-  }
-  25% {
-      opacity: 1; /* First dot appears */
-  }
-  50% {
-      opacity: 1; /* Second dot appears */
-  }
-  75% {
-      opacity: 1; /* Third dot appears */
-  }
-  100% {
-      opacity: 1; /* All dots are visible at the end */
-  }
-}
-
-/* Dots animation */
-@keyframes blink-in {
-  0% {
-      opacity: 0;
-  }
-  50% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-  }
-}
-
-
 #dots {
     font-family: 'LoRes_Regular';
     font-size: 2.1em;
@@ -83,7 +50,6 @@ body {
     width: 100%;
   
 }
-
 
 button {
   padding: 10px;
@@ -95,7 +61,6 @@ button {
   font-size: 0.8em;
 }
 
-/* Add styling to the filtered items */
 .filtered-item {
   display: none;
   margin-top: 2.5%;
@@ -112,18 +77,10 @@ a::selection {
   color: #000;
 }
 
-/* Add styling for the active state of the button */
-/* .active {
-  background-color: #9DFF20;
-  color: black;
-  font-style: oblique;
-} */
-
 .navbar {
   position: fixed;
   top: 10%;
   right: 17%;
-  /* padding: 15px; */
   display: flex;
   list-style-type: none;
 }

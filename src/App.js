@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import logo from './logo.svg';
@@ -11,7 +11,6 @@ import FilterDisplay from './components/FilterDisplay';
 import VolunteerForm from './components/VolunteerForm';
 import ClaimA from './components/ClaimA';
 import VideoPlayer from './components/VideoPlayer';
-
 
 
 const App = () => {

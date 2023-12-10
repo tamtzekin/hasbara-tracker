@@ -12,12 +12,7 @@ import VolunteerForm from './components/VolunteerForm';
 import ClaimA from './components/ClaimA';
 import VideoPlayer from './components/VideoPlayer';
 
-
-
 const App = () => {
-
-    const videoLink = 'https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4'; // Replace with the actual path to your video
-
     return (
     <>
             <Router>

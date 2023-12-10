@@ -1,0 +1,117 @@
+h1 {
+  font-family: 'LoRes_Regular';
+  font-size: 2.1em;
+  position: absolute;
+  left: 19%;
+  top: 9%;
+  width: 100%;
+}
+
+h2 {
+  text-align: left;
+  font-family: 'AcuminPro_WideSemibold';
+  position: relative;
+  margin: 12% 0 0 30%; 
+  padding: 1%;
+}
+
+.about {
+  margin-top: 250px;
+}
+
+.claims-heading {
+    position: absolute;
+    top: 1%;
+    left: 31%;
+    margin-top: 250px;
+}
+
+.filters {
+    position: absolute;
+    left: 20%;
+    margin: 12% 30% 0 12.8%;
+}
+
+#dots {
+    font-family: 'LoRes_Regular';
+    font-size: 2.1em;
+    position: absolute;
+    left: 19%;
+    top: 14%;
+    width: 100%;
+  
+}
+
+/* body {
+  background-color: #cbcbcb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.3em;
+  margin: 15% 26% 5% 29%;
+  text-align: left;
+}
+  */
+
+
+/* Define the animation */
+@keyframes blink {
+  0% {
+      opacity: 0; /* All dots are invisible at the start */
+  }
+  25% {
+      opacity: 1; /* First dot appears */
+  }
+  50% {
+      opacity: 1; /* Second dot appears */
+  }
+  75% {
+      opacity: 1; /* Third dot appears */
+  }
+  100% {
+      opacity: 1; /* All dots are visible at the end */
+  }
+}
+
+/* Dots animation */
+@keyframes blink-in {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+    text-decoration: underline dotted;
+}
+
+/* a::selection {
+  background: #000;
+  color: whitesmoke;
+} */
+
+
+::selection {
+  background: #000;
+  color: #000;
+}
+
+/* Button active state */
+.active {
+  background-color: #9DFF20;
+  color: black;
+  font-style: oblique;
+}
+
+.home-text {
+  margin: 0% 31% 0 31%;
+  font-size: 0.9em;
+  line-height: 29px;
+}

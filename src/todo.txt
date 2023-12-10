@@ -1,5 +1,8 @@
 TO DO 
+- text modals to expand 
+- hover to preview, click to go out (to archive.ph links)
+
+DONE
 - less green highlights
 - click the link (called headline or something else) and it opens a video, or a preview image of the article 
 - heading for eachc olumn
-- text modals to expand 

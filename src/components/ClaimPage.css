@@ -216,7 +216,6 @@ body {
     height: 100%;
     padding: 0 0 0 35%; /* Remove padding for a cleaner look */
     box-sizing: border-box;
-    /*! margin: 20px; */
 }
 
 .modal-content.img-link img {
@@ -238,7 +237,6 @@ body {
     height: 100%;
     padding: 5% 0 0 38%; /* Remove padding for a cleaner look */
     box-sizing: border-box;
-    /*! margin: 20px; */
 }
 
 .modal-content.tweet-link img {
@@ -263,10 +261,6 @@ body {
             cursor: pointer;
             color: #9dff20;
         }
-
-.hover-preview {
-    /* padding: 5px; */
-}
 
 .arrow {
   font-size: 3em;

@@ -150,16 +150,3 @@ a::selection {
     margin: 1% 10% 10% 1%;
     width: 100%;
 }
-
-.claims-heading {
-    /* position: absolute; */
-    /* top: 1%; */
-    /* left: 31%; */
-    /* margin-top: 250px; */
-}
-
-.filters {
-    /* position: absolute; */
-    /* left: 20%; */
-    /* margin: 12% 30% 0 12.8%; */
-}

@@ -99,7 +99,7 @@ button {
 .filtered-item {
   display: none;
   margin-top: 2.5%;
-  font-family: monospace;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a::selection {

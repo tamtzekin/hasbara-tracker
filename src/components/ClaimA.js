@@ -26,10 +26,10 @@ const ClaimA = () => {
         <tr>
     <td><div class="date">OCT 10, 2023</div></td>
     <td>Babies and toddlers were found with their “heads decapitated” in Kfar Aza in southern Israel after Hamas’ attacks in the kibbutz over the weekend, a spokesperson for Israel's prime minister says. Nicole Zedeck, a reporter with Tel Aviv-based news channel i24 from her interview with Israeli reserve soldier David Ben Zion.</td>
-    <td><VideoPlayer videoLink="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"><a href="#">i24NEWS: ‘HORROR SCENES AT KIBBUTZ LIBERATED FROM HAMAS’</a></VideoPlayer><br />
-    <br />
+    
+    <td><VideoPlayer videoLink="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"><a href="https://archive.ph/QeCXs" target="_blank" rel="noreferrer">i24NEWS: ‘HORROR SCENES AT KIBBUTZ LIBERATED FROM HAMAS’</a></VideoPlayer><br />
+    <br /><a href="https://archive.ph/AhYIH" target="_blank" rel="noreferrer">Nicole Zedeck on X</a></td>
 
-    <a href="#">Nicole Zedeck on X</a></td>
     <td><div class="claim">CLAIM</div></td>
   </tr>
 

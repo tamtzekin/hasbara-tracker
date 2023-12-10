@@ -2,7 +2,6 @@ import logo from '../logo.svg';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ClaimPage.css';
-import './Arrow.css';
 import VideoPlayer from './VideoPlayer';
 
 const ClaimA = () => {

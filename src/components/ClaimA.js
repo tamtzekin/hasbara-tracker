@@ -87,7 +87,6 @@ const ClaimA = () => {
     <td><div class="contex">CONTEXT</div><br /><br /><div class="debunked">DEBUNKED</div></td>
    </tr>
 
-
    <tr>
    <td><div class="date">OCT 12, 2023</div></td>
    <td>Jerusalem Post</td>

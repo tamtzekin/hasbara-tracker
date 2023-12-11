@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import './VideoPlayer.css';
 
-const VideoPlayer = ({ videoLink, externalURL, children }) => {
+const VideoPlayer = ({ videoLink, children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   let hoverTimeout;
 
@@ -14,24 +15,11 @@ const VideoPlayer = ({ videoLink, externalURL, children }) => {
   const closeModal = () => {
     clearTimeout(hoverTimeout);
     setIsModalOpen(false);
-
-    // Navigate to the external URL when the modal is closed
-    if (externalURL) {
-      window.location.href = externalURL;
-    }
   };
-
-  const handleModalClick = () => {
-    // Navigate to the external URL when the modal is clicked
-    if (externalURL) {
-      window.location.href = externalURL;
-    };
-};
 
   const handleMouseLeave = () => {
     clearTimeout(hoverTimeout);
   };
-
 
   return (
     <>
@@ -62,19 +50,12 @@ const VideoPlayer = ({ videoLink, externalURL, children }) => {
             backgroundColor: 'rgba(0, 0, 0, 0)',
             animationFillMode: 'forwards',
           },
-          ':hover': {
-            content: {
-              border: '2px solid white', // Add a white border on hover
-            },
-          },
         }}
       >
-        <div onClick={handleModalClick}>
-          <video autoPlay width="100%" height="100%" onEnded={closeModal}>
-            <source src={videoLink} type="video/mp4" />
-            Your browser does not support this video. Try another browser.
-          </video>
-        </div>
+        <video autoPlay width="100%" height="100%" onEnded={closeModal}>
+          <source src={videoLink} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </Modal>
     </>
   );

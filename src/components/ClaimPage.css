@@ -186,9 +186,9 @@ button {
         }
 
 .arrow {
-  font-size: 3em;
-  text-decoration: none;
-  padding-top: 25px;
+    font-size: 3em;
+    text-decoration: none;
+    padding-top: 25px;
 }
 
 .arrow:hover {

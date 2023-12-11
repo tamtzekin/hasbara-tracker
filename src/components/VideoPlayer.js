@@ -9,7 +9,7 @@ const VideoPlayer = ({ videoLink, children }) => {
   const openModal = () => {
     hoverTimeout = setTimeout(() => {
       setIsModalOpen(true);
-    }, 180);
+    }, 100);
   };
 
   const closeModal = () => {
@@ -19,13 +19,14 @@ const VideoPlayer = ({ videoLink, children }) => {
 
   const handleMouseLeave = () => {
     clearTimeout(hoverTimeout);
+    closeModal(); // Close the modal when mouse leaves the link
   };
 
   return (
     <>
-      <div onMouseEnter={openModal} onMouseLeave={handleMouseLeave}>
+      <a onMouseEnter={openModal} onMouseLeave={handleMouseLeave}>
         {children}
-      </div>
+      </a>
 
       <Modal
         isOpen={isModalOpen}
@@ -55,15 +56,16 @@ const VideoPlayer = ({ videoLink, children }) => {
           },
         }}
       >
-        <video 
-            autoPlay 
-            width="100%" 
-            height="100%" 
-            style={{ 
-                position: 'relative', 
-                zIndex: 3 
-            }}             
-            onEnded={closeModal}>
+        <video
+          autoPlay
+          width="100%"
+          height="100%"
+          style={{
+            position: 'relative',
+            zIndex: 3,
+          }}
+          onEnded={closeModal}
+        >
           <source src={videoLink} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

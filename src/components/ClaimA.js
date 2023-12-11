@@ -14,6 +14,12 @@ const ClaimA = () => {
 
         <span class="table-container">
             <table>
+                <colgroup>
+                <col style={{ width: '2%'}} />
+                <col style={{ width: '15%'}} />
+                <col style={{ width: '5%'}} />
+                <col style={{ width: '5%'}} />
+                </colgroup>
                 <thead>
                     <tr>
                         <th>DATE</th>

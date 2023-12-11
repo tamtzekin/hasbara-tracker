@@ -49,7 +49,7 @@ const FilterDisplay = () => {
 
     <div class="filters">
         {/* Filters */}
-        <button onClick={(event) => filterItems('all', event)}>*ALL*</button>
+        <button class="dotted-button" onClick={(event) => filterItems('all', event)}>*ALL*</button>
         <button onClick={(event) => filterItems('oct7', event)}>Oct 7</button>
         <button onClick={(event) => filterItems('death', event)}>Death</button>
         <button onClick={(event) => filterItems('hospitals', event)}>Hospitals</button>

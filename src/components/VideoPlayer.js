@@ -45,14 +45,25 @@ const VideoPlayer = ({ videoLink, children }) => {
             maxHeight: '80%',
             overflow: 'hidden',
             animationFillMode: 'forwards',
+            position: 'absolute',
+            zIndex: 2,
           },
           overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0)',
             animationFillMode: 'forwards',
+            zIndex: 1,
           },
         }}
       >
-        <video autoPlay width="100%" height="100%" onEnded={closeModal}>
+        <video 
+            autoPlay 
+            width="100%" 
+            height="100%" 
+            style={{ 
+                position: 'relative', 
+                zIndex: 3 
+            }}             
+            onEnded={closeModal}>
           <source src={videoLink} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

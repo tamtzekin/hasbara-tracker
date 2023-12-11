@@ -18,10 +18,6 @@ a:hover {
     letter-spacing: 1.5px;
 }
 
-.claim-heading {
-  left: 19%;
-}
-
 .context {
   font-size: 0.9em;
 }
@@ -33,7 +29,7 @@ a:hover {
 }
 
 .table-container {
-  top: 80px;
+  top: 150px;
   position: relative;
 }
 
@@ -192,6 +188,7 @@ body {
 .arrow {
   font-size: 3em;
   text-decoration: none;
+  padding-top: 25px;
 }
 
 .arrow:hover {

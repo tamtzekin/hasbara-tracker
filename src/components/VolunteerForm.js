@@ -58,7 +58,7 @@ const VolunteerForm = () => {
 
         <form onSubmit={handleSubmit}>
           <label>
-            Full name *
+            Full name <span class="required-field">*</span>
             <br />
             <input
               type="text"
@@ -71,7 +71,7 @@ const VolunteerForm = () => {
           <br />
 
           <label>
-            Email *
+            Email <span class="required-field">*</span>
             <br />
             <input
               type="email"
@@ -84,7 +84,7 @@ const VolunteerForm = () => {
           <br />
           <label>
 
-            Tell us a little bit about your background and skills so we can match you with the right task. * 
+            Tell us a little bit about your background and skills so we can match you with the right task. <span class="required-field">*</span> 
             <br />
             <textarea
               name="backgroundAndSkills"
@@ -123,7 +123,6 @@ const VolunteerForm = () => {
           </label>
           )}
 
-          <br />
           <label>
             This isn’t necessary, but do you understand Arabic and/or Hebrew? Let us know what level. 
             <input

@@ -7,15 +7,19 @@ label {
 input {
     width: 100%;
     padding: 5px;
-    margin-top: 3.5%;
+    margin-top: 2.5%;
 }
 
 textarea {
     width: 100%;
-    margin-top: 3.5%;
+    margin-top: 2.5%;
 }
 
 select {
     width: 100%;
     margin-top: 3.5%;
+}
+
+.required-field {
+    color: rgb(190, 21, 21);
 }

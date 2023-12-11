@@ -25,12 +25,13 @@ const VideoPlayer = ({ videoLink, externalURL, children }) => {
     // Navigate to the external URL when the modal is clicked
     if (externalURL) {
       window.location.href = externalURL;
-    }
-  };
+    };
+};
 
   const handleMouseLeave = () => {
     clearTimeout(hoverTimeout);
   };
+
 
   return (
     <>
@@ -60,6 +61,11 @@ const VideoPlayer = ({ videoLink, externalURL, children }) => {
           overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0)',
             animationFillMode: 'forwards',
+          },
+          ':hover': {
+            content: {
+              border: '2px solid white', // Add a white border on hover
+            },
           },
         }}
       >

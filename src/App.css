@@ -31,15 +31,15 @@ h2 {
 }
 
 body {
-  background-color: #cbcbcb;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.3em;
-  margin: 15% 26% 5% 29%;
-  text-align: left;
+    background-color: #cbcbcb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    margin: 15% 26% 5% 29%;
+    text-align: left;
 }
 
 .investigating {
-  background-color: black;
+    background-color: black;
 }
 
 #dots {

@@ -39,10 +39,11 @@ const FilterDisplay = () => {
   
     return (
     <>
-    <span class="header-container">
+        <span class="header-container">
             <h1>Hasbara Tracker</h1>
-                <span id="dots">. . . . . . . . . . . . . . .</span>
+            <span id="dots">. . . . . . . . . . . . . . .</span>
         </span>
+
     <span class="content-container">
         <h2>Claims</h2>
 

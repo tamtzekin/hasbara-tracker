@@ -40,7 +40,7 @@ const ClaimA = () => {
                         
                         <td>Joe Biden claimed he saw ‘pictures of terrorists beheading babies’.</td>
                         
-                        <td><VideoPlayer videoLink="/files/Fox_Biden_10Oct.mp4"><a href="#">Fox News: ‘BIDEN MAKING REMARKS ON U.S. SUPPORT FOR ISRAEL’</a></VideoPlayer></td>
+                        <td><VideoPlayer videoLink="/files/Fox_Biden_10Oct.mp4" externalURL="https://archive.ph/UN3Jd"><a href="#" target="_blank">Fox News: ‘BIDEN MAKING REMARKS ON U.S. SUPPORT FOR ISRAEL’</a></VideoPlayer></td>
                         
                         <td><div class="claim">CLAIM</div></td>
                     </tr>

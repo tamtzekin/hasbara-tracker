@@ -1,20 +1,40 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-const VideoPlayer = ({ videoLink, children }) => {
+const VideoPlayer = ({ videoLink, externalURL, children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  let hoverTimeout;
 
   const openModal = () => {
-    setIsModalOpen(true);
+    hoverTimeout = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 180);
   };
 
   const closeModal = () => {
+    clearTimeout(hoverTimeout);
     setIsModalOpen(false);
+
+    // Navigate to the external URL when the modal is closed
+    if (externalURL) {
+      window.location.href = externalURL;
+    }
+  };
+
+  const handleModalClick = () => {
+    // Navigate to the external URL when the modal is clicked
+    if (externalURL) {
+      window.location.href = externalURL;
+    }
+  };
+
+  const handleMouseLeave = () => {
+    clearTimeout(hoverTimeout);
   };
 
   return (
     <>
-      <div onMouseEnter={openModal}>
+      <div onMouseEnter={openModal} onMouseLeave={handleMouseLeave}>
         {children}
       </div>
 
@@ -36,19 +56,19 @@ const VideoPlayer = ({ videoLink, children }) => {
             maxHeight: '80%',
             overflow: 'hidden',
             animationFillMode: 'forwards',
-            
           },
           overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.2)',
+            backgroundColor: 'rgba(0, 0, 0, 0)',
             animationFillMode: 'forwards',
           },
         }}
       >
-        {/* <button onClick={closeModal}>Close</button> */}
-        <video autoPlay width="100%" height="100%" onEnded={closeModal}>
-          <source src={videoLink} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div onClick={handleModalClick}>
+          <video autoPlay width="100%" height="100%" onEnded={closeModal}>
+            <source src={videoLink} type="video/mp4" />
+            Your browser does not support this video. Try another browser.
+          </video>
+        </div>
       </Modal>
     </>
   );

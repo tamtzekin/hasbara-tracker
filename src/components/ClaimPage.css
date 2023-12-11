@@ -179,9 +179,9 @@ button {
 }
 
 .close-btn {
-          position: absolute;  
-          font-size: 12vw;
-            top: -5%;
+    position: absolute;  
+    font-size: 12vw;
+    top: -5%;
             right: 1%;
             margin: 10px;
             cursor: pointer;
@@ -189,10 +189,11 @@ button {
         }
 
 .arrow {
-    font-size: 2.2em;
-    padding-top: 10px;
-    margin-left: -20%;
-}
+    font-size: 3.8em;
+    top: -0.8%;
+    margin-left: -3%;
+    position: fixed;
+    }
 
 .arrow:hover {
     text-decoration: none;

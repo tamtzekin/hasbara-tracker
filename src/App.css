@@ -107,6 +107,6 @@ a::selection {
 .header-container {
     position: absolute;
     /* margin: 0 10% 10% 0; */
-    padding-left: 500px;
+    /* padding-left: 500px; */
     width: 100%;
 }

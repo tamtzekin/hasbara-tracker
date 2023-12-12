@@ -16,7 +16,7 @@ const Homepage = () => {
     <>
 
 <span class="header-container">
-            <h1>Hasbara Tracker</h1>
+            <h1 class="ht-heading">Hasbara Tracker</h1>
             <span id="dots">. . . . . . . . . . . . . .</span>
 </span>
         

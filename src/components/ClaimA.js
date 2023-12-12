@@ -55,7 +55,7 @@ const ClaimA = () => {
   <td><div class="date">OCT 10, 2023</div></td>
   <td><details><summary>Nic Robertson of CNN recalls being brought to Kfar Aza to witness the brutality Hamas brought on the community.<span class="expand-text"> ... MORE</span></summary>Nic Robertson of CNN recalls being brought to Kfar Aza to witness the brutality Hamas brought on the community. He describes it as “ISIS-style executions” where they were “cutting the heads off of people” including babies and killing their pets. One family hid their kids in a cupboard while they tried to distract the attackers. They were killed, but the distraction worked.</details></td>
   
-  <td><VideoPlayer videoLink="/files/CNN_NicRobertson_10Oct.mp4" externalURL="https://archive.ph/XRmh4"><a href="https://archive.ph/XRmh4">▶ CNN: ‘IDF, WOMEN, TODDLERS, ELDERLY “BUTCHERED” BY HAMAS IN KFAR AZA’</a></VideoPlayer></td>
+  <td><VideoPlayer videoLink="/files/CNN_NicRobertson_10Oct.mp4" externalURL="https://archive.ph/XRmh4"><a href="https://archive.ph/XRmh4" target="_blank" rel="noreferrer">▶ CNN: ‘IDF, WOMEN, TODDLERS, ELDERLY “BUTCHERED” BY HAMAS IN KFAR AZA’</a></VideoPlayer></td>
   
   <td><div class="claim">CLAIM</div></td>
  </tr>
@@ -65,7 +65,7 @@ const ClaimA = () => {
 
   <td>Sara Sidner of CNN.</td>
 
-  <td><VideoPlayer videoLink="/files/CNNTV_11Oct.mp4" externalURL="https://archive.ph/wpEIM"><a href="https://archive.ph/wpEIM">▶ CNN: ‘NETANHAYU’S OFFICE RELEASES PHOTOS OF “BABIES MURDERED AND BURNED” BY HAMAS’</a></VideoPlayer></td>
+  <td><VideoPlayer videoLink="/files/CNNTV_11Oct.mp4" externalURL="https://archive.ph/wpEIM"><a href="https://archive.ph/wpEIM" target="_blank" rel="noreferrer">▶ CNN: ‘NETANHAYU’S OFFICE RELEASES PHOTOS OF “BABIES MURDERED AND BURNED” BY HAMAS’</a></VideoPlayer></td>
 
   <td><div class="claim">CLAIM</div></td>
  </tr>
@@ -89,35 +89,35 @@ const ClaimA = () => {
  <tr>
   <td><div class="date">OCT 11, 2023</div></td>
   <td>Tal Heinrich spokesperson for the Israeli Prime Minister’s Office ‘confirmed’ soldiers on the ground had been dealing with babies who had been decapitated.</td>
-  <td><VideoPlayer videoLink="/files/LBC_11Oct.mp4" externalURL="https://archive.is/UwDCO"><a href="https://archive.is/UwDCO">▶ LBC: ‘Toddlers, babies with their heads cut off’</a></VideoPlayer></td>
+  <td><VideoPlayer videoLink="/files/LBC_11Oct.mp4" externalURL="https://archive.is/UwDCO"><a href="https://archive.is/UwDCO" target="_blank" rel="noreferrer">▶ LBC: ‘Toddlers, babies with their heads cut off’</a></VideoPlayer></td>
   <td><div class="claim">CLAIM</div></td>
  </tr>
 
    <tr>
     <td><div class="date">OCT 11, 2023</div></td>
     <td><details><summary>After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim.<span class="expand-text"> ... MORE</span></summary>After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim. The Grayzone has identified Ben Zion as a fanatical settler leader who incited riots by demanding a Palestinian town be “wiped out”.</details></td>
-    <td><a class="media-source" href="https://archive.is/NcD6m">Metro: ‘40 BABIES MURDERED BY HAMAS’</a></td>
+    <td><a class="media-source" href="https://archive.is/NcD6m" target="_blank" rel="noreferrer">Metro: ‘40 BABIES MURDERED BY HAMAS’</a></td>
     <td><div class="contex">CONTEXT</div><br /><br /><div class="debunked">DEBUNKED</div></td>
    </tr>
 
    <tr>
    <td><div class="date">OCT 12, 2023</div></td>
    <td>Jerusalem Post</td>
-   <td><a class="media-source" href="https://archive.ph/9c9L0">The Jerusalem Post on X</a></td>
+   <td><a class="media-source" href="https://archive.ph/9c9L0" target="_blank" rel="noreferrer">The Jerusalem Post on X</a></td>
    <td><div class="claim">CLAIM</div></td>
   </tr>
 
    <tr>
     <td><div class="date">OCT 12, 2023</div></td>
     <td>‘Israeli official says government cannot confirm babies were beheaded in Hamas attack’.</td>
-    <td><a class="media-source" href="https://archive.ph/S0ZA3">CNN: ‘Israeli official says government cannot confirm babies were beheaded in Hamas attack’</a></td>
+    <td><a class="media-source" href="https://archive.ph/S0ZA3" target="_blank" rel="noreferrer">CNN: ‘Israeli official says government cannot confirm babies were beheaded in Hamas attack’</a></td>
     <td><div class="debunked">DEBUNKED</div></td>
    </tr>
 
    <tr>
     <td><div class="date">OCT 13, 2023</div></td>
     <td>When journalists asked a spokesman for the Israeli military about the story, the reply was, “We cannot confirm but you can assume it happened.”</td>
-    <td><a class="media-source" href="https://archive.ph/RNLTs">Al Jazeera: ‘Watching the watchdogs: Babies and truth die together in Israel-Palestine’</a></td>
+    <td><a class="media-source" href="https://archive.ph/RNLTs" target="_blank" rel="noreferrer">Al Jazeera: ‘Watching the watchdogs: Babies and truth die together in Israel-Palestine’</a></td>
     <td><div class="debunked">DEBUNKED</div></td>
    </tr>
 

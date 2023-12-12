@@ -14,6 +14,14 @@
     font-style: normal;
 }
 
+h1.homepage-heading {
+    font-family: 'LoRes_Regular';
+    font-size: 2.05em;
+    position: absolute;
+    left: 14%;
+    margin-top: 0%;
+    width: 100%;
+  }
   
 h2 {
     text-align: left;
@@ -74,7 +82,6 @@ a::selection {
     left: 52%;
     display: flex;
     list-style-type: none;
-    z-index: 1;
 }
 
 .navbar a {

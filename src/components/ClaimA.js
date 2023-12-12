@@ -21,15 +21,6 @@ const ClaimA = () => {
                 {/* <col style={{ width: '5%'}} /> */}
                 </colgroup>
 
-                <thead>
-                    <tr>
-                        <th>DATE</th>
-                        <th>DESCRIPTION</th>
-                        <th>SOURCE</th>
-                        {/* <th>CLAIM / DEBUNKED</th> */}
-                    </tr>
-                </thead>
-
                 <tbody>
                     <tr>
                         <td><div class="date">OCT 10, 2023</div></td>

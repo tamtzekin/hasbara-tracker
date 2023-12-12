@@ -143,6 +143,42 @@ table.a::selection {
     height: 100%;
 }
 
+details { 
+    display: inline;
+    cursor: crosshair;
+}
+    
+details[open] {
+    cursor: default;
+    /* cursor: n-resize; */
+    /* margin-top: 0.1em; */
+    /* font-size: 0.9rem; */
+    /* padding-top: 1em; */
+    /* line-height: 1.2em; */
+}
+
+details[open] > summary {
+    display: none;
+}
+    
+details > summary {
+    list-style: none;
+    /* color: #f0f; */
+    font-weight: 400;
+    /* font-size: 1.6em; */
+    /* padding-bottom: 3%; */
+    /* text-decoration: none; */
+}
+    
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.expand-text {
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
 /* .modal-content.img-link {
     display: flex; 
     justify-content: center; 

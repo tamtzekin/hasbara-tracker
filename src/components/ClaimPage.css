@@ -244,14 +244,11 @@ table.a::selection {
         margin-top: 1%;
         font-size: 1.1em !important;
     }
-    
-    .navbar {
-        display: none;
-    }
 }
 
-
-
+.modal-open {
+    overflow: hidden;
+}
 
 /* .modal-content.img-link {
     display: flex; 
@@ -294,7 +291,3 @@ table.a::selection {
     display: block;
     margin: auto;
 } */
-
-.modal-open {
-    overflow: hidden;
-}

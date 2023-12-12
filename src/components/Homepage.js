@@ -32,7 +32,7 @@ const Homepage = () => {
         <br />
         <br />
 
-        <a class="green-button" href="https://hasbaratracker.com/volunteer">Help out</a>
+        <Link to="/volunteer"><div className="green-button">Help out</div></Link>
 
         </span>
 

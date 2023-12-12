@@ -25,14 +25,16 @@ h1 {
 
 .green-button {
     background-color: #9dff20;
-    font-size: 15px;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 17px;
-    padding-bottom: 20px;
+    font-size: 17px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     border: none;
     border-radius: 0;
-}
+    width: 66px;
+    margin-top: 5px;
+  }
 
 .green-button:hover {
     background-color: #efefef;

@@ -1,7 +1,9 @@
 TO DO 
-- when the active video modal is clicked, take out to external source
-- volunteer form
-- text modals to expand 
+- mobile views
+    - add a few breaks to the bottom of the page on mobile view
+- fix button on Volunteer page
+- set up form server (php mailer?)
+- reinstall css minifier
 - Git lfs
 
 DONE
@@ -10,3 +12,7 @@ DONE
 - heading for eachc olumn
 - basic page routing
 - hover to preview, click to go out (to archive.ph links)
+- move the links forward in z index
+- move links around videos instead
+- when hover off, hide video
+- text modals to expand 

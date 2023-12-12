@@ -157,6 +157,12 @@ td {
     text-align: left;
 }
 
+/* thead {
+    position: fixed;
+    display: table;
+    width: 100%;
+} */
+
 th {
     border-bottom: 2px solid #9dff20;
     padding-left: 1%;

@@ -6,7 +6,7 @@ import './App.css';
 
 import Homepage from './components/Homepage';
 import About from './components/About';
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 import FilterDisplay from './components/FilterDisplay';
 import VolunteerForm from './components/VolunteerForm';
 import ClaimA from './components/ClaimA';
@@ -18,8 +18,8 @@ const App = () => {
     return (
     <>
             <Router>
-    
-                <NavBar />
+{/*     
+                <NavBar /> */}
                 
                 <VideoPlayer />
                 <Routes>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavBar from './NavBar';
 import '../App.css';
 import './VolunteerForm.css';
 
@@ -39,6 +40,7 @@ const VolunteerForm = () => {
       <span className="header-container">
         <h1 class="ht-heading">Hasbara Tracker</h1>
         <span id="dots">. . . . . . . . . . . . . .</span>
+        <NavBar />
       </span>
 
       <div className="content-container">

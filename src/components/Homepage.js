@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
 import './Homepage.css';
 
 import About from './About';
@@ -18,6 +19,7 @@ const Homepage = () => {
 <span class="header-container">
             <h1 class="ht-heading">Hasbara Tracker</h1>
             <span id="dots">. . . . . . . . . . . . . .</span>
+            <NavBar />
 </span>
         
         <span className="content-container">

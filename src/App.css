@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'LoRes_Regular';
-  src: url("./fonts/lores12ot-regular-webfont.woff2") format('woff2'),
-       url("./fonts/lores12ot-regular-webfont.woff") format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'LoRes_Regular';
+    src:url("./fonts/lores12ot-regular-webfont.woff2") format('woff2'),
+        url("./fonts/lores12ot-regular-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'AcuminPro_WideSemibold';
-  src: url("./fonts/acumin_pro_wide_semibold-webfont.woff2") format('woff2'),
-       url("./fonts/acumin_pro_wide_semibold-webfont.woff") format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'AcuminPro_WideSemibold';
+    src:url("./fonts/acumin_pro_wide_semibold-webfont.woff2") format('woff2'),
+        url("./fonts/acumin_pro_wide_semibold-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 h1 {
@@ -62,39 +62,39 @@ button.dotted {
 }
 
 .filtered-item {
-  display: none;
-  margin-top: 2.5%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+    margin-top: 2.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a::selection {
-  background: #000;
+    background: #000;
 }
 
 ::selection {
-  background: #9dff20;
-  color: #000;
+    background: #9dff20;
+    color: #000;
 }
 
 .navbar {
-  position: absolute;
-  top: 12%;
-  left: 70%;
-  display: flex;
-  list-style-type: none;
-  z-index: 1;
+    position: absolute;
+    top: 12%;
+    left: 70%;
+    display: flex;
+    list-style-type: none;
+    z-index: 1;
 }
 
 .navbar a {
-  text-decoration: none;
-  margin-left: 10px;
-  padding: 8px;
-  font-size: 0.85em;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 8px;
+    font-size: 0.85em;
 }
 
 .navbar a:hover {
   text-decoration: underline;
-}
+}   
 
 .content-container {
     position: absolute;
@@ -106,7 +106,5 @@ a::selection {
 
 .header-container {
     position: absolute;
-    /* margin: 0 10% 10% 0; */
-    /* padding-left: 500px; */
     width: 100%;
 }

@@ -27,7 +27,7 @@ h2 {
     text-align: left;
     font-family: 'AcuminPro_WideSemibold';
     position: relative;
-    margin: 0 0 2% 0; 
+    margin: 14% 0 0 0;
 }
 
 body {
@@ -44,10 +44,10 @@ body {
 
 #dots {
     font-family: 'LoRes_Regular';
-    font-size: 2.1em;
+    font-size: 2.15em;
     position: absolute;
-    left: 11%;
-    margin-top: 0.8%;
+    left: 14%;
+    margin-top: 1%;
     width: 100%;
   
 }
@@ -99,8 +99,9 @@ a::selection {
 
 .content-container {
     position: absolute;
+    top: 1%;
     left: 21%;
-    margin: 6.6% 33% 0 12%;
+    margin: 6% 32.5% 0 12%;
 }
 
 

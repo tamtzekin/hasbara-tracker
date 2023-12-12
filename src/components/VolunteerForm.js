@@ -38,10 +38,11 @@ const VolunteerForm = () => {
     <>
       <span className="header-container">
         <h1>Hasbara Tracker</h1>
-        <span id="dots">. . . . . . . . . . . . . . .</span>
+        <span id="dots">. . . . . . . . . . . . . .</span>
       </span>
 
       <div className="content-container">
+      <br />
         <h2>Volunteer</h2>
         <p>
           Volunteer to help build a database tracking and debunking fabrications

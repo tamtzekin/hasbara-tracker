@@ -41,12 +41,14 @@ const FilterDisplay = () => {
     <>
         <span class="header-container">
             <h1>Hasbara Tracker</h1>
-            <span id="dots">. . . . . . . . . . . . . . .</span>
+            <span id="dots">. . . . . . . . . . . . . .</span>
         </span>
 
     <span class="content-container">
+        <br />
         <h2>Claims</h2>
-
+        <br />
+        
     <div class="filters">
         {/* Filters */}
         <button class="dotted-button" onClick={(event) => filterItems('all', event)}>*ALL*</button>

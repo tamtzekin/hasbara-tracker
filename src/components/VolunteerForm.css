@@ -23,3 +23,32 @@ select {
 .required-field {
     color: rgb(190, 21, 21);
 }
+
+/* Mobile devices (portrait and landscape) */
+@media only screen and (max-width: 576px) {
+    /* Styles for screens up to 576px wide (typically smartphones) */
+    input {
+        margin-top: 5%;
+        width: 95%;
+    }
+
+    textarea {
+        width: 95%;
+    }
+
+    select {
+        width: 95%;
+    }
+
+    label {
+        line-height: 30px;
+        width: 96%;
+    }
+
+    .green-button {
+        width: 100px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        margin-left: 0.6%;
+    }
+}

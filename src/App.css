@@ -78,8 +78,8 @@ a::selection {
 
 .navbar {
     position: absolute;
-    top: 12%;
-    left: 70%;
+    top: 11%;
+    left: 52%;
     display: flex;
     list-style-type: none;
     z-index: 1;
@@ -108,3 +108,76 @@ a::selection {
     position: absolute;
     width: 100%;
 }
+<<<<<<< Updated upstream
+=======
+
+/* Mobile devices (portrait and landscape) */
+@media only screen and (max-width: 576px) {
+    /* Styles for screens up to 576px wide (typically smartphones) */
+    .header-container {
+
+    }
+
+    .content-container {
+        font-size: 0.9em;
+        margin: 20% 4% 0 -17%;
+        line-height: 11px;
+    }
+
+    .filters {
+        margin-left: -1%;
+    }
+
+    .filtered-item {
+        font-size: 0.95em;
+        margin-top: 4.9%;
+        margin-left: 2%;
+    }
+
+    .investigating {
+        padding: 5.5px;
+    }
+
+    h1 {
+        /* margin-left: 7%; */
+        margin-left: -15%;
+        font-size: 1.2em !important;
+    }
+
+    h2 {
+        font-size: 0.9em;
+        position: sticky;
+    }
+
+    .navbar {
+        margin-left: -53%;
+        margin-top: -6%;
+    }
+
+    #dots {
+        margin-top: 3.5%;
+        margin-left: -15%;
+        font-size: 1.25em; 
+    }
+  }
+  
+  /* Tablets and small desktops */
+  @media only screen and (min-width: 577px) and (max-width: 767px) {
+    /* Styles for screens between 577px and 767px wide (typically tablets) */
+  }
+  
+  /* Medium-sized devices */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Styles for screens between 768px and 991px wide (small desktops) */
+  }
+  
+  /* Large desktops */
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Styles for screens between 992px and 1199px wide (medium desktops) */
+  }
+  
+  /* Extra-large desktops */
+  @media only screen and (min-width: 1200px) {
+    /* Styles for screens wider than 1199px (large desktops) */
+  }
+>>>>>>> Stashed changes

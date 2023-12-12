@@ -44,17 +44,19 @@ const VolunteerForm = () => {
       <div className="content-container">
       <br />
         <h2>Volunteer</h2>
-        <p>
+        <br />
+        <div class="home-text">
           Volunteer to help build a database tracking and debunking fabrications
           by the Israeli state during its genocidal campaign against Palestinians
           in Gaza since 7 October 2023.
-        </p>
-        <p>
+        </div>
+        <div class="home-text">
           We will task volunteers with a specific claim and provide more
           information about how to document and archive. Anyone can help —
           especially if they have a propensity for research and collecting
           receipts.
-        </p>
+        </div>
+        <br />
         <br />
 
         <form onSubmit={handleSubmit}>

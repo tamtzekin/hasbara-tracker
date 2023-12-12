@@ -52,6 +52,7 @@ const VolunteerForm = () => {
           by the Israeli state during its genocidal campaign against Palestinians
           in Gaza since 7 October 2023.
         </div>
+        <br />
         <div class="home-text">
           We will task volunteers with a specific claim and provide more
           information about how to document and archive. Anyone can help —

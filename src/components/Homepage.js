@@ -37,17 +37,6 @@ const Homepage = () => {
 
         </span>
 
-          {/* 
-
-    {showFilterDisplay ? (
-        <FilterDisplay />
-      ) : (
-        <>
-          <About />
-
-          <br />
-        </>
-      )} */}
     </>
   );
 };

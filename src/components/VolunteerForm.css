@@ -44,11 +44,4 @@ select {
         line-height: 30px;
         width: 96%;
     }
-
-    .green-button {
-        width: 100px;
-        margin-top: 20px;
-        margin-bottom: 60px;
-        margin-left: 0.6%;
-    }
 }

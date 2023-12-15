@@ -15,22 +15,21 @@
   line-height: 29px;
 }
 
-.green-button {
+.btn-green {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2rem;
+    padding: 1.7em;
     background-color: #9dff20;
-    font-size: 17px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    font-size: 0.93em;
     border: none;
     border-radius: 0;
-    width: 66px;
-    margin-top: 5px;
 }
 
-.green-button:hover {
-    background-color: #efefef;
-    text-decoration: none;
+.btn-green:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 h1.ht-heading {

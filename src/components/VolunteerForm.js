@@ -139,7 +139,7 @@ const VolunteerForm = () => {
             />
           </label>
           <br />
-          <button class="green-button" type="submit">Submit</button>
+          <button class="btn-green" type="submit">Submit</button>
         </form>
       </div>
     </>

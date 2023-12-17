@@ -5,6 +5,10 @@ a {
     z-index: 3;
 }
 
+a:hover {
+    text-decoration: dashed underline;
+}
+
 a:hover .play-arrow {
     color: #9dff20;
 }

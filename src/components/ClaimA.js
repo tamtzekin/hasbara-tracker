@@ -11,7 +11,7 @@ const ClaimA = () => {
             <Link to="/claims"><div className="arrow">←</div></Link>
             <h1 class="claim-heading">Claim: Forty beheaded babies</h1>
             </span>
-        
+
         <span class="table-container">
             <table>
                 <colgroup>
@@ -32,7 +32,7 @@ const ClaimA = () => {
     
                         <td><span class="claim-subheading">SOURCES</span>
                         
-                        <VideoPlayer videoLink="/files/i24NEWS_10Oct.mp4" externalURL="https://archive.ph/QeCXs"><a href="https://archive.ph/QeCXs" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> i24NEWS: ‘HORROR SCENES AT KIBBUTZ LIBERATED FROM HAMAS’</a></VideoPlayer><br />
+                        <VideoPlayer videoLink="/files/i24NEWS_10Oct.mp4" externalURL="https://archive.ph/QeCXs"><a href="https://archive.ph/QeCXs" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> i24NEWS: ‘Horror scenes at kibbutz liberated from Hamas’</a></VideoPlayer><br />
 
                         <br /><a href="https://archive.ph/AhYIH" target="_blank" rel="noreferrer">Nicole Zedeck on X</a></td>
                     </tr>
@@ -47,7 +47,7 @@ const ClaimA = () => {
                         <td>
                             <span class="claim-subheading">SOURCES</span>
                             
-                        <VideoPlayer videoLink="/files/Fox_Biden_10Oct.mp4" externalURL="https://archive.ph/UN3Jd"><a href="https://archive.ph/UN3Jd" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> Fox News: ‘BIDEN MAKING REMARKS ON U.S. SUPPORT FOR ISRAEL’</a></VideoPlayer></td>
+                        <VideoPlayer videoLink="/files/Fox_Biden_10Oct.mp4" externalURL="https://archive.ph/UN3Jd"><a href="https://archive.ph/UN3Jd" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> Fox News: ‘Biden making remarks on U.S. support for Israel’</a></VideoPlayer></td>
                     </tr>
 
  <tr>
@@ -69,7 +69,7 @@ const ClaimA = () => {
   <td>
   <span class="claim-subheading">SOURCES</span>
 
-    <VideoPlayer videoLink="/files/CNN_NicRobertson_10Oct.mp4" externalURL="https://archive.ph/XRmh4"><a href="https://archive.ph/XRmh4" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> CNN: ‘IDF, WOMEN, TODDLERS, ELDERLY “BUTCHERED” BY HAMAS IN KFAR AZA’</a></VideoPlayer></td>
+    <VideoPlayer videoLink="/files/CNN_NicRobertson_10Oct.mp4" externalURL="https://archive.ph/XRmh4"><a href="https://archive.ph/XRmh4" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> CNN: ‘IDF, women, toddlers, elderly “butchered” by Hamas in Kfar Aza’</a></VideoPlayer></td>
   
   {/* <td><div class="claim">CLAIM</div></td> */}
  </tr>
@@ -85,7 +85,7 @@ const ClaimA = () => {
     
     <span class="claim-subheading">SOURCES</span>
 
-    <VideoPlayer videoLink="/files/CNNTV_11Oct.mp4" externalURL="https://archive.ph/wpEIM"><a href="https://archive.ph/wpEIM" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> CNN: ‘NETANHAYU’S OFFICE RELEASES PHOTOS OF “BABIES MURDERED AND BURNED” BY HAMAS’</a></VideoPlayer></td>
+    <VideoPlayer videoLink="/files/CNNTV_11Oct.mp4" externalURL="https://archive.ph/wpEIM"><a href="https://archive.ph/wpEIM" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> CNN: ‘Netanyahu’s office releases photos of “babies murdered and burned” by Hamas’</a></VideoPlayer></td>
  </tr>
 
  <tr>
@@ -101,7 +101,6 @@ const ClaimA = () => {
 
     <span class="claim-subheading">SOURCES</span>
     <a href="https://archive.is/rom8W" target="_blank" rel="noreferrer">Sara Sidner on X</a></td>
-  {/* <td><div class="debunked">DEBUNKED</div></td> */}
  </tr>
 
  <tr>

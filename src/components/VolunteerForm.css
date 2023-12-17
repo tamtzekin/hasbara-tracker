@@ -3,7 +3,7 @@ label {
     margin-bottom: 9px;
     display: block;
     font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
-    font-size: 0.85em;
+    font-size: 1em;
 }
 
 input {
@@ -27,7 +27,7 @@ select {
     width: 100%;
     margin-top: 3.5%;
     font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
-    font-size: 0.85em;
+    font-size: 1em;
 }
 
 .required-field {

@@ -23,7 +23,7 @@ const ClaimA = () => {
 
                 <tbody>
                     <tr>
-                        <td><span class="claim-subheading">DATE</span><div class="date">OCT 10, 2023</div></td>
+                        <td><span class="claim-subheading">DATE</span><div class="date">10 OCT</div></td>
                         <td><details><summary>
                             
                         <span class="claim-subheading">CLAIM</span> 
@@ -40,7 +40,7 @@ const ClaimA = () => {
                     <tr>
                         <td>
                             <span class="claim-subheading">DATE</span>
-                            <div class="date">OCT 10, 2023</div></td>
+                            <div class="date">10 OCT</div></td>
                         
                         <td><span class="claim-subheading">CLAIM</span> Joe Biden claimed he saw ‘pictures of terrorists beheading babies’.</td>
                         
@@ -54,7 +54,7 @@ const ClaimA = () => {
   <td>
     <span class="claim-subheading">DATE</span>
 
-    <div class="date">OCT 10, 2023</div></td>
+    <div class="date">10 OCT</div></td>
 
   <td><details><summary>
     
@@ -77,7 +77,7 @@ const ClaimA = () => {
  <tr>
   <td>
   <span class="claim-subheading">DATE</span>
-    <div class="date">OCT 11, 2023</div></td>
+    <div class="date">11 OCT</div></td>
 
   <td><span class="claim-subheading">CLAIM</span> Sara Sidner of CNN.</td>
 
@@ -92,7 +92,7 @@ const ClaimA = () => {
   <td>
     
   <span class="claim-subheading">DATE</span>
-    <div class="date">OCT 11, 2023</div></td>
+    <div class="date">11 OCT</div></td>
   
   <td><span class="claim-subheading">CLAIM</span> Sara Sidner of CNN retracts.</td>
 
@@ -107,7 +107,7 @@ const ClaimA = () => {
   <td>
     
   <span class="claim-subheading">DATE</span>
-    <div class="date">OCT 11, 2023</div></td>
+    <div class="date">11 OCT</div></td>
 
   <td><span class="claim-subheading">DEBUNKED</span>
 
@@ -124,7 +124,7 @@ const ClaimA = () => {
   <td>
     
     <span class="claim-subheading">DATE</span>
-    <div class="date">OCT 11, 2023</div></td>
+    <div class="date">11 OCT</div></td>
 
   <td><span class="claim-subheading">CLAIM</span>
   Tal Heinrich spokesperson for the Israeli Prime Minister’s Office ‘confirmed’ soldiers on the ground had been dealing with babies who had been decapitated.</td>
@@ -138,7 +138,7 @@ const ClaimA = () => {
    <tr> 
     <td>
         <span class="claim-subheading">DATE</span>
-        <div class="date">OCT 11, 2023</div></td>
+        <div class="date">11 OCT</div></td>
     <td>
         
     
@@ -157,7 +157,7 @@ const ClaimA = () => {
    <td>
     
     <span class="claim-subheading">DATE</span>
-    <div class="date">OCT 12, 2023</div></td>
+    <div class="date">12 OCT</div></td>
 
    <td><span class="claim-subheading">CLAIM</span> Jerusalem Post</td>
    
@@ -170,7 +170,7 @@ const ClaimA = () => {
    <tr>
     <td>
         <span class="claim-subheading">DATE</span>
-        <div class="date">OCT 12, 2023</div></td>
+        <div class="date">12 OCT</div></td>
 
     <td>
         <span class="claim-subheading">DEBUNKED</span>
@@ -186,7 +186,7 @@ const ClaimA = () => {
     <td>
         
         <span class="claim-subheading">DATE</span>
-        <div class="date">OCT 13, 2023</div></td>
+        <div class="date">13 OCT</div></td>
 
     <td>
         <span class="claim-subheading">DEBUNKED</span>

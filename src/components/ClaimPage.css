@@ -57,11 +57,14 @@ button {
 }
 
 .date {
-  /* color: #345c00; */
-  font-size: 0.9em;
+  font-size: 1.2em;
   font-weight: 600;
   vertical-align: top;
-  margin-top: 2%;
+}
+
+.date::after {
+    content: '\a 2023';
+    font-size: 0.8em;
 }
 
 .debunked {
@@ -71,7 +74,7 @@ button {
 }
 
 .claim-subheading {
-    font-size: 0.8em;
+    font-size: 1em;
     vertical-align: middle;
     font-weight: 600;
     padding-bottom: 1%;

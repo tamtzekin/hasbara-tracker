@@ -16,7 +16,7 @@ a[target="_blank"]:hover::after {
   
 .arrow {
     font-size: 3.8em;
-    top: 1%;
+    top: 4%;
     margin-left: -3%;
     position: fixed;
     }

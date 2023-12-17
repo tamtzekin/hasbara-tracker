@@ -2,6 +2,8 @@ label {
     width: 100%;
     margin-bottom: 9px;
     display: block;
+    font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
+    font-size: 0.85em;
 }
 
 input {
@@ -24,6 +26,8 @@ textarea {
 select {
     width: 100%;
     margin-top: 3.5%;
+    font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
+    font-size: 0.85em;
 }
 
 .required-field {

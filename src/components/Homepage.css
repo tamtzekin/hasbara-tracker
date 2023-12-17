@@ -24,6 +24,7 @@
     font-size: 0.93em;
     border: none;
     border-radius: 0;
+    font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
 }
 
 .btn-green:hover {

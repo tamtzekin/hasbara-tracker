@@ -15,9 +15,9 @@
 }
 
 @font-face {
-    font-family: 'HelveticaNeue_Thin';
-    src:url("./fonts/helveticaneue_thin.woff2") format("woff2"),
-    url("./fonts/helveticaneue_thin.woff") format("woff");
+    font-family: 'HelveticaNeue_Light';
+    src:url("./fonts/helveticaneue_light.woff2") format("woff2"),
+    url("./fonts/helveticaneue_light.woff") format("woff");
 }
 
 h1.homepage-heading {
@@ -38,8 +38,9 @@ h2 {
 
 body {
     background-color: #cbcbcb;
-    font-family: 'HelveticaNeue_Thin', sans-serif;
+    font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
     font-size: 1.3em;
+    letter-spacing: 0.8px;
     margin: 15% 26% 5% 29%;
     text-align: left;
 }

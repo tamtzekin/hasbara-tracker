@@ -70,11 +70,16 @@ button {
     letter-spacing: 1.5px;
 }
 
-.claim-pretext {
+.claim-subheading {
     font-size: 0.8em;
     vertical-align: middle;
     font-weight: 600;
     padding-bottom: 1%;
+}
+
+.claim-subheading::after {
+    content: '\a\a';
+    white-space: pre;
 }
 
 details { 

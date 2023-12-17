@@ -68,12 +68,11 @@ button.dotted {
 }
 
 a::selection {
-    background: #000;
+    background: #9dff20;
 }
 
 ::selection {
     background: #9dff20;
-    color: #000;
 }
 
 .navbar {

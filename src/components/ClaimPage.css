@@ -161,13 +161,11 @@ table.a:hover {
 }
       
 table.a::selection {
-    background: #000;
-    color: whitesmoke;
+    background: #9dff20;
 }
 
     ::selection {
-        background: #000;
-        color: #000;
+        background: #9dff20;
     }
 
 .modal-overlay {

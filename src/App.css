@@ -39,8 +39,9 @@ h2 {
 body {
     background-color: #cbcbcb;
     font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
-    font-size: 1.3em;
+    font-size: 0.95em;
     letter-spacing: 0.8px;
+    line-height: 25px;
     margin: 15% 26% 5% 29%;
     text-align: left;
 }

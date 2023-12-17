@@ -207,13 +207,15 @@ table.a::selection {
     tr {
         display: block;
         margin-bottom: 20px;
+        margin-top: 20px;
+        padding-bottom: 30px;
         border-bottom: 2px solid #9dff20;
-        width: 100%;
+        /* width: 100%; */
     }
 
     td {
         display: block;
-        /* border-bottom: 2px  dotted grey; */
+        border-bottom: none;
         padding: 20px;
         text-align: left;
         width: 180%;

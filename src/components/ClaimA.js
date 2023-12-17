@@ -8,7 +8,7 @@ const ClaimA = () => {
     return (
     <>
         <span class="header-container">
-            <Link to="/claims"><div className="arrow">⭪</div></Link>
+            <Link to="/claims"><div className="arrow">←</div></Link>
             <h1 class="claim-heading">Claim: Forty beheaded babies</h1>
             </span>
 
@@ -85,7 +85,7 @@ const ClaimA = () => {
   {/* <td><div class="claim">CLAIM</div></td> */}
  </tr>
 
-   <tr>
+   <tr> 
     <td><div class="date">OCT 11, 2023</div></td>
     <td><details><summary><span class="claim-pretext">DEBUNKED:</span> After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim<span class="expand-text">... more</span></summary><span class="claim-pretext">DEBUNKED:</span> After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim. The Grayzone has identified Ben Zion as a fanatical settler leader who incited riots by demanding a Palestinian town be “wiped out”.</details></td>
     <td><a class="media-source" href="https://archive.is/NcD6m" target="_blank" rel="noreferrer">Metro: ‘40 BABIES MURDERED BY HAMAS’</a></td>

@@ -3,7 +3,6 @@ a {
     text-decoration: none;
     position: relative;
     z-index: 3;
-    text-decoration: underline #9dff20;
 }
 
 a[target="_blank"]:hover::after {
@@ -55,7 +54,7 @@ button {
 
 .date {
   /* color: #345c00; */
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: 600;
   vertical-align: top;
   margin-top: 2%;

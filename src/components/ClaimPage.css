@@ -3,10 +3,11 @@ a {
     text-decoration: none;
     position: relative;
     z-index: 3;
+    text-decoration: underline #9dff20;
 }
 
 a:hover {
-    text-decoration: underline;
+    
 }
 
 a[target="_blank"]:hover::after {

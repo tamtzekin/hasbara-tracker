@@ -24,7 +24,7 @@ const ClaimA = () => {
                 <tbody>
                     <tr>
                         <td><div class="date">OCT 10, 2023</div></td>
-                        <td><details><summary>CLAIM: Babies and toddlers were found with their “heads decapitated” in Kfar Aza.<span class="expand-text"> ... MORE</span></summary>CLAIM: Babies and toddlers were found with their “heads decapitated” in Kfar Aza in southern Israel after Hamas’ attacks in the kibbutz over the weekend, a spokesperson for Israel's prime minister says. Nicole Zedeck, a reporter with Tel Aviv-based news channel i24 from her interview with Israeli reserve soldier David Ben Zion.</details></td>
+                        <td><details><summary>CLAIM: Babies and toddlers were found with their “heads decapitated” in Kfar Aza<span class="expand-text">... more</span></summary>CLAIM: Babies and toddlers were found with their “heads decapitated” in Kfar Aza in southern Israel after Hamas’ attacks in the kibbutz over the weekend, a spokesperson for Israel's prime minister says. Nicole Zedeck, a reporter with Tel Aviv-based news channel i24 from her interview with Israeli reserve soldier David Ben Zion.</details></td>
     
                         <td><VideoPlayer videoLink="/files/i24NEWS_10Oct.mp4" externalURL="https://archive.ph/QeCXs"><a href="https://archive.ph/QeCXs" target="_blank" rel="noreferrer">▶ i24NEWS: ‘HORROR SCENES AT KIBBUTZ LIBERATED FROM HAMAS’</a></VideoPlayer><br />
 
@@ -45,7 +45,7 @@ const ClaimA = () => {
 
  <tr>
   <td><div class="date">OCT 10, 2023</div></td>
-  <td><details><summary>CLAIM: Nic Robertson of CNN recalls being brought to Kfar Aza to witness the brutality Hamas brought on the community.<span class="expand-text"> ... MORE</span></summary>CLAIM: Nic Robertson of CNN recalls being brought to Kfar Aza to witness the brutality Hamas brought on the community. He describes it as “ISIS-style executions” where they were “cutting the heads off of people” including babies and killing their pets. One family hid their kids in a cupboard while they tried to distract the attackers. They were killed, but the distraction worked.</details></td>
+  <td><details><summary>CLAIM: Nic Robertson of CNN recalls being brought to Kfar Aza to witness the brutality Hamas brought on the community<span class="expand-text">... more</span></summary>CLAIM: Nic Robertson of CNN recalls being brought to Kfar Aza to witness the brutality Hamas brought on the community. He describes it as “ISIS-style executions” where they were “cutting the heads off of people” including babies and killing their pets. One family hid their kids in a cupboard while they tried to distract the attackers. They were killed, but the distraction worked.</details></td>
   
   <td><VideoPlayer videoLink="/files/CNN_NicRobertson_10Oct.mp4" externalURL="https://archive.ph/XRmh4"><a href="https://archive.ph/XRmh4" target="_blank" rel="noreferrer">▶ CNN: ‘IDF, WOMEN, TODDLERS, ELDERLY “BUTCHERED” BY HAMAS IN KFAR AZA’</a></VideoPlayer></td>
   
@@ -87,7 +87,7 @@ const ClaimA = () => {
 
    <tr>
     <td><div class="date">OCT 11, 2023</div></td>
-    <td><details><summary>DEBUNKED: After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim.<span class="expand-text"> ... MORE</span></summary>DEBUNKED: After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim. The Grayzone has identified Ben Zion as a fanatical settler leader who incited riots by demanding a Palestinian town be “wiped out”.</details></td>
+    <td><details><summary>DEBUNKED: After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim<span class="expand-text">... more</span></summary>DEBUNKED: After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim. The Grayzone has identified Ben Zion as a fanatical settler leader who incited riots by demanding a Palestinian town be “wiped out”.</details></td>
     <td><a class="media-source" href="https://archive.is/NcD6m" target="_blank" rel="noreferrer">Metro: ‘40 BABIES MURDERED BY HAMAS’</a></td>
     {/* <td><div class="context">CONTEXT</div><br /><br /><div class="debunked">DEBUNKED</div></td> */}
    </tr>

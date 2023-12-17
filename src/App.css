@@ -20,6 +20,12 @@
     url("./fonts/helveticaneue_light.woff") format("woff");
 }
 
+@font-face {
+    font-family: 'HelveticaNeue_Medium';
+    src:url("./fonts/helveticaneue_medium.woff2") format("woff2"),
+    url("./fonts/helveticaneue_medium.woff") format("woff");
+}
+
 h1.homepage-heading {
     font-family: 'LoRes_Regular';
     font-size: 2.05em;
@@ -31,7 +37,7 @@ h1.homepage-heading {
   
 h2 {
     text-align: left;
-    font-family: 'AcuminPro_WideSemibold';
+    font-family: 'HelveticaNeue_Medium';
     position: relative;
     margin: 14% 0 0 0;
 }
@@ -39,7 +45,7 @@ h2 {
 body {
     background-color: #cbcbcb;
     font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
-    font-size: 0.95em;
+    font-size: 1em;
     letter-spacing: 0.8px;
     line-height: 25px;
     margin: 15% 26% 5% 29%;
@@ -75,10 +81,6 @@ button.dotted {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a::selection {
-    background: #9dff20;
-}
-
 ::selection {
     background: #9dff20;
 }
@@ -99,12 +101,12 @@ a::selection {
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  text-decoration: dashed underline;
 }   
 
 .content-container {
     position: absolute;
-    top: 5%;
+    /* padding-top: 10px; */
     left: 21%;
     margin: 6% 32.5% 0 12%;
     padding-bottom: 10%;

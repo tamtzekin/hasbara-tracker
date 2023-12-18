@@ -11,6 +11,7 @@ import FilterDisplay from './components/FilterDisplay';
 import VolunteerForm from './components/VolunteerForm';
 import ClaimA from './components/ClaimA';
 import VideoPlayer from './components/VideoPlayer';
+import MobileMenu from './components/MobileMenu';
 
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
             <Router>
 {/*     
                 <NavBar /> */}
-                
+                <MobileMenu />
                 <VideoPlayer />
                 <Routes>
                     <Route path="/" element={<Homepage />} />

@@ -117,6 +117,93 @@ button.dotted {
     width: 80%;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* Add this to your existing CSS file or create a new one */
+
+.mobile-menu {
+    display: none;
+  }
+  
+  .hamburger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+}
+  
+  .bar {
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s;
+  }
+  
+  .menu-links a:hover {
+    background-color: #eee;
+  }
+  
+  /* Media query for mobile menu */
+  @media only screen and (max-width: 767px) {
+    .mobile-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  
+    .menu-links {
+      display: flex;
+      flex-direction: column;
+      top: 5.5%;
+      right: 6%;
+      text-align: right;
+      position: absolute;
+      font-size: 0.9em;
+      font-family: 'Helvetica Neue Light', Helvetica, sans-serif;
+    }
+  
+    .mobile-menu .hamburger-icon {
+      display: flex;
+    }
+  }
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Mobile devices (portrait and landscape) */
 @media only screen and (max-width: 576px) {
     /* Styles for screens up to 576px wide (typically smartphones) */

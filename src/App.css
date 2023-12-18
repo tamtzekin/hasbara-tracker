@@ -165,7 +165,7 @@ button.dotted {
   }
   
   /* Media query for mobile menu */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
     .mobile-menu {
       display: flex;
       align-items: center;
@@ -207,8 +207,7 @@ button.dotted {
 
 
 /* Mobile devices (portrait and landscape) */
-@media only screen and (max-width: 576px) {
-    /* Styles for screens up to 576px wide (typically smartphones) */
+@media only screen and (max-width: 768px) {
     .header-container {
         top: 2%;
     }
@@ -245,8 +244,7 @@ button.dotted {
     }
 
     .navbar {
-        left: -7%;
-        margin-top: 12%;
+        display: none;
     }
 
     #dots {

@@ -35,8 +35,7 @@ select {
 }
 
 /* Mobile devices (portrait and landscape) */
-@media only screen and (max-width: 576px) {
-    /* Styles for screens up to 576px wide (typically smartphones) */
+@media only screen and (max-width: 768px) {
     input {
         /* margin-top: 5%; */
         width: 95%;

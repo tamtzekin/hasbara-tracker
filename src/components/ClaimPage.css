@@ -247,8 +247,7 @@ table.a::selection {
 
 
 
-@media only screen and (max-width: 576px) {
-    /* Styles for screens up to 576px wide (typically smartphones) */
+@media only screen and (max-width: 768px) {
     a {
         z-index: 1; /* makes the a link text hide under the video, on mobile*/
     }
@@ -321,10 +320,6 @@ table.a::selection {
 
     .link-icon::after {
         content: '🗏\00a0';
-    }
-
-    .navbar {
-        display: none;
     }
 }
 

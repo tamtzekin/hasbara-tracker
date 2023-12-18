@@ -63,7 +63,6 @@ button {
 .date {
   font-size: 1em;
   font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
-  font-weight: 600;
   vertical-align: top;
 }
 
@@ -77,7 +76,20 @@ button {
     letter-spacing: 1.5px;
 }
 
-.claim-subheading {
+.claim-tag {
+    border: solid 1.2px;
+    padding: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 18px;
+    background: #bfe1f6;
+}
+
+.debunk-tag {
+    background: #ffcfc9;
+}
+
+/* .claim-subheading {
     font-size: 1.1em;
     font-family: 'HelveticaNeue_Medium', Helvetica, sans-serif;
     vertical-align: middle;
@@ -87,7 +99,7 @@ button {
 .claim-subheading::after {
     content: '\a\a';
     white-space: pre;
-}
+} */
 
 details { 
     display: inline;
@@ -96,24 +108,16 @@ details {
     
 details[open] {
     cursor: default;
-    /* cursor: n-resize; */
-    /* margin-top: 0.1em; */
-    /* font-size: 0.9rem; */
-    /* padding-top: 1em; */
-    /* line-height: 1.2em; */
 }
 
-details[open] > summary {
+details[open] .expand-text {
     display: none;
 }
     
 details > summary {
     list-style: none;
-    /* color: #f0f; */
-    font-weight: 400;
-    /* font-size: 1.6em; */
-    /* padding-bottom: 3%; */
-    /* text-decoration: none; */
+    font-weight: 600;
+    padding-bottom: 5%;
 }
     
 details > summary::-webkit-details-marker {
@@ -124,6 +128,10 @@ details > summary::-webkit-details-marker {
     font-size: 1.5em;
     font-weight: 600;
     color: #585151;
+}
+
+.expand-text::after {
+    content: " + ";
 }
 
 h1.claim-heading {

@@ -51,7 +51,7 @@ const FilterDisplay = () => {
         <h2>Claims</h2>
         <br />
 
-        <Link to="/claim-a">— Forty beheaded babies</Link>
+        <Link to="/claim-a">— 40 beheaded babies</Link>
     
 
         </span>

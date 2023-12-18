@@ -251,7 +251,7 @@ table.a::selection {
     /* Styles for screens up to 576px wide (typically smartphones) */
 
     .table-container {
-        top: 70px;
+        top: 0;
         /* position: relative; */
         display: flex;
         flex-direction: column;
@@ -277,7 +277,7 @@ table.a::selection {
         border-bottom: none;
         text-align: left;
         padding: 15px;
-        width: 100%;
+        width: 120%;
     }
 
     thead {
@@ -314,7 +314,7 @@ table.a::selection {
     }
 
     .navbar {
-        font-size: 0.8em;
+        display: none;
     }
 }
 

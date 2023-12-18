@@ -246,6 +246,7 @@ table.a::selection {
 
 @media only screen and (max-width: 576px) {
     /* Styles for screens up to 576px wide (typically smartphones) */
+
     .table-container {
         top: 70px;
         /* position: relative; */
@@ -263,7 +264,7 @@ table.a::selection {
         display: block;
         margin-bottom: 20px;
         margin-top: 20px;
-        padding-bottom: 30px;
+        /* padding-bottom: 30px; */
         border-bottom: 2px solid #9dff20;
         /* width: 100%; */
     }
@@ -271,10 +272,9 @@ table.a::selection {
     td {
         display: block;
         border-bottom: none;
-        padding: 20px;
         text-align: left;
-        width: 180%;
-
+        padding: 15px;
+        width: 100%;
     }
 
     th {
@@ -300,6 +300,11 @@ table.a::selection {
         left: 25%;
         margin-top: 2%;
         font-size: 1.1em !important;
+    }
+
+    .link-icon::after {
+        content: '🗏\00a0';
+
     }
 }
 

@@ -49,7 +49,7 @@ const ClaimA = () => {
                     <td>
                     <VideoPlayer videoLink="/files/i24NEWS_10Oct.mp4"><a href="https://archive.ph/QeCXs" target="_blank" rel="noreferrer"><span class="play-arrow"></span>i24NEWS: ‘Horror scenes at kibbutz liberated from Hamas’</a></VideoPlayer><br />
 
-                    <br /><a href="https://archive.ph/AhYIH" target="_blank" rel="noreferrer">Nicole Zedeck on X</a></td>
+                    <br /><a href="https://archive.ph/AhYIH" target="_blank" rel="noreferrer"><span class="link-icon"></span>Nicole Zedeck on X</a></td>
                 </tr>
 
 
@@ -125,7 +125,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <a href="https://archive.ph/Otjey" target="_blank" rel="noreferrer">Insider: IDF says it won't back up its claim that Hamas decapitated babies in Israel because it is ‘disrespectful for the dead’</a></td>
+                        <a href="https://archive.ph/Otjey" target="_blank" rel="noreferrer"><span class="link-icon"></span>Insider: IDF says it won't back up its claim that Hamas decapitated babies in Israel because it is ‘disrespectful for the dead’</a></td>
                 
                 </tr>
 
@@ -154,7 +154,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <a href="https://archive.is/NcD6m" target="_blank" rel="noreferrer">Metro: ‘40 babies murdered by Hamas’</a></td>
+                        <a href="https://archive.is/NcD6m" target="_blank" rel="noreferrer"><span class="link-icon"></span>Metro: ‘40 babies murdered by Hamas’</a></td>
                 </tr>
 
 
@@ -167,7 +167,7 @@ const ClaimA = () => {
                     In a post on X (formerly Twitter), CNN reporter Sara Sidner apologies for sharing disinformation:<br />
                     “Yesterday the Israeli Prime Minister’s office said that it had confirmed Hamas beheaded babies and children while we were live on the air. The Israeli government now says today it CANNOT confirm babies were beheaded. I needed to be more careful with my words and I am sorry.”</details></td>
 
-                    <td><a href="https://archive.is/rom8W" target="_blank" rel="noreferrer">Sara Sidner on X</a></td>
+                    <td><a href="https://archive.is/rom8W" target="_blank" rel="noreferrer"><span class="link-icon"></span>Sara Sidner on X</a></td>
                 </tr>
 
 
@@ -181,7 +181,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <a href="https://archive.ph/icFaG" target="_blank" rel="noreferrer">CNN: Israeli official says government cannot confirm babies were beheaded in Hamas attack</a></td>
+                        <a href="https://archive.ph/icFaG" target="_blank" rel="noreferrer"><span class="link-icon"></span>CNN: Israeli official says government cannot confirm babies were beheaded in Hamas attack</a></td>
                 
                 </tr>
 
@@ -211,7 +211,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <a href="https://archive.ph/9c9L0" target="_blank" rel="noreferrer">The Jerusalem Post on X</a></td>
+                        <a href="https://archive.ph/9c9L0" target="_blank" rel="noreferrer"><span class="link-icon"></span>The Jerusalem Post on X</a></td>
                 </tr>
 
 
@@ -236,7 +236,7 @@ const ClaimA = () => {
                     Al Jazeera reports that when journalists asked a spokesman for the Israeli military about the story of beheaded babies, the reply was, “We cannot confirm but you can assume it happened.”
                     </details></td>
 
-                    <td><a href="https://archive.ph/RNLTs" target="_blank" rel="noreferrer">Al Jazeera: ‘Watching the watchdogs: Babies and truth die together in Israel-Palestine’</a></td>
+                    <td><a href="https://archive.ph/RNLTs" target="_blank" rel="noreferrer"><span class="link-icon"></span>Al Jazeera: ‘Watching the watchdogs: Babies and truth die together in Israel-Palestine’</a></td>
                 </tr>
 
 
@@ -251,7 +251,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <a href="https://archive.ph/yqnZT" target="_blank" rel="noreferrer">The White House:  ‘Remarks by President Biden on the October 7th Terrorist Attacks and the Resilience of the State of Israel and its People’</a></td>
+                        <a href="https://archive.ph/yqnZT" target="_blank" rel="noreferrer"><span class="link-icon"></span>The White House:  ‘Remarks by President Biden on the October 7th Terrorist Attacks and the Resilience of the State of Israel and its People’</a></td>
                 
                 </tr>
 
@@ -311,7 +311,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <a href="https://archive.is/DK1ee" target="_blank" rel="noreferrer">The Intercept: ‘Joe Biden keeps repeating his false claim that he saw pictures of beheaded babies’</a></td>
+                        <a href="https://archive.is/DK1ee" target="_blank" rel="noreferrer"><span class="link-icon"></span>The Intercept: ‘Joe Biden keeps repeating his false claim that he saw pictures of beheaded babies’</a></td>
                 </tr>
 
 
@@ -327,7 +327,7 @@ const ClaimA = () => {
                     “I saw some of the photographs when I was there — tying a mother and her daughter together on a rope and then pouring kerosene on them and then burning them, beheading infants, doing things that are just inhuman — totally, completely inhuman.”
                     </details></td>
 
-                    <td><a href="https://archive.ph/cOJQW" target="_blank" rel="noreferrer">The White House: ‘Remarks by President Biden at a Campaign Reception’</a></td>
+                    <td><a href="https://archive.ph/cOJQW" target="_blank" rel="noreferrer"><span class="link-icon"></span>The White House: ‘Remarks by President Biden at a Campaign Reception’</a></td>
                 
                 </tr>
 
@@ -343,7 +343,7 @@ const ClaimA = () => {
 
     <td>
 
-        <a class="media-source" href="https://archive.ph/RNLTs" target="_blank" rel="noreferrer">Al Jazeera: ‘Watching the watchdogs: Babies and truth die together in Israel-Palestine’</a></td>
+        <a class="media-source" href="https://archive.ph/RNLTs" target="_blank" rel="noreferrer"><span class="link-icon"></span>Al Jazeera: ‘Watching the watchdogs: Babies and truth die together in Israel-Palestine’</a></td>
    </tr>
 
         </tbody>

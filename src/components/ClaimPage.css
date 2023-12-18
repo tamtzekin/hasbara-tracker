@@ -281,9 +281,9 @@ table.a::selection {
     }
 
     thead {
-        display: none;
+        opacity: 0;
     }
-    
+
     th {
         /* display: block; */
         border-bottom: 2px solid #9dff20;

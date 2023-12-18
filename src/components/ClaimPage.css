@@ -20,10 +20,10 @@ a[target="_blank"]:hover::after {
   
 .arrow {
     font-size: 3.8em;
-    top: 4%;
-    margin-left: -3%;
+    top: 2.5%;
+    left: 0.5%;
     position: fixed;
-    }
+}
 
 .arrow:hover {
     text-decoration: none;
@@ -74,6 +74,18 @@ button {
     font-size: 0.9em;
     font-weight: 600;
     letter-spacing: 1.5px;
+}
+
+.claim-header-container {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0.97;
+    background: #cbcbcb;
+    height: 80px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    top: 0;
 }
 
 .claim-tag {
@@ -153,7 +165,6 @@ h1.claim-heading {
     font-size: 2.05em;
     position: absolute;
     left: 6%;
-    margin-top: -3.3%;
     width: 100%;
 }
 
@@ -176,20 +187,13 @@ td {
 }
 
 thead {
-    /* position: fixed; */
-    /* width: 100%; */
-    display: table-header-group;
+    width: 100%;
     background:#cbcbcb;
 }
 
-/* th {
-    border-bottom: 2px solid #9dff20;
-    padding-left: 1%;
-    padding-bottom: 2%;
-    text-align: left;
-    font-size: 1em;
-    font-weight: 400;
-} */
+th {
+    padding: 25px;
+}
 
 table.a {
     color: #345c00;

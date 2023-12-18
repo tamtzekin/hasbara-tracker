@@ -7,7 +7,7 @@ import VideoPlayer from './VideoPlayer';
 const ClaimA = () => {
     return (
     <>
-        <span class="header-container">
+        <span class="claim-header-container">
             <Link to="/claims"><div className="arrow">←</div></Link>
             <h1 class="claim-heading">Claim: 40 beheaded babies</h1>
         </span>

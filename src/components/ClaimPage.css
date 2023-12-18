@@ -291,13 +291,13 @@ table.a::selection {
 
     .arrow {
         font-size: 2.3em;
-        top: 2.3%;
-        margin-left: -3%;
+        top: 0.6%;
+        margin-left: 2%;
         position: fixed;
         }
 
     h1.claim-heading {
-        left: 25%;
+        left: 30%;
         margin-top: 2%;
         font-size: 1.1em !important;
     }

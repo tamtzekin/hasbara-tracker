@@ -120,13 +120,12 @@ const ClaimA = () => {
 
                     <td><span class="debunk-tag">Debunk</span></td>
 
-                    <td><details><summary>IOF won't back up decapitated babies claim because it is ‘disrespectful for the dead’<span class="expand-text"></span></summary>
+                    <td><details><summary>IOF won’t back up decapitated babies claim because it is ‘disrespectful for the dead’<span class="expand-text"></span></summary>
                     Israeli occupation force soldier Major Nir Dinar said the IOF refused to share the exact number of babies killed or how many had been beheaded as it is "disrespectful for the dead".
                     </details></td>
 
                     <td>
-                        <a href="https://archive.ph/Otjey" target="_blank" rel="noreferrer"><span class="link-icon"></span>Insider: IDF says it won't back up its claim that Hamas decapitated babies in Israel because it is ‘disrespectful for the dead’</a></td>
-                
+                        <a href="https://archive.ph/Otjey" target="_blank" rel="noreferrer"><span class="link-icon"></span>Insider: IDF says it won’t back up its claim that Hamas decapitated babies in Israel because it is ‘disrespectful for the dead’</a></td>
                 </tr>
 
 

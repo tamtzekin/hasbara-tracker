@@ -176,10 +176,9 @@ td {
 }
 
 thead {
-    position: fixed;
-    display: table;
-    width: 100%;
-    margin-left: 1%;
+    /* position: fixed; */
+    /* width: 100%; */
+    display: table-header-group;
     background:#cbcbcb;
 }
 

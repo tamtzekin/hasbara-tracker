@@ -15,10 +15,10 @@ const ClaimA = () => {
         <span class="table-container">
             <table>
                 <colgroup>
-                    <col style={{ width: '2%'}} />
                     <col style={{ width: '1%'}} />
-                    <col style={{ width: '12%'}} />
-                    <col style={{ width: '12%'}} />
+                    <col style={{ width: '1%'}} />
+                    <col style={{ width: '20%'}} />
+                    <col style={{ width: '15%'}} />
                 </colgroup>
 
             <thead>

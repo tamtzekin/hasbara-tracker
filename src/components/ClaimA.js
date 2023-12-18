@@ -54,7 +54,7 @@ const ClaimA = () => {
                 <tr>
                     <td><div class="date">10 Oct</div></td>
 
-                    <td>Claim</td>
+                    <td><span class="claim-tag">Claim</span></td>
 
                     <td><details><summary>CNN reporter Nic Robertson claims babies' heads cut off<span class="expand-text"></span></summary>
                     
@@ -88,7 +88,7 @@ const ClaimA = () => {
                 <tr>
                     <td><div class="date">11 Oct</div></td>
 
-                    <td>Debunk</td>
+                    <td><span class="debunk-tag">Debunk</span></td>
 
                     <td><details><summary>White House official clarifies Biden did not see pictures of decapitated babies<span class="expand-text"></span></summary>
                     An administration official later clarified Biden’s remarks, saying that Biden was referring to public statements from officials and media reports and had not actually seen photos.
@@ -102,7 +102,7 @@ const ClaimA = () => {
                 <tr>
                     <td><div class="date">11 Oct</div></td>
 
-                    <td>Claim</td>
+                    <td><span class="claim-tag">Claim</span></td>
 
                     <td><details><summary>Sara Sidner, CNN reporter, repeated the Israeli state claim that babies were beheaded<span class="expand-text"></span></summary>
                     In a CNN news report, Sidner claimed babies and toddlers were found with their "heads decapitated" in Kfar Aza.
@@ -114,24 +114,9 @@ const ClaimA = () => {
 
 
                 <tr>
-                    <td><div class="date">DATE</div></td>
-
-                    <td><span class="claim-tag">CLAIM?</span></td>
-
-                    <td><details><summary>SUMMARY TEXT<span class="expand-text"></span></summary>
-                    Main text
-                    </details></td>
-
-                    <td>
-                        <VideoPlayer videoLink="/files/FILENAME.mp4"><a href="" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> </a></VideoPlayer></td>
-                
-                </tr>
-
-
-                <tr>
                     <td><div class="date">11 Oct</div></td>
 
-                    <td><span class="claim-tag">Debunk</span></td>
+                    <td><span class="debunk-tag">Debunk</span></td>
 
                     <td><details><summary>IOF won't back up decapitated babies claim because it is 'disrespectful for the dead'<span class="expand-text"></span></summary>
                     Israeli occupation force soldier Major Nir Dinar said the IOF refused to share the exact number of babies killed or how many had been beheaded as it is "disrespectful for the dead".
@@ -160,7 +145,7 @@ const ClaimA = () => {
                 <tr>
                     <td><div class="date">11 Oct</div></td>
 
-                    <td><span class="claim-tag">Context</span></td>
+                    <td><span class="context-tag">Context</span></td>
 
                     <td><details><summary>Israeli occupation reservist David Ben Zion is a settler leader who incited riots<span class="expand-text"></span></summary>
                     After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim. The Grayzone has identified Ben Zion as a fanatical settler leader who incited riots by demanding a Palestinian town be “wiped out.”
@@ -174,7 +159,7 @@ const ClaimA = () => {
                 <tr>
                     <td><div class="date">12 Oct</div></td>
                 
-                    <td><span class="claim-tag">Debunk</span></td>
+                    <td><span class="debunk-tag">Debunk</span></td>
 
                     <td><details><summary>Sara Sidner of CNN retracts and apologises for sharing the claim<span class="expand-text"></span></summary>
                     In a post on X (formerly Twitter), CNN reporter Sara Sidner apologies for sharing disinformation:<br />
@@ -187,7 +172,7 @@ const ClaimA = () => {
                 <tr>
                     <td><div class="date">12 Oct</div></td>
 
-                    <td><span class="claim-tag">Debunk</span></td>
+                    <td><span class="debunk-tag">Debunk</span></td>
 
                     <td><details><summary>CNN retracts reporting that Palestinian resistance fighters decapitated babies<span class="expand-text"></span></summary>
                     CNN publishes an article stating that 'Israeli official says government cannot confirm babies were beheaded in Hamas attack'.
@@ -231,7 +216,7 @@ const ClaimA = () => {
                 <tr>
                     <td><div class="date">12 Oct</div></td>
 
-                    <td><span class="claim-tag">Debunk</span></td>
+                    <td><span class="debunk-tag">Debunk</span></td>
 
                     <td><details><summary>IDF Spokesperson Maj. Doron Spielman told NBC News: "That specific report and that number I can’t confirm."<span class="expand-text"></span></summary>
                     Main text
@@ -245,7 +230,7 @@ const ClaimA = () => {
                 <tr>
                     <td><div class="date">13 Oct</div></td>
 
-                    <td><span class="claim-tag">Debunk</span></td>
+                    <td><span class="debunk-tag">Debunk</span></td>
 
                     <td><details><summary>Israeli military: "We cannot confirm but you can assume it happened."<span class="expand-text"></span></summary>
                     Al Jazeera reports that when journalists asked a spokesman for the Israeli military about the story of beheaded babies, the reply was, “We cannot confirm but you can assume it happened.
@@ -352,7 +337,7 @@ const ClaimA = () => {
         
         <div class="date">NO DATE</div></td>
 
-        <td><span class="claim-tag">Context</span></td>
+        <td><span class="context-tag">Context</span></td>
 
     <td><details><summary>Kibbutzes on massacred and occupied Palestinian land<span class="expand-text"></span></summary>Kfar Aza is a kibbutz on occupied Palestinian land in what is considered 'southern Israel'. In 1948, Zionist militias ethnically cleansed the Palestinian village of Najd, and the Israeli settler-colony created the city of Sderot where the kibbutz is close to. The kibbutz is also near the Israeli state's city Netivot, a part of Gaza that was ethnically cleansed in the Nakba of 1948, originally named Arab Suqrir."</details></td>
 

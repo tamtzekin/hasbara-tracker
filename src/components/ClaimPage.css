@@ -86,7 +86,21 @@ button {
 }
 
 .debunk-tag {
+    border: solid 1.2px;
+    padding: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 18px;
     background: #ffcfc9;
+}
+
+.context-tag {
+    border: solid 1.2px;
+    padding: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 18px;
+    background: #d4edbc;
 }
 
 /* .claim-subheading {

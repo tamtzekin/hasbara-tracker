@@ -45,7 +45,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                    <VideoPlayer videoLink="/files/i24NEWS_10Oct.mp4"><a href="https://archive.ph/QeCXs" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> i24NEWS: ‘Horror scenes at kibbutz liberated from Hamas’</a></VideoPlayer><br />
+                    <VideoPlayer videoLink="/files/i24NEWS_10Oct.mp4"><a href="https://archive.ph/QeCXs" target="_blank" rel="noreferrer"><span class="play-arrow"></span>i24NEWS: ‘Horror scenes at kibbutz liberated from Hamas’</a></VideoPlayer><br />
 
                     <br /><a href="https://archive.ph/AhYIH" target="_blank" rel="noreferrer">Nicole Zedeck on X</a></td>
                 </tr>
@@ -64,10 +64,10 @@ const ClaimA = () => {
                     "Men, women, children, hands bound, shot, executed, heads cut."
                     </details></td>
                 
-                    <td><VideoPlayer videoLink="/files/CNN_NicRobertson_10Oct.mp4"><a href="https://archive.ph/XRmh4" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> CNN: ‘IDF, women, toddlers, elderly “butchered” by Hamas in Kfar Aza’</a></VideoPlayer><br />
+                    <td><VideoPlayer videoLink="/files/CNN_NicRobertson_10Oct.mp4"><a href="https://archive.ph/XRmh4" target="_blank" rel="noreferrer"><span class="play-arrow"></span>CNN: ‘IDF, women, toddlers, elderly “butchered” by Hamas in Kfar Aza’</a></VideoPlayer><br />
                     <br />
                     
-                    <VideoPlayer videoLink="/files/IG_NicRobertson_10Oct.mp4"><a href="https://www.instagram.com/p/CyOI6Ztsftq/" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> Nic Robertson on Instagram</a></VideoPlayer>
+                    <VideoPlayer videoLink="/files/IG_NicRobertson_10Oct.mp4"><a href="https://www.instagram.com/p/CyOI6Ztsftq/" target="_blank" rel="noreferrer"><span class="play-arrow"></span>Nic Robertson on Instagram</a></VideoPlayer>
                     </td>
                 </tr>
 
@@ -81,7 +81,7 @@ const ClaimA = () => {
                     In an address to Jewish community leaders on October 11, 2023, Biden claimed: "I never really thought that I would see and have confirmed pictures of terrorists beheading children.”
                     </details></td>
                     
-                    <td><VideoPlayer videoLink="/files/Fox_Biden_10Oct.mp4"><a href="https://archive.ph/UN3Jd" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> Fox News: ‘Biden making remarks on U.S. support for Israel’</a></VideoPlayer></td>
+                    <td><VideoPlayer videoLink="/files/Fox_Biden_10Oct.mp4"><a href="https://archive.ph/UN3Jd" target="_blank" rel="noreferrer"><span class="play-arrow"></span>Fox News: ‘Biden making remarks on U.S. support for Israel’</a></VideoPlayer></td>
                 </tr>
 
 
@@ -109,7 +109,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <VideoPlayer videoLink="/files/CNNTV_11Oct.mp4"><a href="https://archive.ph/wpEIM" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> CNN: ‘Netanyahu’s office releases photos of “babies murdered and burned” by Hamas’</a></VideoPlayer></td>
+                        <VideoPlayer videoLink="/files/CNNTV_11Oct.mp4"><a href="https://archive.ph/wpEIM" target="_blank" rel="noreferrer"><span class="play-arrow"></span>CNN: ‘Netanyahu’s office releases photos of “babies murdered and burned” by Hamas’</a></VideoPlayer></td>
                     </tr>
 
 
@@ -138,7 +138,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                    <VideoPlayer videoLink="/files/LBC_11Oct.mp4"><a href="https://archive.is/UwDCO" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> LBC: ‘Toddlers, babies with their heads cut off’</a></VideoPlayer></td>
+                    <VideoPlayer videoLink="/files/LBC_11Oct.mp4"><a href="https://archive.is/UwDCO" target="_blank" rel="noreferrer"><span class="play-arrow"></span>LBC: ‘Toddlers, babies with their heads cut off’</a></VideoPlayer></td>
                 </tr>
 
 
@@ -195,7 +195,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <VideoPlayer videoLink="/files/GolanVach_12Oct.mp4"><a href="https://www.youtube.com/watch?v=Wsbd_dV8Xf8" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span>  Daily Mail: Israel frontline: 'I saw a beheaded baby' - Inside Kibbutz where Hamas killed 108 people</a></VideoPlayer></td>
+                        <VideoPlayer videoLink="/files/GolanVach_12Oct.mp4"><a href="https://www.youtube.com/watch?v=Wsbd_dV8Xf8" target="_blank" rel="noreferrer"><span class="play-arrow"></span>Daily Mail: Israel frontline: 'I saw a beheaded baby' - Inside Kibbutz where Hamas killed 108 people</a></VideoPlayer></td>
                 
                 </tr>
 
@@ -276,7 +276,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <VideoPlayer videoLink="/files/GolanVach_12Oct.mp4"><a href="https://archive.ph/smhK5" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> @Israel on X</a></VideoPlayer></td>
+                        <VideoPlayer videoLink="/files/GolanVach_12Oct.mp4"><a href="https://archive.ph/smhK5" target="_blank" rel="noreferrer"><span class="play-arrow"></span>@Israel on X</a></VideoPlayer></td>
                 
                 </tr>
 
@@ -292,7 +292,7 @@ const ClaimA = () => {
                     </details></td>
 
                     <td>
-                        <VideoPlayer videoLink="/files/EliBeer_28Oct.mp4"><a href="https://archive.is/wkmFr" target="_blank" rel="noreferrer"><span class="play-arrow">▶</span> New York Post: Head of Israel’s EMS service describes horror of seeing babies slaughtered by Hamas</a></VideoPlayer></td>
+                        <VideoPlayer videoLink="/files/EliBeer_28Oct.mp4"><a href="https://archive.is/wkmFr" target="_blank" rel="noreferrer"><span class="play-arrow"></span>New York Post: Head of Israel’s EMS service describes horror of seeing babies slaughtered by Hamas</a></VideoPlayer></td>
                 
                 </tr>
 

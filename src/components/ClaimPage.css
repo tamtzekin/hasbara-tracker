@@ -228,6 +228,17 @@ table.a::selection {
     height: 100%;
 }
 
+.play-arrow::after {
+    content: '▶\00a0';
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 576px) {
     /* Styles for screens up to 576px wide (typically smartphones) */
     .table-container {

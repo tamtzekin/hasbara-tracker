@@ -249,6 +249,9 @@ table.a::selection {
 
 @media only screen and (max-width: 576px) {
     /* Styles for screens up to 576px wide (typically smartphones) */
+    a {
+        z-index: 1; /* makes the a link text hide under the video, on mobile*/
+    }
 
     .table-container {
         top: 0;
@@ -318,9 +321,15 @@ table.a::selection {
     }
 }
 
-.modal-open {
-    overflow: hidden;
-}
+    .modal-open {
+        overflow: hidden;
+    }
+
+    .modal-mobile {
+        inset: auto auto 0 auto;
+        width: 100% !important;
+        z-index: 2;
+    }
 
 /* .modal-content.img-link {
     display: flex; 

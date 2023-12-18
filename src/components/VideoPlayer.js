@@ -13,7 +13,6 @@ const VideoPlayer = ({ videoLink, children }) => {
   };
 
   const closeModal = () => {
-    clearTimeout(hoverTimeout);
     setIsModalOpen(false);
   };
 
@@ -22,9 +21,19 @@ const VideoPlayer = ({ videoLink, children }) => {
     closeModal(); // Close the modal when mouse leaves the link
   };
 
+  const handleTouchStart = () => {
+    // Open the modal on touch start (for mobile devices)
+    openModal();
+  };
+
+
   return (
     <>
-      <a onMouseEnter={openModal} onMouseLeave={handleMouseLeave}>
+      <a 
+        onMouseEnter={openModal} 
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+      >
         {children}
       </a>
 
@@ -55,6 +64,7 @@ const VideoPlayer = ({ videoLink, children }) => {
             zIndex: 1,
           },
         }}
+        className="modal-mobile"
       >
         <video
           autoPlay

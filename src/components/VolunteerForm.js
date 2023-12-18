@@ -45,7 +45,7 @@ const VolunteerForm = () => {
 
       <div className="content-container">
         <h2>Volunteer</h2>
-        <br />
+
         <div class="home-text">
           Volunteer to help build a database tracking and debunking fabrications
           by the Israeli state during its genocidal campaign against Palestinians

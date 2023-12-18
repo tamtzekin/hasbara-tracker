@@ -47,8 +47,9 @@ const FilterDisplay = () => {
         </span>
 
     <span class="content-container">
-        <br />
         <h2>Claims</h2>
+        
+        <div class="home-text">Select a claim from below.</div><br />
         <br />
 
         <Link to="/claim-a">— 40 beheaded babies</Link>

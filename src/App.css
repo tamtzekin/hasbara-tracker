@@ -39,7 +39,6 @@ h2 {
     text-align: left;
     font-family: 'HelveticaNeue_Medium';
     position: relative;
-    margin: 14% 0 0 0;
 }
 
 body {
@@ -213,7 +212,7 @@ button.dotted {
 
     .content-container {
         font-size: 0.9em;
-        margin: 0% 4% 0 -17%;
+        margin: 10% 4% 0 -17%;
         line-height: 25px;
     }
 

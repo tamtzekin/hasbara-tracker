@@ -209,12 +209,11 @@ button.dotted {
     /* Styles for screens up to 576px wide (typically smartphones) */
     .header-container {
         top: 2%;
-
     }
 
     .content-container {
         font-size: 0.9em;
-        margin: 15% 4% 0 -17%;
+        margin: 0% 4% 0 -17%;
         line-height: 25px;
     }
 

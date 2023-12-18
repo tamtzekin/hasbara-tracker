@@ -44,7 +44,6 @@ const VolunteerForm = () => {
       </span>
 
       <div className="content-container">
-      <br />
         <h2>Volunteer</h2>
         <br />
         <div class="home-text">

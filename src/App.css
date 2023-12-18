@@ -127,8 +127,8 @@ button.dotted {
 
     .content-container {
         font-size: 0.9em;
-        margin: 20% 4% 0 -17%;
-        line-height: 11px;
+        margin: 15% 4% 0 -17%;
+        line-height: 25px;
     }
 
     .filters {
@@ -157,7 +157,7 @@ button.dotted {
     }
 
     .navbar {
-        margin-left: -58%;
+        left: -7%;
         margin-top: 12%;
     }
 

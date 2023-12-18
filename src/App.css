@@ -87,8 +87,8 @@ button.dotted {
 
 .navbar {
     position: absolute;
-    top: 11%;
-    left: 52%;
+    top: 30%;
+    right: 3%;
     display: flex;
     list-style-type: none;
 }

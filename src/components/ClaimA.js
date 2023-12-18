@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ClaimPage.css';
 import VideoPlayer from './VideoPlayer';
+import NavBar from './NavBar';
 
 const ClaimA = () => {
     return (
@@ -10,6 +11,7 @@ const ClaimA = () => {
         <span class="claim-header-container">
             <Link to="/claims"><div className="arrow">←</div></Link>
             <h1 class="claim-heading">Claim: 40 beheaded babies</h1>
+            <NavBar />
         </span>
 
         <span class="table-container">
@@ -77,7 +79,7 @@ const ClaimA = () => {
 
                     <td><span class="claim-tag">Claim</span></td>
 
-                    <td><details><summary>US President Biden claims he saw 'pictures' of babies being beheaded</summary><span class="expand-text"></span>
+                    <td><details><summary>US President Biden claims he saw 'pictures' of babies being beheaded<span class="expand-text"></span></summary>
                     In an address to Jewish community leaders on October 11, 2023, Biden claimed: "I never really thought that I would see and have confirmed pictures of terrorists beheading children.”
                     </details></td>
                     
@@ -218,9 +220,7 @@ const ClaimA = () => {
 
                     <td><span class="debunk-tag">Debunk</span></td>
 
-                    <td><details><summary>IDF Spokesperson Maj. Doron Spielman told NBC News: "That specific report and that number I can’t confirm."<span class="expand-text"></span></summary>
-                    Main text
-                    </details></td>
+                    <td><b>IDF Spokesperson Maj. Doron Spielman told NBC News: "That specific report and that number I can’t confirm."</b></td>
 
                     <td><a href="" target="_blank" rel="noreferrer">NBC News NO SOURCE LINK?</a></td>
                 

@@ -165,11 +165,14 @@ button.dotted {
   }
   
   /* Media query for mobile menu */
-  @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 576px) {
     .mobile-menu {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      right: -15%;
+      position: absolute;
+      margin-top: 1%;
     }
   
     .menu-links {

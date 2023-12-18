@@ -2,13 +2,16 @@ import logo from '../logo.svg';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ClaimPage.css';
+import '../App.css';
 import VideoPlayer from './VideoPlayer';
 import NavBar from './NavBar';
+import MobileMenu from './MobileMenu';
 
 const ClaimA = () => {
     return (
     <>
         <span class="claim-header-container">
+            <MobileMenu />
             <Link to="/claims"><div className="arrow">←</div></Link>
             <h1 class="claim-heading">Claim: 40 beheaded babies</h1>
             <NavBar />

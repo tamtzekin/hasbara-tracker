@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
+import MobileMenu from './MobileMenu';
 import '../App.css';
 import './VolunteerForm.css';
 
@@ -38,6 +39,7 @@ const VolunteerForm = () => {
   return (
     <>
       <span className="header-container">
+        <MobileMenu />
         <h1 class="ht-heading">Hasbara Tracker</h1>
         <span id="dots">. . . . . . . . . . . . . .</span>
         <NavBar />

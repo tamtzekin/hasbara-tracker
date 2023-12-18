@@ -280,6 +280,10 @@ table.a::selection {
         width: 100%;
     }
 
+    thead {
+        display: none;
+    }
+    
     th {
         /* display: block; */
         border-bottom: 2px solid #9dff20;

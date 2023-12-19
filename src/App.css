@@ -113,7 +113,7 @@ button.dotted {
 
 .header-container {
     position: absolute;
-    width: 80%;
+    width: 90%;
 }
 
 
@@ -167,12 +167,19 @@ button.dotted {
   /* Media query for mobile menu */
 @media only screen and (max-width: 768px) {
     .mobile-menu {
-      display: flex;
+      /* display: flex;
       align-items: center;
       justify-content: flex-end;
       right: -15%;
       position: absolute;
-      margin-top: 1%;
+      margin-top: 1%; */
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: absolute;
+      margin-top: 3%;
+      right: 3%;
+      z-index: 3;
     }
   
     .menu-links {
@@ -248,7 +255,7 @@ button.dotted {
     }
 
     #dots {
-        margin-top: 3.5%;
+        margin-top: 4.5%;
         margin-left: -15%;
         font-size: 1.25em; 
     }

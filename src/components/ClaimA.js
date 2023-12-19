@@ -280,6 +280,8 @@ function ClaimA() {
           return dateA.getTime() - dateB.getTime();
         },
       },
+    
+
       {
         Header: 'Claim',
         accessor: (row) => row.claim.claimText,
@@ -287,11 +289,13 @@ function ClaimA() {
           <span className={row.original.claim.claimClass}>{row.original.claim.claimText}</span>
         ),
       },
+
+
       {
         Header: 'Description',
         accessor: 'description',
         Cell: ({ value }) => (
-          <div>
+          <div style={{maxWidth:700}}>
             <details>
               <summary>{value.summary}<span className={value.summaryClass}></span></summary>
               <div dangerouslySetInnerHTML={{ __html: value.details }} />
@@ -299,6 +303,8 @@ function ClaimA() {
           </div>
         ),
       },
+
+
       {
         Header: 'Sources',
         accessor: 'sourceText',
@@ -311,6 +317,8 @@ function ClaimA() {
           </VideoPlayer>
         ),
       },
+
+
     ],
     []
   );
@@ -375,6 +383,7 @@ function ClaimA() {
                     style={{
                       padding: '10px',
                       border: 'solid 1px gray',
+                      overflow: 'hidden',
                     }}
                   >
                     {cell.render('Cell')}

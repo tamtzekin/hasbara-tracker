@@ -178,20 +178,19 @@ h1.claim-heading {
 }
 
 table {
-    width: 80%;
+    width: 100%;
     position: relative;
-    /* border-top: 1.5px solid grey; */
 }
 
 td {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     padding: 25px;
     text-align: left;
     vertical-align: top;
 }
 
 tr {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
 }
 
 thead {
@@ -201,7 +200,7 @@ thead {
 
 th {
     padding: 25px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
 }
 
 table.a {
@@ -257,6 +256,10 @@ table.a::selection {
         z-index: 1; /* makes the a link text hide under the video, on mobile*/
     }
 
+    body {
+        font-size: 0.75em;
+    }
+
     .claim-header-container {
         position: fixed;
         left: 0;
@@ -278,9 +281,10 @@ table.a::selection {
     }    
 
     table {
-        border-collapse: collapse;
+        /* border-collapse: collapse; */
         width: 100%;
-        margin-bottom: 20px;
+        border: none !important;
+        top: 70px;
     }
 
     tr {
@@ -288,8 +292,7 @@ table.a::selection {
         margin-bottom: 20px;
         margin-top: 20px;
         /* padding-bottom: 30px; */
-        border-bottom: 2px solid #9dff20;
-        /* width: 100%; */
+        border: none;
     }
 
     td {
@@ -297,20 +300,22 @@ table.a::selection {
         border-bottom: none;
         text-align: left;
         padding: 15px;
-        width: 120%;
     }
 
     thead {
-        opacity: 0;
+        border: none;
+        position: fixed;
+        height: 100px;
+        top: 1%;
+        
     }
 
     th {
         /* display: block; */
-        border-bottom: 2px solid #9dff20;
         padding-left: 1%;
-        padding-bottom: 2%;
+        /* padding-bottom: 2%; */
         text-align: left;
-        font-size: 0.7em;
+        /* font-size: 0.7em; */
         font-weight: 400;
         position: -webkit-sticky;
         position: sticky;
@@ -331,10 +336,11 @@ table.a::selection {
     }
 
     h1.claim-heading {
-        left: 35%;
-        right: 35%;
+        left: 15%;
+        right: 15%;
         margin-top: 2%;
         font-size: 1em !important;
+        text-align: center;
     }
 
     .link-icon::after {

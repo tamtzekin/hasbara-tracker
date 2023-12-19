@@ -47,7 +47,13 @@ h1.ht-heading {
         font-size: 2.05em;
         position: absolute;
         left: 14%;
-        margin-top: 2%;
+        margin-top: 0;
         width: 100%;
+    }
+
+    #dots {
+        margin-top: 3%;
+        margin-left: -15%;
+        font-size: 1.8em; 
     }
 }

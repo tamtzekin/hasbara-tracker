@@ -51,6 +51,10 @@ body {
     text-align: left;
 }
 
+.claims-list {
+    margin-top: 20px;
+}
+
 .investigating {
     background-color: black;
 }
@@ -147,6 +151,10 @@ button.dotted {
     margin: 3px 0;
     transition: 0.4s;
   }
+
+  .claims-list {
+    margin-top: 10px;
+  }
   
   .menu-links {
     display: flex;
@@ -221,7 +229,7 @@ button.dotted {
 
     .content-container {
         font-size: 0.9em;
-        margin: 10% 4% 0 -17%;
+        margin: 15% 4% 0 -17%;
         line-height: 25px;
     }
 
@@ -242,7 +250,7 @@ button.dotted {
     h1 {
         /* margin-left: 7%; */
         margin-left: -15%;
-        font-size: 1.2em !important;
+        font-size: 1.8em !important;
     }
 
     h2 {
@@ -254,11 +262,7 @@ button.dotted {
         display: none;
     }
 
-    #dots {
-        margin-top: 4.5%;
-        margin-left: -15%;
-        font-size: 1.25em; 
-    }
+
   }
   
   /* Tablets and small desktops */

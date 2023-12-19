@@ -9,16 +9,16 @@ const ClaimA = () => {
     <>
         <span class="header-container">
             <Link to="/claims"><div className="arrow">←</div></Link>
-            <h1 class="claim-heading">Claim: 40 beheaded babies</h1>
+            <h1 class="claim-heading">Claim: 40 babies</h1>
         </span>
 
         <span class="table-container">
             <table>
-                <colgroup>
-                    <col style={{ width: '2%'}} />
+            <colgroup>
                     <col style={{ width: '1%'}} />
-                    <col style={{ width: '12%'}} />
-                    <col style={{ width: '12%'}} />
+                    <col style={{ width: '1%'}} />
+                    <col style={{ width: '20%'}} />
+                    <col style={{ width: '15%'}} />
                 </colgroup>
 
                 <thead>

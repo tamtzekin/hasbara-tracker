@@ -6,7 +6,7 @@ import './Homepage.css';
 import '../App.css';
 
 import About from './About';
-import FilterDisplay from './FilterDisplay';
+import ClaimsDirectory from './ClaimsDirectory';
 
 const Homepage = () => {
   const [showFilterDisplay, setShowFilterDisplay] = useState(false);

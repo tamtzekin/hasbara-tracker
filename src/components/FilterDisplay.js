@@ -2,8 +2,6 @@ import logo from '../logo.svg';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
-import MobileMenu from './MobileMenu';
-import '../App.css';
 import './Homepage.css';
 
 const FilterDisplay = () => {
@@ -43,22 +41,61 @@ const FilterDisplay = () => {
     return (
     <>
         <span class="header-container">
-            <MobileMenu />
             <h1 class="ht-heading">Hasbara Tracker</h1>
             <span id="dots">. . . . . . . . . . . . . .</span>
             <NavBar />
         </span>
 
     <span class="content-container">
-        <h2>Claims</h2>
-        
-        <div class="home-text">Select a claim from below.</div><br />
         <br />
-
-        <Link to="/claim-a">— 40 beheaded babies</Link>
+        <h2>Claims</h2>
+        <br />
     
+    <div class="filters">
+        {/* Filters */}
+        <button class="dotted-button" onClick={(event) => filterItems('all', event)}>*ALL*</button>
+        <button onClick={(event) => filterItems('oct7', event)}>Oct 7</button>
+        <button onClick={(event) => filterItems('death', event)}>Death</button>
+        <button onClick={(event) => filterItems('hospitals', event)}>Hospitals</button>
+        <button onClick={(event) => filterItems('alahli', event)}>Al Ahli</button>
+        <button onClick={(event) => filterItems('fabricatedav', event)}>Fabricated audio and video</button>
+        <button onClick={(event) => filterItems('pallywood', event)}>Pallywood</button>
+        <button onClick={(event) => filterItems('documents', event)}>Documents and items</button>
+        {/* <button onClick={(event) => filterItems('category3', event)}>Category 3</button> */}
+  
+        {/* Items to filter */}
+        <div className="filtered-item oct7 death"><Link to="/claim-a">Claim: Forty beheaded babies</Link></div>
+        <div className="filtered-item oct7 investigating">Claim: Fetus removed from pregnant woman</div>
+        <div className="filtered-item oct7 investigating">Claim: Babies hung on clotheslines</div>
+        <div className="filtered-item oct7 investigating">Claim: ‘Little Mary Janes’ and pink blood</div>
+        <div className="filtered-item oct7 documents investigating">Claim: Hamas left an ISIS flag</div>
+  
+        <div className="filtered-item death investigating">Claim: Revisions of number of Israelis killed</div>
+  
+        <div className="filtered-item hospitals investigating">Claim: Israeli president denies it is striking Al-Shifa hospital</div>
+        <div className="filtered-item hospitals investigating">Claim: Hamas tunnel found at the Qatari Hospital</div>
+  
+        <div className="filtered-item alahli hospitals investigating">Claim: Al-Ahli Hospital was hit by stray Islamic Jihad rockets fired from a cemetery</div>
+  
+        <div className="filtered-item fabricatedav hospitals alahli investigating">Claim: Hamas operatives discussing Palestinian Islamic Jihad's responsibility for the al-Ahli Arab Baptist Hospital massacre</div>
+          
+        <div className="filtered-item fabricatedav investigating">Claim: Nurse at Al-Shifa Hospital blaming Hamas</div>
+        
+        <div className="filtered-item pallywood investigating">Claim: Dead Palestinian children are dolls</div>
+        <div className="filtered-item pallywood investigating">Claim: Saleh Aljafarawi is a propagandist / Mr FAFO</div>
+  
+        <div className="filtered-item documents investigating">Claim: Isaac Herzog says Mein Kampf found in child's bedroom</div>
 
-        </span>
+    </div>
+        {/* Filtering logic, if needed */}
+        {/* <script>
+        {`
+            function filterItems(category, event) {
+            // Your filtering logic here
+            }
+        `}
+        </script> */}
+</span>
         </>
   
   

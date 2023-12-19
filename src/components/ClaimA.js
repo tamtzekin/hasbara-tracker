@@ -279,6 +279,11 @@ function ClaimA() {
           const dateB = new Date(rowB.values[columnId]);
           return dateA.getTime() - dateB.getTime();
         },
+        Cell: ({ cell }) => (
+            <div style={{ textAlign: 'center' }}>
+                {cell.value}
+            </div>
+        ),
       },
     
 
@@ -366,7 +371,7 @@ function ClaimA() {
                   }}
                 >
                   {column.render('Header')}
-                  {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? '▲' : '▼') : ''}
+                  {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? '▼' : '▲') : ''}
                 </th>
               ))}
             </tr>

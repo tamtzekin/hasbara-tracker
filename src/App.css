@@ -223,12 +223,15 @@ button.dotted {
 
 /* Mobile devices (portrait and landscape) */
 @media only screen and (max-width: 768px) {
+    body {
+        font-size: 1.2em;
+    }
+    
     .header-container {
         top: 2%;
     }
 
     .content-container {
-        font-size: 1.2em;
         margin: 15% 4% 0 -17%;
         line-height: 28px;
     }

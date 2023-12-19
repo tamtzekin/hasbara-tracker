@@ -85,7 +85,7 @@ button.dotted {
 }
 
 ::selection {
-    background: #9dff20;
+    background: rgba(176, 245, 85, 0.424)
 }
 
 .navbar {

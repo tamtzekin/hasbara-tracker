@@ -217,14 +217,6 @@ table.a {
 table.a:hover {
     color: whitesmoke;
 }
-      
-table.a::selection {
-    background: #9dff20;
-}
-
-    ::selection {
-        background: #9dff20;
-    }
 
 .modal-overlay {
     display: none;

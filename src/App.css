@@ -197,7 +197,7 @@ button.dotted {
       right: 6%;
       text-align: right;
       position: absolute;
-      font-size: 0.9em;
+      font-size: 1.2em;
       font-family: 'Helvetica Neue Light', Helvetica, sans-serif;
     }
   
@@ -228,9 +228,9 @@ button.dotted {
     }
 
     .content-container {
-        font-size: 0.9em;
+        font-size: 1.2em;
         margin: 15% 4% 0 -17%;
-        line-height: 25px;
+        line-height: 28px;
     }
 
     .filters {
@@ -254,8 +254,8 @@ button.dotted {
     }
 
     h2 {
-        font-size: 1.2em;
-        position: sticky;
+        font-size: 1.1em;
+        /* position: sticky; */
     }
 
     .navbar {

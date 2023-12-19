@@ -256,10 +256,6 @@ table.a::selection {
         z-index: 1; /* makes the a link text hide under the video, on mobile*/
     }
 
-    body {
-        font-size: 0.75em;
-    }
-
     .claim-header-container {
         position: fixed;
         left: 0;
@@ -352,7 +348,7 @@ table.a::selection {
 
     .arrow-menu {
         margin-top: -15%;
-        font-size: 2.2em;
+        font-size: 2.7em;
         margin-bottom: 15px;
     }
 

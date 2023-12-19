@@ -34,7 +34,6 @@ const Homepage = () => {
             <h2>Volunteer on this project</h2>
             <span className="home-text">Volunteer to help build a database tracking and debunking fabrications by the Israeli state during its current genocidal campaign against Palestinians in Gaza since 7 October 2023. We will task each volunteer with a specific claim and provide more information about how to document and archive. Anyone can help — especially if they have a propensity for research and collecting receipts.</span><br />
             <br />
-            <br />
             <Link to="/volunteer"><button className="btn-green">Help out</button></Link>
             
         </span>

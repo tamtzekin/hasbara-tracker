@@ -343,7 +343,7 @@ function ClaimA() {
         </span>
 
     <div>
-      <table {...getTableProps()} style={{ border: 'solid 1px black' }}>
+      <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>

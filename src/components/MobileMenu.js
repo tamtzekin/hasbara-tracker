@@ -37,7 +37,6 @@ const MobileMenu = () => {
             padding: 20,
             height: '100%',
             width: '100%',
-            maxWidth: '400px',
             textAlign: 'center',
             zIndex: '50',
           },

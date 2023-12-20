@@ -145,8 +145,8 @@ button.dotted {
 }
   
   .bar {
-    width: 25px;
-    height: 2px;
+    width: 28px;
+    height: 3px;
     background-color: #333;
     margin: 3px 0;
     transition: 0.4s;
@@ -172,52 +172,50 @@ button.dotted {
     background-color: #eee;
   }
   
+
+
+
+
+
+
+
+
   /* Media query for mobile menu */
 @media only screen and (max-width: 768px) {
     .mobile-menu {
       /* display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      right: -15%;
-      position: absolute;
-      margin-top: 1%; */
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      position: absolute;
-      margin-top: 3%;
-      right: 3%;
-      z-index: 3;
+        align-items: center;
+        justify-content: flex-end;
+        right: -15%;
+        position: absolute;
+        margin-top: 1%; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        margin-top: 3%;
+        right: 3%;
+        z-index: 3;
     }
   
     .menu-links {
-      display: flex;
-      flex-direction: column;
-      top: 5.5%;
-      right: 6%;
-      text-align: right;
-      position: absolute;
-      font-size: 1.2em;
-      font-family: 'Helvetica Neue Light', Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        top: 6%;
+        right: 9%;
+        text-align: right;
+        position: absolute;
+        font-size: 0.95em;
+        font-family: 'Helvetica Neue Light', Helvetica, sans-serif;
     }
   
     .mobile-menu .hamburger-icon {
-      display: flex;
+        display: flex;
     }
-  }
+}
   
 
   
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -249,15 +247,14 @@ button.dotted {
     .investigating {
         padding: 5.5px;
     }
-
+/* 
     h1 {
-        /* margin-left: 7%; */
         margin-left: -15%;
         font-size: 1.8em !important;
-    }
+    } */
 
     h2 {
-        font-size: 1.1em;
+        font-size: 1em;
         /* position: sticky; */
     }
 

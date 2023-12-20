@@ -1,12 +1,13 @@
 import logo from '../logo.svg';
 import React from 'react';
-import { useTable, useSortBy } from 'react-table';
+import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 import { Link } from 'react-router-dom';
 import './ClaimPage.css';
 import '../App.css';
 import VideoPlayer from './VideoPlayer';
 import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
+import GlobalFilter from './GlobalFilter';
 
 
 function ClaimA() {
@@ -170,6 +171,8 @@ const {
     headerGroups,
     rows,
     prepareRow,
+    setGlobalFilter,
+    state,
 } = useTable(
     {
         columns,
@@ -179,18 +182,24 @@ const {
         },
         disableSortRemove: true,
     },
+        useFilters,
+        useGlobalFilter,
         useSortBy
     );
 
+    const { globalFilter } = state
+
 return (
     <>
-    <span class="claim-header-container">
-        <MobileMenu />
-        <Link to="/claims"><div className="arrow">←</div></Link>
-        <h1 class="claim-heading">Claim: 40 beheaded babies</h1>
-        <NavBar />
-    </span>
-
+        <span class="claim-header-container">
+            <MobileMenu />
+            <Link to="/claims"><div className="arrow">←</div></Link>
+            <h1 class="claim-heading">Claim: 40 beheaded babies</h1>
+            <NavBar />
+        </span>
+    
+    <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+    
     <div>
         <table {...getTableProps()}>
         <thead>

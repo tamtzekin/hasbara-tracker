@@ -242,7 +242,13 @@ table.a:hover {
     content: '▶\00a0';
 }
 
-
+.search-bar {
+    display: block;
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 70%;
+    margin-bottom: 2%;
+}
 
 
 

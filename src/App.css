@@ -211,6 +211,8 @@ button.dotted {
   
     .mobile-menu .hamburger-icon {
         display: flex;
+        padding-top: 0;
+        padding-right: 20px;
     }
 }
   
@@ -222,7 +224,7 @@ button.dotted {
 /* Mobile devices (portrait and landscape) */
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     
     .header-container {

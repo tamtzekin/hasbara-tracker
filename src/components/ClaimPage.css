@@ -259,6 +259,7 @@ table.a:hover {
         /* box-shadow: 0px 10px 15px -3px #9eff2038, 0px 2px 3px -2px rgba(0, 0, 0, 0.05); */
         top: 0;
         border-bottom: #867d7d solid 0.5px;
+        padding: 8px;
     }
 
     .claim-tag {
@@ -295,7 +296,7 @@ table.a:hover {
         /* border-collapse: collapse; */
         width: 100%;
         border: none;
-        top: 85px;
+        top: 105px;
     }
 
     tr {
@@ -318,7 +319,7 @@ table.a:hover {
         border: none;
         position: fixed;
         height: 90px;
-        top: 2%;
+        top: 4%;
         left: 1%;
         z-index: 2;
         border-bottom: #867d7d solid 0.5px;
@@ -326,7 +327,7 @@ table.a:hover {
 
     th {
         /* display: block; */
-        padding-left: 2%;
+        padding-left: 5%;
         text-align: left;
         font-size: 0.9em;
         font-weight: 400;
@@ -336,7 +337,7 @@ table.a:hover {
 
     .arrow {
         font-size: 1.9em;
-        top: 0.5%;
+        top: 1.5%;
         margin-left: 2%;
         /* /* position: fixed; */
         /* display: none; */
@@ -349,10 +350,9 @@ table.a:hover {
     }
 
     h1.claim-heading {
-        left: 0;
-        right: 20%;
+        left: -2.5%;
         margin-top: 2%;
-        font-size: 0.9em;
+        font-size: 0.95em;
         text-align: center;
     }
 

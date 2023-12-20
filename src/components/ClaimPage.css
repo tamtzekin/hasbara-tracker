@@ -263,13 +263,13 @@ table.a:hover {
     }
 
     .claim-tag {
-        margin: 0 0 0 30%;
+        margin: 0 0 0 27%;
         padding-left: 50px;
         padding-right: 50px;
     }
 
     .debunk-tag {
-        margin: 0 0 0 30%;
+        margin: 0 0 0 27%;
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -280,7 +280,7 @@ table.a:hover {
     }
 
     .context-tag {
-        margin: 0 0 0 30%;
+        margin: 0 0 0 27%;
         padding-left: 30px;
         padding-right: 30px;
     }

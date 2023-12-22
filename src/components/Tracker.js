@@ -1,7 +1,6 @@
 import logo from '../logo.svg';
 
-import React, { useMemo, useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useMemo } from 'react';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 
 import './ClaimPage.css';
@@ -16,6 +15,8 @@ import SearchBar from './SearchBar';
 export default function Tracker() {
     const data = useMemo(
         () => [
+
+            //TODO: move this all to a separate data.js file
             {
                 date: '10 Oct 2023',
                 claim: {
@@ -98,16 +99,14 @@ console.log("data" + data);
 
     const columns = useMemo(
         () => [
-            // Properties
             {
                 Header: 'Date',
                 accessor: 'date',
                 sortType: (rowA, rowB, columnId) => {
-                const dateA = new Date(rowA.values[columnId]);
-                const dateB = new Date(rowB.values[columnId]);
-                return dateA.getTime() - dateB.getTime();
-            },
-
+                    const dateA = new Date(rowA.values[columnId]);
+                    const dateB = new Date(rowB.values[columnId]);
+                    return dateA.getTime() - dateB.getTime();
+                },
                 Cell: ({ cell }) => (
                     <div style={{ textAlign: 'center' }}>
                         {cell.value}
@@ -178,19 +177,10 @@ console.log("data" + data);
             useGlobalFilter,
             useSortBy
         );
-
         const { globalFilter } = state
-        console.log("Search for: " + globalFilter);
 
     return (
         <>
-            {/* <span class="claim-header-container">
-                <MobileMenu />
-                <Link to="/claims"><div className="arrow">←</div></Link>
-                <h1 class="claim-heading">Claim: 40 beheaded babies</h1>
-                <NavBar />
-            </span> */}
-
         <span class="header-container">
             <MobileMenu />
             <h1 class="ht-heading">Hasbara Tracker</h1>
@@ -201,16 +191,14 @@ console.log("data" + data);
         <div class="content-container">
             How to use the tracker:
             <ul>
-            <li>Use the search bar below to find keywords (‘beheaded babies’, ‘hospital’, ‘al-shifa’)</li>
+            <li>Use the search bar below to find keywords (‘beheaded babies’, ‘hospital’, ‘al-shifa’). You can also search all Debunks by typing 'debunk'</li>
             <li>Click ‘Date▲’ to change the order of dates</li>
             <li>Hover over a ▶ source  to preview video (If you’re on your phone, tap + hold the link to preview)</li>
-            <li>Click a source to view the archived link</li>
+            <li>Click a source to open the archived link</li>
             </ul>
-
         
         <div class="tracker-container">
-        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
-        
+            <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
             <table {...getTableProps()}>
             <thead>
                 {/* Map the headers out */}
@@ -218,7 +206,7 @@ console.log("data" + data);
                     <tr {...headerGroup.getHeaderGroupProps()}>
                         {headerGroup.headers.map((column) => (
 
-                // Add sorting funct to the Date column
+                // Add sorting function to the Date column
                     <th
                         {...column.getHeaderProps(
                             column.id === 'date' ? column.getSortByToggleProps() : {}
@@ -237,33 +225,34 @@ console.log("data" + data);
             ))}
             </thead>
                 
-                {/* fill all the body cell props */}
-                <tbody {...getTableBodyProps()}>
-                    {rows.map((row) => {
-                        prepareRow(row);
+            {/* Fetch + fill out all the body cell props */}
+            <tbody {...getTableBodyProps()}>
+                {rows.map((row) => {
+                    prepareRow(row);
 
-                        return (
-                    <tr {...row.getRowProps()}>
-                        {row.cells.map((cell) => (
-                        <td
-                            {...cell.getCellProps()}
-                            style={{
-                                padding: '10px',
-                                border: 'solid 1px gray',
-                                overflow: 'hidden',
-                            }}
-                        >
-                            {cell.render('Cell')}
-                        </td>
-                    ))}
-                    </tr>
-                );
-            })}
-                </tbody>
+                    return (
+                        <tr 
+                            {...row.getRowProps()}>
+                            {row.cells.map((cell) => (
+                                <td
+                                    {...cell.getCellProps()}
+                                        style={{
+                                            padding: '10px',
+                                            border: 'solid 1px gray',
+                                            overflow: 'hidden',
+                                        }}
+                                >
+                                    {cell.render('Cell')}
+                                </td>
+                            ))}
+                        </tr>
+                    );
+                })}
+            </tbody>
             </table>
-            </div>
         </div>
-
+        
+        </div>
         </>
     );
 }

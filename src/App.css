@@ -109,8 +109,7 @@ button.dotted {
 
 .content-container {
     position: absolute;
-    /* padding-top: 10px; */
-    left: 21%;
+    left: 22%;
     margin: 6% 32.5% 0 12%;
     padding-bottom: 10%;
 }
@@ -201,11 +200,11 @@ button.dotted {
     .menu-links {
         display: flex;
         flex-direction: column;
-        top: 6%;
-        right: 9%;
+        top: 6.5%;
+        right: 13%;
         text-align: right;
         position: absolute;
-        font-size: 0.95em;
+        font-size: 0.85em;
         font-family: 'Helvetica Neue Light', Helvetica, sans-serif;
     }
   

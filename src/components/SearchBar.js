@@ -7,13 +7,13 @@ const SearchBar = ({ filter, setFilter }) => {
     };
 
     return (
-        <span className="search-bar">
+        <div className="search-bar">
             <input
                 value={filter || ''}
                 onChange={handleFilterChange}
-                placeholder='&#x1F50E;&#xFE0E;  Search for ...'
+                placeholder='Search for ...'
                 />
-        </span>
+        </div>
     );
     };
 

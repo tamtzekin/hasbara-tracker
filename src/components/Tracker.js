@@ -73,7 +73,7 @@ export default function Tracker() {
                         <a href={row.original.sourceLink} target="_blank" rel="noreferrer">
 
                         {videoHasPreviewLink}
-                            <span className='play-arrow'></span>
+                            {/* <span className='play-arrow'></span> */}
 
                         {row.original.sourceText}
                         </a>

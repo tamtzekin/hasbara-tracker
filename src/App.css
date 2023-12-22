@@ -34,7 +34,7 @@ h1.homepage-heading {
     margin-top: 0%;
     width: 100%;
   }
-  
+
 h2 {
     text-align: left;
     font-family: 'HelveticaNeue_Medium';
@@ -168,11 +168,7 @@ button.dotted {
     transition: 0.3s;
   }
   
-  .menu-links a:hover {
-    background-color: #eee;
-  }
   
-
 
 
 

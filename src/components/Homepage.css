@@ -29,7 +29,7 @@ h1.ht-heading {
     left: 14%;
     margin-top: 0%;
     width: 100%;
-}
+} 
 
 @media only screen and (max-width: 768px) {
     h1.ht-heading {

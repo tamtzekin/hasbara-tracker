@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
 import '../App.css';
@@ -40,7 +41,7 @@ const VolunteerForm = () => {
     <>
       <span className="header-container">
         <MobileMenu />
-        <h1 class="ht-heading">Hasbara Tracker</h1>
+        <h1 class="ht-heading"><Link to="/">Hasbara Tracker</Link></h1>
         <span id="dots">. . . . . . . . . . . . . .</span>
         <NavBar />
       </span>

@@ -6,7 +6,7 @@ a {
 }
 
 a:hover {
-    text-decoration: dashed underline;
+    /* text-decoration: dashed underline; */
 }
 
 /* a:hover .play-arrow {

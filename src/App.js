@@ -11,12 +11,14 @@ import ClaimsDirectory from './components/ClaimsDirectory';
 import VolunteerForm from './components/VolunteerForm';
 import Tracker from './components/Tracker';
 import VideoPlayer from './components/VideoPlayer';
+import ScrollToTop from './components/utils/ScrollToTop';
 
 const App = () => {
     return (
     <>
             <Router>
                 <VideoPlayer />
+                <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<Homepage />} />
                     <Route path="/homepage" element={<Homepage />} />
@@ -26,7 +28,6 @@ const App = () => {
                     <Route path="/tracker" element={<Tracker />} />
                 </Routes>
             </Router>
-            
     </>
   );  
 }

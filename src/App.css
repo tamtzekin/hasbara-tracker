@@ -201,7 +201,7 @@ button.dotted {
         display: flex;
         flex-direction: column;
         top: 6.5%;
-        right: 13%;
+        right: 8.2%;
         text-align: right;
         position: absolute;
         font-size: 0.85em;
@@ -210,8 +210,6 @@ button.dotted {
   
     .mobile-menu .hamburger-icon {
         display: flex;
-        padding-top: 0;
-        padding-right: 20px;
     }
 }
   

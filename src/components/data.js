@@ -177,7 +177,7 @@ const data = [
             summaryClass: 'expand-text',
             details: 'In a video shared by the official IDF account (Israeli occupation forces), Israeli occupation force spokesperson Jonathon Conricus claimed Palestinian resistance fighters had “likely” carried out decapitations of babies in the Be’eri kibbutz.<br />“We got very very disturbing reports that came from the ground that there were babies that had been beheaded… I think we can now say with relative confidence that unfortunately this is what happened in Be’eri.”',
         },
-        sourceText: '▶ Daily Mail: Israel frontline: “I saw a beheaded baby” – Inside Kibbutz where Hamas killed 108 people',
+        sourceText: 'Daily Mail: Israel frontline: “I saw a beheaded baby” – Inside Kibbutz where Hamas killed 108 people',
         sourceLink: 'https://www.youtube.com/watch?v=Wsbd_dV8Xf8',
         videoLink: '/files/GolanVach_12Oct.mp4',
     },    

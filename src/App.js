@@ -9,7 +9,7 @@ import About from './components/About';
 // import NavBar from './components/NavBar';
 import ClaimsDirectory from './components/ClaimsDirectory';
 import VolunteerForm from './components/VolunteerForm';
-import ClaimA from './components/ClaimA';
+import Tracker from './components/Tracker';
 import VideoPlayer from './components/VideoPlayer';
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
                     <Route path="/about" element={<About />} />
                     <Route path="/claims" element={<ClaimsDirectory />} />
                     <Route path="/volunteer" element={<VolunteerForm />} />
-                    <Route path="/claim-a" element={<ClaimA />} />
+                    <Route path="/tracker" element={<Tracker />} />
                 </Routes>
             </Router>
             

@@ -53,12 +53,9 @@ const ClaimsDirectory = () => {
         <h2>Claims</h2>
         
         <div class="home-text">Select a claim from below.</div>
-        
         <div class="claims-list">
             <Link to="/claim-a">— 40 beheaded babies</Link>
         </div>
-    
-
         </span>
         </>
   

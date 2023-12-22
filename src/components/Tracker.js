@@ -13,7 +13,7 @@ import MobileMenu from './MobileMenu';
 import SearchBar from './SearchBar';
 
 
-export default function ClaimA() {
+export default function Tracker() {
     const data = useMemo(
         () => [
             {
@@ -184,14 +184,21 @@ console.log("data" + data);
 
     return (
         <>
-            <span class="claim-header-container">
+            {/* <span class="claim-header-container">
                 <MobileMenu />
                 <Link to="/claims"><div className="arrow">←</div></Link>
                 <h1 class="claim-heading">Claim: 40 beheaded babies</h1>
                 <NavBar />
-            </span>
+            </span> */}
+
+        <span class="header-container">
+            <MobileMenu />
+            <h1 class="ht-heading">Hasbara Tracker</h1>
+            <span id="dots">. . . . . . . . . . . . . .</span>
+            <NavBar />
+        </span>
         
-        <div class="tracker-container">
+        <div class="content-container">
             How to use the tracker:
             <ul>
             <li>Use the search bar below to find keywords (‘beheaded babies’, ‘hospital’, ‘al-shifa’)</li>
@@ -199,9 +206,11 @@ console.log("data" + data);
             <li>Hover over a ▶ source  to preview video (If you’re on your phone, tap + hold the link to preview)</li>
             <li>Click a source to view the archived link</li>
             </ul>
-            <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+
         
-        <div>
+        <div class="tracker-container">
+        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+        
             <table {...getTableProps()}>
             <thead>
                 {/* Map the headers out */}

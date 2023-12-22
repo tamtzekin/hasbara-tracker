@@ -127,17 +127,17 @@ console.log("data" + data);
 
             {
                 Header: 'Description',
-                accessor: 'description',
-                Cell: ({ value }) => (
+                accessor: (row) => `${row.description.summary} ${row.description.details}`,
+                Cell: ({ row }) => (
                     <div style={{maxWidth:700}}>
                         <details>
-                            <summary>{value.summary}<span className={value.summaryClass}></span></summary>
-                            <div dangerouslySetInnerHTML={{ __html: value.details }} />
+                            <summary>{row.original.description.summary}
+                            <span className={row.original.description.summaryClass}></span></summary>
+                            <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
                         </details>
                     </div>
                 ),
             },
-
 
             {
                 Header: 'Sources',
@@ -155,8 +155,6 @@ console.log("data" + data);
             ],
             []
         );
-
-        console.log("columns:" + columns);
 
 
     const {

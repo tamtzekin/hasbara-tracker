@@ -9,9 +9,9 @@ const data = [
         description: {
             summary: 'Babies and toddlers were found with their “heads decapitated” in the Kfar Aza kibbutz',
             summaryClass: 'expand-text',
-            details: 'A spokesperson for the Israeli state’s prime minister claimed babies and toddlers were found with their “heads decapitated” in the Kfar Aza kibbutz after HHH fighters entered occupied Palestine on October 7, 2023.<br /><br />Nicole Zedeck, a reporter with Tel Aviv-based news channel i24, interviewed Israeli occupation force soldier David Ben Zion who made the same claim on October 10, 2023. He said: “They cut heads of children, they cut heads of women.”',
+            details: 'A spokesperson for the Israeli state’s prime minister claimed babies and toddlers were found with their “heads decapitated” in the Kfar Aza kibbutz after Hamas fighters entered occupied Palestine on October 7, 2023.<br /><br />Nicole Zedeck, a reporter with Tel Aviv-based news channel i24, interviewed Israeli occupation force soldier David Ben Zion who made the same claim on October 10, 2023. He said: “They cut heads of children, they cut heads of women.”',
         },
-        sourceText: 'i24NEWS: Horror scenes at kibbutz liberated from HHH',
+        sourceText: 'i24NEWS: Horror scenes at kibbutz liberated from Hamas',
         sourceLink: 'https://archive.ph/QeCXs',
         videoLink: '/files/i24NEWS_10Oct.mp4',
     },
@@ -26,9 +26,9 @@ const data = [
         description: {
             summary: 'CNN reporter Nic Robertson claims babies’ heads cut off',
             summaryClass: 'expand-text',
-            details: 'Nic Robertson, a CNN reporter, claimed Palestinian resistance fighters carried out III-style executions” by “cutting the heads off of people” including babies and killing their pets.<br /><br />“Men, women, children, hands bound, shot, executed, heads cut.”',
+            details: 'Nic Robertson, a CNN reporter, claimed Palestinian resistance fighters carried out ISIS-style executions” by “cutting the heads off of people” including babies and killing their pets.<br /><br />“Men, women, children, hands bound, shot, executed, heads cut.”',
         },
-        sourceText: 'CNN: IDF, women, toddlers, elderly “butchered” by HHH in Kfar Aza’',
+        sourceText: 'CNN: IDF, women, toddlers, elderly “butchered” by Hamas in Kfar Aza’',
         sourceLink: 'https://archive.ph/XRmh4',
         videoLink: '/files/CNN_NicRobertson_10Oct.mp4',
     },

@@ -111,19 +111,21 @@ export default function Tracker() {
         </span>
         
         <div class="content-container">
-            How to use the tracker:
-            <ul>
-            <li>Use the search bar below to find keywords (‘beheaded babies’, ‘hospital’, ‘al-shifa’). You can also search all Debunks by typing 'debunk'</li>
-            <li>Click ‘Date▲’ to change the order of dates</li>
-            <li>Hover over a ▶ source  to preview video (If you’re on your phone, tap + hold the link to preview)</li>
-            <li>Click a source to open the archived link</li>
-            </ul>
-        
         <div class="tracker-container">
             <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
 
             {rows.length === 0 ? (
-                <div><em>No results found. Try searching a different word or phrase.</em></div>
+                <>
+                <div><em>No results found. Try searching a different word or phrase.</em></div><div class="how-to">
+                How to use the tracker:
+                <ul>
+                <li>Use the search bar below to find keywords (‘beheaded babies’, ‘hospital’, ‘al-shifa’). You can also search all Debunks by typing 'debunk'</li>
+                <li>Click ‘Date▲’ to change the order of dates</li>
+                <li>Hover over a ▶ source  to preview video (If you’re on your phone, tap + hold the link to preview)</li>
+                <li>Click a source to open the archived link</li>
+                </ul>
+            </div>
+            </>
             ) : (
 
             <table {...getTableProps()}>

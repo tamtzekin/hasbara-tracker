@@ -307,15 +307,29 @@ table.a:hover {
         padding-right: 30px;
     }
 
+    .how-to {
+        font-size: 0.8em;
+        margin-top: 10%;
+    }
+
+    li {
+        margin-left: -8%;
+    }
+
     .search-bar {
-        width: 100%;
+        width: 105%;
+        margin-left: -4%;
+        margin-right: auto;
+    }
+
+    .search-bar input {
+        font-size: 0.9em;
     }
 
     .table-container {
         top: 0;
         /* position: relative; */
         display: flex;
-        flex-direction: column;
     }    
 
     table {
@@ -341,14 +355,17 @@ table.a:hover {
         margin: 0 -4% 0 -4%;
     }
 
+    /* Disabled - until I figure out a better way to structure the page */
     thead {
+        display: none; 
         border: none;
         position: fixed;
-        height: 90px;
+        height: 80px;
         top: 4%;
         left: 1%;
         z-index: 2;
         border-bottom: #867d7d solid 0.5px;
+        /* padding-bottom: 10px; */
     }
 
     th {
@@ -362,7 +379,10 @@ table.a:hover {
     }
 
     .tracker-container {
-        margin-top: 50%;
+        margin-top: 10%;
+        width: 97%;
+        margin-left: 1.5%;
+        
     }
 
     .arrow {

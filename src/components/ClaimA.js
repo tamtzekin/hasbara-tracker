@@ -192,12 +192,18 @@ console.log("data" + data);
             </span>
         
         <div class="tracker-container">
+            How to use the tracker:
+            <ul>
+            <li>Use the search bar below to find keywords (‘beheaded babies’, ‘hospital’, ‘al-shifa’)</li>
+            <li>Click ‘Date▲’ to change the order of dates</li>
+            <li>Hover over a ▶ source  to preview video (If you’re on your phone, tap + hold the link to preview)</li>
+            <li>Click a source to view the archived link</li>
+            </ul>
             <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
         
         <div>
             <table {...getTableProps()}>
             <thead>
-                
                 {/* Map the headers out */}
                 {headerGroups.map((headerGroup) => (
                     <tr {...headerGroup.getHeaderGroupProps()}>

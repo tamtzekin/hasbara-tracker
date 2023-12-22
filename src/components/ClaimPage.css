@@ -137,7 +137,7 @@ details {
     
 details[open] {
     cursor: default;
-    line-height: 27px;
+    /* line-height: 27px; */
 }
 
 details[open] .expand-text {

@@ -269,7 +269,7 @@ ul {
 
 .play-arrow::after {
     content: '▶\00a0';
-    font-family: monospace; /* forces icon to display as plain unicode, not emoji */
+    font-family: serif !important; /* forces icon to display as plain unicode, not emoji */
 }
 
 .search-bar {

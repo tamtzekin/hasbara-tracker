@@ -1,8 +1,15 @@
 TO DO 
-- mobile views
-    - add a few breaks to the bottom of the page on mobile view
-- fix button on Volunteer page
-- set up form server (php mailer?)
+
+- set up Google Forms >> google sheets
+- create footer
+
+- Claim page: one tap open Module, second tap open Link
+
+- claim page dropdown filter: Claim/Debunk/Context
+
+
+LATER
+
 - reinstall css minifier
 - Git lfs
 
@@ -16,3 +23,14 @@ DONE
 - move links around videos instead
 - when hover off, hide video
 - text modals to expand 
+- remove green table line 
+- fix button on Volunteer page
+- claim as a separate column  - like labels, rounded corners or something 
+- stick to top of the page 
+- add a few breaks to the bottom of the page on mobile view
+- navbar on Claim page
+- sticky table header
+- table sortable by Date asc/desc
+- filters on claim page: filter by date ascending/descending, 
+- Claim vid display on mobile
+- add Search to React-table (filter input)

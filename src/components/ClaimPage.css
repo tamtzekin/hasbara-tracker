@@ -179,6 +179,10 @@ h1.claim-heading {
     width: 100%;
 }
 
+.how-to {
+    margin-top: 2%;
+}
+
 .table-container {
     top: 40px;
     position: relative;

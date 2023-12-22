@@ -334,22 +334,22 @@ const data = [
         videoLink: '',
     },    
     
-
-    {
-        date: '',
-        claim: {
-            claimText: '',
-            claimClass: 'claim-tag',
-        },
-        description: {
-            summary: '',
-            summaryClass: '',
-            details: '',
-        },
-        sourceText: '',
-        sourceLink: '',
-        videoLink: '',
-    },    
+    // TEMPLATE DATA SET (copy and paste this as much as you need it)
+    // {
+    //     date: '',
+    //     claim: {
+    //         claimText: '',
+    //         claimClass: 'claim-tag',
+    //     },
+    //     description: {
+    //         summary: '',
+    //         summaryClass: '',
+    //         details: '',
+    //     },
+    //     sourceText: '',
+    //     sourceLink: '',
+    //     videoLink: '',
+    // },    
 
 
 

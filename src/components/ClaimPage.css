@@ -265,7 +265,8 @@ table.a:hover {
     line-height: 25px;
     padding: 10px;
     background: #f0f0f0;
-    border:#0000003d solid 3px;
+    border:#0000003d solid 0.8px;
+    border-radius: 50px;
 }
 
 
@@ -317,13 +318,15 @@ table.a:hover {
     }
 
     .search-bar {
-        width: 105%;
-        margin-left: -4%;
+        width: 60%;
+        margin-left: 16%;
         margin-right: auto;
+        margin-bottom: 10%;
     }
 
     .search-bar input {
         font-size: 0.9em;
+        padding: 10px 0 10px 25px;
     }
 
     .table-container {

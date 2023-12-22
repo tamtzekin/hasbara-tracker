@@ -11,7 +11,7 @@ const SearchBar = ({ filter, setFilter }) => {
             <input
                 value={filter || ''}
                 onChange={handleFilterChange}
-                placeholder='Enter a claim or keyword to search ...'
+                placeholder='&#x1F50E;&#xFE0E;  Search for ...'
                 />
         </span>
     );

@@ -10,7 +10,7 @@ import '../App.css';
 import VideoPlayer from './VideoPlayer';
 import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
-import GlobalFilter from './GlobalFilter';
+import SearchBar from './SearchBar';
 
 
 export default function ClaimA() {
@@ -191,8 +191,8 @@ console.log("data" + data);
                 <NavBar />
             </span>
         
-        {/* render filter search bar  */}
-            <GlobalFilter filter={globalFilter || ''} setFilter={setGlobalFilter} />
+        <div class="tracker-container">
+            <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
         
         <div>
             <table {...getTableProps()}>
@@ -246,7 +246,9 @@ console.log("data" + data);
             })}
                 </tbody>
             </table>
+            </div>
         </div>
+
         </>
     );
 }

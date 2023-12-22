@@ -190,7 +190,6 @@ table {
 }
 
 td {
-    /* border: 1px solid grey; */
     padding: 25px;
     text-align: left;
     vertical-align: top;
@@ -206,8 +205,7 @@ thead {
 }
 
 th {
-    padding: 25px;
-    /* border: 1px solid grey; */
+    padding-bottom: 15px;
 }
 
 table.a {
@@ -217,6 +215,10 @@ table.a {
 
 table.a:hover {
     color: whitesmoke;
+}
+
+.tracker-container {
+   margin-top: 8%;
 }
 
 .modal-overlay {
@@ -245,9 +247,8 @@ table.a:hover {
 
 .search-bar {
     display: block;
-    width: 30%;
+    width: 40%;
     margin-top: 5%;
-    margin-left: 70%;
     margin-bottom: 2%;
 }
 
@@ -292,6 +293,10 @@ table.a:hover {
         padding-right: 30px;
     }
 
+    .search-bar {
+        width: 100%;
+    }
+
     .table-container {
         top: 0;
         /* position: relative; */
@@ -303,7 +308,7 @@ table.a:hover {
         /* border-collapse: collapse; */
         width: 100%;
         border: none;
-        top: 105px;
+        top: 20px;
     }
 
     tr {
@@ -340,6 +345,10 @@ table.a:hover {
         font-weight: 400;
         position: -webkit-sticky;
         position: sticky;
+    }
+
+    .tracker-container {
+        margin-top: 50%;
     }
 
     .arrow {

@@ -142,7 +142,7 @@ details[open] {
 
 details[open] .expand-text {
     /* display: none; */
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
 }
 
 details > summary {
@@ -168,6 +168,7 @@ details > summary::-webkit-details-marker {
 
 details[open] .expand-text::after {
     content: '⎯';
+    font-size: 0.7em;
 }
 
 h1.claim-heading {

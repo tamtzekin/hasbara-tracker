@@ -121,7 +121,7 @@ export default function Tracker() {
                 <ul>
                 <li>Use the search bar below to find keywords (‘beheaded babies’, ‘hospital’, ‘al-shifa’). You can also search all Debunks by typing 'debunk'</li>
                 <li>Click ‘Date▲’ to change the order of dates</li>
-                <li>Hover over a ▶ source  to preview video (If you’re on your phone, tap + hold the link to preview)</li>
+                <li>Hover over a ▶ source  to preview video (If you’re on your phone, tap + hold the link to preview). Click anywhere to close.</li>
                 <li>Click a source to open the archived link</li>
                 </ul>
             </div>

@@ -213,7 +213,7 @@ console.log("data" + data);
 
                         style={{
                             color: 'black',
-                            cursor: column.id === 'date' ? 'pointer' : 'auto',
+                            cursor: column.id === 'date' ? 'ns-resize' : 'auto',
                         }}
                     >
                         {column.render('Header')}

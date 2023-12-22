@@ -34,6 +34,11 @@ a[target="_blank"]:hover::after {
     text-decoration: none;
 }
 
+.back-to-top {
+    margin-top: 5%;
+    text-align: center;
+}
+
 body {
     background-color: #cbcbcb;
     /* font-size: 1.15em; */

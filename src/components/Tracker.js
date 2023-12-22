@@ -181,7 +181,7 @@ export default function Tracker() {
             </tbody>
             </table>
             )}
-
+        <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
         </div>
         
         </div>

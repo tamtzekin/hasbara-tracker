@@ -65,13 +65,13 @@ export default function Tracker() {
                 accessor: 'sourceText',
                 Cell: ({ row }) => {
                     const videoLink = row.original.videoLink;
-                    const isVideoLinkNotEmpty = videoLink && videoLink.trim() !== '';
+                    const videoHasPreviewLink = videoLink && videoLink.trim() !== '';
                 
                     return (
                     <VideoPlayer videoLink={videoLink}>
                         <a href={row.original.sourceLink} target="_blank" rel="noreferrer">
 
-                        {isVideoLinkNotEmpty}
+                        {videoHasPreviewLink}
                             <span className='play-arrow'></span>
 
                         {row.original.sourceText}

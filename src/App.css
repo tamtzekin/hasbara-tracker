@@ -104,7 +104,8 @@ button.dotted {
 }
 
 .navbar a:hover {
-  text-decoration: dashed underline;
+    cursor: crosshair;
+    text-decoration: dashed underline;
 }   
 
 .content-container {
@@ -137,7 +138,7 @@ button.dotted {
   }
   
   .hamburger-icon {
-    cursor: pointer;
+    cursor: crosshair;
     display: flex;
     flex-direction: column;
     padding-top: 1%;

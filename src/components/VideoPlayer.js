@@ -76,7 +76,7 @@ const VideoPlayer = ({ videoLink, children }) => {
             onEnded={closeModal}
           >
             <source src={videoLink} type="video/mp4" />
-            Your browser does not support the video tag.
+            Your browser does not support video previews.
           </video>
         </Modal>
       </>

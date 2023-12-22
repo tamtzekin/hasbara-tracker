@@ -9,25 +9,21 @@ a:hover {
     text-decoration: dashed underline;
 }
 
-a:hover .play-arrow {
+/* a:hover .play-arrow {
     color: #9dff20;
-}
+} */
 
+/* Icon that shows link opens in external window */
 a[target="_blank"]:hover::after {
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
     margin: 0 3px 0 5px;
-  }
+}
   
 .arrow {
     font-size: 3.8em;
     top: 1%;
     left: 0.5%;
     position: fixed;
-}
-
-.arrow:hover {
-    text-decoration: none;
-    color: #9dff20;
 }
 
 .arrow a {
@@ -272,7 +268,8 @@ ul {
 }
 
 .play-arrow::after {
-    /* content: '▶\00a0'; */
+    content: '▶\00a0';
+    font-family: monospace; /* forces icon to display as plain unicode, not emoji */
 }
 
 .search-bar {
@@ -302,10 +299,14 @@ ul {
     background-position: 10px center; /* Adjust the position of the image */
 }
 
-.search-bar input::after {
-    content: 'test test';
-    background: url('../../public/img/magnifying-glass.png') center / contain no-repeat;
-}
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 768px) {

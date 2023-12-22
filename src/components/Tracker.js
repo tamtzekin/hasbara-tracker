@@ -199,6 +199,11 @@ console.log("data" + data);
         
         <div class="tracker-container">
             <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+
+            {rows.length === 0 ? (
+                <div><em>No results found. Try searching a different word or phrase.</em></div>
+            ) : (
+
             <table {...getTableProps()}>
             <thead>
                 {/* Map the headers out */}
@@ -250,6 +255,8 @@ console.log("data" + data);
                 })}
             </tbody>
             </table>
+            )}
+
         </div>
         
         </div>

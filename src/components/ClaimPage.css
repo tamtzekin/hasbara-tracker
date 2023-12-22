@@ -148,7 +148,7 @@ details[open] .expand-text {
 details > summary {
     list-style: none;
     font-weight: 600;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
 }
     
 details > summary::-webkit-details-marker {

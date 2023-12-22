@@ -90,27 +90,31 @@ button {
 
 .claim-tag {
     border: solid 1.2px;
-    padding: 2px;
+    padding: 5px;
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 18px;
     background: #bfe1f6;
     border-color: #d4dfe6;
+    margin-left: 6%;
+    margin-right: auto;
 }
 
 .debunk-tag {
     border: solid 1.2px;
-    padding: 2px;
+    padding: 5px;
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 18px;
     background: #ffcfc9;
     border-color: #f8e4e2;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .context-tag {
     border: solid 1.2px;
-    padding: 2px;
+    padding: 5px;
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 18px;

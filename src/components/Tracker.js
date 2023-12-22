@@ -120,7 +120,7 @@ export default function Tracker() {
                 How to use the tracker:
                 <ul>
                 <li>Use the search bar below to find keywords (eg. ‘beheaded babies’, ‘hospital’, ‘al-shifa’). You can also search all Debunks by typing 'debunk'</li>
-                <li>Click ‘Date▲’ to change the order of dates (desktop only)</li>
+                <li>Click ‘Date ▲’ to change the order of dates (desktop only)</li>
                 <li>Hover over a ▶ source  to preview video (If you’re on your phone, tap + hold the link to preview). Click anywhere to close</li>
                 <li>Click the Sources to open an archived link</li>
                 <li>Click + and ⎯ to show more or less text</li>
@@ -148,7 +148,7 @@ export default function Tracker() {
                         }}
                     >
                         {column.render('Header')}
-                        {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? '▼' : '▲') : ''}
+                        {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
                     </th>
                 ))}
                 </tr>
@@ -167,7 +167,7 @@ export default function Tracker() {
                                 <td
                                     {...cell.getCellProps()}
                                         style={{
-                                            padding: '10px',
+                                            padding: '20px',
                                             border: 'solid 1px gray',
                                             overflow: 'hidden',
                                         }}

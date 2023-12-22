@@ -116,7 +116,7 @@ export default function Tracker() {
 
             {rows.length === 0 ? (
                 <>
-                <div>No results found. Try searching a different word or phrase.</div><div class="how-to">
+                <div class="no-results-text">No results found. Try searching a different word or phrase.</div><div class="how-to">
                 How to use the tracker:
                 <ul>
                 <li>Use the search bar below to find keywords (eg. ‘beheaded babies’, ‘hospital’, ‘al-shifa’). You can also search all Debunks by typing 'debunk'</li>

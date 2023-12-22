@@ -181,6 +181,8 @@ h1.claim-heading {
 
 .how-to {
     margin-top: 2%;
+    width: 65%;
+    margin-left: 18%;
 }
 
 .table-container {
@@ -222,10 +224,14 @@ table.a:hover {
 }
 
 .tracker-container {
-   margin-top: 8%;
-   width: 150%;
-   margin-left: -25%;
-   margin-right: 20%;
+   margin-top: 10%;
+   width: 60%;
+   margin-left: -15%;
+   /* margin-right: 20%; */
+}
+
+ul {
+    margin-left: -3.5%;
 }
 
 .modal-overlay {
@@ -246,6 +252,10 @@ table.a:hover {
     overflow-y: hidden;
     width: 46%;
     height: 100%;
+}
+
+.no-results-text {
+    margin-left: 18%;
 }
 
 .play-arrow::after {
@@ -321,7 +331,7 @@ table.a:hover {
     }
 
     li {
-        margin-left: -8%;
+        margin-left: -3%;
     }
 
     .search-bar {
@@ -337,14 +347,10 @@ table.a:hover {
     }
 
     .table-container {
-        top: 0;
-        /* position: relative; */
         display: flex;
     }    
 
     table {
-        /* border-collapse: collapse; */
-        width: 100%;
         border: none;
         top: 20px;
     }

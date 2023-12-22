@@ -125,6 +125,7 @@ const VolunteerForm = () => {
               name="otherAmountOfHours"
               value={formData.otherAmountOfHours}
               onChange={handleChange}            />
+            <br /><br />
           </label>
           )}
 

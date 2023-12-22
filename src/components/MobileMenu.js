@@ -51,8 +51,8 @@ const MobileMenu = () => {
           <Link to="/" onClick={closeModal}>
             Home
           </Link>
-          <Link to="/claims" onClick={closeModal}>
-            Claims
+          <Link to="/tracker" onClick={closeModal}>
+            Tracker
           </Link>
           <Link to="/volunteer" onClick={closeModal}>
             Volunteer

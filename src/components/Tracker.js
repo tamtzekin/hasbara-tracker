@@ -6,6 +6,7 @@ import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 import './ClaimPage.css';
 import '../App.css';
 
+import data from './data';
 import VideoPlayer from './VideoPlayer';
 import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
@@ -13,88 +14,9 @@ import SearchBar from './SearchBar';
 
 
 export default function Tracker() {
-    const data = useMemo(
-        () => [
-
-            //TODO: move this all to a separate data.js file
-            {
-                date: '10 Oct 2023',
-                claim: {
-                    claimText: 'Claim',
-                    claimClass: 'claim-tag',
-            },
-                description: {
-                    summary: 'Babies and toddlers were found with their “heads decapitated” in the Kfar Aza kibbutz',
-                    summaryClass: 'expand-text',
-                    details: 'A spokesperson for the Israeli state’s prime minister claimed babies and toddlers were found with their “heads decapitated” in the Kfar Aza kibbutz after HHH fighters entered occupied Palestine on October 7, 2023.<br /><br />Nicole Zedeck, a reporter with Tel Aviv-based news channel i24, interviewed Israeli occupation force soldier David Ben Zion who made the same claim on October 10, 2023. He said: “They cut heads of children, they cut heads of women.”',
-                },
-                sourceText: 'i24NEWS: ‘Horror scenes at kibbutz liberated from HHH',
-                sourceLink: 'https://archive.ph/QeCXs',
-                videoLink: '/files/i24NEWS_10Oct.mp4',
-            },
-
-            {
-                date: '10 Oct 2023',
-                claim: {
-                    claimText: 'Claim',
-                    claimClass: 'claim-tag',
-                },
-                description: {
-                    summary: 'CNN reporter Nic Robertson claims babies’ heads cut off',
-                    summaryClass: 'expand-text',
-                    details: 'Nic Robertson, a CNN reporter, claimed Palestinian resistance fighters carried out III-style executions” by “cutting the heads off of people” including babies and killing their pets.<br /><br />“Men, women, children, hands bound, shot, executed, heads cut.”',
-                },
-                sourceText: 'CNN: ‘IDF, women, toddlers, elderly “butchered” by HHH in Kfar Aza’',
-                sourceLink: 'https://archive.ph/XRmh4',
-                videoLink: '/files/CNN_NicRobertson_10Oct.mp4',
-            },
-
-            {
-                date: '11 Oct 2023',
-                claim: {
-                    claimText: 'Claim',
-                    claimClass: 'claim-tag',
-            },
-                description: {
-                    summary: 'US President Biden claims he saw ‘pictures’ of babies being beheaded',
-                    summaryClass: 'expand-text',
-                    details: 'In an address to Jewish community leaders on October 11, 2023, Biden claimed: “I never really thought that I would see and have confirmed pictures of terrorists beheading children.”',
-                },
-                sources: 'Source 1',
-            },
-
-            {
-                date: '11 Oct 2023',
-                claim: {
-                    claimText: 'Debunk',
-                    claimClass: 'debunk-tag',
-                },
-                description: {
-                    summary: 'White House official clarifies Biden did not see pictures of decapitated babies',
-                    summaryClass: 'expand-text',
-                    details: 'An administration official later clarified Biden’s remarks, saying that Biden was referring to public statements from officials and media reports and had not actually seen photos.',
-                },
-                sources: 'Source 1',
-            },
-
-
-            {
-                date: '',
-                claim: '',
-                claimClass: 'claim-tag',
-                description: {
-                    summary: '',
-                    summaryClass: '',
-                    details: '',
-            },
-                sources: 'Source 1',
-            },
-
-              ],
+    const trackerData = useMemo(() => data, [],
             []
     )
-
-console.log("data" + data);
 
 
     const columns = useMemo(

@@ -3,7 +3,7 @@ import logo from '../logo.svg';
 import React, { useMemo } from 'react';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 
-import './ClaimPage.css';
+import './Tracker.css';
 import '../App.css';
 
 import data from './data';

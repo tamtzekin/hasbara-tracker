@@ -176,6 +176,11 @@ button.dotted {
 
 /* Mobile devices (portrait and landscape) */
 @media only screen and (max-width: 768px) {
+    .arrow-menu {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+
     .mobile-menu {
       /* display: flex;
         align-items: center;
@@ -195,13 +200,14 @@ button.dotted {
     .menu-links {
         display: flex;
         flex-direction: column;
-        top: 6.5%;
+        top: 4.2%;
         right: 8.2%;
         text-align: right;
         position: absolute;
-        font-size: 1.1em;
+        font-size: 1em;
         font-family: 'Helvetica', Helvetica, sans-serif;
     }
+    
   
     .mobile-menu .hamburger-icon {
         display: flex;

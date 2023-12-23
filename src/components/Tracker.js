@@ -114,7 +114,7 @@ export default function Tracker() {
         <span class="header-container">
             <MobileMenu />
             <h1 class="ht-heading"><Link to='/'>Hasbara Tracker</Link></h1>
-            <span id="dots">. . . . . . . . . . . . . .</span>
+            <span id="dots">. . . . . . . . . . . . .</span>
             <NavBar />
         </span>
         

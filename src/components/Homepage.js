@@ -11,7 +11,7 @@ const Homepage = () => {
         <span class="header-container">
             <MobileMenu />
             <h1 class='ht-heading'>Hasbara Tracker</h1>
-            <span id="dots">. . . . . . . . . . . . . .</span>
+            <span id="dots">. . . . . . . . . . . . .</span>
             <NavBar />
         </span>
                 

@@ -63,18 +63,8 @@ button {
 
 .date {
   font-size: 1em;
-  font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
+  font-family: 'Helvetica', Helvetica, sans-serif;
   vertical-align: top;
-}
-
-.date::after {
-    content: '\a 2023';
-    }
-
-.debunked {
-    font-size: 0.9em;
-    font-weight: 600;
-    letter-spacing: 1.5px;
 }
 
 .claim-header-container {
@@ -152,8 +142,9 @@ details[open] .expand-text {
 
 details > summary {
     list-style: none;
-    font-weight: 600;
     padding-bottom: 3%;
+    font-family: 'Helvetica', Helvetica, sans-serif;
+    font-weight: 600;
 }
     
 details > summary::-webkit-details-marker {
@@ -177,7 +168,7 @@ details[open] .expand-text::after {
 }
 
 h1.claim-heading {
-    font-family: 'HelveticaNeue_Light', helvetica, sans-serif;
+    font-family: 'Helvetica', helvetica, sans-serif;
     font-size: 1.5em;
     position: absolute;
     left: 6%;
@@ -345,6 +336,10 @@ ul {
 
     details[open] {
         cursor: default;
+        /* line-height: 28px; */
+    }
+
+    details {
         line-height: 28px;
     }
 
@@ -380,20 +375,17 @@ ul {
     
     table {
         border: none;
-        width: 100%;
+        width: 210%;  /* allows table to scroll for ages horizontally, on mobile */
         border-collapse: collapse;
     }
 
     tr {
-        /* display: block; */
         margin-bottom: 20px;
         margin-top: 20px;
-        /* padding-bottom: 30px; */
         border: none;
     }
 
     td {
-        /* display: block; */
         border-bottom: none;
         text-align: left;
         padding: 25px;
@@ -403,7 +395,7 @@ ul {
     thead {
         border: none;
         height: 80px;
-        top: 0;
+        top: 5%;
         left: 1%;
         z-index: 2;
         border-bottom: #867d7d solid 0.5px;
@@ -420,8 +412,9 @@ ul {
         margin-left: 0%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 
-        /* overflow-y: auto; */
     }
+
+
 
     .arrow {
         font-size: 1.9em;

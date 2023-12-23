@@ -6,7 +6,7 @@ label {
     width: 100%;
     margin-bottom: 9px;
     display: block;
-    font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
+    font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 1em;
 }
 
@@ -30,7 +30,7 @@ textarea {
 select {
     width: 100%;
     margin-top: 3.5%;
-    font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
+    font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 1em;
 }
 

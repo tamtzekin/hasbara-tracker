@@ -15,15 +15,27 @@
 }
 
 @font-face {
+    font-family: 'Helvetica';
+    src:url('/src/fonts/helvetica.woff2') format('woff2'),
+        url('/src/fonts/helvetica.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'HelveticaBold';
+    src:url('/src/fonts/helvetica-bold.woff2') format('woff2'),
+        url('/src/fonts/helvetica-bold.woff') format('woff');
+}
+
+@font-face {
     font-family: 'HelveticaNeue_Light';
     src:url("./fonts/helveticaneue_light.woff2") format("woff2"),
-    url("./fonts/helveticaneue_light.woff") format("woff");
+        url("./fonts/helveticaneue_light.woff") format("woff");
 }
 
 @font-face {
     font-family: 'HelveticaNeue_Medium';
     src:url("./fonts/helveticaneue_medium.woff2") format("woff2"),
-    url("./fonts/helveticaneue_medium.woff") format("woff");
+        url("./fonts/helveticaneue_medium.woff") format("woff");
 }
 
 h1.homepage-heading {
@@ -43,7 +55,7 @@ h2 {
 
 body {
     background-color: #cbcbcb;
-    font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
+    font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 1em;
     letter-spacing: 0.8px;
     line-height: 25px;
@@ -187,8 +199,8 @@ button.dotted {
         right: 8.2%;
         text-align: right;
         position: absolute;
-        font-size: 0.85em;
-        font-family: 'Helvetica Neue Light', Helvetica, sans-serif;
+        font-size: 1em;
+        font-family: 'Helvetica', Helvetica, sans-serif;
     }
   
     .mobile-menu .hamburger-icon {
@@ -204,8 +216,8 @@ button.dotted {
     }
 
     .content-container {
-        /* margin: 15% 4% 0 -17%; */
-        /* line-height: 28px; */
+        margin: 15% 4% 0 -17%;
+        line-height: 28px;
     }
 
     .filters {

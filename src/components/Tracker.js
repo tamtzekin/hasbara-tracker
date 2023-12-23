@@ -174,13 +174,18 @@ export default function Tracker() {
                     return (
                         <tr 
                             {...row.getRowProps()}>
-                            {row.cells.map((cell) => (
+                            {row.cells.map((cell, index) => (
                                 <td
                                     {...cell.getCellProps()}
                                         style={{
                                             padding: '20px',
                                             border: 'solid 1px gray',
                                             overflow: 'hidden',
+                                            width:
+                                                index === 0 ? '50px' :
+                                                index === 1 ? '60px' :
+                                                index === 2 ? '500px' :
+                                                'auto',
                                         }}
                                 >
                                     {cell.render('Cell')}

@@ -118,10 +118,12 @@ export default function Tracker() {
             <NavBar />
         </span>
         
-        <div class="content-container">
-        <div class="tracker-container">
+        {/* <div class="content-container"></div> */}
+        <div class="search-bar-container">
             <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+        </div>
 
+        <div class="tracker-container">
             {rows.length === 0 ? (
                 <>
                 <div class="no-results-text">No results found. Try searching a different word or phrase.</div><div class="how-to">
@@ -191,7 +193,6 @@ export default function Tracker() {
             </table>
             )}
         <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
-        </div>
         
         </div>
         </>

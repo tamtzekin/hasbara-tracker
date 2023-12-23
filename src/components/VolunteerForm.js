@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
+import GoogleForm from './GoogleForm';
+
 import '../App.css';
 import './VolunteerForm.css';
+
 
 const VolunteerForm = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +66,11 @@ const VolunteerForm = () => {
           receipts.
         </div><br />
 
-        <form onSubmit={handleSubmit}>
+        <GoogleForm />
+
+        
+
+        {/* <form onSubmit={handleSubmit}>
           <label>
             Full name <span class="required-field">*</span>
             <br />
@@ -141,7 +149,8 @@ const VolunteerForm = () => {
           </label>
           <br />
           <button class="btn-green" type="submit">Submit</button>
-        </form>
+        </form> */}
+
       </div>
     </>
   );

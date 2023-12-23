@@ -41,16 +41,17 @@ const VideoPlayer = ({ videoLink, children }) => {
           contentLabel="Video Modal"
           style={{
             content: {
-              top: 'auto',
-              left: 'auto',
-              right: 0,
-              bottom: '-1.6%',
+            //   top: 'auto',
+            top: '10%',
+              left: '30%',
+              right: '25%',
+            //   bottom: '-1.6%',
               transform: 'none',
               border: 'none',
               background: 'none',
               padding: 0,
               width: '80%',
-              maxWidth: '400px',
+              maxWidth: '600px',
               maxHeight: '80%',
               overflow: 'hidden',
               animationFillMode: 'forwards',
@@ -58,7 +59,7 @@ const VideoPlayer = ({ videoLink, children }) => {
               zIndex: 2,
             },
             overlay: {
-              backgroundColor: 'rgba(0, 0, 0, 0)',
+              backgroundColor: 'rgba(0, 0, 0, 0.6)',
               animationFillMode: 'forwards',
               zIndex: 1,
             },

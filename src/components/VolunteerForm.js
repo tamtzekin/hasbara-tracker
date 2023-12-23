@@ -66,8 +66,9 @@ const VolunteerForm = () => {
           receipts.
         </div><br />
 
+        <div class="home-text">
         <GoogleForm />
-
+        </div>
         
 
         {/* <form onSubmit={handleSubmit}>

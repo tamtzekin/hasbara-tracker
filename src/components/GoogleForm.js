@@ -8,12 +8,14 @@ const GoogleForm = () => {
       <iframe
         title="Google Form"
         src={embedUrl}
-        width="100%"
+        width="108%"
         height="1000px"
         frameBorder="0"
         marginHeight="0"
         marginWidth="0"
-        style={{ border: 'none' }}
+        style={{
+            border: 'none',
+        }}
       >
         Loading...
       </iframe>

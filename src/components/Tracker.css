@@ -326,21 +326,21 @@ ul {
     }
 
     .claim-tag {
-        margin: 0 0 0 0;
-        padding-left: 50px;
-        padding-right: 50px;
+        /* margin: 0 0 0 0; */
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .context-tag {
-        margin: 0 0 0 5%;
-        padding-left: 30px;
-        padding-right: 30px;
+        /* margin: 0 0 0 5%; */
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .debunk-tag {
-        margin: 0 0 0 0;
-        padding-left: 40px;
-        padding-right: 40px;
+        /* margin: 0 0 0 0; */
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     details[open] {

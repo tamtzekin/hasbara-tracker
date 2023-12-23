@@ -360,6 +360,7 @@ ul {
     }
 
     .no-results-text {
+        margin-top: 5%;
         margin-left: 10%;
     }
 
@@ -409,9 +410,8 @@ ul {
     }
 
     th {
-        padding-left: 1%;
-        text-align: left;
-        font-size: 0.9em;
+        text-align: center;
+        font-size: 1em;
     }
 
     .tracker-container {

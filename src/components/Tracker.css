@@ -416,8 +416,8 @@ ul {
 
     .tracker-container {
         margin-top: 10%;
-        width: 110%;
-        margin-left: -5%;
+        width: 100%;
+        margin-left: 0%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 
         /* overflow-y: auto; */

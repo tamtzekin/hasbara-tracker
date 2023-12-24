@@ -177,8 +177,8 @@ h1.claim-heading {
 
 .how-to {
     margin-top: 2%;
-    width: 80%;
-    margin-left: 15%;
+    width: 55%;
+    margin-left: 25%;
 }
 
 li {
@@ -207,7 +207,8 @@ li {
 }
 
 .no-results-text {
-    margin-left: 15%;
+    margin-left: 25%;
+    margin-right: auto;
 }
 
 .play-arrow::after {
@@ -291,7 +292,7 @@ table.a:hover {
 }
 
 ul {
-    margin-left: -9.2%;
+    margin-left: -8%;
 }
 
 

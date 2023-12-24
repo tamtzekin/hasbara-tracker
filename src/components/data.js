@@ -1,6 +1,7 @@
 
 const data = [
     {
+        claimTag: 'Forty beheaded babies',
         date: '10 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -18,6 +19,7 @@ const data = [
 
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '10 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -35,6 +37,7 @@ const data = [
 
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -52,6 +55,7 @@ const data = [
 
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Debunk',
@@ -62,13 +66,14 @@ const data = [
             summaryClass: 'expand-text',
             details: 'An administration official later clarified Biden’s remarks, saying that Biden was referring to public statements from officials and media reports and had not actually seen photos.',
         },
-        sourceText: '→ CNN',
+        sourceText: '→  CNN',
         sourceLink: 'https://archive.ph/gaDln',
         videoLink: '',
     },
 
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -86,6 +91,7 @@ const data = [
 
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Debunk',
@@ -103,6 +109,7 @@ const data = [
     
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -119,6 +126,7 @@ const data = [
     },    
     
     {
+        claimTag: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Context',
@@ -135,6 +143,7 @@ const data = [
     },    
     
     {
+        claimTag: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: {
             claimText: 'Debunk',
@@ -151,6 +160,7 @@ const data = [
     },    
     
     {
+        claimTag: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: {
             claimText: 'Debunk',
@@ -167,6 +177,7 @@ const data = [
     },    
     
     {
+        claimTag: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -184,6 +195,7 @@ const data = [
     
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -201,6 +213,7 @@ const data = [
     
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: { 
             claimText: 'Debunk',
@@ -217,6 +230,7 @@ const data = [
     },    
     
     {
+        claimTag: 'Forty beheaded babies',
         date: '13 Oct 2023',
         claim: { 
             claimText: 'Debunk',
@@ -234,6 +248,7 @@ const data = [
     
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '18 Oct 2023',
         claim: { 
             claimText: 'Claim',
@@ -250,6 +265,7 @@ const data = [
     },    
     
     {
+        claimTag: 'Forty beheaded babies',
         date: '26 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -267,6 +283,7 @@ const data = [
     
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '28 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -284,6 +301,7 @@ const data = [
     
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '15 Nov 2023',
         claim: {
             claimText: 'Claim',
@@ -302,6 +320,7 @@ const data = [
 
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '12 Dec 2023',
         claim: {
             claimText: 'Claim',
@@ -319,6 +338,7 @@ const data = [
     
 
     {
+        claimTag: 'Forty beheaded babies',
         date: '',
         claim: {
             claimText: 'Context',
@@ -336,6 +356,7 @@ const data = [
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)
     // {
+    //     claimTag: '',
     //     date: '',
     //     claim: {
     //         claimText: '',

@@ -23,6 +23,11 @@ export default function Tracker() {
     const columns = useMemo(
         () => [
             {
+                Header: 'Claim',
+                accessor: 'claimTag',
+            },
+
+            {
                 Header: 'Date',
                 accessor: 'date',
                 sortType: (rowA, rowB, columnId) => {
@@ -182,10 +187,11 @@ export default function Tracker() {
                                             border: 'solid 1px gray',
                                             overflow: 'hidden',
                                             width:
-                                                index === 0 ? '50px' :
+                                                index === 0 ? '30px' :
                                                 index === 1 ? '60px' :
-                                                index === 2 ? '500px' :
-                                                'auto',
+                                                index === 2 ? '20px' :
+                                                index === 3 ? '600px' :
+                                                '120px',
                                         }}
                                 >
                                     {cell.render('Cell')}

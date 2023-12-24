@@ -211,8 +211,8 @@ const data = [
             summaryClass: '',
             details: '',
         },
-        sourceText: '',
-        sourceLink: '',
+        sourceText: '→ NBC News',
+        sourceLink: 'https://archive.ph/MxZTk',
         videoLink: '',
     },    
     

@@ -356,7 +356,7 @@ ul {
 
     .no-results-text {
         margin-top: 5%;
-        margin-left: 10%;
+        margin-left: 5%;
     }
 
     .search-bar {
@@ -375,7 +375,7 @@ ul {
     
     table {
         border: none;
-        width: 210%;  /* allows table to scroll for ages horizontally, on mobile */
+        width: 300%;  /* allows table to scroll for ages horizontally, on mobile */
         border-collapse: collapse;
     }
 

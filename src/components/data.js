@@ -30,7 +30,7 @@ const data = [
             summaryClass: 'expand-text',
             details: 'Nic Robertson, a CNN reporter, claimed Palestinian resistance fighters carried out ISIS-style executions” by “cutting the heads off of people” including babies and killing their pets.<br /><br />“Men, women, children, hands bound, shot, executed, heads cut.”',
         },
-        sourceText: '▷ CNN',
+        sourceText: '▷ CNN',    
         sourceLink: 'https://archive.ph/XRmh4',
         videoLink: '/files/CNN_NicRobertson_10Oct.mp4',
     },

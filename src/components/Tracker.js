@@ -188,10 +188,10 @@ export default function Tracker() {
                                             overflow: 'hidden',
                                             width:
                                                 index === 0 ? '30px' :
-                                                index === 1 ? '60px' :
+                                                index === 1 ? '80px' :
                                                 index === 2 ? '20px' :
                                                 index === 3 ? '600px' :
-                                                '120px',
+                                                '130px',
                                         }}
                                 >
                                     {cell.render('Cell')}

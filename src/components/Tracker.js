@@ -184,7 +184,7 @@ export default function Tracker() {
                                     {...cell.getCellProps()}
                                         style={{
                                             padding: '20px',
-                                            border: 'solid 1px gray',
+                                            borderBottom: 'solid 1px gray',
                                             overflow: 'hidden',
                                             width:
                                                 index === 0 ? '30px' :

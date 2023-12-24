@@ -38,7 +38,7 @@ export default function Tracker() {
             },
 
             {
-                Header: 'Claim',
+                Header: 'What',
                 accessor: (row) => row.claim.claimText,
                 Cell: ({ row }) => (
                     <span className={row.original.claim.claimClass}>
@@ -48,7 +48,7 @@ export default function Tracker() {
             },
 
             {
-                Header: 'Description',
+                Header: 'Details',
                 accessor: (row) => `${row.description.summary} ${row.description.details}`,
                 Cell: ({ row }) => (
                     <div style={{maxWidth:700}}>

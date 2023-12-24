@@ -62,8 +62,8 @@ const data = [
             summaryClass: 'expand-text',
             details: 'An administration official later clarified Biden’s remarks, saying that Biden was referring to public statements from officials and media reports and had not actually seen photos.',
         },
-        sourceText: '',
-        sourceLink: '',
+        sourceText: '→ CNN',
+        sourceLink: 'https://archive.ph/gaDln',
         videoLink: '',
     },
 

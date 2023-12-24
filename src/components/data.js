@@ -42,6 +42,42 @@ const data = [
         claim: {
             claimText: 'Claim',
             claimClass: 'claim-tag',
+        },
+        description: {
+            summary: 'Israel’s Foreign Affairs Ministry runs ads about 40 murdered babies',
+            summaryClass: 'expand-text',
+            details: 'The Israeli Foreign Affairs Ministry starts running ads targeting children’s content on YouTube. The 28 second video advertisement is titled ‘Babies Can’t Read The Text In This Video But Their Parents Can’ and shows an animated rainbow and unicorn. The text in the video reads:<br /><br />‘We know that your child cannot read this. We have an important message to tell you as parents. 40 infants were murdered in Israel by the Hamas terrorists (ISIS). Just as you would do everything for your child. We will do everything to protect ours. Now hug your baby and stand with us.’',
+        },
+        sourceText: '▷@IsraelMFA on YouTube',    
+        sourceLink: 'https://archive.ph/v4yi5',
+        videoLink: '/files/IsraelMFA_11Oct.mp4',
+    },
+
+
+    {
+        claimTag: 'Forty beheaded babies',
+        date: '11 Oct 2023',
+        claim: {
+            claimText: 'Claim',
+            claimClass: 'claim-tag',
+    },
+        description: {
+            summary: 'Israeli first responder group Zaka representative claims he saw beheaded babies',
+            summaryClass: 'expand-text',
+            details: 'In an interview with American news outlet CBS News, Yossi Landau, head of operations in the ‘southern region’ with first responder group Zaka said he saw "with his own eyes children and babies who had been beheaded”.',
+        },
+        sourceText: '→ CBS News',
+        sourceLink: 'https://archive.ph/RFI9h',
+        videoLink: '',
+    },
+
+
+    {
+        claimTag: 'Forty beheaded babies',
+        date: '11 Oct 2023',
+        claim: {
+            claimText: 'Claim',
+            claimClass: 'claim-tag',
     },
         description: {
             summary: 'US President Biden claims he saw ‘pictures’ of babies being beheaded',
@@ -66,7 +102,7 @@ const data = [
             summaryClass: 'expand-text',
             details: 'An administration official later clarified Biden’s remarks, saying that Biden was referring to public statements from officials and media reports and had not actually seen photos.',
         },
-        sourceText: '→  CNN',
+        sourceText: '→ CNN',
         sourceLink: 'https://archive.ph/gaDln',
         videoLink: '',
     },
@@ -229,6 +265,7 @@ const data = [
         videoLink: '',
     },    
     
+
     {
         claimTag: 'Forty beheaded babies',
         date: '13 Oct 2023',
@@ -245,7 +282,25 @@ const data = [
         sourceLink: 'https://archive.ph/RNLTs',
         videoLink: '',
     },    
-    
+
+
+    {
+        claimTag: 'Forty beheaded babies',
+        date: '17 Oct 2023',
+        claim: { 
+            claimText: 'Claim',
+            claimClass: 'claim-tag',
+        },
+        description: {
+            summary: 'Zaka first responder Yossi Landau in an interview repeats claims of beheaded babies',
+            summaryClass: 'expand-text',
+            details: 'In an interview with American news outlet 6abc Philadelphia Yossi Landau, head of operations in the ‘southern region’ with first responder group Zaka, repeats the claim that he saw beheaded babies among other assertions.',
+        },
+        sourceText: '→ 6abc Philadelphia',
+        sourceLink: 'https://archive.ph/4nzHg',
+        videoLink: '/files/6abc_YossiLandau_17Oct.mp4',
+    },    
+
 
     {
         claimTag: 'Forty beheaded babies',
@@ -339,7 +394,7 @@ const data = [
 
     {
         claimTag: 'Forty beheaded babies',
-        date: '',
+        date: '1948',
         claim: {
             claimText: 'Context',
             claimClass: 'context-tag',
@@ -347,10 +402,10 @@ const data = [
         description: {
             summary: 'Kibbutzes on massacred and occupied Palestinian land',
             summaryClass: 'expand-text',
-            details: 'Kfar Aza is a kibbutz on occupied Palestinian land in what is considered ‘southern Israel’. In 1948, Zionist militias ethnically cleansed the Palestinian village of Najd, and the Israeli settler-colony created the city of Sderot where the kibbutz is close to. The kibbutz is also near the Israeli state’s city Netivot, a part of Gaza that was ethnically cleansed in the Nakba of 1948, originally named Arab Suqrir.',
+            details: 'Kfar Aza is a kibbutz on occupied Palestinian land in what is considered ‘southern Israel’ between the Israeli settlement cities Netivot and Sderot, and close to Israeli settlement city Ashdod.<br /><br />The settler city of Sderot and Or ha-Ner are on the ethnically cleansed Palestinian village of Najd, attacked on 15 May 1948 by the Zionist militias of the Negev Brigade during Operation Barak. Near Najd was the Palestinian village of Simsim also attacked by the Negev Brigade during Operation Barak. Nearby Dimra was ethnically cleansed in 1948 Operation Yo’av, by the Giva’ti Brigade and Egyptian military. The Palestinian city Isdud (Israeli settlement city Ashdod) was part of Gaza and ethnically cleansed by Zionist militias, the Yishuv forces, on 28 October 1948.<br /><br />Prior to the Nakba and the creation of the Netivot colony, the Palestinian village was named Arab Suqrir and was ethnically cleansed in the Nakba of 1948.',
         },
-        sourceText: '',
-        sourceLink: '',
+        sourceText: '→ Palestine Remembered',
+        sourceLink: 'https://archive.ph/xCyzu',
         videoLink: '',
     },    
     

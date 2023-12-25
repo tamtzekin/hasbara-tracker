@@ -34,16 +34,16 @@ h1.ht-heading {
 @media only screen and (max-width: 768px) {
     h1.ht-heading {
         font-family: 'LoRes_Regular';
-        font-size: 1.4em;
+        font-size: 1.7em;
         position: absolute;
         left: 0;
-        margin-top: 0;
+        margin-top: 2%;
         width: 100%;
     }
 
     #dots {
-        margin-top: 3%;
+        margin-top: 5%;
         margin-left: -14%;
-        font-size: 1.4em; 
+        font-size: 1.7em; 
     }
 }

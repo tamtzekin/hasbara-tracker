@@ -57,8 +57,7 @@ body {
     background-color: #cbcbcb;
     font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 1em;
-    letter-spacing: 0.8px;
-    line-height: 25px;
+    line-height: 23px;
     margin: 15% 26% 5% 29%;
     text-align: left;
 }
@@ -214,7 +213,7 @@ button.dotted {
     }
 
     body {
-        font-size: 1.1em;
+        font-size: 0.95em;
     }
     
     .header-container {
@@ -223,7 +222,6 @@ button.dotted {
 
     .content-container {
         margin: 15% 4% 0 -17%;
-        line-height: 28px;
     }
 
     .filters {

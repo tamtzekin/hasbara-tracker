@@ -275,13 +275,12 @@ export default function Tracker() {
                         </div>
                     </div>
                         
-        ))}                        
-        </div>
+                    ))}                        
+                </div>
                 </>
-                )}
+        )}
         
         <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
-
         </>
     );
 }

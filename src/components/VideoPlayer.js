@@ -42,24 +42,25 @@ const VideoPlayer = ({ videoLink, children }) => {
           style={{
             content: {
             //   top: 'auto',
-            top: '10%',
-              left: '30%',
-              right: '25%',
+            top: '30%',
+            left: '32%',
+            right: '25%',
             //   bottom: '-1.6%',
               transform: 'none',
               border: 'none',
               background: 'none',
               padding: 0,
-              width: '80%',
+              width: '100%',
               maxWidth: '600px',
-              maxHeight: '80%',
+              maxHeight: '47%',
               overflow: 'hidden',
               animationFillMode: 'forwards',
               position: 'absolute',
               zIndex: 2,
             },
             overlay: {
-              backgroundColor: 'rgba(0, 0, 0, 0.6)',
+              // backgroundColor: 'rgba(0, 0, 0, 0.6)',
+              backgroundColor: 'rgba(0, 0, 0, 0)',
               animationFillMode: 'forwards',
               zIndex: 1,
             },
@@ -77,7 +78,7 @@ const VideoPlayer = ({ videoLink, children }) => {
             onEnded={closeModal}
           >
             <source src={videoLink} type="video/mp4" />
-            Your browser does not support video previews.
+            Your browser does not support video previews. Try Safari, Chrome or Firefox instead.
           </video>
         </Modal>
       </>

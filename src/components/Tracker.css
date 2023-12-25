@@ -294,12 +294,12 @@ tr {
 
 thead {
     width: 100%;
-    /* background:#cbcbcb; */
-    text-align: center;
+    text-align: left;
 }
 
 th {
     padding-bottom: 15px;
+    padding-left: 20px;
 }
 
 table.a {

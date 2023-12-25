@@ -1,6 +1,6 @@
 import logo from '../logo.svg';
 
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 
@@ -15,9 +15,21 @@ import SearchBar from './SearchBar';
 
 
 export default function Tracker() {
-    const trackerData = useMemo(() => data, [],
-            []
-    )
+    const trackerData = useMemo(() => data, []);
+
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobileView(window.innerWidth <= 768);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
 
     const columns = useMemo(
@@ -126,7 +138,7 @@ export default function Tracker() {
 
 
     // Check if the window width is less than or equal to 768 for mobile view
-    const isMobileView = window.innerWidth <= 768;
+    // const isMobileView = window.innerWidth <= 768;
 
     // Render data items for mobile view
     const renderMobileData = () => (
@@ -274,10 +286,10 @@ export default function Tracker() {
                             </a>
                         </div>
                     </div>
-                        
-                    ))}                        
+                    ))}     
                 </div>
                 </>
+                
         )}
         
         <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>

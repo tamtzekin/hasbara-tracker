@@ -162,23 +162,27 @@ export default function Tracker() {
         expandButton: item.description.summaryClass 
     }));
     
+    console.log('Search word entered:' + globalFilter);
+
     return (
         <>
         <span class="header-container">
             <MobileMenu />
             <h1 class="ht-heading"><Link to='/'>Hasbara Tracker</Link></h1>
-            <span id="dots">. . . . . . . . . . . . .</span>
+            <span id="dots">. . . . . . . . . . . . . .</span>
             <NavBar />
         </span>
-        
-        <div class="search-bar-container">
-            <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
-        </div>
 
 
         {/* DESKTOP VIEW */}
 
         {!isMobileView && (
+        <>
+        <div class="search-bar-container">
+        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+    </div>
+
+
         <div class="tracker-container">
             {rows.length === 0 ? (
                 <>
@@ -255,32 +259,39 @@ export default function Tracker() {
             </table>
             )}
             </div>
+
+            </>
             )}
+
 
 
         {/* MOBILE VIEW*/}
         {/* {isMobileView && renderMobileData()} */}
         {isMobileView && (
                 <>
+                <div class="search-bar-container">
+                    <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+                </div>
+
                 <div className="mobile-claims-display">
                     {mappedData.map((mappedItem) => (
                         <div key={mappedItem.id}>
 
                         <div class="claim-mobile-summary">
                             <span className={`mapped-item ${mappedItem.claimClass}`}>{mappedItem.claimText}</span> 
-                            <span className='date'>{mappedItem.date}</span>
                             <span className='claim-type-label'>{mappedItem.claimTag}</span>
+                            <span className='date'>{mappedItem.date}</span>
                         </div>
 
                         <div class="claim-mobile-details">
-                            <div class="claim-mobile-details-heading">Details:</div><br />
+                            <span class="claim-mobile-details-heading">Details:</span><br />
                             <details><summary>{mappedItem.summary}<span className={`${mappedItem.expandButton}`}></span></summary>
                             <div dangerouslySetInnerHTML={{ __html: mappedItem.details }} />
                             </details>
                         </div>
 
                         <div class="claim-mobile-source">
-                            Source:<br /><br />
+                            <span class="claim-mobile-source-heading">Source:</span><br /><br />
                             <a href={mappedItem.sourceLink} target="_blank" rel="noreferrer">
                                 {mappedItem.sourceName}
                             </a>

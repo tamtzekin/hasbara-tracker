@@ -114,6 +114,42 @@ export default function Tracker() {
         );
         const { globalFilter } = state
 
+        // use for mobile view printing data simply
+        const renderDataItem = (item) => (
+            <div key={item.id} className="data-item">
+                {/* <h2>{item.claimTag}</h2> */}
+                {/* <p>Date: {item.date}</p> */}
+                {/* <p>What: {item.claim.claimText}</p> */}
+                {/* ... (render other fields as needed) */}
+            </div>
+        );
+
+
+    // Check if the window width is less than or equal to 768 for mobile view
+    const isMobileView = window.innerWidth <= 768;
+
+    // Render data items for mobile view
+    const renderMobileData = () => (
+        <div className={`mobile-claims-display`}>
+            {trackerData.map((item) => renderDataItem(item))}
+        </div>
+    );
+
+    // Render data items for mobile view
+    const mappedData = trackerData.map((item) => ({
+        id: item.id,
+        claimTag: item.claimTag,
+        date: item.date,
+        claimText: item.claim.claimText,
+        claimClass: item.claim.claimClass,
+        summary: item.description.summary,
+        details: item.description.details,
+        sourceName: item.sourceText,
+        sourceLink: item.sourceLink,
+        videoLink: item.videoLink,
+        expandButton: item.description.summaryClass 
+    }));
+    
     return (
         <>
         <span class="header-container">
@@ -123,11 +159,14 @@ export default function Tracker() {
             <NavBar />
         </span>
         
-        {/* <div class="content-container"></div> */}
         <div class="search-bar-container">
             <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
         </div>
 
+
+        {/* DESKTOP VIEW */}
+
+        {!isMobileView && (
         <div class="tracker-container">
             {rows.length === 0 ? (
                 <>
@@ -203,9 +242,46 @@ export default function Tracker() {
             </tbody>
             </table>
             )}
-        <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
-        
+            </div>
+            )}
+
+
+        {/* MOBILE VIEW*/}
+        {/* {isMobileView && renderMobileData()} */}
+        {isMobileView && (
+                <>
+                <div className="mobile-claims-display">
+                    {mappedData.map((mappedItem) => (
+                        <div key={mappedItem.id}>
+
+                        <div class="claim-mobile-summary">
+                            <span className={`mapped-item ${mappedItem.claimClass}`}>{mappedItem.claimText}</span> 
+                            <span className='date'>{mappedItem.date}</span>
+                            <span className='claim-type-label'>{mappedItem.claimTag}</span>
+                        </div>
+
+                        <div class="claim-mobile-details">
+                            <div class="claim-mobile-details-heading">Details:</div><br />
+                            <details><summary>{mappedItem.summary}<span className={`${mappedItem.expandButton}`}></span></summary>
+                            <div dangerouslySetInnerHTML={{ __html: mappedItem.details }} />
+                            </details>
+                        </div>
+
+                        <div class="claim-mobile-source">
+                            Source:<br /><br />
+                            <a href={mappedItem.sourceLink} target="_blank" rel="noreferrer">
+                                {mappedItem.sourceName}
+                            </a>
+                        </div>
+                    </div>
+                        
+        ))}                        
         </div>
+                </>
+                )}
+        
+        <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
+
         </>
     );
 }

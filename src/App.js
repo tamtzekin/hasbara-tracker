@@ -18,8 +18,8 @@ const App = () => {
                 <VideoPlayer />
                 <ScrollToTop />
                 <Routes>
-                    <Route path="/" element={<Homepage />} />
-                    <Route path="/homepage" element={<Homepage />} />
+                    <Route path="/" element={<Tracker />} />
+                    <Route path="/about" element={<Homepage />} />
                     <Route path="/claims" element={<ClaimsDirectory />} />
                     <Route path="/volunteer" element={<VolunteerForm />} />
                     <Route path="/tracker" element={<Tracker />} />

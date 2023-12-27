@@ -7,11 +7,11 @@ const NavBar= () =>{
     
   <div class="navbar">
     <li>
-      <Link to="/homepage">Home</Link>
+      <Link to="/tracker">Tracker</Link>
     </li>
 
     <li>
-      <Link to="/tracker">Tracker</Link>
+      <Link to="/about">About</Link>
     </li>
 
     <li>

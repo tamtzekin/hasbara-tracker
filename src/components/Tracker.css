@@ -341,7 +341,7 @@ ul {
     }
 
     /* claim tag  */
-    .custom-cell-0 {
+    .custom-cell-3 {
         margin: 0 0 0 0;
         padding-left: 7px;
         padding-right: 7px;
@@ -368,10 +368,15 @@ ul {
         border: 0.5px solid black;
         border-radius: 3px;
         margin-left: 1.5%;
-    }
+        width: 7%;
+        right: 1%;
+        position: absolute;
+        left: 20%;
+      }
 
-    .claim-type-label {
-        font-size: 1em;
+    /* claim-type-label */
+    .claim {
+        font-size: 0.9em;
         border: 0.5px solid black;
         padding: 3.5px;
         margin-bottom: 20px;
@@ -379,6 +384,12 @@ ul {
         vertical-align: 0;
         border-radius: 3px;
         background: #dcdcdc;
+        width: 25%;
+        font-style: normal;
+        height: 40px;
+        padding-bottom: 5px;
+        vertical-align: center;
+        top: 20%;
     }
 
     .debunk-tag {

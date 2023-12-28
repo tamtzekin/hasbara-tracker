@@ -325,7 +325,23 @@ export default function Tracker() {
                 {rows.map((row) => {
                     prepareRow(row);
 
-                    return (
+
+return (
+    <div key={row.id} className="plain-text-row">
+      {row.cells.map((cell, index) => (
+        <div
+          key={cell.column.id}
+          className={`plain-text-cell ${cell.column.Header.toLowerCase()}`}
+        >
+          {cell.render('Cell')}
+        </div>
+      ))}
+    </div>
+  );
+
+
+
+                        return (
                         <tr 
                             {...row.getRowProps()}>
                             {row.cells.map((cell, index) => (
@@ -333,17 +349,19 @@ export default function Tracker() {
                                     {...cell.getCellProps()}
                                         className={`custom-cell-${index}`} // gives each cell its own class, for styling
                                         style={{
-                                            padding: '20px',
-                                            borderBottom: 'solid 1px gray',
-                                            overflow: 'hidden',
+                                            // padding: '20px',
+                                            padding: 'inherit',
+                                            // borderBottom: 'solid 1px gray',
+                                            // overflow: 'hidden',
+                                            width: 'inherit',
                                             
                                             // Fix the size of each column
-                                            width:
-                                                index === 0 ? '30px' :
-                                                index === 1 ? '80px' :
-                                                index === 2 ? '20px' :
-                                                index === 3 ? '600px' :
-                                                '130px',
+                                            // width:
+                                                // index === 0 ? '30px' :
+                                                // index === 1 ? '80px' :
+                                                // index === 2 ? '20px' :
+                                                // index === 3 ? '600px' :
+                                                // '130px',
                                         }}
                                 >
                                     {cell.render('Cell')}
@@ -351,6 +369,7 @@ export default function Tracker() {
                             ))}
                         </tr>
                     );
+
                 })}
             </tbody>
             </table>

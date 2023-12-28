@@ -340,7 +340,8 @@ ul {
         padding: 8px;
     }
 
-    .claim-tag {
+    /* claim tag  */
+    .custom-tag-0 {
         margin: 0 0 0 0;
         padding-left: 7px;
         padding-right: 7px;
@@ -348,6 +349,9 @@ ul {
         text-align: center;
         font-size: 1em;
         vertical-align: 0;
+        border: solid 0.5px;
+        border-radius: 3px;
+        background: #9dff20;
     }
 
     .context-tag {

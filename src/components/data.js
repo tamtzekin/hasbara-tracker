@@ -402,7 +402,7 @@ const data = [
         description: {
             summary: 'Kibbutzes on massacred and occupied Palestinian land',
             summaryClass: 'expand-text',
-            details: 'Kfar Aza is a kibbutz on occupied Palestinian land in what is considered ‘southern Israel’ between the Israeli settlement cities Netivot and Sderot, and close to Israeli settlement city Ashdod.<br /><br />The settler city of Sderot and Or ha-Ner are on the ethnically cleansed Palestinian village of Najd, attacked on 15 May 1948 by the Zionist militias of the Negev Brigade during Operation Barak. Near Najd was the Palestinian village of Simsim also attacked by the Negev Brigade during Operation Barak. Nearby Dimra was ethnically cleansed in 1948 Operation Yo’av, by the Giva’ti Brigade and Egyptian military. The Palestinian city Isdud (Israeli settlement city Ashdod) was part of Gaza and ethnically cleansed by Zionist militias, the Yishuv forces, on 28 October 1948.<br /><br />Prior to the Nakba and the creation of the Netivot colony, the Palestinian village was named Arab Suqrir and was ethnically cleansed in the Nakba of 1948.',
+            details: 'The kibbutzes Kfar Aza and Be’eri are on ethnically cleansed Palestinian land, where many Palestinians currently living in post-Nakba Gaza were displaced from in 1948.The Kfar Aza kibbutz is on land that was originally part of Gaza before the Nakba, the ethnic cleansing of Palestine in 1948 or afterwards by Zionist militias to establish the Israeli settler-colony state.<br /><br />The Palestinian villages and towns ethnically cleansed in 1948 to make way for the Jewish Israeli settlements include:<br /><br />Gaza, pre-1948:<br /><br />Al-Muharraqa: Ethnically cleansed by the Palmach’s Negev Brigade on 27–28 May 1948<br/>Huj:  Ethnically cleansed by Yishuv forces, 31 May 1948<br />Najd: Ethnically cleansed by Yishuv forces, 12 May 1948<br />Simsim: Ethnically cleansed by Yishuv forces, 12 May 1948<br />Dimra: Ethnically cleansed possibly by the Giva’ti Brigade in Operation Yo’av, 28 October 1948<br />Dayr Sunayd: Ethnically cleansed in by Yishuv forces, late October or early November 1948<br />Wuhaidat Tarabin: Ethnically cleansed by the Golani Brigade during Operation Assaf, 5 December 1952<br /><br />Bir-a-Saba (Bersheeba), pre-1948:<br /><br />Abu Muailiq/Hasanat: Ethnically cleansed, 5 July 1948<br />Gatatweh: Ethnically cleansed, details unknown, 1948<br />Atawneh/Ntoush: Ethnically cleansed, details unknown, 1948<br />Franji: Ethnically cleansed, details unknown, 1948',
         },
         sourceText: '→ Palestine Remembered',
         sourceLink: 'https://archive.ph/xCyzu',
@@ -422,7 +422,7 @@ const data = [
             details: 'A pro-Israel British physician published an opinion article in Newsweek which repeated the debunked claim of beheaded babies in the headline. The body of the article does not address the claim in the headline, and repeats unsubstantiated and dubious Israeli official claims.',
         },
         sourceText: '→ Newsweek',
-        sourceLink: 'https://www.newsweek.com/i-saw-children-hamas-beheaded-my-own-eyes-shame-queen-rania-opinion-1855472',
+        sourceLink: 'https://archive.ph/vzLEo',
         videoLink: '',
     },    
     

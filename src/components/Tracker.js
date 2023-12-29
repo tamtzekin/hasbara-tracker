@@ -68,6 +68,7 @@ export default function Tracker() {
                 Header: 'Details',
                 accessor: (row) => `${row.description.summary} ${row.description.details}`,
                 Cell: ({ row }) => (
+                    <>                    <div class="details-heading"></div>
                     <div style={{maxWidth:700}}>
                         <details>
                             <summary>{row.original.description.summary}
@@ -75,6 +76,8 @@ export default function Tracker() {
                             <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
                         </details>
                     </div>
+                    </>
+
                 ),
             },
 
@@ -86,7 +89,10 @@ export default function Tracker() {
                     const videoHasPreviewLink = videoLink && videoLink.trim() !== '';
                 
                     return (
+                    <>
+                    <div class="source-heading"></div>
                     <VideoPlayer videoLink={videoLink}>
+                        <div class="source">
                         <a href={row.original.sourceLink} target="_blank" rel="noreferrer">
 
                         {videoHasPreviewLink}
@@ -94,7 +100,9 @@ export default function Tracker() {
 
                         {row.original.sourceText}
                         </a>
+                        </div>
                     </VideoPlayer>
+                    </>
                     );
                 },
                 },

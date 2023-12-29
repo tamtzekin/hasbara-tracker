@@ -343,7 +343,7 @@ ul {
     }
     
     .claim-tag {
-        padding: 0.8% 4% 0.8% 4%;
+        padding: 0.9% 4% 0.9% 4%;
     }
 
     /* claim tag  */
@@ -361,7 +361,7 @@ ul {
     }
 
     .context-tag {
-        padding: 0.8% 2% 0.8% 2%;
+        padding: 0.9% 2% 0.9% 2%;
     }
 
     .date {
@@ -406,7 +406,7 @@ ul {
 
     .debunk-tag {
         font-size: 1em;
-        padding: 0.8% 2% 0.8% 2%;
+        padding: 0.9% 2% 0.9% 2%;
         width: 20%;
         text-align: center;
     }

@@ -5,7 +5,6 @@ import './App.css';
 
 import Homepage from './components/Homepage';
 // import NavBar from './components/NavBar';
-import ClaimsDirectory from './components/ClaimsDirectory';
 import VolunteerForm from './components/VolunteerForm';
 import Tracker from './components/Tracker';
 import VideoPlayer from './components/VideoPlayer';

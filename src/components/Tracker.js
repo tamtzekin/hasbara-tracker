@@ -13,7 +13,7 @@ import SearchBar from './SearchBar';
 
 
 export default function Tracker() {
-    const trackerData = useMemo(() => data, []);
+    // const trackerData = useMemo(() => data, []);
 
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
   
@@ -143,14 +143,14 @@ export default function Tracker() {
 
         
         // use for mobile view printing data simply
-        const renderDataItem = (item) => (
-            <div key={item.id} className="data-item">
-                {/* <h2>{item.claimTag}</h2> */}
-                {/* <p>Date: {item.date}</p> */}
-                {/* <p>What: {item.claim.claimText}</p> */}
-                {/* ... (render other fields as needed) */}
-            </div>
-        );
+        // const renderDataItem = (item) => (
+        //     <div key={item.id} className="data-item">
+        //         {/* <h2>{item.claimTag}</h2> */}
+        //         {/* <p>Date: {item.date}</p> */}
+        //         {/* <p>What: {item.claim.claimText}</p> */}
+        //         {/* ... (render other fields as needed) */}
+        //     </div>
+        // );
 
 
     // Check if the window width is less than or equal to 768 for mobile view

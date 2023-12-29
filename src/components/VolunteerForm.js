@@ -10,13 +10,13 @@ import './VolunteerForm.css';
 
 
 const VolunteerForm = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    backgroundAndSkills: '',
-    hoursCommitted: '',
-    otherAmountOfHours: '',
-  });   
+  // const [formData, setFormData] = useState({
+  //   fullName: '',
+  //   email: '',
+  //   backgroundAndSkills: '',
+  //   hoursCommitted: '',
+  //   otherAmountOfHours: '',
+  // });   
 
   // const handleChange = (e) => {
   //   const { name, value } = e.target;

@@ -1,5 +1,3 @@
-import logo from '../logo.svg';
-
 import React, { useMemo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
@@ -159,26 +157,26 @@ export default function Tracker() {
     // const isMobileView = window.innerWidth <= 768;
 
     // Render data items for mobile view
-    const renderMobileData = () => (
-        <div className={`mobile-claims-display`}>
-            {trackerData.map((item) => renderDataItem(item))}
-        </div>
-    );
+    // const renderMobileData = () => (
+    //     <div className={`mobile-claims-display`}>
+    //         {trackerData.map((item) => renderDataItem(item))}
+    //     </div>
+    // );
 
     // Render data items for mobile view
-    const mappedData = trackerData.map((item) => ({
-        id: item.id,
-        claimTag: item.claimTag,
-        date: item.date,
-        claimText: item.claim.claimText,
-        claimClass: item.claim.claimClass,
-        summary: item.description.summary,
-        details: item.description.details,
-        sourceName: item.sourceText,
-        sourceLink: item.sourceLink,
-        videoLink: item.videoLink,
-        expandButton: item.description.summaryClass 
-    }));
+    // const mappedData = trackerData.map((item) => ({
+    //     id: item.id,
+    //     claimTag: item.claimTag,
+    //     date: item.date,
+    //     claimText: item.claim.claimText,
+    //     claimClass: item.claim.claimClass,
+    //     summary: item.description.summary,
+    //     details: item.description.details,
+    //     sourceName: item.sourceText,
+    //     sourceLink: item.sourceLink,
+    //     videoLink: item.videoLink,
+    //     expandButton: item.description.summaryClass 
+    // }));
     
     console.log('Search word entered:' + globalFilter);
 

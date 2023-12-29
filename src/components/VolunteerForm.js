@@ -18,28 +18,28 @@ const VolunteerForm = () => {
     otherAmountOfHours: '',
   });   
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle the form submission logic here, e.g., send data to a server
-    console.log('Form submitted:', formData);
-    // You can add further logic, such as sending the data to a server or clearing the form fields
-    setFormData({
-      fullName: '',
-      email: '',
-      backgroundAndSkills: '',
-      hoursCommitted: '',
-      otherAmountOfHours: '',
-      languageSkill: '',
-    });
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Handle the form submission logic here, e.g., send data to a server
+  //   console.log('Form submitted:', formData);
+  //   // You can add further logic, such as sending the data to a server or clearing the form fields
+  //   setFormData({
+  //     fullName: '',
+  //     email: '',
+  //     backgroundAndSkills: '',
+  //     hoursCommitted: '',
+  //     otherAmountOfHours: '',
+  //     languageSkill: '',
+  //   });
+  // };
 
   return (
     <>

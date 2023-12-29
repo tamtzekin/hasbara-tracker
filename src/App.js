@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Homepage from './components/Homepage';
-// import NavBar from './components/NavBar';
 import VolunteerForm from './components/VolunteerForm';
 import Tracker from './components/Tracker';
 import VideoPlayer from './components/VideoPlayer';
@@ -19,7 +18,6 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Tracker />} />
                     <Route path="/about" element={<Homepage />} />
-                    <Route path="/claims" element={<ClaimsDirectory />} />
                     <Route path="/volunteer" element={<VolunteerForm />} />
                     <Route path="/tracker" element={<Tracker />} />
                 </Routes>

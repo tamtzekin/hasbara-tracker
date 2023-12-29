@@ -8,17 +8,17 @@ const NavBar= () =>{
     return (
         
     <div class="navbar">
-        {location.pathname !== '/tracker' && (
-            <li>
-                <NavLink to="/tracker">Tracker</NavLink>
-            </li>
-        )}  
-
         {location.pathname !== '/about' && (
             <li>
                 <NavLink to="/about">About</NavLink>
             </li>
         )}
+
+        {location.pathname !== '/tracker' && location.pathname !== '/' && (
+            <li>
+                <NavLink to="/tracker">Tracker</NavLink>
+            </li>
+        )}  
 
         {location.pathname !== '/volunteer' && (
         <li>

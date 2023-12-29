@@ -125,16 +125,10 @@ details[open] {
     cursor: default;
 }
 
-details[open] .expand-text {
-    /* display: none; */
-    /* transform: rotate(180deg); */
-}
-
 details > summary {
     list-style: none;
     padding-bottom: 4%;
     font-family: 'Helvetica', Helvetica, sans-serif;
-    text-decoration: underline 0.7px;
 }
     
 details > summary::-webkit-details-marker {
@@ -294,6 +288,10 @@ table.a:hover {
 .tracker-container {
    margin-top: 5%;
    width: 100%;
+}
+
+u {
+    text-decoration: underline 0.7px;
 }
 
 ul {

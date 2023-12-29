@@ -32,7 +32,7 @@ const data = [
         },
         sourceText: 'CNN',    
         sourceLink: 'https://archive.ph/XRmh4',
-        videoLink: '/files/CNN_NicRobertson_10Oct.mp4',
+        videoLink: '/files/IG_NicRobertson_10Oct.mp4',
     },
 
 

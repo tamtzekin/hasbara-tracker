@@ -43,7 +43,7 @@ const VideoPlayer = ({ videoLink, children }) => {
             content: {
             //   top: 'auto',
             top: '30%',
-            left: '32%',
+            left: '30%',
             right: '25%',
             //   bottom: '-1.6%',
               transform: 'none',
@@ -59,7 +59,7 @@ const VideoPlayer = ({ videoLink, children }) => {
               zIndex: 2,
             },
             overlay: {
-              backgroundColor: videoLink ? 'rgba(0, 0, 0, 0.4)' : 'rgba(0, 0, 0, 0)',
+              backgroundColor: videoLink ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0)',
               animationFillMode: 'forwards',
               zIndex: 1,
             },

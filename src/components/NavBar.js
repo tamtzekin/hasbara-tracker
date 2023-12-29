@@ -1,23 +1,33 @@
 import React from 'react';
-import {  Link } from "react-router-dom";
+import {  NavLink, useLocation } from "react-router-dom";
 import '../App.css';
 
 const NavBar= () =>{
-  return (
-    
-  <div class="navbar">
-    <li>
-      <Link to="/tracker">Tracker</Link>
-    </li>
+    const location = useLocation();
 
-    <li>
-      <Link to="/about">About</Link>
-    </li>
+    return (
+        
+    <div class="navbar">
+        {location.pathname !== '/tracker' && (
+            <li>
+                <NavLink to="/tracker">Tracker</NavLink>
+            </li>
+        )}  
 
-    <li>
-        <Link to="/volunteer">Volunteer</Link>
-    </li>
-  </div>
-  );
+        {location.pathname !== '/about' && (
+            <li>
+                <NavLink to="/about">About</NavLink>
+            </li>
+        )}
+
+        {location.pathname !== '/volunteer' && (
+        <li>
+            <NavLink to="/volunteer">Volunteer</NavLink>
+        </li>
+        )}
+
+    </div>
+    );
 }
-export default NavBar;
+
+    export default NavBar;

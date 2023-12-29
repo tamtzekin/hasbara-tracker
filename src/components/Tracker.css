@@ -5,14 +5,6 @@ a {
     z-index: 3;
 }
 
-a:hover {
-    /* text-decoration: dashed underline; */
-}
-
-/* a:hover .play-arrow {
-    color: #9dff20;
-} */
-
 /* Icon that shows link opens in external window */
 a[target="_blank"]:hover::after {
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
@@ -124,18 +116,6 @@ button {
     background: #9dff20;
 }
 
-/* .claim-subheading {
-    font-size: 1.1em;
-    font-family: 'HelveticaNeue_Medium', Helvetica, sans-serif;
-    vertical-align: middle;
-    padding-bottom: 1%;
-}
-
-.claim-subheading::after {
-    content: '\a\a';
-    white-space: pre;
-} */
-
 details { 
     display: inline;
     cursor: crosshair;
@@ -194,10 +174,20 @@ h1.claim-heading {
 .icon-link {
     content: '';
     display: inline-block;
-    width: 13px; /* Adjust the width and height according to your SVG size */
+    width: 13px;
     height: 13px;
     background: url('/public/img/circle-grey.png') no-repeat center center;
-    background-size: contain; /* or cover, depending on your needs */
+    background-size: contain;
+    margin-right: 3%;
+}
+
+.icon-playarrow::after {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url('/public/img/play-triangle.svg') no-repeat center center;
+    background-size: contain;
     margin-right: 3%;
 }
 
@@ -230,17 +220,6 @@ li {
     margin-left: 25%;
     margin-right: auto;
 }
-
-.play-icon::after {
-    content: '';
-    display: inline-block;
-    width: 13px; /* Adjust the width and height according to your SVG size */
-    height: 13px;
-    background: url('/public/img/play-triangle.svg') no-repeat center center;
-    background-size: contain; /* or cover, depending on your needs */
-    margin-right: 3%;
-}
-
 
 .search-bar-container {
     padding-top: 5%;
@@ -347,7 +326,7 @@ ul {
         letter-spacing: 0;
         border: 0.5px solid black;
         padding: 0% 1% 0% 1%;
-        margin-left: 19%;
+        margin-left: 17.5%;
         vertical-align: 0;
         border-radius: 3px;
         background: #dcdcdc;
@@ -359,7 +338,7 @@ ul {
     }
     
     .claim-tag {
-        padding: 0.8% 4% 0.8% 4%;
+        padding: 0.7% 4% 0.7% 4%;
     }
 
     /* claim tag  */
@@ -377,29 +356,32 @@ ul {
     }
 
     .context-tag {
-        padding: 0.8% 2% 0.8% 2%;
+        padding: 0.6% 2% 0.6% 2%;
     }
 
     .date {
         font-size: 1em;
-        vertical-align: 0;
         background: #dcdcdc;
         border: 0.5px solid black;
         border-radius: 3px;
-        width: 24%;
         position: absolute;
-        right: 5%;
+        text-align: center;
+        left: 69.5%;
+        padding-left: 1%;
+        padding-right: 1%;
+        width: 23%;
       }
 
       
     .details-heading {
         background: #dcdcdc;
         border: 0.5px solid black;
-        padding: 0% 1.8% 0% 1.8%;
+        padding: 0% 1.2% 0% 1.2%;
         border-radius: 3px;
         width: 15%;
         margin-top: 7%;
         margin-bottom: 2%;
+        text-align: center;
     }
 
     .details-heading::after {
@@ -412,7 +394,7 @@ ul {
     }
 
     .data-row {
-        margin-top: 1%;
+        margin-top: 3%;
         margin-bottom: 10%;
         border-bottom: 0.07em dashed black;
     }
@@ -423,14 +405,13 @@ ul {
 
     .debunk-tag {
         font-size: 1em;
-        padding: 0.8% 2% 0.8% 2%;
+        padding: 0.7% 2% 0.7% 2%;
         width: 20%;
         text-align: center;
     }
 
     details[open] {
         cursor: default;
-        /* line-height: 28px; */
     }
 
     details {
@@ -470,7 +451,8 @@ ul {
 
     .search-bar-container {
         margin-top: 16%;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
+        background: transparent;
     }
 
     .source {
@@ -479,12 +461,13 @@ ul {
 
     .source-heading {
         background: #dcdcdc;
-        padding: 0 1.2% 0 1.2%;
+        padding: 0 0.6% 0 0.6%;
         border: 0.5px solid black;
         border-radius: 3px;
         width: 16%;
         margin-top: 5%;
         margin-bottom: 5%;
+        text-align: center;
     }
 
     .source-heading::after {

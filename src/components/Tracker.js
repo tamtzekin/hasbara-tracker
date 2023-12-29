@@ -48,7 +48,7 @@ export default function Tracker() {
                     return dateA.getTime() - dateB.getTime();
                 },
                 Cell: ({ cell }) => (
-                    <div style={{ textAlign: 'center' }}>
+                    <div>
                         {cell.value}
                     </div>
                 ),
@@ -98,7 +98,7 @@ export default function Tracker() {
                         {videoHasPreviewLink ? (
                             <>
                             {videoHasPreviewLink}
-                            <span className='play-icon'></span>
+                            <span className='icon-playarrow'></span>
                             </>
                         ) :
                             <>

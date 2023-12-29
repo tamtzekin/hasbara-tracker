@@ -340,6 +340,10 @@ ul {
         padding: 8px;
     }
 
+    .claim-tag {
+        padding: 0.7% 4% 0.7% 4%;
+    }
+
     /* claim tag  */
     .custom-cell-3 {
         margin: 0 0 0 0;
@@ -355,48 +359,48 @@ ul {
     }
 
     .context-tag {
-        /* margin: 0 0 0 5%; */
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0.7% 2% 0.7% 2%;
     }
 
     .date {
         font-size: 1em;
-        padding: 3.5px;
         vertical-align: 0;
         background: #dcdcdc;
         border: 0.5px solid black;
         border-radius: 3px;
-        margin-left: 1.5%;
-        width: 7%;
-        right: 1%;
+        width: 24%;
         position: absolute;
-        left: 20%;
+        right: 5%;
       }
 
-    /* claim-type-label */
     .claim {
-        font-size: 0.9em;
+        font-size: 1em;
+        letter-spacing: 0;
         border: 0.5px solid black;
-        padding: 3.5px;
-        margin-bottom: 20px;
-        margin-left: 1.5%;
+        padding: 0.2% 1% 0.2% 1%;
+        margin-left: 19%;
         vertical-align: 0;
         border-radius: 3px;
         background: #dcdcdc;
-        width: 25%;
+        width: 43%;
         font-style: normal;
-        height: 40px;
-        padding-bottom: 5px;
         vertical-align: center;
-        top: 20%;
+        text-align: center;
+        position: absolute;
+    }
+
+    .data-cell.what {
+        margin-bottom: 5%;
+    }
+
+    .data-row {
+        margin-bottom: 10%;
     }
 
     .debunk-tag {
         font-size: 1em;
         padding-left: 7px;
         padding-right: 7px;
-        margin: 0 0 0 0;
         width: 20%;
         text-align: center;
     }

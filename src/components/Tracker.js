@@ -292,46 +292,20 @@ export default function Tracker() {
                 </ul>
             </div>
             </>
+
             ) : (
 
-            <table {...getTableProps()}>
-            <thead>
-                {/* Map the headers out */}
-                {headerGroups.map((headerGroup) => (
-                    <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map((column) => (
-
-                // Add sorting function to the Date column
-                    <th
-                        {...column.getHeaderProps(
-                            column.id === 'date' ? column.getSortByToggleProps() : {}
-                        )}
-
-                        style={{
-                            color: 'black',
-                            cursor: column.id === 'date' ? 'ns-resize' : 'auto',
-                        }}
-                    >
-                        {column.render('Header')}
-                        {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
-                    </th>
-                ))}
-                </tr>
-            ))}
-            </thead>
-                
-            {/* Fetch + fill out all the body cell props */}
-            <tbody {...getTableBodyProps()}>
+            <div {...getTableBodyProps()}>
                 {rows.map((row) => {
                     prepareRow(row);
 
 
 return (
-    <div key={row.id} className="plain-text-row">
+    <div key={row.id} className="data-row" style={{display: 'block', alignItems: 'center'}}>
       {row.cells.map((cell, index) => (
         <div
           key={cell.column.id}
-          className={`plain-text-cell ${cell.column.Header.toLowerCase()}`}
+          className={`data-cell ${cell.column.Header.toLowerCase()}`}
         >
           {cell.render('Cell')}
         </div>
@@ -340,39 +314,8 @@ return (
   );
 
 
-
-                        return (
-                        <tr 
-                            {...row.getRowProps()}>
-                            {row.cells.map((cell, index) => (
-                                <td
-                                    {...cell.getCellProps()}
-                                        className={`custom-cell-${index}`} // gives each cell its own class, for styling
-                                        style={{
-                                            // padding: '20px',
-                                            padding: 'inherit',
-                                            // borderBottom: 'solid 1px gray',
-                                            // overflow: 'hidden',
-                                            width: 'inherit',
-                                            
-                                            // Fix the size of each column
-                                            // width:
-                                                // index === 0 ? '30px' :
-                                                // index === 1 ? '80px' :
-                                                // index === 2 ? '20px' :
-                                                // index === 3 ? '600px' :
-                                                // '130px',
-                                        }}
-                                >
-                                    {cell.render('Cell')}
-                                </td>
-                            ))}
-                        </tr>
-                    );
-
                 })}
-            </tbody>
-            </table>
+            </div>
             )}
             </div>
 

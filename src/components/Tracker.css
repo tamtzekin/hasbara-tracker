@@ -191,6 +191,16 @@ h1.claim-heading {
     margin-left: 25%;
 }
 
+.icon-link {
+    content: '';
+    display: inline-block;
+    width: 13px; /* Adjust the width and height according to your SVG size */
+    height: 13px;
+    background: url('/public/img/circle-grey.png') no-repeat center center;
+    background-size: contain; /* or cover, depending on your needs */
+    margin-right: 3%;
+}
+
 li {
     margin-left: 5.5%;
     margin-bottom: 2.5%;
@@ -221,10 +231,16 @@ li {
     margin-right: auto;
 }
 
-.play-arrow::after {
-    content: '▷\00a0';
-    font-variant-emoji: unicode;
+.play-icon::after {
+    content: '';
+    display: inline-block;
+    width: 13px; /* Adjust the width and height according to your SVG size */
+    height: 13px;
+    background: url('/public/img/play-triangle.svg') no-repeat center center;
+    background-size: contain; /* or cover, depending on your needs */
+    margin-right: 3%;
 }
+
 
 .search-bar-container {
     padding-top: 5%;

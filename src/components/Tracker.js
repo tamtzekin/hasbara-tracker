@@ -95,8 +95,17 @@ export default function Tracker() {
                         <div class="source">
                         <a href={row.original.sourceLink} target="_blank" rel="noreferrer">
 
-                        {videoHasPreviewLink}
-                            {/* <span className='play-arrow'></span> */}
+                        {videoHasPreviewLink ? (
+                            <>
+                            {videoHasPreviewLink}
+                            <span className='play-icon'></span>
+                            </>
+                        ) :
+                            <>
+                            <span className='icon-link'></span>
+                            </>
+                        
+                        }
 
                         {row.original.sourceText}
                         </a>

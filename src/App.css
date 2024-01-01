@@ -165,18 +165,17 @@ button.dotted {
     padding: 10px;
     transition: 0.3s;
   }
+
+
+
+
+
+
   
-  
-
-
-
-
-
-
 /* Mobile devices (portrait and landscape) */
 @media only screen and (max-width: 768px) {
     .arrow-menu {
-        font-size: 2.5em;
+        font-size: 3em;
         margin-bottom: 15px;
     }
 

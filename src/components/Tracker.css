@@ -175,7 +175,8 @@ h1.claim-heading {
     margin-right: 3%;
 }
 
-.icon-playarrow::after {
+/* :: after */
+.icon-playarrow {
     content: '';
     display: inline-block;
     width: 13px;
@@ -323,7 +324,7 @@ ul {
         font-size: 1em;
         letter-spacing: 0;
         border: 0.5px solid black;
-        padding: 0% 1% 0% 1%;
+        /* padding: 0% 0% 0% 0%; */
         margin-left: 17.5%;
         vertical-align: 0;
         border-radius: 3px;
@@ -336,7 +337,7 @@ ul {
     }
     
     .claim-tag {
-        padding: 0.6% 4% 0.7% 4%;
+        padding: 0.7% 4% 0.7% 4%;
     }
 
     /* claim tag  */
@@ -439,7 +440,7 @@ ul {
 
     .search-bar {
         width: 90%;
-        margin-left: 1%;
+        margin-left: 2%;
     }
 
     .search-bar input {
@@ -506,9 +507,8 @@ ul {
     }
 
     .tracker-container {
-        /* margin-top: 10%; */
         width: 100%;
-        margin-left: 1%;
+        margin-left: 3%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 
     }
@@ -539,8 +539,8 @@ ul {
         overflow: hidden;
     }
 
-    .modal-mobile {
+    /* .modal-mobile {
         inset: auto auto 0 auto;
         width: 100% !important;
         z-index: 2;
-    }
+    } */

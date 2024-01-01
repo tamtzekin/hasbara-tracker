@@ -48,15 +48,18 @@ const MobileMenu = () => {
       >
         <div className="menu-links">
             <div class="arrow-menu"><Link onClick={closeModal}>←</Link></div>
-          <Link to="/" onClick={closeModal}>
-            Tracker
-          </Link>
-          <Link to="/about" onClick={closeModal}>
-            About
-          </Link>
-          <Link to="/volunteer" onClick={closeModal}>
-            Volunteer
-          </Link>
+            
+            <Link to="/" onClick={closeModal}>
+                Tracker
+            </Link>
+            
+            <Link to="/about" onClick={closeModal}>
+                About
+            </Link>
+
+            <Link to="/volunteer" onClick={closeModal}>
+                Volunteer
+            </Link>
         </div>
       </Modal>
     </>

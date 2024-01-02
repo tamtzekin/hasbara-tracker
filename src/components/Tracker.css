@@ -324,8 +324,7 @@ ul {
         font-size: 1em;
         letter-spacing: 0;
         border: 0.5px solid black;
-        /* padding: 0% 0% 0% 0%; */
-        margin-left: 17.5%;
+        margin-left: 16.3%;
         vertical-align: 0;
         border-radius: 3px;
         background: #dcdcdc;
@@ -337,11 +336,11 @@ ul {
     }
     
     .claim-tag {
-        padding: 0.7% 4% 0.7% 4%;
+        padding: 0.6% 3% 0.6% 3%;
     }
 
     /* claim tag  */
-    .custom-cell-3 {
+    /* .custom-cell-3 {
         margin: 0 0 0 0;
         padding-left: 7px;
         padding-right: 7px;
@@ -352,10 +351,10 @@ ul {
         border: solid 0.5px;
         border-radius: 3px;
         background: #9dff20;
-    }
+    } */
 
     .context-tag {
-        padding: 0.6% 2% 0.7% 2%;
+        padding: 0.7% 1% 0.9% 1%;
     }
 
     .date {
@@ -365,17 +364,18 @@ ul {
         border-radius: 3px;
         position: absolute;
         text-align: center;
-        left: 69.5%;
-        padding-left: 1%;
-        padding-right: 1%;
-        width: 23%;
+        left: 68%;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+        padding-bottom: -0.3%;
+        width: 23.5%;
       }
 
       
     .details-heading {
         background: #dcdcdc;
         border: 0.5px solid black;
-        padding: 0% 1.2% 0% 1.2%;
+        padding: 0% 2% 0% 1.2%;
         border-radius: 3px;
         width: 15%;
         margin-top: 7%;
@@ -404,7 +404,7 @@ ul {
 
     .debunk-tag {
         font-size: 0.95em;
-        padding: 0.8% 2% 0.8% 2%;
+        padding: 0.9% 1.5% 0.9% 1.5%;
         width: 20%;
         text-align: center;
     }
@@ -421,7 +421,7 @@ ul {
     .how-to {
         font-size: 1em;
         margin-top: 7%;
-        margin-left: 2%;
+        margin-left: 1%;
         width: 95%;
     }
 
@@ -434,12 +434,11 @@ ul {
     }
 
     .no-results-text {
-        /* margin-top: 5%; */
-        margin-left: 2%;
+        margin-left: 1%;
     }
 
     .search-bar {
-        width: 90%;
+        width: 87.3%;
         margin-left: 3%;
     }
 
@@ -460,7 +459,7 @@ ul {
 
     .source-heading {
         background: #dcdcdc;
-        padding: 0 0.6% 0 0.6%;
+        padding: 0 0.8% 0 0.8%;
         border: 0.5px solid black;
         border-radius: 3px;
         width: 16%;
@@ -507,7 +506,7 @@ ul {
     }
 
     .tracker-container {
-        width: 100%;
+        width: 95%;
         margin-left: 3%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 

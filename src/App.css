@@ -175,7 +175,7 @@ button.dotted {
 /* Mobile devices (portrait and landscape) */
 @media only screen and (max-width: 768px) {
     .arrow-menu {
-        font-size: 3em;
+        font-size: 2.5em;
         margin-bottom: 15px;
     }
 
@@ -198,7 +198,7 @@ button.dotted {
     .menu-links {
         display: flex;
         flex-direction: column;
-        top: 4.2%;
+        top: 6.2%;
         right: 8.2%;
         text-align: right;
         position: absolute;

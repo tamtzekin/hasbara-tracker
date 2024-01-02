@@ -327,7 +327,7 @@ ul {
         font-size: 1em;
         letter-spacing: 0;
         border: 0.5px solid black;
-        margin-left: 16.2%;
+        margin-left: 16.3%;
         vertical-align: 0;
         border-radius: 3px;
         background: #dcdcdc;
@@ -339,7 +339,7 @@ ul {
     }
     
     .claim-tag {
-        padding: 0.6% 3% 0.6% 3%;
+        padding: 0.5% 3% 0.5% 3%;
     }
 
     /* claim tag  */
@@ -357,7 +357,7 @@ ul {
     } */
 
     .context-tag {
-        padding: 0.7% 1% 0.9% 1%;
+        padding: 0.6% 1% 0.8% 1%;
     }
 
     .date {
@@ -407,7 +407,7 @@ ul {
 
     .debunk-tag {
         font-size: 0.95em;
-        padding: 0.9% 1.5% 0.9% 1.5%;
+        padding: 0.8% 1.5% 0.8% 1.5%;
         width: 20%;
         text-align: center;
     }

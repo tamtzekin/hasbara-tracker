@@ -173,6 +173,7 @@ h1.claim-heading {
     background: url('/public/img/circle-grey.png') no-repeat center center;
     background-size: contain;
     margin-right: 3%;
+    vertical-align: -5%;
 }
 
 /* :: after */
@@ -184,6 +185,7 @@ h1.claim-heading {
     background: url('/public/img/play-triangle.svg') no-repeat center center;
     background-size: contain;
     margin-right: 3%;
+    vertical-align: -4%;
 }
 
 li {

@@ -67,7 +67,7 @@ export default function Tracker() {
                 accessor: (row) => `${row.description.summary} ${row.description.details}`,
                 Cell: ({ row }) => (
                     <>                    <div class="details-heading"></div>
-                    <div style={{maxWidth:700}}>
+                    <div style={{maxWidth:900, textWrap: 'balance'}}>
                         <details>
                             <summary><u>{row.original.description.summary}</u>
                             <span className={row.original.description.summaryClass}></span></summary>

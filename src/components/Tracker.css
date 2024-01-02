@@ -291,6 +291,7 @@ table.a:hover {
 .tracker-container {
    margin-top: 5%;
    width: 100%;
+   text-wrap: justify;
 }
 
 u {

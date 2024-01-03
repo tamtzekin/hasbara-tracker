@@ -19,7 +19,6 @@ const VolunteerForm = () => {
   const [formData, setFormData] = useState(initialFormData);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const history = useNavigate();
 
   // Check session storage on component mount
   useEffect(() => {

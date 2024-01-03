@@ -1,5 +1,4 @@
 import React, { useMemo, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 
 import './Tracker.css';
@@ -13,8 +12,6 @@ import SearchBar from './SearchBar';
 
 
 export default function Tracker() {
-    // const trackerData = useMemo(() => data, []);
-
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
   
     useEffect(() => {
@@ -141,44 +138,7 @@ export default function Tracker() {
         );
         const { globalFilter } = state
 
-        
-        // use for mobile view printing data simply
-        // const renderDataItem = (item) => (
-        //     <div key={item.id} className="data-item">
-        //         {/* <h2>{item.claimTag}</h2> */}
-        //         {/* <p>Date: {item.date}</p> */}
-        //         {/* <p>What: {item.claim.claimText}</p> */}
-        //         {/* ... (render other fields as needed) */}
-        //     </div>
-        // );
-
-
-    // Check if the window width is less than or equal to 768 for mobile view
-    // const isMobileView = window.innerWidth <= 768;
-
-    // Render data items for mobile view
-    // const renderMobileData = () => (
-    //     <div className={`mobile-claims-display`}>
-    //         {trackerData.map((item) => renderDataItem(item))}
-    //     </div>
-    // );
-
-    // Render data items for mobile view
-    // const mappedData = trackerData.map((item) => ({
-    //     id: item.id,
-    //     claimTag: item.claimTag,
-    //     date: item.date,
-    //     claimText: item.claim.claimText,
-    //     claimClass: item.claim.claimClass,
-    //     summary: item.description.summary,
-    //     details: item.description.details,
-    //     sourceName: item.sourceText,
-    //     sourceLink: item.sourceLink,
-    //     videoLink: item.videoLink,
-    //     expandButton: item.description.summaryClass 
-    // }));
-    
-    console.log('Search word entered:' + globalFilter);
+    // console.log('Search word entered:' + globalFilter);
 
     return (
         <>

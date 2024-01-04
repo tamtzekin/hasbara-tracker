@@ -263,7 +263,8 @@ export default function Tracker() {
                 <li>Use the search bar to look up words, phrases or claims (eg. ‘beheaded babies’, ‘hospital’, ‘al-shifa’).</li>
                 <li>You can also search by Claim / Debunk / Context by searching 'claim', 'debunk' or 'context'</li>
                 <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
-                <li>Hover over a ▷ source  to preview video (If you’re on your phone, tap + hold the link to preview). Click anywhere to close</li>
+                <li>On your laptop: Hover over a ▷ source to preview video</li>
+                <li>On your phone: tap + hold the ▷ link to preview. Click anywhere to close</li>
                 <li>Click each Source to open an archived link</li>
                 <li>Click + and ⎯ to show more or less text</li>
                 </ul>

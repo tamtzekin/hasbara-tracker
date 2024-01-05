@@ -175,7 +175,7 @@ const data = [
         description: {
             summary: 'IOF won’t back up decapitated babies claim because it is ‘disrespectful for the dead’',
             summaryClass: 'expand-text',
-            details: 'Israeli occupation force soldier Major Nir Dinar said the IOF refused to share the exact number of babies killed or how many had been beheaded as it is "disrespectful for the dead".',
+            details: 'Israeli occupation force soldier Major Nir Dinar said the IOF refused to share the exact number of babies killed or how many had been beheaded as it is “disrespectful for the dead”.',
         },
         sources: [
             {
@@ -335,28 +335,6 @@ const data = [
             },
         ]
     },
-    
-
-    {
-        claimTag: 'Forty beheaded babies',
-        date: '12 Oct 2023',
-        claim: { 
-            claimText: 'Debunk',
-            claimClass: 'debunk-tag',
-        },
-        description: {
-            summary: 'IDF Spokesperson Maj. Doron Spielman told NBC News: “That specific report and that number I can’t confirm.”',
-            summaryClass: '',
-            details: '',
-        },
-        sources: [
-            {
-                sourceText: 'NBC News',
-                sourceLink: 'https://archive.ph/MxZTk',
-                videoLink: '',
-            },
-        ]
-    },    
     
 
     {

@@ -64,7 +64,7 @@ export default function Tracker() {
                 accessor: (row) => `${row.description.summary} ${row.description.details}`,
                 Cell: ({ row }) => (
                     <>                    <div class="details-heading"></div>
-                    <div style={{maxWidth:900, textWrap: 'balance'}}>
+                    <div style={{maxWidth:650, textWrap: 'balance'}}>
                         <details>
                             <summary><u>{row.original.description.summary}</u>
                             <span className={row.original.description.summaryClass}></span></summary>
@@ -78,41 +78,45 @@ export default function Tracker() {
 
             {
                 Header: 'Sources',
-                accessor: 'sourceText',
+                accessor: 'sources',
                 Cell: ({ row }) => {
-                    const videoLink = row.original.videoLink;
-                    const videoHasPreviewLink = videoLink && videoLink.trim() !== '';
-                
+                    const sources = row.original.sources || []; // make sources array exist before starting to render + map over it
+                  
                     return (
                     <>
-                    <div class="source-heading"></div>
-                    <VideoPlayer videoLink={videoLink}>
-                        <div class="source">
-                        <a href={row.original.sourceLink} target="_blank" rel="noreferrer">
+                    <div className="source-heading"></div>
 
-                        {videoHasPreviewLink ? (
-                            <>
-                            {videoHasPreviewLink}
-                            <span className='icon-playarrow'></span>
-                            </>
-                        ) :
-                            <>
-                            <span className='icon-link'></span>
-                            </>
-                        
-                        }
-
-                        {row.original.sourceText}
-                        </a>
-                        </div>
-                    </VideoPlayer>
-                    </>
-                    );
+                      {/* Maps through all sources, renders them if there are multiple sources */}
+                      {row.original.sources.map((source, index) => (
+                        <VideoPlayer key={index} videoLink={source.videoLink}>
+                          <div key={index} class="source" style={{ marginBottom: '15%' }}>
+                            <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                              {source.videoLink && (
+                                <>
+                                  <span className='icon-playarrow'></span>
+                                </>
+                              )}
+                              {!source.videoLink && (
+                                <>
+                                  <span className='icon-link'></span>
+                                </>
+                              )}
+                            <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />                            </a>
+                          </div>
+                        </VideoPlayer>
+                      ))}
+                                {/* add a br between multiple sources */}
+                                {sources.length > 1 && <>
+          <br />
+          <br />
+          <br />
+        </>}                    </>
+                  );
                 },
-                },
+              },
             ],
             []
-        );
+          );
 
 
     const {

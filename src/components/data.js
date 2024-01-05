@@ -7,14 +7,25 @@ const data = [
             claimText: 'Claim',
             claimClass: 'claim-tag',
     },
+
         description: {
             summary: 'Babies and toddlers were found with their “heads decapitated” in the Kfar Aza kibbutz',
             summaryClass: 'expand-text',
             details: 'A spokesperson for the Israeli state’s prime minister claimed babies and toddlers were found with their “heads decapitated” in the Kfar Aza kibbutz after Hamas fighters entered occupied Palestine on October 7, 2023.<br /><br />Nicole Zedeck, a reporter with Tel Aviv-based news channel i24, interviewed Israeli occupation force soldier David Ben Zion who made the same claim on October 10, 2023. He said: “They cut heads of children, they cut heads of women.”',
         },
-        sourceText: 'i24NEWS',
-        sourceLink: 'https://archive.ph/QeCXs',
-        videoLink: '/files/i24NEWS_10Oct.mp4',
+
+        sources: [
+            {
+                sourceText: 'i24NEWS',
+                sourceLink: 'https://archive.ph/QeCXs',
+                videoLink: '/files/i24NEWS_10Oct.mp4',
+            },
+            {
+                sourceText: '@Nicole_Zedek on X',
+                sourceLink: 'https://archive.ph/AhYIH',
+                videoLink: '',
+            },
+        ]
     },
 
 
@@ -30,9 +41,14 @@ const data = [
             summaryClass: 'expand-text',
             details: 'Nic Robertson, a CNN reporter, claimed Palestinian resistance fighters carried out ISIS-style executions” by “cutting the heads off of people” including babies and killing their pets.<br /><br />“Men, women, children, hands bound, shot, executed, heads cut.”',
         },
-        sourceText: 'CNN',    
-        sourceLink: 'https://archive.ph/XRmh4',
-        videoLink: '/files/IG_NicRobertson_10Oct.mp4',
+
+        sources: [
+            {
+                sourceText: 'CNN',    
+                sourceLink: 'https://archive.ph/XRmh4',
+                videoLink: '/files/IG_NicRobertson_10Oct.mp4',
+            },
+        ]
     },
 
 
@@ -48,9 +64,14 @@ const data = [
             summaryClass: 'expand-text',
             details: 'The Israeli Foreign Affairs Ministry starts running ads targeting children’s content on YouTube. The 28 second video advertisement is titled ‘Babies Can’t Read The Text In This Video But Their Parents Can’ and shows an animated rainbow and unicorn. The text in the video reads:<br /><br />‘We know that your child cannot read this. We have an important message to tell you as parents. 40 infants were murdered in Israel by the Hamas terrorists (ISIS). Just as you would do everything for your child. We will do everything to protect ours. Now hug your baby and stand with us.’',
         },
-        sourceText: '@IsraelMFA on YouTube',    
-        sourceLink: 'https://archive.ph/v4yi5',
-        videoLink: '/files/IsraelMFA_11Oct.mp4',
+
+        sources: [
+            {
+                sourceText: '@IsraelMFA on YouTube',    
+                sourceLink: 'https://archive.ph/v4yi5',
+                videoLink: '/files/IsraelMFA_11Oct.mp4',
+            },
+        ]
     },
 
 
@@ -66,9 +87,14 @@ const data = [
             summaryClass: 'expand-text',
             details: 'In an interview with American news outlet CBS News, Yossi Landau, head of operations in the ‘southern region’ with first responder group Zaka said he saw "with his own eyes children and babies who had been beheaded”.',
         },
-        sourceText: 'CBS News',
-        sourceLink: 'https://archive.ph/RFI9h',
-        videoLink: '',
+
+        sources: [
+            {
+                sourceText: 'CBS News',
+                sourceLink: 'https://archive.ph/RFI9h',
+                videoLink: '',
+            },
+        ]
     },
 
 
@@ -84,9 +110,14 @@ const data = [
             summaryClass: 'expand-text',
             details: 'In an address to Jewish community leaders on October 11, 2023, Biden claimed: “I never really thought that I would see and have confirmed pictures of terrorists beheading children.”',
         },
-        sourceText: 'Fox News',
-        sourceLink: 'https://archive.ph/UN3Jd',
-        videoLink: '/files/Fox_Biden_10Oct.mp4',
+
+        sources: [
+            {
+                sourceText: 'Fox News',
+                sourceLink: 'https://archive.ph/UN3Jd',
+                videoLink: '/files/Fox_Biden_10Oct.mp4',
+            },
+        ]
     },
 
 
@@ -102,9 +133,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'An administration official later clarified Biden’s remarks, saying that Biden was referring to public statements from officials and media reports and had not actually seen photos.',
         },
-        sourceText: 'CNN',
-        sourceLink: 'https://archive.ph/gaDln',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'CNN',
+                sourceLink: 'https://archive.ph/gaDln',
+                videoLink: '',
+            },
+        ]
     },
 
 
@@ -120,9 +155,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'In a CNN news report, Sidner claimed babies and toddlers were found with their “heads decapitated” in Kfar Aza.',
         },
-        sourceText: 'CNN',
-        sourceLink: 'https://archive.ph/wpEIM',
-        videoLink: '/files/CNNTV_11Oct.mp4',
+        sources: [
+            {
+                sourceText: 'CNN',
+                sourceLink: 'https://archive.ph/wpEIM',
+                videoLink: '/files/CNNTV_11Oct.mp4',
+            },
+        ]
     },
 
 
@@ -138,9 +177,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'Israeli occupation force soldier Major Nir Dinar said the IOF refused to share the exact number of babies killed or how many had been beheaded as it is "disrespectful for the dead".',
         },
-        sourceText: 'Insider',
-        sourceLink: 'https://archive.ph/Otjey',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'Insider',
+                sourceLink: 'https://archive.ph/Otjey',
+                videoLink: '',
+            },
+        ]
     },    
     
 
@@ -156,9 +199,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'Tal Heinrich spokesperson for the Israeli Prime Minister’s Office ‘confirmed’ soldiers on the ground had been dealing with babies who had been decapitated to LBC in the UK.',
         },
-        sourceText: 'LBC',
-        sourceLink: 'https://archive.is/UwDCO',
-        videoLink: '/files/LBC_11Oct.mp4',
+        sources: [
+            {
+                sourceText: 'LBC',
+                sourceLink: 'https://archive.is/UwDCO',
+                videoLink: '/files/LBC_11Oct.mp4',
+            },
+        ]
     },    
     
     {
@@ -173,9 +220,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'After an Israeli reserve soldier named David Ben Zion told a reporter Palestinian militants “cut [off] heads of babies,” Biden, Netanyahu, and the international media amplified the dubious claim. The Grayzone has identified Ben Zion as a fanatical settler leader who incited riots by demanding a Palestinian town be “wiped out.”',
         },
-        sourceText: 'Metro',
-        sourceLink: 'https://archive.is/NcD6m',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'Metro',
+                sourceLink: 'https://archive.is/NcD6m',
+                videoLink: '',
+            },
+        ]
     },    
     
     {
@@ -188,11 +239,15 @@ const data = [
         description: {
             summary: 'Sara Sidner of CNN retracts and apologises for sharing the claim',
             summaryClass: 'expand-text',
-            details: 'In a post on X (formerly Twitter), CNN reporter Sara Sidner apologies for sharing disinformation:<br />“Yesterday the Israeli Prime Minister’s office said that it had confirmed Hamas beheaded babies and children while we were live on the air. The Israeli government now says today it CANNOT confirm babies were beheaded. I needed to be more careful with my words and I am sorry.”',
+            details: 'In a post on X (formerly Twitter), CNN reporter Sara Sidner apologies for sharing disinformation:<br /><br />“Yesterday the Israeli Prime Minister’s office said that it had confirmed Hamas beheaded babies and children while we were live on the air. The Israeli government now says today it CANNOT confirm babies were beheaded. I needed to be more careful with my words and I am sorry.”',
         },
-        sourceText: '@sarasidnerCNN on X',
-        sourceLink: 'https://archive.is/rom8W',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: '@sarasidnerCNN on X',
+                sourceLink: 'https://archive.is/rom8W',
+                videoLink: '',
+            },
+        ]
     },    
     
     {
@@ -207,9 +262,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'CNN publishes an article stating that ‘Israeli official says government cannot confirm babies were beheaded in Hamas attack’.',
         },
-        sourceText: 'CNN',
-        sourceLink: 'https://archive.ph/icFaG',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'CNN',
+                sourceLink: 'https://archive.ph/icFaG',
+                videoLink: '',
+            },
+        ]
     },    
     
     {
@@ -224,9 +283,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'In a video shared by the official IDF account (Israeli occupation forces), Israeli occupation force spokesperson Jonathon Conricus claimed Palestinian resistance fighters had “likely” carried out decapitations of babies in the Be’eri kibbutz.<br /><br />“We got very very disturbing reports that came from the ground that there were babies that had been beheaded… I think we can now say with relative confidence that unfortunately this is what happened in Be’eri.”',
         },
-        sourceText: 'Daily Mail',
-        sourceLink: 'https://www.youtube.com/watch?v=Wsbd_dV8Xf8',
-        videoLink: '/files/GolanVach_12Oct.mp4',
+        sources: [
+            {
+                sourceText: 'Daily Mail',
+                sourceLink: 'https://www.youtube.com/watch?v=Wsbd_dV8Xf8',
+                videoLink: '/files/GolanVach_12Oct.mp4',
+            },
+        ]
     },    
     
 
@@ -242,10 +305,36 @@ const data = [
             summaryClass: 'expand-text',
             details: 'The Jerusalem Post, an Israeli newspaper, wrote on X (formerly Twitter) on October 12, 2023, that it can “confirm based on verified photos of the bodies that the reports of babies being burnt and decapitated in Hamas\'s assault on Kfar Aza are correct. May their memory be a blessing.”',
         },
-        sourceText: '@Jerusalem_Post on X',
-        sourceLink: 'https://archive.ph/9c9L0',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: '@Jerusalem_Post on X',
+                sourceLink: 'https://archive.ph/9c9L0',
+                videoLink: '',
+            },
+        ]
     },    
+    
+
+    {
+        claimTag: 'Forty beheaded babies',
+        date: '12 Oct 2023',
+        claim: {
+            claimText: 'Debunk',
+            claimClass: 'debunk-tag',
+        },
+        description: {
+            summary: 'The IOF refuses to confirm the claim',
+            summaryClass: 'expand-text',
+            details: 'IOF Spokesperson Maj. Doron Spielman told NBC News: “That specific report and that number I can’t confirm.”',
+        },
+        sources: [
+            {
+                sourceText: 'NBC News',
+                sourceLink: 'https://archive.ph/MxZTk',
+                videoLink: '',
+            },
+        ]
+    },
     
 
     {
@@ -260,9 +349,13 @@ const data = [
             summaryClass: '',
             details: '',
         },
-        sourceText: 'NBC News',
-        sourceLink: 'https://archive.ph/MxZTk',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'NBC News',
+                sourceLink: 'https://archive.ph/MxZTk',
+                videoLink: '',
+            },
+        ]
     },    
     
 
@@ -278,9 +371,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'Al Jazeera reports that when journalists asked a spokesman for the Israeli military about the story of beheaded babies, the reply was, “We cannot confirm but you can assume it happened.”',
         },
-        sourceText: 'Al Jazeera',
-        sourceLink: 'https://archive.ph/RNLTs',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'Al Jazeera',
+                sourceLink: 'https://archive.ph/RNLTs',
+                videoLink: '',
+            },
+        ]
     },    
 
 
@@ -296,9 +393,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'In an interview with American news outlet 6abc Philadelphia Yossi Landau, head of operations in the ‘southern region’ with first responder group Zaka, repeats the claim that he saw beheaded babies among other assertions.',
         },
-        sourceText: '6abc Philadelphia',
-        sourceLink: 'https://archive.ph/4nzHg',
-        videoLink: '/files/6abc_YossiLandau_17Oct.mp4',
+        sources: [
+            {
+                sourceText: '6abc Philadelphia',
+                sourceLink: 'https://archive.ph/4nzHg',
+                videoLink: '/files/6abc_YossiLandau_17Oct.mp4',
+            },
+        ]
     },    
 
 
@@ -314,9 +415,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'In his speech, US President Biden states: “Children slaughtered. Babies slaughtered. Entire families massacred. Rape, beheadings, bodies burned alive.”',
         },
-        sourceText: 'The White House',
-        sourceLink: 'https://archive.ph/yqnZT',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'The White House',
+                sourceLink: 'https://archive.ph/yqnZT',
+                videoLink: '',
+            },
+        ]
     },    
     
     {
@@ -331,9 +436,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'In a post on X (formerly Twitter) on October 26, 2023, the official state of Israel account shared a video of an Israeli occupation force soldier named Col. Golan Vach telling reporters that he carried a decapitated baby in his own hands.<br /><br />The post reads: “Listen to the eyewitness accounts of the 8 burned babies and one beheaded baby which were butchered by Hamas terrorists on October 7th. Pure evil.”<br /><br />In the video, Golan Vach states: “The baby was decapitated... I carried the baby in my own hands.”<br /><br />When he was asked why there were no photographs, he replied: “People ask me how come you did not take a picture. I said: ‘I’m sorry, I have children. I have limitations. I have limits. I do not take a picture of a decapitated baby.’” Golan Vach also claimed a soldier was beheaded at Kfar Aza.',
         },
-        sourceText: '@Israel on X',
-        sourceLink: 'https://archive.ph/smhK5',
-        videoLink: '/files/GolanVach_12Oct.mp4',
+        sources: [
+            {
+                sourceText: '@Israel on X',
+                sourceLink: 'https://archive.ph/smhK5',
+                videoLink: '/files/GolanVach_12Oct.mp4',
+            },
+        ]
     },    
     
 
@@ -349,9 +458,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'Eli Beer, president and founder of an Israeli first-responder group called United Hatzalah of Israel told the American Republican Jewish Committee in Las Vegas at a conference: “I saw little kids who were beheaded. We didn’t know which head belongs to which kid.” He also claimed a baby was baked in an oven.',
         },
-        sourceText: 'New York Post',
-        sourceLink: 'https://archive.is/wkmFr',
-        videoLink: '/files/EliBeer_28Oct.mp4',
+        sources: [
+            {
+                sourceText: 'New York Post',
+                sourceLink: 'https://archive.is/wkmFr',
+                videoLink: '/files/EliBeer_28Oct.mp4',
+            },
+        ]
     },    
     
 
@@ -367,9 +480,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'At a press conference on November 15, 2023, Biden again repeats the debunked claim that Palestinian resistance fighters cut off babies’ heads and burned women and children alive.’<br /><br />“Hamas has already said publicly that they plan on attacking Israel again, like they did before, to where they were cutting babies’ heads off to burning women and children alive.”',
         },
-        sourceText: 'The Intercept',
-        sourceLink: 'https://archive.is/DK1ee',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'The Intercept',
+                sourceLink: 'https://archive.is/DK1ee',
+                videoLink: '',
+            },
+        ]
     },    
     
 
@@ -386,9 +503,13 @@ const data = [
             summaryClass: 'expand-text',
             details: 'In a speech at Salamander Washington D.C., US President Biden once again repeated the claim that babies were beheaded.<br /><br />“I saw some of the photographs when I was there — tying a mother and her daughter together on a rope and then pouring kerosene on them and then burning them, beheading infants, doing things that are just inhuman — totally, completely inhuman.”',
         },
-        sourceText: 'The White House',
-        sourceLink: 'https://archive.ph/cOJQW',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'The White House',
+                sourceLink: 'https://archive.ph/cOJQW',
+                videoLink: '',
+            },
+        ]
     },    
     
 
@@ -402,11 +523,25 @@ const data = [
         description: {
             summary: 'Kibbutzes on massacred and occupied Palestinian land',
             summaryClass: 'expand-text',
-            details: 'The kibbutzes Kfar Aza and Be’eri are on ethnically cleansed Palestinian land, where many Palestinians currently living in post-Nakba Gaza were displaced from in 1948.The Kfar Aza kibbutz is on land that was originally part of Gaza before the Nakba, the ethnic cleansing of Palestine in 1948 or afterwards by Zionist militias to establish the Israeli settler-colony state.<br /><br />The Palestinian villages and towns ethnically cleansed in 1948 to make way for the Jewish Israeli settlements include:<br /><br /><u>Gaza before 1948</u><br /><br /><b>Al-Muharraqa</b><br />Ethnically cleansed by the Palmach’s Negev Brigade<br />27 – 28 May 1948<br/><br /><b>Huj</b><br />Ethnically cleansed by Yishuv forces<br />31 May, 1948<br /><br /><b>Najd</b><br />Ethnically cleansed by Yishuv forces<br />12 May, 1948<br /><br /><b>Simsim</b><br />Ethnically cleansed by Yishuv forces<br />12 May, 1948<br /><br /><b>Dimra</b><br />Ethnically cleansed possibly by the Giva’ti Brigade in Operation Yo’av<br />28 October, 1948<br /><br /><b>Dayr Sunayd</b><br />Ethnically cleansed in by Yishuv forces<br />Late October or early November 1948<br /><br /><b>Wuhaidat Tarabin</b><br />Ethnically cleansed by the Golani Brigade during Operation Assaf<br />5 December, 1952<br /><br /><br /><u>Bir-a-Saba (Bersheeba) before 1948</u><br /><br /><b>Abu Muailiq, Hasanat</b><br />Ethnically cleansed<br />5 July, 1948<br /><br /><b>Gatatweh</b><br />Ethnically cleansed, details unknown<br />1948<br /><br /><b>Atawneh, Ntoush</b><br />Ethnically cleansed, details unknown<br />1948<br /><br /><b>Franji</b><br />Ethnically cleansed, details unknown<br />1948',
+            details: 'The kibbutzes Kfar Aza and Be’eri are on ethnically cleansed Palestinian land, where many Palestinians currently living in post-Nakba Gaza were displaced from in 1948. The Kfar Aza kibbutz is on land that was originally part of Gaza before the Nakba, the ethnic cleansing of Palestine in 1948 or afterwards by Zionist militias to establish the Israeli settler-colony state.<br /><br />The Palestinian villages and towns ethnically cleansed in 1948 to make way for the Jewish Israeli settlements include:<br /><br /><u>Gaza before 1948</u><br /><br /><b>Al-Muharraqa</b><br />Ethnically cleansed by the Palmach’s Negev Brigade<br />27 – 28 May 1948<br/><br /><b>Huj</b><br />Ethnically cleansed by Yishuv forces<br />31 May, 1948<br /><br /><b>Najd</b><br />Ethnically cleansed by Yishuv forces<br />12 May, 1948<br /><br /><b>Simsim</b><br />Ethnically cleansed by Yishuv forces<br />12 May, 1948<br /><br /><b>Dimra</b><br />Ethnically cleansed possibly by the Giva’ti Brigade in Operation Yo’av<br />28 October, 1948<br /><br /><b>Dayr Sunayd</b><br />Ethnically cleansed in by Yishuv forces<br />Late October or early November 1948<br /><br /><b>Wuhaidat Tarabin</b><br />Ethnically cleansed by the Golani Brigade during Operation Assaf<br />5 December, 1952<br /><br /><br /><u>Bir-a-Saba (Bersheeba) before 1948</u><br /><br /><b>Abu Muailiq, Hasanat</b><br />Ethnically cleansed<br />5 July, 1948<br /><br /><b>Gatatweh</b><br />Ethnically cleansed, details unknown<br />1948<br /><br /><b>Atawneh, Ntoush</b><br />Ethnically cleansed, details unknown<br />1948<br /><br /><b>Franji</b><br />Ethnically cleansed, details unknown<br />1948',
         },
-        sourceText: 'Palestine Remembered',
-        sourceLink: 'https://archive.ph/xCyzu',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: '<em>The birth of the Palestinian refugee problem revisited</em> by Benny Morris, 2004',
+                sourceLink: 'https://www.google.co.uk/books/edition/The_Birth_of_the_Palestinian_Refugee_Pro/uM_kFX6edX8C?hl=en&gbpv=1&pg=PR21&printsec=frontcover',
+                videoLink: '',
+            },
+            {
+                sourceText: 'Palestine Remembered',
+                sourceLink: 'https://www.palestineremembered.com/Gaza/index.html',
+                videoLink: '',
+            },
+            {
+                sourceText: '<em>The Palestinian Nakba 1948</em>, by Salman Abu Sitta, 2000 ',
+                sourceLink: 'https://www.plands.org/en/books-reports/books/the-palestinian-nakba-1948/pdf/the-register-of-depopulated-localities-in-palestine',
+                videoLink: '',
+            },
+        ]
     },    
 
     {
@@ -421,30 +556,45 @@ const data = [
             summaryClass: 'expand-text',
             details: 'A pro-Israel British physician published an opinion article in Newsweek which repeated the debunked claim of beheaded babies in the headline. The body of the article does not address the claim in the headline, and repeats unsubstantiated and dubious Israeli official claims.',
         },
-        sourceText: 'Newsweek',
-        sourceLink: 'https://archive.ph/vzLEo',
-        videoLink: '',
+        sources: [
+            {
+                sourceText: 'Newsweek',
+                sourceLink: 'https://archive.ph/vzLEo',
+                videoLink: '',
+            },
+        ]
     },    
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)
     // {
     //     claimTag: '',
+
     //     date: '',
+
     //     claim: {
     //         claimText: '',
     //         claimClass: 'claim-tag',
     //     },
+
     //     description: {
     //         summary: '',
     //         summaryClass: '',
     //         details: '',
     //     },
-    //     sourceText: '',
-    //     sourceLink: '',
-    //     videoLink: '',
-    // },    
-
-
+    //     sources: [
+    //         {
+    //             sourceText: '',
+    //             sourceLink: '',
+    //             videoLink: '',
+    //         },
+    //         // Optional: add more sources, delete if not needed
+    //         {
+    //             sourceText: '',
+    //             sourceLink: '',
+    //             videoLink: '',
+    //         }
+    //     ]
+    // },
 
 ]
 

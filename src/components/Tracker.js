@@ -10,30 +10,31 @@ import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
 import SearchBar from './SearchBar';
 
-
 export default function Tracker() {
+
+    // Set phone/mobile view
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
-  
+
     useEffect(() => {
-      const handleResize = () => {
-        setIsMobileView(window.innerWidth <= 768);
-      };
-  
-      window.addEventListener('resize', handleResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
+        const handleResize = () => {
+            setIsMobileView(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
 
+    // Pull all the claims data
     const columns = useMemo(
         () => [
             {
                 Header: 'Claim',
                 accessor: 'claimTag',
             },
-
             {
                 Header: 'Date',
                 accessor: 'date',
@@ -48,7 +49,6 @@ export default function Tracker() {
                     </div>
                 ),
             },
-
             {
                 Header: 'What',
                 accessor: (row) => row.claim.claimText,
@@ -58,66 +58,63 @@ export default function Tracker() {
                     </span>
                 ),
             },
-
             {
                 Header: 'Details',
                 accessor: (row) => `${row.description.summary} ${row.description.details}`,
                 Cell: ({ row }) => (
-                    <>                    <div class="details-heading"></div>
-                    <div style={{maxWidth:650, textWrap: 'balance'}}>
-                        <details>
-                            <summary><u>{row.original.description.summary}</u>
-                            <span className={row.original.description.summaryClass}></span></summary>
-                            <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
-                        </details>
-                    </div>
+                    <>
+                        <div class="details-heading"></div>
+                        <div style={{ maxWidth: 650, textWrap: 'balance' }}>
+                            <details>
+                                <summary><u>{row.original.description.summary}</u>
+                                    <span className={row.original.description.summaryClass}></span></summary>
+                                <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+                            </details>
+                        </div>
                     </>
-
                 ),
             },
-
             {
                 Header: 'Sources',
                 accessor: 'sources',
                 Cell: ({ row }) => {
-                    const sources = row.original.sources || []; // make sources array exist before starting to render + map over it
-                  
+                    const sources = row.original.sources || [];
+
                     return (
-                    <>
-                    <div className="source-heading"></div>
+                        <>
+                            <div className="source-heading"></div>
 
-                      {/* Maps through all sources, renders them if there are multiple sources */}
-                      {row.original.sources.map((source, index) => (
-                        <VideoPlayer key={index} videoLink={source.videoLink}>
-                          <div key={index} class="source" style={{ marginBottom: '15%' }}>
-                            <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                              {source.videoLink && (
-                                <>
-                                  <span className='icon-playarrow'></span>
-                                </>
-                              )}
-                              {!source.videoLink && (
-                                <>
-                                  <span className='icon-link'></span>
-                                </>
-                              )}
-                            <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />                            </a>
-                          </div>
-                        </VideoPlayer>
-                      ))}
-                                {/* add a br between multiple sources */}
-                                {sources.length > 1 && <>
-          <br />
-          <br />
-          <br />
-        </>}                    </>
-                  );
+                            {row.original.sources.map((source, index) => (
+                                <VideoPlayer key={index} videoLink={source.videoLink}>
+                                    <div key={index} class="source" style={{ marginBottom: '15%' }}>
+                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                            {source.videoLink && (
+                                                <>
+                                                    <span className='icon-playarrow'></span>
+                                                </>
+                                            )}
+                                            {!source.videoLink && (
+                                                <>
+                                                    <span className='icon-link'></span>
+                                                </>
+                                            )}
+                                            <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+                                        </a>
+                                    </div>
+                                </VideoPlayer>
+                            ))}
+                            {sources.length > 1 && <>
+                                <br />
+                                <br />
+                                <br />
+                            </>}
+                        </>
+                    );
                 },
-              },
-            ],
-            []
-          );
-
+            },
+        ],
+        []
+    );
 
     const {
         getTableProps,
@@ -136,176 +133,156 @@ export default function Tracker() {
             },
             disableSortRemove: true,
         },
-            useFilters,
-            useGlobalFilter,
-            useSortBy
-        );
-        const { globalFilter } = state
+        useFilters,
+        useGlobalFilter,
+        useSortBy
+    );
 
-    // console.log('Search word entered:' + globalFilter);
+    // Sets state based on what is in the search box
+    const { globalFilter } = state;
 
     return (
         <>
-        <span class="header-container">
-            <MobileMenu />
-            <h1 class="ht-heading">Hasbara Tracker</h1>
-            <span id="dots">. . . . . . . . . . . . . .</span>
-            <NavBar />
-        </span>
+            <span class="header-container">
+                <MobileMenu />
+                <h1 class="ht-heading">Hasbara Tracker</h1>
+                <span id="dots">. . . . . . . . . . . . . .</span>
+                <NavBar />
+            </span>
 
 
-        {/* DESKTOP VIEW */}
-
-        {!isMobileView && (
-        <>
-        <div class="search-bar-container">
-        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
-    </div>
-
-
-        <div class="tracker-container">
-            {rows.length === 0 ? (
+            {/* Show desktop view */}
+            {!isMobileView && (
                 <>
+                    <div class="search-bar-container">
+                        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+                    </div>
 
-<div class="no-results-text">No results found. Try searching a different word or phrase.</div>
-                <div class="how-to">
-                How to use the tracker:
-                <ul>
-                <li>Use the search bar to look up words, phrases or claims (eg. ‘beheaded babies’, ‘hospital’, ‘biden’)</li>
-                <li>You can search by type of claim with ‘claim’, ‘debunk’ or ‘context’</li>
-                <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
-                <li>Hover over a source with <span class="icon-play"></span> to preview video (If you’re on your phone, tap + hold the link)</li>
-                <li>Click each Source to open an archived link</li>
-                <li>Click + and ⎯ to show more or less text</li>
-                </ul>
-            </div>
-            </>
-            ) : (
-
-            <table {...getTableProps()}>
-            <thead>
-                {/* Map the headers out */}
-                {headerGroups.map((headerGroup) => (
-                    <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map((column) => (
-
-                // Add sorting function to the Date column
-                    <th
-                        {...column.getHeaderProps(
-                            column.id === 'date' ? column.getSortByToggleProps() : {}
+                    <div class="tracker-container">
+                        {/* Show 'how to' text when no results are found */}
+                        {rows.length === 0 ? (
+                            <>
+                                <div class="no-results-text">No results found. Try searching a different word or phrase.</div>
+                                <div class="how-to">
+                                    How to use the tracker:
+                                    <ul>
+                                        <li>Use the search bar to look up words, phrases, or claims (eg. ‘beheaded babies’, ‘hospital’, ‘biden’)</li>
+                                        <li>You can search by type of claim with ‘claim’, ‘debunk’ or ‘context’</li>
+                                        <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
+                                        <li>Hover over a source with <span class="icon-play"></span> to preview video (If you’re on your phone, tap + hold the link)</li>
+                                        <li>Click each Source to open an archived link</li>
+                                        <li>Click + and ⎯ to show more or less text</li>
+                                    </ul>
+                                </div>
+                            </>
+                        ) : (
+                            // Renders all claims data as a table
+                            <table {...getTableProps()}>
+                                <thead>
+                                    {headerGroups.map((headerGroup) => (
+                                        <tr {...headerGroup.getHeaderGroupProps()}>
+                                            {headerGroup.headers.map((column) => (
+                                                <th
+                                                    {...column.getHeaderProps(
+                                                        column.id === 'date' ? column.getSortByToggleProps() : {}
+                                                    )}
+                                                    style={{
+                                                        color: 'black',
+                                                        cursor: column.id === 'date' ? 'ns-resize' : 'auto',
+                                                    }}
+                                                >
+                                                    {column.render('Header')}
+                                                    {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
+                                                </th>
+                                            ))}
+                                        </tr>
+                                    ))}
+                                </thead>
+                                <tbody {...getTableBodyProps()}>
+                                    {rows.map((row) => {
+                                        prepareRow(row);
+                                        return (
+                                            <tr {...row.getRowProps()}>
+                                                {row.cells.map((cell, index) => (
+                                                    <td
+                                                        {...cell.getCellProps()}
+                                                        style={{
+                                                            padding: '20px',
+                                                            borderBottom: 'solid 1px gray',
+                                                            overflow: 'hidden',
+                                                            width: // Set fixed column widths
+                                                                index === 0 ? '30px' :
+                                                                index === 1 ? '80px' :
+                                                                index === 2 ? '20px' :
+                                                                index === 3 ? '600px' :
+                                                                '130px',
+                                                        }}
+                                                    >
+                                                        {cell.render('Cell')}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        );
+                                    })}
+                                </tbody>
+                            </table>
                         )}
-
-                        style={{
-                            color: 'black',
-                            cursor: column.id === 'date' ? 'ns-resize' : 'auto',
-                        }}
-                    >
-                        {column.render('Header')}
-                        {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
-                    </th>
-                ))}
-                </tr>
-            ))}
-            </thead>
-                
-            {/* Fetch + fill out all the body cell props */}
-            <tbody {...getTableBodyProps()}>
-                {rows.map((row) => {
-                    prepareRow(row);
-
-                    return (
-                        <tr 
-                            {...row.getRowProps()}>
-                            {row.cells.map((cell, index) => (
-                                <td
-                                    {...cell.getCellProps()}
-                                        style={{
-                                            padding: '20px',
-                                            borderBottom: 'solid 1px gray',
-                                            overflow: 'hidden',
-                                            
-                                            // Fix the size of each column
-                                            width:
-                                                index === 0 ? '30px' :
-                                                index === 1 ? '80px' :
-                                                index === 2 ? '20px' :
-                                                index === 3 ? '600px' :
-                                                '130px',
-                                        }}
-                                >
-                                    {cell.render('Cell')}
-                                </td>
-                            ))}
-                        </tr>
-                    );
-                })}
-            </tbody>
-            </table>
-            )}
-            </div>
-
-            </>
+                    </div>
+                </>
             )}
 
-
-
-        {/* MOBILE VIEW*/}
-        {/* {isMobileView && renderMobileData()} */}
-        {isMobileView && (
-        <>
-        <div class="search-bar-container">
-        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
-    </div>
-
-
-        <div class="tracker-container">
-            {rows.length === 0 ? (
+            
+            {/* Show phone/mobile view */}
+            {isMobileView && (
                 <>
-                <div class="no-results-text">No results found. Try searching a different word or phrase.</div><div class="how-to">
-                How to use the tracker:
-                <ul>
-                <li>Use the search bar to look up words, phrases or claims (eg. ‘beheaded babies’, ‘hospital’, ‘al-shifa’).</li>
-                <li>You can also search by Claim / Debunk / Context by searching 'claim', 'debunk' or 'context'</li>
-                <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
-                <li>On your laptop: Hover over a ▷ source to preview video</li>
-                <li>On your phone: tap + hold the ▷ link to preview. Click anywhere to close</li>
-                <li>Click each Source to open an archived link</li>
-                <li>Click + and ⎯ to show more or less text</li>
-                </ul>
-            </div>
-            </>
+                    <div class="search-bar-container">
+                        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+                    </div>
 
-            ) : (
+                    <div class="tracker-container">
 
-            <div {...getTableBodyProps()}>
-                {rows.map((row) => {
-                    prepareRow(row);
-
-
-return (
-    <div key={row.id} className="data-row" style={{display: 'block', alignItems: 'center'}}>
-      {row.cells.map((cell, index) => (
-        <div
-          key={cell.column.id}
-          className={`data-cell ${cell.column.Header.toLowerCase()}`}
-        >
-          {cell.render('Cell')}
-        </div>
-      ))}
-    </div>
-  );
-
-
-                })}
-            </div>
+                        {/* Show 'how to' text when no results are found */}
+                        {rows.length === 0 ? (
+                            <>
+                                <div class="no-results-text">No results found. Try searching a different word or phrase.</div>
+                                <div class="how-to">
+                                    How to use the tracker:
+                                    <ul>
+                                        <li>Use the search bar to look up words, phrases, or claims (eg. ‘beheaded babies’, ‘hospital’, ‘al-shifa’).</li>
+                                        <li>You can also search by Claim / Debunk / Context by searching 'claim', 'debunk' or 'context'</li>
+                                        <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
+                                        <li>On your laptop: Hover over a ▷ source to preview video</li>
+                                        <li>On your phone: tap + hold the ▷ link to preview. Click anywhere to close</li>
+                                        <li>Click each Source to open an archived link</li>
+                                        <li>Click + and ⎯ to show more or less text</li>
+                                    </ul>
+                                </div>
+                            </>
+                        ) : (
+                            // Renders all claims data as blocks, instead of a table
+                            <div {...getTableBodyProps()}>
+                                {rows.map((row) => {
+                                    prepareRow(row);
+                                    return (
+                                        <div key={row.id} className="data-row" style={{ display: 'block', alignItems: 'center' }}>
+                                            {row.cells.map((cell, index) => (
+                                                <div
+                                                    key={cell.column.id}
+                                                    className={`data-cell ${cell.column.Header.toLowerCase()}`}
+                                                >
+                                                    {cell.render('Cell')}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+                    </div>
+                </>
             )}
-            </div>
 
-            </>
-                
-        )}
-        
-        <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
+            <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
         </>
     );
 }

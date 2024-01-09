@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 
 const VideoPlayer = ({ videoLink, children }) => {
+
+    // Manages state for whether modal is open or closed
     const [isModalOpen, setIsModalOpen] = useState(false);
     let hoverTimeout;
 
@@ -20,11 +22,10 @@ const VideoPlayer = ({ videoLink, children }) => {
         closeModal(); // Close the modal when the mouse leaves the link
     };
 
-    const handleTouchStart = () => {
-        // Open the modal on touch start (for mobile devices)
-        openModal();
-    };
-
+    // const handleTouchStart = () => {
+    //     // Open the modal on touch start (for mobile devices)
+    //     openModal();
+    // };
 
         // State to track the screen width
         const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -49,7 +50,7 @@ const VideoPlayer = ({ videoLink, children }) => {
             <a
                 onMouseEnter={openModal}
                 onMouseLeave={handleMouseLeave}
-                onTouchStart={handleTouchStart}
+                // onTouchStart={handleTouchStart}
             >
                 {children}
             </a>
@@ -75,6 +76,7 @@ const VideoPlayer = ({ videoLink, children }) => {
                         position: 'absolute',
                         zIndex: 2,
 
+                        // On phone: Show modal at bottom of screen
                         ...(screenWidth <= 768 && {
                             top: 'auto',
                             bottom: '0',
@@ -105,19 +107,6 @@ const VideoPlayer = ({ videoLink, children }) => {
                     Your browser does not support video previews. Try Safari, Chrome or Firefox instead.
                 </video>
             </Modal>
-
-            {/* overwrite video modal styles for mobiles <768px */}
-            {/* <style jsx>{`
-            @media (max-width: 768px) {
-                .modal-mobile {
-                    top: 'auto',
-                    left: '5%',
-                    right: '5%',
-                    maxWidth: '95%',
-                }
-            }
-        `}</style> */}
-
         </>
     );
 };

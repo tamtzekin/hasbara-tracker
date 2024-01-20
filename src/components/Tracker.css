@@ -227,14 +227,14 @@ li {
 
 .search-bar input {
     height: 20px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
     letter-spacing: 0.8px;
     line-height: 25px;
     background: #f0f0f0;
     border: 0.7px solid black;
     border-radius: 3px;
-    padding: 7px 0 10px 40px;
+    padding: 9px 0 10px 40px;
 
     /* icon */
     background-image: url('/public/img/magnifying-glass.png');

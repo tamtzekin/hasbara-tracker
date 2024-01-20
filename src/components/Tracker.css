@@ -115,9 +115,9 @@ details {
     display: inline;
     cursor: crosshair;
 }
-    
+
 details[open] {
-    cursor: default;
+    cursor: n-resize;
 }
 
 details > summary {
@@ -125,7 +125,7 @@ details > summary {
     padding-bottom: 4%;
     font-family: 'Helvetica', Helvetica, sans-serif;
 }
-    
+
 details > summary::-webkit-details-marker {
     display: none;
 }

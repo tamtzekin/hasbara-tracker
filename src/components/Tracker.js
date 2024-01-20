@@ -86,7 +86,7 @@ export default function Tracker() {
 
                             {row.original.sources.map((source, index) => (
                                 <VideoPlayer key={index} videoLink={source.videoLink}>
-                                    <div key={index} class="source" style={{ marginBottom: '15%' }}>
+                                    <div key={index} class="source" style={{ marginBottom: '5%' }}>
                                         <a href={source.sourceLink} target="_blank" rel="noreferrer">
                                             {source.videoLink && (
                                                 <>

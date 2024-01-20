@@ -142,7 +142,7 @@ details > summary::-webkit-details-marker {
 }
 
 details[open] .expand-text::after {
-    content: '⎯';
+    content: '—';
     font-size: 0.7em;
 }
 

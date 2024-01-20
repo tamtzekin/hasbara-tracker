@@ -64,7 +64,7 @@ export default function Tracker() {
                 Cell: ({ row }) => (
                     <>
                         <div class="details-heading"></div>
-                        <div style={{ maxWidth: 650, textWrap: 'balance' }}>
+                        <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
                             <details>
                                 <summary><u>{row.original.description.summary}</u>
                                     <span className={row.original.description.summaryClass}></span></summary>

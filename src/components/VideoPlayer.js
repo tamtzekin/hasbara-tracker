@@ -7,11 +7,14 @@ const VideoPlayer = ({ videoLink, children }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     let hoverTimeout;
 
-    const openModal = () => {
+    const openModal = (event) => {
         hoverTimeout = setTimeout(() => {
             setIsModalOpen(true);
         }, 100);
+
+        event.preventDefault(); // stops page from jumping to the top after hovering over link
     };
+    
 
     const closeModal = () => {
         setIsModalOpen(false);
@@ -48,6 +51,7 @@ const VideoPlayer = ({ videoLink, children }) => {
     return (
         <>
             <a
+                href="javascript:void(0);" // prevent page/scroll jump after hover
                 onMouseEnter={openModal}
                 onMouseLeave={handleMouseLeave}
                 // onTouchStart={handleTouchStart}

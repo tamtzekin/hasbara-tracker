@@ -101,7 +101,7 @@ const data = [
         sources: [
             {
                 sourceText: '@IsraelMFA on YouTube',    
-                sourceLink: 'https://archive.ph/v4yi5',
+                sourceLink: 'https://www.youtube.com/watch?v=Hh8t8sHnTng',
                 videoLink: '/files/IsraelMFA_11Oct.mp4',
             },
         ]
@@ -407,7 +407,7 @@ const data = [
         sources: [
             {
                 sourceText: '6abc Philadelphia',
-                sourceLink: 'https://archive.ph/4nzHg',
+                sourceLink: 'https://www.youtube.com/watch?v=4Nn8Y_ulBMI',
                 videoLink: '/files/6abc_YossiLandau_17Oct.mp4',
             },
         ]

@@ -104,6 +104,23 @@ button {
     background: #9dff20;
 }
 
+details article {
+    opacity: 0;
+  }
+  
+details[open] article {
+    animation: fadeIn .4s linear forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} 
+
 .context-tag {
     border: solid 0.5px;
     padding: 5% 12% 5% 12%;
@@ -418,23 +435,6 @@ ul {
         margin-top: 30%;
         line-height: 22px;
     }
-
-    details article {
-        opacity: 0;
-      }
-      
-    details[open] article {
-        animation: fadeIn .4s linear forwards;
-    }
-
-    @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-       } 
     
     .how-to {
         font-size: 1em;

@@ -419,6 +419,23 @@ ul {
         line-height: 22px;
     }
 
+    details article {
+        opacity: 0;
+      }
+      
+    details[open] article {
+        animation: fadeIn .4s linear forwards;
+    }
+
+    @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+       } 
+    
     .how-to {
         font-size: 1em;
         margin-top: 7%;

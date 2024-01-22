@@ -68,7 +68,9 @@ export default function Tracker() {
                             <details>
                                 <summary><u>{row.original.description.summary}</u>
                                     <span className={row.original.description.summaryClass}></span></summary>
-                                <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+                                    <article>
+                                        <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+                                </article>
                             </details>
                         </div>
                     </>

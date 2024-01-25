@@ -413,7 +413,7 @@ const data = [
             {
                 sourceText: '6abc Philadelphia',
                 sourceLink: 'https://www.youtube.com/watch?v=4Nn8Y_ulBMI',
-                videoLink: '/files/6abc_YossiLandau_17Oct.mp4',
+                videoLink: '/6abc_YossiLandau_17Oct.mp4',
             },
         ]
     },    

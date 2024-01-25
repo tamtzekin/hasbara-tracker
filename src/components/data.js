@@ -51,7 +51,7 @@ const data = [
             {
                 sourceText: 'i24NEWS',
                 sourceLink: 'https://archive.ph/QeCXs',
-                videoLink: '/files/i24NEWS_10Oct.mp4',
+                videoLink: '/i24NEWS_10Oct.mp4',
             },
             {
                 sourceText: '@Nicole_Zedek on X',
@@ -79,7 +79,7 @@ const data = [
             {
                 sourceText: 'CNN',    
                 sourceLink: 'https://archive.ph/XRmh4',
-                videoLink: '/files/IG_NicRobertson_10Oct.mp4',
+                videoLink: '/IG_NicRobertson_10Oct.mp4',
             },
         ]
     },
@@ -102,7 +102,7 @@ const data = [
             {
                 sourceText: '@IsraelMFA on YouTube',    
                 sourceLink: 'https://www.youtube.com/watch?v=Hh8t8sHnTng',
-                videoLink: '/files/IsraelMFA_11Oct.mp4',
+                videoLink: '/IsraelMFA_11Oct.mp4',
             },
         ]
     },
@@ -192,7 +192,7 @@ const data = [
             {
                 sourceText: 'CNN',
                 sourceLink: 'https://archive.ph/wpEIM',
-                videoLink: '/files/CNNTV_11Oct.mp4',
+                videoLink: '/CNNTV_11Oct.mp4',
             },
         ]
     },
@@ -236,7 +236,7 @@ const data = [
             {
                 sourceText: 'LBC',
                 sourceLink: 'https://archive.is/UwDCO',
-                videoLink: '/files/LBC_11Oct.mp4',
+                videoLink: '/LBC_11Oct.mp4',
             },
         ]
     },    
@@ -325,7 +325,7 @@ const data = [
             {
                 sourceText: 'Daily Mail',
                 sourceLink: 'https://www.youtube.com/watch?v=Wsbd_dV8Xf8',
-                videoLink: '/files/GolanVach_12Oct.mp4',
+                videoLink: '/GolanVach_12Oct.mp4',
             },
         ]
     },    
@@ -456,7 +456,7 @@ const data = [
             {
                 sourceText: '@Israel on X',
                 sourceLink: 'https://archive.ph/smhK5',
-                videoLink: '/files/GolanVach_12Oct.mp4',
+                videoLink: '/GolanVach_12Oct.mp4',
             },
         ]
     },    
@@ -478,7 +478,7 @@ const data = [
             {
                 sourceText: 'New York Post',
                 sourceLink: 'https://archive.is/wkmFr',
-                videoLink: '/files/EliBeer_28Oct.mp4',
+                videoLink: '/EliBeer_28Oct.mp4',
             },
         ]
     },    

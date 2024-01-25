@@ -569,6 +569,27 @@ const data = [
                 videoLink: '',
             },
         ]
+    },   
+    
+    {
+        claimTag: 'Al Ahli',
+        date: '26 Dec 2023',
+        claim: {
+            claimText: 'Claim',
+            claimClass: 'claim-tag',
+        },
+        description: {
+            summary: 'Newsweek publishes an opinion article headlined ‘I Saw the Children Hamas Beheaded With My Own Eyes. Shame on Queen Rania’',
+            summaryClass: 'expand-text',
+            details: 'A pro-Israel British physician published an opinion article in Newsweek which repeated the debunked claim of beheaded babies in the headline. The body of the article does not address the claim in the headline, and repeats unsubstantiated and dubious Israeli claims.',
+        },
+        sources: [
+            {
+                sourceText: 'Newsweek',
+                sourceLink: 'https://archive.ph/vzLEo',
+                videoLink: '',
+            },
+        ]
     },    
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)

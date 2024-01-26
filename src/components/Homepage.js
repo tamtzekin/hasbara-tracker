@@ -22,6 +22,9 @@ const Homepage = () => {
                 <a href="https://instagram.com/hasbaratracker" alt="Link to Instagram account @hasbaratracker" target="_blank" rel="noreferrer">@hasbaratracker</a>
                 <br />
                 <br />
+                <h2>Claims</h2>
+                <Link to="/tracker?filter=Forty%20beheaded%20babies">40 beheaded babies</Link><br />
+                <br />
             </span>
     </>
     );

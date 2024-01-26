@@ -134,6 +134,7 @@ export default function Tracker() {
             data,
             initialState: {
                 sortBy: [{ id: 'date', desc: false }],
+                globalFilter: new URLSearchParams(window.location.search).get('filter') || '', // allows URL queries to set filter
             },
             disableSortRemove: true,
         },

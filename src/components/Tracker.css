@@ -96,6 +96,13 @@ button {
     background: #9dff20;
 }
 
+.context-tag {
+    border: solid 0.5px;
+    padding: 5% 12% 5% 12%;
+    border-radius: 3px;
+    background: #9dff20;
+}
+
 .debunk-tag {
     font-size: 0.95em;
     border: solid 0.5px;
@@ -121,13 +128,6 @@ details[open] article {
         opacity: 1;
     }
 } 
-
-.context-tag {
-    border: solid 0.5px;
-    padding: 5% 12% 5% 12%;
-    border-radius: 3px;
-    background: #9dff20;
-}
 
 details { 
     display: inline;

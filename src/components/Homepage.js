@@ -22,6 +22,9 @@ const Homepage = () => {
                 <a href="https://instagram.com/hasbaratracker" alt="Link to Instagram account @hasbaratracker" target="_blank" rel="noreferrer">@hasbaratracker</a>
                 <br />
                 <br />
+                <h2>What is hasbara?</h2>
+                <span className="hasbara-about">'Hasbara' is a Hebrew term that translates to 'explanation' or 'public relations' in English. In the context of the Israeli settler project, it refers to public relations efforts aimed at promoting a positive image of the state in relation to its military occupation, apartheid system and ongoing dispossession of Palestine. Hasbara include various forms of communication, such as media outreach, social media campaigns, and other strategies to shape public opinion in favour of the Israeli state, and involves manipulation of information, spreading propaganda, and stifling dissenting voices.</span>
+                <br /><br />
                 <h2>Claims</h2>
                 <div class="claim-link"><Link to="/tracker?filter=Forty%20beheaded%20babies">Forty beheaded babies</Link></div><br />
                 

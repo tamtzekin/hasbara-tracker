@@ -40,7 +40,7 @@
 
 a:hover {
     cursor: crosshair;
-    text-decoration: dashed underline;
+    /* text-decoration: dashed underline; */
 }
 
 h1.homepage-heading {
@@ -69,6 +69,10 @@ body {
     line-height: 23px;
     margin: 15% 26% 5% 29%;
     text-align: left;
+}
+
+.claim-link {
+    text-decoration: dashed underline;
 }
 
 .claims-list {

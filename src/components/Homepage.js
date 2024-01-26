@@ -10,7 +10,7 @@ const Homepage = () => {
     <>
         <span class="header-container">
             <MobileMenu />
-            <h1 class='ht-heading'>HASBARA TRACKER</h1>
+            <h1 class='ht-heading'>Hasbara Tracker</h1>
             <span id="dots">. . . . . . . . . . . . . .</span>
             <NavBar />
         </span>

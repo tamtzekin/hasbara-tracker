@@ -112,6 +112,7 @@ const VolunteerForm = () => {
                                     value={formData.fullName}
                                     onChange={handleChange}
                                     required
+                                    maxLength={50}
                                 />
                             </label>
                             <br />
@@ -125,6 +126,7 @@ const VolunteerForm = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
+                                    maxLength={50}
                                 />
                             </label>
                             <br />
@@ -135,6 +137,8 @@ const VolunteerForm = () => {
                                     name="backgroundAndSkills"
                                     value={formData.backgroundAndSkills}
                                     onChange={handleChange}
+                                    maxLength={250}
+
                                 />
                             </label>
                             <br />
@@ -167,6 +171,7 @@ const VolunteerForm = () => {
                                         name="otherAmountOfHours"
                                         value={formData.otherAmountOfHours}
                                         onChange={handleChange}
+                                        maxLength={10}
                                     />
                                     <br /><br />
                                 </label>
@@ -179,6 +184,7 @@ const VolunteerForm = () => {
                                     name="languageSkill"
                                     value={formData.languageSkill}
                                     onChange={handleChange}
+                                    maxLength={150}
                                 />
                             </label>
                             <br />

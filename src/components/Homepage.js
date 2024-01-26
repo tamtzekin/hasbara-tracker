@@ -26,6 +26,8 @@ const Homepage = () => {
                 <div class="claim-link"><Link to="/tracker?filter=Forty%20beheaded%20babies">Forty beheaded babies</Link></div><br />
                 
                 <em>Coming soon:</em> Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces<br />
+                <br />
+                
                 <em>Coming soon:</em> Israeli state offered fuel to Al-Shifa Hospital and it was refused
                 <br />
             </span>

@@ -110,6 +110,7 @@ details article {
   
 details[open] article {
     animation: fadeIn .4s linear forwards;
+    cursor: default;
 }
 
 @keyframes fadeIn {

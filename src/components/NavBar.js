@@ -8,13 +8,13 @@ const NavBar= () =>{
     return (
         
     <div class="navbar">
-        {location.pathname !== '/about' && (
+        {location.pathname !== '/about' && location.pathname !== '/' && (
             <li>
                 <NavLink to="/about">About</NavLink>
             </li>
         )}
 
-        {location.pathname !== '/tracker' && location.pathname !== '/' && (
+        {location.pathname !== '/tracker' && (
             <li>
                 <NavLink to="/tracker">Tracker</NavLink>
             </li>

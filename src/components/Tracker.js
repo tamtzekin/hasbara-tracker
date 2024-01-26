@@ -1,5 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
+
 
 import './Tracker.css';
 import '../App.css';
@@ -147,7 +149,7 @@ export default function Tracker() {
         <>
             <span class="header-container">
                 <MobileMenu />
-                <h1 class="ht-heading">Hasbara Tracker</h1>
+                <h1 class="ht-heading"><Link to="/">Hasbara Tracker</Link></h1>
                 <span id="dots">. . . . . . . . . . . . . .</span>
                 <NavBar />
             </span>

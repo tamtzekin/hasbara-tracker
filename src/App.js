@@ -16,10 +16,10 @@ const App = () => {
                 <VideoPlayer />
                 <ScrollToTop />
                 <Routes>
-                    <Route path="/" element={<Tracker />} />
+                    <Route path="/" element={<Homepage />} />
+                    <Route path="/tracker" element={<Tracker />} />
                     <Route path="/about" element={<Homepage />} />
                     <Route path="/volunteer" element={<VolunteerForm />} />
-                    <Route path="/tracker" element={<Tracker />} />
                 </Routes>
             </Router>
     </>

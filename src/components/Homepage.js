@@ -23,7 +23,7 @@ const Homepage = () => {
                 <br />
                 <br />
                 <h2>What is hasbara?</h2>
-                <span className="hasbara-about">'Hasbara' is a Hebrew term that translates to 'explanation' or 'public relations' in English. In the context of the Israeli settler project, it refers to public relations efforts aimed at promoting a positive image of the state in relation to its military occupation, apartheid system and ongoing dispossession of Palestine.<br />
+                <span className="hasbara-about">'Hasbara' is a Hebrew term that translates to 'explanation' or 'public relations' in English. It refers to public relations efforts by the Israeli settler project aimed at promoting a positive image of itself by whitewashing its military occupation, apartheid system and ongoing dispossession of Palestine.<br />
                 <br /> Hasbara includes various forms of communication, such as media outreach, social media campaigns, and other strategies to shape public opinion in favour of the Israeli state, and involves manipulation of information, spreading propaganda, and stifling dissenting voices.</span>
                 <br /><br />
                 <h2>Claims</h2>

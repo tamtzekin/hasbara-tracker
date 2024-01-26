@@ -50,8 +50,8 @@ const data = [
         sources: [
             {
                 sourceText: 'i24NEWS',
-                sourceLink: 'https://www.hasbaratracker.com/i24NEWS_10Oct.mp4',
-                videoLink: '/i24NEWS_10Oct.mp4',
+                sourceLink: 'https://www.hasbaratracker.com/i24_10Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/i24_10Oct.mp4',
             },
             {
                 sourceText: '@Nicole_Zedek on X',
@@ -78,8 +78,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',    
-                sourceLink: 'https://www.hasbaratracker.com/CNN_NicRobertson_10Oct.mp4',
-                videoLink: '/IG_NicRobertson_10Oct.mp4',
+                sourceLink: 'https://www.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
             },
         ]
     },
@@ -102,7 +102,7 @@ const data = [
             {
                 sourceText: '@IsraelMFA on YouTube',    
                 sourceLink: 'https://www.hasbaratracker.com/IsraelMFA_11Oct.mp4',
-                videoLink: '/IsraelMFA_11Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/IsraelMFA_11Oct.mp4',
             },
         ]
     },
@@ -148,7 +148,7 @@ const data = [
             {
                 sourceText: 'Fox News',
                 sourceLink: 'https://www.hasbaratracker.com/Fox_Biden_10Oct.mp4',
-                videoLink: '/Fox_Biden_10Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/Fox_Biden_10Oct.mp4',
             },
         ]
     },
@@ -192,7 +192,7 @@ const data = [
             {
                 sourceText: 'CNN',
                 sourceLink: 'https://www.hasbaratracker.com/CNNTV_11Oct.mp4',
-                videoLink: '/CNNTV_11Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/CNNTV_11Oct.mp4',
             },
         ]
     },
@@ -236,7 +236,7 @@ const data = [
             {
                 sourceText: 'LBC',
                 sourceLink: 'https://www.hasbaratracker.com/LBC_11Oct.mp4',
-                videoLink: '/LBC_11Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/LBC_11Oct.mp4',
             },
         ]
     },    
@@ -325,7 +325,7 @@ const data = [
             {
                 sourceText: 'Daily Mail',
                 sourceLink: 'https://www.hasbaratracker.com/GolanVach_12Oct.mp4',
-                videoLink: '/GolanVach_12Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/GolanVach_12Oct.mp4',
             },
         ]
     },    
@@ -413,7 +413,7 @@ const data = [
             {
                 sourceText: '6abc Philadelphia',
                 sourceLink: 'https://www.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
-                videoLink: '/6abc_YossiLandau_17Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
             },
         ]
     },    
@@ -455,8 +455,8 @@ const data = [
         sources: [
             {
                 sourceText: '@Israel on X',
-                sourceLink: 'https://archive.ph/smhK5',
-                videoLink: '/GolanVach_12Oct.mp4',
+                sourceLink: 'https://www.hasbaratracker.com/GolanVach_12Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/GolanVach_12Oct.mp4',
             },
         ]
     },    
@@ -478,7 +478,7 @@ const data = [
             {
                 sourceText: 'New York Post',
                 sourceLink: 'https://www.hasbaratracker.com/EliBeer_28Oct.mp4',
-                videoLink: '/EliBeer_28Oct.mp4',
+                videoLink: 'https://www.hasbaratracker.com/EliBeer_28Oct.mp4',
             },
         ]
     },    

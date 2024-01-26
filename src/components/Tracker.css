@@ -100,7 +100,7 @@ button {
     border: solid 0.5px;
     padding: 5% 12% 5% 12%;
     border-radius: 3px;
-    background: #DDDDDD;
+    background: #ADFF99;
 }
 
 .debunk-tag {
@@ -108,7 +108,7 @@ button {
     border: solid 0.5px;
     padding: 6% 13% 6% 13%;
     border-radius: 3px;
-    background: #00F0FF;
+    background: #00C908;
 }
 
 details article {

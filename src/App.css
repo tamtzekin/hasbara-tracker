@@ -52,6 +52,10 @@ h1.homepage-heading {
     width: 100%;
   }
 
+h1 a:hover {
+    text-decoration: none;
+}
+
 h2 {
     text-align: left;
     font-family: 'HelveticaNeue_Medium';

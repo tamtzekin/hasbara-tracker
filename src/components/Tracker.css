@@ -93,14 +93,14 @@ button {
     border: solid 0.5px;
     padding: 5% 21% 5% 21%;
     border-radius: 3px;
-    background: #05FF00;
+    background: #94ff94;
 }
 
 .context-tag {
     border: solid 0.5px;
     padding: 5% 12% 5% 12%;
     border-radius: 3px;
-    background: #6FFFA0;
+    background: #80ffcc;
 }
 
 .debunk-tag {
@@ -108,7 +108,7 @@ button {
     border: solid 0.5px;
     padding: 6% 13% 6% 13%;
     border-radius: 3px;
-    background: #00FFE0;
+    background: #33ff7d;
 }
 
 details article {

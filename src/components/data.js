@@ -587,9 +587,8 @@ const data = [
                 videoLink: '',
             },
         ]
-    },
 
-     {
+    {
         claimTag: 'Forty beheaded babies',
         date: '21 Jan 2024',
         claim: {
@@ -597,9 +596,9 @@ const data = [
             claimClass: 'debunk-tag',
         },
         description: {
-            summary: 'Israeli soldier made up eight babies killed in Be\'eri and no elderly woman named Jania exists',
+            summary: 'Israeli soldier made up eight babies killed in Be'eri and no elderly woman named Jania exists',
             summaryClass: 'expand-text',
-            details: 'A spokesperson for Kibbutz Be\'eri denied the claims by the IOF commander Guy Basson: 'The cases described... regarding eight babies who were murdered in the daycare centre and regarding a Holocaust survivor named Jania who was murdered on October 7 didn/'t happen'.',
+            details: 'A spokesperson for Kibbutz Be'eri denied the claims by the IOF commander Guy Basson: 'The cases described... regarding eight babies who were murdered in the daycare centre and regarding a Holocaust survivor named Jania who was murdered on October 7 didn't happen'.',
         },
         sources: [
             {
@@ -608,7 +607,8 @@ const data = [
                 videoLink: '',
             },
         ]
-    },
+
+
 
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)

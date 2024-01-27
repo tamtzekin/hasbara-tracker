@@ -585,14 +585,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Channel 14',
-                sourceLink: 'https://www.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
+                sourceLink: 'https://archive.ph/cOJQW',
                 videoLink: 'https://www.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
-            },
-
-            {
-                sourceText: 'Archive link',
-                sourceLink: 'https://archive.ph/YFhfZ',
-                videoLink: '',
             },
         ]
     },
@@ -651,7 +645,5 @@ const data = [
     // },
 
 ]
-$ git rm --cached
-$ git commit --amend -CHEAD
-$ git push
+
 export default data;

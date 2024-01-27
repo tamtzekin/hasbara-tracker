@@ -568,6 +568,8 @@ const data = [
                 videoLink: '',
             },
         ]
+     },
+
     {
         claimTag: 'Forty beheaded babies',
         date: '20 Jan 2024',
@@ -587,6 +589,8 @@ const data = [
                 videoLink: '',
             },
         ]
+    },
+
     {
         claimTag: 'Forty beheaded babies',
         date: '21 Jan 2024',
@@ -606,8 +610,7 @@ const data = [
                 videoLink: '',
             },
         ]
-
-
+    },
 
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)

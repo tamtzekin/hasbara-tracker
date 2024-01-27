@@ -549,6 +549,7 @@ const data = [
         ]
     },    
     
+    {
         claimTag: 'Forty beheaded babies',
         date: '26 Dec 2023',
         claim: {
@@ -586,7 +587,6 @@ const data = [
                 videoLink: '',
             },
         ]
-
     },
 
      {
@@ -597,9 +597,9 @@ const data = [
             claimClass: 'debunk-tag',
         },
         description: {
-            summary: 'Israeli soldier made up eight babies killed in Be'eri and no elderly woman named Jania exists',
+            summary: 'Israeli soldier made up eight babies killed in Be\'eri and no elderly woman named Jania exists',
             summaryClass: 'expand-text',
-            details: 'A spokesperson for Kibbutz Be'eri denied the claims by the IOF commander Guy Basson: 'The cases described... regarding eight babies who were murdered in the daycare centre and regarding a Holocaust survivor named Jania who was murdered on October 7 didn't happen'.',
+            details: 'A spokesperson for Kibbutz Be\'eri denied the claims by the IOF commander Guy Basson: 'The cases described... regarding eight babies who were murdered in the daycare centre and regarding a Holocaust survivor named Jania who was murdered on October 7 didn/'t happen'.',
         },
         sources: [
             {
@@ -610,26 +610,6 @@ const data = [
         ]
     },
 
-    {
-        claimTag: 'Al Ahli',
-        date: '26 Dec 2023',
-        claim: {
-            claimText: 'Claim',
-            claimClass: 'claim-tag',
-        },
-        description: {
-            summary: 'Newsweek publishes an opinion article headlined ‘I Saw the Children Hamas Beheaded With My Own Eyes. Shame on Queen Rania’',
-            summaryClass: 'expand-text',
-            details: 'A pro-Israel British physician published an opinion article in Newsweek which repeated the debunked claim of beheaded babies in the headline. The body of the article does not address the claim in the headline, and repeats unsubstantiated and dubious Israeli claims.',
-        },
-        sources: [
-            {
-                sourceText: 'Newsweek',
-                sourceLink: 'https://archive.ph/vzLEo',
-                videoLink: '',
-            },
-        ]
-    },    
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)
     // {

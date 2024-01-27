@@ -492,15 +492,15 @@ const data = [
             claimClass: 'claim-tag',
         },
         description: {
-            summary: 'US President Joe Biden repeats claims following meeting with China’s President Xi Jinping',
+            summary: 'US President Joe Biden repeats beheaded baby claims during APEC press conference',
             summaryClass: 'expand-text',
-            details: 'At a press conference on 15 November, 2023, Biden again repeats the debunked claim that Palestinian resistance fighters cut off babies’ heads and burned women and children alive.<br /><br />‘Hamas has already said publicly that they plan on attacking Israel again, like they did before, to where they were cutting babies’ heads off to burning women and children alive.’',
+            details: 'At a press conference on 15 November, 2023, Biden again repeats the debunked claim that Palestinian resistance fighters cut off babies’ heads and burned women and children alive.<br /><br />‘Hamas has already said publicly that they plan on attacking Israel again, like they did before, to where they were cutting babies’ heads off to burning women and children alive.’ Biden’s response is from 12:54 – 13:56.',
         },
         sources: [
             {
-                sourceText: 'The Intercept',
-                sourceLink: 'https://archive.is/DK1ee',
-                videoLink: '',
+                sourceText: 'C-SPAN',
+                sourceLink: 'https://archive.ph/FBX9w',
+                videoLink: 'https://www.hasbaratracker.com/CSPAN_Biden_15Nov.mp4',
             },
         ]
     },    
@@ -586,7 +586,7 @@ const data = [
             {
                 sourceText: 'Channel 14',
                 sourceLink: 'https://archive.ph/cOJQW',
-                videoLink: '',
+                videoLink: 'https://www.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
             },
         ]
     },

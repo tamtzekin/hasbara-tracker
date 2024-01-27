@@ -505,7 +505,7 @@ const data = [
         ]
     },    
     
-
+     
     {
         claimTag: 'Forty beheaded babies',
         date: '4 Dec 2023',

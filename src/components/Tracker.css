@@ -28,7 +28,7 @@ a[target="_blank"]:hover::after {
 }
 
 body {
-    background-color: #cbcbcb;
+    background-color: #dadada;
     /* font-size: 1.15em; */
     margin: 5% 5% 5% 5%;
 }
@@ -342,7 +342,7 @@ ul {
         margin-left: 16.3%;
         vertical-align: 0;
         border-radius: 3px;
-        background: #96bfe6;
+        background: #cbcbcb;
         width: 43%;
         font-style: normal;
         vertical-align: center;

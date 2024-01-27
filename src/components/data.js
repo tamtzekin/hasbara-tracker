@@ -549,8 +549,6 @@ const data = [
         ]
     },    
     
-
-    {
         claimTag: 'Forty beheaded babies',
         date: '26 Dec 2023',
         claim: {
@@ -569,8 +567,49 @@ const data = [
                 videoLink: '',
             },
         ]
-    },   
-    
+    {
+        claimTag: 'Forty beheaded babies',
+        date: '20 Jan 2024',
+        claim: {
+            claimText: 'Claim',
+            claimClass: 'claim-tag',
+        },
+        description: {
+            summary: 'Israeli soldier claims he saw eight babies and elderly woman named Jania killed in Be'eri',
+            summaryClass: 'expand-text',
+            details: 'In an interview with the Israeli news channel Channel 14, an Israel Occupation Forces commander for the Kfir Brigade, Guy Basson, told interviewer Erel Segal that eight babies were killed in a nursery school, along with a Holocaust survivor with an Auschwitz tattoo named Jania.<br /><br />Guy Basson said (translated from Hebrew to English): 'We arrive in Kibbutz Be'eri, and there I encounter two main images of the battle (and the) enemy's brutality. One is a nursery school, with innocent children. They were butchered. Killed. You see the children inside the house? Eight babies. Eight babies died. And another image that caught my attention is when I saw Jania, may she rest in peace, an elderly woman from Kibbutz Be’eri, and I see the number engraved on her arm. An you say, she went through the Holocaust in Auschwitz, and in the end died in Kibbutz Be’eri. That’s not something that… You can’t even understand it.'',
+        },
+        sources: [
+            {
+                sourceText: 'Channel 14',
+                sourceLink: 'https://archive.ph/cOJQW',
+                videoLink: '',
+            },
+        ]
+
+    },
+
+     {
+        claimTag: 'Forty beheaded babies',
+        date: '21 Jan 2024',
+        claim: {
+            claimText: 'Debunk',
+            claimClass: 'debunk-tag',
+        },
+        description: {
+            summary: 'Israeli soldier made up eight babies killed in Be'eri and no elderly woman named Jania exists',
+            summaryClass: 'expand-text',
+            details: 'A spokesperson for Kibbutz Be'eri denied the claims by the IOF commander Guy Basson: 'The cases described... regarding eight babies who were murdered in the daycare centre and regarding a Holocaust survivor named Jania who was murdered on October 7 didn't happen'.',
+        },
+        sources: [
+            {
+                sourceText: 'Ha’aretz',
+                sourceLink: 'https://archive.ph/YFhfZ',
+                videoLink: '',
+            },
+        ]
+    },
+
     {
         claimTag: 'Al Ahli',
         date: '26 Dec 2023',

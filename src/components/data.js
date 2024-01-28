@@ -2,6 +2,7 @@
 const data = [
     
     {
+        
         claimTag: 'Forty beheaded babies',
         date: '1948',
         claim: {
@@ -585,7 +586,7 @@ const data = [
         sources: [
             {
                 sourceText: 'Channel 14',
-                sourceLink: 'https://archive.ph/cOJQW',
+                sourceLink: 'https://archive.ph/DpBWI',
                 videoLink: 'https://www.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
             },
         ]
@@ -611,6 +612,26 @@ const data = [
             },
         ]
     },
+    {
+    claimTag: 'Forty beheaded babies',
+    date: '22 Jan 2024',
+    claim: {
+        claimText: 'Debunk',
+        claimClass: 'debunk-tag',
+    },
+    description: {
+        summary: 'Israeli media commentator questions why false claims made about murdered babies',
+        summaryClass: '',
+        details: 'A presenter for the Israeli news channel Channel 13, Raviv Drucker, questions why IOF soldiers continue to make false claims about murdered babies, from beheaded and burnt babies, to babies hung on clothelines, to a pregnant woman being cut open. Guest Mickey Rosenthal, a member of the Israeli state’s Labor Party, stated: ‘Maybe they heard it as a rumour...but, and the most important thing to say in this context, the war is not only military and not only political, it’s mainly a media (war).’',
+    },
+    sources: [
+        {
+            sourceText: 'X',
+            sourceLink: 'https://twitter.com/RavivDrucker/status/1749355249922351352',
+            videoLink: 'https://www.hasbaratracker.com/Channel13_21Jan.mp4',
+        },
+    ]
+}
 
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)

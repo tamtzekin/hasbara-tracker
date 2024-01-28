@@ -52,11 +52,11 @@ const MobileMenu = () => {
                     </div>
 
                     <Link to="/" onClick={closeModal}>
-                        Tracker
+                        About
                     </Link>
 
-                    <Link to="/about" onClick={closeModal}>
-                        About
+                    <Link to="/tracker" onClick={closeModal}>
+                        Tracker
                     </Link>
 
                     <Link to="/volunteer" onClick={closeModal}>

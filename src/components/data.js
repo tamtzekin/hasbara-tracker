@@ -500,8 +500,8 @@ const data = [
         sources: [
             {
                 sourceText: 'C-SPAN',
-                sourceLink: 'https://archive.ph/FBX9w',
-                videoLink: 'https://www.hasbaratracker.com/CSPAN_Biden_15Nov.mp4',
+                sourceLink: 'https://www.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
+                videoLink: 'https://www.hasbaratracker.com/20231015_CSPAN_BidenAPEC_preview.mp4',
             },
         ]
     },    

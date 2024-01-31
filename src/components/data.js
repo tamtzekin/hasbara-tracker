@@ -324,9 +324,9 @@ const data = [
         },
         sources: [
             {
-                sourceText: 'Daily Mail',
-                sourceLink: 'https://www.hasbaratracker.com/GolanVach_12Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/GolanVach_12Oct.mp4',
+                sourceText: '@IDF on X',
+                sourceLink: 'https://www.hasbaratracker.com/20231012_JonathanConricusBriefing.mp4',
+                videoLink: 'https://www.hasbaratracker.com/20231012_JonathanConricusBriefing_preview.mp4',
             },
         ]
     },    

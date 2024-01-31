@@ -579,7 +579,7 @@ const data = [
             claimClass: 'claim-tag',
         },
         description: {
-            summary: 'Israeli soldier claims he saw eight babies and elderly woman named Jania killed in Be’eri’',
+            summary: 'Israeli soldier claims he saw eight babies and elderly woman named Jania killed in Be’eri',
             summaryClass: 'expand-text',
             details: 'In an interview with the Israeli news channel Channel 14, an Israel Occupation Forces commander for the Kfir Brigade, Guy Basson, told interviewer Erel Segal that eight babies were killed in a nursery school, along with a Holocaust survivor with an Auschwitz tattoo named Jania.<br /><br /> Basson said (translated from Hebrew to English): ‘We arrive in Kibbutz Be’eri, and there I encounter two main images of the battle (and the) enemy’s brutality. One is a nursery school, with innocent children. They were butchered. Killed. You see the children inside the house? Eight babies. Eight babies died. And another image that caught my attention is when I saw Jania, may she rest in peace, an elderly woman from Kibbutz Be’eri, and I see the number engraved on her arm. An you say, she went through the Holocaust in Auschwitz, and in the end died in Kibbutz Be’eri. That’s not something that… You can’t even understand it.’',
         },
@@ -602,7 +602,7 @@ const data = [
         description: {
             summary: 'Israeli soldier made up eight babies killed in Be’eri and no elderly woman named Jania exists',
             summaryClass: 'expand-text',
-            details: 'A spokesperson for Kibbutz Be’eri denied the claims by the IOF commander Guy Basson: ‘The cases described... regarding eight babies who were murdered in the daycare centre and regarding a Holocaust survivor named Jania who was murdered on October 7 didn’t happen’.',
+            details: 'A spokesperson for Kibbutz Be’eri denied the claims by the IOF commander Guy Basson: ‘The cases described... regarding eight babies who were murdered in the daycare centre and regarding a Holocaust survivor named Jania who was murdered on October 7 didn’t happen’.<br /><br />Guest Mickey Rosenthal, a member of the Israeli state’s Labor Party, stated: ‘Maybe they heard it as a rumour...but, and the most important thing to say in this context, the war is not only military and not only political, itæs mainly a media (war).’',
         },
         sources: [
             {
@@ -621,15 +621,15 @@ const data = [
         claimClass: 'debunk-tag',
     },
     description: {
-        summary: 'Israeli media commentator questions why false claims made about murdered babies',
+        summary: 'Israeli media commentator questions why false claims about murdered babies were made',
         summaryClass: '',
-        details: 'A presenter for the Israeli news channel Channel 13, Raviv Drucker, questions why IOF soldiers continue to make false claims about murdered babies, from beheaded and burnt babies, to babies hung on clothelines, to a pregnant woman being cut open. Guest Mickey Rosenthal, a member of the Israeli state’s Labor Party, stated: ‘Maybe they heard it as a rumour...but, and the most important thing to say in this context, the war is not only military and not only political, it’s mainly a media (war).’',
+        details: 'A presenter for the Israeli news channel Channel 13, Raviv Drucker, questions why IOF soldiers continue to make false claims about murdered babies, from beheaded and burnt babies, to babies hung on clothelines, to a pregnant woman being cut open.<br /><br />Guest Mickey Rosenthal, a member of the Israeli state’s Labor Party, stated: ‘Maybe they heard it as a rumour...but, and the most important thing to say in this context, the war is not only military and not only political, it’s mainly a media (war).’',
     },
     sources: [
         {
-            sourceText: 'X',
+            sourceText: '@RavivDrucker on X',
             sourceLink: 'https://twitter.com/RavivDrucker/status/1749355249922351352',
-            videoLink: 'https://www.hasbaratracker.com/Channel13_21Jan.mp4',
+            videoLink: 'https://www.hasbaratracker.com/20240122_Channel13.mp4',
         },
     ]
 },

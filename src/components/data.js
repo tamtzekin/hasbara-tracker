@@ -320,7 +320,7 @@ const data = [
         description: {
             summary: 'IOF spokesperson says ‘relatively confident’ that babies were beheaded',
             summaryClass: 'expand-text',
-            details: 'In a video shared by the official IOF account on X (formerly Twitter), spokesperson Jonathon Conricus claimed Palestinian resistance fighters had ‘likely’ carried out decapitations of babies in the Be’eri kibbutz.<br /><br />‘We got very very disturbing reports that came from the ground that there were babies that had been beheaded… I think we can now say with relative confidence that unfortunately this is what happened in Be’eri.’',
+            details: 'In a video shared by the official IOF account on X (formerly Twitter), spokesperson Jonathan Conricus claimed Palestinian resistance fighters had ‘likely’ carried out decapitations of babies in the Be’eri kibbutz.<br /><br />‘We got very very disturbing reports that came from the ground that there were babies that had been beheaded… I think we can now say with relative confidence that unfortunately this is what happened in Be’eri.’',
         },
         sources: [
             {
@@ -1223,7 +1223,7 @@ const data = [
         {
             sourceText: '@IDF on X',
             sourceLink: 'https://archive.is/lM2b4',
-            videoLink: '',
+            videoLink: 'https://www.hasbaratracker.com/20231019_IDFBriefing_JonathanConricus_preview.mp4',
         }
     ]
 },
@@ -1241,7 +1241,7 @@ const data = [
     description: {
         summary: 'BBC Verify noted inconsistencies in Israeli military spokesperson’s map of Al-Ahli site',
         summaryClass: 'expand-text',
-        details: 'UK state broadcaster‘s fact checking team noted that Israel Occupation Forces (IOF) spokesperson Jonathon Cornicus claimed Palestinian Islamic Jihad (PIJ) rockets were fired from a nearby cemetery next to the hospital. However, the map displayed by Cornicus showed a launch site further away. BBC Verify say they have not been able to locate a cemetery there.',
+        details: 'UK state broadcaster‘s fact checking team noted that Israel Occupation Forces (IOF) spokesperson Jonathan Cornicus claimed Palestinian Islamic Jihad (PIJ) rockets were fired from a nearby cemetery next to the hospital. However, the map displayed by Cornicus showed a launch site further away. BBC Verify say they have not been able to locate a cemetery there.',
     },
     sources: [
         {

@@ -500,8 +500,8 @@ const data = [
         sources: [
             {
                 sourceText: 'C-SPAN',
-                sourceLink: 'https://www.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
-                videoLink: 'https://www.hasbaratracker.com/20231015_CSPAN_BidenAPEC_preview.mp4',
+                sourceLink: 'https://archive.ph/FBX9w',
+                videoLink: 'https://www.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
             },
         ]
     },    
@@ -621,9 +621,9 @@ const data = [
         claimClass: 'debunk-tag',
     },
     description: {
-        summary: 'Israeli media commentator questions why false claims about murdered babies were made',
+        summary: 'Israeli media commentator questions why false claims made about murdered babies',
         summaryClass: '',
-        details: 'A presenter for the Israeli news channel Channel 13, Raviv Drucker, questions why IOF soldiers continue to make false claims about murdered babies, from beheaded and burnt babies, to babies hung on clothelines, to a pregnant woman being cut open.<br /><br />Guest Mickey Rosenthal, a member of the Israeli state’s Labor Party, stated: ‘Maybe they heard it as a rumour...but, and the most important thing to say in this context, the war is not only military and not only political, itæs mainly a media (war).’',
+        details: 'A presenter for the Israeli news channel Channel 13, Raviv Drucker, questions why IOF soldiers continue to make false claims about murdered babies, from beheaded and burnt babies, to babies hung on clothelines, to a pregnant woman being cut open. Guest Mickey Rosenthal, a member of the Israeli state’s Labor Party, stated: ‘Maybe they heard it as a rumour...but, and the most important thing to say in this context, the war is not only military and not only political, it’s mainly a media (war).’',
     },
     sources: [
         {

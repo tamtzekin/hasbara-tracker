@@ -637,9 +637,9 @@ const data = [
 },
 
 
-// Claim: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces
+// Claim: Al-Ahli Hospital attacked
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '12 Oct 2023',
 
@@ -675,7 +675,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '14 Oct 2023',
 
@@ -711,7 +711,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -747,7 +747,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -776,7 +776,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -800,7 +800,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -824,7 +824,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -854,7 +854,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -878,7 +878,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -908,7 +908,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -932,7 +932,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -956,7 +956,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -981,7 +981,7 @@ const data = [
 
 // UP TO HERE /////
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -1005,7 +1005,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -1029,7 +1029,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -1053,7 +1053,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1077,7 +1077,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1101,7 +1101,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1125,7 +1125,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1154,7 +1154,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1183,7 +1183,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1207,7 +1207,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '19 Oct 2023',
 
@@ -1231,7 +1231,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '19 Oct 2023',
 
@@ -1255,7 +1255,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '19 Oct 2023',
 
@@ -1285,7 +1285,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '20 Oct 2023',
 
@@ -1321,7 +1321,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '20 Oct 2023',
 
@@ -1345,7 +1345,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '20 Oct 2023',
 
@@ -1384,7 +1384,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '21 Oct 2023',
 
@@ -1408,7 +1408,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '24 Oct 2023',
 
@@ -1432,7 +1432,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '13 Nov 2023',
 
@@ -1456,7 +1456,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '14 Nov 2023',
 
@@ -1480,7 +1480,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '26 Nov 2023',
 
@@ -1504,7 +1504,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '15 Dec 2023',
 
@@ -1528,7 +1528,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Dec 2023',
 
@@ -1552,7 +1552,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '17 Dec 2023',
 
@@ -1576,7 +1576,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1600,7 +1600,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '19 Dec 2023',
 
@@ -1624,7 +1624,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    claimTag: 'Al-Ahli Hospital attacked',
 
     date: '20 Dec 2023',
 

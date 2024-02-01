@@ -51,8 +51,8 @@ const data = [
         sources: [
             {
                 sourceText: 'i24NEWS',
-                sourceLink: 'https://www.hasbaratracker.com/i24_10Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/i24_10Oct.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/i24_10Oct.mp4',
+                videoLink: 'https://files.hasbaratracker.com/i24_10Oct.mp4',
             },
             {
                 sourceText: '@Nicole_Zedek on X',
@@ -79,8 +79,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',    
-                sourceLink: 'https://www.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
+                videoLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
             },
         ]
     },
@@ -102,8 +102,8 @@ const data = [
         sources: [
             {
                 sourceText: '@IsraelMFA on YouTube',    
-                sourceLink: 'https://www.hasbaratracker.com/IsraelMFA_11Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/IsraelMFA_11Oct.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
+                videoLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
             },
         ]
     },
@@ -148,8 +148,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Fox News',
-                sourceLink: 'https://www.hasbaratracker.com/Fox_Biden_10Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/Fox_Biden_10Oct.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
+                videoLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
             },
         ]
     },
@@ -192,8 +192,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',
-                sourceLink: 'https://www.hasbaratracker.com/CNNTV_11Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/CNNTV_11Oct.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
+                videoLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
             },
         ]
     },
@@ -236,8 +236,8 @@ const data = [
         sources: [
             {
                 sourceText: 'LBC',
-                sourceLink: 'https://www.hasbaratracker.com/LBC_11Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/LBC_11Oct.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
+                videoLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
             },
         ]
     },    
@@ -325,8 +325,8 @@ const data = [
         sources: [
             {
                 sourceText: '@IDF on X',
-                sourceLink: 'https://www.hasbaratracker.com/20231012_JonathanConricusBriefing.mp4',
-                videoLink: 'https://www.hasbaratracker.com/20231012_JonathanConricusBriefing_preview.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing.mp4',
+                videoLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing_preview.mp4',
             },
         ]
     },    
@@ -413,8 +413,8 @@ const data = [
         sources: [
             {
                 sourceText: '6abc Philadelphia',
-                sourceLink: 'https://www.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
+                videoLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
             },
         ]
     },    
@@ -456,8 +456,8 @@ const data = [
         sources: [
             {
                 sourceText: '@Israel on X',
-                sourceLink: 'https://www.hasbaratracker.com/GolanVach_12Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/GolanVach_12Oct.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
+                videoLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
             },
         ]
     },    
@@ -478,8 +478,8 @@ const data = [
         sources: [
             {
                 sourceText: 'New York Post',
-                sourceLink: 'https://www.hasbaratracker.com/EliBeer_28Oct.mp4',
-                videoLink: 'https://www.hasbaratracker.com/EliBeer_28Oct.mp4',
+                sourceLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
+                videoLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
             },
         ]
     },    
@@ -501,7 +501,7 @@ const data = [
             {
                 sourceText: 'C-SPAN',
                 sourceLink: 'https://archive.ph/FBX9w',
-                videoLink: 'https://www.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
+                videoLink: 'https://files.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
             },
         ]
     },    
@@ -587,7 +587,7 @@ const data = [
             {
                 sourceText: 'Channel 14',
                 sourceLink: 'https://archive.ph/DpBWI',
-                videoLink: 'https://www.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
+                videoLink: 'https://files.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
             },
         ]
     },
@@ -629,7 +629,7 @@ const data = [
         {
             sourceText: '@RavivDrucker on X',
             sourceLink: 'https://twitter.com/RavivDrucker/status/1749355249922351352',
-            videoLink: 'https://www.hasbaratracker.com/Channel13_21Jan.mp4',
+            videoLink: 'https://files.hasbaratracker.com/Channel13_21Jan.mp4',
         },
     ]
 },
@@ -768,7 +768,7 @@ const data = [
         {
             sourceText: 'Bloomberg Quicktake',
             sourceLink: 'https://www.youtube.com/watch?v=FUS0LgMG40k',
-            videoLink: 'https://www.hasbaratracker.com/20231017_BloombergQuicktake_AlAhli.mp4',
+            videoLink: 'https://files.hasbaratracker.com/20231017_BloombergQuicktake_AlAhli.mp4',
         }
     ]
 },
@@ -815,8 +815,8 @@ const data = [
     sources: [
         {
             sourceText: '@IsraelDefenseForces on YouTube',
-            sourceLink: 'https://www.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
-            videoLink: 'https://www.hasbaratracker.com/HagariBriefing_preview.mp4',
+            sourceLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
+            videoLink: 'https://files.hasbaratracker.com/HagariBriefing_preview.mp4',
         }
     ]
 },
@@ -870,7 +870,7 @@ const data = [
         {
             sourceText: '@Israel on X',
             sourceLink: 'https://archive.ph/X3PWN',
-            videoLink: 'https://www.hasbaratracker.com/20231017_IsraelonX_RocketVideo.mp4',
+            videoLink: 'https://files.hasbaratracker.com/20231017_IsraelonX_RocketVideo.mp4',
         }
     ]
 },
@@ -924,7 +924,7 @@ const data = [
         {
             sourceText: '@AmbHerzog on X',
             sourceLink: 'https://archive.is/0ufj2',
-            videoLink: 'https://www.hasbaratracker.com/20231017_AmbHerzogX_RocketVideo.mp4',
+            videoLink: 'https://files.hasbaratracker.com/20231017_AmbHerzogX_RocketVideo.mp4',
         }
     ]
 },
@@ -1021,7 +1021,7 @@ const data = [
         {
             sourceText: '@IDF on X',
             sourceLink: 'https://archive.ph/ogpcB',
-            videoLink: 'https://www.hasbaratracker.com/20231017_IDFRocket.mp4',
+            videoLink: 'https://files.hasbaratracker.com/20231017_IDFRocket.mp4',
         }
     ]
 },
@@ -1069,7 +1069,7 @@ const data = [
         {
             sourceText: 'NBC News',
             sourceLink: 'https://archive.ph/9sndh',
-            videoLink: 'https://www.hasbaratracker.com/20231018_NBCNews_Biden.mp4',
+            videoLink: 'https://files.hasbaratracker.com/20231018_NBCNews_Biden.mp4',
         }
     ]
 },
@@ -1117,7 +1117,7 @@ const data = [
         {
             sourceText: '@Israel on X',
             sourceLink: 'https://archive.is/Wm8rM',
-            videoLink: 'https://www.hasbaratracker.com/IsraelAlAhliRecording_18Oct2023.mp4',
+            videoLink: 'https://files.hasbaratracker.com/IsraelAlAhliRecording_18Oct2023.mp4',
         }
     ]
 },
@@ -1145,8 +1145,8 @@ const data = [
         },
         {
             sourceText: '@IsraelDefenseForces on YouTube',
-            sourceLink: 'https://www.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
-            videoLink: 'https://www.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
+            sourceLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
+            videoLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
         }
     ]
 },
@@ -1223,7 +1223,7 @@ const data = [
         {
             sourceText: '@IDF on X',
             sourceLink: 'https://archive.is/lM2b4',
-            videoLink: 'https://www.hasbaratracker.com/20231019_IDFBriefing_JonathanConricus_preview.mp4',
+            videoLink: 'https://files.hasbaratracker.com/20231019_IDFBriefing_JonathanConricus_preview.mp4',
         }
     ]
 },
@@ -1277,7 +1277,7 @@ const data = [
         {
             sourceText: 'i24 News',
             sourceLink: 'https://www.youtube.com/watch?v=jaN8TUSHYyM',
-            videoLink: 'https://www.hasbaratracker.com/20231019_i24_JoelRayburn.mp4',
+            videoLink: 'https://files.hasbaratracker.com/20231019_i24_JoelRayburn.mp4',
         }
     ]
 },
@@ -1366,7 +1366,7 @@ const data = [
         {
             sourceText: '@earshot_ngo on X',
             sourceLink: 'https://archive.is/PsT8f',
-            videoLink: 'https://www.hasbaratracker.com/Earshot1.mp4',
+            videoLink: 'https://files.hasbaratracker.com/Earshot1.mp4',
         },
         {
             sourceText: '@earshot_ngo on X',
@@ -1399,8 +1399,8 @@ const data = [
     sources: [
         {
             sourceText: 'Channel 4',
-            sourceLink: 'https://www.hasbaratracker.com/Channel4_Earshot_21Oct2023.mp4',
-            videoLink: 'https://www.hasbaratracker.com/Channel4_Earshot_preview.mp4',
+            sourceLink: 'https://files.hasbaratracker.com/Channel4_Earshot_21Oct2023.mp4',
+            videoLink: 'https://files.hasbaratracker.com/Channel4_Earshot_preview.mp4',
         }
     ]
 },
@@ -1544,7 +1544,7 @@ const data = [
         {
             sourceText: '@AJEnglish on X',
             sourceLink: 'https://twitter.com/AJEnglish/status/1736408607221051505',
-            videoLink: 'https://www.hasbaratracker.com/AlJazeera_KamalAdwanHospitalAttack.mp4',
+            videoLink: 'https://files.hasbaratracker.com/AlJazeera_KamalAdwanHospitalAttack.mp4',
         }
     ]
 },
@@ -1639,8 +1639,8 @@ const data = [
     sources: [
         {
             sourceText: 'Al Jazeera',
-            sourceLink: 'htthttps://twitter.com/AJEnglish/status/1737451718676230618',
-            videoLink: 'https://www.hasbaratracker.com/AlJazeera_20Dec2023.mp4',
+            sourceLink: 'https://twitter.com/AJEnglish/status/1737451718676230618',
+            videoLink: 'https://files.hasbaratracker.com/AlJazeera_20Dec2023.mp4',
         }
     ]
 },

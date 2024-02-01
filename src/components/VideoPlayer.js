@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 
-const VideoPlayer = ({ videoLink, children }) => {
+const VideoPlayer = ({ videoPreviewLink, children }) => {
 
     // Manages state for whether modal is open or closed
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -90,7 +90,7 @@ const VideoPlayer = ({ videoLink, children }) => {
                         }),
                     },
                     overlay: {
-                        backgroundColor: videoLink ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0)',
+                        backgroundColor: videoPreviewLink ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0)',
                         animationFillMode: 'forwards',
                         zIndex: 1,
                     },
@@ -107,7 +107,7 @@ const VideoPlayer = ({ videoLink, children }) => {
                     }}
                     onEnded={closeModal}
                 >
-                    <source src={videoLink} type="video/mp4" />
+                    <source src={videoPreviewLink} type="video/mp4" />
                     Your browser does not support video previews. Try Safari, Chrome or Firefox instead.
                 </video>
             </Modal>

@@ -89,15 +89,15 @@ export default function Tracker() {
                             <div className="source-heading"></div>
 
                             {row.original.sources.map((source, index) => (
-                                <VideoPlayer key={index} videoLink={source.videoLink}>
+                                <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                     <div key={index} class="source" style={{ marginBottom: '8%' }}>
                                         <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                            {source.videoLink && (
+                                            {source.videoPreviewLink && (
                                                 <>
                                                     <span className='icon-playarrow'></span>
                                                 </>
                                             )}
-                                            {!source.videoLink && (
+                                            {!source.videoPreviewLink && (
                                                 <>
                                                     <span className='icon-link'></span>
                                                 </>

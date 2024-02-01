@@ -18,17 +18,17 @@ const data = [
             {
                 sourceText: '<em>The birth of the Palestinian refugee problem revisited</em> by Benny Morris, 2004',
                 sourceLink: 'https://www.google.co.uk/books/edition/The_Birth_of_the_Palestinian_Refugee_Pro/uM_kFX6edX8C?hl=en&gbpv=1&pg=PR21&printsec=frontcover',
-                videoLink: '',
+                videoPreviewLink: '',
             },
             {
                 sourceText: 'Palestine Remembered',
                 sourceLink: 'https://www.palestineremembered.com/Gaza/index.html',
-                videoLink: '',
+                videoPreviewLink: '',
             },
             {
                 sourceText: '<em>The Palestinian Nakba 1948</em>, by Salman Abu Sitta, 2000 ',
                 sourceLink: 'https://www.plands.org/en/books-reports/books/the-palestinian-nakba-1948/pdf/the-register-of-depopulated-localities-in-palestine',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -52,12 +52,12 @@ const data = [
             {
                 sourceText: 'i24NEWS',
                 sourceLink: 'https://files.hasbaratracker.com/i24_10Oct.mp4',
-                videoLink: 'https://files.hasbaratracker.com/i24_10Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/i24_10Oct.mp4',
             },
             {
                 sourceText: '@Nicole_Zedek on X',
                 sourceLink: 'https://archive.ph/AhYIH',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },
@@ -80,7 +80,7 @@ const data = [
             {
                 sourceText: 'CNN',    
                 sourceLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
-                videoLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
             },
         ]
     },
@@ -103,7 +103,7 @@ const data = [
             {
                 sourceText: '@IsraelMFA on YouTube',    
                 sourceLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
-                videoLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
             },
         ]
     },
@@ -126,7 +126,7 @@ const data = [
             {
                 sourceText: 'CBS News',
                 sourceLink: 'https://archive.ph/RFI9h',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },
@@ -149,7 +149,7 @@ const data = [
             {
                 sourceText: 'Fox News',
                 sourceLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
-                videoLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
             },
         ]
     },
@@ -171,7 +171,7 @@ const data = [
             {
                 sourceText: 'CNN',
                 sourceLink: 'https://archive.ph/gaDln',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },
@@ -193,7 +193,7 @@ const data = [
             {
                 sourceText: 'CNN',
                 sourceLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
-                videoLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
             },
         ]
     },
@@ -215,7 +215,7 @@ const data = [
             {
                 sourceText: 'Insider',
                 sourceLink: 'https://archive.ph/Otjey',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -237,7 +237,7 @@ const data = [
             {
                 sourceText: 'LBC',
                 sourceLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
-                videoLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
             },
         ]
     },    
@@ -258,12 +258,12 @@ const data = [
             {
                 sourceText: 'Middle East Eye',
                 sourceLink: 'https://archive.ph/3Rybl',
-                videoLink: '',
+                videoPreviewLink: '',
             },
             {
                 sourceText: 'KKL-JNF Board of Directors',
                 sourceLink: 'https://archive.is/twsrq',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -284,7 +284,7 @@ const data = [
             {
                 sourceText: '@sarasidnerCNN on X',
                 sourceLink: 'https://archive.is/rom8W',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -305,7 +305,7 @@ const data = [
             {
                 sourceText: 'CNN',
                 sourceLink: 'https://archive.ph/icFaG',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -326,7 +326,7 @@ const data = [
             {
                 sourceText: '@IDF on X',
                 sourceLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing.mp4',
-                videoLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing_preview.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing_preview.mp4',
             },
         ]
     },    
@@ -348,7 +348,7 @@ const data = [
             {
                 sourceText: '@Jerusalem_Post on X',
                 sourceLink: 'https://archive.ph/9c9L0',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -370,7 +370,7 @@ const data = [
             {
                 sourceText: 'NBC News',
                 sourceLink: 'https://archive.ph/MxZTk',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },
@@ -392,7 +392,7 @@ const data = [
             {
                 sourceText: 'Al Jazeera',
                 sourceLink: 'https://archive.ph/RNLTs',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -414,7 +414,7 @@ const data = [
             {
                 sourceText: '6abc Philadelphia',
                 sourceLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
-                videoLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
             },
         ]
     },    
@@ -436,7 +436,7 @@ const data = [
             {
                 sourceText: 'The White House',
                 sourceLink: 'https://archive.ph/yqnZT',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -457,7 +457,7 @@ const data = [
             {
                 sourceText: '@Israel on X',
                 sourceLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
-                videoLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
             },
         ]
     },    
@@ -479,7 +479,7 @@ const data = [
             {
                 sourceText: 'New York Post',
                 sourceLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
-                videoLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
             },
         ]
     },    
@@ -501,7 +501,7 @@ const data = [
             {
                 sourceText: 'C-SPAN',
                 sourceLink: 'https://archive.ph/FBX9w',
-                videoLink: 'https://files.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
             },
         ]
     },    
@@ -523,7 +523,7 @@ const data = [
             {
                 sourceText: 'Ha’aretz',
                 sourceLink: 'https://archive.ph/H6rAm',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -545,7 +545,7 @@ const data = [
             {
                 sourceText: 'The White House',
                 sourceLink: 'https://archive.ph/cOJQW',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },    
@@ -566,7 +566,7 @@ const data = [
             {
                 sourceText: 'Newsweek',
                 sourceLink: 'https://archive.ph/vzLEo',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
      },
@@ -587,7 +587,7 @@ const data = [
             {
                 sourceText: 'Channel 14',
                 sourceLink: 'https://archive.ph/DpBWI',
-                videoLink: 'https://files.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
             },
         ]
     },
@@ -608,7 +608,7 @@ const data = [
             {
                 sourceText: 'Ha’aretz',
                 sourceLink: 'https://archive.ph/YFhfZ',
-                videoLink: '',
+                videoPreviewLink: '',
             },
         ]
     },
@@ -629,7 +629,7 @@ const data = [
         {
             sourceText: '@RavivDrucker on X',
             sourceLink: 'https://twitter.com/RavivDrucker/status/1749355249922351352',
-            videoLink: 'https://files.hasbaratracker.com/Channel13_21Jan.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/Channel13_21Jan.mp4',
         },
     ]
 },
@@ -655,19 +655,19 @@ const data = [
         {
             sourceText: 'Al Jazeera',
             sourceLink: 'https://archive.is/KQ76U',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: 'The Washington Post',
             sourceLink: 'https://archive.ph/rCJbc',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: 'USAF 2013–2019 Airpower Statistics',
             sourceLink: 'https://archive.ph/rYSHV',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -691,19 +691,19 @@ const data = [
         {
             sourceText: 'The Palestine Chronicle',
             sourceLink: 'https://archive.is/XIzL9',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: 'Al Jazeera',
             sourceLink: 'https://archive.ph/QOf8t',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: 'The Washington Post',
             sourceLink: 'https://archive.ph/Gksxt',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -727,19 +727,19 @@ const data = [
         {
             sourceText: 'Defense for Children International Palestine',
             sourceLink: 'https://archive.ph/W2Z4i',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: 'Ministry of Health Gaza',
             sourceLink: 'https://archive.ph/5bFAE',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: 'United Nations',
             sourceLink: 'https://archive.ph/x36PM',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -763,12 +763,12 @@ const data = [
         {
             sourceText: 'The Times of Israel',
             sourceLink: 'https://archive.ph/szvXg',
-            videoLink: '',
+            videoPreviewLink: '',
         },
         {
             sourceText: 'Bloomberg Quicktake',
             sourceLink: 'https://www.youtube.com/watch?v=FUS0LgMG40k',
-            videoLink: 'https://files.hasbaratracker.com/20231017_BloombergQuicktake_AlAhli.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/20231017_BloombergQuicktake_AlAhli.mp4',
         }
     ]
 },
@@ -792,7 +792,7 @@ const data = [
         {
             sourceText: '@IDFSpokesperson on X',
             sourceLink: 'https://archive.ph/uO5fn',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -816,7 +816,7 @@ const data = [
         {
             sourceText: '@IsraelDefenseForces on YouTube',
             sourceLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
-            videoLink: 'https://files.hasbaratracker.com/HagariBriefing_preview.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/HagariBriefing_preview.mp4',
         }
     ]
 },
@@ -840,13 +840,13 @@ const data = [
         {
             sourceText: '@HananyaNaftali on X',
             sourceLink: 'https://archive.ph/Zkbxb',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: '@HananyaNaftali on X',
             sourceLink: 'https://archive.ph/wFeel',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -870,7 +870,7 @@ const data = [
         {
             sourceText: '@Israel on X',
             sourceLink: 'https://archive.ph/X3PWN',
-            videoLink: 'https://files.hasbaratracker.com/20231017_IsraelonX_RocketVideo.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/20231017_IsraelonX_RocketVideo.mp4',
         }
     ]
 },
@@ -894,13 +894,13 @@ const data = [
         {
             sourceText: '@Israel on X',
             sourceLink: 'https://archive.ph/X3PWN',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: '@AricToler on X',
             sourceLink: 'https://archive.ph/RWlGg',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -924,7 +924,7 @@ const data = [
         {
             sourceText: '@AmbHerzog on X',
             sourceLink: 'https://archive.is/0ufj2',
-            videoLink: 'https://files.hasbaratracker.com/20231017_AmbHerzogX_RocketVideo.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/20231017_AmbHerzogX_RocketVideo.mp4',
         }
     ]
 },
@@ -948,7 +948,7 @@ const data = [
         {
             sourceText: '@AmbHerzog on X',
             sourceLink: 'https://archive.ph/DMiox',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -972,7 +972,7 @@ const data = [
         {
             sourceText: 'The Times of Israel',
             sourceLink: 'https://archive.ph/VjZvc',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -997,7 +997,7 @@ const data = [
         {
             sourceText: '@HananyaNaftali on X',
             sourceLink: 'https://archive.ph/k3VEH',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1021,7 +1021,7 @@ const data = [
         {
             sourceText: '@IDF on X',
             sourceLink: 'https://archive.ph/ogpcB',
-            videoLink: 'https://files.hasbaratracker.com/20231017_IDFRocket.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/20231017_IDFRocket.mp4',
         }
     ]
 },
@@ -1045,7 +1045,7 @@ const data = [
         {
             sourceText: '@IDFSpokesperson on X',
             sourceLink: 'https://archive.ph/Q8hBt',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1069,7 +1069,7 @@ const data = [
         {
             sourceText: 'NBC News',
             sourceLink: 'https://archive.ph/9sndh',
-            videoLink: 'https://files.hasbaratracker.com/20231018_NBCNews_Biden.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/20231018_NBCNews_Biden.mp4',
         }
     ]
 },
@@ -1093,7 +1093,7 @@ const data = [
         {
             sourceText: 'The Guardian',
             sourceLink: 'https://archive.is/NOIAT',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1117,7 +1117,7 @@ const data = [
         {
             sourceText: '@Israel on X',
             sourceLink: 'https://archive.is/Wm8rM',
-            videoLink: 'https://files.hasbaratracker.com/IsraelAlAhliRecording_18Oct2023.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/IsraelAlAhliRecording_18Oct2023.mp4',
         }
     ]
 },
@@ -1141,12 +1141,12 @@ const data = [
         {
             sourceText: 'IDF Media Releases',
             sourceLink: 'https://archive.ph/V1Xen',
-            videoLink: '',
+            videoPreviewLink: '',
         },
         {
             sourceText: '@IsraelDefenseForces on YouTube',
             sourceLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
-            videoLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
         }
     ]
 },
@@ -1170,12 +1170,12 @@ const data = [
         {
             sourceText: 'Bellingcat',
             sourceLink: 'https://archive.ph/L3ohJ',
-            videoLink: '',
+            videoPreviewLink: '',
         },
         {
             sourceText: 'IDF Media Releases',
             sourceLink: 'https://archive.ph/to7Az',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1199,7 +1199,7 @@ const data = [
         {
             sourceText: '@NSC_Spox on X',
             sourceLink: 'https://archive.ph/82Sbc',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1223,7 +1223,7 @@ const data = [
         {
             sourceText: '@IDF on X',
             sourceLink: 'https://archive.is/lM2b4',
-            videoLink: 'https://files.hasbaratracker.com/20231019_IDFBriefing_JonathanConricus_preview.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/20231019_IDFBriefing_JonathanConricus_preview.mp4',
         }
     ]
 },
@@ -1247,7 +1247,7 @@ const data = [
         {
             sourceText: 'BBC',
             sourceLink: 'https://archive.ph/ZJYdH',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1271,13 +1271,13 @@ const data = [
         {
             sourceText: 'ABC News',
             sourceLink: 'https://archive.ph/lM2b4',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: 'i24 News',
             sourceLink: 'https://www.youtube.com/watch?v=jaN8TUSHYyM',
-            videoLink: 'https://files.hasbaratracker.com/20231019_i24_JoelRayburn.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/20231019_i24_JoelRayburn.mp4',
         }
     ]
 },
@@ -1301,19 +1301,19 @@ const data = [
         {
             sourceText: '@ForensicArchi on X',
             sourceLink: 'https://archive.ph/i6iZa',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: '@ForensicArchi on X',
             sourceLink: 'https://archive.ph/RdRuI',
-            videoLink: '',
+            videoPreviewLink: '',
         },
 
         {
             sourceText: '@ForensicArchi on X',
             sourceLink: 'https://archive.ph/j8XZR',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1337,7 +1337,7 @@ const data = [
         {
             sourceText: '',
             sourceLink: '',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1361,22 +1361,22 @@ const data = [
         {
             sourceText: '@earshot_ngo on X',
             sourceLink: 'https://archive.is/91aOP',
-            videoLink: '',
+            videoPreviewLink: '',
         },
         {
             sourceText: '@earshot_ngo on X',
             sourceLink: 'https://archive.is/PsT8f',
-            videoLink: 'https://files.hasbaratracker.com/Earshot1.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/Earshot1.mp4',
         },
         {
             sourceText: '@earshot_ngo on X',
             sourceLink: 'https://archive.ph/toLCX',
-            videoLink: '',
+            videoPreviewLink: '',
         },
         {
             sourceText: '@earshot_ngo on X',
             sourceLink: 'https://archive.ph/lDac1',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1400,7 +1400,7 @@ const data = [
         {
             sourceText: 'Channel 4',
             sourceLink: 'https://files.hasbaratracker.com/Channel4_Earshot_21Oct2023.mp4',
-            videoLink: 'https://files.hasbaratracker.com/Channel4_Earshot_preview.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/Channel4_Earshot_preview.mp4',
         }
     ]
 },
@@ -1424,7 +1424,7 @@ const data = [
         {
             sourceText: 'Politico',
             sourceLink: 'https://archive.ph/84ciI',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1448,7 +1448,7 @@ const data = [
         {
             sourceText: 'The Telegraph',
             sourceLink: 'https://archive.ph/fmJMi',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1472,7 +1472,7 @@ const data = [
         {
             sourceText: '@ForensicArchi on X',
             sourceLink: 'https://archive.ph/OF8Lb',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1496,7 +1496,7 @@ const data = [
         {
             sourceText: 'Human Rights Watch',
             sourceLink: 'https://archive.ph/cLgSV',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1520,7 +1520,7 @@ const data = [
         {
             sourceText: 'BBC',
             sourceLink: 'https://archive.ph/WG83l',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1544,7 +1544,7 @@ const data = [
         {
             sourceText: '@AJEnglish on X',
             sourceLink: 'https://twitter.com/AJEnglish/status/1736408607221051505',
-            videoLink: 'https://files.hasbaratracker.com/AlJazeera_KamalAdwanHospitalAttack.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/AlJazeera_KamalAdwanHospitalAttack.mp4',
         }
     ]
 },
@@ -1568,7 +1568,7 @@ const data = [
         {
             sourceText: '@NourNaim88 on X',
             sourceLink: 'https://archive.is/eWTwp',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1592,7 +1592,7 @@ const data = [
         {
             sourceText: '@GhassanAbuSitt1 on X',
             sourceLink: 'https://archive.ph/CiTay',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1616,7 +1616,7 @@ const data = [
         {
             sourceText: 'The New Arab',
             sourceLink: 'https://archive.ph/yDJA2',
-            videoLink: '',
+            videoPreviewLink: '',
         }
     ]
 },
@@ -1640,7 +1640,7 @@ const data = [
         {
             sourceText: 'Al Jazeera',
             sourceLink: 'https://twitter.com/AJEnglish/status/1737451718676230618',
-            videoLink: 'https://files.hasbaratracker.com/AlJazeera_20Dec2023.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/AlJazeera_20Dec2023.mp4',
         }
     ]
 },
@@ -1666,13 +1666,13 @@ const data = [
     //         {
     //             sourceText: '',
     //             sourceLink: '',
-    //             videoLink: '',
+    //             videoPreviewLink: '',
     //         },
     //         // Optional: add more sources, delete if not needed
     //         {
     //             sourceText: '',
     //             sourceLink: '',
-    //             videoLink: '',
+    //             videoPreviewLink: '',
     //         }
     //     ]
     // },

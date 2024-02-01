@@ -91,24 +91,33 @@ export default function Tracker() {
                             {row.original.sources.map((source, index) => (
                                 <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                     <div key={index} class="source" style={{ marginBottom: '8%' }}>
-                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
 
+                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
                                             {/* If there's a video preview available, show a play button icon */}
                                             {source.videoPreviewLink && (
                                                 <>
                                                     <span className='icon-playarrow'></span>
                                                 </>
                                             )}
-                                            
+
                                             {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
                                             {!source.videoPreviewLink && (
                                                 <>
                                                     <span className='icon-link'></span>
                                                 </>
                                             )}
+
                                             <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+
+                                            {source.archiveLink && ( 
+                                                <a href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                    &nbsp;(archive)
+                                                </a>
+                                            )}
                                         </a>
+
                                     </div>
+                                    
                                 </VideoPlayer>
                             ))}
 

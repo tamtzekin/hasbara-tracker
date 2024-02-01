@@ -51,13 +51,15 @@ const data = [
         sources: [
             {
                 sourceText: 'i24NEWS',
-                sourceLink: 'https://files.hasbaratracker.com/i24_10Oct.mp4',
-                videoPreviewLink: 'https://files.hasbaratracker.com/i24_10Oct.mp4',
+                sourceLink: 'https://twitter.com/i24NEWS_EN/status/1711718195025821976',
+                archiveLink: 'https://files.hasbaratracker.com/i24_10Oct.mp4',
+                videoPreviewLink: 'https://files.hasbaratracker.com/i24_10Oct.mp4'
             },
             {
                 sourceText: '@Nicole_Zedek on X',
-                sourceLink: 'https://archive.ph/AhYIH',
-                videoPreviewLink: '',
+                sourceLink: 'https://twitter.com/Nicole_Zedek/status/1711721433968111855',
+                archiveLink: 'https://archive.ph/AhYIH',
+                videoPreviewLink: ''
             },
         ]
     },

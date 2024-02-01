@@ -14,6 +14,12 @@ const NavBar= () =>{
             </li>
         )}
 
+        {location.pathname !== '/claims' && (
+            <li>
+                <NavLink to="/claims">Claims</NavLink>
+            </li>
+        )}
+
         {location.pathname !== '/tracker' && (
             <li>
                 <NavLink to="/tracker">Tracker</NavLink>

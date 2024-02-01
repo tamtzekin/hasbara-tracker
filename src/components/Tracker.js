@@ -115,7 +115,7 @@ export default function Tracker() {
 
                                             {source.archiveLink && ( 
                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                    &nbsp;<div class="archive-link">(archived ver)</div>
+                                                    &nbsp;<div class="archive-link">(archive)</div>
                                                 </a>
                                             )}
                                         </a>

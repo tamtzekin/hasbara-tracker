@@ -33,9 +33,13 @@ export default function Tracker() {
     // Pull all the claims data
     const columns = useMemo(
         () => [
+            // TODO - make clicking it fill the global filter with the Claim value
             {
                 Header: 'Claim',
                 accessor: 'claimTag',
+                Cell: ({ cell }) => (
+                    <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
+                )
             },
             {
                 Header: 'Date',
@@ -111,7 +115,7 @@ export default function Tracker() {
 
                                             {source.archiveLink && ( 
                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                    &nbsp;(archive)
+                                                    &nbsp;<div class="archive-link">(archived ver)</div>
                                                 </a>
                                             )}
                                         </a>

@@ -68,7 +68,6 @@ export default function Tracker() {
                 accessor: (row) => `${row.description.summary} ${row.description.details}`,
                 Cell: ({ row }) => (
                     <>
-                        <div class="details-heading"></div>
                         <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
                             <details>
                                 <summary><u>{row.original.description.summary}</u>

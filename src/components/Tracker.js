@@ -33,10 +33,12 @@ export default function Tracker() {
     // Pull all the claims data
     const columns = useMemo(
         () => [
+            // Claim tag eg. 'Forty beheaded babies'
             {
                 Header: 'Claim',
                 accessor: 'claimTag',
                 Cell: ({ cell }) => (
+                    // TODO: Do we want the claim name clickable or not
                     <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
                 )
             },
@@ -54,6 +56,8 @@ export default function Tracker() {
                     </div>
                 ),
             },
+
+            // Context/Claim/Debunk tag
             {
                 Header: 'What',
                 accessor: (row) => row.claim.claimText,
@@ -82,7 +86,7 @@ export default function Tracker() {
                                             <div className="source-heading"></div>
                                             {row.original.sources.map((source, index) => (
                                                 <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                                    <div key={index} className="source" style={{ marginBottom: '8%' }}>
+                                                    <div key={index} className="source">
                                                         <a href={source.sourceLink} target="_blank" rel="noreferrer">
                                                             {source.videoPreviewLink && (
                                                                 <span className='icon-playarrow'></span>
@@ -93,7 +97,7 @@ export default function Tracker() {
                                                             <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
                                                             {source.archiveLink && (
                                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                    &nbsp;<div className="archive-link">(archive)</div>
+                                                                    &nbsp;<span className="archive-link">(archive)</span>
                                                                 </a>
                                                             )}
                                                         </a>
@@ -124,7 +128,7 @@ export default function Tracker() {
 
                             {row.original.sources.map((source, index) => (
                                 <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                    <div key={index} class="source" style={{ marginBottom: '8%' }}>
+                                    <div key={index} class="source">
 
                                         <a href={source.sourceLink} target="_blank" rel="noreferrer">
                                             {/* If there's a video preview available, show a play button icon */}
@@ -145,7 +149,7 @@ export default function Tracker() {
 
                                             {source.archiveLink && ( 
                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                    &nbsp;<div class="archive-link">(archive)</div>
+                                                    &nbsp;<span class="archive-link">(archive)</span>
                                                 </a>
                                             )}
                                         </a>

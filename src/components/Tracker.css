@@ -13,7 +13,8 @@ a[target="_blank"]:hover::after {
 
 .archive-link {
     color: rgb(96, 96, 96);
-    font-size: 0.8em;
+    font-size: 0.7em;
+    vertical-align: text-bottom;
 }
   
 .arrow {
@@ -266,6 +267,10 @@ li {
     background-position: 10px center;
 }
 
+.source {
+    margin-bottom: 7%
+}
+
 .table-container {
     top: 40px;
     position: relative;
@@ -422,8 +427,9 @@ ul {
         border-bottom: 0.07em dashed black;
     }
 
-    .data-cell sources {
-        margin-bottom: 5%;
+    /* Margin spacing above dotted divider/under final source */
+    .sources {
+        margin-top: 5%;
     }
 
     .debunk-tag {
@@ -478,7 +484,7 @@ ul {
     }
 
     .source {
-        margin-bottom: 10%;
+        margin-bottom: 2%;
     }
 
     .source-heading {
@@ -488,7 +494,7 @@ ul {
         border-radius: 3px;
         width: 15.5%;
         margin-top: 7%;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
         text-align: center;
     }
 

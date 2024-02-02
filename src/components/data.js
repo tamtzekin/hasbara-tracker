@@ -502,8 +502,9 @@ const data = [
         sources: [
             {
                 sourceText: 'C-SPAN',
-                sourceLink: 'https://archive.ph/FBX9w',
-                videoPreviewLink: 'https://files.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
+                sourceLink: 'https://www.c-span.org/video/?531876-1/president-biden-holds-news-conference-apec',
+                archiveLink: 'https://www.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
+                videoLink: 'https://www.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
             },
         ]
     },    
@@ -524,8 +525,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Ha’aretz',
-                sourceLink: 'https://archive.ph/H6rAm',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.haaretz.com/israel-news/2023-12-04/ty-article-magazine/.premium/hamas-committed-documented-atrocities-but-a-few-false-stories-feed-the-deniers/0000018c-34f3-da74-afce-b5fbe24f0000',
+                archiveLink: 'https://archive.ph/H6rAm',
             },
         ]
     },    

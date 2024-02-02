@@ -18,17 +18,15 @@ const data = [
             {
                 sourceText: '<em>The birth of the Palestinian refugee problem revisited</em> by Benny Morris, 2004',
                 sourceLink: 'https://www.google.co.uk/books/edition/The_Birth_of_the_Palestinian_Refugee_Pro/uM_kFX6edX8C?hl=en&gbpv=1&pg=PR21&printsec=frontcover',
-                videoPreviewLink: '',
             },
             {
                 sourceText: 'Palestine Remembered',
                 sourceLink: 'https://www.palestineremembered.com/Gaza/index.html',
-                videoPreviewLink: '',
+                archiveLink: 'https://archive.ph/xCyzu',
             },
             {
                 sourceText: '<em>The Palestinian Nakba 1948</em>, by Salman Abu Sitta, 2000 ',
                 sourceLink: 'https://www.plands.org/en/books-reports/books/the-palestinian-nakba-1948/pdf/the-register-of-depopulated-localities-in-palestine',
-                videoPreviewLink: '',
             },
         ]
     },    
@@ -59,7 +57,6 @@ const data = [
                 sourceText: '@Nicole_Zedek on X',
                 sourceLink: 'https://twitter.com/Nicole_Zedek/status/1711721433968111855',
                 archiveLink: 'https://archive.ph/AhYIH',
-                videoPreviewLink: ''
             },
         ]
     },
@@ -81,7 +78,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',    
-                sourceLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
+                sourceLink: 'https://twitter.com/NickFondacaro/status/1711812499014660462',
+                archiveLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
             },
         ]
@@ -104,7 +102,8 @@ const data = [
         sources: [
             {
                 sourceText: '@IsraelMFA on YouTube',    
-                sourceLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
+                sourceLink: 'https://www.youtube.com/watch?v=Hh8t8sHnTng',
+                archiveLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
             },
         ]
@@ -127,8 +126,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CBS News',
-                sourceLink: 'https://archive.ph/RFI9h',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.cbsnews.com/news/israel-babies-killed-hamas-terror-attack-kibbutz-kfar-aza-first-responders-say/',
+                archiveLink: 'https://archive.ph/RFI9h',
             },
         ]
     },
@@ -150,7 +149,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Fox News',
-                sourceLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
+                sourceLink: 'https://twitter.com/dpatrikarakos/status/1712219633594376581',
+                archiveLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
             },
         ]
@@ -172,8 +172,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',
-                sourceLink: 'https://archive.ph/gaDln',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.cnn.com/2023/10/12/politics/joe-biden-photos-children-hamas-israel/index.html',
+                archiveLink: 'https://archive.ph/gaDln',
             },
         ]
     },
@@ -194,7 +194,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',
-                sourceLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
+                sourceLink: 'https://www.mediaite.com/news/children-were-murdered-full-stop-cnn-anchor-reports-on-horrifying-photos-of-israeli-babies-killed-by-hamas/',
+                archiveLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
             },
         ]
@@ -215,9 +216,9 @@ const data = [
         },
         sources: [
             {
-                sourceText: 'Insider',
-                sourceLink: 'https://archive.ph/Otjey',
-                videoPreviewLink: '',
+                sourceText: 'Business Insider',
+                sourceLink: 'https://www.businessinsider.com/idf-says-wont-back-up-beheaded-babies-disrespectful-2023-10',
+                archiveLink: 'https://archive.ph/Otjey',
             },
         ]
     },    
@@ -238,7 +239,8 @@ const data = [
         sources: [
             {
                 sourceText: 'LBC',
-                sourceLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
+                sourceLink: 'https://www.lbc.co.uk/news/kfar-azza-hamas-attack-babies-children/',
+                archiveLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
             },
         ]
@@ -259,13 +261,13 @@ const data = [
         sources: [
             {
                 sourceText: 'Middle East Eye',
-                sourceLink: 'https://archive.ph/3Rybl',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.middleeasteye.net/news/israel-palestine-huwwara-deadly-settler-riot-politicians-laud',
+                archiveLink: 'https://archive.ph/3Rybl',
             },
             {
                 sourceText: 'KKL-JNF Board of Directors',
-                sourceLink: 'https://archive.is/twsrq',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.kkl-jnf.org/about-kkl-jnf/kkl-jnf-id/our-leadership/kkl-jnf-board-of-directors/',
+                archiveLink: 'https://archive.is/twsrq',
             },
         ]
     },    
@@ -285,8 +287,8 @@ const data = [
         sources: [
             {
                 sourceText: '@sarasidnerCNN on X',
-                sourceLink: 'https://archive.is/rom8W',
-                videoPreviewLink: '',
+                sourceLink: 'https://twitter.com/sarasidnerCNN/status/1712415116363169884',
+                archiveLink: 'https://archive.is/rom8W',
             },
         ]
     },    
@@ -306,8 +308,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',
-                sourceLink: 'https://archive.ph/icFaG',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.cnn.com/2023/10/12/middleeast/israel-hamas-beheading-claims-intl/index.html',
+                archiveLink: 'https://archive.ph/icFaG',
             },
         ]
     },    
@@ -327,7 +329,8 @@ const data = [
         sources: [
             {
                 sourceText: '@IDF on X',
-                sourceLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing.mp4',
+                sourceLink: 'https://twitter.com/IDF/status/1712282365924343910',
+                archiveLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing_preview.mp4',
             },
         ]
@@ -349,8 +352,8 @@ const data = [
         sources: [
             {
                 sourceText: '@Jerusalem_Post on X',
-                sourceLink: 'https://archive.ph/9c9L0',
-                videoPreviewLink: '',
+                sourceLink: 'https://twitter.com/Jerusalem_Post/status/1712460425529372821',
+                archiveLink: 'https://archive.ph/9c9L0',
             },
         ]
     },    
@@ -371,8 +374,8 @@ const data = [
         sources: [
             {
                 sourceText: 'NBC News',
-                sourceLink: 'https://archive.ph/MxZTk',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.nbcnews.com/politics/white-house/biden-deliver-remarks-roundtable-jewish-community-leaders-rcna119865',
+                archiveLink: 'https://archive.ph/MxZTk',
             },
         ]
     },
@@ -393,8 +396,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Al Jazeera',
-                sourceLink: 'https://archive.ph/RNLTs',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.aljazeera.com/opinions/2023/10/13/watching-the-watchdogs-babies-and-truth-die-together-in-israel-palestine',
+                archiveLink: 'https://archive.ph/RNLTs',
             },
         ]
     },    
@@ -415,7 +418,8 @@ const data = [
         sources: [
             {
                 sourceText: '6abc Philadelphia',
-                sourceLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
+                sourceLink: 'https://www.youtube.com/watch?v=4Nn8Y_ulBMI',
+                archiveLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
             },
         ]
@@ -437,8 +441,8 @@ const data = [
         sources: [
             {
                 sourceText: 'The White House',
-                sourceLink: 'https://archive.ph/yqnZT',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.whitehouse.gov/briefing-room/speeches-remarks/2023/10/18/remarks-by-president-biden-on-the-october-7th-terrorist-attacks-and-the-resilience-of-the-state-of-israel-and-its-people-tel-aviv-israel/',
+                archiveLink: 'https://archive.ph/yqnZT',
             },
         ]
     },    
@@ -458,7 +462,8 @@ const data = [
         sources: [
             {
                 sourceText: '@Israel on X',
-                sourceLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
+                sourceLink: 'https://twitter.com/Israel/status/1717553687025815817',
+                archiveLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
             },
         ]
@@ -480,7 +485,8 @@ const data = [
         sources: [
             {
                 sourceText: 'New York Post',
-                sourceLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
+                sourceLink: 'https://nypost.com/2023/11/01/news/head-of-israels-ems-service-describes-horror-of-seeing-babies-slaughtered-by-hamas/',
+                archiveLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
             },
         ]
@@ -547,8 +553,8 @@ const data = [
         sources: [
             {
                 sourceText: 'The White House',
-                sourceLink: 'https://archive.ph/cOJQW',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.whitehouse.gov/briefing-room/speeches-remarks/2023/12/12/remarks-by-president-biden-at-a-campaign-reception-5/',
+                archiveLink: 'https://archive.ph/cOJQW',
             },
         ]
     },    
@@ -568,8 +574,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Newsweek',
-                sourceLink: 'https://archive.ph/vzLEo',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.newsweek.com/i-saw-children-hamas-beheaded-my-own-eyes-shame-queen-rania-opinion-1855472',
+                archiveLink: 'https://archive.ph/vzLEo',
             },
         ]
      },
@@ -589,7 +595,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Channel 14',
-                sourceLink: 'https://archive.ph/DpBWI',
+                sourceLink: 'https://www.youtube.com/watch?v=Nor46pGaiK0',
+                archiveLink: 'https://files.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
             },
         ]
@@ -610,8 +617,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Ha’aretz',
-                sourceLink: 'https://archive.ph/YFhfZ',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.haaretz.com/israel-news/2024-01-21/ty-article/.premium/army-officer-makes-incorrect-claims-on-oct-7-massacre-idf-well-set-record-straight/0000018d-2c67-daf5-a1bf-ac77f9b50000',
+                archiveLink: 'https://archive.ph/YFhfZ',
             },
         ]
     },
@@ -632,6 +639,7 @@ const data = [
         {
             sourceText: '@RavivDrucker on X',
             sourceLink: 'https://twitter.com/RavivDrucker/status/1749355249922351352',
+            archiveLink: 'https://files.hasbaratracker.com/Channel13_21Jan.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/Channel13_21Jan.mp4',
         },
     ]

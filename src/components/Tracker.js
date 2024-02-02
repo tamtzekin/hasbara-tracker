@@ -112,14 +112,13 @@ export default function Tracker() {
                                             )}
 
                                             <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+                                        </a>
 
-                                            {source.archiveLink && ( 
+                                        {source.archiveLink && ( 
                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer">
                                                     &nbsp;<div class="archive-link">(archive)</div>
                                                 </a>
                                             )}
-                                        </a>
-
                                     </div>
                                     
                                 </VideoPlayer>

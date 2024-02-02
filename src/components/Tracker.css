@@ -319,12 +319,23 @@ ul {
     margin-left: -8%;
 }
 
+/* Hidden messages for Text-to-Speech accessibility */
+.visually-hidden {
+    position: absolute;
+    top: auto;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+  }
 
 
-
-
-
-
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
 
 
 @media only screen and (max-width: 768px) {

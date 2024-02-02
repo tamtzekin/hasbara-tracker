@@ -33,7 +33,6 @@ export default function Tracker() {
     // Pull all the claims data
     const columns = useMemo(
         () => [
-            // TODO - make clicking it fill the global filter with the Claim value
             {
                 Header: 'Claim',
                 accessor: 'claimTag',
@@ -73,21 +72,53 @@ export default function Tracker() {
                         <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
                             <details>
                                 <summary><u>{row.original.description.summary}</u>
-                                    <span className={row.original.description.summaryClass}></span></summary>
-                                    <article>
-                                        <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+                                    <span className={row.original.description.summaryClass}></span>
+                                </summary>
+                                <article>
+                                    <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+            
+                                    {/* On Mobile: render Sources inside the expandable element */}
+                                    {isMobileView && (
+                                        <>
+                                            <div className="source-heading"></div>
+                                            {row.original.sources.map((source, index) => (
+                                                <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                                    <div key={index} className="source" style={{ marginBottom: '8%' }}>
+                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                            {source.videoPreviewLink && (
+                                                                <span className='icon-playarrow'></span>
+                                                            )}
+                                                            {!source.videoPreviewLink && (
+                                                                <span className='icon-link'></span>
+                                                            )}
+                                                            <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+                                                            {source.archiveLink && (
+                                                                <a href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                    &nbsp;<div className="archive-link">(archive)</div>
+                                                                </a>
+                                                            )}
+                                                        </a>
+                                                    </div>
+                                                </VideoPlayer>
+                                            ))}
+                                        </>
+                                    )}
+            
                                 </article>
                             </details>
                         </div>
                     </>
                 ),
             },
+
             {
                 Header: 'Sources',
                 accessor: 'sources',
                 Cell: ({ row }) => {
                     const sources = row.original.sources || [];
 
+                    // On Desktop: render the sources on the right side. If on mobile, hide them.
+                    if (!isMobileView) {
                     return (
                         <>
                             <div className="source-heading"></div>
@@ -133,6 +164,10 @@ export default function Tracker() {
                             </>}
                         </>
                     );
+                    
+                    } else {
+                        return null;
+                    }
                 },
             },
         ],

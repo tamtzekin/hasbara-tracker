@@ -94,13 +94,17 @@ export default function Tracker() {
                                                             {!source.videoPreviewLink && (
                                                                 <span className='icon-link'></span>
                                                             )}
+                                                            
                                                             <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
-                                                            {source.archiveLink && (
+
+                                                        </a>
+
+                                                        {source.archiveLink && (
                                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer">
                                                                     &nbsp;<span className="archive-link">(archive)</span>
                                                                 </a>
                                                             )}
-                                                        </a>
+
                                                     </div>
                                                 </VideoPlayer>
                                             ))}
@@ -146,13 +150,14 @@ export default function Tracker() {
                                             )}
 
                                             <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+                                        </a>
 
-                                            {source.archiveLink && ( 
+
+                                        {source.archiveLink && ( 
                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer">
                                                     &nbsp;<span class="archive-link">(archive)</span>
                                                 </a>
                                             )}
-                                        </a>
 
                                     </div>
                                     

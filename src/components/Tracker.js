@@ -160,10 +160,7 @@ export default function Tracker() {
                                             )}
                                             {/* Text-to-Speech only message to tell users it opens in new tab */}
                                             <span class="visually-hidden">Opens in new tab</span>
-                                        </a>
-                                            )}
                                     </div>
-                                    
                                 </VideoPlayer>
                             ))}
 

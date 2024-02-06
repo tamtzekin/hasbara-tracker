@@ -1,6 +1,8 @@
 
 const data = [
     
+
+// CLAIM: Forty beheaded babies
     {
         
         claimTag: 'Forty beheaded babies',
@@ -18,17 +20,15 @@ const data = [
             {
                 sourceText: '<em>The birth of the Palestinian refugee problem revisited</em> by Benny Morris, 2004',
                 sourceLink: 'https://www.google.co.uk/books/edition/The_Birth_of_the_Palestinian_Refugee_Pro/uM_kFX6edX8C?hl=en&gbpv=1&pg=PR21&printsec=frontcover',
-                videoPreviewLink: '',
             },
             {
                 sourceText: 'Palestine Remembered',
                 sourceLink: 'https://www.palestineremembered.com/Gaza/index.html',
-                videoPreviewLink: '',
+                archiveLink: 'https://archive.ph/xCyzu',
             },
             {
                 sourceText: '<em>The Palestinian Nakba 1948</em>, by Salman Abu Sitta, 2000 ',
                 sourceLink: 'https://www.plands.org/en/books-reports/books/the-palestinian-nakba-1948/pdf/the-register-of-depopulated-localities-in-palestine',
-                videoPreviewLink: '',
             },
         ]
     },    
@@ -59,7 +59,6 @@ const data = [
                 sourceText: '@Nicole_Zedek on X',
                 sourceLink: 'https://twitter.com/Nicole_Zedek/status/1711721433968111855',
                 archiveLink: 'https://archive.ph/AhYIH',
-                videoPreviewLink: ''
             },
         ]
     },
@@ -81,7 +80,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',    
-                sourceLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
+                sourceLink: 'https://twitter.com/NickFondacaro/status/1711812499014660462',
+                archiveLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/IG_NicRobertson_10Oct.mp4',
             },
         ]
@@ -104,7 +104,8 @@ const data = [
         sources: [
             {
                 sourceText: '@IsraelMFA on YouTube',    
-                sourceLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
+                sourceLink: 'https://www.youtube.com/watch?v=Hh8t8sHnTng',
+                archiveLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/IsraelMFA_11Oct.mp4',
             },
         ]
@@ -127,8 +128,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CBS News',
-                sourceLink: 'https://archive.ph/RFI9h',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.cbsnews.com/news/israel-babies-killed-hamas-terror-attack-kibbutz-kfar-aza-first-responders-say/',
+                archiveLink: 'https://archive.ph/RFI9h',
             },
         ]
     },
@@ -150,7 +151,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Fox News',
-                sourceLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
+                sourceLink: 'https://twitter.com/dpatrikarakos/status/1712219633594376581',
+                archiveLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/Fox_Biden_10Oct.mp4',
             },
         ]
@@ -172,8 +174,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',
-                sourceLink: 'https://archive.ph/gaDln',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.cnn.com/2023/10/12/politics/joe-biden-photos-children-hamas-israel/index.html',
+                archiveLink: 'https://archive.ph/gaDln',
             },
         ]
     },
@@ -194,7 +196,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',
-                sourceLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
+                sourceLink: 'https://www.mediaite.com/news/children-were-murdered-full-stop-cnn-anchor-reports-on-horrifying-photos-of-israeli-babies-killed-by-hamas/',
+                archiveLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/CNNTV_11Oct.mp4',
             },
         ]
@@ -215,9 +218,9 @@ const data = [
         },
         sources: [
             {
-                sourceText: 'Insider',
-                sourceLink: 'https://archive.ph/Otjey',
-                videoPreviewLink: '',
+                sourceText: 'Business Insider',
+                sourceLink: 'https://www.businessinsider.com/idf-says-wont-back-up-beheaded-babies-disrespectful-2023-10',
+                archiveLink: 'https://archive.ph/Otjey',
             },
         ]
     },    
@@ -238,7 +241,8 @@ const data = [
         sources: [
             {
                 sourceText: 'LBC',
-                sourceLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
+                sourceLink: 'https://www.lbc.co.uk/news/kfar-azza-hamas-attack-babies-children/',
+                archiveLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/LBC_11Oct.mp4',
             },
         ]
@@ -259,13 +263,13 @@ const data = [
         sources: [
             {
                 sourceText: 'Middle East Eye',
-                sourceLink: 'https://archive.ph/3Rybl',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.middleeasteye.net/news/israel-palestine-huwwara-deadly-settler-riot-politicians-laud',
+                archiveLink: 'https://archive.ph/3Rybl',
             },
             {
                 sourceText: 'KKL-JNF Board of Directors',
-                sourceLink: 'https://archive.is/twsrq',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.kkl-jnf.org/about-kkl-jnf/kkl-jnf-id/our-leadership/kkl-jnf-board-of-directors/',
+                archiveLink: 'https://archive.is/twsrq',
             },
         ]
     },    
@@ -285,8 +289,8 @@ const data = [
         sources: [
             {
                 sourceText: '@sarasidnerCNN on X',
-                sourceLink: 'https://archive.is/rom8W',
-                videoPreviewLink: '',
+                sourceLink: 'https://twitter.com/sarasidnerCNN/status/1712415116363169884',
+                archiveLink: 'https://archive.is/rom8W',
             },
         ]
     },    
@@ -306,8 +310,8 @@ const data = [
         sources: [
             {
                 sourceText: 'CNN',
-                sourceLink: 'https://archive.ph/icFaG',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.cnn.com/2023/10/12/middleeast/israel-hamas-beheading-claims-intl/index.html',
+                archiveLink: 'https://archive.ph/icFaG',
             },
         ]
     },    
@@ -327,7 +331,8 @@ const data = [
         sources: [
             {
                 sourceText: '@IDF on X',
-                sourceLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing.mp4',
+                sourceLink: 'https://twitter.com/IDF/status/1712282365924343910',
+                archiveLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/20231012_JonathanConricusBriefing_preview.mp4',
             },
         ]
@@ -349,8 +354,8 @@ const data = [
         sources: [
             {
                 sourceText: '@Jerusalem_Post on X',
-                sourceLink: 'https://archive.ph/9c9L0',
-                videoPreviewLink: '',
+                sourceLink: 'https://twitter.com/Jerusalem_Post/status/1712460425529372821',
+                archiveLink: 'https://archive.ph/9c9L0',
             },
         ]
     },    
@@ -371,8 +376,8 @@ const data = [
         sources: [
             {
                 sourceText: 'NBC News',
-                sourceLink: 'https://archive.ph/MxZTk',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.nbcnews.com/politics/white-house/biden-deliver-remarks-roundtable-jewish-community-leaders-rcna119865',
+                archiveLink: 'https://archive.ph/MxZTk',
             },
         ]
     },
@@ -393,8 +398,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Al Jazeera',
-                sourceLink: 'https://archive.ph/RNLTs',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.aljazeera.com/opinions/2023/10/13/watching-the-watchdogs-babies-and-truth-die-together-in-israel-palestine',
+                archiveLink: 'https://archive.ph/RNLTs',
             },
         ]
     },    
@@ -415,7 +420,8 @@ const data = [
         sources: [
             {
                 sourceText: '6abc Philadelphia',
-                sourceLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
+                sourceLink: 'https://www.youtube.com/watch?v=4Nn8Y_ulBMI',
+                archiveLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/6abc_YossiLandau_17Oct.mp4',
             },
         ]
@@ -437,8 +443,8 @@ const data = [
         sources: [
             {
                 sourceText: 'The White House',
-                sourceLink: 'https://archive.ph/yqnZT',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.whitehouse.gov/briefing-room/speeches-remarks/2023/10/18/remarks-by-president-biden-on-the-october-7th-terrorist-attacks-and-the-resilience-of-the-state-of-israel-and-its-people-tel-aviv-israel/',
+                archiveLink: 'https://archive.ph/yqnZT',
             },
         ]
     },    
@@ -458,7 +464,8 @@ const data = [
         sources: [
             {
                 sourceText: '@Israel on X',
-                sourceLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
+                sourceLink: 'https://twitter.com/Israel/status/1717553687025815817',
+                archiveLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/GolanVach_12Oct.mp4',
             },
         ]
@@ -480,7 +487,8 @@ const data = [
         sources: [
             {
                 sourceText: 'New York Post',
-                sourceLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
+                sourceLink: 'https://nypost.com/2023/11/01/news/head-of-israels-ems-service-describes-horror-of-seeing-babies-slaughtered-by-hamas/',
+                archiveLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/EliBeer_28Oct.mp4',
             },
         ]
@@ -502,8 +510,9 @@ const data = [
         sources: [
             {
                 sourceText: 'C-SPAN',
-                sourceLink: 'https://archive.ph/FBX9w',
-                videoPreviewLink: 'https://files.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
+                sourceLink: 'https://www.c-span.org/video/?531876-1/president-biden-holds-news-conference-apec',
+                archiveLink: 'https://www.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
+                videoLink: 'https://www.hasbaratracker.com/20231115_CSPAN_BidenAPEC.mp4',
             },
         ]
     },    
@@ -524,8 +533,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Ha’aretz',
-                sourceLink: 'https://archive.ph/H6rAm',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.haaretz.com/israel-news/2023-12-04/ty-article-magazine/.premium/hamas-committed-documented-atrocities-but-a-few-false-stories-feed-the-deniers/0000018c-34f3-da74-afce-b5fbe24f0000',
+                archiveLink: 'https://archive.ph/H6rAm',
             },
         ]
     },    
@@ -546,8 +555,8 @@ const data = [
         sources: [
             {
                 sourceText: 'The White House',
-                sourceLink: 'https://archive.ph/cOJQW',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.whitehouse.gov/briefing-room/speeches-remarks/2023/12/12/remarks-by-president-biden-at-a-campaign-reception-5/',
+                archiveLink: 'https://archive.ph/cOJQW',
             },
         ]
     },    
@@ -567,8 +576,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Newsweek',
-                sourceLink: 'https://archive.ph/vzLEo',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.newsweek.com/i-saw-children-hamas-beheaded-my-own-eyes-shame-queen-rania-opinion-1855472',
+                archiveLink: 'https://archive.ph/vzLEo',
             },
         ]
      },
@@ -588,7 +597,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Channel 14',
-                sourceLink: 'https://archive.ph/DpBWI',
+                sourceLink: 'https://www.youtube.com/watch?v=Nor46pGaiK0',
+                archiveLink: 'https://files.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
                 videoPreviewLink: 'https://files.hasbaratracker.com/Channel14_Beeri_20Jan.mp4',
             },
         ]
@@ -609,8 +619,8 @@ const data = [
         sources: [
             {
                 sourceText: 'Ha’aretz',
-                sourceLink: 'https://archive.ph/YFhfZ',
-                videoPreviewLink: '',
+                sourceLink: 'https://www.haaretz.com/israel-news/2024-01-21/ty-article/.premium/army-officer-makes-incorrect-claims-on-oct-7-massacre-idf-well-set-record-straight/0000018d-2c67-daf5-a1bf-ac77f9b50000',
+                archiveLink: 'https://archive.ph/YFhfZ',
             },
         ]
     },
@@ -631,6 +641,7 @@ const data = [
         {
             sourceText: '@RavivDrucker on X',
             sourceLink: 'https://twitter.com/RavivDrucker/status/1749355249922351352',
+            archiveLink: 'https://files.hasbaratracker.com/Channel13_21Jan.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/Channel13_21Jan.mp4',
         },
     ]
@@ -656,20 +667,20 @@ const data = [
     sources: [
         {
             sourceText: 'Al Jazeera',
-            sourceLink: 'https://archive.is/KQ76U',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.aljazeera.com/news/2023/10/12/israel-says-6000-bombs-dropped-on-gaza-as-war-with-hamas-nears-a-week',
+            archiveLink: 'https://archive.is/KQ76U',
         },
 
         {
             sourceText: 'The Washington Post',
-            sourceLink: 'https://archive.ph/rCJbc',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.washingtonpost.com/world/2023/11/05/israel-strike-targets-gaza-civilians-hamas/',
+            archiveLink: 'https://archive.ph/rCJbc',
         },
 
         {
             sourceText: 'USAF 2013–2019 Airpower Statistics',
-            sourceLink: 'https://archive.ph/rYSHV',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.afcent.af.mil/Portals/82/Documents/Airpower%20summary/(U)%20APPROVED%20Dec%202019%20APS%20Data.pdf?ver=2020-01-27-023439-697',
+            archiveLink: 'https://archive.ph/rYSHV',
         }
     ]
 },
@@ -692,20 +703,20 @@ const data = [
     sources: [
         {
             sourceText: 'The Palestine Chronicle',
-            sourceLink: 'https://archive.is/XIzL9',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.palestinechronicle.com/al-ahli-hospital-in-gaza-hit-with-direct-israeli-strike-photos-video/#',
+            archiveLink: 'https://archive.is/XIzL9',
         },
 
         {
             sourceText: 'Al Jazeera',
-            sourceLink: 'https://archive.ph/QOf8t',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.aljazeera.com/news/liveblog/2023/10/17/israel-hamas-war-live-anger-after-israeli-strike-kills-500-in-hospital?update=2417884',
+            archiveLink: 'https://archive.ph/QOf8t',
         },
 
         {
             sourceText: 'The Washington Post',
-            sourceLink: 'https://archive.ph/Gksxt',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.washingtonpost.com/investigations/2023/10/26/gaza-hospital-blast-evidence-israel-hamas/',
+            archiveLink: 'https://archive.ph/Gksxt',
         }
     ]
 },
@@ -728,20 +739,20 @@ const data = [
     sources: [
         {
             sourceText: 'Defense for Children International Palestine',
-            sourceLink: 'https://archive.ph/W2Z4i',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.dci-palestine.org/hundreds_of_palestinian_men_women_and_children_killed_at_al_ahli_hospital',
+            archiveLink: 'https://archive.ph/W2Z4i',
         },
 
         {
             sourceText: 'Ministry of Health Gaza',
-            sourceLink: 'https://archive.ph/5bFAE',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.facebook.com/MOHGaza1994/posts/pfbid02VihLzssMVKvwphaoxK71rs9X4fUtNFaXBj9nFamjZ4Z9A56Vu6SZ7GcTLS2yo23fl',
+            archiveLink: 'https://archive.ph/5bFAE',
         },
 
         {
             sourceText: 'United Nations',
-            sourceLink: 'https://archive.ph/x36PM',
-            videoPreviewLink: '',
+            sourceLink: 'https://news.un.org/en/story/2023/10/1142472',
+            archiveLink: 'https://archive.ph/x36PM',
         }
     ]
 },
@@ -764,12 +775,13 @@ const data = [
     sources: [
         {
             sourceText: 'The Times of Israel',
-            sourceLink: 'https://archive.ph/szvXg',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.timesofisrael.com/liveblog_entry/idf-spokesman-says-israel-is-looking-into-alleged-hospital-strike-too-early-to-tell/',
+            archiveLink: 'https://archive.ph/szvXg',
         },
         {
             sourceText: 'Bloomberg Quicktake',
             sourceLink: 'https://www.youtube.com/watch?v=FUS0LgMG40k',
+            archiveLink: 'https://www.youtube.com/watch?v=FUS0LgMG40k',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231017_BloombergQuicktake_AlAhli.mp4',
         }
     ]
@@ -793,8 +805,8 @@ const data = [
     sources: [
         {
             sourceText: '@IDFSpokesperson on X',
-            sourceLink: 'https://archive.ph/uO5fn',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/IDFSpokesperson/status/1714364921335390340',
+            archiveLink: 'https://archive.ph/uO5fn',
         }
     ]
 },
@@ -817,7 +829,8 @@ const data = [
     sources: [
         {
             sourceText: '@IsraelDefenseForces on YouTube',
-            sourceLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
+            sourceLink: 'https://www.youtube.com/watch?v=mYqlG3dKIFo',
+            archiveLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/HagariBriefing_preview.mp4',
         }
     ]
@@ -841,14 +854,14 @@ const data = [
     sources: [
         {
             sourceText: '@HananyaNaftali on X',
-            sourceLink: 'https://archive.ph/Zkbxb',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/Lowkey0nline/status/1714357150594588816/photo/1',
+            archiveLink: 'https://archive.md/EniBp',
         },
 
         {
             sourceText: '@HananyaNaftali on X',
-            sourceLink: 'https://archive.ph/wFeel',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/HananyaNaftali/status/1714400598991261966',
+            archiveLink: 'https://archive.ph/wFeel',
         }
     ]
 },
@@ -871,7 +884,8 @@ const data = [
     sources: [
         {
             sourceText: '@Israel on X',
-            sourceLink: 'https://archive.ph/X3PWN',
+            sourceLink: 'https://twitter.com/Israel/status/1714371894521057737/history',
+            archiveLink: 'https://archive.ph/X3PWN',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231017_IsraelonX_RocketVideo.mp4',
         }
     ]
@@ -895,14 +909,8 @@ const data = [
     sources: [
         {
             sourceText: '@Israel on X',
-            sourceLink: 'https://archive.ph/X3PWN',
-            videoPreviewLink: '',
-        },
-
-        {
-            sourceText: '@AricToler on X',
-            sourceLink: 'https://archive.ph/RWlGg',
-            videoPreviewLink: '',
+            sourceLinkL: 'https://twitter.com/Israel/status/1714371894521057737',
+            archiveLink: 'https://archive.ph/X3PWN',
         }
     ]
 },
@@ -925,7 +933,8 @@ const data = [
     sources: [
         {
             sourceText: '@AmbHerzog on X',
-            sourceLink: 'https://archive.is/0ufj2',
+            sourceLink: 'https://twitter.com/AmbHerzog/status/1714372064369328514',
+            archiveLink: 'https://archive.is/0ufj2',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231017_AmbHerzogX_RocketVideo.mp4',
         }
     ]
@@ -949,8 +958,8 @@ const data = [
     sources: [
         {
             sourceText: '@AmbHerzog on X',
-            sourceLink: 'https://archive.ph/DMiox',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/AmbHerzog/status/1714380191651213499',
+            archiveLink: 'https://archive.ph/DMiox',
         }
     ]
 },
@@ -973,13 +982,12 @@ const data = [
     sources: [
         {
             sourceText: 'The Times of Israel',
-            sourceLink: 'https://archive.ph/VjZvc',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.timesofisrael.com/liveblog_entry/idf-says-it-does-not-target-hospitals-is-still-investigating-blast-at-gaza-hospital/',
+            archiveLink: 'https://archive.ph/VjZvc',
         }
     ]
 },
 
-// UP TO HERE /////
 {
     claimTag: 'Al-Ahli Hospital attacked',
 
@@ -998,8 +1006,8 @@ const data = [
     sources: [
         {
             sourceText: '@HananyaNaftali on X',
-            sourceLink: 'https://archive.ph/k3VEH',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/HananyaNaftali/status/1714400598991261966',
+            archiveLink: 'https://archive.ph/k3VEH',
         }
     ]
 },
@@ -1022,7 +1030,8 @@ const data = [
     sources: [
         {
             sourceText: '@IDF on X',
-            sourceLink: 'https://archive.ph/ogpcB',
+            sourceLink: 'https://twitter.com/IDF/status/1714403025136017784',
+            archiveLink: 'https://files.hasbaratracker.com/20231017_IDFRocket.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231017_IDFRocket.mp4',
         }
     ]
@@ -1046,8 +1055,8 @@ const data = [
     sources: [
         {
             sourceText: '@IDFSpokesperson on X',
-            sourceLink: 'https://archive.ph/Q8hBt',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/IDFSpokesperson/status/1714412497480917100',
+            archiveLink: 'https://archive.ph/Q8hBt',
         }
     ]
 },
@@ -1070,7 +1079,8 @@ const data = [
     sources: [
         {
             sourceText: 'NBC News',
-            sourceLink: 'https://archive.ph/9sndh',
+            sourceLink: 'https://www.nbcnews.com/politics/white-house/biden-lands-israel-high-stakes-trip-war-hamas-rcna120965',
+            archiveLink: 'https://archive.ph/9sndh',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231018_NBCNews_Biden.mp4',
         }
     ]
@@ -1094,8 +1104,8 @@ const data = [
     sources: [
         {
             sourceText: 'The Guardian',
-            sourceLink: 'https://archive.is/NOIAT',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.theguardian.com/world/2023/oct/18/al-ahli-arab-hospital-piecing-together-what-happened-as-israel-insists-militant-rocket-to-blame',
+            archiveLink: 'https://archive.is/NOIAT',
         }
     ]
 },
@@ -1118,12 +1128,14 @@ const data = [
     sources: [
         {
             sourceText: '@Israel on X',
-            sourceLink: 'https://archive.is/Wm8rM',
+            sourceLink: 'https://twitter.com/Israel/status/1714545680562184434',
+            archiveLink: 'https://files.hasbaratracker.com/IsraelAlAhliRecording_18Oct2023.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/IsraelAlAhliRecording_18Oct2023.mp4',
         }
     ]
 },
 
+// TODO: add Deleted tag
 {
     claimTag: 'Al-Ahli Hospital attacked',
 
@@ -1142,8 +1154,8 @@ const data = [
     sources: [
         {
             sourceText: 'IDF Media Releases',
-            sourceLink: 'https://archive.ph/V1Xen',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.idf.il/en/mini-sites/idf-press-releases-regarding-the-hamas-israel-war/october-pr/failed-rocket-launch-by-islamic-jihad-hits-Al Ahli-hospital-in-gaza-city/',
+            archiveLink: 'https://archive.ph/V1Xen',
         },
         {
             sourceText: '@IsraelDefenseForces on YouTube',
@@ -1171,13 +1183,13 @@ const data = [
     sources: [
         {
             sourceText: 'Bellingcat',
-            sourceLink: 'https://archive.ph/L3ohJ',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.bellingcat.com/news/2023/10/18/identifying-possible-crater-from-gaza-hospital-blast/',
+            archiveLink: 'https://archive.ph/L3ohJ',
         },
         {
             sourceText: 'IDF Media Releases',
-            sourceLink: 'https://archive.ph/to7Az',
-            videoPreviewLink: '',
+            sourceLink: 'https://idfanc.activetrail.biz/ANC1810156854',
+            archiveLink: 'https://archive.ph/to7Az',
         }
     ]
 },
@@ -1194,14 +1206,14 @@ const data = [
 
     description: {
         summary: 'US spokesperson said Israeli state not responsible for hospital attack',
-        summaryClass: '',
+        summaryClass: 'expand-text',
         details: 'The US National Security Council Spokesperson Adrienne Watson posted on X (formerly Twitter) from the account @NSC_Spox that the Israeli state is not responsible for the hospital attack, based on analysis of ‘overhead imagery, intercepts and open source information’.<br /><br />The post read: ‘While we continue to collect information, our current assessment, based on analysis of overhead imagery, intercepts and open source information, is that Israel is not responsible for the explosion at the hospital in Gaza yesterday.’',
     },
     sources: [
         {
             sourceText: '@NSC_Spox on X',
-            sourceLink: 'https://archive.ph/82Sbc',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/NSC_Spox/status/1714654402118832440',
+            archiveLink: 'https://archive.ph/82Sbc',
         }
     ]
 },
@@ -1224,7 +1236,8 @@ const data = [
     sources: [
         {
             sourceText: '@IDF on X',
-            sourceLink: 'https://archive.is/lM2b4',
+            sourceLink: 'https://twitter.com/i/broadcasts/1BRJjPbkaRQKw',
+            archiveLink: 'https://files.hasbaratracker.com/20231019_IDFBriefing_JonathanConricus.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231019_IDFBriefing_JonathanConricus_preview.mp4',
         }
     ]
@@ -1248,8 +1261,8 @@ const data = [
     sources: [
         {
             sourceText: 'BBC',
-            sourceLink: 'https://archive.ph/ZJYdH',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.bbc.co.uk/news/world-middle-east-67144061',
+            archiveLink: 'https://archive.ph/ZJYdH',
         }
     ]
 },
@@ -1272,13 +1285,13 @@ const data = [
     sources: [
         {
             sourceText: 'ABC News',
-            sourceLink: 'https://archive.ph/lM2b4',
-            videoPreviewLink: '',
+            sourceLink: 'https://abcnews.go.com/International/us-initial-independent-review-shows-evidence-bomb-strike/story?id=104126146',
+            archiveLink: 'https://archive.ph/lM2b4',
         },
 
         {
             sourceText: 'i24 News',
-            sourceLink: 'https://www.youtube.com/watch?v=jaN8TUSHYyM',
+            archiveLink: 'https://www.youtube.com/watch?v=jaN8TUSHYyM',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231019_i24_JoelRayburn.mp4',
         }
     ]
@@ -1302,20 +1315,20 @@ const data = [
     sources: [
         {
             sourceText: '@ForensicArchi on X',
-            sourceLink: 'https://archive.ph/i6iZa',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/ForensicArchi/status/1715422493274427414',
+            archiveLink: 'https://archive.ph/i6iZa',
         },
 
         {
             sourceText: '@ForensicArchi on X',
-            sourceLink: 'https://archive.ph/RdRuI',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/ForensicArchi/status/1715422493274427414',
+            archiveLink: 'https://archive.ph/RdRuI',
         },
 
         {
             sourceText: '@ForensicArchi on X',
-            sourceLink: 'https://archive.ph/j8XZR',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/ForensicArchi/status/1715422505035235474',
+            archiveLink: 'https://archive.ph/j8XZR',
         }
     ]
 },
@@ -1337,9 +1350,10 @@ const data = [
     },
     sources: [
         {
-            sourceText: '',
-            sourceLink: '',
-            videoPreviewLink: '',
+            sourceText: 'Al Jazeera Mubasher',
+            sourceLink: 'https://twitter.com/yousuf_tw/status/1714367757968384106',
+            archiveLink: 'https://files.hasbaratracker.com/20231020_%40ajmubasher.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/20231020_%40ajmubasher.mp4',
         }
     ]
 },
@@ -1362,23 +1376,9 @@ const data = [
     sources: [
         {
             sourceText: '@earshot_ngo on X',
-            sourceLink: 'https://archive.is/91aOP',
-            videoPreviewLink: '',
-        },
-        {
-            sourceText: '@earshot_ngo on X',
-            sourceLink: 'https://archive.is/PsT8f',
+            sourceLink: 'https://twitter.com/ForensicArchi/status/1724525673325199410',
+            archiveLink: 'https://archive.ph/OF8Lb',
             videoPreviewLink: 'https://files.hasbaratracker.com/Earshot1.mp4',
-        },
-        {
-            sourceText: '@earshot_ngo on X',
-            sourceLink: 'https://archive.ph/toLCX',
-            videoPreviewLink: '',
-        },
-        {
-            sourceText: '@earshot_ngo on X',
-            sourceLink: 'https://archive.ph/lDac1',
-            videoPreviewLink: '',
         }
     ]
 },
@@ -1401,7 +1401,8 @@ const data = [
     sources: [
         {
             sourceText: 'Channel 4',
-            sourceLink: 'https://files.hasbaratracker.com/Channel4_Earshot_21Oct2023.mp4',
+            sourceLink: 'https://www.youtube.com/watch?v=MVQALHmgo8U',
+            archiveLink: 'https://files.hasbaratracker.com/Channel4_Earshot_21Oct2023.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/Channel4_Earshot_preview.mp4',
         }
     ]
@@ -1425,8 +1426,8 @@ const data = [
     sources: [
         {
             sourceText: 'Politico',
-            sourceLink: 'https://archive.ph/84ciI',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.politico.com/news/2023/10/24/gaza-hospital-us-israel-hamas-00123365',
+            archiveLink: 'https://archive.ph/84ciI',
         }
     ]
 },
@@ -1449,8 +1450,8 @@ const data = [
     sources: [
         {
             sourceText: 'The Telegraph',
-            sourceLink: 'https://archive.ph/fmJMi',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.telegraph.co.uk/global-health/terror-and-security/armed-drones-israel-hamas-war-gaza-hospitals-gunshots/',
+            archiveLink: 'https://archive.ph/fmJMi',
         }
     ]
 },
@@ -1473,8 +1474,9 @@ const data = [
     sources: [
         {
             sourceText: '@ForensicArchi on X',
-            sourceLink: 'https://archive.ph/OF8Lb',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/ForensicArchi/status/1724525673325199410',
+            archiveLink: 'https://archive.ph/OF8Lb',
+            videoPreviewLink: 'https://files.hasbaratracker.com/20231114_ForensicArchiAlAhli.mp4',
         }
     ]
 },
@@ -1497,8 +1499,8 @@ const data = [
     sources: [
         {
             sourceText: 'Human Rights Watch',
-            sourceLink: 'https://archive.ph/cLgSV',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.hrw.org/news/2023/11/26/gaza-findings-october-17-Al Ahli-hospital-explosion',
+            archiveLink: 'https://archive.ph/cLgSV',
         }
     ]
 },
@@ -1521,8 +1523,8 @@ const data = [
     sources: [
         {
             sourceText: 'BBC',
-            sourceLink: 'https://archive.ph/WG83l',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.bbc.co.uk/news/world-middle-east-67732347',
+            archiveLink: 'https://archive.ph/WG83l',
         }
     ]
 },
@@ -1546,6 +1548,7 @@ const data = [
         {
             sourceText: '@AJEnglish on X',
             sourceLink: 'https://twitter.com/AJEnglish/status/1736408607221051505',
+            archiveLink: 'https://files.hasbaratracker.com/AlJazeera_KamalAdwanHospitalAttack.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/AlJazeera_KamalAdwanHospitalAttack.mp4',
         }
     ]
@@ -1569,8 +1572,8 @@ const data = [
     sources: [
         {
             sourceText: '@NourNaim88 on X',
-            sourceLink: 'https://archive.is/eWTwp',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/NourNaim88/status/1736433314569785752',
+            archiveLink: 'https://archive.is/eWTwp',
         }
     ]
 },
@@ -1593,8 +1596,8 @@ const data = [
     sources: [
         {
             sourceText: '@GhassanAbuSitt1 on X',
-            sourceLink: 'https://archive.ph/CiTay',
-            videoPreviewLink: '',
+            sourceLink: 'https://twitter.com/GhassanAbuSitt1/status/1736795847034081366',
+            archiveLink: 'https://archive.ph/CiTay',
         }
     ]
 },
@@ -1617,8 +1620,8 @@ const data = [
     sources: [
         {
             sourceText: 'The New Arab',
-            sourceLink: 'https://archive.ph/yDJA2',
-            videoPreviewLink: '',
+            sourceLink: 'https://www.newarab.com/news/gazas-baptist-hospital-out-action-after-israeli-assault',
+            archiveLink: 'https://archive.ph/yDJA2',
         }
     ]
 },
@@ -1642,6 +1645,7 @@ const data = [
         {
             sourceText: 'Al Jazeera',
             sourceLink: 'https://twitter.com/AJEnglish/status/1737451718676230618',
+            archiveLink: 'https://archive.ph/G7vud',
             videoPreviewLink: 'https://files.hasbaratracker.com/AlJazeera_20Dec2023.mp4',
         }
     ]

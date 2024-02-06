@@ -134,7 +134,8 @@ export default function Tracker() {
                                 <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                     <div key={index} class="source">
 
-                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                        <a href={source.sourceLink} target="_blank" rel="noreferrer"
+                                        aria-hidden="true">
                                             {/* If there's a video preview available, show a play button icon */}
                                             {source.videoPreviewLink && (
                                                 <>
@@ -152,13 +153,15 @@ export default function Tracker() {
                                             <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
                                         </a>
 
-
                                         {source.archiveLink && ( 
-                                                <a href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                <a href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
                                                     &nbsp;<span class="archive-link">(archive)</span>
                                                 </a>
                                             )}
-
+                                            {/* Text-to-Speech only message to tell users it opens in new tab */}
+                                            <span class="visually-hidden">Opens in new tab</span>
+                                        </a>
+                                            )}
                                     </div>
                                     
                                 </VideoPlayer>

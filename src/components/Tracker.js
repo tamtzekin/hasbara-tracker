@@ -14,7 +14,7 @@ import SearchBar from './SearchBar';
 
 export default function Tracker() {
 
-    // Set phone/mobile view
+    // Set mobile/phone view dimensions
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
@@ -67,6 +67,8 @@ export default function Tracker() {
                     </span>
                 ),
             },
+
+            // Detailed description on each claim
             {
                 Header: 'Details',
                 accessor: (row) => `${row.description.summary} ${row.description.details}`,
@@ -80,7 +82,7 @@ export default function Tracker() {
                                 <article>
                                     <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
             
-                                    {/* On Mobile: render Sources inside the expandable element */}
+                                    {/* On Mobile: render Source links inside the expandable element */}
                                     {isMobileView && (
                                         <>
                                             <div className="source-heading"></div>
@@ -103,8 +105,7 @@ export default function Tracker() {
                                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer">
                                                                     &nbsp;<span className="archive-link">(archive)</span>
                                                                 </a>
-                                                            )}
-
+                                                        )}
                                                     </div>
                                                 </VideoPlayer>
                                             ))}
@@ -153,12 +154,14 @@ export default function Tracker() {
                                             <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
                                         </a>
 
+                                        {/* If there's an archiveLink in the data, add an '(archive)' link next to the source link */}
                                         {source.archiveLink && ( 
                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
                                                     &nbsp;<span class="archive-link">(archive)</span>
                                                 </a>
                                             )}
-                                            {/* Text-to-Speech only message to tell users it opens in new tab */}
+
+                                            {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
                                             <span class="visually-hidden">Opens in new tab</span>
                                     </div>
                                 </VideoPlayer>
@@ -173,6 +176,7 @@ export default function Tracker() {
                         </>
                     );
                     
+                    // On Mobile: don't show the sources in the last column
                     } else {
                         return null;
                     }
@@ -218,7 +222,7 @@ export default function Tracker() {
             </span>
 
 
-            {/* Show desktop view */}
+            {/* Show desktop view of Tracker */}
             {!isMobileView && (
                 <>
                     <div class="search-bar-container">
@@ -299,7 +303,7 @@ export default function Tracker() {
             )}
 
             
-            {/* Show phone/mobile view */}
+            {/* Show mobile/phone view of Tracker */}
             {isMobileView && (
                 <>
                     <div class="search-bar-container">
@@ -326,7 +330,7 @@ export default function Tracker() {
                                 </div>
                             </>
                         ) : (
-                            // Renders all claims data as blocks, instead of a table
+                            // Renders all claims data in div blocks, instead of a table
                             <div {...getTableBodyProps()}>
                                 {rows.map((row) => {
                                     prepareRow(row);

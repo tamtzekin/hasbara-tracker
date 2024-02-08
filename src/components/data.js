@@ -1650,6 +1650,32 @@ const data = [
         }
     ]
 },
+// Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas
+
+{
+    claimTag: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
+    date: '9 Oct, 2023',
+
+    claim: {
+        claimText: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+        claimClass: 'context-tag',
+    },
+
+    description: {
+        summary: 'Reports suggest that the Israeli state offered fuel to Al-Shifa Hospital, but it was refused by Hamas.',
+        summaryClass: 'expand-text',
+        details: 'On 9 October, 2023, reports emerged indicating that the Israeli state offered fuel to Al-Shifa Hospital. However, Hamas reportedly refused to accept the fuel. Further details regarding the reasons behind this refusal are not provided in the available information.',
+    },
+
+    sources: [
+        {
+            sourceText: 'Al Jazeera',
+            sourceLink: 'https://archive.ph/RTiNA',
+            videoLink: '',
+        }
+    ]
+}
 
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)

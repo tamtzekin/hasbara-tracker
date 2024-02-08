@@ -21,6 +21,8 @@ const Claims = () => {
                 
                 <div class="claim-link"><Link to="/tracker?filter=al-ahli">Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces</Link></div><br />
                 
+                <div class="claim-link"><Link to="/tracker?filter=al-shifa-fuel">Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas</Link></div><br />
+
                 <em>Coming soon:</em> Israeli state offered fuel to Al-Shifa Hospital and it was refused
                 <br />
             </span>

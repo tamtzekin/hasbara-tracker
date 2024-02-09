@@ -137,7 +137,7 @@ details[open] {
 
 details > summary {
     list-style: none;
-    padding-bottom: 4%;
+    padding-bottom: 1%;
     font-family: 'Helvetica', Helvetica, sans-serif;
 }
 
@@ -150,6 +150,18 @@ details > summary::-webkit-details-marker {
     padding-left: 3px;
     font-weight: 600;
     color: #585151;
+}
+
+h2 .expand-text {
+    font-size: 1em;
+    padding-left: 3px;
+    font-weight: 600;
+    color: #585151;
+}
+
+details[open] .expand-text::after {
+    content: '—';
+    font-size: 0.5em;
 }
 
 .expand-text::after {
@@ -172,6 +184,7 @@ details > summary::-webkit-details-marker {
     right: 15%;
     display: flex;
     list-style-type: none;
+    white-space: nowrap;
 }
 
 .navbar a {
@@ -195,13 +208,12 @@ details > summary::-webkit-details-marker {
 
 .columns-container {
     position: absolute;
-    left: 5.5%;
-    top: 15%;
-    margin: 5% 32.5% 0 12%;
-    /* padding-bottom: 3%; */
+    left: 17.5%;
+    top: 20%;
     display: flex;
     justify-content: space-between;
-    gap: 100px;
+    gap: 50px;
+    width: 60%;
 
 }
 

@@ -71,6 +71,16 @@ body {
     text-align: left;
 }
 
+button.dotted {
+    padding: 10px;
+    margin: 5px;
+    cursor: crosshair;
+    border: dotted black;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 0.8em;
+}
+
 .claim-link {
     text-decoration: dashed underline;
 }
@@ -83,6 +93,7 @@ body {
     background-color: black;
 }
 
+
 #dots {
     font-family: 'LoRes_Regular';
     font-size: 2.15em;
@@ -90,16 +101,59 @@ body {
     left: 14%;
     margin-top: 1%;
     width: 100%;
-  
 }
-button.dotted {
-  padding: 10px;
-  margin: 5px;
-  cursor: crosshair;
-  border: dotted black;
-  border-radius: 5px;
-  background-color: transparent;
-  font-size: 0.8em;
+
+details article {
+    opacity: 0;
+  }
+  
+details[open] article {
+    animation: fadeIn .4s linear forwards;
+    cursor: default;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} 
+
+details[open] .expand-text::after {
+    content: '—';
+    font-size: 0.7em;
+}
+
+details { 
+    display: inline;
+    cursor: crosshair;
+}
+
+details[open] {
+    cursor: n-resize;
+}
+
+details > summary {
+    list-style: none;
+    padding-bottom: 4%;
+    font-family: 'Helvetica', Helvetica, sans-serif;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.expand-text {
+    font-size: 1.5em;
+    padding-left: 3px;
+    font-weight: 600;
+    color: #585151;
+}
+
+.expand-text::after {
+    content: "+";
 }
 
 .filtered-item {
@@ -137,6 +191,23 @@ button.dotted {
     left: 22%;
     margin: 6% 32.5% 0 12%;
     padding-bottom: 3%;
+}
+
+.columns-container {
+    position: absolute;
+    left: 5.5%;
+    top: 15%;
+    margin: 5% 32.5% 0 12%;
+    /* padding-bottom: 3%; */
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+}
+
+.column {
+    width: 50%;
+    box-sizing: border-box;
 }
 
 .header-container {

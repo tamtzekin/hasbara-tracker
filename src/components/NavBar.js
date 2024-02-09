@@ -20,11 +20,17 @@ const NavBar= () =>{
             </li>
         )}
 
-        {location.pathname !== '/tracker' && (
+        {/* {location.pathname !== '/tracker' && (
             <li>
                 <NavLink to="/tracker">Tracker</NavLink>
             </li>
-        )}  
+        )}   */}
+
+        {location.pathname !== '/submit-claim' && (
+        <li>
+            <NavLink to="/submit-claim">Submit a claim</NavLink>
+        </li>
+        )}
 
         {location.pathname !== '/volunteer' && (
         <li>

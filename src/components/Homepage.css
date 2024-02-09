@@ -31,6 +31,10 @@ h1.ht-heading {
     width: 100%;
 } 
 
+/* 
+.home-text {
+} */
+
 @media only screen and (max-width: 768px) {
     h1.ht-heading {
         font-family: 'LoRes_Regular';

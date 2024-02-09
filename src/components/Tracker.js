@@ -36,7 +36,7 @@ export default function Tracker() {
             // Claim tag eg. 'Forty beheaded babies'
             {
                 Header: 'Claim',
-                accessor: 'claimTag',
+                accessor: 'claimTitle',
                 Cell: ({ cell }) => (
                     // TODO: Do we want the claim name clickable or not
                     <Link to="/tracker?filter={cell.value}">{cell.value}</Link>

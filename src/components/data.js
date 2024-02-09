@@ -5,7 +5,7 @@ const data = [
 // CLAIM: Forty beheaded babies
     {
         
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '1948',
         claim: {
             claimText: 'Context',
@@ -35,7 +35,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '10 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -65,7 +65,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '10 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -89,7 +89,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -113,7 +113,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -136,7 +136,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -160,7 +160,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Debunk',
@@ -182,7 +182,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -205,7 +205,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Debunk',
@@ -227,7 +227,7 @@ const data = [
     
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -249,7 +249,7 @@ const data = [
     },    
     
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
         claim: {
             claimText: 'Context',
@@ -275,7 +275,7 @@ const data = [
     },    
     
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: {
             claimText: 'Debunk',
@@ -296,7 +296,7 @@ const data = [
     },    
     
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: {
             claimText: 'Debunk',
@@ -317,7 +317,7 @@ const data = [
     },    
     
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -340,7 +340,7 @@ const data = [
     
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -362,7 +362,7 @@ const data = [
     
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
         claim: {
             claimText: 'Debunk',
@@ -384,7 +384,7 @@ const data = [
     
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '13 Oct 2023',
         claim: { 
             claimText: 'Debunk',
@@ -406,7 +406,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '17 Oct 2023',
         claim: { 
             claimText: 'Claim',
@@ -429,7 +429,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '18 Oct 2023',
         claim: { 
             claimText: 'Claim',
@@ -450,7 +450,7 @@ const data = [
     },    
     
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '26 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -473,7 +473,7 @@ const data = [
     
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '28 Oct 2023',
         claim: {
             claimText: 'Claim',
@@ -496,7 +496,7 @@ const data = [
     
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '15 Nov 2023',
         claim: {
             claimText: 'Claim',
@@ -519,7 +519,7 @@ const data = [
     
      
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '4 Dec 2023',
         claim: {
             claimText: 'Debunk',
@@ -541,7 +541,7 @@ const data = [
 
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '12 Dec 2023',
         claim: {
             claimText: 'Claim',
@@ -562,7 +562,7 @@ const data = [
     },    
     
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '26 Dec 2023',
         claim: {
             claimText: 'Claim',
@@ -583,7 +583,7 @@ const data = [
      },
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '20 Jan 2024',
         claim: {
             claimText: 'Claim',
@@ -605,7 +605,7 @@ const data = [
     },
 
     {
-        claimTag: 'Forty beheaded babies',
+        claimTitle: 'Forty beheaded babies',
         date: '21 Jan 2024',
         claim: {
             claimText: 'Debunk',
@@ -626,7 +626,7 @@ const data = [
     },
 
     {
-    claimTag: 'Forty beheaded babies',
+    claimTitle: 'Forty beheaded babies',
     date: '22 Jan 2024',
     claim: {
         claimText: 'Debunk',
@@ -650,7 +650,7 @@ const data = [
 
 // Claim: Al-Ahli Hospital attacked
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '12 Oct 2023',
 
@@ -686,7 +686,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '14 Oct 2023',
 
@@ -722,7 +722,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -758,7 +758,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -788,7 +788,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -812,7 +812,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -837,7 +837,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -867,7 +867,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -892,7 +892,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -916,7 +916,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -941,7 +941,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -965,7 +965,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -989,7 +989,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -1013,7 +1013,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -1038,7 +1038,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Oct 2023',
 
@@ -1062,7 +1062,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1087,7 +1087,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1111,7 +1111,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1137,7 +1137,7 @@ const data = [
 
 // TODO: add Deleted tag
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1166,7 +1166,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1195,7 +1195,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1219,7 +1219,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '19 Oct 2023',
 
@@ -1244,7 +1244,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '19 Oct 2023',
 
@@ -1268,7 +1268,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '19 Oct 2023',
 
@@ -1298,7 +1298,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '20 Oct 2023',
 
@@ -1334,7 +1334,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '20 Oct 2023',
 
@@ -1359,7 +1359,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '20 Oct 2023',
 
@@ -1384,7 +1384,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '21 Oct 2023',
 
@@ -1409,7 +1409,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '24 Oct 2023',
 
@@ -1433,7 +1433,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '13 Nov 2023',
 
@@ -1457,7 +1457,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '14 Nov 2023',
 
@@ -1482,7 +1482,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '26 Nov 2023',
 
@@ -1506,7 +1506,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '15 Dec 2023',
 
@@ -1530,7 +1530,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Dec 2023',
 
@@ -1555,7 +1555,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '17 Dec 2023',
 
@@ -1579,7 +1579,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '18 Oct 2023',
 
@@ -1603,7 +1603,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '19 Dec 2023',
 
@@ -1627,7 +1627,7 @@ const data = [
 },
 
 {
-    claimTag: 'Al-Ahli Hospital attacked',
+    claimTitle: 'Al-Ahli Hospital attacked',
 
     date: '20 Dec 2023',
 
@@ -1653,7 +1653,7 @@ const data = [
 // Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas
 
 {
-    claimTag: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
 
     date: '9 Oct 2023',
 
@@ -1680,7 +1680,7 @@ const data = [
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)
     // {
-    //     claimTag: '',
+    //     claimTitle: '',
 
     //     date: '',
 

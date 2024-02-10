@@ -22,7 +22,7 @@ const Claims = () => {
                 
                 <div class="claim-link"><Link to="/al-shifa-fuel">Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas</Link></div><br />
 
-                <em>Coming soon:</em> Israeli state offered fuel to Al-Shifa Hospital and it was refused
+                <em>Coming soon:</em> xxxxxx
                 <br />
             </span>
     </>

@@ -975,7 +975,7 @@ const data = [
     },
 
     description: {
-        summary: 'Israeli official claimed that the Israel Occupation Forces (IOF) does not target hospitals',
+        summary: 'Israeli official claimed that Israeli forces do not target hospitals',
         summaryClass: 'expand-text',
         details: 'Talya Lankri, a senior reserves officer and the former deputy head of the Israeli state’s National Security Council, said on Israeli TV’s Channel 12 news that ‘the IDF does not hit hospitals. That is not a target.’'
     },
@@ -999,7 +999,7 @@ const data = [
     },
 
     description: {
-        summary: 'Social media advisor to Netanyahu deleted post and claimed that the Israel Occupation Forces (IOF) doesn’t bomb hospitals',
+        summary: 'Social media advisor to Israeli Prime Minister Benjamin Netanyahu deleted post and claimed Israeli forces do not bomb hospitals',
         summaryClass: 'expand-text',
         details: 'Hananya Naftali, the social media advisor to Netanyahu since 2018, posted a statement on X (formerly Twitter) denying that the IOF targets hospitals, despite declaring that the IOF bombed Al-Ahli Hospital hours earlier.<br /><br />The post read:<br /><br />‘Earlier today I shared a report that was published on @reuters about the bombing at the hospital in Gaza which falsely stated Israel struck the hospital. I mistakenly shared this information in a since deleted post in which I referenced Hamas’ routine use of hospitals to store weapons caches and conduct terrorist activity. I apologize for this error. As the IDF does not bomb hospitals, I assumed Israel was targeting one of the Hamas bases in Gaza. It is known that Hamas is using civilians as human shields, it is a war crime and a crime against humanity. This should be the focus.’',
     },
@@ -1023,7 +1023,7 @@ const data = [
     },
 
     description: {
-        summary: 'Israeli military posted video claiming misfired rocket hit Al-Ahli',
+        summary: 'Israeli military posted video claiming a misfired rocket by the Palestinian resistance hit Al-Ahli Hospital',
         summaryClass: 'expand-text',
         details: 'The official @IDF account posted a video on X (formerly Twitter) claiming it shows a misfired at 6:59 PM.<br /><br />The post read: ‘RAW FOOTAGE: A rocket aimed at Israel misfired and exploded at 18:59 – the same moment a hospital was hit in Gaza.’',
     },
@@ -1072,7 +1072,7 @@ const data = [
     },
 
     description: {
-        summary: 'US President Joe Biden blamed ‘errant rocket by a terrorist group in Gaza’ for Al-Ahli Hospital Bombing',
+        summary: 'US President Joe Biden blamed ‘errant rocket by a terrorist group in Gaza’ for Al-Ahli Hospital bombing',
         summaryClass: 'expand-text',
         details: 'At a press conference in Tel Aviv in Occupied Palestine (what constitutes the Israeli state today), US President Joe Biden said the attack at Al-Ahli Hospital was caused by an ‘errant rocket fired by a terrorist group in Gaza.’<br /><br />Biden went on to say: ‘Based on the information we’ve seen to date, it appears as a result of an errant rocket fired by a terrorist group in Gaza. The United States unequivocally stands for the protection of civilian life during conflict.’ (heard in the video at 00:12)',
     },
@@ -1097,9 +1097,9 @@ const data = [
     },
 
     description: {
-        summary: 'Former Pentagon Chief claimed size of crater at the site of Al-Ahli Hospital attack was inconsist with US-supplied JDAM munitions used by Israeli military',
+        summary: 'Former Pentagon Chief claimed size of crater at the site of Al-Ahli Hospital attack was inconsistent with US-supplied JDAM munitions used by Israeli military',
         summaryClass: '',
-        details: 'Marc Garlasco, former Pentagon chief, raised concerns about the size of craters observed at the Al-Ahli Hospital. He stated that they do not align with the characteristics of the Joint Direct Attack Munition (JDAM) munitions typically used by the Israel Occupation Forces (IOF).<br /><br />He told the Guardian newspaper ‘The number [of casualties] is astronomically high, an absolute high range of all time if true. The crater is not consistent with an airstrike, it is more likely to be a weapon that failed and released its payload over a wide area. The crater and surrounding damage is also not consistent with a JDAM aerial bomb. The hole on the ground occurred from kinetic energy.’',
+        details: 'Marc Garlasco, former Pentagon chief, said he size of craters observed at the Al-Ahli Hospital did not align with the characteristics of the Joint Direct Attack Munition (JDAM) munitions typically used by the Israel Occupation Forces (IOF).<br /><br />He told The Guardian newspaper ‘The number [of casualties] is astronomically high, an absolute high range of all time if true. The crater is not consistent with an airstrike, it is more likely to be a weapon that failed and released its payload over a wide area. The crater and surrounding damage is also not consistent with a JDAM aerial bomb. The hole on the ground occurred from kinetic energy.’',
     },
     sources: [
         {
@@ -1147,7 +1147,7 @@ const data = [
     },
 
     description: {
-        summary: 'Israeli military presented material alleging the massacre at Al-Ahli Hospital was by PIJ rockets fired from a cemetery',
+        summary: 'Israeli military presented material alleging the massacre at Al-Ahli Hospital was by Palestinian rockets fired from a cemetery',
         summaryClass: 'expand-text',
         details: 'The Israel Occupation Forces (IOF) issued a press release, briefing video, and files asserting that Palestinian Islamic Jihad (PIJ) fired rockets from a nearby cemetery, resulting in a misfire that struck Al-Ahli Hospital.<br /><br /><b>The provided files include:</b><br /><br />Aerial maps claimed by the IOF to exhibit no signs of craters or blast damage to buildings, with a comparison of IOF crater sizes.<br />An image illustrating rocket flight paths travelling from west to east.<br />An alleged phone conversation between PIJ members admitting to the rocket failure.',
     },
@@ -1178,7 +1178,7 @@ const data = [
     description: {
         summary: 'Bellingcat geolocated videos contradicting Israel Occupation Forces (IOF) claims of no craters',
         summaryClass: 'expand-text',
-        details: 'Open-source investigative group Bellingcat employed geolocation techniques on videos sourced from Telegram and X (formerly Twitter), presenting evidence of craters and blast damage to buildings. These findings stand in contrast to the claims made in the Israel Occupation Forces (IOF) press release and briefing of no craters.',
+        details: 'Open-source investigative group Bellingcat employed geolocation techniques on videos sourced from Telegram and X (formerly Twitter), presenting evidence of craters and blast damage to buildings. These findings stand in contrast to the claims made in the Israeli military press release and briefing of no craters.',
     },
     sources: [
         {
@@ -1254,9 +1254,9 @@ const data = [
     },
 
     description: {
-        summary: 'BBC Verify noted inconsistencies in Israeli military spokesperson’s map of Al-Ahli site',
+        summary: 'Inconsistencies in Israeli military spokesperson’s map of Al-Ahli Hospital site found',
         summaryClass: 'expand-text',
-        details: 'UK state broadcaster‘s fact checking team noted that Israel Occupation Forces (IOF) spokesperson Jonathan Cornicus claimed Palestinian Islamic Jihad (PIJ) rockets were fired from a nearby cemetery next to the hospital. However, the map displayed by Cornicus showed a launch site further away. BBC Verify say they have not been able to locate a cemetery there.',
+        details: 'UK state broadcaster‘s fact checking team BBC Verify noted that Israel Occupation Forces (IOF) spokesperson Jonathan Cornicus claimed Palestinian Islamic Jihad (PIJ) rockets were fired from a nearby cemetery next to the hospital. However, the map displayed by Cornicus showed a launch site further away. BBC Verify say they have not been able to locate a cemetery there.',
     },
     sources: [
         {
@@ -1278,7 +1278,7 @@ const data = [
     },
 
     description: {
-        summary: 'The Pentagon said ‘physical evidence’ proved that the Israel Occupation Forces (IOF) did not strike the hospital',
+        summary: 'The Pentagon said ‘physical evidence’ proved that the Israeli forces did not strike the hospital',
         summaryClass: 'expand-text',
         details: 'US news outlet ABC News reported that they were told by two US officials that the Pentagon ‘independently concluded the Gaza hospital blast was likely caused by a Palestinian Islamic Jihad (PIJ) rocket that fell short of its target’.<br /><br />In an interview with the Israeli news channel i24, Joel Rayburn, Director of the American Centre for Levant Studies and former US Special Envoy for Syria, expanded on this conclusion by saying: ’If it had been a bomb dropped by an aircraft, the crater would have been massive.’ – timestamp 00:19.',
     },
@@ -1344,7 +1344,7 @@ const data = [
     },
 
     description: {
-        summary: 'The missile travelled for 4km, could not have been fired from nearby cemetery as Israeli officials claim',
+        summary: 'The missile travelled for 4km and could not have been fired from nearby cemetery as Israeli officials claim',
         summaryClass: 'expand-text',
         details: 'However, according to videos available online, including one aired by Al Jazeera Mubasher showing the moment the hospital was bombed, the missile was in the air for approximately 13 seconds before exploding. This indicates it covered a distance of at least 4 kilometers, which is quite far and somewhat aligns with the hospital surroundings.',
     },
@@ -1369,7 +1369,7 @@ const data = [
     },
 
     description: {
-        summary: 'Audio analysis of alleged intercepted call between Hamas members revealed it was manipulated digitally by Israel Occupation Forces (IOF)',
+        summary: 'Audio analysis of alleged intercepted call between Hamas members revealed it was manipulated digitally by the Israeli state',
         summaryClass: 'expand-text',
         details: 'Audio investigations organisation Earshot assessed the audio which revealed that the voices of the two ‘Hamas operatives’ are divided across two channels. If a call was intercepted, both voices would be on the same single monophonic audio channel.<br /><br />Post 3: ‘The fact that this recording is made up of two separate channels demonstrates that these two voices have been recorded independently. These two independent recordings have then been edited together with added effects (such as pan control).’<br /><br />Post 4: ‘Though this audio analysis cannot categorically state that the audible dialogue is fake, <a href="https://earshot.ngo/" target="_blank">Earshot.ngo</a>’s opinion is that the level of manipulation required to edit these two voices together disqualifies it as a source of credible evidence.’<br /><br />Earshot posted its analysis on X (formerly Twitter) at @earshot.ngo in a 4-part post.',
     },
@@ -1394,7 +1394,7 @@ const data = [
     },
 
     description: {
-        summary: 'Earshot investigated sound of missile and concludes it could not have travelled west as the Israel Occupation Forces (IOF) claims',
+        summary: 'Audio investigation of missile shows a rocket could not have travelled west as the Israeli state claimed',
         summaryClass: 'expand-text',
         details: 'Audio investigations organisation Earshot mapped the pitch of the doppler on the rocket/missile sound and concludes the launch would have come from the east side of the hospital, not the west as the IOF claimed.',
     },
@@ -1419,7 +1419,7 @@ const data = [
     },
 
     description: {
-        summary: 'Anonymous US intelligence officials said they are confident blast not by Israel Occupation Forces (IOF)',
+        summary: 'Anonymous US intelligence officials said they are confident blast not by Israeli forces',
         summaryClass: 'expand-text',
         details: 'In security briefings to reporters over the phone, US intelligence officials said they have ‘high confidence’ the attack was caused by misfired Palestinian rockets. They based this on analysed videos of the projectiles’ flight path, and an examination of the blast site.',
     },
@@ -1443,7 +1443,7 @@ const data = [
     },
 
     description: {
-        summary: 'Palestinian-British surgeon Doctor Ghassan Abu Sitta reported ongoing IOF attacks by remote-controlled quadcopters',
+        summary: 'Palestinian-British surgeon Doctor Ghassan Abu Sitta reported ongoing Israeli attacks by remote-controlled quadcopters',
         summaryClass: 'expand-text',
         details: 'In a voice note to the UK news outlet The Telegraph, Palestinian-British doctor Doctor Ghassan Abu Sitta said remote-controlled quadcopters equipped with rifles have been firing at Al-Ahli Hospital, which continued to be a target after the first attacks. Dr Abu Sitta was treating patients and sheltering in the hospital along with thousands of displaced Palestinians in Gaza. Palestinians are referred to it as a quadcopter, a large drone mounted with a gun.<br /><br />Dr Abu Sitta said the drones were hovering in ‘the vicinity of the hospital’ and were firing ‘single bullets’.',
     },
@@ -1516,7 +1516,7 @@ const data = [
     },
 
     description: {
-        summary: 'UN aid worker recounted Israel Occupation Forces (IOF) machine gun attacks during emergency medical supply delivery',
+        summary: 'UN aid worker recounted Israeli machine gun attacks during emergency medical supply delivery',
         summaryClass: 'expand-text',
         details: 'Jake Morland, an aid worker with the UN, described delivering emergency medical supplies to Al-Ahli Hospital with a convoy of ambulances. Morland told the UK state broadcaster BBC that IOF soldiers were aiming machine guns at Palestinian paramedics and UN vehicles on the way to the hospital. The ambulances were shot at by IOF on their journey. He describes the ongoing deaths at Al-Ahli Hospital when they arrived.',
     },
@@ -1540,7 +1540,7 @@ const data = [
     },
 
     description: {
-        summary: 'Israel Occupation Forces (IOF) targeted hospital officials at Kamal Adwan Hospital during press conference',
+        summary: 'Israeli forces targeted hospital officials at Kamal Adwan Hospital during press conference',
         summaryClass: 'expand-text',
         details: 'In a video shared by Al Jazeera, the Israeli military targeted another hospital, firing at Palestinian health officials giving a press conference at Kamal Adwan Hospital.',
     },
@@ -1565,7 +1565,7 @@ const data = [
     },
 
     description: {
-        summary: 'Al-Ahli surgeon’s daughter reported continued Israel Occupation Forces (IOF) shelling and attacks',
+        summary: 'Al-Ahli Hospital surgeon’s daughter reported continued Israeli shelling and attacks',
         summaryClass: 'expand-text',
         details: 'Nour Naim, the daughter of Al-Ahli Hospital‘s Head of Orthopaedic Surgery Fadel Naim, shared reports on X (formerly Twiter) from her father of continued shelling by Israel Occupation Forces (IOF) targeting the hospital, tanks firing at doctors trying to return, and snipers aiming at people inside the hospital. The post was made under the account @NourNaim88.<br /><br />The post read: ‘🚨In a phone call with my father<br /><br />@fnaim65<br /><br />from Al-Ahli Baptist Hospital #Gaza , after communication was cut off 🧵:<br /><br />– The hospital temporarily stopped operating due to intense and targeted shelling on its surroundings since yesterday.’',
     },
@@ -1589,9 +1589,9 @@ const data = [
     },
 
     description: {
-        summary: 'Dr. Ghassan Abu Sitta reported hospitals in Gaza were being re-targeted by the Israel Occupation Forces (IOF)',
+        summary: 'Doctor Ghassan Abu Sitta reported hospitals in Gaza were being re-targeted by Israeli forces',
         summaryClass: 'expand-text',
-        details: 'Dr Ghassan Abu Sitta said hospitals were being re-targeted by the Israel Occupation Forces (IOF), including Al-Awda (17 December, 2023), and Al-Shifa and Al-Ahli (18 December, 2023). In a post shared on X (formerly Twitter), Dr. Abu Sitta writes: ‘Palestinian hospitals giving any health care, even as a First Aid stations, are being re-targeted by the Israeli army. Yesturday it was Al Awda hospital. Morning they shelled Shifa Hospital. This afternoon they attacked Al Ahli hospital and are rounding up the staff and wounded.’<br /><br />The post was made under the account @GhassanAbuSitt1.',
+        details: 'Dr. Ghassan Abu Sitta said hospitals were being re-targeted by Israeli forces, including Al-Awda (17 December, 2023), and Al-Shifa and Al-Ahli (18 December, 2023). In a post shared on X (formerly Twitter), Dr. Abu Sitta wrote: ‘Palestinian hospitals giving any health care, even as a First Aid stations, are being re-targeted by the Israeli army. Yesturday it was Al Awda hospital. Morning they shelled Shifa Hospital. This afternoon they attacked Al Ahli hospital and are rounding up the staff and wounded.’<br /><br />The post was made under the account @GhassanAbuSitt1.',
     },
     sources: [
         {
@@ -1613,7 +1613,7 @@ const data = [
     },
 
     description: {
-        summary: 'Surgeon Fadel Naim said Al-Ahli shut down due to ongoing Israel Occupation Forces (IOF) attacks and detentions',
+        summary: 'Al-Ahli Hospital shut down due to ongoing Israeli attacks and detentions',
         summaryClass: 'expand-text',
         details: 'Fadel Naim, Al-Ahli’s head of orthopaedic surgery, told news wire AFP that Al-Ahli Hospital had continued to be attacked. He said doctors, medical staff and patients had been detained by the Israel Occupation Forces (IOF) and soldiers had destroyed part of the building’s grounds.',
     },

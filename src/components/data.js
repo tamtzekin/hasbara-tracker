@@ -696,7 +696,7 @@ const data = [
     },
 
     description: {
-        summary: 'An Israeli airstrike severely damaged two floors of Al-Ahli Hospital’s cancer treatment centre on 14 October, 2023',
+        summary: 'An Israeli airstrike severely damaged two floors of Al-Ahli Hospital’s cancer treatment centre',
         summaryClass: 'expand-text',
         details: 'An Israeli airstrike severely damaged upper two floors of the Al-Ahli Hospital’s Diagnostic Cancer Treatment Centre, which contained the ultrasound and mammography wards, injuring four staff members.<br /><br />The Washington Post reported that an Anglican pastor working for the Anglican diocese filmed a video showing a 155mm artillery illumination shell in the hospital’s ultrasound room.',
     },
@@ -732,7 +732,7 @@ const data = [
     },
 
     description: {
-        summary: 'Al-Ahli Hospital in Gaza was bombed on 17 October, killing hundreds',
+        summary: 'Al-Ahli Hospital in Gaza was bombed, killing hundreds',
         summaryClass: 'expand-text',
         details: 'Al-Ahli Hospital in Gaza – also known as Al-Ahli Hospital and Al-Ahli Baptist Hospital – was bombed, killing 471 Palestinians.<br /><br />The Gaza Health Ministry reported on their Facebook page that 342 people were injured.<br /><br />As reported by the United Nations news outlet, Hyo-jeong Kim, Lead of WHO’s Attacks on Health Care Initiative said in a virtual press conference held on 17 October, 2023 21:15 PM CEST that before this bombing, there were at least 51 attacks on health facilities and hospitals in Gaza by Israel Occupation Forces between 7 and 17 October 2023, killing 15 hospital workers and injuring 27 others.',
     },
@@ -768,7 +768,7 @@ const data = [
     },
 
     description: {
-        summary: 'Israel Occupation Forces (IOF) spokesperson Daniel Hagari claimed it is too early to tell whether Israeli forces hit Al-Ahli Hospital',
+        summary: 'Israeli military spokesperson Daniel Hagari claimed it is too early to tell whether Israeli forces hit Al-Ahli Hospital',
         summaryClass: 'expand-text',
         details: 'Seen in a video shared on the YouTube channel of Bloomberg Quicktake, the live news platform run by Bloomberg, Daniel Hagari, an IOF spokesperson, said reports of Israeli involvement in an airstrike against Al-Ahli Hospital in Gaza are still under review, attempting to cast doubt on Israeli involvement.',
     },
@@ -822,7 +822,7 @@ const data = [
     },
 
     description: {
-        summary: 'Israel Occupation Forces (IOF) spokesperson Daniel Hagari claimed ‘no craters can be identified’',
+        summary: 'Israeli military spokesperson Daniel Hagari claimed ‘no craters can be identified’',
         summaryClass: 'expand-text',
         details: 'In a press briefing, recorded and shared on the official IOF YouTube channel, IOF spokesperson Daniel Hagari claimed that there were no craters at the site of the Al-Ahli Hospital bombing. He said if the Israeli state was behind the attack, ‘we would have seen craters and structural damage to buildings, both of which haven’t been identified in this incident. The size of the damage we see here is due to the warhead of the Islamic Jihad rocket.’<br /><br />Video is incorrectly dated as ‘11.09.23’ – visible in the bottom left corner of the video at timestamp 0:00 – 0:04. The correct date of the video is 17.10.23.',
     },

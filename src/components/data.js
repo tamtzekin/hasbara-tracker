@@ -1663,20 +1663,46 @@ const data = [
     },
 
     description: {
-        summary: 'Reports suggest that the Israeli state offered fuel to Al-Shifa Hospital, but it was refused by Hamas.',
+        summary: 'Israeli Defence Minister Yoav Gallant calls for complete siege: No power, food or gas allowed into Gaza',
         summaryClass: 'expand-text',
-        details: 'On 9 October, 2023, reports emerged indicating that the Israeli state offered fuel to Al-Shifa Hospital. However, Hamas reportedly refused to accept the fuel. Further details regarding the reasons behind this refusal are not provided in the available information.',
+        details: 'On 9 October, 2023, Israeli Defence Minister Yoav Gallant said that he had 'ordered a full siege on the Gaza Strip' with 'no power, no food, no gas' allowed in. On the same day, the Israeli state also decided to cease its water supply to Gaza.',
     },
 
     sources: [
         {
             sourceText: 'Al Jazeera',
-            sourceLink: 'https://archive.ph/RTiNA',
+            sourceLink: 'https://www.aljazeera.com/news/2023/10/9/israel-announces-total-blockade-on-gaza',
+            archiveLink: 'https://archive.ph/RTiNA',
+            videoLink: 'https://files.hasbaratracker.com/YoavGallant_IOF_Siege_Gaza.mp4',
+        }
+    ]
+},
+
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
+    date: '9 Oct 2023',
+
+    claim: {
+        claimText: 'Claim',
+        claimClass: 'claim-tag',
+    },
+
+    description: {
+        summary: 'Israeli Energy Minister Israel Katz: 'No fuel truck will enter'',
+        summaryClass: 'expand-text',
+        details: 'The Israeli Energy Minister Israel Kats posted on X (formerly Twitter): <br> 'Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter until the Israeli abductees are returned home. Humanitarian for humanitarian. And no one will preach us morals.'',
+    },
+
+    sources: [
+        {
+            sourceText: 'X',
+            sourceLink: 'https://twitter.com/Israel_katz/status/1712356130377113904',
+            archiveLink: 'https://archive.ph/Am4Xe',
             videoLink: '',
         }
     ]
-}
-
+},
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)
     // {

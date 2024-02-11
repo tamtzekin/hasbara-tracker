@@ -1665,7 +1665,7 @@ const data = [
     description: {
         summary: 'Israeli Defence Minister Yoav Gallant calls for complete siege: No power, food or gas allowed into Gaza',
         summaryClass: 'expand-text',
-        details: 'On 9 October, 2023, Israeli Defence Minister Yoav Gallant said that he had 'ordered a full siege on the Gaza Strip' with 'no power, no food, no gas' allowed in. On the same day, the Israeli state also decided to cease its water supply to Gaza.',
+        details: 'On 9 October, 2023, Israeli Defence Minister Yoav Gallant said that he had ‘ordered a full siege on the Gaza Strip’ with ‘no power, no food, no gas’ allowed in. On the same day, the Israeli state also decided to cease its water supply to Gaza.',
     },
 
     sources: [
@@ -1689,9 +1689,9 @@ const data = [
     },
 
     description: {
-        summary: 'Israeli Energy Minister Israel Katz: 'No fuel truck will enter'',
+        summary: 'Israeli Energy Minister Israel Katz: ‘No fuel truck will enter’',
         summaryClass: 'expand-text',
-        details: 'The Israeli Energy Minister Israel Kats posted on X (formerly Twitter): <br> 'Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter until the Israeli abductees are returned home. Humanitarian for humanitarian. And no one will preach us morals.'',
+        details: 'The Israeli Energy Minister Israel Kats posted on X (formerly Twitter): <br>‘Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter until the Israeli abductees are returned home. Humanitarian for humanitarian. And no one will preach us morals.’',
     },
 
     sources: [

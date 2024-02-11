@@ -63,16 +63,17 @@ const MobileMenu = () => {
                         Volunteer
                     </Link>
 
-                    <Link to="/contact" onClick={closeModal}>
-                        Contact
+                    <Link to="/about" onClick={closeModal}>
+                        About
                     </Link>
 
+                    <span class="break"></span>
                     <Link to="/newsletter" onClick={closeModal}>
                         Newsletter
                     </Link>
 
-                    <Link to="/about" onClick={closeModal}>
-                        About
+                    <Link to="/contact" onClick={closeModal}>
+                        Contact
                     </Link>
 
                     <Link to="http://instagram.com/hasbaratracker" target="_blank">

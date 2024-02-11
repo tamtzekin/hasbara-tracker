@@ -84,6 +84,11 @@ button.dotted {
     font-size: 0.8em;
 }
 
+/* Line breaks to split up mobile menu */
+.break {
+    margin-bottom: 40%;
+}
+
 .claim-link {
     text-decoration: dashed underline;
 }
@@ -304,7 +309,7 @@ h2 .expand-text {
         display: none;
     }
 
-      
+
     /* Menu */
     .arrow-menu {
         font-size: 2.5em;

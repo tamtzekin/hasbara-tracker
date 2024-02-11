@@ -16,38 +16,36 @@ import NewsletterSignUpForm from './components/NewsletterSignUpForm';
 const App = () => {
     return (
     <>
-            <Router>
-                <VideoPlayer />
-                <ScrollToTop />
-                <Routes>
-                    <Route path="/" element={<Homepage />} />
-                    <Route path="/claims" element={<Homepage />} />
-                    <Route path="/submit-claim" element={<SubmitClaimForm />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/tracker" element={<Tracker />} />
-                    <Route path="/volunteer" element={<VolunteerForm />} />
-                    <Route path="/contact" element={<ContactForm />} />
-                    <Route path="/newsletter" element={<NewsletterSignUpForm />} />
-
-                {/* Route redirects to claim searches */}
-                    <Route
-                        path="/forty-beheaded-babies"
-                        element={<Navigate to="/tracker?filter=forty%20beheaded%20babies" replace />}
-                    />
+        <Router>
+            <VideoPlayer />
+            <ScrollToTop />
+            <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/submit-claim" element={<SubmitClaimForm />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/tracker" element={<Tracker />} />
+                <Route path="/volunteer" element={<VolunteerForm />} />
+                <Route path="/contact" element={<ContactForm />} />
+                <Route path="/newsletter" element={<NewsletterSignUpForm />} />
 
 
-                    <Route
-                        path="/al-ahli-attacked"
-                        element={<Navigate to="/tracker?filter=al-ahli%20hospital%20attacked" replace />}
-                    />
-                    
-                    <Route 
-                        path="al-shifa-fuel"
-                        element={<Navigate to="/tracker?filter=fuel" replace />}
-                    />
+            {/* Route redirects to claim searches */}
+                <Route
+                    path="/forty-beheaded-babies"
+                    element={<Navigate to="/tracker?filter=Forty%20beheaded%20babies" replace />}
+                />
 
-                </Routes>
-            </Router>
+                <Route
+                    path="al-ahli-attacked"
+                    element={<Navigate to="/tracker?filter=Al-Ahli%20Hospital%20attacked" replace />}
+                />
+                
+                <Route 
+                    path="al-shifa-fuel"
+                    element={<Navigate to="/tracker?filter=Israeli%20state%20offered%20fuel%20to%20Al-Shifa%20Hospital" replace />}
+                />
+            </Routes>
+        </Router>
     </>
   );  
 }

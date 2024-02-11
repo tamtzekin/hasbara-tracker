@@ -90,6 +90,10 @@ const Homepage = () => {
 
                 <em>Coming soon:</em> xxxxxx
 
+                <br />
+                <br />
+                <br />
+
         </div>
         </span>
 

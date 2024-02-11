@@ -107,7 +107,7 @@ button.dotted {
 
 details article {
     opacity: 0;
-  }
+}
   
 details[open] article {
     animation: fadeIn 300ms linear forwards;
@@ -271,9 +271,13 @@ h2 .expand-text {
     background: rgba(176, 245, 85, 0.424)
 }
 
+/* For all screens bigger than a mobile – handles how columns are shown on homepage */
+@media only screen and (min-width: 768px) {
     .hide-on-desktop {
         display: none;
     }
+}
+
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -290,6 +294,10 @@ h2 .expand-text {
 
     h2 {
         font-size: 1em;
+    }
+
+    .hide-on-mobile {
+        display: none;
     }
 
     .navbar {

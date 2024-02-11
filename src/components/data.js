@@ -13,7 +13,6 @@ const data = [
         },
         description: {
             summary: 'Exclusive Jewish kibbutzes exist on ethnically cleansed Palestinian towns and villages',
-            summaryClass: 'expand-text',
             details: 'The kibbutzes Kfar Aza and Be’eri are on ethnically cleansed Palestinian land, where many Palestinians currently living in post-Nakba Gaza were displaced from in 1948. The Kfar Aza kibbutz is on land that was originally part of Gaza before the Nakba, the ethnic cleansing of Palestine in 1948 or afterwards by Zionist militias to establish the Israeli state.<br /><br /><img src="/files/map_gaza_kibbutzes.png" alt="" width="100%" loading="lazy" /><br /><br />The Palestinian villages and towns ethnically cleansed in 1948 to make way for the Jewish Israeli settlements include:<br /><br /><u>Gaza, pre-1948:</u><br /><br /><b>Al-Muharraqa</b><br />Ethnically cleansed by the Palmach’s Negev Brigade<br />27–28 May 1948<br/><br /><b>Huj</b><br />Ethnically cleansed by Yishuv forces<br />31 May 1948<br /><br /><b>Najd</b><br />Ethnically cleansed by Yishuv forces<br />12 May 1948<br /><br /><b>Simsim</b><br />Ethnically cleansed by Yishuv forces<br />12 May 1948<br /><br /><b>Dimra</b><br />Ethnically cleansed possibly by the Giva’ti Brigade in Operation Yo’av<br />28 October 1948<br /><br /><b>Dayr Sunayd</b><br />Ethnically cleansed by Yishuv forces<br />Late October or early November 1948<br /><br /><b>Wuhaidat Tarabin</b><br />Ethnically cleansed by the Golani Brigade during Operation Assaf<br />5 December 1952<br /><br /><br /><u>Bir-a-Saba (Bersheeba), pre-1948</u><br /><br /><b>Abu Muailiq/Hasanat</b><br />Ethnically cleansed<br />5 July 1948<br /><br /><b>Gatatweh</b><br />Ethnically cleansed, details unknown<br />1948<br /><br /><b>Atawneh/Ntoush</b><br />Ethnically cleansed, details unknown<br />1948<br /><br /><b>Franji</b><br />Ethnically cleansed, details unknown<br />1948',
         },
         sources: [
@@ -44,7 +43,6 @@ const data = [
 
         description: {
             summary: 'Israeli state claims babies and toddlers found with ‘heads decapitated’ in the Kfar Aza kibbutz',
-            summaryClass: 'expand-text',
             details: 'A spokesperson for the Israeli state’s Prime Minister claimed babies and toddlers were found with their ‘heads decapitated’ in the Kfar Aza kibbutz after Hamas fighters entered Occupied Palestine (what constitutes part of the State of Israel today) on 7 October 2023.<br /><br />Nicole Zedeck, a reporter with Tel Aviv-based news channel i24, interviewed IOF soldier David Ben Zion, who made the same claim on 10 October 2023. He said, ‘They cut heads of children, they cut heads of women.’<br /><br />Ben Zion’s claims made the front page of The Metro newspaper in the UK.',
         },
 
@@ -73,7 +71,6 @@ const data = [
         },
         description: {
             summary: 'CNN reporter Nic Robertson claims babies’ heads cut off',
-            summaryClass: 'expand-text',
             details: 'Nic Robertson, a CNN reporter, claimed Palestinian resistance fighters carried out ‘ISIS-style executions’ by ‘cutting the heads off of people’, including babies and killing their pets.<br /><br />‘Men, women, children, hands bound, shot, executed, heads cut.’',
         },
 
@@ -97,7 +94,6 @@ const data = [
         },
         description: {
             summary: 'Israeli Foreign Affairs Ministry runs ads about 40 murdered babies',
-            summaryClass: 'expand-text',
             details: 'The Israeli Foreign Affairs Ministry starts running ads targeting children’s content on YouTube. The 28-second video advertisement is titled ‘Babies Can’t Read The Text In This Video But Their Parents Can’ and shows an animated rainbow and unicorn. The text in the video reads:<br /><br />‘We know that your child cannot read this. We have an important message to tell you as parents. 40 infants were murdered in Israel by the Hamas terrorists (ISIS). Just as you would do everything for your child. We will do everything to protect ours. Now hug your baby and stand with us.’',
         },
 
@@ -121,7 +117,6 @@ const data = [
     },
         description: {
             summary: 'Israeli first responder group Zaka representative claims he saw beheaded babies',
-            summaryClass: 'expand-text',
             details: 'In an interview with American news outlet CBS News, Yossi Landau, Head of Operations in the ‘southern region’ with Israeli first responder group Zaka said he saw ‘with his own eyes children and babies who had been beheaded’.',
         },
 
@@ -144,7 +139,6 @@ const data = [
     },
         description: {
             summary: 'US President Biden claims he saw ‘pictures’ of babies being beheaded',
-            summaryClass: 'expand-text',
             details: 'In an address to Jewish community leaders on 11 October 2023, US President Joe Biden said: ‘I never really thought that I would see and have confirmed pictures of terrorists beheading children.’',
         },
 
@@ -168,7 +162,6 @@ const data = [
         },
         description: {
             summary: 'White House official clarifies Biden did not see pictures of decapitated babies',
-            summaryClass: 'expand-text',
             details: 'A White House administration official later clarified President Biden’s remarks, saying that Biden was referring to public statements from officials and media reports and had not actually seen photos of beheaded babies.',
         },
         sources: [
@@ -190,7 +183,6 @@ const data = [
         },
         description: {
             summary: 'Sara Sidner, CNN reporter, repeated the Israeli state claim that babies were beheaded',
-            summaryClass: 'expand-text',
             details: 'In a CNN news report, Sidner claimed babies and toddlers were found with their ‘heads decapitated’ in Kfar Aza.',
         },
         sources: [
@@ -213,7 +205,6 @@ const data = [
         },
         description: {
             summary: 'IOF won’t back up decapitated babies claim because it is ‘disrespectful for the dead’',
-            summaryClass: 'expand-text',
             details: 'Israeli soldier Major Nir Dinar said the IOF refused to share the exact number of babies killed or how many had been beheaded as it is ‘disrespectful for the dead’.',
         },
         sources: [
@@ -235,7 +226,6 @@ const data = [
         },
         description: {
             summary: 'Netanyahu spokesperson ‘confirms’ decapitated babies',
-            summaryClass: 'expand-text',
             details: 'In an interview with UK broadcaster LBC, Tal Heinrich – spokesperson for the Israeli Prime Minister’s Office – ‘confirmed’ soldiers on the ground had been dealing with babies who had been decapitated.',
         },
         sources: [
@@ -257,7 +247,6 @@ const data = [
         },
         description: {
             summary: 'Israeli army reservist David Ben Zion is a settler council leader who has incited riots against Palestinians, sits on board of Jewish National Fund',
-            summaryClass: 'expand-text',
             details: 'The Israeli reserve soldier David Ben Zion who told a reporter Palestinian militants ‘cut [off] heads of babies’ is the deputy head of the Samaria Regional Council (also called Shomron Regional Council) that represents illegal settlements in the northern West Bank. Ben Zion represents 35 illegal settlements in the Israeli-occupied West Bank. He also sits on the board of the National Fund for Israel.<br /><br />He has previously called for the Palestinian village of Huwarra to be ‘erased’ and incited settler riots in Huwara and other Palestinian villages on 26 February, 2023. He posted on X (formerly Twitter) at the time: ‘The village of Huwara must be erased, this place is a terror nest, and the punishment has to be on everyone.’<br /><br />David Ben Zion also sits on the board of the KKL-JNF – the Jewish National Fund – a quasi-governmental agency used to expropriate Palestinian land.',
         },
         sources: [
@@ -283,7 +272,6 @@ const data = [
         },
         description: {
             summary: 'Sara Sidner of CNN retracts and apologises for sharing the claim',
-            summaryClass: 'expand-text',
             details: 'In a post on X (formerly Twitter), CNN reporter Sara Sidner apologies for sharing disinformation:<br /><br />‘Yesterday the Israeli Prime Minister’s office said that it had confirmed Hamas beheaded babies and children while we were live on the air. The Israeli government now says today it CANNOT confirm babies were beheaded. I needed to be more careful with my words and I am sorry.’',
         },
         sources: [
@@ -304,7 +292,6 @@ const data = [
         },
         description: {
             summary: 'CNN retracts reporting that Palestinian resistance fighters decapitated babies',
-            summaryClass: 'expand-text',
             details: 'CNN publishes an article stating that ‘Israeli official says government cannot confirm babies were beheaded in Hamas attack’.',
         },
         sources: [
@@ -325,7 +312,6 @@ const data = [
         },
         description: {
             summary: 'IOF spokesperson says ‘relatively confident’ that babies were beheaded',
-            summaryClass: 'expand-text',
             details: 'In a video shared by the official IOF account on X (formerly Twitter), spokesperson Jonathan Conricus claimed Palestinian resistance fighters had ‘likely’ carried out decapitations of babies in the Be’eri kibbutz.<br /><br />‘We got very very disturbing reports that came from the ground that there were babies that had been beheaded… I think we can now say with relative confidence that unfortunately this is what happened in Be’eri.’',
         },
         sources: [
@@ -348,7 +334,6 @@ const data = [
         },
         description: {
             summary: 'The Jerusalem Post claims beheaded babies claims are ‘correct’',
-            summaryClass: 'expand-text',
             details: 'The Jerusalem Post, an Israeli newspaper, wrote on X (formerly Twitter) on 12 October, 2023, that it can ‘confirm based on verified photos of the bodies that the reports of babies being burnt and decapitated in Hamas’s assault on Kfar Aza are correct. May their memory be a blessing.’',
         },
         sources: [
@@ -370,7 +355,6 @@ const data = [
         },
         description: {
             summary: 'The IOF refuses to confirm the claim of murdered babies',
-            summaryClass: 'expand-text',
             details: 'IOF spokesperson Maj. Doron Spielman told NBC News: ‘That specific report and that number I can’t confirm.’',
         },
         sources: [
@@ -392,7 +376,6 @@ const data = [
         },
         description: {
             summary: 'Israeli military: ‘We cannot confirm but you can assume it happened.’',
-            summaryClass: 'expand-text',
             details: 'Al Jazeera reports that when journalists asked a spokesman for the Israeli military about the story of beheaded babies, the reply was, ‘We cannot confirm but you can assume it happened.’',
         },
         sources: [
@@ -414,7 +397,6 @@ const data = [
         },
         description: {
             summary: 'Zaka first responder Yossi Landau in an interview repeats claims of beheaded babies',
-            summaryClass: 'expand-text',
             details: 'In an interview with American news outlet 6abc Philadelphia Yossi Landau, head of operations in the ‘southern region’ with first responder group Zaka, repeats the claim that he saw beheaded babies among other assertions.',
         },
         sources: [
@@ -437,7 +419,6 @@ const data = [
         },
         description: {
             summary: 'US President Joe Biden repeats claim in a visit to Tel Aviv in the Israeli state (historic occupied Palestine)',
-            summaryClass: 'expand-text',
             details: 'In his speech, US President Biden states: ‘Children slaughtered. Babies slaughtered. Entire families massacred. Rape, beheadings, bodies burned alive.’',
         },
         sources: [
@@ -458,7 +439,6 @@ const data = [
         },
         description: {
             summary: 'The official Israel social media account claims ‘one beheaded baby’ and ‘eight burned babies’ at Be’eri kibbutz',
-            summaryClass: 'expand-text',
             details: 'In a post on X (formerly Twitter) on 26 October 2023, the official State of Israel account shared a video of an Israel Occupation Forces’ soldier named Col. Golan Vach telling reporters that he carried a decapitated baby in his own hands.<br /><br />The post reads: ‘Listen to the eyewitness accounts of the 8 burned babies and one beheaded baby which were butchered by Hamas terrorists on October 7th. Pure evil.’<br /><br />In the video, Golan Vach states: ‘The baby was decapitated... I carried the baby in my own hands.’<br /><br />When he was asked why there were no photographs, he replied: ‘People ask me how come you did not take a picture. I said: I’m sorry, I have children. I have limitations. I have limits. I do not take a picture of a decapitated baby.’ Golan Vach also claimed a soldier was beheaded at Kfar Aza.',
         },
         sources: [
@@ -481,7 +461,6 @@ const data = [
         },
         description: {
             summary: 'Founder of Israeli first-responded group claims ‘little kids beheaded’',
-            summaryClass: 'expand-text',
             details: 'Eli Beer, president and founder of an Israeli first-responder group called United Hatzalah of Israel told the American Republican Jewish Committee in Las Vegas at a conference: ‘I saw little kids who were beheaded. We didn’t know which head belongs to which kid.’ He also claimed a baby was baked in an oven.',
         },
         sources: [
@@ -504,7 +483,6 @@ const data = [
         },
         description: {
             summary: 'US President Joe Biden repeats beheaded baby claims during APEC press conference',
-            summaryClass: 'expand-text',
             details: 'At a press conference on 15 November, 2023, Biden again repeats the debunked claim that Palestinian resistance fighters cut off babies’ heads and burned women and children alive.<br /><br />‘Hamas has already said publicly that they plan on attacking Israel again, like they did before, to where they were cutting babies’ heads off to burning women and children alive.’ Biden’s response is from 12:54 – 13:56.',
         },
         sources: [
@@ -527,7 +505,6 @@ const data = [
         },
         description: {
             summary: 'Revealed one baby was killed in crossfire between Israel Occupation Forces and Palestinian fighters',
-            summaryClass: 'expand-text',
             details: 'Israeli newspaper Ha’aretz reported on 4 December 2023 that according to sources including Israeli state’s National Insurance Institute, kibbutz leaders and the police, one baby was killed in the crossfire between the IOF and Hamas, 10-month-old Mila Cohen, along with her father, Ohad, on Kibbutz Be’eri on 7 October 2023.',
         },
         sources: [
@@ -549,7 +526,6 @@ const data = [
         },
         description: {
             summary: 'US President Joe Biden repeats that he saw beheaded infants, claims mother and daughter tied up and burnt',
-            summaryClass: 'expand-text',
             details: 'In a speech at Salamander Washington D.C., US President Biden once again repeated the claim that babies were beheaded.<br /><br />’I saw some of the photographs when I was there – tying a mother and her daughter together on a rope and then pouring kerosene on them and then burning them, beheading infants, doing things that are just inhuman – totally, completely inhuman.’',
         },
         sources: [
@@ -570,7 +546,6 @@ const data = [
         },
         description: {
             summary: 'Newsweek publishes an opinion article headlined ‘I Saw the Children Hamas Beheaded With My Own Eyes. Shame on Queen Rania’',
-            summaryClass: 'expand-text',
             details: 'A pro-Israel British physician published an opinion article in Newsweek which repeated the debunked claim of beheaded babies in the headline. The body of the article does not address the claim in the headline, and repeats unsubstantiated and dubious Israeli claims.',
         },
         sources: [
@@ -591,7 +566,6 @@ const data = [
         },
         description: {
             summary: 'Israeli soldier claims he saw eight babies and elderly woman named Jania killed in Be’eri',
-            summaryClass: 'expand-text',
             details: 'In an interview with the Israeli news channel Channel 14, an Israel Occupation Forces commander for the Kfir Brigade, Guy Basson, told interviewer Erel Segal that eight babies were killed in a nursery school, along with a Holocaust survivor with an Auschwitz tattoo named Jania.<br /><br /> Basson said (translated from Hebrew to English): ‘We arrive in Kibbutz Be’eri, and there I encounter two main images of the battle (and the) enemy’s brutality. One is a nursery school, with innocent children. They were butchered. Killed. You see the children inside the house? Eight babies. Eight babies died. And another image that caught my attention is when I saw Jania, may she rest in peace, an elderly woman from Kibbutz Be’eri, and I see the number engraved on her arm. An you say, she went through the Holocaust in Auschwitz, and in the end died in Kibbutz Be’eri. That’s not something that… You can’t even understand it.’',
         },
         sources: [
@@ -613,7 +587,6 @@ const data = [
         },
         description: {
             summary: 'Israeli soldier made up eight babies killed in Be’eri and no elderly woman named Jania exists',
-            summaryClass: 'expand-text',
             details: 'A spokesperson for Kibbutz Be’eri denied the claims by the IOF commander Guy Basson: ‘The cases described... regarding eight babies who were murdered in the daycare centre and regarding a Holocaust survivor named Jania who was murdered on October 7 didn’t happen’.',
         },
         sources: [
@@ -634,7 +607,6 @@ const data = [
     },
     description: {
         summary: 'Israeli media commentator questions why false claims made about murdered babies',
-        summaryClass: '',
         details: 'A presenter for the Israeli news channel Channel 13, Raviv Drucker, questions why IOF soldiers continue to make false claims about murdered babies, from beheaded and burnt babies, to babies hung on clothelines, to a pregnant woman being cut open. Guest Mickey Rosenthal, a member of the Israeli state’s Labor Party, stated: ‘Maybe they heard it as a rumour...but, and the most important thing to say in this context, the war is not only military and not only political, it’s mainly a media (war).’',
     },
     sources: [
@@ -661,7 +633,6 @@ const data = [
 
     description: {
         summary: 'The Israeli state says it has dropped 6,000 bombs on Gaza within the first week of the genocide',
-        summaryClass: 'expand-text',
         details: 'As reported by Al Jazeera, the Israeli state said it ‘dropped 6,000 bombs weighing 4,000 tonnes on Gaza’ within the first six days of the attack on Gaza, ‘killing more than 1,400 people’.<br /><br />The number of explosives used to attack Gaza in one week almost amounts to what the US and allied forces used in Afghanistan in all of 2019 – 7,432 bombs. It is the heaviest year of aerial bombardment there since the US Air Force began releasing monthly strike data in 2006.',
     },
     sources: [
@@ -697,7 +668,6 @@ const data = [
 
     description: {
         summary: 'An Israeli airstrike severely damaged two floors of Al-Ahli Hospital’s cancer treatment centre',
-        summaryClass: 'expand-text',
         details: 'An Israeli airstrike severely damaged upper two floors of the Al-Ahli Hospital’s Diagnostic Cancer Treatment Centre, which contained the ultrasound and mammography wards, injuring four staff members.<br /><br />The Washington Post reported that an Anglican pastor working for the Anglican diocese filmed a video showing a 155mm artillery illumination shell in the hospital’s ultrasound room.',
     },
     sources: [
@@ -733,7 +703,6 @@ const data = [
 
     description: {
         summary: 'Al-Ahli Hospital in Gaza was bombed, killing hundreds',
-        summaryClass: 'expand-text',
         details: 'Al-Ahli Hospital in Gaza – also known as Al-Ahli Hospital and Al-Ahli Baptist Hospital – was bombed, killing 471 Palestinians.<br /><br />The Gaza Health Ministry reported on their Facebook page that 342 people were injured.<br /><br />As reported by the United Nations news outlet, Hyo-jeong Kim, Lead of WHO’s Attacks on Health Care Initiative said in a virtual press conference held on 17 October, 2023 21:15 PM CEST that before this bombing, there were at least 51 attacks on health facilities and hospitals in Gaza by Israel Occupation Forces between 7 and 17 October 2023, killing 15 hospital workers and injuring 27 others.',
     },
     sources: [
@@ -769,7 +738,6 @@ const data = [
 
     description: {
         summary: 'Israeli military spokesperson Daniel Hagari claimed it is too early to tell whether Israeli forces hit Al-Ahli Hospital',
-        summaryClass: 'expand-text',
         details: 'Seen in a video shared on the YouTube channel of Bloomberg Quicktake, the live news platform run by Bloomberg, Daniel Hagari, an IOF spokesperson, said reports of Israeli involvement in an airstrike against Al-Ahli Hospital in Gaza are still under review, attempting to cast doubt on Israeli involvement.',
     },
     sources: [
@@ -799,7 +767,6 @@ const data = [
 
     description: {
         summary: 'Israeli officials claim Al-Ahli Hospital hit by stray Palestinian Islamic Jihad (PIJ) rockets',
-        summaryClass: 'expand-text',
         details: 'The Israeli Occupation Forces’ spokesperson account on X (formerly Twitter) @IDFSpokesperson, operated by Daniel Hagari, posts that the hospital was hit by stray Palestinian Islamic Jihad (PIJ) rockets.',
     },
     sources: [
@@ -823,7 +790,6 @@ const data = [
 
     description: {
         summary: 'Israeli military spokesperson Daniel Hagari claimed ‘no craters can be identified’',
-        summaryClass: 'expand-text',
         details: 'In a press briefing, recorded and shared on the official IOF YouTube channel, IOF spokesperson Daniel Hagari claimed that there were no craters at the site of the Al-Ahli Hospital bombing. He said if the Israeli state was behind the attack, ‘we would have seen craters and structural damage to buildings, both of which haven’t been identified in this incident. The size of the damage we see here is due to the warhead of the Islamic Jihad rocket.’<br /><br />Video is incorrectly dated as ‘11.09.23’ – visible in the bottom left corner of the video at timestamp 0:00 – 0:04. The correct date of the video is 17.10.23.',
     },
     sources: [
@@ -848,7 +814,6 @@ const data = [
 
     description: {
         summary: 'Social media advisor to Israeli Prime Minister Netanyahu said Israeli Air Force struck the hospital',
-        summaryClass: 'expand-text',
         details: 'Hananya Naftali, the social media advisor to Netanyahu since 2018, posted on X (formerly Twitter) saying the Israeli Air Force struck the hospital, claiming it hid a ‘Hamas terrorist base’. The post was swiftly removed and retracted shortly after.<br /><br />The post read: ‘BREAKING: Israeli Air Force struck a Hamas terrorist base inside a hospital in Gaza. A multiple number of terrorists are dead. It’s heartbreaking that Hamas is launching rockets from hospitals, Mosques, schools and using civilians as human shields.’',
     },
     sources: [
@@ -878,7 +843,6 @@ const data = [
 
     description: {
         summary: '@Israel account shared video claiming a Palestinian rocket hit the hospital',
-        summaryClass: 'expand-text',
         details: 'The official @Israel X (formerly Twitter) account posted a video claiming an ‘enemy rocket barrage was carried out towards Israel, which passed through the vicinity of the hospital when it was hit’.',
     },
     sources: [
@@ -903,7 +867,6 @@ const data = [
 
     description: {
         summary: '@Israel post was edited to remove the video because it showed an incorrect timestamp',
-        summaryClass: 'expand-text',
         details: 'The official @Israel account on X (formerly Twitter) edited its post 22 minutes later to remove the video after New York Times reporter Aric Toler (@AricToler) pointed out the video clip was timestamped at about 8:00 PM, about 40 minutes after the hospital was hit.',
     },
     sources: [
@@ -927,7 +890,6 @@ const data = [
 
     description: {
         summary: 'Israeli ambassador to the US Michael Herzog shared video claiming a Palestinian rocket hit the hospital',
-        summaryClass: 'expand-text',
         details: 'One minute later, the Israeli ambassador to the US Michael Herzog posted a video on X (formerly Twitter) on the account @AmbHerzog that claimed to show a rocket fired from Gaza caused the explosion at the hospital. It is the same video the @Israel account removed from their post one minute earlier.',
     },
     sources: [
@@ -952,7 +914,6 @@ const data = [
 
     description: {
         summary: 'Israeli ambassador to the US Michael Herzog edited X (formerly Twitter) post to remove the video because of incorrect timestamp',
-        summaryClass: 'expand-text',
         details: 'The Israeli ambassador to the US Michael Herzog edited his post on X (formerly Twitter) 32 minutes later to remove the video after the official @Israel account removed the video after New York Times reporter Aric Toler (@AricToler) noticed the video clip was timestamped at around 8:00 PM, about 40 minutes after the hospital was hit.',
     },
     sources: [
@@ -976,7 +937,6 @@ const data = [
 
     description: {
         summary: 'Israeli official claimed that Israeli forces do not target hospitals',
-        summaryClass: 'expand-text',
         details: 'Talya Lankri, a senior reserves officer and the former deputy head of the Israeli state’s National Security Council, said on Israeli TV’s Channel 12 news that ‘the IDF does not hit hospitals. That is not a target.’'
     },
     sources: [
@@ -1000,7 +960,6 @@ const data = [
 
     description: {
         summary: 'Social media advisor to Israeli Prime Minister Benjamin Netanyahu deleted post and claimed Israeli forces do not bomb hospitals',
-        summaryClass: 'expand-text',
         details: 'Hananya Naftali, the social media advisor to Netanyahu since 2018, posted a statement on X (formerly Twitter) denying that the IOF targets hospitals, despite declaring that the IOF bombed Al-Ahli Hospital hours earlier.<br /><br />The post read:<br /><br />‘Earlier today I shared a report that was published on @reuters about the bombing at the hospital in Gaza which falsely stated Israel struck the hospital. I mistakenly shared this information in a since deleted post in which I referenced Hamas’ routine use of hospitals to store weapons caches and conduct terrorist activity. I apologize for this error. As the IDF does not bomb hospitals, I assumed Israel was targeting one of the Hamas bases in Gaza. It is known that Hamas is using civilians as human shields, it is a war crime and a crime against humanity. This should be the focus.’',
     },
     sources: [
@@ -1024,7 +983,6 @@ const data = [
 
     description: {
         summary: 'Israeli military posted video claiming a misfired rocket by the Palestinian resistance hit Al-Ahli Hospital',
-        summaryClass: 'expand-text',
         details: 'The official @IDF account posted a video on X (formerly Twitter) claiming it shows a misfired at 6:59 PM.<br /><br />The post read: ‘RAW FOOTAGE: A rocket aimed at Israel misfired and exploded at 18:59 – the same moment a hospital was hit in Gaza.’',
     },
     sources: [
@@ -1049,7 +1007,6 @@ const data = [
 
     description: {
         summary: 'Israeli military spokesperson shared image claiming to depict Islamic Jihad rocket',
-        summaryClass: 'expand-text',
         details: 'Israel Occupation Forces (IOF) spokesperson Daniel Hagari posted an image on the @IDFSpokesperson account on X (formerly Twitter) which depicts rocket flight paths travelling west to east towards Al-Ahli Hospital. The image is labelled as being ‘taken by IDF Radar Footage’.<br /><br />The post read: ‘Attached is a visual related to the failed rocket launch by the Islamic Jihad that hit the Al Ahli hospital.’',
     },
     sources: [
@@ -1073,7 +1030,6 @@ const data = [
 
     description: {
         summary: 'US President Joe Biden blamed ‘errant rocket by a terrorist group in Gaza’ for Al-Ahli Hospital bombing',
-        summaryClass: 'expand-text',
         details: 'At a press conference in Tel Aviv in Occupied Palestine (what constitutes the Israeli state today), US President Joe Biden said the attack at Al-Ahli Hospital was caused by an ‘errant rocket fired by a terrorist group in Gaza.’<br /><br />Biden went on to say: ‘Based on the information we’ve seen to date, it appears as a result of an errant rocket fired by a terrorist group in Gaza. The United States unequivocally stands for the protection of civilian life during conflict.’ (heard in the video at 00:12)',
     },
     sources: [
@@ -1098,7 +1054,6 @@ const data = [
 
     description: {
         summary: 'Former Pentagon Chief claimed size of crater at the site of Al-Ahli Hospital attack was inconsistent with US-supplied JDAM munitions used by Israeli military',
-        summaryClass: '',
         details: 'Marc Garlasco, former Pentagon chief, said he size of craters observed at the Al-Ahli Hospital did not align with the characteristics of the Joint Direct Attack Munition (JDAM) munitions typically used by the Israel Occupation Forces (IOF).<br /><br />He told The Guardian newspaper ‘The number [of casualties] is astronomically high, an absolute high range of all time if true. The crater is not consistent with an airstrike, it is more likely to be a weapon that failed and released its payload over a wide area. The crater and surrounding damage is also not consistent with a JDAM aerial bomb. The hole on the ground occurred from kinetic energy.’',
     },
     sources: [
@@ -1122,7 +1077,6 @@ const data = [
 
     description: {
         summary: 'Israeli state released an alleged interecepted phone call between Hamas members',
-        summaryClass: 'expand-text',
         details: 'The official @Israel account on X (formerly Twitter) posted a recording claiming it is a conversation between two Hamas members. The post read:<br /><br />‘Hamas terrorists in their own voices:<br /><br />Listen to the conversation between Hamas operatives as they discuss the failed Islamic Jihad rocket launch on the Al-Ahli Baptist Hospital on October 17, 2023.’<br /><br />The video is titled: ‘A Recording of a Conversation Regarding the Hospital Launch Incident by the Islamic Jihad Terror Organization 17.10.2023’<br /><br />The video is titled: ‘A Recording of a Conversation Regarding the Hospital Launch Incident by the Islamic Jihad Terror Organization 17.10.2023’<br /><br />Note that the following video has evident errors in attributing voices and quotes to alleged operatives. We are attributing it to each voice accordingly due to editing errors by the IOF.<br /><br />Video Transcript:<br /><br />Speaker 1: ‘I’m telling you this is the first time we see a missile like this falling and so that‘s why we are saying it belongs to the Palestinian Islamic Jihad.’<br /><br />Speaker 2: ‘What?’<br /><br />Speaker 1: ‘They are are saying it belongs to Palestinian Islamic Jihad.’<br /><br />Speaker 2: ‘It’s from us?’<br /><br />Speaker 1: ‘It looks like it.’<br /><br />Speaker 2: ‘Who says this.’<br /><br />Speaker 1: ‘They are saying that the shrapnel from the missile is local shrapnel and not like Israeli shrapnel.’<br /><br />Speaker 2: ‘What are you saying (name redacted)?’<br /><br />Speaker 1: (Silence)',
     },
     sources: [
@@ -1148,7 +1102,6 @@ const data = [
 
     description: {
         summary: 'Israeli military presented material alleging the massacre at Al-Ahli Hospital was by Palestinian rockets fired from a cemetery',
-        summaryClass: 'expand-text',
         details: 'The Israel Occupation Forces (IOF) issued a press release, briefing video, and files asserting that Palestinian Islamic Jihad (PIJ) fired rockets from a nearby cemetery, resulting in a misfire that struck Al-Ahli Hospital.<br /><br /><b>The provided files include:</b><br /><br />Aerial maps claimed by the IOF to exhibit no signs of craters or blast damage to buildings, with a comparison of IOF crater sizes.<br />An image illustrating rocket flight paths travelling from west to east.<br />An alleged phone conversation between PIJ members admitting to the rocket failure.',
     },
     sources: [
@@ -1177,7 +1130,6 @@ const data = [
 
     description: {
         summary: 'Bellingcat geolocated videos contradicting Israel Occupation Forces (IOF) claims of no craters',
-        summaryClass: 'expand-text',
         details: 'Open-source investigative group Bellingcat employed geolocation techniques on videos sourced from Telegram and X (formerly Twitter), presenting evidence of craters and blast damage to buildings. These findings stand in contrast to the claims made in the Israeli military press release and briefing of no craters.',
     },
     sources: [
@@ -1206,7 +1158,6 @@ const data = [
 
     description: {
         summary: 'US spokesperson said Israeli state not responsible for hospital attack',
-        summaryClass: 'expand-text',
         details: 'The US National Security Council Spokesperson Adrienne Watson posted on X (formerly Twitter) from the account @NSC_Spox that the Israeli state is not responsible for the hospital attack, based on analysis of ‘overhead imagery, intercepts and open source information’.<br /><br />The post read: ‘While we continue to collect information, our current assessment, based on analysis of overhead imagery, intercepts and open source information, is that Israel is not responsible for the explosion at the hospital in Gaza yesterday.’',
     },
     sources: [
@@ -1230,7 +1181,6 @@ const data = [
 
     description: {
         summary: 'Israeli army spokesman said crater ‘too small’ to be caused by Israeli bombs',
-        summaryClass: 'expand-text',
         details: 'The @IDF X (formerly Twitter) account broadcasted a video briefing featuring the Israeli army’s international spokesperson Jonathan Conricus. He pointed to a TV screen showing footage and images. At the 08:38 mark, he stated that the ‘only picture of a crater is here in this area... and it’s a very small one’. He claimed Palestinian rockets ‘misfired’ from a nearby cemetery.<br /><br />‘Scroll through pictures of rockets that impacted in Sderot, Ashkelon, in Be’er-Sheva, unfortunately there are many of those pictures, you’ll see very very similar sites... a small crater, lots of soot and fire remarks and you can see, by the way, that all of the buildings around are generally intact. If a big Israeli bomb had been dropped here, none of this would have been intact.’',
     },
     sources: [
@@ -1255,7 +1205,6 @@ const data = [
 
     description: {
         summary: 'Inconsistencies in Israeli military spokesperson’s map of Al-Ahli Hospital site found',
-        summaryClass: 'expand-text',
         details: 'UK state broadcaster‘s fact checking team BBC Verify noted that Israel Occupation Forces (IOF) spokesperson Jonathan Cornicus claimed Palestinian Islamic Jihad (PIJ) rockets were fired from a nearby cemetery next to the hospital. However, the map displayed by Cornicus showed a launch site further away. BBC Verify say they have not been able to locate a cemetery there.',
     },
     sources: [
@@ -1279,7 +1228,6 @@ const data = [
 
     description: {
         summary: 'The Pentagon said ‘physical evidence’ proved that the Israeli forces did not strike the hospital',
-        summaryClass: 'expand-text',
         details: 'US news outlet ABC News reported that they were told by two US officials that the Pentagon ‘independently concluded the Gaza hospital blast was likely caused by a Palestinian Islamic Jihad (PIJ) rocket that fell short of its target’.<br /><br />In an interview with the Israeli news channel i24, Joel Rayburn, Director of the American Centre for Levant Studies and former US Special Envoy for Syria, expanded on this conclusion by saying: ’If it had been a bomb dropped by an aircraft, the crater would have been massive.’ – timestamp 00:19.',
     },
     sources: [
@@ -1309,7 +1257,6 @@ const data = [
 
     description: {
         summary: 'Joint 3D analysis by investigative human rights groups showed strike came from northeast, not west as Israeli state claims',
-        summaryClass: 'expand-text',
         details: 'Investigative human rights groups Forensic Architecture, Palestinian human rights organisation Al-Haq and and audio investigation organisation Earshot released preliminary analysis on X (formerly Twitter) indicating that there are ‘patterns of radial fragmentation on the southwest side of the impact crater, as well as a shallow channel leading into the crater from the northeast. Such patterns indicate a likely projectile trajectory with northeast origins’.<br /><br />This ‘casts significant doubt on IOF claims that the source of the deadly explosion was a Palestinian-fired rocket travelling west to east.’<br /><br />Chris Cobb-Smith, a war crimes investigator and explosive weapons expert reviewed the analysis and agreed that the fragmentation patterns ‘may indicate the projectile came from the northeast – the direction of the Israeli-controlled side of the Gaza perimeter – and not from the west, as claimed by the IOF.’<br /><br />@ForensicArchi @alhaq_org @earshot_ngo',
     },
     sources: [
@@ -1345,7 +1292,6 @@ const data = [
 
     description: {
         summary: 'The missile travelled for 4km and could not have been fired from nearby cemetery as Israeli officials claim',
-        summaryClass: 'expand-text',
         details: 'However, according to videos available online, including one aired by Al Jazeera Mubasher showing the moment the hospital was bombed, the missile was in the air for approximately 13 seconds before exploding. This indicates it covered a distance of at least 4 kilometers, which is quite far and somewhat aligns with the hospital surroundings.',
     },
     sources: [
@@ -1370,7 +1316,6 @@ const data = [
 
     description: {
         summary: 'Audio analysis of alleged intercepted call between Hamas members revealed it was manipulated digitally by the Israeli state',
-        summaryClass: 'expand-text',
         details: 'Audio investigations organisation Earshot assessed the audio which revealed that the voices of the two ‘Hamas operatives’ are divided across two channels. If a call was intercepted, both voices would be on the same single monophonic audio channel.<br /><br />Post 3: ‘The fact that this recording is made up of two separate channels demonstrates that these two voices have been recorded independently. These two independent recordings have then been edited together with added effects (such as pan control).’<br /><br />Post 4: ‘Though this audio analysis cannot categorically state that the audible dialogue is fake, <a href="https://earshot.ngo/" target="_blank">Earshot.ngo</a>’s opinion is that the level of manipulation required to edit these two voices together disqualifies it as a source of credible evidence.’<br /><br />Earshot posted its analysis on X (formerly Twitter) at @earshot.ngo in a 4-part post.',
     },
     sources: [
@@ -1395,7 +1340,6 @@ const data = [
 
     description: {
         summary: 'Audio investigation of missile shows a rocket could not have travelled west as the Israeli state claimed',
-        summaryClass: 'expand-text',
         details: 'Audio investigations organisation Earshot mapped the pitch of the doppler on the rocket/missile sound and concludes the launch would have come from the east side of the hospital, not the west as the IOF claimed.',
     },
     sources: [
@@ -1420,7 +1364,6 @@ const data = [
 
     description: {
         summary: 'Anonymous US intelligence officials said they are confident blast not by Israeli forces',
-        summaryClass: 'expand-text',
         details: 'In security briefings to reporters over the phone, US intelligence officials said they have ‘high confidence’ the attack was caused by misfired Palestinian rockets. They based this on analysed videos of the projectiles’ flight path, and an examination of the blast site.',
     },
     sources: [
@@ -1444,7 +1387,6 @@ const data = [
 
     description: {
         summary: 'Palestinian-British surgeon Doctor Ghassan Abu Sitta reported ongoing Israeli attacks by remote-controlled quadcopters',
-        summaryClass: 'expand-text',
         details: 'In a voice note to the UK news outlet The Telegraph, Palestinian-British doctor Doctor Ghassan Abu Sitta said remote-controlled quadcopters equipped with rifles have been firing at Al-Ahli Hospital, which continued to be a target after the first attacks. Dr Abu Sitta was treating patients and sheltering in the hospital along with thousands of displaced Palestinians in Gaza. Palestinians are referred to it as a quadcopter, a large drone mounted with a gun.<br /><br />Dr Abu Sitta said the drones were hovering in ‘the vicinity of the hospital’ and were firing ‘single bullets’.',
     },
     sources: [
@@ -1468,7 +1410,6 @@ const data = [
 
     description: {
         summary: 'Forensic Architecture and Al-Haq debunked Israeli claims on rocket misfires',
-        summaryClass: 'expand-text',
         details: 'In a 7-post thread on X (formerly Twitter), investigative human rights group Forensic Architecture and Palestinian human rights organisation Al-Haq debunked Israeli spokespeople in the media who presented evidence of rockets misfired.<br /><br />@ForensicArchi @alhaq_org',
     },
     sources: [
@@ -1493,7 +1434,6 @@ const data = [
 
     description: {
         summary: 'Human Rights Watch – inconclusive and without evidence – suggested misfired rockets hit Al-Ahli Hospital',
-        summaryClass: 'expand-text',
         details: 'International NGO Human Rights Watch released a report suggesting the strike came from misfired rockets but does not provide evidence or come to any conclusion. The report read: ‘There are no known images of any munition remnants publicly available, and Human Rights Watch was unable to visit the scene, preventing conclusive identification of the munition.<br /><br />However, the sound preceding the explosion, the fireball that accompanied it, the size of the resulting crater, the type of splatter adjoining it, and the type and pattern of fragmentation visible around the crater are all consistent with the impact of a rocket.’<br /><br />The report has since been removed from their website.',
     },
     sources: [
@@ -1517,7 +1457,6 @@ const data = [
 
     description: {
         summary: 'UN aid worker recounted Israeli machine gun attacks during emergency medical supply delivery',
-        summaryClass: 'expand-text',
         details: 'Jake Morland, an aid worker with the UN, described delivering emergency medical supplies to Al-Ahli Hospital with a convoy of ambulances. Morland told the UK state broadcaster BBC that IOF soldiers were aiming machine guns at Palestinian paramedics and UN vehicles on the way to the hospital. The ambulances were shot at by IOF on their journey. He describes the ongoing deaths at Al-Ahli Hospital when they arrived.',
     },
     sources: [
@@ -1541,7 +1480,6 @@ const data = [
 
     description: {
         summary: 'Israeli forces targeted hospital officials at Kamal Adwan Hospital during press conference',
-        summaryClass: 'expand-text',
         details: 'In a video shared by Al Jazeera, the Israeli military targeted another hospital, firing at Palestinian health officials giving a press conference at Kamal Adwan Hospital.',
     },
     sources: [
@@ -1566,7 +1504,6 @@ const data = [
 
     description: {
         summary: 'Al-Ahli Hospital surgeon’s daughter reported continued Israeli shelling and attacks',
-        summaryClass: 'expand-text',
         details: 'Nour Naim, the daughter of Al-Ahli Hospital‘s Head of Orthopaedic Surgery Fadel Naim, shared reports on X (formerly Twiter) from her father of continued shelling by Israel Occupation Forces (IOF) targeting the hospital, tanks firing at doctors trying to return, and snipers aiming at people inside the hospital. The post was made under the account @NourNaim88.<br /><br />The post read: ‘🚨In a phone call with my father<br /><br />@fnaim65<br /><br />from Al-Ahli Baptist Hospital #Gaza , after communication was cut off 🧵:<br /><br />– The hospital temporarily stopped operating due to intense and targeted shelling on its surroundings since yesterday.’',
     },
     sources: [
@@ -1590,7 +1527,6 @@ const data = [
 
     description: {
         summary: 'Doctor Ghassan Abu Sitta reported hospitals in Gaza were being re-targeted by Israeli forces',
-        summaryClass: 'expand-text',
         details: 'Dr. Ghassan Abu Sitta said hospitals were being re-targeted by Israeli forces, including Al-Awda (17 December, 2023), and Al-Shifa and Al-Ahli (18 December, 2023). In a post shared on X (formerly Twitter), Dr. Abu Sitta wrote: ‘Palestinian hospitals giving any health care, even as a First Aid stations, are being re-targeted by the Israeli army. Yesturday it was Al Awda hospital. Morning they shelled Shifa Hospital. This afternoon they attacked Al Ahli hospital and are rounding up the staff and wounded.’<br /><br />The post was made under the account @GhassanAbuSitt1.',
     },
     sources: [
@@ -1614,7 +1550,6 @@ const data = [
 
     description: {
         summary: 'Al-Ahli Hospital shut down due to ongoing Israeli attacks and detentions',
-        summaryClass: 'expand-text',
         details: 'Fadel Naim, Al-Ahli’s head of orthopaedic surgery, told news wire AFP that Al-Ahli Hospital had continued to be attacked. He said doctors, medical staff and patients had been detained by the Israel Occupation Forces (IOF) and soldiers had destroyed part of the building’s grounds.',
     },
     sources: [
@@ -1638,7 +1573,6 @@ const data = [
 
     description: {
         summary: 'Israeli military continued targeting hospitals, multiple missiles hit the Kuwaiti Hospital',
-        summaryClass: 'expand-text',
         details: 'Israel Occupation Forces (IOF) continued to target hospitals. The Kuwaiti Hospital in Rafah was attacked by multiple missiles while Al-Jazeera journalist Hani Mahmoud was reporting live on air for Al Jazeera English.',
     },
     sources: [
@@ -1665,7 +1599,6 @@ const data = [
 
     description: {
         summary: 'Israeli Defence Minister Yoav Gallant calls for complete siege: No power, food or gas allowed into Gaza',
-        summaryClass: 'expand-text',
         details: 'On 9 October, 2023, Israeli Defence Minister Yoav Gallant said that he had ‘ordered a full siege on the Gaza Strip’ with ‘no power, no food, no gas’ allowed in. On the same day, the Israeli state also decided to cease its water supply to Gaza.',
     },
 
@@ -1691,7 +1624,6 @@ const data = [
 
     description: {
         summary: 'Israeli Energy Minister Israel Katz: ‘No fuel truck will enter’',
-        summaryClass: 'expand-text',
         details: 'The Israeli Energy Minister Israel Kats posted on X (formerly Twitter):<br>‘Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter until the Israeli abductees are returned home. Humanitarian for humanitarian. And no one will preach us morals.’',
     },
 
@@ -1717,8 +1649,7 @@ const data = [
     //     },
 
     //     description: {
-    //         summary: '',
-    //         summaryClass: 'expand-text',
+    //         summary: '',ext',
     //         details: '',
     //     },
     //     sources: [

@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: 'LoRes_Regular';
     src:url("./fonts/lores12ot-regular-webfont.woff2") format('woff2'),
@@ -6,13 +7,13 @@
     font-style: normal;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'AcuminPro_WideSemibold';
     src:url("./fonts/acumin_pro_wide_semibold-webfont.woff2") format('woff2'),
         url("./fonts/acumin_pro_wide_semibold-webfont.woff") format('woff');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 @font-face {
     font-family: 'Helvetica';
@@ -38,6 +39,8 @@
         url("./fonts/helveticaneue_medium.woff") format("woff");
 }
 
+
+/* Styles */
 a:hover {
     cursor: crosshair;
     /* text-decoration: dashed underline; */
@@ -93,7 +96,6 @@ button.dotted {
     background-color: black;
 }
 
-
 #dots {
     font-family: 'LoRes_Regular';
     font-size: 2.15em;
@@ -108,18 +110,18 @@ details article {
   }
   
 details[open] article {
-    animation: fadeIn .4s linear forwards;
+    animation: fadeIn 300ms linear forwards;
     cursor: default;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-} 
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    } 
 
 details[open] .expand-text::after {
     content: '—';
@@ -152,13 +154,6 @@ details > summary::-webkit-details-marker {
     color: #585151;
 }
 
-h2 .expand-text {
-    font-size: 1em;
-    padding-left: 3px;
-    font-weight: 600;
-    color: #585151;
-}
-
 details[open] .expand-text::after {
     content: '—';
     font-size: 0.5em;
@@ -174,8 +169,11 @@ details[open] .expand-text::after {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-::selection {
-    background: rgba(176, 245, 85, 0.424)
+h2 .expand-text {
+    font-size: 1em;
+    padding-left: 3px;
+    font-weight: 600;
+    color: #585151;
 }
 
 .navbar {
@@ -222,6 +220,28 @@ details[open] .expand-text::after {
     box-sizing: border-box;
 }
 
+.footer {
+    position: absolute;
+    bottom: -5%;
+    padding-bottom: 5%;
+    right: 18%;
+    display: flex;
+    list-style-type: none;
+    white-space: nowrap;
+} 
+
+.footer a {
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 8px;
+    font-size: 1em;
+}
+
+.footer a:hover {
+    cursor: crosshair;
+    text-decoration: dashed underline;
+}   
+
 .header-container {
     position: absolute;
     width: 90%;
@@ -230,51 +250,82 @@ details[open] .expand-text::after {
 .mobile-menu {
     display: none;
   }
-  
-  .hamburger-icon {
-    cursor: crosshair;
-    display: flex;
-    flex-direction: column;
-    padding-top: 1%;
+
+.claims-list {
+    margin-top: 10px;
 }
   
-  .bar {
-    width: 28px;
-    height: 3px;
-    background-color: #333;
-    margin: 3px 0;
-    transition: 0.4s;
-  }
-
-  .claims-list {
-    margin-top: 10px;
-  }
-  
-  .menu-links {
+.menu-links {
     display: flex;
     flex-direction: column;
-  }
+}
   
-  .menu-links a {
+.menu-links a {
     color: #333;
     text-decoration: none;
     padding: 10px;
     transition: 0.3s;
-  }
+}
 
+::selection {
+    background: rgba(176, 245, 85, 0.424)
+}
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-
-
-
-  
-/* Mobile devices (portrait and landscape) */
+/* Mobile devices */
 @media only screen and (max-width: 768px) {
+    body {
+        font-size: 0.95em;
+    }
+
+    .content-container {
+        margin: 15% 4% 0 -17%;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+      
+    /* Menu */
     .arrow-menu {
         font-size: 2.5em;
         margin-bottom: 15px;
     }
 
+    .bar {
+        width: 28px;
+        height: 3px;
+        background-color: #333;
+        margin: 3px 0;
+        transition: 0.4s;
+      }
+
+    .hamburger-icon {
+        cursor: crosshair;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1%;
+    }
+
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+        top: 6.2%;
+        right: 8.2%;
+        text-align: right;
+        position: absolute;
+        font-size: 1em;
+        font-family: 'Helvetica', Helvetica, sans-serif;
+    }
+    
     .mobile-menu {
       /* display: flex;
         align-items: center;
@@ -290,27 +341,13 @@ details[open] .expand-text::after {
         right: 10%;
         z-index: 3;
     }
-  
-    .menu-links {
-        display: flex;
-        flex-direction: column;
-        top: 6.2%;
-        right: 8.2%;
-        text-align: right;
-        position: absolute;
-        font-size: 1em;
-        font-family: 'Helvetica', Helvetica, sans-serif;
-    }
-    
-  
+
     .mobile-menu .hamburger-icon {
         display: flex;
     }
 
-    body {
-        font-size: 0.95em;
-    }
-    
+
+    /* Header */
     .header-container {
         top: 0;
         position: fixed;
@@ -321,11 +358,7 @@ details[open] .expand-text::after {
         padding-bottom: 60px;
     }
 
-    .content-container {
-        margin: 15% 4% 0 -17%;
-    }
-
-    .filters {
+    /* .filters {
         margin-left: -1%;
     }
 
@@ -333,24 +366,10 @@ details[open] .expand-text::after {
         font-size: 0.95em;
         margin-top: 4.9%;
         margin-left: 2%;
-    }
-
-/* 
-    h1 {
-        margin-left: -15%;
-        font-size: 1.8em !important;
     } */
-
-    h2 {
-        font-size: 1em;
-    }
-
-    .navbar {
-        display: none;
-    }
 }
   
-  
+
   /* Tablets and small desktops */
   @media only screen and (min-width: 577px) and (max-width: 767px) {
     /* Styles for screens between 577px and 767px wide (typically tablets) */

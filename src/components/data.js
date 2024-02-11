@@ -1650,8 +1650,9 @@ const data = [
         }
     ]
 },
-// Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas
 
+
+// Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
 
@@ -1691,7 +1692,7 @@ const data = [
     description: {
         summary: 'Israeli Energy Minister Israel Katz: ‘No fuel truck will enter’',
         summaryClass: 'expand-text',
-        details: 'The Israeli Energy Minister Israel Kats posted on X (formerly Twitter): <br>‘Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter until the Israeli abductees are returned home. Humanitarian for humanitarian. And no one will preach us morals.’',
+        details: 'The Israeli Energy Minister Israel Kats posted on X (formerly Twitter):<br>‘Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter until the Israeli abductees are returned home. Humanitarian for humanitarian. And no one will preach us morals.’',
     },
 
     sources: [

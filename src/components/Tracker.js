@@ -97,7 +97,7 @@ export default function Tracker() {
                                                                 <span className='icon-link'></span>
                                                             )}
                                                             
-                                                            <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+                                                            <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
 
                                                         </a>
 
@@ -151,7 +151,7 @@ export default function Tracker() {
                                                 </>
                                             )}
 
-                                            <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+                                            <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
                                         </a>
 
                                         {/* If there's an archiveLink in the data, add an '(archive)' link next to the source link */}

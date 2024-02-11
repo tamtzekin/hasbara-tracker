@@ -43,7 +43,7 @@
 /* Styles */
 a:hover {
     cursor: crosshair;
-    /* text-decoration: dashed underline; */
+    text-decoration: dashed underline;
 }
 
 h1.homepage-heading {

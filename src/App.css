@@ -350,12 +350,14 @@ h2 .expand-text {
     /* Header */
     .header-container {
         top: 0;
+        left: 0;
         position: fixed;
         background: #dadada;
         z-index: 5;
         width: 100%;
         padding-top: 5px;
         padding-bottom: 60px;
+        border-bottom: solid 0.5px;
     }
 
     /* .filters {

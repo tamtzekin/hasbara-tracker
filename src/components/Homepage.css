@@ -30,25 +30,26 @@ h1.ht-heading {
     left: 14%;
     margin-top: 0%;
     width: 100%;
-} 
+}
 
-/* 
-.home-text {
-} */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
 
 @media only screen and (max-width: 768px) {
     h1.ht-heading {
         font-family: 'LoRes_Regular';
         font-size: 1.7em;
         position: absolute;
-        left: 0;
+        left: 5%;
         margin-top: 2%;
         width: 100%;
     }
 
     #dots {
         margin-top: 5%;
-        margin-left: -14%;
+        margin-left: -9%;
         font-size: 1.7em; 
     }
 }

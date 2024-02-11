@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
+import Footer from './Footer';
 
 import '../App.css';
 import './VolunteerForm.css';
@@ -112,7 +113,7 @@ const VolunteerForm = () => {
                                     value={formData.fullName}
                                     onChange={handleChange}
                                     required
-                                    maxLength={50}
+                                    maxLength={30}
                                 />
                             </label>
                             <br />

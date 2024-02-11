@@ -1,24 +1,18 @@
 import React from 'react';
-import {  NavLink, useLocation } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import '../App.css';
 
 const NavBar= () =>{
-    const location = useLocation();
+    // const location = useLocation();
 
     return (
         
     <div class="navbar">
-        {location.pathname !== '/about' && location.pathname !== '/' && (
+        {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
             <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/">Claims</NavLink>
             </li>
-        )}
-
-        {location.pathname !== '/claims' && location.pathname !== '/' &&  location.pathname !== '/about' && (
-            <li>
-                <NavLink to="/claims">Claims</NavLink>
-            </li>
-        )}
+        {/* )} */}
 
         {/* {location.pathname !== '/tracker' && (
             <li>
@@ -26,17 +20,15 @@ const NavBar= () =>{
             </li>
         )}   */}
 
-        {location.pathname !== '/submit-claim' && (
+        {/* {location.pathname !== '/submit-claim' && ( */}
         <li>
             <NavLink to="/submit-claim">Submit a claim</NavLink>
         </li>
-        )}
+        {/* )} */}
 
-        {location.pathname !== '/volunteer' && (
         <li>
-            <NavLink to="/volunteer">Volunteer</NavLink>
+            <NavLink to="/about">About</NavLink>
         </li>
-        )}
 
     </div>
     );

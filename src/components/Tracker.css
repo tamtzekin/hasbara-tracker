@@ -185,12 +185,11 @@ li {
 }
 
 .search-bar-container {
-    padding-top: 5%;
+    /* padding-top: 5%; */
 }
 
 .search-bar {
     width: 50%;
-    margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 25%;
     margin-right: auto;

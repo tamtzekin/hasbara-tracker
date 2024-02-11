@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
 import Claims from './Claims';
+import Footer from './Footer';
 import './Homepage.css';
 import '../App.css';
 

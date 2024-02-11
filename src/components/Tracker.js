@@ -11,6 +11,7 @@ import VideoPlayer from './VideoPlayer';
 import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
 import SearchBar from './SearchBar';
+import Footer from './Footer';
 
 export default function Tracker() {
 
@@ -354,6 +355,7 @@ export default function Tracker() {
             )}
 
             <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
+            <Footer />
         </>
     );
 }

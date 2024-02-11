@@ -38,6 +38,10 @@ h1.ht-heading {
   /*  ************************************************************ */
 
 @media only screen and (max-width: 768px) {
+    .btn-green {
+        margin-bottom: 10%;
+    }
+
     h1.ht-heading {
         font-family: 'LoRes_Regular';
         font-size: 1.7em;

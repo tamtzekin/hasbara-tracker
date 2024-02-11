@@ -63,6 +63,7 @@ h2 {
     text-align: left;
     font-family: 'HelveticaNeue_Medium';
     position: relative;
+    line-height: 1.3em;
 }
 
 body {
@@ -106,8 +107,9 @@ button.dotted {
     font-size: 2.15em;
     position: absolute;
     left: 14%;
-    margin-top: 1%;
+    margin-top: -7%;
     width: 100%;
+    flex: 1;
 }
 
 details article {
@@ -184,14 +186,14 @@ h2 .expand-text {
 .content-container {
     position: absolute;
     left: 22%;
-    margin: 6% 32.5% 0 12%;
+    margin: -4% 32.5% 0 12%;
     padding-bottom: 3%;
 }
 
 .columns-container {
     position: absolute;
     left: 17.5%;
-    top: 20%;
+    top: 15%;
     display: flex;
     justify-content: space-between;
     gap: 50px;
@@ -238,7 +240,7 @@ h2 .expand-text {
 
 .nav-links {
     position: absolute;
-    /* top: 30%; */
+    top: 5%;
     right: 15%;
     display: flex;
     flex: 1;
@@ -393,9 +395,11 @@ h2 .expand-text {
         background: #dadada;
         z-index: 5;
         width: 100%;
-        padding-top: 0px;
-        padding-bottom: 47px;
+        /* padding-top: 0px; */
+        /* padding-bottom: 0px; */
+        min-height: 5vh;
         border-bottom: solid 0.5px #585151;
+
     }
 
     /* .filters {

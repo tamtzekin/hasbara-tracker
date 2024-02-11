@@ -344,7 +344,8 @@ h2 .expand-text {
         right: 3%;
 
         font-family: 'Helvetica', Helvetica, sans-serif;
-        font-size: 1em;
+        font-size: 1.1em;
+        line-height: 30px;
         text-align: right;
     }
     

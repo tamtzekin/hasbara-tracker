@@ -14,17 +14,15 @@ const NavBar= () =>{
             </li>
         {/* )} */}
 
-        {/* {location.pathname !== '/tracker' && (
-            <li>
-                <NavLink to="/tracker">Tracker</NavLink>
-            </li>
-        )}   */}
-
         {/* {location.pathname !== '/submit-claim' && ( */}
         <li>
             <NavLink to="/submit-claim">Submit a claim</NavLink>
         </li>
         {/* )} */}
+
+        <li>
+            <NavLink to="/volunteer">Volunteer</NavLink>
+        </li>
 
         <li>
             <NavLink to="/about">About</NavLink>

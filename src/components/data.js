@@ -1504,7 +1504,7 @@ const data = [
 
     description: {
         summary: 'Al-Ahli Hospital surgeon’s daughter reported continued Israeli shelling and attacks',
-        details: 'Nour Naim, the daughter of Al-Ahli Hospital‘s Head of Orthopaedic Surgery Fadel Naim, shared reports on X (formerly Twiter) from her father of continued shelling by Israel Occupation Forces (IOF) targeting the hospital, tanks firing at doctors trying to return, and snipers aiming at people inside the hospital. The post was made under the account @NourNaim88.<br /><br />The post read: ‘🚨In a phone call with my father<br /><br />@fnaim65<br /><br />from Al-Ahli Baptist Hospital #Gaza , after communication was cut off 🧵:<br /><br />– The hospital temporarily stopped operating due to intense and targeted shelling on its surroundings since yesterday.’',
+        details: 'Nour Naim, the daughter of Al-Ahli Hospital‘s Head of Orthopaedic Surgery Fadel Naim, shared reports on X (formerly Twiter) from her father of continued shelling by Israel Occupation Forces (IOF) targeting the hospital, tanks firing at doctors trying to return, and snipers aiming at people inside the hospital. The post was made under the account @NourNaim88.<br /><br />The post read:<br /><br />‘🚨In a phone call with my father<br /><br />@fnaim65<br /><br />from Al-Ahli Baptist Hospital #Gaza , after communication was cut off 🧵:<br /><br />– The hospital temporarily stopped operating due to intense and targeted shelling on its surroundings since yesterday.’',
     },
     sources: [
         {

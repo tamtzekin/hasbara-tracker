@@ -10,7 +10,7 @@ We’re working on documenting and debunking claims made by the Israeli regime d
 - You can search by type of claim with ‘claim’, ‘debunk’ or ‘context’
 - Click ‘Date ▲’ to change the order of events (desktop only)
 - Hover over a source with to preview video (If you’re on your phone, tap + hold the link)
-- Click each Source to open an archived link
+- Click each Source to open the original link. Click (archive) to open an archived link.
 - Click + and ⎯ to show more or less text
 
 [hasbaratracker.com](https://hasbaratracker.com)

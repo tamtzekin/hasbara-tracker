@@ -271,6 +271,9 @@ h2 .expand-text {
     background: rgba(176, 245, 85, 0.424)
 }
 
+    .hide-on-desktop {
+        display: none;
+    }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -318,12 +321,14 @@ h2 .expand-text {
     .menu-links {
         display: flex;
         flex-direction: column;
-        top: 6.2%;
-        right: 8.2%;
-        text-align: right;
         position: absolute;
-        font-size: 1em;
+
+        top: 2%;
+        right: 3%;
+
         font-family: 'Helvetica', Helvetica, sans-serif;
+        font-size: 1em;
+        text-align: right;
     }
     
     .mobile-menu {
@@ -337,8 +342,8 @@ h2 .expand-text {
         align-items: center;
         justify-content: flex-end;
         position: absolute;
-        margin-top: 3%;
-        right: 10%;
+        margin-top: 4%;
+        right: 5%;
         z-index: 3;
     }
 

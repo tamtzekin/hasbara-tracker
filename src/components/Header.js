@@ -16,7 +16,7 @@ const Header = () =>{
             {/* </div> */}
         </span>
         
-        <div class="navbar">
+        <div class="nav-links">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
                 <li>
                     <NavLink to="/">Claims</NavLink>

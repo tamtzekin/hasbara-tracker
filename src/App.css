@@ -181,27 +181,6 @@ h2 .expand-text {
     color: #585151;
 }
 
-.navbar {
-    position: absolute;
-    top: 30%;
-    right: 15%;
-    display: flex;
-    list-style-type: none;
-    white-space: nowrap;
-}
-
-.navbar a {
-    text-decoration: none;
-    margin-left: 10px;
-    padding: 8px;
-    font-size: 1em;
-}
-
-.navbar a:hover {
-    cursor: crosshair;
-    text-decoration: dashed underline;
-}   
-
 .content-container {
     position: absolute;
     left: 22%;
@@ -257,9 +236,36 @@ h2 .expand-text {
     width: 90%;
 }
 
+.nav-links {
+    position: absolute;
+    /* top: 30%; */
+    right: 15%;
+    display: flex;
+    flex: 1;
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 8px;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    cursor: crosshair;
+    text-decoration: dashed underline;
+}   
+
 .mobile-menu {
     display: none;
   }
+
+
+
+
+
 
 .claims-list {
     margin-top: 10px;
@@ -318,7 +324,7 @@ h2 .expand-text {
         display: none;
     }
 
-    .navbar {
+    .nav-links {
         display: none;
     }
 

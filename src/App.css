@@ -302,6 +302,10 @@ h2 .expand-text {
         margin: 10% 4% 0 -17%;
     }
 
+    details.expandable-text-homepage {
+        margin-top: 0;
+    }
+
     h2 {
         font-size: 1em;
     }

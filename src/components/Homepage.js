@@ -53,7 +53,7 @@ const Homepage = () => {
         {/* On mobile: One column only */}
         <span className="hide-on-desktop">
         <div class="content-container">
-            <details>
+            <details className="expandable-text-homepage">
                 <summary>
                     <h2>About us<span class="expand-text"></span></h2>
                 </summary>
@@ -62,10 +62,11 @@ const Homepage = () => {
                             We’re working on documenting and debunking claims made by the Israeli regime during its most recent — and unprecedented — genocidal campaign in Gaza since 7 Oct, 2023. The Israeli settler-colony continues to spread disinformation to manufacture consent for ethnic cleansing and land theft, as it has since the Nakba. Our aim is to centralise this information.
                         </span>
                     </article>
+                    <br />
             </details>
             <br />
 
-            <details>
+            <details className="expandable-text-homepage">
                 <summary>
                     <h2>What is hasbara?<span class="expand-text"></span></h2>
                 </summary>
@@ -77,9 +78,8 @@ const Homepage = () => {
                         Hasbara includes various forms of communication, such as media outreach, social media campaigns, and other strategies to shape public opinion in favour of the Israeli state, and involves manipulation of information, spreading propaganda, and stifling dissenting voices.
                     </span>
                 </article>
+                <br />
             </details>
-            <br />
-            <br />
 
             <h2>Claims</h2>
                 <div class="claim-link"><Link to="/forty-beheaded-babies">Forty beheaded babies</Link></div><br />

@@ -227,9 +227,7 @@ h2 .expand-text {
 
 .footer {
     position: absolute;
-    bottom: -5%;
-    padding-bottom: 5%;
-    right: 18%;
+    padding-bottom: 40px;
     display: flex;
     list-style-type: none;
     white-space: nowrap;
@@ -246,6 +244,13 @@ h2 .expand-text {
     cursor: crosshair;
     text-decoration: dashed underline;
 }   
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -10%;
+    right: 32%;
+}
 
 .header-container {
     position: absolute;

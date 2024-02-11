@@ -180,11 +180,13 @@ const SubmitClaimForm = () => {
                                 </button>
                             )}
                         </form>
-
                     </>
-<Footer />
             </div>
-            
+
+        <span className="footer-container">
+            <Footer />
+        </span>
+        
         </>
     );
 };

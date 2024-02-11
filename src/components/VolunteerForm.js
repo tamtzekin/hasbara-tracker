@@ -202,7 +202,10 @@ const VolunteerForm = () => {
                     </>
                 )}
             </div>
-            <Footer />
+
+            <div className="footer-container">
+                <Footer />
+            </div>
         </>
     );
 };

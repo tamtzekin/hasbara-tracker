@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import MobileMenu from './MobileMenu';
-import Claims from './Claims';
 import Footer from './Footer';
 import './Homepage.css';
 import '../App.css';
@@ -16,7 +15,7 @@ const Homepage = () => {
             <span id="dots">. . . . . . . . . . . . . .</span>
             <NavBar />
         </span>
-                
+            
         <div className="columns-container">
 
             <span class="column">
@@ -42,16 +41,17 @@ const Homepage = () => {
 
         <span class="column">
             <h2>Claims</h2>
-                <div class="claim-link"><Link to="/tracker?filter=Forty%20beheaded%20babies">Forty beheaded babies</Link></div><br />
-                    
-                    <div class="claim-link"><Link to="/tracker?filter=al-ahli">Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces</Link></div><br />
-                    
-                    <em>Coming soon:</em> Israeli state offered fuel to Al-Shifa Hospital and it was refused
-                    <br />
+                <div class="claim-link"><Link to="/forty-beheaded-babies">Forty beheaded babies</Link></div><br />
+                
+                <div class="claim-link"><Link to="/al-ahli-attacked">Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces</Link></div><br />
+                
+                <div class="claim-link"><Link to="/al-shifa-fuel">Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas</Link></div><br />
 
+                <em>Coming soon:</em> xxxxxx
                     </span>
         </div>
-
+    
+    <Footer />
     </>
     );
 };

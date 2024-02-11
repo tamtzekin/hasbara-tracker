@@ -107,7 +107,7 @@ button.dotted {
     font-size: 2.15em;
     position: absolute;
     left: 14%;
-    margin-top: -7%;
+    margin-top: -4%;
     width: 100%;
     flex: 1;
 }
@@ -176,6 +176,12 @@ details[open] .expand-text::after {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 h2 .expand-text {
     font-size: 1em;
     padding-left: 3px;
@@ -233,9 +239,27 @@ h2 .expand-text {
     right: 32%;
 }
 
+
+/* Header */
 .header-container {
+    /* position: absolute; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 10vh;
+    padding-bottom: 10px;
+}
+
+h1.ht-heading {
+    font-family: 'LoRes_Regular';
+    font-size: 2.05em;
     position: absolute;
-    width: 90%;
+    flex: 1;
+    left: 14%;
+    /* margin-top: -0.9%; */
+    top: 2%;
+    width: 100%;
 }
 
 .nav-links {
@@ -314,6 +338,12 @@ h2 .expand-text {
         margin-top: 0;
     }
 
+    #dots {
+        margin-top: 0;
+        margin-left: -9%;
+        font-size: 1.25em; 
+    }
+
     h2 {
         font-size: 1em;
     }
@@ -377,7 +407,7 @@ h2 .expand-text {
         align-items: center;
         justify-content: flex-end;
         position: absolute;
-        margin-top: 4%;
+        margin-top: 0%;
         right: 5%;
         z-index: 3;
     }

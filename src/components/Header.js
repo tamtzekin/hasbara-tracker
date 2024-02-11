@@ -9,11 +9,11 @@ const Header = () =>{
     return (
         <>
         <span class="header-container">
-            <MobileMenu />
-            {/* <div className="flex-container"> */}
+            <div className="flex-container">
+                <MobileMenu />
                 <h1 class='ht-heading'>Hasbara Tracker</h1>
                 <span id="dots">. . . . . . . . . . . . . .</span>
-            {/* </div> */}
+            </div>
         </span>
         
         <div class="nav-links">

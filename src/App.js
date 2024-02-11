@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import './App.css';
 
 import Homepage from './components/Homepage';
-import VolunteerForm from './components/VolunteerForm';
-import Claims from './components/Claims';
+import About from './components/About';
 import Tracker from './components/Tracker';
-import SubmitClaimForm from './components/SubmitClaimForm';
 import VideoPlayer from './components/VideoPlayer';
 import ScrollToTop from './components/utils/ScrollToTop';
+import VolunteerForm from './components/VolunteerForm';
+import SubmitClaimForm from './components/SubmitClaimForm';
+import ContactForm from './components/ContactForm';
+import NewsletterSignUpForm from './components/NewsletterSignUpForm';
 
 const App = () => {
     return (
@@ -19,11 +21,13 @@ const App = () => {
                 <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<Homepage />} />
-                    <Route path="/about" element={<Homepage />} />
-                    <Route path="/claims" element={<Claims />} />
-                    <Route path="/tracker" element={<Tracker />} />
+                    <Route path="/claims" element={<Homepage />} />
                     <Route path="/submit-claim" element={<SubmitClaimForm />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/tracker" element={<Tracker />} />
                     <Route path="/volunteer" element={<VolunteerForm />} />
+                    <Route path="/contact" element={<ContactForm />} />
+                    <Route path="/newsletter" element={<NewsletterSignUpForm />} />
 
                 {/* Route redirects to claim searches */}
                     <Route

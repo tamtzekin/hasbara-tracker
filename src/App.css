@@ -305,6 +305,10 @@ h2 .expand-text {
         display: none;
     }
 
+    .footer {
+        display: none;
+    }
+
     .navbar {
         display: none;
     }

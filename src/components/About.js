@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from './NavBar';
-import MobileMenu from './MobileMenu';
+import Header from './Header';
 import Footer from './Footer';
 import './Homepage.css';
 import '../App.css';
@@ -9,12 +8,7 @@ import '../App.css';
 const About = () => {
     return (
     <>
-        <span class="header-container">
-            <MobileMenu />
-            <h1 class='ht-heading'><Link to="/">Hasbara Tracker</Link></h1>
-            <span id="dots">. . . . . . . . . . . . . .</span>
-            <NavBar />
-        </span>
+        <Header />
 
         <div className="content-container">
                 <h2>About us</h2>

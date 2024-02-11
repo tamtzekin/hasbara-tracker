@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import NavBar from './NavBar';
-import MobileMenu from './MobileMenu';
+import Header from './Header';
 import Footer from './Footer';
 
 import '../App.css';
@@ -69,13 +68,8 @@ const SubmitClaimForm = () => {
     // Render the form
     return (
         <>
-            <span className="header-container">
-                <MobileMenu />
-                <h1 className="ht-heading"><Link to="/">Hasbara Tracker</Link></h1>
-                <span id="dots">. . . . . . . . . . . . . .</span>
-                <NavBar />
-            </span>
-        
+            <Header />
+
             <div className="content-container">
                 <h2>Contact us</h2>
                     <div className="home-text">

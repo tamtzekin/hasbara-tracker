@@ -8,8 +8,7 @@ import '../App.css';
 
 import data from './data';
 import VideoPlayer from './VideoPlayer';
-import NavBar from './NavBar';
-import MobileMenu from './MobileMenu';
+import Header from './Header';
 import SearchBar from './SearchBar';
 import Footer from './Footer';
 
@@ -215,13 +214,7 @@ export default function Tracker() {
 
     return (
         <>
-            <span class="header-container">
-                <MobileMenu />
-                <h1 class="ht-heading"><Link to="/">Hasbara Tracker</Link></h1>
-                <span id="dots">. . . . . . . . . . . . . .</span>
-                <NavBar />
-            </span>
-
+        <Header />
 
             {/* Show desktop view of Tracker */}
             {!isMobileView && (

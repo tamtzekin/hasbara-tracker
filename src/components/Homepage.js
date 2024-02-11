@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from './NavBar';
+import NavBar from './Header';
 import MobileMenu from './MobileMenu';
 import Footer from './Footer';
 // import './Homepage.css';
@@ -9,13 +9,7 @@ import Footer from './Footer';
 const Homepage = () => {
     return (
     <>
-        <span class="header-container">
-            <MobileMenu />
-            <h1 class='ht-heading'>Hasbara Tracker</h1>
-            <span id="dots">. . . . . . . . . . . . . .</span>
-            <NavBar />
-        </span>
-            
+        <NavBar />
         {/* On desktop: Display in columns */}
         <span className="hide-on-mobile">
         <div className="columns-container">

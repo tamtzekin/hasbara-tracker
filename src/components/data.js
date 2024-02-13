@@ -1728,7 +1728,7 @@ const data = [
             videoPreviewLink: 'x'
         }
     ]
-}
+},
 
 
 

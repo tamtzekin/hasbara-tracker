@@ -1646,7 +1646,7 @@ const data = [
     description: {
         summary: 'Israeli forces hit ambulance convoy leaving Al-Shifa Hospital with airstrikes',
         summaryClass: 'expand-text',
-        details: 'An Israeli airstrike targeted an ambulance convoy leaving Al-Shifa Hospital, killing 15 Palestinians and injuring 60. The Israeli state claimed Hamas was using the ambulances – an unfounded claim.\n\nThe Palestine Red Crescent Society also reported that the Israeli state targeted Al-Shifa ambulances seven times before this attack and killed four of their staff.'
+        details: 'An Israeli airstrike targeted an ambulance convoy leaving Al-Shifa Hospital, killing 15 Palestinians and injuring 60. <br> The Israeli state claimed Hamas was using the ambulances – an unfounded claim. <br> The Palestine Red Crescent Society also reported that the Israeli state targeted Al-Shifa ambulances seven times before this attack and killed four of their staff.'
     },
     sources: [
         {
@@ -1718,7 +1718,7 @@ const data = [
     description: {
         summary: 'Israeli forces bomb Al-Shifa Hospital multiple times',
         summaryClass: 'expand-text',
-        details: 'An Israeli strike hit the yard of the Al-Shifa Hospital complex. Gaza\'s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties.\n\nThis is the panic ensuing inside of the maternity ward at Al Shifa hospital after Israeli forces bombed the hospital yard and its surroundings multiple times. Maternity wards are medical professionals, new mothers, new babies, fathers, and other family. Israel is bombing babies.\n\nAshraf al-Qudra told our colleagues at Al Jazeera Arabic that there appears to be a number of casualties.\n\n“The medical teams are still inspecting the area to find out if there were dead or wounded [victims],” the Palestinian Health Ministry spokesman said.'
+        details: 'An Israeli strike hit the yard of the Al-Shifa Hospital complex. Gaza‘s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br> This is the panic ensuing inside of the maternity ward at Al Shifa hospital after Israeli forces bombed the hospital yard and its surroundings multiple times. <br> Maternity wards are medical professionals, new mothers, new babies, fathers, and other family. Israel is bombing babies. <br> shraf al-Qudra told our colleagues at Al Jazeera Arabic that there appears to be a number of casualties. <br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],‘ the Palestinian Health Ministry spokesman said.'
     },
     sources: [
         {

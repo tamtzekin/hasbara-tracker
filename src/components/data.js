@@ -1650,25 +1650,25 @@ const data = [
     },
     sources: [
         {
-            sourceText: 'Palestine Red Crescent Society',
+            sourceName: 'Palestine Red Crescent Society',
             sourceLink: 'https://twitter.com/PalestineRCS/status/1720579687682838812',
             archiveLink: 'https://archive.ph/9gvAk',
             videoPreviewLink: ''
         },
         {
-            sourceText: 'Palestine Red Crescent Society',
+            sourceName: 'Palestine Red Crescent Society',
             sourceLink: 'https://www.palestinercs.org/public/files/image/2023/News/112023/PRCS%20Statement%2003112023.pdf',
             archiveLink: 'https://archive.ph/TZY0m',
             videoPreviewLink: ''
         },
         {
-            sourceText: 'CNN',
+            sourceName: 'CNN',
             sourceLink: 'https://www.cnn.com/2023/11/03/middleeast/casualties-gazas-shifa-hospital-idf/index.html',
             archiveLink: 'https://archive.ph/guy5q',
             videoPreviewLink: ''
         },
         {
-            sourceText: 'The Guardian',
+            sourceName: 'The Guardian',
             sourceLink: 'https://www.youtube.com/watch?v=8LAWhj4MLMs',
             archiveLink: '',
             videoPreviewLink: 'VIDEO GOES HERE'
@@ -1689,19 +1689,19 @@ const data = [
     },
     sources: [
         {
-            sourceText: 'Dr. Ghassan Abu Sitta on X',
+            sourceName: 'Dr. Ghassan Abu Sitta on X',
             sourceLink: 'https://twitter.com/GhassanAbuSitt1/status/1721545920322375747',
             archiveLink: 'https://archive.ph/y3ygE',
             videoPreviewLink: ''
         },
         {
-            sourceText: 'Al Jazeera',
+            sourceName: 'Al Jazeera',
             sourceLink: 'https://www.aljazeera.com/news/2023/11/6/israeli-forces-target-solar-panels-at-gazas-al-shifa-hospital',
             archiveLink: 'https://archive.ph/e8FNi',
             videoPreviewLink: ''
         },
         {
-            sourceText: 'Cameraman Omar Abu Nada on Instagram',
+            sourceName: 'Cameraman Omar Abu Nada on Instagram',
             sourceLink: 'https://www.instagram.com/reel/CzTlWjcNixb/',
             archiveLink: '',
             videoPreviewLink: 'https://drive.google.com/file/d/1Ncjt3YFu376JDxs9RxldR3acexOBmK1B/view?usp=drive_link'
@@ -1722,7 +1722,7 @@ const data = [
     },
     sources: [
         {
-            sourceText: 'Al Jazeera',
+            sourceName: 'Al Jazeera',
             sourceLink: 'https://www.aljazeera.com/news/liveblog/2023/11/9/israel-gaza-war-live-day-34',
             archiveLink: 'https://archive.is/2goqX',
             videoPreviewLink: 'Video goes here'

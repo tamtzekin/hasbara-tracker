@@ -276,10 +276,10 @@ export default function Tracker() {
                                                             borderBottom: 'solid 1px gray',
                                                             overflow: 'hidden',
                                                             width: // Set fixed column widths
-                                                                index === 0 ? '30px' :
-                                                                index === 1 ? '80px' :
-                                                                index === 2 ? '20px' :
-                                                                index === 3 ? '600px' :
+                                                                index === 0 ? '300px' :
+                                                                index === 1 ? '60px' :
+                                                                index === 2 ? '10px' :
+                                                                index === 3 ? '350px' :
                                                                 '130px',
                                                         }}
                                                     >

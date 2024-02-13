@@ -505,6 +505,11 @@ h1.ht-heading {
         width: 90%;
     }
 
+    /* space to divine up menu links */
+    .break {
+        margin-bottom: 5%
+    }
+
     .column {
         width: 50%;
     }
@@ -520,6 +525,17 @@ h1.ht-heading {
         margin-top: -7%;
         font-size: 4.4vw;
         position: relative;
+    }
+
+    .arrow-menu {
+        font-size: 2.5em;
+        margin-bottom: 2.5%;
+    }
+
+    .menu-links {
+        text-align: right;
+        margin-top: 3%;
+        margin-right: 2%;
     }
 
     .nav-links {

@@ -507,9 +507,8 @@ h1.ht-heading {
         position: relative;
         margin: 0 20% 0 20%;
         padding-bottom: 3%;
-        left: -5%;
+        min-width: 480px;
     }
-
 
     .columns-container {
         position: absolute;

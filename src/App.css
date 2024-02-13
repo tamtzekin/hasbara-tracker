@@ -214,6 +214,10 @@ h2 .expand-text {
     color: #585151;
 }
 
+.home-text {
+    padding-bottom: 5%;
+}
+
 .content-container {
     position: relative;
     display: flex;

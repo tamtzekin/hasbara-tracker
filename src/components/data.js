@@ -1730,7 +1730,7 @@ const data = [
     ]
 },
 {
-    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '10 Nov 2023',
     claim: {
         claimText: 'Context',
@@ -1750,7 +1750,7 @@ const data = [
     ]
 },
 {
-    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '11 Nov 2023',
     claim: {
         claimText: 'Context',
@@ -1770,7 +1770,7 @@ const data = [
     ]
 },
 {
-    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '11 Nov 2023',
     claim: {
         claimText: 'Context',
@@ -1790,7 +1790,7 @@ const data = [
     ]
 },
 {
-    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
     claim: {
         claimText: 'Claim',
@@ -1810,7 +1810,7 @@ const data = [
     ]
 },
 {
-    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
     claim: {
         claimText: 'Debunk',
@@ -1828,7 +1828,7 @@ const data = [
             videoPreviewLink: 'https://drive.google.com/drive/folders/1wvHIewCyB6HlP4JjSVyr_A33vuSHGRUJ'
         }
     ]
-}
+},
 
 
 

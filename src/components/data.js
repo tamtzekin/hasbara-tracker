@@ -1650,7 +1650,7 @@ const data = [
     },
     sources: [
         {
-            sourceName: 'Palestine Red Crescent Society',
+            sourceName: 'Palestine Red Crescent Society on X',
             sourceLink: 'https://twitter.com/PalestineRCS/status/1720579687682838812',
             archiveLink: 'https://archive.ph/9gvAk',
             videoPreviewLink: ''

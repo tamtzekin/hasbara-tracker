@@ -77,7 +77,7 @@ export default function Tracker() {
                         <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
                             <details>
                                 <summary><u>{row.original.description.summary}</u>
-                                    <span className={row.original.description.summaryClass}></span>
+                                    <span className='expand-text'></span>
                                 </summary>
                                 <article>
                                     <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
@@ -348,7 +348,10 @@ export default function Tracker() {
             )}
 
             <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
-            <Footer />
+
+            <div className="footer-container">
+                <Footer />
+            </div>
         </>
     );
 }

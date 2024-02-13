@@ -1703,6 +1703,103 @@ const data = [
         }
     ]
 },
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '3 November 2023',
+    claim: {
+        claimText: 'Context',
+        claimClass: 'context-tag'
+    },
+    description: {
+        summary: 'Israeli forces hit ambulance convoy leaving Al-Shifa Hospital with airstrikes',
+        summaryClass: 'expand-text',
+        details: 'An Israeli airstrike targeted an ambulance convoy leaving Al-Shifa Hospital, killing 15 Palestinians and injuring 60. The Israeli state claimed Hamas was using the ambulances – an unfounded claim.\n\nThe Palestine Red Crescent Society also reported that the Israeli state targeted Al-Shifa ambulances seven times before this attack and killed four of their staff.'
+    },
+    sources: [
+        {
+            sourceText: 'Palestine Red Crescent Society',
+            sourceLink: 'https://twitter.com/PalestineRCS/status/1720579687682838812',
+            archiveLink: 'https://archive.ph/9gvAk',
+            videoPreviewLink: ''
+        },
+        {
+            sourceText: 'Palestine Red Crescent Society',
+            sourceLink: 'https://www.palestinercs.org/public/files/image/2023/News/112023/PRCS%20Statement%2003112023.pdf',
+            archiveLink: 'https://archive.ph/TZY0m',
+            videoPreviewLink: ''
+        },
+        {
+            sourceText: 'CNN',
+            sourceLink: 'https://www.cnn.com/2023/11/03/middleeast/casualties-gazas-shifa-hospital-idf/index.html',
+            archiveLink: 'https://archive.ph/guy5q',
+            videoPreviewLink: ''
+        },
+        {
+            sourceText: 'The Guardian',
+            sourceLink: 'https://www.youtube.com/watch?v=8LAWhj4MLMs',
+            archiveLink: '',
+            videoPreviewLink: 'VIDEO GOES HERE'
+        }
+    ]
+},
+{
+    claimTitle: 'The Israeli state claims it offered fuel to Al-Shifa Hospital and it was refused',
+    date: '6 November 2023',
+    claim: {
+        claimText: 'Context',
+        claimClass: 'context-tag'
+    },
+    description: {
+        summary: 'Solar panels at Al-Shifa Hospital destroyed by Israeli forces',
+        summaryClass: 'expand-text',
+        details: 'Israeli forces destroyed the solar panels atop the hospital, leaving it fully reliant on back-up generators powered by dwindling fuel supplies. \n\nDr. Ghassan Abu Sitta, a Palestinian-British surgeon treating Palestinians at Al-Shifa Hospital, posted on X (formerly Twitter): "Israel just hit the solar panels on the roof of Shifa hospital. Shifa MUST go dark. Israeli necropolitics means it needs to declare victory over a hospital."\n\nCameraman Omar Abu Nada posted a video on Instagram showing and describing the damage of the solar panels at Al-Shifa Hospital.\n\nThe Israeli state denies destroying solar panels.'
+    },
+    sources: [
+        {
+            sourceText: 'Dr. Ghassan Abu Sitta on X',
+            sourceLink: 'https://twitter.com/GhassanAbuSitt1/status/1721545920322375747',
+            archiveLink: 'https://archive.ph/y3ygE',
+            videoPreviewLink: ''
+        },
+        {
+            sourceText: 'Al Jazeera',
+            sourceLink: 'https://www.aljazeera.com/news/2023/11/6/israeli-forces-target-solar-panels-at-gazas-al-shifa-hospital',
+            archiveLink: 'https://archive.ph/e8FNi',
+            videoPreviewLink: ''
+        },
+        {
+            sourceText: 'Cameraman Omar Abu Nada on Instagram',
+            sourceLink: 'https://www.instagram.com/reel/CzTlWjcNixb/',
+            archiveLink: '',
+            videoPreviewLink: 'https://drive.google.com/file/d/1Ncjt3YFu376JDxs9RxldR3acexOBmK1B/view?usp=drive_link'
+        }
+    ]
+},
+{
+    claimTitle: 'The Israeli state claims it offered fuel to Al-Shifa Hospital and it was refused',
+    date: '9 November 2023',
+    claim: {
+        claimText: 'Context',
+        claimClass: 'context-tag'
+    },
+    description: {
+        summary: 'Israeli forces bomb Al-Shifa Hospital multiple times',
+        summaryClass: 'expand-text',
+        details: 'An Israeli strike hit the yard of the Al-Shifa Hospital complex. Gaza\'s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties.\n\nThis is the panic ensuing inside of the maternity ward at Al Shifa hospital after Israeli forces bombed the hospital yard and its surroundings multiple times. Maternity wards are medical professionals, new mothers, new babies, fathers, and other family. Israel is bombing babies.\n\nAshraf al-Qudra told our colleagues at Al Jazeera Arabic that there appears to be a number of casualties.\n\n“The medical teams are still inspecting the area to find out if there were dead or wounded [victims],” the Palestinian Health Ministry spokesman said.'
+    },
+    sources: [
+        {
+            sourceText: 'Al Jazeera',
+            sourceLink: 'https://www.aljazeera.com/news/liveblog/2023/11/9/israel-gaza-war-live-day-34',
+            archiveLink: 'https://archive.is/2goqX',
+            videoPreviewLink: 'Video goes here'
+        }
+    ]
+}
+
+
+
+
     
     // TEMPLATE DATA SET (copy and paste this as much as you need it)
     // {

@@ -1646,7 +1646,7 @@ const data = [
     description: {
         summary: 'Israeli forces hit ambulance convoy leaving Al-Shifa Hospital with airstrikes',
         summaryClass: 'expand-text',
-        details: 'An Israeli airstrike targeted an ambulance convoy leaving Al-Shifa Hospital, killing 15 Palestinians and injuring 60. <br> The Israeli state claimed Hamas was using the ambulances – an unfounded claim. <br> The Palestine Red Crescent Society also reported that the Israeli state targeted Al-Shifa ambulances seven times before this attack and killed four of their staff.'
+        details: 'An Israeli airstrike targeted an ambulance convoy leaving Al-Shifa Hospital, killing 15 Palestinians and injuring 60. <br><br> The Israeli state claimed Hamas was using the ambulances – an unfounded claim. <br><br> The Palestine Red Crescent Society also reported that the Israeli state targeted Al-Shifa ambulances seven times before this attack and killed four of their staff.'
     },
     sources: [
         {

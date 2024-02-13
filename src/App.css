@@ -252,9 +252,9 @@ h2 .expand-text {
 
 .footer {
     position: absolute;
-    bottom: -5500%;
+    bottom: -6490%;
     padding-bottom: 50px;
-    right: 7.4%;
+    right: 5%;
     display: flex;
     list-style-type: none;
     white-space: nowrap;

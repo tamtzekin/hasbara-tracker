@@ -1593,8 +1593,8 @@ const data = [
     date: '9 Oct 2023',
 
     claim: {
-        claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimText: 'Context',
+        claimClass: 'context-tag',
     },
 
     description: {
@@ -1618,8 +1618,8 @@ const data = [
     date: '9 Oct 2023',
 
     claim: {
-        claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimText: 'Context',
+        claimClass: 'context-tag',
     },
 
     description: {
@@ -1718,7 +1718,7 @@ const data = [
     },
     description: {
         summary: 'Israeli forces bomb Al-Shifa Hospital multiple times',
-        details: 'An Israeli strike hit the yard of the Al-Shifa Hospital complex. Gaza‘s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br><br> This is the panic ensuing inside of the maternity ward at Al Shifa hospital after Israeli forces bombed the hospital yard and its surroundings multiple times. <br><br> Maternity wards are medical professionals, new mothers, new babies, fathers, and other family. Israel is bombing babies. <br><br> Ashraf al-Qudra told our colleagues at Al Jazeera Arabic that there appears to be a number of casualties. <br><br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],‘ the Palestinian Health Ministry spokesman said.'
+        details: 'Israeli strikes hit the yard of the Al-Shifa Hospital complex. Gaza‘s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br><br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],’ he said.'
     },
     sources: [
         {
@@ -1729,6 +1729,106 @@ const data = [
         }
     ]
 },
+{
+    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '10 Nov 2023',
+    claim: {
+        claimText: 'Context',
+        claimClass: 'context-tag'
+    },
+    description: {
+        summary: 'Red Cross attempt to deliver medical supplies to Gaza hospitals under horrendous circumstances',
+        details: 'In a press release, the International Committee of the Red Cross (ICRC) said staff attempting to deliver medical supplies had witnessed ‘horrendous’ scenes, and described the destruction as ‘unbearable’. ICRC called for the respect and protection of medical facilities, patients, and healthcare workers in Gaza.<br><br>The release stated: ‘Overstretched, running on thin supplies and increasingly unsafe, the healthcare system in Gaza has reached a point of no return risking the lives of thousands of wounded, sick, and displaced people.’'
+    },
+    sources: [
+        {
+            sourceName: 'International Committee of the Red Cross',
+            sourceLink: 'https://www.icrc.org/en/document/israel-and-occupied-territories-icrc-demands-protection-patients-healthcare-workers-medical-facilities-in-gaza',
+            archiveLink: 'https://archive.is/qcrZx',
+            videoPreviewLink: ''
+        }
+    ]
+},
+{
+    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '11 Nov 2023',
+    claim: {
+        claimText: 'Context',
+        claimClass: 'context-tag'
+    },
+    description: {
+        summary: 'Israeli army destroys critical infrastructure, surgeries have stopped, neonatal incubators lose power, amputations without anaesthesia at Al-Shifa Hospital',
+        details: 'Al-Shifa Hospital continued to face intensified bombardment. Doctors Without Borders/Médecins Sans Frontières (MSF) reported that critical infrastructure, including the oxygen station, water tanks and a well, the cardiovascular facility, and the maternity ward, were damaged, and three nurses were killed. At least two premature babies died on 11 November, 2023, when the hospital ran out of electricity to power its incubators, staff said.<br><br>While some people managed to escape, displaced Palestinians sheltering at Al-Shifa, along with staff and patients remained trapped inside while under IOF fire, ‘fearing to leave or physically unable to do so’ (MSF). Ann Taylor, MSF’s Head of Mission in Palestine said: ‘The situation in Al-Shifa is truly catastrophic.’<br><br>The Director of Al-Shifa Hospital, Dr. Mohammed Abu Salmiya, said: ‘Surgeries have had to stop. Kidney dialysis has stopped and the neonatal unit is in a very dire situation.’'
+    },
+    sources: [
+        {
+            sourceName: 'United Nations Office for the Coordination of Humanitarian Affairs',
+            sourceLink: 'https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-37',
+            archiveLink: 'https://archive.ph/KtXNY',
+            videoPreviewLink: ''
+        }
+    ]
+},
+{
+    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '11 Nov 2023',
+    claim: {
+        claimText: 'Context',
+        claimClass: 'context-tag'
+    },
+    description: {
+        summary: 'Israeli snipers are firing at anyone near Al-Shifa Hospital',
+        details: 'Doctors Without Borders (Médecins Sans Frontières) stated that Israeli troops were shooting at those trying to exit the hospital, which the Israeli state denied.'
+    },
+    sources: [
+        {
+            sourceName: 'Doctors Without Borders (Médecins Sans Frontières)',
+            sourceLink: 'https://www.msf.org/gaza-patients-and-medical-staff-trapped-hospitals-under-fire',
+            archiveLink: 'https://archive.is/mk8D5',
+            videoPreviewLink: ''
+        }
+    ]
+},
+{
+    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '12 Nov 2023',
+    claim: {
+        claimText: 'Claim',
+        claimClass: 'claim-tag'
+    },
+    description: {
+        summary: 'Netanyahu claims 300 litres of fuel offered by the Israeli state was refused by Al-Shifa Hospital',
+        details: 'In an interview with US media outlet NBC (Meet the Press), Israeli Prime Minister Benjamin Netanyahu claimed that the Director of Al-Shifa Hospital Dr. Mohammed Abu Salmiya rejected an offer for fuel from the Israeli state, without providing details. <br><br> Netanyahu referred to hospitals as ‘Hamas command posts’. ‘We just offered Shifa Hospital fuel, they refused it so they you know so the fuel to run the hospital. See what happens is they want, the Hamas that is hiding in the hospitals and uh placing itself there doesn‘t want the fuel for the hospitals they don’t give a hoot about the patients they don’t give a hoot about the civilians uh their spokesman said this they said Hamas is underground above ground the civilian population that‘s Israel’s and the UN’s responsibility they don’t care about the civilians they don’t care about the patients but they want to get fuel that they’ll take from the hospitals to their tunnels to their War Machine the electricity they need to fire the Rockets they fired 10,000 rockets as we speak in Israel against Israelo cities and they continue to fight from those underground bunkers so what we have to do is separate the two we’ll try to help those who need it in the hospitals but not help the Hamas War Machine.’'
+    },
+    sources: [
+        {
+            sourceName: 'NBC',
+            sourceLink: 'https://www.youtube.com/watch?v=dRThvlOjkq0',
+            archiveLink: '',
+            videoPreviewLink: 'https://drive.google.com/file/d/1TztfQRqHhsoMVktifFGoy_nWmCaGtf-e/view?usp=sharing'
+        }
+    ]
+},
+{
+    claimTitle: 'Israeli state fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '12 Nov 2023',
+    claim: {
+        claimText: 'Debunk',
+        claimClass: 'debunk-tag'
+    },
+    description: {
+        summary: 'Al-Shifa Hospital accepted fuel and asked for it to be delivered through the Red Cross, which the Israeli state refused',
+        details: 'The Director of Al-Shifa Hospital in Gaza, Dr. Muhammad Abu Salmiya, said an Israeli military operative contacted him on the phone and offered to supply the hospital with 2000 litres of fuel, which the hospital accepted.<br><br> In an interview with Al Jazeera Arabic, Dr. Abu Salmiya said the quantity was accepted and that he requested the Israelis deliver the fuel through the Red Cross. However, Israeli forces rescinded the offer of 2000 litres and said it would instead offer 300 litres of fuel. The Israeli military rejected delivering fuel through the Red Cross or any other international humanitarian organisation, and said the fuel would have to be picked up at 2am from an area being hit with Israeli bombardments. ‘We are ready to take fuel from anybody through the International Red Cross.’ See the full transcript of Dr. Abu Salmiya’s interview with Al Jazeera here or in the sources provided.'
+},
+    sources: [
+        {
+            sourceName: 'Al Jazeera',
+            sourceLink: 'https://www.youtube.com/watch?v=a2cd4pgbdkM',
+            archiveLink: 'https://archive.is/aj65S',
+            videoPreviewLink: 'https://drive.google.com/drive/folders/1wvHIewCyB6HlP4JjSVyr_A33vuSHGRUJ'
+        }
+    ]
+}
 
 
 

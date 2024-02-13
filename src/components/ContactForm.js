@@ -130,8 +130,11 @@ const SubmitClaimForm = () => {
                             </button>
                         )}
                     </form>
-            <Footer />
             </div>
+            
+            <div className="footer-contianer">
+                    <Footer />
+                </div>
             
         </>
     );

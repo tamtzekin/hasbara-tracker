@@ -130,9 +130,9 @@ const SubmitClaimForm = () => {
                             </button>
                         )}
                     </form>
-            <Footer />
             </div>
-            
+
+            <Footer />
         </>
     );
 };

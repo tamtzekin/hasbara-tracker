@@ -197,9 +197,7 @@ const VolunteerForm = () => {
                 )}
             </div>
 
-            <div className="footer-container">
-                <Footer />
-            </div>
+            <Footer />
         </>
     );
 };

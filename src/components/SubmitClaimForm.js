@@ -176,10 +176,7 @@ const SubmitClaimForm = () => {
                     </>
             </div>
 
-        <span className="footer-container">
             <Footer />
-        </span>
-        
         </>
     );
 };

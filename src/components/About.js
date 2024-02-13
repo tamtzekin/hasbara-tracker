@@ -21,9 +21,7 @@ const About = () => {
                 <br /> Hasbara includes various forms of communication, such as media outreach, social media campaigns, and other strategies to shape public opinion in favour of the Israeli state, and involves manipulation of information, spreading propaganda, and stifling dissenting voices.</span>
     </div>
 
-    <div className="footer-container">
-        <Footer />
-    </div>
+    <Footer />
 
     </>
     );

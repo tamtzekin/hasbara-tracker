@@ -349,9 +349,7 @@ export default function Tracker() {
 
             <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
 
-            <div className="footer-container">
-                <Footer />
-            </div>
+            <Footer />
         </>
     );
 }

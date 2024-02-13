@@ -252,7 +252,8 @@ h2 .expand-text {
 
 .footer {
     position: absolute;
-    bottom: -3500%;
+    bottom: -5500%;
+    padding-bottom: 50px;
     right: 7.4%;
     display: flex;
     list-style-type: none;
@@ -512,6 +513,11 @@ h1.ht-heading {
 
     .column {
         width: 50%;
+    }
+
+    .footer {
+        bottom: -6500%;
+        right: 5%;
     }
 
     h1.ht-heading {

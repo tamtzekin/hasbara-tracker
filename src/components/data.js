@@ -1624,7 +1624,7 @@ const data = [
 
     description: {
         summary: 'Israeli Energy Minister Israel Katz: ‘No fuel truck will enter’',
-        details: 'The Israeli Energy Minister Israel Kats posted on X (formerly Twitter):<br>‘Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter until the Israeli abductees are returned home. Humanitarian for humanitarian. And no one will preach us morals.’',
+        details: 'The Israeli Energy Minister Israel Katz posted on X (formerly Twitter):<br><br>‘Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter until the Israeli abductees are returned home. Humanitarian for humanitarian. And no one will preach us morals.’',
     },
 
     sources: [
@@ -1685,7 +1685,7 @@ const data = [
     description: {
         summary: 'Solar panels at Al-Shifa Hospital destroyed by Israeli forces',
         summaryClass: 'expand-text',
-        details: 'Israeli forces destroyed the solar panels atop the hospital, leaving it fully reliant on back-up generators powered by dwindling fuel supplies. \n\nDr. Ghassan Abu Sitta, a Palestinian-British surgeon treating Palestinians at Al-Shifa Hospital, posted on X (formerly Twitter): "Israel just hit the solar panels on the roof of Shifa hospital. Shifa MUST go dark. Israeli necropolitics means it needs to declare victory over a hospital."\n\nCameraman Omar Abu Nada posted a video on Instagram showing and describing the damage of the solar panels at Al-Shifa Hospital.\n\nThe Israeli state denies destroying solar panels.'
+        details: 'Israeli forces destroyed the solar panels atop the hospital, leaving it fully reliant on back-up generators powered by dwindling fuel supplies. <br><br>Dr. Ghassan Abu Sitta, a Palestinian-British surgeon treating Palestinians at Al-Shifa Hospital, posted on X (formerly Twitter): ‘Israel just hit the solar panels on the roof of Shifa hospital. Shifa MUST go dark. Israeli necropolitics means it needs to declare victory over a hospital.‘ <br><br> Cameraman Omar Abu Nada posted a video on Instagram showing and describing the damage of the solar panels at Al-Shifa Hospital. <br><br> The Israeli state denies destroying solar panels.'
     },
     sources: [
         {
@@ -1718,7 +1718,7 @@ const data = [
     description: {
         summary: 'Israeli forces bomb Al-Shifa Hospital multiple times',
         summaryClass: 'expand-text',
-        details: 'An Israeli strike hit the yard of the Al-Shifa Hospital complex. Gaza‘s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br> This is the panic ensuing inside of the maternity ward at Al Shifa hospital after Israeli forces bombed the hospital yard and its surroundings multiple times. <br> Maternity wards are medical professionals, new mothers, new babies, fathers, and other family. Israel is bombing babies. <br> shraf al-Qudra told our colleagues at Al Jazeera Arabic that there appears to be a number of casualties. <br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],‘ the Palestinian Health Ministry spokesman said.'
+        details: 'An Israeli strike hit the yard of the Al-Shifa Hospital complex. Gaza‘s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br><br> This is the panic ensuing inside of the maternity ward at Al Shifa hospital after Israeli forces bombed the hospital yard and its surroundings multiple times. <br> Maternity wards are medical professionals, new mothers, new babies, fathers, and other family. Israel is bombing babies. <br> shraf al-Qudra told our colleagues at Al Jazeera Arabic that there appears to be a number of casualties. <br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],‘ the Palestinian Health Ministry spokesman said.'
     },
     sources: [
         {

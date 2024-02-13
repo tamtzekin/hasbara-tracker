@@ -1704,7 +1704,7 @@ const data = [
             sourceName: 'Cameraman Omar Abu Nada on Instagram',
             sourceLink: 'https://www.instagram.com/reel/CzTlWjcNixb/',
             archiveLink: '',
-            videoPreviewLink: 'https://drive.google.com/file/d/1Ncjt3YFu376JDxs9RxldR3acexOBmK1B/view?usp=drive_link'
+            videoPreviewLink: ''
         }
     ]
 },
@@ -1725,7 +1725,7 @@ const data = [
             sourceName: 'Al Jazeera',
             sourceLink: 'https://www.aljazeera.com/news/liveblog/2023/11/9/israel-gaza-war-live-day-34',
             archiveLink: 'https://archive.is/2goqX',
-            videoPreviewLink: 'Video goes here'
+            videoPreviewLink: ''
         }
     ]
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import MobileMenu from './MobileMenu';
 import '../App.css';
 
@@ -11,7 +11,7 @@ const Header = () =>{
         <span class="header-container">
             <div className="flex-container">
                 <MobileMenu />
-                <h1 class='ht-heading'>Hasbara Tracker</h1>
+                <h1 class='ht-heading'><Link to="/">Hasbara Tracker</Link></h1>
                 <span id="dots">. . . . . . . . . . . . . .</span>
             </div>
         </span>

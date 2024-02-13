@@ -129,10 +129,10 @@ button.dotted {
 
 #dots {
     font-family: 'LoRes_Regular';
-    font-size: 2.15em;
+    font-size: 2.10em;
     position: absolute;
-    left: 14%;
-    margin-top: -4%;
+    left: 5%;
+    margin-top: -5.7%;
     width: 100%;
     flex: 1;
 }
@@ -222,13 +222,12 @@ h2 .expand-text {
 
 .columns-container {
     position: absolute;
-    left: 14.1%;
+    left: 5.1%;
     top: 15%;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
-    width: 60%;
-
+    gap: 100px;
+    width: 90%;
 }
 
 .column {
@@ -289,15 +288,15 @@ h1.ht-heading {
     font-size: 2.05em;
     position: absolute;
     flex: 1;
-    left: 14%;
+    left: 5%;
     /* margin-top: -0.9%; */
-    top: 2%;
+    top: 0;
     width: 100%;
 }
 
 .nav-links {
     position: absolute;
-    top: 5%;
+    top: 3.5%;
     right: 15%;
     display: flex;
     list-style-type: none;
@@ -346,7 +345,7 @@ h1.ht-heading {
 }
 
 /* For all screens bigger than a mobile – handles how columns are shown on homepage */
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 576px) {
     .hide-on-desktop {
         display: none;
     }
@@ -357,7 +356,7 @@ h1.ht-heading {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* Mobile devices */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     .btn-green {
         margin-bottom: 10%;
     }
@@ -375,17 +374,17 @@ h1.ht-heading {
     }
 
     #dots {
-        margin-top: 0;
-        margin-left: -9%;
-        font-size: 1.25em; 
+        margin-top: 0.5%;
+        margin-left: 0%;
+        font-size: 1.65em; 
     }
 
     h1.ht-heading {
         font-family: 'LoRes_Regular';
-        font-size: 1.25em;
+        font-size: 1.6em;
         position: absolute;
         left: 5%;
-        margin-top: 2%;
+        margin-top: 2.85%;
         width: 100%;
     }
 
@@ -413,7 +412,7 @@ h1.ht-heading {
     }
 
     .bar {
-        width: 28px;
+        width: 7px;
         height: 3px;
         background-color: #333;
         margin: 3px 0;
@@ -452,8 +451,8 @@ h1.ht-heading {
         align-items: center;
         justify-content: flex-end;
         position: absolute;
-        margin-top: 0%;
-        right: 5%;
+        top: 25%;
+        right: 4%;
         z-index: 3;
     }
 
@@ -473,8 +472,6 @@ h1.ht-heading {
         /* padding-top: 0px; */
         /* padding-bottom: 0px; */
         min-height: 5vh;
-        border-bottom: solid 0.5px #585151;
-
     }
 
     /* .filters {
@@ -488,10 +485,84 @@ h1.ht-heading {
     } */
 }
   
-
   /* Tablets and small desktops */
   @media only screen and (min-width: 577px) and (max-width: 767px) {
     /* Styles for screens between 577px and 767px wide (typically tablets) */
+    .content-container {
+        position: relative;
+        margin: 0 15% 0 15%;
+        padding-bottom: 3%;
+    }
+
+
+    .columns-container {
+        position: absolute;
+        left: 6%;
+        top: 15%;
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        width: 90%;
+    }
+
+    .column {
+        width: 50%;
+    }
+
+    h1.ht-heading {
+        top: 0;
+        left: 5%;
+        font-size: 4.3vw;
+    }
+
+    #dots {
+        left: 0%;
+        margin-top: -7%;
+        font-size: 4.4vw;
+        position: relative;
+    }
+
+    .nav-links {
+        font-size: 0.9em;
+        right: 12%;
+    }
+
+    .mobile-menu {
+        /* display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          right: -15%;
+          position: absolute;
+          margin-top: 1%; */
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          position: absolute;
+          top: 2.5%;
+          right: 3%;
+          z-index: 3;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .bar {
+        width: 8px;
+        height: 4px;
+        background-color: #333;
+        margin: 3px 0;
+        transition: 0.4s;
+      }
+
+    .hamburger-icon {
+        cursor: crosshair;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1%;
+    }
+
+
   }
   
   /* Medium-sized devices */

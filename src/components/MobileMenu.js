@@ -20,6 +20,7 @@ const MobileMenu = () => {
                 <div className="hamburger-icon" onClick={openModal}>
                     <div className="bar"></div>
                     <div className="bar"></div>
+                    <div className="bar"></div>
                 </div>
             </div>
 

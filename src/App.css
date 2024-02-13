@@ -216,8 +216,10 @@ h2 .expand-text {
 
 .content-container {
     position: relative;
-    margin: 0 31% 0 31%;
+    margin: 0 20% 0 20%;
+    left: -5%;
     padding-bottom: 3%;
+    min-width: 500px;
 }
 
 .columns-container {
@@ -367,7 +369,9 @@ h1.ht-heading {
     }
 
     .content-container {
-        margin: 20% 0 25% 0;
+        margin: 20% 0 15% 0;
+        min-width: 300px;
+        left: 0;
     }
 
     details.expandable-text-homepage {
@@ -491,8 +495,9 @@ h1.ht-heading {
     /* Styles for screens between 577px and 767px wide (typically tablets) */
     .content-container {
         position: relative;
-        margin: 0 15% 0 15%;
+        margin: 0 20% 0 20%;
         padding-bottom: 3%;
+        left: -5%;
     }
 
 

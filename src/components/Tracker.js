@@ -15,11 +15,11 @@ import Footer from './Footer';
 export default function Tracker() {
 
     // Set mobile/phone view dimensions
-    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 480);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 768);
+            setIsMobileView(window.innerWidth <= 480);
         };
 
         window.addEventListener('resize', handleResize);

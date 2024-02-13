@@ -346,7 +346,7 @@ h1.ht-heading {
 }
 
 /* For all screens bigger than a mobile – handles how columns are shown on homepage */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 480px) {
     .hide-on-desktop {
         display: none;
     }
@@ -357,7 +357,7 @@ h1.ht-heading {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* Mobile devices */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     .btn-green {
         margin-bottom: 10%;
     }

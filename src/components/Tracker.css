@@ -289,7 +289,7 @@ ul {
   /*  ************************************************************ */
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     a {
         z-index: 1; /* makes the a link text hide under the video, on mobile*/
     }

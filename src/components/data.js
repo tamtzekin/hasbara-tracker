@@ -1636,6 +1636,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '3 Nov 2023',
@@ -1675,6 +1676,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'The Israeli state claims it offered fuel to Al-Shifa Hospital and it was refused',
     date: '6 Nov 2023',
@@ -1708,6 +1710,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'The Israeli state claims it offered fuel to Al-Shifa Hospital and it was refused',
     date: '9 Nov 2023',

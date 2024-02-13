@@ -91,9 +91,7 @@ const Homepage = () => {
         </div>
         </span>
 
-        <div className="footer-container">
-            <Footer />
-        </div>
+        <Footer />
     </>
     );
 };

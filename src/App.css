@@ -46,6 +46,31 @@ a:hover {
     text-decoration: dashed underline;
 }
 
+.active {
+    /* background-color: #9dff20; */
+    /* color: black; */
+    font-style: oblique;
+    /* text-decoration: dashed underline; */
+  }
+  
+.btn-green {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2rem;
+    padding: 1.7em;
+    background-color: #9dff20;
+    font-size: 0.93em;
+    border: none;
+    border-radius: 0;
+    font-family: 'Helvetica', Helvetica, sans-serif;
+}
+
+.btn-green:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 h1.homepage-heading {
     font-family: 'LoRes_Regular';
     font-size: 2.05em;
@@ -333,6 +358,10 @@ h1.ht-heading {
 
 /* Mobile devices */
 @media only screen and (max-width: 768px) {
+    .btn-green {
+        margin-bottom: 10%;
+    }
+
     body {
         font-size: 0.95em;
     }
@@ -349,6 +378,15 @@ h1.ht-heading {
         margin-top: 0;
         margin-left: -9%;
         font-size: 1.25em; 
+    }
+
+    h1.ht-heading {
+        font-family: 'LoRes_Regular';
+        font-size: 1.25em;
+        position: absolute;
+        left: 5%;
+        margin-top: 2%;
+        width: 100%;
     }
 
     h2 {

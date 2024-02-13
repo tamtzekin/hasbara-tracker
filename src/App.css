@@ -132,9 +132,9 @@ button.dotted {
     font-size: 2.10em;
     position: absolute;
     left: 5%;
-    margin-top: -5.7%;
+    top: 5.5%;
+    transform: translateY(-50%);
     width: 100%;
-    flex: 1;
 }
 
 details article {
@@ -216,6 +216,8 @@ h2 .expand-text {
 
 .content-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
     margin: 0 20% 0 20%;
     left: -5%;
     padding-bottom: 3%;
@@ -223,7 +225,7 @@ h2 .expand-text {
 }
 
 .columns-container {
-    position: absolute;
+    position: fixed;
     left: 5.1%;
     top: 15%;
     display: flex;
@@ -379,9 +381,13 @@ h1.ht-heading {
     }
 
     #dots {
-        margin-top: 0.5%;
-        margin-left: 0%;
+        /* margin-left: 0%; */
         font-size: 1.65em; 
+        position: absolute;
+        /* left: 5%; */
+        top: 70%;
+        transform: translateY(-50%);
+        width: 100%;
     }
 
     h1.ht-heading {
@@ -532,10 +538,12 @@ h1.ht-heading {
     }
 
     #dots {
-        left: 0%;
-        margin-top: -7%;
         font-size: 4.4vw;
         position: relative;
+        left: 0%;
+        margin-top: -5%;
+        transform: translateY(-50%);
+        width: 100%;
     }
 
     .arrow-menu {

@@ -8,9 +8,9 @@ import '../App.css';
 
 import data from './data';
 import VideoPlayer from './VideoPlayer';
-import NavBar from './NavBar';
-import MobileMenu from './MobileMenu';
+import Header from './Header';
 import SearchBar from './SearchBar';
+import Footer from './Footer';
 
 export default function Tracker() {
 
@@ -77,7 +77,7 @@ export default function Tracker() {
                         <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
                             <details>
                                 <summary><u>{row.original.description.summary}</u>
-                                    <span className={row.original.description.summaryClass}></span>
+                                    <span className='expand-text'></span>
                                 </summary>
                                 <article>
                                     <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
@@ -97,7 +97,7 @@ export default function Tracker() {
                                                                 <span className='icon-link'></span>
                                                             )}
                                                             
-                                                            <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+                                                            <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
 
                                                         </a>
 
@@ -151,7 +151,7 @@ export default function Tracker() {
                                                 </>
                                             )}
 
-                                            <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+                                            <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
                                         </a>
 
                                         {/* If there's an archiveLink in the data, add an '(archive)' link next to the source link */}
@@ -214,13 +214,7 @@ export default function Tracker() {
 
     return (
         <>
-            <span class="header-container">
-                <MobileMenu />
-                <h1 class="ht-heading"><Link to="/">Hasbara Tracker</Link></h1>
-                <span id="dots">. . . . . . . . . . . . . .</span>
-                <NavBar />
-            </span>
-
+        <Header />
 
             {/* Show desktop view of Tracker */}
             {!isMobileView && (
@@ -354,6 +348,8 @@ export default function Tracker() {
             )}
 
             <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
+
+            <Footer />
         </>
     );
 }

@@ -52,19 +52,28 @@ const MobileMenu = () => {
                     </div>
 
                     <Link to="/" onClick={closeModal}>
-                        About
-                    </Link>
-
-                    <Link to="/claims" onClick={closeModal}>
                         Claims
                     </Link>
 
-                    <Link to="/tracker" onClick={closeModal}>
-                        Tracker
+                    <Link to="/submit-claim" onClick={closeModal}>
+                        Submit a claim
                     </Link>
 
                     <Link to="/volunteer" onClick={closeModal}>
                         Volunteer
+                    </Link>
+
+                    <Link to="/about" onClick={closeModal}>
+                        About
+                    </Link>
+
+                    <span class="break"></span>
+                    <Link to="/newsletter" onClick={closeModal}>
+                        Newsletter
+                    </Link>
+
+                    <Link to="/contact" onClick={closeModal}>
+                        Contact
                     </Link>
 
                     <Link to="http://instagram.com/hasbaratracker" target="_blank">

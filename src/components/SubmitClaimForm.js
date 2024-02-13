@@ -7,13 +7,9 @@ import Footer from './Footer';
 import '../App.css';
 import './VolunteerForm.css';
 
-const VolunteerForm = () => {
+const SubmitClaimForm = () => {
     const initialFormData = {
         fullName: '',
-        email: '',
-        backgroundAndSkills: '',
-        hoursCommitted: '',
-        otherAmountOfHours: '',
     };
 
     const [formData, setFormData] = useState(initialFormData);
@@ -45,7 +41,7 @@ const VolunteerForm = () => {
         try {
             setIsLoading(true);
 
-            const response = await fetch('https://script.google.com/macros/s/AKfycbxW-EKbkyQjHMby5HOp1kqf4R1E1YI3Ap9lWn7_TEzaQ6VHK0d_Scz5DTjwlEt2ga5W8g/exec', {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbxMo-T1Oe5G-ws9czcMhPoLKOC1o_uhilHh80yz1kr4gDdCdp-UC7iTrpWEqBMDjrxI/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -73,28 +69,29 @@ const VolunteerForm = () => {
     return (
         <>
             <Header />
-
             <div className="content-container">
-                <h2>Volunteer</h2>
+                <h2>Submit a claim to Hasbara Tracker</h2>
 
                 {/* If user has already submitted that session, prevent repeat submissions */}
-                {isSubmitted ? (
+                {/* {isSubmitted ? (
                     <div className="thank-you-message">
-                        Thank you for signing up to volunteer. We’ll get back to you as soon as we can. 🍉
+                        Thank you for submitting a claim.
                     </div>
-                ) : (
+                ) : ( */}
                     <>
                         <div className="home-text">
-                            Volunteer to help build a database tracking and debunking fabrications
-                            by the Israeli state during its genocidal campaign against Palestinians
-                            in Gaza since 7 October 2023.
+                        Help us keep track of claims, and fabrications by submitting a claim and/or example(s) of Israeli state propaganda – no matter how big or small – that we can potentially investigate.
                         </div><br />
 
                         <div className="home-text">
-                            We will task volunteers with a specific claim and provide more
-                            information about how to document and archive. Anyone can help —
-                            especially if they have a propensity for research and collecting
-                            receipts.
+                        We’re building a centralised database debunking claims particularly made and/or repeated by officials, from individuals, organisations, to media outlet, particularly post 7 October 2023 while the Israeli occupation carries out a genocide in Gaza.
+                        </div><br />
+
+                        <div className="home-text">
+                        If you've encountered any claims or fabrications that you believe warrant debunking, we encourage you to use the form below to submit them.</div><br />
+
+                        <div className="home-text">
+                        Thanks for contributing to our efforts to document, archive, debunk and give context to hasbara – a.k.a ‘explanations’.
                         </div><br />
 
                         <form onSubmit={handleSubmit}>
@@ -113,7 +110,7 @@ const VolunteerForm = () => {
                             <br />
 
                             <label>
-                                Email <span className="required-field">*</span>
+                                Email address<span className="required-field">*</span>
                                 <br />
                                 <input
                                     type="email"
@@ -125,61 +122,44 @@ const VolunteerForm = () => {
                                 />
                             </label>
                             <br />
+                            
                             <label>
-                                Tell us a little bit about your background and skills so we can match you with the right task. <span className="required-field">*</span>
+                                What is the claim?<span className="required-field">*</span><br />
+                                <em>Describe it briefly.</em>
                                 <br />
                                 <textarea
-                                    name="backgroundAndSkills"
-                                    value={formData.backgroundAndSkills}
+                                    name="whatIsClaim"
+                                    value={formData.whatIsClaim}
                                     onChange={handleChange}
+                                    required
                                     maxLength={250}
-
                                 />
                             </label>
                             <br />
 
                             <label>
-                                How many hours can you commit?
+                                Where did you see it?<br />
+                                <em>Provide information on where you encountered this claim if you are able to.</em>
                                 <br />
-                                <select
-                                    name="hoursCommitted"
-                                    value={formData.hoursCommitted}
+                                <textarea
+                                    name="locationOfClaim"
+                                    value={formData.locationOfClaim}
                                     onChange={handleChange}
-                                >
-                                    <option value="">Select</option>
-                                    <option value="1">1 hour</option>
-                                    <option value="1-3">1 -3 hours</option>
-                                    <option value="3-5">3 - 5 hours</option>
-                                    <option value="other">Other</option>
-                                </select>
+                                    maxLength={250}
+                                />
                             </label>
                             <br />
 
 
-                            {/* If they select 'Other', give option to enter hours */}
-                            {formData.hoursCommitted === 'other' && (
-                                <label>
-                                    Enter an amount of hours.
-                                    <br />
-                                    <input
-                                        type="text"
-                                        name="otherAmountOfHours"
-                                        value={formData.otherAmountOfHours}
-                                        onChange={handleChange}
-                                        maxLength={10}
-                                    />
-                                    <br /><br />
-                                </label>
-                            )}
-
                             <label>
-                                This isn’t necessary, but do you understand Arabic and/or Hebrew? Let us know what level.
+                                Additional comments<br />
+                                <em>Feel free to include any additional context or comments that might be helpful.</em>
                                 <input
                                     type="text"
-                                    name="languageSkill"
-                                    value={formData.languageSkill}
+                                    name="commentsAboutClaim"
+                                    value={formData.commentsAboutClaim}
                                     onChange={handleChange}
-                                    maxLength={150}
+                                    maxLength={250}
                                 />
                             </label>
                             <br />
@@ -194,7 +174,6 @@ const VolunteerForm = () => {
                             )}
                         </form>
                     </>
-                )}
             </div>
 
             <Footer />
@@ -202,4 +181,4 @@ const VolunteerForm = () => {
     );
 };
 
-export default VolunteerForm;
+export default SubmitClaimForm;

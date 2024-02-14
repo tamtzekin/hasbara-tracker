@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -41,7 +40,7 @@ const SubmitClaimForm = () => {
         try {
             setIsLoading(true);
 
-            const response = await fetch('https://script.google.com/macros/s/AKfycbxMo-T1Oe5G-ws9czcMhPoLKOC1o_uhilHh80yz1kr4gDdCdp-UC7iTrpWEqBMDjrxI/exec', {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbxy7-eu3grhA1TQoVIMkiPtdjHFZz3Xz9gyuKuYMg93ujPoApXCWdu3OFarPxmDCEk/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -64,6 +63,12 @@ const SubmitClaimForm = () => {
         }
     };
 
+    const handleAnotherClaim = () => {
+        setIsSubmitted(false);
+        setIsLoading(false);
+        sessionStorage.removeItem('hasSubmitted'); // Clear session storage flag
+        setFormData(initialFormData); // Reset the form data
+    };
 
     // Render the form
     return (
@@ -73,11 +78,23 @@ const SubmitClaimForm = () => {
                 <h2>Submit a claim to Hasbara Tracker</h2>
 
                 {/* If user has already submitted that session, prevent repeat submissions */}
-                {/* {isSubmitted ? (
-                    <div className="thank-you-message">
-                        Thank you for submitting a claim.
-                    </div>
-                ) : ( */}
+                {isSubmitted ? (
+                    <>
+                        <div className="thank-you-message">
+                            Thank you for submitting a claim. We’ll review it as soon as we can.
+                        </div>
+
+                        <button 
+                            className="btn-green" 
+                            style={{ 
+                                marginTop: '3%', 
+                                width: '25%', 
+                            }}
+                            onClick={handleAnotherClaim}>
+                            Submit another claim
+                        </button>
+                    </>
+                ) : (
                     <>
                         <div className="home-text">
                         Help us keep track of claims, and fabrications by submitting a claim and/or example(s) of Israeli state propaganda – no matter how big or small – that we can potentially investigate.
@@ -174,8 +191,8 @@ const SubmitClaimForm = () => {
                             )}
                         </form>
                     </>
+                )}
             </div>
-
             <Footer />
         </>
     );

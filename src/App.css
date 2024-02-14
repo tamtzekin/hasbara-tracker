@@ -426,7 +426,7 @@ h1.ht-heading {
           align-items: center;
           justify-content: flex-end;
           position: absolute;
-          top: 10%;
+          top: 3%;
           right: 4%;
           z-index: 3;
       }

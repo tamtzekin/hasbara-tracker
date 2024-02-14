@@ -52,9 +52,9 @@ const MobileMenu = () => {
                         <Link onClick={closeModal}>←</Link>
                     </div>
 
-                    <Link to="/" onClick={closeModal}>
+                    {/* <Link to="/" onClick={closeModal}>
                         Claims
-                    </Link>
+                    </Link> */}
 
                     <Link to="/submit-claim" onClick={closeModal}>
                         Submit a claim
@@ -73,9 +73,9 @@ const MobileMenu = () => {
                         Newsletter
                     </Link> */}
 
-                    <Link to="/contact" onClick={closeModal}>
+                    {/* <Link to="/contact" onClick={closeModal}>
                         Contact
-                    </Link>
+                    </Link> */}
 
                     <Link to="http://instagram.com/hasbaratracker" target="_blank">
                         Instagram

@@ -371,6 +371,16 @@ h1.ht-heading {
         font-size: 0.95em;
     }
 
+    .claim-dropdown-box {
+        padding: 11px;
+    }
+
+    .claim-filter {
+        width: 40%;
+        left: -13%;
+        top: 11.6%;
+    }
+
     .content-container {
         margin: 20% 0 15% 0;
         min-width: 300px;
@@ -386,7 +396,7 @@ h1.ht-heading {
         font-size: 1.65em; 
         position: absolute;
         /* left: 5%; */
-        top: 70%;
+        top: 85%;
         transform: translateY(-50%);
         width: 100%;
     }
@@ -471,7 +481,6 @@ h1.ht-heading {
     .mobile-menu .hamburger-icon {
         display: flex;
     }
-
 
     /* Header */
     .header-container {

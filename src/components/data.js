@@ -2004,7 +2004,7 @@ const data = [
 
     date: '15 Nov 2023',
     summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
-    details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri\'i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
+    details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri‘i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
     sources: [
         {
             sourceText: 'Israel Occupation Forces',
@@ -2042,7 +2042,7 @@ const data = [
 
     claimText: 'Context',
     claimTag: 'context-tag',
-    
+
     date: '5 Dec 2023',
     summary: 'Director of Al-Shifa Hospital being held and interrogated by Shin Bet under Israeli ‘emergency war rules’',
     details: 'Dr. Muhammad Abu Salmiya is being criminally probed by the Shin Bet (Israel Security Agency) under ‘current war emergency regulations relating to Hamas’ according to Israeli state officials.',

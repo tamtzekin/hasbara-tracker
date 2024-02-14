@@ -10,6 +10,12 @@ a[target="_blank"]:hover::after {
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
     margin: 0 3px 0 5px;
 }
+
+.archive-link {
+    color: rgb(96, 96, 96);
+    font-size: 0.7em;
+    vertical-align: text-bottom;
+}
   
 .arrow {
     font-size: 3.8em;
@@ -111,61 +117,8 @@ button {
     background: #33ff7d;
 }
 
-details article {
-    opacity: 0;
-  }
-  
-details[open] article {
-    animation: fadeIn .4s linear forwards;
-    cursor: default;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-} 
-
-details { 
-    display: inline;
-    cursor: crosshair;
-}
-
-details[open] {
-    cursor: n-resize;
-}
-
-details > summary {
-    list-style: none;
-    padding-bottom: 4%;
-    font-family: 'Helvetica', Helvetica, sans-serif;
-}
-
-details > summary::-webkit-details-marker {
-    display: none;
-}
-
-.expand-text {
-    font-size: 1.5em;
-    padding-left: 3px;
-    font-weight: 600;
-    color: #585151;
-}
-
-.expand-text::after {
-    content: "+";
-}
-
-details[open] .expand-text::after {
-    content: '—';
-    font-size: 0.7em;
-}
-
 h1.claim-heading {
-    font-family: 'Helvetica', helvetica, sans-serif;
+    font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 1.5em;
     position: absolute;
     left: 6%;
@@ -226,27 +179,88 @@ li {
     height: 100%;
 }
 
+/* Claim Dropdown + Search Bar */
+select.claim-dropdown-box {    
+    /* disable default styles */
+    appearance: none;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &::-ms-expand { display: none };
+
+    /* remove dotted firefox border */
+    @-moz-document url-prefix() {
+        select {
+            color: rgba(0,0,0,0);
+            text-shadow: 0 0 0 #ffffff;
+        }
+
+        
+    border: solid 0.5px black;
+    background-color: #ccc;
+    /* cursor: ew-resize; */
+    
+    position: absolute;
+    top: 11.4%;
+    
+    padding: 1%;
+    padding-right: 2.5%;
+    border-radius: 3px;
+
+    width: 20rem;
+    height: 2.7rem;
+    
+    margin: 0;
+    margin-left: -10.5%;
+
+    text-overflow: ellipsis;
+    }
+
+        
+    /* Custom arrow */
+    background-image:
+        linear-gradient(45deg, transparent 50%, red 50%),
+        linear-gradient(135deg, red 50%, transparent 50%);
+        /* linear-gradient(to right, #ccc, #ccc); */
+    background-position:
+        calc(100% - 20px) calc(1em + 4px),
+        calc(100% - 15px) calc(1em + 4px),
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+/* Claim dropdown filter + Search bar */
+.claim-filter {
+    /* position: relative; */
+    /* margin-top: -5%; */
+    margin-left: 28.7%;
+    margin-right: auto;
+}
+
 .no-results-text {
     margin-left: 25%;
     margin-right: auto;
 }
 
 .search-bar-container {
-    padding-top: 5%;
+    margin-top: 0;
 }
 
 .search-bar {
-    width: 50%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 25%;
-    margin-right: auto;
+    position: absolute;
+    top: 9.7%;
+    left: 41.3%;
 }
 
 .search-bar input {
-    height: 20px;
-    font-size: 0.9em;
-    font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
+    height: 1.5rem;
+    width: 32rem;
+    font-size: 0.85em;
+    font-family: 'Helvetica', Helvetica, sans-serif;
     letter-spacing: 0.8px;
     line-height: 25px;
     background: #f0f0f0;
@@ -259,6 +273,11 @@ li {
     background-size: 1.5em;
     background-repeat: no-repeat;
     background-position: 10px center;
+}
+
+/* Sources */
+.source {
+    margin-bottom: 7%
 }
 
 .table-container {
@@ -314,15 +333,55 @@ ul {
     margin-left: -8%;
 }
 
+/* Hidden messages for Text-to-Speech accessibility */
+.visually-hidden {
+    position: absolute;
+    top: auto;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+  }
+
+
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+
+
+/* Tablets and small desktops */
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    .claim-filter {
+        margin-left: 15%;
+    }
+
+    select.claim-dropdown-box {
+        width: 15rem;
+    }
+
+    .search-bar {
+        top: 10.1%;
+        left: 39.5%;
+    }
+    .search-bar input {
+        width: 23rem;
+    }
+}
 
 
 
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
 
 
 
-
-
-@media only screen and (max-width: 768px) {
+/* MOBILE VIEW */
+@media only screen and (max-width: 480px) {
     a {
         z-index: 1; /* makes the a link text hide under the video, on mobile*/
     }
@@ -335,8 +394,10 @@ ul {
         padding: 8px;
     }
 
+    /* Hide on mobile. You already see the title in the claim dropdown + search bar */
     .claim {
-        font-size: 1em;
+        display: none;
+        /* font-size: 1em;
         letter-spacing: 0;
         border: 0.5px solid black;
         margin-left: 16.3%;
@@ -348,13 +409,14 @@ ul {
         vertical-align: center;
         text-align: center;
         position: absolute;
-        padding: 0.3% 0% 0.3% 0%;
+        padding: 0.3% 0% 0.3% 0%; */
     }
     
     .claim-tag {
         padding: 0.5% 1% 0.1% 1%;  
         width: 13.2%;
         position: absolute;
+        left: 30%;
         text-align: center;
     }
 
@@ -377,6 +439,7 @@ ul {
         width: 13.2%;
         position: absolute;
         text-align: center;
+        left: 30%;
     }
 
     .date {
@@ -386,7 +449,7 @@ ul {
         border-radius: 3px;
         position: absolute;
         text-align: center;
-        left: 68%;
+        left: 5%;
         padding-left: 0.5%;
         padding-right: 0.5%;
         padding-bottom: -0.3%;
@@ -395,7 +458,7 @@ ul {
       }
 
       
-    .details-heading {
+    /* .details-heading {
         background: #cbcbcb;
         border: 0.5px solid black;
         padding: 0.3% 1.5% 0.3% 1.3%;
@@ -405,11 +468,11 @@ ul {
         margin-bottom: 2%;
         text-align: center;
         position: absolute;
-    }
+    } */
 
-    .details-heading::after {
+    /* .details-heading::after {
         content: 'Details:';
-    }
+    } */
 
     .data-row {
         margin-top: 4%;
@@ -417,14 +480,16 @@ ul {
         border-bottom: 0.07em dashed black;
     }
 
-    .data-cell sources {
-        margin-bottom: 5%;
+    /* Margin spacing above dotted divider/under final source */
+    .sources {
+        margin-top: 5%;
     }
 
     .debunk-tag {
         padding: 0.5% 1% 0.1% 1%;  
         width: 13.2%;
         position: absolute;
+        left: 30%;
         text-align: center;
     }
 
@@ -433,7 +498,7 @@ ul {
     }
 
     details {
-        margin-top: 30%;
+        margin-top: 12%;
         line-height: 22px;
     }
     
@@ -452,28 +517,53 @@ ul {
         margin-left: -13%;
     }
 
+    /* Claim dropdown filter + Search bar */
     .no-results-text {
         margin-left: 1%;
     }
 
     .search-bar {
-        width: 87.3%;
-        margin-left: 3%;
+        /* margin-left: 3%; */
+        /* margin-top: 3%; */
     }
 
     .search-bar input {
-        font-size: 1em;
-        padding: 10px 0 10px 40px;
+        font-size: 0.9em;
+        padding: 10px 5px 10px 35px;
+        width: 9.8rem;
+        height: 1.4rem;
+        text-overflow: ellipsis;
     }
 
     .search-bar-container {
-        margin-top: 16%;
+        position: fixed;
+        margin-top: -14.5%;
+        margin-left: 39.5%;
         margin-bottom: 10%;
         background: transparent;
+        z-index: 1;
+        background-color: #dadada;
     }
 
+
+    .claim-filter {
+        /* width: 40%; */
+        /* left: -2%; */
+        /* top: 11.6%; */
+    }
+
+    select.claim-dropdown-box {   
+        position: fixed;
+        padding: 2.85%;
+        top: 6.4%;
+        left: 15.5%;
+        width: 40%;
+        padding-right: 6%;
+    }
+
+
     .source {
-        margin-bottom: 10%;
+        margin-bottom: 2%;
     }
 
     .source-heading {
@@ -483,7 +573,7 @@ ul {
         border-radius: 3px;
         width: 15.5%;
         margin-top: 7%;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
         text-align: center;
     }
 
@@ -525,9 +615,10 @@ ul {
     }
 
     .tracker-container {
-        width: 95%;
-        margin-left: 3%;
+        width: 100%;
+        margin-left: 0%;
         margin-right: 3%;
+        margin-top: 30%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 
     }

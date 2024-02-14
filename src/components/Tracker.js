@@ -8,18 +8,27 @@ import '../App.css';
 
 import data from './data';
 import VideoPlayer from './VideoPlayer';
-import NavBar from './NavBar';
-import MobileMenu from './MobileMenu';
+import Header from './Header';
+import ClaimFilter from './ClaimFilter';
 import SearchBar from './SearchBar';
+import Footer from './Footer';
 
 export default function Tracker() {
+    // defines claim tags for dropdown (ClaimFilter.js)
+    const uniqueClaimTitles = useMemo(() => {
+        const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
+        return Array.from(claimTitlesSet);
+        }, [data]);
+    
+    const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
 
-    // Set phone/mobile view
-    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+    
+    // Set mobile/phone view dimensions
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 480);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 768);
+            setIsMobileView(window.innerWidth <= 480);
         };
 
         window.addEventListener('resize', handleResize);
@@ -33,9 +42,14 @@ export default function Tracker() {
     // Pull all the claims data
     const columns = useMemo(
         () => [
+            // Claim title eg. 'Forty beheaded babies'
             {
                 Header: 'Claim',
-                accessor: 'claimTag',
+                accessor: 'claimTitle',
+                Cell: ({ cell }) => (
+                    // TODO: Do we want the claim name clickable or not
+                    <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
+                )
             },
             {
                 Header: 'Date',
@@ -51,6 +65,8 @@ export default function Tracker() {
                     </div>
                 ),
             },
+
+            // Context/Claim/Debunk tag
             {
                 Header: 'What',
                 accessor: (row) => row.claim.claimText,
@@ -60,60 +76,112 @@ export default function Tracker() {
                     </span>
                 ),
             },
+
+            // Detailed description on each claim
             {
                 Header: 'Details',
                 accessor: (row) => `${row.description.summary} ${row.description.details}`,
                 Cell: ({ row }) => (
                     <>
-                        <div class="details-heading"></div>
                         <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
                             <details>
                                 <summary><u>{row.original.description.summary}</u>
-                                    <span className={row.original.description.summaryClass}></span></summary>
-                                    <article>
-                                        <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+                                    <span className='expand-text'></span>
+                                </summary>
+                                <article>
+                                    <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+            
+                                    {/* On Mobile: render Source links inside the expandable element */}
+                                    {isMobileView && (
+                                        <>
+                                            <div className="source-heading"></div>
+                                            {row.original.sources.map((source, index) => (
+                                                <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                                    <div key={index} className="source">
+                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                            {source.videoPreviewLink && (
+                                                                <span className='icon-playarrow'></span>
+                                                            )}
+                                                            {!source.videoPreviewLink && (
+                                                                <span className='icon-link'></span>
+                                                            )}
+                                                            
+                                                            <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+
+                                                        </a>
+
+                                                        {source.archiveLink && (
+                                                                <a href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                    &nbsp;<span className="archive-link">(archive)</span>
+                                                                </a>
+                                                        )}
+                                                    </div>
+                                                </VideoPlayer>
+                                            ))}
+                                        </>
+                                    )}
+            
                                 </article>
                             </details>
                         </div>
                     </>
                 ),
             },
+
             {
                 Header: 'Sources',
                 accessor: 'sources',
                 Cell: ({ row }) => {
                     const sources = row.original.sources || [];
 
+                    // On Desktop: render the sources on the right side. If on mobile, hide them.
+                    if (!isMobileView) {
                     return (
                         <>
                             <div className="source-heading"></div>
 
                             {row.original.sources.map((source, index) => (
-                                <VideoPlayer key={index} videoLink={source.videoLink}>
-                                    <div key={index} class="source" style={{ marginBottom: '8%' }}>
-                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                            {source.videoLink && (
+                                <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                    <div key={index} class="source">
+
+                                        <a href={source.sourceLink} target="_blank" rel="noreferrer"
+                                        aria-hidden="true">
+                                            {/* If there's a video preview available, show a play button icon */}
+                                            {source.videoPreviewLink && (
                                                 <>
                                                     <span className='icon-playarrow'></span>
                                                 </>
                                             )}
-                                            {!source.videoLink && (
+
+                                            {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
+                                            {!source.videoPreviewLink && (
                                                 <>
                                                     <span className='icon-link'></span>
                                                 </>
                                             )}
-                                            <span dangerouslySetInnerHTML={{ __html: source.sourceText }} />
+
+                                            <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
                                         </a>
+
+                                        {/* If there's an archiveLink in the data, add an '(archive)' link next to the source link */}
+                                        {source.archiveLink && ( 
+                                                <a href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
+                                                    &nbsp;<span class="archive-link">(archive)</span>
+                                                </a>
+                                            )}
+
+                                            {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
+                                            <span class="visually-hidden">Opens in new tab</span>
                                     </div>
                                 </VideoPlayer>
                             ))}
-                            {sources.length > 1 && <>
-                                <br />
-                                <br />
-                                <br />
-                            </>}
                         </>
                     );
+                    
+                    // On Mobile: don't show the sources in the last column
+                    } else {
+                        return null;
+                    }
                 },
             },
         ],
@@ -148,19 +216,18 @@ export default function Tracker() {
 
     return (
         <>
-            <span class="header-container">
-                <MobileMenu />
-                <h1 class="ht-heading"><Link to="/">Hasbara Tracker</Link></h1>
-                <span id="dots">. . . . . . . . . . . . . .</span>
-                <NavBar />
-            </span>
+        <Header />
 
-
-            {/* Show desktop view */}
+            {/* Show desktop view of Tracker */}
             {!isMobileView && (
                 <>
                     <div class="search-bar-container">
-                        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+                        <ClaimFilter 
+                            claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} 
+                        />
+                        <SearchBar 
+                            filter={globalFilter || ''} setFilter={setGlobalFilter} 
+                        />
                     </div>
 
                     <div class="tracker-container">
@@ -212,15 +279,15 @@ export default function Tracker() {
                                                     <td
                                                         {...cell.getCellProps()}
                                                         style={{
-                                                            padding: '20px',
+                                                            padding: '15px',
                                                             borderBottom: 'solid 1px gray',
                                                             overflow: 'hidden',
                                                             width: // Set fixed column widths
-                                                                index === 0 ? '30px' :
-                                                                index === 1 ? '80px' :
-                                                                index === 2 ? '20px' :
-                                                                index === 3 ? '600px' :
-                                                                '130px',
+                                                                index === 0 ? '20%' :
+                                                                index === 1 ? '10%' :
+                                                                index === 2 ? '8%' :
+                                                                index === 3 ? '22%' :
+                                                                '25%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}
@@ -237,10 +304,11 @@ export default function Tracker() {
             )}
 
             
-            {/* Show phone/mobile view */}
+            {/* Show mobile/phone view of Tracker */}
             {isMobileView && (
                 <>
                     <div class="search-bar-container">
+                        <ClaimFilter claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} />
                         <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
                     </div>
 
@@ -264,7 +332,7 @@ export default function Tracker() {
                                 </div>
                             </>
                         ) : (
-                            // Renders all claims data as blocks, instead of a table
+                            // Renders all claims data in div blocks, instead of a table
                             <div {...getTableBodyProps()}>
                                 {rows.map((row) => {
                                     prepareRow(row);
@@ -288,6 +356,8 @@ export default function Tracker() {
             )}
 
             <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
+
+            <Footer />
         </>
     );
 }

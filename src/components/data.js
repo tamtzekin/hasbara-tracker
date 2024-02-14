@@ -2047,7 +2047,7 @@ const data = [
 },
 
 {
-    claimTitle: '',
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     claimText: 'Context',
     claimTag: 'context-tag',
     date: '5 Dec 2023',

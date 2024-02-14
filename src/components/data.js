@@ -1632,7 +1632,6 @@ const data = [
             sourceName: 'X',
             sourceLink: 'https://twitter.com/Israel_katz/status/1712356130377113904',
             archiveLink: 'https://archive.ph/Am4Xe',
-            videoLink: '',
         }
     ]
 },
@@ -1646,6 +1645,7 @@ const data = [
         claimText: 'Context',
         claimClass: 'context-tag'
     },
+
     description: {
         summary: 'Israeli forces hit ambulance convoy leaving Al-Shifa Hospital with airstrikes',
         details: 'An Israeli airstrike targeted an ambulance convoy leaving Al-Shifa Hospital, killing 15 Palestinians and injuring 60. <br><br> The Israeli state claimed Hamas was using the ambulances – an unfounded claim. <br><br> The Palestine Red Crescent Society also reported that the Israeli state targeted Al-Shifa ambulances seven times before this attack and killed four of their staff.'
@@ -1655,24 +1655,23 @@ const data = [
             sourceName: 'Palestine Red Crescent Society on X',
             sourceLink: 'https://twitter.com/PalestineRCS/status/1720579687682838812',
             archiveLink: 'https://archive.ph/9gvAk',
-            videoPreviewLink: ''
         },
+
         {
             sourceName: 'Palestine Red Crescent Society',
             sourceLink: 'https://www.palestinercs.org/public/files/image/2023/News/112023/PRCS%20Statement%2003112023.pdf',
             archiveLink: 'https://archive.ph/TZY0m',
-            videoPreviewLink: ''
         },
+
         {
             sourceName: 'CNN',
             sourceLink: 'https://www.cnn.com/2023/11/03/middleeast/casualties-gazas-shifa-hospital-idf/index.html',
             archiveLink: 'https://archive.ph/guy5q',
-            videoPreviewLink: ''
         },
+
         {
             sourceName: 'The Guardian',
             sourceLink: 'https://www.youtube.com/watch?v=8LAWhj4MLMs',
-            archiveLink: '',
             videoPreviewLink: 'https://files.hasbaratracker.com/Nov_2023_TheGuardian_israeli_airstrike_ambulance.mp4'
         }
     ]
@@ -1697,19 +1696,18 @@ const data = [
             sourceName: 'Dr. Ghassan Abu Sitta on X',
             sourceLink: 'https://twitter.com/GhassanAbuSitt1/status/1721545920322375747',
             archiveLink: 'https://archive.ph/y3ygE',
-            videoPreviewLink: ''
         },
+
         {
             sourceName: 'Al Jazeera',
             sourceLink: 'https://www.aljazeera.com/news/2023/11/6/israeli-forces-target-solar-panels-at-gazas-al-shifa-hospital',
             archiveLink: 'https://archive.ph/e8FNi',
-            videoPreviewLink: ''
         },
+
         {
             sourceName: 'Cameraman Omar Abu Nada on Instagram',
             sourceLink: 'https://www.instagram.com/reel/CzTlWjcNixb/',
-            archiveLink: '',
-            videoPreviewLink: ''
+            videoPreviewLink: 'https://files.hasbaratracker.com/06Nov2023_AlShifa_Hospital_Solar_Panels_Targeted.mp4'
         }
     ]
 },
@@ -1728,12 +1726,12 @@ const data = [
         summary: 'Israeli forces bomb Al-Shifa Hospital multiple times',
         details: 'Israeli strikes hit the yard of the Al-Shifa Hospital complex. Gaza‘s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br><br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],’ he said.'
     },
+
     sources: [
         {
             sourceName: 'Al Jazeera',
             sourceLink: 'https://www.aljazeera.com/news/liveblog/2023/11/9/israel-gaza-war-live-day-34',
             archiveLink: 'https://archive.is/2goqX',
-            videoPreviewLink: 'x'
         }
     ]
 },
@@ -1781,7 +1779,6 @@ const data = [
             sourceName: 'United Nations Office for the Coordination of Humanitarian Affairs',
             sourceLink: 'https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-37',
             archiveLink: 'https://archive.ph/KtXNY',
-            videoPreviewLink: ''
         }
     ]
 },
@@ -1805,7 +1802,6 @@ const data = [
             sourceName: 'Doctors Without Borders (Médecins Sans Frontières)',
             sourceLink: 'https://www.msf.org/gaza-patients-and-medical-staff-trapped-hospitals-under-fire',
             archiveLink: 'https://archive.is/mk8D5',
-            videoPreviewLink: ''
         }
     ]
 },
@@ -1828,7 +1824,6 @@ const data = [
         {
             sourceName: 'NBC',
             sourceLink: 'https://www.youtube.com/watch?v=dRThvlOjkq0',
-            archiveLink: '',
             videoPreviewLink: 'https://drive.google.com/file/d/1TztfQRqHhsoMVktifFGoy_nWmCaGtf-e/view?usp=sharing'
         }
     ]
@@ -1853,7 +1848,7 @@ const data = [
             sourceName: 'Al Jazeera',
             sourceLink: 'https://www.youtube.com/watch?v=a2cd4pgbdkM',
             archiveLink: 'https://archive.is/aj65S',
-            videoPreviewLink: 'https://drive.google.com/drive/folders/1wvHIewCyB6HlP4JjSVyr_A33vuSHGRUJ'
+            videoPreviewLink: 'https://files.hasbaratracker.com/12Nov2023_AlShifa_Hospital_Director_Muhammed_Abu_Salmiya_Fuel_AlJazeera.mp4'
         }
     ]
 },
@@ -1876,7 +1871,6 @@ const data = [
         {
             sourceName: 'Israel Occupation Forces',
             sourceLink: 'https://youtu.be/-P9euA1Le_g',
-            archiveLink: '',
             videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_Alleged_Audio_IOF_Fuel_AlShifa_Gaza_Health_Ministry.mp4'
         }
     ]
@@ -1903,16 +1897,16 @@ const data = [
             archiveLink: 'https://archive.ph/aMVX8',
             videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_Alleged_Audio_IOF_Fuel_AlShifa_Gaza_Health_Ministry.mp4'
         },
+
         {
             sourceName: 'Israel Occupation Force',
             sourceLink: 'https://www.idf.il/en/mini-sites/hamas-israel-war-24/war-on-hamas-2023-resources/hamas-refuses-fuel-delivery-to-shifa-hospital/',
             archiveLink: 'https://archive.is/xihlp',
-            videoPreviewLink: ''
         },
+
         {
             sourceName: 'YouTube',
             sourceLink: 'https://www.youtube.com/watch?v=cg0CEhWhguI',
-            archiveLink: '',
             videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_IOF_Fuel_Delivery_Footage_Claim.mp4'
         }
     ]
@@ -1937,7 +1931,6 @@ const data = [
             sourceText: '@IsraelMFA on X',
             sourceLink: 'https://twitter.com/IsraelMFA/status/1723753602382970943',
             archiveLink: 'https://archive.ph/x6ogI',
-            videoPreviewLink: ''
         }
     ]
 },
@@ -1946,7 +1939,7 @@ const data = [
 
     claimText: 'Claim',
     claimTag: 'claim-tag',
-    
+
     date: '12 Nov 2023',
     summary: 'Israeli military spokesperson for Arab media says 300L of fuel offered that Hamas rejected',
     details: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br><br>The post, written in Arabic and translated to English, stated:<br><br>"An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!"',
@@ -1955,7 +1948,6 @@ const data = [
             sourceText: 'Avichay Adraee on X',
             sourceLink: 'https://twitter.com/AvichayAdraee/status/1723756023062597671',
             archiveLink: 'https://archive.ph/u4Yw4',
-            videoPreviewLink: ''
         }
     ]
 },
@@ -1972,7 +1964,6 @@ const data = [
             sourceText: 'The Guardian',
             sourceLink: 'https://www.theguardian.com/world/2023/nov/13/in-the-circle-of-death-gaza-doctors-say-patients-are-under-siege-in-al-shifa',
             archiveLink: 'https://archive.ph/kOzB2',
-            videoPreviewLink: ''
         }
     ]
 },
@@ -1989,27 +1980,28 @@ const data = [
             sourceText: 'Sky News',
             sourceLink: 'https://news.sky.com/story/israel-and-hamas-dispute-claims-of-gaza-hospital-fuel-offer-as-babies-among-12-dead-13006949',
             archiveLink: 'https://archive.ph/FivPS',
-            videoPreviewLink: ''
         },
+
         {
             sourceText: 'Al Bawaba',
             sourceLink: 'https://www.albawaba.com/news/hamas-denies-claims-refusing-receive-fuel-al-shifa-hospital-gaza-1541324',
             archiveLink: 'https://archive.is/7DUiu',
-            videoPreviewLink: ''
         },
+
         {
             sourceText: 'The Guardian',
             sourceLink: 'https://www.theguardian.com/world/2023/nov/13/in-the-circle-of-death-gaza-doctors-say-patients-are-under-siege-in-al-shifa',
             archiveLink: 'https://archive.ph/kOzB2',
-            videoPreviewLink: ''
         }
     ]
 },
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     claimText: 'Claim',
     claimTag: 'claim-tag',
+
     date: '15 Nov 2023',
     summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
     details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri\'i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
@@ -2024,7 +2016,6 @@ const data = [
             sourceText: 'YouTube',
             sourceLink: 'https://www.youtube.com/watch?v=zs-2vw5lfgQ',
             archiveLink: 'https://archive.ph/UCvws',
-            videoPreviewLink: ''
         }
     ]
 },
@@ -2035,7 +2026,7 @@ const data = [
     claimTag: 'context-tag',
     date: '23 Nov 2023',
     summary: 'Director of Al-Shifa Hospital and other senior healthworkers arrested and detained by Israeli forces',
-    details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state\'s assertion that there was "evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre."<br><br>The now-deleted IOF press release on the arrest was titled: "Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning."',
+    details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state‘s assertion that there was "evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre."<br><br>The now-deleted IOF press release on the arrest was titled: "Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning."',
     sources: [
         {
             sourceText: 'Al Jazeera',
@@ -2048,8 +2039,10 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     claimText: 'Context',
     claimTag: 'context-tag',
+    
     date: '5 Dec 2023',
     summary: 'Director of Al-Shifa Hospital being held and interrogated by Shin Bet under Israeli ‘emergency war rules’',
     details: 'Dr. Muhammad Abu Salmiya is being criminally probed by the Shin Bet (Israel Security Agency) under ‘current war emergency regulations relating to Hamas’ according to Israeli state officials.',
@@ -2058,7 +2051,6 @@ const data = [
             sourceText: 'Jerusalem Post',
             sourceLink: 'https://www.jpost.com/israel-news/article-776708',
             archiveLink: 'https://archive.is/qtBA3',
-            videoPreviewLink: ''
         }
     ]
 },

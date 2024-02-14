@@ -1916,7 +1916,7 @@ const data = [
     date: '13 Nov 2023',
     description: {
         summary: 'At least 10,000 litres of fuel is needed to run vital parts of the hospital',
-        details: 'Dr. Munir Boursh from Gaza‘s Health Ministry stated the amount of fuel offered was barely enough to power the generators inside Al-Shifa Hospital for half an hour.<br><br>‘We consume at least 500 litres per hour to run our generators, we need around 10,000 litres each day. Three hundred litres is nothing.’',
+        details: 'Dr. Munir Boursh from Gaza’s Health Ministry stated the amount of fuel offered was barely enough to power the generators inside Al-Shifa Hospital for half an hour.<br><br>‘We consume at least 500 litres per hour to run our generators, we need around 10,000 litres each day. Three hundred litres is nothing.’',
     },
     sources: [
         {
@@ -1968,18 +1968,29 @@ const data = [
     },
     description: {
         summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
-        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri\'i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
+        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri’i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
     },
-        sources: [
-            {
-                sourceText: 'Israel Occupation Forces',
+    // MISSING
+    sources: [
+        {
+            sourceText: 'Israel Occupation Forces',
+            sourceLink: '',
+            archiveLink: '',
+        }
+    ]
+},
 
-    claimText: 'Claim',
-    claimTag: 'claim-tag',
-
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '15 Nov 2023',
-    summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
-    details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri‘i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
+    claim: {
+        claimText: 'Claim',
+        claimTag: 'claim-tag',
+    },
+    description: {
+        summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
+        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri‘i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
+    },
     sources: [
         {
             sourceText: 'Israel Occupation Forces',
@@ -1997,11 +2008,15 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
-    claimText: 'Context',
-    claimTag: 'context-tag',
     date: '23 Nov 2023',
-    summary: 'Director of Al-Shifa Hospital and other senior healthworkers arrested and detained by Israeli forces',
-    details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state‘s assertion that there was "evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre."<br><br>The now-deleted IOF press release on the arrest was titled: "Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning."',
+    claim: {
+        claimText: 'Context',
+        claimTag: 'context-tag',
+    },
+    description: {
+        summary: 'Director of Al-Shifa Hospital and other senior healthworkers arrested and detained by Israeli forces',
+        details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state‘s assertion that there was "evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre."<br><br>The now-deleted IOF press release on the arrest was titled: "Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning."',
+    },
     sources: [
         {
         sourceText: 'Al Jazeera',
@@ -2031,14 +2046,6 @@ const data = [
         }
     ]
 },
-
-
-
-
-
-
-
-
 
 
 

@@ -437,21 +437,6 @@ h1.ht-heading {
 
 
     /* Menu */
-    .arrow-menu {
-        font-size: 2.5em;
-        margin-bottom: 15px;
-    }
-
-    .bar {
-        width: 4px;
-        height: 4px;
-        background-color: #333;
-        margin: 3px 0;
-        transition: 0.4s;
-      }
-
-
-    /* Menu */
     .mobile-menu {
         /* display: flex;
           align-items: center;
@@ -468,11 +453,24 @@ h1.ht-heading {
           z-index: 3;
       }
 
+    .bar {
+        width: 4px;
+        height: 4px;
+        background-color: #333;
+        margin: 3px 0;
+        transition: 0.4s;
+      }
+    
     .menu-icon {
         cursor: crosshair;
         display: flex;
         flex-direction: column;
         padding: 0.7em; /* Increase clickable area */
+    }
+
+    .arrow-menu {
+        font-size: 2.5em;
+        margin-bottom: 15px;
     }
 
     .menu-links {
@@ -485,8 +483,12 @@ h1.ht-heading {
 
         font-family: 'Helvetica', Helvetica, sans-serif;
         font-size: 1.1em;
-        line-height: 30px;
+        line-height: 1.5em;
         text-align: right;
+    }
+
+    .break {
+        margin-bottom: 20%;
     }
 
 

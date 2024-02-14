@@ -224,7 +224,7 @@ h2 .expand-text {
     display: flex;
     justify-content: space-between;
     gap: 100px;
-    width: 90%;
+    width: 85%;
 }
 
 .column {

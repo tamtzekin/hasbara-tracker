@@ -100,63 +100,6 @@ body {
     text-align: left;
 }
 
-select.claim-dropdown-box {    
-    text-overflow: ellipsis;
-
-    /* disable default styles */
-    appearance: none;
-    outline: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    &::-ms-expand { display: none };
-
-    /* remove dotted firefox border */
-    @-moz-document url-prefix() {
-        select {
-            color: rgba(0,0,0,0);
-            text-shadow: 0 0 0 #ffffff;
-        }
-
-    padding: 2.6%;
-    padding-right: 7%;
-    border-radius: 3px;
-
-    border: solid 0.5px black;
-    background-color: #ccc;
-    /* padding: 0 1em 0 0; */
-    margin: 0;
-    /* width: 100%; */
-    /* font-family: inherit; */
-    /* font-size: inherit; */
-    /* cursor: ew-resize; */
-    /* line-height: inherit; */
-    width: 55%;
-    }
-    
-    /* Custom arrow */
-    background-image:
-        linear-gradient(45deg, transparent 50%, red 50%),
-        linear-gradient(135deg, red 50%, transparent 50%);
-        /* linear-gradient(to right, #ccc, #ccc); */
-    background-position:
-        calc(100% - 20px) calc(1em + 2px),
-        calc(100% - 15px) calc(1em + 2px),
-        calc(100% - 2.5em) 0.5em;
-    background-size:
-        5px 5px,
-        5px 5px,
-        1px 1.5em;
-    background-repeat: no-repeat;
-}
-
-.claim-filter {
-    position: absolute;
-    /* width: 12%; */
-    top: 30.60%;
-    left: 20.75%;
-    /* margin-right: auto; */
-}
-
 .claim-link {
     text-decoration: dashed underline;
 }
@@ -421,16 +364,6 @@ h1.ht-heading {
         font-size: 0.95em;
     }
 
-    .claim-dropdown-box {
-        padding: 11px;
-    }
-
-    .claim-filter {
-        width: 40%;
-        left: -13%;
-        top: 11.6%;
-    }
-
     .claim-link {
         margin-bottom: 5%;
     }
@@ -493,7 +426,7 @@ h1.ht-heading {
           align-items: center;
           justify-content: flex-end;
           position: absolute;
-          top: 30%;
+          top: 10%;
           right: 4%;
           z-index: 3;
       }
@@ -559,7 +492,6 @@ h1.ht-heading {
         margin-top: 4.9%;
         margin-left: 2%;
     } */
-
 }
   
   /* Tablets and small desktops */
@@ -664,11 +596,6 @@ h1.ht-heading {
       .nav-links {
         display: none;
       }
-
-
-
-
-
   }
   
   /* Medium-sized devices */

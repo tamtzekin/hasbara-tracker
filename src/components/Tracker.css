@@ -118,7 +118,7 @@ button {
 }
 
 h1.claim-heading {
-    font-family: 'Helvetica', helvetica, sans-serif;
+    font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 1.5em;
     position: absolute;
     left: 6%;
@@ -179,27 +179,88 @@ li {
     height: 100%;
 }
 
+/* Claim Dropdown + Search Bar */
+select.claim-dropdown-box {    
+    /* disable default styles */
+    appearance: none;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &::-ms-expand { display: none };
+
+    /* remove dotted firefox border */
+    @-moz-document url-prefix() {
+        select {
+            color: rgba(0,0,0,0);
+            text-shadow: 0 0 0 #ffffff;
+        }
+
+        
+    border: solid 0.5px black;
+    background-color: #ccc;
+    /* cursor: ew-resize; */
+    
+    position: absolute;
+    top: 11.4%;
+    
+    padding: 1%;
+    padding-right: 2.5%;
+    border-radius: 3px;
+
+    width: 20rem;
+    height: 2.7rem;
+    
+    margin: 0;
+    margin-left: -10.5%;
+
+    text-overflow: ellipsis;
+    }
+
+        
+    /* Custom arrow */
+    background-image:
+        linear-gradient(45deg, transparent 50%, red 50%),
+        linear-gradient(135deg, red 50%, transparent 50%);
+        /* linear-gradient(to right, #ccc, #ccc); */
+    background-position:
+        calc(100% - 20px) calc(1em + 4px),
+        calc(100% - 15px) calc(1em + 4px),
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+/* Claim dropdown filter + Search bar */
+.claim-filter {
+    /* position: relative; */
+    /* margin-top: -5%; */
+    margin-left: 28.7%;
+    margin-right: auto;
+}
+
 .no-results-text {
     margin-left: 25%;
     margin-right: auto;
 }
 
 .search-bar-container {
-    /* padding-top: 5%; */
+    margin-top: 0;
 }
 
 .search-bar {
-    width: 38.5%;
-    margin-top: 5.35%;
-    margin-bottom: 5%;
-    margin-left: 36.2%;
-    margin-right: auto;
+    position: absolute;
+    top: 9.7%;
+    left: 41.3%;
 }
 
 .search-bar input {
-    height: 20px;
-    font-size: 0.9em;
-    font-family: 'HelveticaNeue_Light', Helvetica, sans-serif;
+    height: 1.5rem;
+    width: 32rem;
+    font-size: 0.85em;
+    font-family: 'Helvetica', Helvetica, sans-serif;
     letter-spacing: 0.8px;
     line-height: 25px;
     background: #f0f0f0;
@@ -214,6 +275,7 @@ li {
     background-position: 10px center;
 }
 
+/* Sources */
 .source {
     margin-bottom: 7%
 }
@@ -290,6 +352,35 @@ ul {
   /*  ************************************************************ */
 
 
+/* Tablets and small desktops */
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    .claim-filter {
+        margin-left: 15%;
+    }
+
+    select.claim-dropdown-box {
+        width: 15rem;
+    }
+
+    .search-bar {
+        top: 10.1%;
+        left: 39.5%;
+    }
+    .search-bar input {
+        width: 23rem;
+    }
+}
+
+
+
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+  /*  ************************************************************ */
+
+
+
+/* MOBILE VIEW */
 @media only screen and (max-width: 480px) {
     a {
         z-index: 1; /* makes the a link text hide under the video, on mobile*/
@@ -423,37 +514,47 @@ ul {
         margin-left: -13%;
     }
 
+    /* Claim dropdown filter + Search bar */
     .no-results-text {
         margin-left: 1%;
     }
 
     .search-bar {
-        width: 54%;
-        margin-left: 35.5%;
+        /* margin-left: 3%; */
+        /* margin-top: 3%; */
     }
 
     .search-bar input {
-        font-size: 1em;
-        padding: 10px 0 10px 40px;
+        font-size: 0.9em;
+        padding: 10px 5px 10px 35px;
+        width: 10rem;
+        text-overflow: ellipsis;
     }
 
     .search-bar-container {
-        margin-top: 17%;
+        position: fixed;
+        margin-top: -12%;
+        margin-left: 43%;
         margin-bottom: 10%;
         background: transparent;
+        z-index: 1;
+        background-color: #dadada;
     }
 
 
-    /* .claim-filter {
-        padding: 500%;
-    } */
-    /* Dropdown filter */
+    .claim-filter {
+        /* width: 40%; */
+        /* left: -2%; */
+        /* top: 11.6%; */
+    }
+
     select.claim-dropdown-box {   
         position: fixed;
         padding: 2.85%;
-        top: 8.95%;
-        left: 7.5%;
-        width: 30%;
+        top: 6.4%;
+        left: 18%;
+        width: 40%;
+        padding-right: 6%;
     }
 
 
@@ -513,6 +614,7 @@ ul {
         width: 95%;
         margin-left: 3%;
         margin-right: 3%;
+        margin-top: 25%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 
     }

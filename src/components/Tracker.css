@@ -527,14 +527,15 @@ ul {
     .search-bar input {
         font-size: 0.9em;
         padding: 10px 5px 10px 35px;
-        width: 10rem;
+        width: 9.8rem;
+        height: 1.4rem;
         text-overflow: ellipsis;
     }
 
     .search-bar-container {
         position: fixed;
-        margin-top: -12%;
-        margin-left: 43%;
+        margin-top: -14.5%;
+        margin-left: 39.5%;
         margin-bottom: 10%;
         background: transparent;
         z-index: 1;
@@ -552,7 +553,7 @@ ul {
         position: fixed;
         padding: 2.85%;
         top: 6.4%;
-        left: 18%;
+        left: 15.5%;
         width: 40%;
         padding-right: 6%;
     }
@@ -611,10 +612,10 @@ ul {
     }
 
     .tracker-container {
-        width: 95%;
-        margin-left: 3%;
+        width: 100%;
+        margin-left: 0%;
         margin-right: 3%;
-        margin-top: 25%;
+        margin-top: 30%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 
     }

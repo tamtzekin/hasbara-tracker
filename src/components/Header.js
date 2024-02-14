@@ -18,9 +18,9 @@ const Header = () =>{
         
         <div class="nav-links">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
-                <li>
+                {/* <li>
                     <NavLink to="/">Claims</NavLink>
-                </li>
+                </li> */}
             {/* )} */}
 
             {/* {location.pathname !== '/submit-claim' && ( */}

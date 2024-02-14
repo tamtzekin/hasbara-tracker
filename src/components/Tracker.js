@@ -286,15 +286,15 @@ export default function Tracker() {
                                                     <td
                                                         {...cell.getCellProps()}
                                                         style={{
-                                                            padding: '20px',
+                                                            padding: '15px',
                                                             borderBottom: 'solid 1px gray',
                                                             overflow: 'hidden',
                                                             width: // Set fixed column widths
-                                                                index === 0 ? '300px' :
-                                                                index === 1 ? '60px' :
-                                                                index === 2 ? '10px' :
-                                                                index === 3 ? '350px' :
-                                                                '130px',
+                                                                index === 0 ? '20%' :
+                                                                index === 1 ? '10%' :
+                                                                index === 2 ? '8%' :
+                                                                index === 3 ? '22%' :
+                                                                '25%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}

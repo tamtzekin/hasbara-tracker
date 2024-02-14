@@ -2050,36 +2050,33 @@ const data = [
 
 
     
-    // TEMPLATE DATA SET (copy and paste this as much as you need it)
-    // {
-    //     claimTitle: '',
+// TEMPLATE DATA SET (copy and paste this as much as you need it)
 
-    //     date: '',
-
-    //     claim: {
-    //         claimText: '',
-    //         claimClass: '',
-    //     },
-
-    //     description: {
-    //         summary: '',
-    //         details: '',
-    //     },
-    //     sources: [
-    //         {
-    //             sourceName: '',
-    //             sourceLink: '',
-    //             archiveLink: '',
-    //             videoPreviewLink: '',
-    //         },
-    //         // Optional: add more sources, delete if not needed
-    //         {
-    //             sourceName: '',
-    //             sourceLink: '',
-    //             videoPreviewLink: '',
-    //         }
-    //     ]
-    // },
+// {
+//     claimTitle: '',
+//     date: 'dd mm yy',
+//     claim: {
+//         claimText: 'Claim / Context / Debunk',
+//         claimTag: 'claim-tag / context-tag / debunk-tag',
+//     },
+//     description: {
+//         summary: '',
+//         details: '',
+//     },
+//     sources: [
+//         {
+//             sourceName: '',
+//             sourceLink: '',
+//             archiveLink: '',
+//             videoPreviewLink: ''
+//         },
+//         {
+//             sourceName: '',
+//             sourceLink: '',
+//             archiveLink: '',
+//         }
+//     ]
+// },
 
 ]
 

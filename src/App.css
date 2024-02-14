@@ -100,19 +100,16 @@ body {
     text-align: left;
 }
 
-button.dotted {
+.claim-dropdown-box {
     padding: 10px;
-    margin: 5px;
-    cursor: crosshair;
-    border: dotted black;
-    border-radius: 5px;
-    background-color: transparent;
-    font-size: 0.8em;
 }
 
-/* Line breaks to split up mobile menu */
-.break {
-    margin-bottom: 40%;
+.claim-filter {
+    position: absolute;
+    width: 12%;
+    margin-top: 5.2%;
+    margin-left: 20.5%;
+    margin-right: auto;
 }
 
 .claim-link {

@@ -69,9 +69,9 @@ const MobileMenu = () => {
                     </Link>
 
                     <span class="break"></span>
-                    <Link to="/newsletter" onClick={closeModal}>
+                    {/* <Link to="/newsletter" onClick={closeModal}>
                         Newsletter
-                    </Link>
+                    </Link> */}
 
                     <Link to="/contact" onClick={closeModal}>
                         Contact

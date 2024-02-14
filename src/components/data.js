@@ -1671,7 +1671,7 @@ const data = [
             sourceName: 'The Guardian',
             sourceLink: 'https://www.youtube.com/watch?v=8LAWhj4MLMs',
             archiveLink: '',
-            videoPreviewLink: 'VIDEO GOES HERE'
+            videoPreviewLink: 'https://files.hasbaratracker.com/Nov_2023_TheGuardian_israeli_airstrike_ambulance.mp4'
         }
     ]
 },
@@ -1829,6 +1829,195 @@ const data = [
         }
     ]
 },
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '',
+    claim: {
+        claimText: 'Claim',
+        claimClass: 'claim-tag'
+    },
+    description: {
+        summary: 'Israeli military press release points to two audio clips and footage as evidence that the Health Ministry rejected fuel',
+        details: '(<b>)Note: The press release, dated 12 November, 2023, links to videos uploaded on 15 November, 2023.<(/b)<br><br>The Israel Occupation Forces press release stated: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel.’',
+},
+    sources: [
+        {
+            sourceName: 'Israel Occupation Forces',
+            sourceLink: 'https://youtu.be/-P9euA1Le_g',
+            archiveLink: '',
+            videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_Alleged_Audio_IOF_Fuel_AlShifa_Gaza_Health_Ministry.mp4'
+        }
+    ]
+},
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '12 Nov 2023',
+    claim: {
+        claimText: 'Claim',
+        claimClass: 'claim-tag'
+    },
+    description: {
+        summary: 'Israeli military posts short audio clip on X claiming Gaza health official says Health Ministry rejected fuel',
+        details: 'The official Israeli forces account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liasion officer with the Israeli military.<br>The post reads: \'The IDF provided 300 liters of fuel for urgent medical purposes to the Shifa Hospital, but there was a problem that prevented the fuel from getting to its destination. Why? Because the CEO of the Hamas Health Ministry, Yosef Abu Rish, forbade it. Watch for yourselves:\''
+    },
+    sources: [
+        {
+            sourceName: '@IDF on X',
+            sourceLink: 'https://x.com/IDF/status/1723753240162865350?s=20',
+            archiveLink: 'https://archive.ph/aMVX8',
+            videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_Alleged_Audio_IOF_Fuel_AlShifa_Gaza_Health_Ministry.mp4'
+        },
+        {
+            sourceName: 'Israel Occupation Force',
+            sourceLink: 'https://www.idf.il/en/mini-sites/hamas-israel-war-24/war-on-hamas-2023-resources/hamas-refuses-fuel-delivery-to-shifa-hospital/',
+            archiveLink: 'https://archive.is/xihlp',
+            videoPreviewLink: ''
+        },
+        {
+            sourceName: 'YouTube',
+            sourceLink: 'https://www.youtube.com/watch?v=cg0CEhWhguI',
+            archiveLink: '',
+            videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_IOF_Fuel_Delivery_Footage_Claim.mp4'
+        }
+    ]
+},
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '12 Nov 2023',
+    claim: {
+        claimText: 'Claim',
+        claimTag: 'claim-tag'
+    },
+    description: {
+        summary: 'Israeli Foreign Affairs X account posts audio clip and alleged footage of Israeli forces delivering fuel to Al-Shifa',
+        details: 'The official Israeli Ministry of Foreign Affairs account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liaison officer with the Israeli military. They also shared alongside it in the single post a video, alleging it is footage of Israeli forces delivering fuel to Al-Shifa Hospital.<br><br>The post reads:<br> ‘Breaking: Hamas prevented the Shifa Hospital from receiving 300 liters of fuel from the IDF for urgent medical purposes.<br>📸 (left) A recorded conversation between an IDF officer and a senior official in the health ministry in Gaza who states that the Hamas Health Ministry prevented them from receiving the fuel.<br>📸 (right) Footage of IDF delivering fuel.’'
+    },
+    sources: [
+        {
+            sourceText: '@IsraelMFA on X',
+            sourceLink: 'https://twitter.com/IsraelMFA/status/1723753602382970943',
+            archiveLink: 'https://archive.ph/x6ogI',
+            videoPreviewLink: ''
+        }
+    ]
+},
+{
+    date: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    summary: 'Claim',
+    details: 'claim-tag',
+    sourceText: '12 Nov 2023',
+    sourceLink: 'Israeli military spokesperson for Arab media says 300L of fuel offered that Hamas rejected',
+    archiveLink: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br>The post, written in Arabic and translated to English, stated:<br><br> ‘An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!’',
+    videoPreviewLink: 'Avichay Adraee on X',
+    sourceLink: 'https://twitter.com/AvichayAdraee/status/1723756023062597671',
+    archiveLink: 'https://archive.ph/u4Yw4',
+    videoPreviewLink: ''
+},
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimText: 'Context',
+    claimTag: 'context-tag',
+    date: '13 Nov 2023',
+    summary: 'At least 10,000 litres of fuel is needed to run vital parts of the hospital',
+    details: 'Dr. Munir Boursh from Gaza‘s Health Ministry stated the amount of fuel offered was barely enough to power the generators inside Al-Shifa Hospital for half an hour.<br><br>‘We consume at least 500 litres per hour to run our generators, we need around 10,000 litres each day. Three hundred litres is nothing.’',
+    sources: [
+        {
+            sourceText: 'The Guardian',
+            sourceLink: 'https://www.theguardian.com/world/2023/nov/13/in-the-circle-of-death-gaza-doctors-say-patients-are-under-siege-in-al-shifa',
+            archiveLink: 'https://archive.ph/kOzB2',
+            videoPreviewLink: ''
+        }
+    ]
+},
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimText: 'Debunk',
+    claimTag: 'debunk-tag',
+    date: '13 Nov 2023',
+    summary: 'Hamas officials reject claim that they prevented fuel delivery',
+    details: 'Hamas released a statement saying: ‘Hamas is not a party to the management of Al-Shifa Hospital, nor does it have a presence within its decision-making structure, and it is completely subject to the authority of the Palestinian Health Ministry, which manages its administrative and technical affairs.’ <br><br>They also added: ‘The offer belittles the pain and suffering of the patients who are trapped inside without water, food, or electricity. This quantity is not enough to operate hospital generators for more than 30 minutes.’ <br><br>Dr. Munir Boursh said the hospital was ready to accept an offer of 300 litres of diesel fuel from Israeli forces stationed outside, but that the hospital director Dr. Muhammed Abu Salmiya would only receive it from the International Committee of the Red Cross (ICRC), fearing the danger of moving around.<br><br>‘The hospital is not functioning as a hospital any more. We, the medical staff, are asking for a safe corridor to leave the hospital with the patients, guaranteed by the International Committee of the Red Cross.’',
+    sources: [
+        {
+            sourceText: 'Sky News',
+            sourceLink: 'https://news.sky.com/story/israel-and-hamas-dispute-claims-of-gaza-hospital-fuel-offer-as-babies-among-12-dead-13006949',
+            archiveLink: 'https://archive.ph/FivPS',
+            videoPreviewLink: ''
+        },
+        {
+            sourceText: 'Al Bawaba',
+            sourceLink: 'https://www.albawaba.com/news/hamas-denies-claims-refusing-receive-fuel-al-shifa-hospital-gaza-1541324',
+            archiveLink: 'https://archive.is/7DUiu',
+            videoPreviewLink: ''
+        },
+        {
+            sourceText: 'The Guardian',
+            sourceLink: 'https://www.theguardian.com/world/2023/nov/13/in-the-circle-of-death-gaza-doctors-say-patients-are-under-siege-in-al-shifa',
+            archiveLink: 'https://archive.ph/kOzB2',
+            videoPreviewLink: ''
+        }
+    ]
+},
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimText: 'Claim',
+    claimTag: 'claim-tag',
+    date: '15 Nov 2023',
+    summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
+    details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri\'i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
+    sources: [
+        {
+            sourceText: 'Israel Occupation Forces',
+            sourceLink: 'https://www.idf.il/en/mini-sites/hamas-israel-war-24/war-on-hamas-2023-resources/hamas-refuses-fuel-delivery-to-shifa-hospital/',
+            archiveLink: 'https://archive.ph/xihlp',
+            videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_IOF_Claim_Audio_Fuel_Delivery.mp4'
+        },
+        {
+            sourceText: 'YouTube',
+            sourceLink: 'https://www.youtube.com/watch?v=zs-2vw5lfgQ',
+            archiveLink: 'https://archive.ph/UCvws',
+            videoPreviewLink: ''
+        }
+    ]
+},
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    claimText: 'Context',
+    claimTag: 'context-tag',
+    date: '23 Nov 2023',
+    summary: 'Director of Al-Shifa Hospital and other senior healthworkers arrested and detained by Israeli forces',
+    details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state\'s assertion that there was "evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre."<br><br>The now-deleted IOF press release on the arrest was titled: "Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning."',
+    sources: [
+        {
+            sourceText: 'Al Jazeera',
+            sourceLink: 'https://www.aljazeera.com/news/2023/11/23/al-shifa-hospital-director-arrested-by-israeli-army-in-gaza',
+            archiveLink: 'https://archive.is/Npk8h',
+            videoPreviewLink: ''
+        }
+    ]
+},
+{
+    claimTitle: '',
+    claimText: 'Context',
+    claimTag: 'context-tag',
+    date: '5 Dec 2023',
+    summary: 'Director of Al-Shifa Hospital being held and interrogated by Shin Bet under Israeli ‘emergency war rules’',
+    details: 'Dr. Muhammad Abu Salmiya is being criminally probed by the Shin Bet (Israel Security Agency) under ‘current war emergency regulations relating to Hamas’ according to Israeli state officials.',
+    sources: [
+        {
+            sourceText: 'Jerusalem Post',
+            sourceLink: 'https://www.jpost.com/israel-news/article-776708',
+            archiveLink: 'https://archive.is/qtBA3',
+            videoPreviewLink: ''
+        }
+    ]
+}
+
+
+
+
+
+
+
 
 
 
@@ -1842,17 +2031,18 @@ const data = [
 
     //     claim: {
     //         claimText: '',
-    //         claimClass: 'claim-tag',
+    //         claimClass: '',
     //     },
 
     //     description: {
-    //         summary: '',ext',
+    //         summary: '',
     //         details: '',
     //     },
     //     sources: [
     //         {
     //             sourceName: '',
     //             sourceLink: '',
+    //             archiveLink: '',
     //             videoPreviewLink: '',
     //         },
     //         // Optional: add more sources, delete if not needed

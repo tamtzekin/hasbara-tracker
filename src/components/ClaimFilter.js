@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-const ClaimFilter = ({ claimTags, setGlobalFilter }) => {
-  const [selectedClaimTag, setSelectedClaimTag] = useState('');
+const ClaimFilter = ({ claimTitles, setGlobalFilter }) => {
+  const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
 
-  const handleClaimTagChange = (e) => {
-    const tag = e.target.value;
-    setSelectedClaimTag(tag);
-    setGlobalFilter(tag);
+  const handleClaimTitleChange = (e) => {
+    const title = e.target.value;
+    setSelectedClaimTitle(title);
+    setGlobalFilter(title);
   };
 
   return (
@@ -14,16 +14,16 @@ const ClaimFilter = ({ claimTags, setGlobalFilter }) => {
       {/* <label htmlFor="claimTag">Filter by Claim Tag:</label> */}
       <select
         className="claim-dropdown-box"
-        id="claimTag"
-        value={selectedClaimTag}
-        onChange={handleClaimTagChange}
+        id="claimTitle"
+        value={selectedClaimTitle}
+        onChange={handleClaimTitleChange}
       >
         <option value="">
           All claims
         </option>
-        {claimTags.map((tag) => (
-          <option key={tag} value={tag}>
-            {tag}
+        {claimTitles.map((title) => (
+          <option key={title} value={title}>
+            {title}
           </option>
         ))}
       </select>

@@ -9,11 +9,20 @@ import '../App.css';
 import data from './data';
 import VideoPlayer from './VideoPlayer';
 import Header from './Header';
+import ClaimFilter from './ClaimFilter';
 import SearchBar from './SearchBar';
 import Footer from './Footer';
 
 export default function Tracker() {
+    // defines claim tags for dropdown (ClaimFilter.js)
+    const uniqueClaimTitles = useMemo(() => {
+        const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
+        return Array.from(claimTitlesSet);
+        }, [data]);
+    
+    const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
 
+    
     // Set mobile/phone view dimensions
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 480);
 
@@ -33,7 +42,7 @@ export default function Tracker() {
     // Pull all the claims data
     const columns = useMemo(
         () => [
-            // Claim tag eg. 'Forty beheaded babies'
+            // Claim title eg. 'Forty beheaded babies'
             {
                 Header: 'Claim',
                 accessor: 'claimTitle',
@@ -220,7 +229,12 @@ export default function Tracker() {
             {!isMobileView && (
                 <>
                     <div class="search-bar-container">
-                        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+                        <ClaimFilter 
+                            claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} 
+                        />
+                        <SearchBar 
+                            filter={globalFilter || ''} setFilter={setGlobalFilter} 
+                        />
                     </div>
 
                     <div class="tracker-container">
@@ -301,6 +315,7 @@ export default function Tracker() {
             {isMobileView && (
                 <>
                     <div class="search-bar-container">
+                        <ClaimFilter claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} />
                         <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
                     </div>
 

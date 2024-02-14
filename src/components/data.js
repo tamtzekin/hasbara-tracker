@@ -1639,7 +1639,9 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '3 Nov 2023',
+
     claim: {
         claimText: 'Context',
         claimClass: 'context-tag'
@@ -1678,11 +1680,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '6 Nov 2023',
+
     claim: {
         claimText: 'Context',
         claimClass: 'context-tag'
     },
+
     description: {
         summary: 'Solar panels at Al-Shifa Hospital destroyed by Israeli forces',
         details: 'Israeli forces destroyed the solar panels atop the hospital, leaving it fully reliant on back-up generators powered by dwindling fuel supplies. <br><br>Dr. Ghassan Abu Sitta, a Palestinian-British surgeon treating Palestinians at Al-Shifa Hospital, posted on X (formerly Twitter): ‘Israel just hit the solar panels on the roof of Shifa hospital. Shifa MUST go dark. Israeli necropolitics means it needs to declare victory over a hospital.‘ <br><br> Cameraman Omar Abu Nada posted a video on Instagram showing and describing the damage of the solar panels at Al-Shifa Hospital. <br><br> The Israeli state denies destroying solar panels.'
@@ -1711,11 +1716,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '9 Nov 2023',
+
     claim: {
         claimText: 'Context',
         claimClass: 'context-tag'
     },
+
     description: {
         summary: 'Israeli forces bomb Al-Shifa Hospital multiple times',
         details: 'Israeli strikes hit the yard of the Al-Shifa Hospital complex. Gaza‘s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br><br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],’ he said.'
@@ -1732,11 +1740,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '10 Nov 2023',
+
     claim: {
         claimText: 'Context',
         claimClass: 'context-tag'
     },
+
     description: {
         summary: 'Red Cross attempt to deliver medical supplies to Gaza hospitals under horrendous circumstances',
         details: 'In a press release, the International Committee of the Red Cross (ICRC) said staff attempting to deliver medical supplies had witnessed ‘horrendous’ scenes, and described the destruction as ‘unbearable’. ICRC called for the respect and protection of medical facilities, patients, and healthcare workers in Gaza.<br><br>The release stated: ‘Overstretched, running on thin supplies and increasingly unsafe, the healthcare system in Gaza has reached a point of no return risking the lives of thousands of wounded, sick, and displaced people.’'
@@ -1753,11 +1764,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '11 Nov 2023',
+
     claim: {
         claimText: 'Context',
         claimClass: 'context-tag'
     },
+
     description: {
         summary: 'Israeli army destroys critical infrastructure, surgeries have stopped, neonatal incubators lose power, amputations without anaesthesia at Al-Shifa Hospital',
         details: 'Al-Shifa Hospital continued to face intensified bombardment. Doctors Without Borders/Médecins Sans Frontières (MSF) reported that critical infrastructure, including the oxygen station, water tanks and a well, the cardiovascular facility, and the maternity ward, were damaged, and three nurses were killed. At least two premature babies died on 11 November, 2023, when the hospital ran out of electricity to power its incubators, staff said.<br><br>While some people managed to escape, displaced Palestinians sheltering at Al-Shifa, along with staff and patients remained trapped inside while under IOF fire, ‘fearing to leave or physically unable to do so’ (MSF). Ann Taylor, MSF’s Head of Mission in Palestine said: ‘The situation in Al-Shifa is truly catastrophic.’<br><br>The Director of Al-Shifa Hospital, Dr. Mohammed Abu Salmiya, said: ‘Surgeries have had to stop. Kidney dialysis has stopped and the neonatal unit is in a very dire situation.’'
@@ -1774,11 +1788,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '11 Nov 2023',
+
     claim: {
         claimText: 'Context',
         claimClass: 'context-tag'
     },
+
     description: {
         summary: 'Israeli snipers are firing at anyone near Al-Shifa Hospital',
         details: 'Doctors Without Borders (Médecins Sans Frontières) stated that Israeli troops were shooting at those trying to exit the hospital, which the Israeli state denied.'
@@ -1795,11 +1812,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '12 Nov 2023',
+
     claim: {
         claimText: 'Claim',
         claimClass: 'claim-tag'
     },
+
     description: {
         summary: 'Netanyahu claims 300 litres of fuel offered by the Israeli state was refused by Al-Shifa Hospital',
         details: 'In an interview with US media outlet NBC (Meet the Press), Israeli Prime Minister Benjamin Netanyahu claimed that the Director of Al-Shifa Hospital Dr. Mohammed Abu Salmiya rejected an offer for fuel from the Israeli state, without providing details. <br><br> Netanyahu referred to hospitals as ‘Hamas command posts’. ‘We just offered Shifa Hospital fuel, they refused it so they you know so the fuel to run the hospital. See what happens is they want, the Hamas that is hiding in the hospitals and uh placing itself there doesn‘t want the fuel for the hospitals they don’t give a hoot about the patients they don’t give a hoot about the civilians uh their spokesman said this they said Hamas is underground above ground the civilian population that‘s Israel’s and the UN’s responsibility they don’t care about the civilians they don’t care about the patients but they want to get fuel that they’ll take from the hospitals to their tunnels to their War Machine the electricity they need to fire the Rockets they fired 10,000 rockets as we speak in Israel against Israelo cities and they continue to fight from those underground bunkers so what we have to do is separate the two we’ll try to help those who need it in the hospitals but not help the Hamas War Machine.’'
@@ -1816,11 +1836,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '12 Nov 2023',
+
     claim: {
         claimText: 'Debunk',
         claimClass: 'debunk-tag'
     },
+
     description: {
         summary: 'Al-Shifa Hospital accepted fuel and asked for it to be delivered through the Red Cross, which the Israeli state refused',
         details: 'The Director of Al-Shifa Hospital in Gaza, Dr. Muhammad Abu Salmiya, said an Israeli military operative contacted him on the phone and offered to supply the hospital with 2000 litres of fuel, which the hospital accepted.<br><br> In an interview with Al Jazeera Arabic, Dr. Abu Salmiya said the quantity was accepted and that he requested the Israelis deliver the fuel through the Red Cross. However, Israeli forces rescinded the offer of 2000 litres and said it would instead offer 300 litres of fuel. The Israeli military rejected delivering fuel through the Red Cross or any other international humanitarian organisation, and said the fuel would have to be picked up at 2am from an area being hit with Israeli bombardments. ‘We are ready to take fuel from anybody through the International Red Cross.’ See the full transcript of Dr. Abu Salmiya’s interview with Al Jazeera here or in the sources provided.'
@@ -1837,11 +1860,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
-    date: '',
+
+    date: '12 Nov 2023',
+
     claim: {
         claimText: 'Claim',
         claimClass: 'claim-tag'
     },
+
     description: {
         summary: 'Israeli military press release points to two audio clips and footage as evidence that the Health Ministry rejected fuel',
         details: '(<b>)Note: The press release, dated 12 November, 2023, links to videos uploaded on 15 November, 2023.<(/b)<br><br>The Israel Occupation Forces press release stated: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel.’',
@@ -1858,11 +1884,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '12 Nov 2023',
+
     claim: {
         claimText: 'Claim',
         claimClass: 'claim-tag'
     },
+
     description: {
         summary: 'Israeli military posts short audio clip on X claiming Gaza health official says Health Ministry rejected fuel',
         details: 'The official Israeli forces account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liasion officer with the Israeli military.<br>The post reads: \'The IDF provided 300 liters of fuel for urgent medical purposes to the Shifa Hospital, but there was a problem that prevented the fuel from getting to its destination. Why? Because the CEO of the Hamas Health Ministry, Yosef Abu Rish, forbade it. Watch for yourselves:\''
@@ -1891,11 +1920,14 @@ const data = [
 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
     date: '12 Nov 2023',
+
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag'
     },
+
     description: {
         summary: 'Israeli Foreign Affairs X account posts audio clip and alleged footage of Israeli forces delivering fuel to Al-Shifa',
         details: 'The official Israeli Ministry of Foreign Affairs account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liaison officer with the Israeli military. They also shared alongside it in the single post a video, alleging it is footage of Israeli forces delivering fuel to Al-Shifa Hospital.<br><br>The post reads:<br> ‘Breaking: Hamas prevented the Shifa Hospital from receiving 300 liters of fuel from the IDF for urgent medical purposes.<br>📸 (left) A recorded conversation between an IDF officer and a senior official in the health ministry in Gaza who states that the Hamas Health Ministry prevented them from receiving the fuel.<br>📸 (right) Footage of IDF delivering fuel.’'
@@ -1909,18 +1941,23 @@ const data = [
         }
     ]
 },
-
 {
-    date: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
-    summary: 'Claim',
-    details: 'claim-tag',
-    sourceText: '12 Nov 2023',
-    sourceLink: 'Israeli military spokesperson for Arab media says 300L of fuel offered that Hamas rejected',
-    archiveLink: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br>The post, written in Arabic and translated to English, stated:<br><br> ‘An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!’',
-    videoPreviewLink: 'Avichay Adraee on X',
-    sourceLink: 'https://twitter.com/AvichayAdraee/status/1723756023062597671',
-    archiveLink: 'https://archive.ph/u4Yw4',
-    videoPreviewLink: ''
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+
+    claimText: 'Claim',
+    claimTag: 'claim-tag',
+    
+    date: '12 Nov 2023',
+    summary: 'Israeli military spokesperson for Arab media says 300L of fuel offered that Hamas rejected',
+    details: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br><br>The post, written in Arabic and translated to English, stated:<br><br>"An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!"',
+    sources: [
+        {
+            sourceText: 'Avichay Adraee on X',
+            sourceLink: 'https://twitter.com/AvichayAdraee/status/1723756023062597671',
+            archiveLink: 'https://archive.ph/u4Yw4',
+            videoPreviewLink: ''
+        }
+    ]
 },
 
 {

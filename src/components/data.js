@@ -1729,6 +1729,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '10 Nov 2023',
@@ -1749,6 +1750,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '11 Nov 2023',
@@ -1769,6 +1771,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '11 Nov 2023',
@@ -1789,6 +1792,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1809,6 +1813,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1829,6 +1834,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '',
@@ -1849,6 +1855,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1881,6 +1888,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1901,6 +1909,7 @@ const data = [
         }
     ]
 },
+
 {
     date: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     summary: 'Claim',
@@ -1913,6 +1922,7 @@ const data = [
     archiveLink: 'https://archive.ph/u4Yw4',
     videoPreviewLink: ''
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     claimText: 'Context',
@@ -1929,6 +1939,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     claimText: 'Debunk',
@@ -1957,6 +1968,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     claimText: 'Claim',
@@ -1979,6 +1991,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     claimText: 'Context',
@@ -1995,6 +2008,7 @@ const data = [
         }
     ]
 },
+
 {
     claimTitle: '',
     claimText: 'Context',
@@ -2010,7 +2024,7 @@ const data = [
             videoPreviewLink: ''
         }
     ]
-}
+},
 
 
 

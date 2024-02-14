@@ -9,17 +9,26 @@ import '../App.css';
 import data from './data';
 import VideoPlayer from './VideoPlayer';
 import Header from './Header';
+import ClaimFilter from './ClaimFilter';
 import SearchBar from './SearchBar';
 import Footer from './Footer';
 
 export default function Tracker() {
+    // defines claim tags for dropdown (ClaimFilter.js)
+    const uniqueClaimTitles = useMemo(() => {
+        const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
+        return Array.from(claimTitlesSet);
+        }, [data]);
+    
+    const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
 
+    
     // Set mobile/phone view dimensions
-    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 480);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 768);
+            setIsMobileView(window.innerWidth <= 480);
         };
 
         window.addEventListener('resize', handleResize);
@@ -33,7 +42,7 @@ export default function Tracker() {
     // Pull all the claims data
     const columns = useMemo(
         () => [
-            // Claim tag eg. 'Forty beheaded babies'
+            // Claim title eg. 'Forty beheaded babies'
             {
                 Header: 'Claim',
                 accessor: 'claimTitle',
@@ -166,13 +175,6 @@ export default function Tracker() {
                                     </div>
                                 </VideoPlayer>
                             ))}
-
-                            {/* If more than 1 source, add line breaks between sources */}
-                            {sources.length > 1 && <>
-                                <br />
-                                <br />
-                                <br />
-                            </>}
                         </>
                     );
                     
@@ -220,7 +222,12 @@ export default function Tracker() {
             {!isMobileView && (
                 <>
                     <div class="search-bar-container">
-                        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+                        <ClaimFilter 
+                            claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} 
+                        />
+                        <SearchBar 
+                            filter={globalFilter || ''} setFilter={setGlobalFilter} 
+                        />
                     </div>
 
                     <div class="tracker-container">
@@ -272,15 +279,15 @@ export default function Tracker() {
                                                     <td
                                                         {...cell.getCellProps()}
                                                         style={{
-                                                            padding: '20px',
+                                                            padding: '15px',
                                                             borderBottom: 'solid 1px gray',
                                                             overflow: 'hidden',
                                                             width: // Set fixed column widths
-                                                                index === 0 ? '30px' :
-                                                                index === 1 ? '80px' :
-                                                                index === 2 ? '20px' :
-                                                                index === 3 ? '600px' :
-                                                                '130px',
+                                                                index === 0 ? '20%' :
+                                                                index === 1 ? '10%' :
+                                                                index === 2 ? '8%' :
+                                                                index === 3 ? '22%' :
+                                                                '25%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}
@@ -301,6 +308,7 @@ export default function Tracker() {
             {isMobileView && (
                 <>
                     <div class="search-bar-container">
+                        <ClaimFilter claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} />
                         <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
                     </div>
 

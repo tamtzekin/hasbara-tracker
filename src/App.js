@@ -37,7 +37,7 @@ const App = () => {
 
                 <Route
                     path="al-ahli-attacked"
-                    element={<Navigate to="/tracker?filter=Al-Ahli%20Hospital%20attacked" replace />}
+                    element={<Navigate to="/tracker?filter=Al-Ahli%20Hospital%20was%20attacked%20by%20Palestinian%20rockets,%20not%20Israeli%20forces" replace />}
                 />
                 
                 <Route 

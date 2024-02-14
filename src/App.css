@@ -129,7 +129,7 @@ body {
     font-size: 2.10em;
     position: absolute;
     left: 5%;
-    top: 5.5%;
+    top: 8.5%;
     transform: translateY(-50%);
     width: 100%;
 }
@@ -551,7 +551,7 @@ h1.ht-heading {
         font-size: 4.4vw;
         position: relative;
         left: 0%;
-        margin-top: -5%;
+        margin-top: -3%;
         transform: translateY(-50%);
         width: 100%;
     }

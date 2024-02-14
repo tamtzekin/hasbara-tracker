@@ -175,13 +175,6 @@ export default function Tracker() {
                                     </div>
                                 </VideoPlayer>
                             ))}
-
-                            {/* If more than 1 source, add line breaks between sources */}
-                            {sources.length > 1 && <>
-                                <br />
-                                <br />
-                                <br />
-                            </>}
                         </>
                     );
                     

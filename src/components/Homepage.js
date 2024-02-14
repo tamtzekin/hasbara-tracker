@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from './Header';
+import Header from './Header';
 import MobileMenu from './MobileMenu';
 import Footer from './Footer';
 // import '../App.css';
@@ -8,7 +8,7 @@ import Footer from './Footer';
 const Homepage = () => {
     return (
     <>
-        <NavBar />
+        <Header />
         {/* On desktop: Display in columns */}
         <span className="hide-on-mobile">
         <div className="columns-container">

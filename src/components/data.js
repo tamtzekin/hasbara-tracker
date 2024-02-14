@@ -1880,7 +1880,7 @@ const data = [
     },
     sources: [
         {
-            sourceText: '@IsraelMFA on X',
+            sourceName: '@IsraelMFA on X',
             sourceLink: 'https://twitter.com/IsraelMFA/status/1723753602382970943',
             archiveLink: 'https://archive.ph/x6ogI',
         }
@@ -1900,7 +1900,7 @@ const data = [
     },
     sources: [
         {
-            sourceText: 'Avichay Adraee on X',
+            sourceName: 'Avichay Adraee on X',
             sourceLink: 'https://twitter.com/AvichayAdraee/status/1723756023062597671',
             archiveLink: 'https://archive.ph/u4Yw4',
         }
@@ -1920,7 +1920,7 @@ const data = [
     },
     sources: [
         {
-            sourceText: 'The Guardian',
+            sourceName: 'The Guardian',
             sourceLink: 'https://www.theguardian.com/world/2023/nov/13/in-the-circle-of-death-gaza-doctors-say-patients-are-under-siege-in-al-shifa',
             archiveLink: 'https://archive.ph/kOzB2',
         }
@@ -1940,19 +1940,19 @@ const data = [
     },
     sources: [
         {
-            sourceText: 'Sky News',
+            sourceName: 'Sky News',
             sourceLink: 'https://news.sky.com/story/israel-and-hamas-dispute-claims-of-gaza-hospital-fuel-offer-as-babies-among-12-dead-13006949',
             archiveLink: 'https://archive.ph/FivPS',
         },
 
         {
-            sourceText: 'Al Bawaba',
+            sourceName: 'Al Bawaba',
             sourceLink: 'https://www.albawaba.com/news/hamas-denies-claims-refusing-receive-fuel-al-shifa-hospital-gaza-1541324',
             archiveLink: 'https://archive.is/7DUiu',
         },
 
         {
-            sourceText: 'The Guardian',
+            sourceName: 'The Guardian',
             sourceLink: 'https://www.theguardian.com/world/2023/nov/13/in-the-circle-of-death-gaza-doctors-say-patients-are-under-siege-in-al-shifa',
             archiveLink: 'https://archive.ph/kOzB2',
         }
@@ -1973,7 +1973,7 @@ const data = [
     // MISSING
     sources: [
         {
-            sourceText: 'Israel Occupation Forces',
+            sourceName: 'Israel Occupation Forces',
             sourceLink: '',
             archiveLink: '',
         }
@@ -1993,13 +1993,13 @@ const data = [
     },
     sources: [
         {
-            sourceText: 'Israel Occupation Forces',
+            sourceName: 'Israel Occupation Forces',
             sourceLink: 'https://www.idf.il/en/mini-sites/hamas-israel-war-24/war-on-hamas-2023-resources/hamas-refuses-fuel-delivery-to-shifa-hospital/',
             archiveLink: 'https://archive.ph/xihlp',
             videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_IOF_Claim_Audio_Fuel_Delivery.mp4'
         },
         {
-            sourceText: 'YouTube',
+            sourceName: 'YouTube',
             sourceLink: 'https://www.youtube.com/watch?v=zs-2vw5lfgQ',
             archiveLink: 'https://archive.ph/UCvws',
         }
@@ -2019,7 +2019,7 @@ const data = [
     },
     sources: [
         {
-        sourceText: 'Al Jazeera',
+        sourceName: 'Al Jazeera',
         sourceLink: 'https://www.aljazeera.com/news/2023/11/23/al-shifa-hospital-director-arrested-by-israeli-army-in-gaza',
         archiveLink: 'https://archive.is/Npk8h',
         videoPreviewLink: ''
@@ -2040,7 +2040,7 @@ const data = [
     },
     sources: [
         {
-            sourceText: 'Jerusalem Post',
+            sourceName: 'Jerusalem Post',
             sourceLink: 'https://www.jpost.com/israel-news/article-776708',
             archiveLink: 'https://archive.is/qtBA3',
         }

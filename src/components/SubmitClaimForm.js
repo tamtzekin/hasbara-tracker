@@ -97,7 +97,7 @@ const SubmitClaimForm = () => {
                 ) : (
                     <>
                         <div className="home-text">
-                        Help us keep track of claims, and fabrications by submitting a claim and/or example(s) of Israeli state propaganda – no matter how big or small – that we can potentially investigate.
+                        Help us keep track of claims and fabrications by submitting a claim and/or example(s) of Israeli state propaganda – no matter how big or small – that we can potentially investigate.
                         </div><br>
 
                         <div className="home-text">

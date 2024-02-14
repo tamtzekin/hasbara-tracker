@@ -117,7 +117,11 @@ body {
 }
 
 .claims-list {
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+::selection {
+    background: rgba(176, 245, 85, 0.424)
 }
 
 .investigating {
@@ -319,21 +323,14 @@ h1.ht-heading {
 .nav-links a:hover {
     cursor: crosshair;
     text-decoration: dashed underline;
-}   
+}
 
+
+/* Menu */
 .mobile-menu {
     display: none;
   }
 
-
-
-
-
-
-.claims-list {
-    margin-top: 10px;
-}
-  
 .menu-links {
     display: flex;
     flex-direction: column;
@@ -346,9 +343,13 @@ h1.ht-heading {
     transition: 0.3s;
 }
 
-::selection {
-    background: rgba(176, 245, 85, 0.424)
-}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
 
 /* For all screens bigger than a mobile – handles how columns are shown on homepage */
 @media only screen and (min-width: 576px) {
@@ -357,9 +358,13 @@ h1.ht-heading {
     }
 }
 
+
+
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
 
 /* Mobile devices */
 @media only screen and (max-width: 576px) {
@@ -434,18 +439,36 @@ h1.ht-heading {
     }
 
     .bar {
-        width: 7px;
-        height: 3px;
+        width: 4px;
+        height: 4px;
         background-color: #333;
         margin: 3px 0;
         transition: 0.4s;
       }
 
-    .hamburger-icon {
+
+    /* Menu */
+    .mobile-menu {
+        /* display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          right: -15%;
+          position: absolute;
+          margin-top: 1%; */
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          position: absolute;
+          top: 30%;
+          right: 4%;
+          z-index: 3;
+      }
+
+    .menu-icon {
         cursor: crosshair;
         display: flex;
         flex-direction: column;
-        padding-top: 1%;
+        padding: 0.7em; /* Increase clickable area */
     }
 
     .menu-links {
@@ -461,26 +484,7 @@ h1.ht-heading {
         line-height: 30px;
         text-align: right;
     }
-    
-    .mobile-menu {
-      /* display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        right: -15%;
-        position: absolute;
-        margin-top: 1%; */
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        position: absolute;
-        top: 25%;
-        right: 4%;
-        z-index: 3;
-    }
 
-    .mobile-menu .hamburger-icon {
-        display: flex;
-    }
 
     /* Header */
     .header-container {
@@ -572,6 +576,8 @@ h1.ht-heading {
         right: 12%;
     }
 
+
+    /* Menu */
     .mobile-menu {
         /* display: flex;
           align-items: center;
@@ -583,29 +589,32 @@ h1.ht-heading {
           align-items: center;
           justify-content: flex-end;
           position: absolute;
-          top: 2.5%;
-          right: 3%;
+          top: 3%;
+          right: 4%;
           z-index: 3;
+      }
+
+      .menu-icon {
+        cursor: crosshair;
+        display: flex;
+        flex-direction: column;
+        padding: 0.7em; /* Increase clickable area */
+    }
+
+      .bar {
+        width: 5px;
+        height: 5px;
+        background-color: #333;
+        margin: 3px 0;
+        transition: 0.4s;
       }
 
       .nav-links {
         display: none;
       }
 
-      .bar {
-        width: 8px;
-        height: 4px;
-        background-color: #333;
-        margin: 3px 0;
-        transition: 0.4s;
-      }
 
-    .hamburger-icon {
-        cursor: crosshair;
-        display: flex;
-        flex-direction: column;
-        padding-top: 1%;
-    }
+
 
 
   }

@@ -17,7 +17,7 @@ const MobileMenu = () => {
     return (
         <>
             <div className="mobile-menu">
-                <div className="hamburger-icon" onClick={openModal}>
+                <div className="menu-icon" onClick={openModal}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>

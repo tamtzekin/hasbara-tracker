@@ -2047,6 +2047,144 @@ const data = [
     ]
 },
 
+// CLAIM: Makeup used in Gaza to fake injuries
+
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '2005',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'The context of the term ‘Pallywood’: Atrocity denial that suggests media showing Palestinian suffering is fabricated',
+           details: 'Pallywood is a term which combines the words ‘Palestine’ and ‘Hollywood’ to suggest that Palestinians produce fabricated or manipulated media content to gain sympathy for the cause and to influence public opinion of the Israeli occupation. It is used to dismiss the reality of Palestinians by claiming there is a deliberate effort to stage events, create misleading narratives, or exaggerate circumstances in order to portray the Israeli military occupation as the aggressors. It is a form of atrocity denial, used as a form of exonerating the Israeli state.<br><br>The term started being used following the killing of 12-year-old Palestinian boy Muhammad al-Durrah in Gaza by Israeli forces during the Second Intifada in 2000. The Israeli state and its pundits launched a denial campaign, questioning the authenticty of the photographic and video evidence by France24. The Israeli state has initially admitted that it had killed Muhammad al-Durrah, then retracted it.<br><br> American author Richard Landes, who specialises in medieval millenial thinking, credits himself with coining the term and popularising it through his online documentary titled ‘Pallywood: According to Palestinian Sources’ published in 2005.',
+   },
+   sources: [
+       {
+           sourceName: '',
+           sourceLink: '',
+           archiveLink: '',
+           videoPreviewLink: '',
+       },
+   ]
+},
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '29 Oct 2023',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'Child actor Rami Jardali shared behind-the-scenes of short film The Reality',
+       details: 'Rami Jardali, a child actor in the short film The Reality shot in Lebanon, shared a reel on Instagram including behind-the-scenes footage from the production of film. The Reality is a Lebanese short film directed by Mahmoud Ramzi. <br><br> The clip begins with a child who appears to be wounded being treated on a stretcher as protesters wave Palestinian flags. As the video goes on, however, a makeup artist can be seen applying makeup to the girl to depict blood and wounds, and the child smiles at the camera.',
+   },
+   sources: [
+       {
+           sourceName: 'Instagram',
+           sourceLink: 'https://www.instagram.com/p/Cy_Y4Qeqq9L',
+           videoPreviewLink: 'https://files.hasbaratracker.com/28Oct2023_TheReality_Film_BehindTheScenes.mp4',
+       },
+   ]
+},
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '8 Nov 2023',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+       summary: 'Israeli model Nataly Dadon shared the behind-the-scenes video suggesting Palestinians in Gaza were crisis actors, faking injuries',
+       details: 'Israeli model Nataly Dadon shared the video to 900k+ followers on her Instagram profile suggesting Palestinians were faking injuries and are crisis actors for propaganda purposes.<br><br>Her caption read:<br><br>‘And the Oscar goes to…’<br><br>#gazawood<br><br>Wait for it…’',
+   },
+   sources: [
+       {
+           sourceName: 'Instagram',
+           sourceLink: 'https://www.instagram.com/reel/CzZnwg0Nj0K/',
+           archiveLink: 'https://archive.ph/0RE8O',
+       },
+   ]
+},
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '8 Nov 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'The clip is from the set of short film The Reality',
+       details: 'People online quickly pointed out that the clip is from the behind-the-scenes of the filming of Lebanese short film ‘The Reality’ directed by Mahmoud Ramzi. The post shows the making of the film and the process behind the scenes, which explores the reality of Palestinians in Gaza.<br><br>The clip opens with a child who appears to be wounded being treated on a stretcher as protesters wave Palestinian flags. As the video goes on, a makeup artist can be seen applying makeup to the girl to depict blood and wounds, and the child smiles at the camera.',
+   },
+   sources: [
+       {
+           sourceName: 'Instagram',
+           sourceLink: 'https://www.instagram.com/p/Cy_Y4Qeqq9L/',
+           archiveLink: 'https://archive.is/R3UQv',
+           videoPreviewLink: 'https://files.hasbaratracker.com/28Oct2023_TheReality_Film_BehindTheScenes.mp4',
+       },
+   ]
+},
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '9 Nov 2023',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+       summary: 'Israeli spokesperson to Arab media Ofir Gendelman posted the video: ‘Pallywood gets busted again’',
+       details: 'Ofir Gendelman, the Israeli Prime Minister‘s spokesperson to Arab media, shared the behind-the-scenes footage of the Lebanese short film on X (formerly Twitter), claiming it showed Palestinians faking injuries and staging evacuations.<br><br>The post read: ‘The Palestinians are fooling the international media and public opinion. DON’T FALL FOR IT. See for yourselves how they fake injuries and evacuating "injured" civilians, all in front of thr cameras. Pallywood gets busted again.’<br><br>As of 10 November, 2023, the video on Gendelman‘s profile had 22.6 million views. It has since been deleted – date unknown.',
+   },
+   sources: [
+       {
+           sourceName: 'Ofir Gendelman on X',
+           sourceLink: 'https://twitter.com/ofirgendelman/status/1722561334858961025',
+           archiveLink: 'https://archive.is/7FIef',
+       },
+   ]
+},
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '9 Nov 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Israeli spokesperson Ofir Gendelman backtracks, claiming ‘Palestinian accounts’ shared the video ‘as if it was genuine’',
+       details: 'Ofir Gendelman re-quoted his initial post on X (formerly Twitter), writing: ‘Palestinian accounts have published this video as if it was genuine. That‘s why it was posted here.’',
+   },
+   sources: [
+       {
+           sourceName: 'Ofir Gendelman on X',
+           sourceLink: 'https://twitter.com/ofirgendelman/status/1722683651681329468',
+           archiveLink: 'https://archive.ph/luRmL',
+       },
+   ]
+},
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '9 Nov 2023',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+       summary: 'Israeli pundit Hen Mazzig posted the video claiming it was proof of Palestinians faking injuries',
+       details: 'Hen Mazzig, an Israeli pundit who is a fellow at the Tel Aviv Institute – a lobbyist organisation – shared the behind-the-scenes footage on X (formerly Twitter) claiming it was proof of Palestinians faking injuries and that it was common practice.<br><br>The post read: ‘I was asked about the photos and videos of injured Palestinian children. It’s important to remember innocent Palestinians are hurt in this conflict (yes, far less than the 10k Hamas claims), yet this is an example of a popular practice in Gaza:’<br><br>The post has since been deleted.',
+   },
+   sources: [
+       {
+           sourceName: 'Hen Mazzig on X',
+           sourceLink: 'https://twitter.com/HenMazzig/status/1722572056078791010',
+           archiveLink: 'https://archive.is/TYE1q',
+       },
+   ]
+},
+
 
 
     

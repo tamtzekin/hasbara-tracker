@@ -98,18 +98,18 @@ const SubmitClaimForm = () => {
                     <>
                         <div className="home-text">
                         Help us keep track of claims, and fabrications by submitting a claim and/or example(s) of Israeli state propaganda – no matter how big or small – that we can potentially investigate.
-                        </div><br />
+                        </div><br>
 
                         <div className="home-text">
                         We’re building a centralised database debunking claims particularly made and/or repeated by officials, from individuals, organisations, to media outlet, particularly post 7 October 2023 while the Israeli occupation carries out a genocide in Gaza.
-                        </div><br />
+                        </div><br>
 
                         <div className="home-text">
-                        If you've encountered any claims or fabrications that you believe warrant debunking, we encourage you to use the form below to submit them.</div><br />
+                        If you've encountered any claims or fabrications that you believe warrant debunking, we encourage you to use the form below to submit them.</div><br>
 
                         <div className="home-text">
                         Thanks for contributing to our efforts to document, archive, debunk and give context to hasbara – a.k.a ‘explanations’.
-                        </div><br />
+                        </div><br>
 
                         <form onSubmit={handleSubmit}>
                             <label>

@@ -416,6 +416,7 @@ ul {
         padding: 0.5% 1% 0.1% 1%;  
         width: 13.2%;
         position: absolute;
+        left: 30%;
         text-align: center;
     }
 
@@ -438,6 +439,7 @@ ul {
         width: 13.2%;
         position: absolute;
         text-align: center;
+        left: 30%;
     }
 
     .date {
@@ -447,7 +449,7 @@ ul {
         border-radius: 3px;
         position: absolute;
         text-align: center;
-        left: 68%;
+        left: 5%;
         padding-left: 0.5%;
         padding-right: 0.5%;
         padding-bottom: -0.3%;
@@ -487,6 +489,7 @@ ul {
         padding: 0.5% 1% 0.1% 1%;  
         width: 13.2%;
         position: absolute;
+        left: 30%;
         text-align: center;
     }
 

@@ -223,7 +223,7 @@ h2 .expand-text {
     display: flex;
     flex-direction: column;
     margin: 0 20% 0 20%;
-    left: -5%;
+    left: 0%;
     padding-bottom: 3%;
     min-width: 500px;
 }
@@ -507,7 +507,8 @@ h1.ht-heading {
         position: relative;
         margin: 0 20% 0 20%;
         padding-bottom: 3%;
-        min-width: 480px;
+        min-width: 450px;
+        left: 0%;
     }
 
     .columns-container {

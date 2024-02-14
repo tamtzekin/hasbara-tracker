@@ -386,6 +386,10 @@ h1.ht-heading {
         top: 11.6%;
     }
 
+    .claim-link {
+        margin-bottom: 5%;
+    }
+
     .content-container {
         margin: 20% 0 15% 0;
         min-width: 300px;

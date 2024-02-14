@@ -2054,10 +2054,10 @@ const data = [
 
 // {
 //     claimTitle: '',
-//     date: 'dd mm yy',
+//     date: '',
 //     claim: {
-//         claimText: 'Claim / Context / Debunk',
-//         claimTag: 'claim-tag / context-tag / debunk-tag',
+//         claimText: '',
+//         claimTag: '',
 //     },
 //     description: {
 //         summary: '',
@@ -2068,12 +2068,13 @@ const data = [
 //             sourceName: '',
 //             sourceLink: '',
 //             archiveLink: '',
-//             videoPreviewLink: ''
+//             videoPreviewLink: '',
 //         },
 //         {
 //             sourceName: '',
 //             sourceLink: '',
 //             archiveLink: '',
+//             videoPreviewLink: '',
 //         }
 //     ]
 // },

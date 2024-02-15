@@ -71,7 +71,7 @@ export default function Tracker() {
                 Header: 'What',
                 accessor: (row) => row.claim.claimText,
                 Cell: ({ row }) => (
-                    <span className={row.original.claim.claimClass}>
+                    <span className={row.original.claim.claimTag}>
                         {row.original.claim.claimText}
                     </span>
                 ),

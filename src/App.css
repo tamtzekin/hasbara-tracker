@@ -46,11 +46,10 @@ a:hover {
     text-decoration: dashed underline;
 }
 
-.active {
+a.active {
     /* background-color: #9dff20; */
-    /* color: black; */
-    font-style: oblique;
-    /* text-decoration: dashed underline; */
+    /* font-style: oblique; */
+    text-decoration: dashed underline !important;
   }
   
 .btn-green {

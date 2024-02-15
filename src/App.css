@@ -86,7 +86,7 @@ h1 a:hover {
 
 h2 {
     text-align: left;
-    font-family: 'HelveticaNeue_Medium';
+    font-family: 'Helvetica', Helvetica, sans-serif;
     position: relative;
     line-height: 1.3em;
 }
@@ -102,6 +102,12 @@ body {
 
 .claim-link {
     text-decoration: dashed underline;
+}
+
+.claim-coming-soon {
+    text-decoration: none;
+    color: rgb(94, 94, 94);
+    margin-bottom: 20px;
 }
 
 .claims-list {

@@ -99,7 +99,7 @@ const VolunteerForm = () => {
 
                         <form onSubmit={handleSubmit}>
                             <label>
-                                Full name <span className="required-field">*</span>
+                                <b>Full name</b><span className="required-field">*</span>
                                 <br />
                                 <input
                                     type="text"
@@ -113,7 +113,7 @@ const VolunteerForm = () => {
                             <br />
 
                             <label>
-                                Email <span className="required-field">*</span>
+                            <b>Email</b><span className="required-field">*</span>
                                 <br />
                                 <input
                                     type="email"
@@ -126,7 +126,7 @@ const VolunteerForm = () => {
                             </label>
                             <br />
                             <label>
-                                Tell us a little bit about your background and skills so we can match you with the right task. <span className="required-field">*</span>
+                            <b>Tell us a little bit about your background and skills so we can match you with the right task.</b><span className="required-field">*</span>
                                 <br />
                                 <textarea
                                     name="backgroundAndSkills"
@@ -139,7 +139,7 @@ const VolunteerForm = () => {
                             <br />
 
                             <label>
-                                How many hours can you commit?
+                                <b>How many hours can you commit?</b>
                                 <br />
                                 <select
                                     name="hoursCommitted"
@@ -173,7 +173,7 @@ const VolunteerForm = () => {
                             )}
 
                             <label>
-                                This isn’t necessary, but do you understand Arabic and/or Hebrew? Let us know what level.
+                                <b>This isn’t necessary, but do you understand Arabic and/or Hebrew? Let us know what level.</b>
                                 <input
                                     type="text"
                                     name="languageSkill"

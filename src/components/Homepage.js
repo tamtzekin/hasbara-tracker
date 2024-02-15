@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Header from './Header';
 import ClaimsList from './ClaimsList';
-import MobileMenu from './MobileMenu';
 import Footer from './Footer';
 // import '../App.css';
 
@@ -68,12 +66,8 @@ const Homepage = () => {
                 <br />
             </details>
 
-            <h2>Claims</h2>
-                <ClaimsList />
+            <ClaimsList />
                 <br />
-                <br />
-                <br />
-
         </div>
         </span>
 

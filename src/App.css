@@ -224,7 +224,7 @@ h2 .expand-text {
 }
 
 .columns-container {
-    position: fixed;
+    position: relative;
     left: 5.1%;
     top: 15%;
     display: flex;

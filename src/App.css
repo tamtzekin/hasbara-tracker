@@ -105,7 +105,7 @@ body {
 
 .claim-coming-soon {
     text-decoration: none;
-    color: rgb(94, 94, 94);
+    /* color: rgb(94, 94, 94); */
     margin-bottom: 20px;
 }
 

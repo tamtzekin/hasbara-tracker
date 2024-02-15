@@ -5,11 +5,11 @@ const ClaimsList = () => {
     return (
     <>
         <h2>Claims</h2>
-        <div className="claim-link"><Link to="/forty-beheaded-babies">Forty beheaded babies</Link></div><br />
+        <div className="claim-coming-soon">Coming soon: Forty beheaded babies</div>
 
-        <div className="claim-link"><Link to="/al-ahli-attacked">Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces</Link></div><br />
+        <div className="claim-coming-soon">Coming soon: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces</div>
 
-        <div className="claim-link"><Link to="/al-shifa-fuel">Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas</Link></div><br />
+        <div className="claim-coming-soon">Coming soon: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas</div>
         
         <div className="claim-coming-soon">Coming soon: Makeup used in Gaza to fake injuries</div>
 

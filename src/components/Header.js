@@ -37,6 +37,11 @@ const Header = () =>{
             <li>
                 <NavLink to="/about">About</NavLink>
             </li>
+
+            <li>
+                <Link to="http://instagram.com/hasbaratracker" target="_blank">Instagram</Link>
+            </li>
+
         </div>
     </>
 

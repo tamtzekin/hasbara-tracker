@@ -308,6 +308,7 @@ export default function Tracker() {
             {isMobileView && (
                 <>
                     <div class="search-bar-container">
+                        <div class="tools-background"></div>
                         <ClaimFilter claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} />
                         <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
                     </div>

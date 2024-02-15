@@ -200,7 +200,7 @@ select.claim-dropdown-box {
 
         
     border: solid 0.5px black;
-    background-color: #ccc;
+    background-color: #f0f0f0;
     /* cursor: ew-resize; */
     
     position: absolute;
@@ -266,7 +266,7 @@ select.claim-dropdown-box {
     font-family: 'Helvetica', Helvetica, sans-serif;
     letter-spacing: 0.8px;
     line-height: 25px;
-    background: #f0f0f0;
+    background: #ffff;
     border: 0.7px solid black;
     border-radius: 3px;
     padding: 9px 0 10px 40px;
@@ -526,13 +526,13 @@ ul {
     }
 
     .search-bar {
-        /* margin-left: 3%; */
+        margin-left: -40%;
         /* margin-top: 3%; */
     }
 
     .search-bar input {
         font-size: 0.9em;
-        padding: 10px 5px 10px 35px;
+        padding: 6px 5px 6px 35px;
         width: 9.8rem;
         height: 1.4rem;
         text-overflow: ellipsis;
@@ -541,13 +541,19 @@ ul {
     .search-bar-container {
         position: fixed;
         margin-top: -14.5%;
-        margin-left: 39.5%;
+        margin-left: 39.9%;
         margin-bottom: 10%;
-        background: transparent;
+        /* background: transparent; */
         z-index: 1;
-        background-color: #dadada;
     }
 
+    .tools-background {
+        background: #dadada;
+        padding: 3rem 20rem 3rem 20rem;
+        left: 0;
+        position: fixed;
+        border-bottom: solid 1px black;
+    }
 
     .claim-filter {
         /* width: 40%; */
@@ -557,11 +563,18 @@ ul {
 
     select.claim-dropdown-box {   
         position: fixed;
-        padding: 2.85%;
+        padding: 0 0.5rem 0 0.5rem;
         top: 6.4%;
         left: 15.5%;
         width: 40%;
         padding-right: 6%;
+        height: 4vh;
+
+        background-position:
+        calc(100% - 15px) calc(1em + 1px),
+        calc(100% - 10px) calc(1em + 1px),
+        calc(100% - 2.5em) 0.5em;
+
     }
 
 

@@ -214,9 +214,10 @@ h2 .expand-text {
 
 .logo {
     width: 15rem;
-    top: -10;
-    position: relative;
-    left: 20;
+    position: absolute;
+    flex: 1;
+    left: 5%;
+    top: 0;
 }
 
 .content-container {

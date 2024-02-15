@@ -6,7 +6,7 @@ const data = [
         date: '1948',
         claim: {
             claimText: 'Context',
-            claimClass: 'context-tag',
+            claimTag: 'context-tag',
         },
         description: {
             summary: 'Exclusive Jewish kibbutzes exist on ethnically cleansed Palestinian towns and villages',
@@ -35,7 +35,7 @@ const data = [
         date: '10 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
     },
 
         description: {
@@ -64,7 +64,7 @@ const data = [
         date: '10 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'CNN reporter Nic Robertson claims babies’ heads cut off',
@@ -87,7 +87,7 @@ const data = [
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'Israeli Foreign Affairs Ministry runs ads about 40 murdered babies',
@@ -110,7 +110,7 @@ const data = [
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
     },
         description: {
             summary: 'Israeli first responder group Zaka representative claims he saw beheaded babies',
@@ -132,7 +132,7 @@ const data = [
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
     },
         description: {
             summary: 'US President Biden claims he saw ‘pictures’ of babies being beheaded',
@@ -155,7 +155,7 @@ const data = [
         date: '11 Oct 2023',
         claim: {
             claimText: 'Debunk',
-            claimClass: 'debunk-tag',
+            claimTag: 'debunk-tag',
         },
         description: {
             summary: 'White House official clarifies Biden did not see pictures of decapitated babies',
@@ -176,7 +176,7 @@ const data = [
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'Sara Sidner, CNN reporter, repeated the Israeli state claim that babies were beheaded',
@@ -198,7 +198,7 @@ const data = [
         date: '11 Oct 2023',
         claim: {
             claimText: 'Debunk',
-            claimClass: 'debunk-tag',
+            claimTag: 'debunk-tag',
         },
         description: {
             summary: 'IOF won’t back up decapitated babies claim because it is ‘disrespectful for the dead’',
@@ -219,7 +219,7 @@ const data = [
         date: '11 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'Netanyahu spokesperson ‘confirms’ decapitated babies',
@@ -240,7 +240,7 @@ const data = [
         date: '11 Oct 2023',
         claim: {
             claimText: 'Context',
-            claimClass: 'context-tag',
+            claimTag: 'context-tag',
         },
         description: {
             summary: 'Israeli army reservist David Ben Zion is a settler council leader who has incited riots against Palestinians, sits on board of Jewish National Fund',
@@ -265,7 +265,7 @@ const data = [
         date: '12 Oct 2023',
         claim: {
             claimText: 'Debunk',
-            claimClass: 'debunk-tag',
+            claimTag: 'debunk-tag',
         },
         description: {
             summary: 'Sara Sidner of CNN retracts and apologises for sharing the claim',
@@ -285,7 +285,7 @@ const data = [
         date: '12 Oct 2023',
         claim: {
             claimText: 'Debunk',
-            claimClass: 'debunk-tag',
+            claimTag: 'debunk-tag',
         },
         description: {
             summary: 'CNN retracts reporting that Palestinian resistance fighters decapitated babies',
@@ -305,7 +305,7 @@ const data = [
         date: '12 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'IOF spokesperson says ‘relatively confident’ that babies were beheaded',
@@ -327,7 +327,7 @@ const data = [
         date: '12 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'The Jerusalem Post claims beheaded babies claims are ‘correct’',
@@ -348,7 +348,7 @@ const data = [
         date: '12 Oct 2023',
         claim: {
             claimText: 'Debunk',
-            claimClass: 'debunk-tag',
+            claimTag: 'debunk-tag',
         },
         description: {
             summary: 'The IOF refuses to confirm the claim of murdered babies',
@@ -369,7 +369,7 @@ const data = [
         date: '13 Oct 2023',
         claim: { 
             claimText: 'Debunk',
-            claimClass: 'debunk-tag',
+            claimTag: 'debunk-tag',
         },
         description: {
             summary: 'Israeli military: ‘We cannot confirm but you can assume it happened.’',
@@ -390,7 +390,7 @@ const data = [
         date: '17 Oct 2023',
         claim: { 
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'Zaka first responder Yossi Landau in an interview repeats claims of beheaded babies',
@@ -412,7 +412,7 @@ const data = [
         date: '18 Oct 2023',
         claim: { 
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'US President Joe Biden repeats claim in a visit to Tel Aviv in the Israeli state (historic occupied Palestine)',
@@ -432,7 +432,7 @@ const data = [
         date: '26 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'The official Israel social media account claims ‘one beheaded baby’ and ‘eight burned babies’ at Be’eri kibbutz',
@@ -454,7 +454,7 @@ const data = [
         date: '28 Oct 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'Founder of Israeli first-responded group claims ‘little kids beheaded’',
@@ -476,7 +476,7 @@ const data = [
         date: '15 Nov 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'US President Joe Biden repeats beheaded baby claims during APEC press conference',
@@ -498,7 +498,7 @@ const data = [
         date: '4 Dec 2023',
         claim: {
             claimText: 'Debunk',
-            claimClass: 'debunk-tag',
+            claimTag: 'debunk-tag',
         },
         description: {
             summary: 'Revealed one baby was killed in crossfire between Israel Occupation Forces and Palestinian fighters',
@@ -519,7 +519,7 @@ const data = [
         date: '12 Dec 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'US President Joe Biden repeats that he saw beheaded infants, claims mother and daughter tied up and burnt',
@@ -539,7 +539,7 @@ const data = [
         date: '26 Dec 2023',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'Newsweek publishes an opinion article headlined ‘I Saw the Children Hamas Beheaded With My Own Eyes. Shame on Queen Rania’',
@@ -559,7 +559,7 @@ const data = [
         date: '20 Jan 2024',
         claim: {
             claimText: 'Claim',
-            claimClass: 'claim-tag',
+            claimTag: 'claim-tag',
         },
         description: {
             summary: 'Israeli soldier claims he saw eight babies and elderly woman named Jania killed in Be’eri',
@@ -580,7 +580,7 @@ const data = [
         date: '21 Jan 2024',
         claim: {
             claimText: 'Debunk',
-            claimClass: 'debunk-tag',
+            claimTag: 'debunk-tag',
         },
         description: {
             summary: 'Israeli soldier made up eight babies killed in Be’eri and no elderly woman named Jania exists',
@@ -600,7 +600,7 @@ const data = [
     date: '22 Jan 2024',
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
     description: {
         summary: 'Israeli media commentator questions why false claims made about murdered babies',
@@ -625,7 +625,7 @@ const data = [
 
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag',
+        claimTag: 'context-tag',
     },
 
     description: {
@@ -660,7 +660,7 @@ const data = [
 
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag',
+        claimTag: 'context-tag',
     },
 
     description: {
@@ -695,7 +695,7 @@ const data = [
 
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag',
+        claimTag: 'context-tag',
     },
 
     description: {
@@ -730,7 +730,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -759,7 +759,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -782,7 +782,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -806,7 +806,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -835,7 +835,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -859,7 +859,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -882,7 +882,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -906,7 +906,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -929,7 +929,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -952,7 +952,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -975,7 +975,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -999,7 +999,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1022,7 +1022,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1046,7 +1046,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1069,7 +1069,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1094,7 +1094,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1122,7 +1122,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1150,7 +1150,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1173,7 +1173,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1197,7 +1197,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1220,7 +1220,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1249,7 +1249,7 @@ const data = [
 
     claim: {
         claimText: 'debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1284,7 +1284,7 @@ const data = [
 
     claim: {
         claimText: 'debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1308,7 +1308,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1332,7 +1332,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1356,7 +1356,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1379,7 +1379,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1402,7 +1402,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1426,7 +1426,7 @@ const data = [
 
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag',
+        claimTag: 'claim-tag',
     },
 
     description: {
@@ -1447,7 +1447,7 @@ const data = [
     date: '15 Dec 2023',
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1468,7 +1468,7 @@ const data = [
     date: '17 Dec 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag',
+        claimTag: 'context-tag',
     },
     description: {
         summary: 'Israeli forces targeted hospital officials at Kamal Adwan Hospital during press conference',
@@ -1491,7 +1491,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1514,7 +1514,7 @@ const data = [
 
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag',
+        claimTag: 'context-tag',
     },
 
     description: {
@@ -1537,7 +1537,7 @@ const data = [
 
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag',
+        claimTag: 'debunk-tag',
     },
 
     description: {
@@ -1558,7 +1558,7 @@ const data = [
     date: '20 Dec 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag',
+        claimTag: 'context-tag',
     },
     description: {
         summary: 'Israeli military continued targeting hospitals, multiple missiles hit the Kuwaiti Hospital',
@@ -1582,7 +1582,7 @@ const data = [
     date: '9 Oct 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag',
+        claimTag: 'context-tag',
     },
     description: {
         summary: 'Israeli Defence Minister Yoav Gallant calls for complete siege: No power, food or gas allowed into Gaza',
@@ -1603,7 +1603,7 @@ const data = [
     date: '9 Oct 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag',
+        claimTag: 'context-tag',
     },
     description: {
         summary: 'Israeli Energy Minister Israel Katz: ‘No fuel truck will enter’',
@@ -1624,7 +1624,7 @@ const data = [
     date: '3 Nov 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag'
+        claimTag: 'context-tag'
     },
 
     description: {
@@ -1663,7 +1663,7 @@ const data = [
     date: '6 Nov 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag'
+        claimTag: 'context-tag'
     },
 
     description: {
@@ -1696,7 +1696,7 @@ const data = [
     date: '9 Nov 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag'
+        claimTag: 'context-tag'
     },
     description: {
         summary: 'Israeli forces bomb Al-Shifa Hospital multiple times',
@@ -1717,7 +1717,7 @@ const data = [
     date: '10 Nov 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag'
+        claimTag: 'context-tag'
     },
     description: {
         summary: 'Red Cross attempt to deliver medical supplies to Gaza hospitals under horrendous circumstances',
@@ -1738,7 +1738,7 @@ const data = [
     date: '11 Nov 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag'
+        claimTag: 'context-tag'
     },
     description: {
         summary: 'Israeli army destroys critical infrastructure, surgeries have stopped, neonatal incubators lose power, amputations without anaesthesia at Al-Shifa Hospital',
@@ -1758,7 +1758,7 @@ const data = [
     date: '11 Nov 2023',
     claim: {
         claimText: 'Context',
-        claimClass: 'context-tag'
+        claimTag: 'context-tag'
     },
     description: {
         summary: 'Israeli snipers are firing at anyone near Al-Shifa Hospital',
@@ -1778,7 +1778,7 @@ const data = [
     date: '12 Nov 2023',
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag'
+        claimTag: 'claim-tag'
     },
     description: {
         summary: 'Netanyahu claims 300 litres of fuel offered by the Israeli state was refused by Al-Shifa Hospital',
@@ -1798,7 +1798,7 @@ const data = [
     date: '12 Nov 2023',
     claim: {
         claimText: 'Debunk',
-        claimClass: 'debunk-tag'
+        claimTag: 'debunk-tag'
     },
     description: {
         summary: 'Al-Shifa Hospital accepted fuel and asked for it to be delivered through the Red Cross, which the Israeli state refused',
@@ -1819,7 +1819,7 @@ const data = [
     date: '12 Nov 2023',
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag'
+        claimTag: 'claim-tag'
     },
     description: {
         summary: 'Israeli military press release points to two audio clips and footage as evidence that the Health Ministry rejected fuel',
@@ -1839,7 +1839,7 @@ const data = [
     date: '12 Nov 2023',
     claim: {
         claimText: 'Claim',
-        claimClass: 'claim-tag'
+        claimTag: 'claim-tag'
     },
     description: {
         summary: 'Israeli military posts short audio clip on X claiming Gaza health official says Health Ministry rejected fuel',

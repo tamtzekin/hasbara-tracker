@@ -210,7 +210,13 @@ h2 .expand-text {
 }
 
 .home-text {
-    padding-bottom: 15px;
+}
+
+.logo {
+    width: 15rem;
+    top: -10;
+    position: relative;
+    left: 20;
 }
 
 .content-container {

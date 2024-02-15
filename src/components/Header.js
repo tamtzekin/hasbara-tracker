@@ -13,7 +13,6 @@ const Header = () =>{
             <div className="flex-container">
                 <MobileMenu />
                 <Logo />
-                <span id="dots">. . . . . . . . . . . . . .</span>
             </div>
         </span>
         

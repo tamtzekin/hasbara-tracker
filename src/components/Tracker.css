@@ -475,14 +475,14 @@ ul {
     } */
 
     .data-row {
-        margin-top: 4%;
-        margin-bottom: 10%;
+        margin-top: 2.5%;
+        /* margin-bottom: 10%; */
         border-bottom: 0.07em dashed black;
     }
 
     /* Margin spacing above dotted divider/under final source */
     .sources {
-        margin-top: 5%;
+        margin-top: 2%;
     }
 
     .debunk-tag {
@@ -498,7 +498,7 @@ ul {
     }
 
     details {
-        margin-top: 12%;
+        margin-top: 10%;
         line-height: 22px;
     }
     

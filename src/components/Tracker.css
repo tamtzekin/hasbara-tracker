@@ -99,14 +99,16 @@ button {
     border: solid 0.5px;
     padding: 5% 21% 5% 21%;
     border-radius: 3px;
-    background: #94ff94;
+    /* background: #94ff94; */
+    background: #bffb9b;
 }
 
 .context-tag {
     border: solid 0.5px;
     padding: 5% 12% 5% 12%;
     border-radius: 3px;
-    background: #80ffcc;
+    /* background: #80ffcc; */
+    background: #b7fbf3;
 }
 
 .debunk-tag {
@@ -114,7 +116,8 @@ button {
     border: solid 0.5px;
     padding: 6% 13% 6% 13%;
     border-radius: 3px;
-    background: #33ff7d;
+    /* background: #33ff7d; */
+    background: #78ff96;
 }
 
 h1.claim-heading {

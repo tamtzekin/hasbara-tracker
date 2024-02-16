@@ -101,12 +101,13 @@ body {
 
 .claim-link {
     text-decoration: dashed underline;
+    margin-bottom: 1.2rem;
 }
 
 .claim-coming-soon {
     text-decoration: none;
-    /* color: rgb(94, 94, 94); */
-    margin-bottom: 20px;
+    color: rgb(94, 94, 94);
+    margin-bottom: 1.2rem;
 }
 
 .claims-list {

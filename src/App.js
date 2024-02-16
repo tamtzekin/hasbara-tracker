@@ -36,12 +36,12 @@ const App = () => {
                 />
 
                 <Route
-                    path="al-ahli-attacked"
+                    path="/al-ahli-attacked"
                     element={<Navigate to="/tracker?filter=Al-Ahli%20Hospital%20was%20attacked%20by%20Palestinian%20rockets,%20not%20Israeli%20forces" replace />}
                 />
                 
                 <Route 
-                    path="al-shifa-fuel"
+                    path="/al-shifa-fuel"
                     element={<Navigate to="/tracker?filter=Israeli%20state%20offered%20fuel%20to%20Al-Shifa%20Hospital" replace />}
                 />
             </Routes>

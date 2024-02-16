@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from "react-router-dom";
+import Logo from './Logo';
 import MobileMenu from './MobileMenu';
 import '../App.css';
 
@@ -11,7 +12,7 @@ const Header = () =>{
         <span class="header-container">
             <div className="flex-container">
                 <MobileMenu />
-                <h1 class='ht-heading'><Link to="/">Hasbara Tracker</Link></h1>
+                <Logo />
                 <span id="dots">. . . . . . . . . . . . . .</span>
             </div>
         </span>
@@ -36,6 +37,11 @@ const Header = () =>{
             <li>
                 <NavLink to="/about">About</NavLink>
             </li>
+
+            <li>
+                <Link to="http://instagram.com/hasbaratracker" target="_blank">Instagram</Link>
+            </li>
+
         </div>
     </>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import ClaimsList from './ClaimsList';
 import MobileMenu from './MobileMenu';
 import Footer from './Footer';
 // import '../App.css';
@@ -31,6 +32,7 @@ const Homepage = () => {
                 </span>
 
         <span class="column">
+
             <h2>Claims</h2>
                 <em>Coming soon:</em> Forty beheaded babies
                 <br /><br />
@@ -40,6 +42,9 @@ const Homepage = () => {
 
                 <em>Coming soon:</em> Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas
                 <br /><br />
+
+
+            <ClaimsList />
 
             </span>
         </div>
@@ -76,18 +81,8 @@ const Homepage = () => {
                 <br />
             </details>
 
-            <h2>Claims</h2>
-
-            <p>
-            <em>Coming soon:</em> Forty beheaded babies
-                </p>
-
-                <p>
-                <em>Coming soon:</em> Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces
-                </p>
-                <p>
-                <em>Coming soon:</em> Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas
-                </p>
+          
+                <ClaimsList />
 
                 <br />
                 <br />
@@ -96,7 +91,7 @@ const Homepage = () => {
         </div>
         </span>
 
-        <Footer />
+        {/* <Footer /> */}
     </>
     );
 };

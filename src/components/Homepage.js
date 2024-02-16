@@ -30,18 +30,6 @@ const Homepage = () => {
                 </span>
 
         <span class="column">
-
-            <h2>Claims</h2>
-                <em>Coming soon:</em> Forty beheaded babies
-                <br /><br />
-                
-                <em>Coming soon:</em> Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces
-                <br /><br />
-
-                <em>Coming soon:</em> Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas
-                <br /><br />
-
-
             <ClaimsList />
 
             </span>

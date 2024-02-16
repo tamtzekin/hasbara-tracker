@@ -46,11 +46,10 @@ a:hover {
     text-decoration: dashed underline;
 }
 
-.active {
+a.active {
     /* background-color: #9dff20; */
-    /* color: black; */
-    font-style: oblique;
-    /* text-decoration: dashed underline; */
+    /* font-style: oblique; */
+    text-decoration: dashed underline !important;
   }
   
 .btn-green {
@@ -106,7 +105,7 @@ body {
 
 .claim-coming-soon {
     text-decoration: none;
-    color: rgb(94, 94, 94);
+    /* color: rgb(94, 94, 94); */
     margin-bottom: 20px;
 }
 
@@ -210,7 +209,16 @@ h2 .expand-text {
 }
 
 .home-text {
-    padding-bottom: 15px;
+    padding-bottom: 1rem;
+}
+
+.logo-container {
+    width: 17rem;
+    position: absolute;
+    /* flex: 1; */
+    /* left: 4.6rem; */
+    top: 1rem;
+    
 }
 
 .content-container {
@@ -224,11 +232,12 @@ h2 .expand-text {
 }
 
 .columns-container {
-    position: relative;
     left: 5.1%;
     top: 15%;
+
     display: flex;
     justify-content: space-between;
+
     gap: 100px;
     width: 85%;
 }
@@ -310,7 +319,7 @@ h1.ht-heading {
 .nav-links a {
     text-decoration: none;
     margin-left: 10px;
-    padding: 8px;
+    padding: 2%;
     font-size: 1em;
 }
 
@@ -336,7 +345,6 @@ h1.ht-heading {
     padding: 10px;
     transition: 0.3s;
 }
-
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -375,7 +383,7 @@ h1.ht-heading {
     }
 
     .content-container {
-        margin: 20% 0 15% 0;
+        margin: 15% 0 15% 0;
         min-width: 300px;
         left: 0;
     }
@@ -444,6 +452,12 @@ h1.ht-heading {
         margin: 3px 0;
         transition: 0.4s;
       }
+
+    .logo-container {
+        width: 12rem;
+        top: 0.5rem;
+        left: 1.3rem;
+    }
     
     .menu-icon {
         cursor: crosshair;
@@ -535,6 +549,14 @@ h1.ht-heading {
         right: 5%;
     }
 
+    .logo-container {
+        /* left: 2.5rem; */
+        top: 1rem;
+        width: 15rem;
+        
+    }
+
+    
     h1.ht-heading {
         top: 0;
         left: 5%;
@@ -550,6 +572,7 @@ h1.ht-heading {
         width: 100%;
     }
 
+    
     .arrow-menu {
         font-size: 2.5em;
         margin-bottom: 2.5%;
@@ -579,7 +602,7 @@ h1.ht-heading {
           align-items: center;
           justify-content: flex-end;
           position: absolute;
-          top: 3%;
+          top: 2%;
           right: 4%;
           z-index: 3;
       }

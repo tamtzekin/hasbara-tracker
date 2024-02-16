@@ -13,15 +13,14 @@ const Header = () =>{
             <div className="flex-container">
                 <MobileMenu />
                 <Logo />
-                <span id="dots">. . . . . . . . . . . . . .</span>
             </div>
         </span>
         
         <div class="nav-links">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
-                {/* <li>
+                <li>
                     <NavLink to="/">Claims</NavLink>
-                </li> */}
+                </li>
             {/* )} */}
 
             {/* {location.pathname !== '/submit-claim' && ( */}

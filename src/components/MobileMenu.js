@@ -52,9 +52,9 @@ const MobileMenu = () => {
                         <Link onClick={closeModal}>←</Link>
                     </div>
 
-                    {/* <Link to="/" onClick={closeModal}>
+                    <Link to="/" onClick={closeModal}>
                         Claims
-                    </Link>  */}
+                    </Link> 
 
                     <Link to="/submit-claim" onClick={closeModal}>
                         Submit a claim
@@ -68,7 +68,7 @@ const MobileMenu = () => {
                         About
                     </Link>
 
-                    <span class="break"></span>
+                    {/* <span class="break"></span> */}
 
                     {/* <Link to="/newsletter" onClick={closeModal}>
                         Newsletter

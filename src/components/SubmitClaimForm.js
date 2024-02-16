@@ -98,22 +98,22 @@ const SubmitClaimForm = () => {
                     <>
                         <div className="home-text">
                         Help us keep track of claims and fabrications by submitting a claim and/or example(s) of Israeli state propaganda – no matter how big or small – that we can potentially investigate.
-                        </div><br />
+                        </div>
 
                         <div className="home-text">
                         We’re building a centralised database debunking claims particularly made and/or repeated by officials, from individuals, organisations, to media outlet, particularly post 7 October 2023 while the Israeli occupation carries out a genocide in Gaza.
-                        </div><br />
+                        </div>
 
                         <div className="home-text">
-                        If you've encountered any claims or fabrications that you believe warrant debunking, we encourage you to use the form below to submit them.</div><br />
+                        If you've encountered any claims or fabrications that you believe warrant debunking, we encourage you to use the form below to submit them.</div>
 
                         <div className="home-text">
                         Thanks for contributing to our efforts to document, archive, debunk and give context to hasbara – a.k.a ‘explanations’.
-                        </div><br />
+                        </div>
 
                         <form onSubmit={handleSubmit}>
                             <label>
-                                Full name <span className="required-field">*</span>
+                                <b>Full name</b><span className="required-field">*</span>
                                 <br />
                                 <input
                                     type="text"
@@ -127,7 +127,7 @@ const SubmitClaimForm = () => {
                             <br />
 
                             <label>
-                                Email address<span className="required-field">*</span>
+                                <b>Email address</b><span className="required-field">*</span>
                                 <br />
                                 <input
                                     type="email"
@@ -141,7 +141,7 @@ const SubmitClaimForm = () => {
                             <br />
                             
                             <label>
-                                What is the claim?<span className="required-field">*</span><br />
+                                <b>What is the claim?</b><span className="required-field">*</span><br />
                                 <em>Describe it briefly.</em>
                                 <br />
                                 <textarea
@@ -155,7 +155,7 @@ const SubmitClaimForm = () => {
                             <br />
 
                             <label>
-                                Where did you see it?<br />
+                            <b>Where did you see it?</b><br />
                                 <em>Provide information on where you encountered this claim if you are able to.</em>
                                 <br />
                                 <textarea
@@ -169,7 +169,7 @@ const SubmitClaimForm = () => {
 
 
                             <label>
-                                Additional comments<br />
+                               <b>Additional comments</b><br />
                                 <em>Feel free to include any additional context or comments that might be helpful.</em>
                                 <input
                                     type="text"

@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Header from './Header';
 import ClaimsList from './ClaimsList';
-import MobileMenu from './MobileMenu';
 import Footer from './Footer';
 // import '../App.css';
 
@@ -80,14 +78,8 @@ const Homepage = () => {
                 </article>
                 <br />
             </details>
-
-          
                 <ClaimsList />
-
                 <br />
-                <br />
-                <br />
-
         </div>
         </span>
 

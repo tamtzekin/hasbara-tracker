@@ -197,24 +197,15 @@ select.claim-dropdown-box {
             color: rgba(0,0,0,0);
             text-shadow: 0 0 0 #ffffff;
         }
-
-        
+    
     border: solid 0.5px black;
     background-color: #f0f0f0;
     /* cursor: ew-resize; */
     
-    position: absolute;
-    top: 11.4%;
-    
-    padding: 1%;
-    padding-right: 2.5%;
+    padding: 0.7rem 0.5rem 0.7rem 1rem;
     border-radius: 3px;
 
-    width: 20rem;
-    height: 2.7rem;
-    
-    margin: 0;
-    margin-left: -10.5%;
+    /* height: 2.7rem; */
 
     text-overflow: ellipsis;
     }
@@ -238,10 +229,7 @@ select.claim-dropdown-box {
 
 /* Claim dropdown filter + Search bar */
 .claim-filter {
-    /* position: relative; */
-    /* margin-top: -5%; */
-    margin-left: 28.7%;
-    margin-right: auto;
+    flex: 1;
 }
 
 .no-results-text {
@@ -250,32 +238,35 @@ select.claim-dropdown-box {
 }
 
 .search-bar-container {
-    margin-top: 0;
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .search-bar {
-    position: absolute;
-    top: 9.7%;
-    left: 41.3%;
+    flex: 1;
+    min-width: 15rem;
 }
 
 .search-bar input {
-    height: 1.5rem;
-    width: 32rem;
+    /* height: 1.5rem; */
     font-size: 0.85em;
     font-family: 'Helvetica', Helvetica, sans-serif;
-    letter-spacing: 0.8px;
+    /* letter-spacing: 0.8px; */
     line-height: 25px;
     background: #ffff;
     border: 0.7px solid black;
     border-radius: 3px;
-    padding: 9px 0 10px 40px;
+    padding: 0.5rem 0.5rem 0.4rem 2.4rem;
 
     /* icon */
     background-image: url('/public/img/magnifying-glass.png');
-    background-size: 1.5em;
+    background-size: 1.3em;
     background-repeat: no-repeat;
-    background-position: 10px center;
+    background-position: 0.7rem center;
+
+    text-overflow: ellipsis;
 }
 
 /* Sources */
@@ -297,10 +288,6 @@ td {
     padding: 25px;
     text-align: left;
     vertical-align: top;
-}
-
-tr {
-    /* border: 1px solid grey; */
 }
 
 thead {
@@ -358,19 +345,20 @@ ul {
 /* Tablets and small desktops */
 @media only screen and (min-width: 577px) and (max-width: 767px) {
     .claim-filter {
-        margin-left: 15%;
+        /* margin-left: 15%; */
     }
 
     select.claim-dropdown-box {
-        width: 15rem;
+        /* width: 15rem; */
     }
 
     .search-bar {
-        top: 10.1%;
-        left: 39.5%;
+        /* top: 10.1%; */
+        /* left: 39.5%; */
+        flex: 1;
     }
     .search-bar input {
-        width: 23rem;
+        /* width: 23rem; */
     }
 }
 
@@ -535,16 +523,16 @@ ul {
         padding: 6px 5px 6px 35px;
         width: 9.8rem;
         height: 1.4rem;
-        text-overflow: ellipsis;
     }
 
     .search-bar-container {
-        position: fixed;
+        display: flex;
+        /* position: fixed;
         margin-top: -14.5%;
         margin-left: 39.9%;
         margin-bottom: 10%;
         /* background: transparent; */
-        z-index: 1;
+        /* z-index: 1; */
     }
 
     .tools-background {

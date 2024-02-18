@@ -93,10 +93,15 @@ h2 {
 body {
     background-color: #DADADA;
     font-family: 'Helvetica', Helvetica, sans-serif;
-    font-size: 1em;
-    line-height: 23px;
+
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+
     margin: 15% 26% 5% 29%;
     text-align: left;
+
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .claim-link {
@@ -413,7 +418,7 @@ h1.ht-heading {
     }
 
     h2 {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     .hide-on-mobile {

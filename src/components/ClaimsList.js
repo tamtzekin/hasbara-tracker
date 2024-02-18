@@ -11,7 +11,7 @@ const ClaimsList = () => {
 
         <div className="claim-link"><Link to="/al-shifa-fuel">Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas</Link></div><br />
         
-        <div className="claim-link"><Link to="/makeup-injuries">Makeup used in Gaza to fake injuries</div>
+        <div className="claim-link"><Link to="/makeup-injuries">Makeup used in Gaza to fake injuries</Link></div>
 
         <div className="claim-coming-soon">Coming soon: Israeli state denies striking Al-Shifa hospital</div>
 

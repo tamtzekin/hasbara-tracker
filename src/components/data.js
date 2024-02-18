@@ -2184,6 +2184,43 @@ const data = [
        },
    ]
 },
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '9 Nov 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Fact-checking website Snopes spoke to The Reality‘s director who said the disinformation is used to cover up Israeli crimes',
+       details: 'Fact-checking website Snopes.com reached out to Mahmoud Ramzi via Instagram where he explained that he is a Palestinian director born in Lebanon and confirmed he had directed the viral video.‘I directed a short film that tells about the events related to the Palestine issue around the world and the death bed that we see daily in Gaza.’',
+   },
+   sources: [
+       {
+           sourceName: 'Snopes.com',
+           sourceLink: 'https://www.snopes.com/fact-check/film-crew-footage-gaza/',
+           archiveLink: 'https://archive.ph/mtWjz',
+       },
+   ]
+},
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '10 Nov 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'The Reality‘s director Mahmoud Ramzi debunks Israeli claims, says film shows re-enactment of Palestinian reality',
+       details: 'Mahmoud Ramzi, the director of the film The Reality, shared a story on Instagram explaining the context of the video with text reading: ‘Re-enacting the scenes of the most horrific crimes committed by the enemy against our people. Based on a true story. Our solidarity with our people in Palestine, salam from Lebanon.’',
+   },
+   sources: [
+       {
+           sourceName: 'Mahmoud Ramzi on Instagram',
+           archiveLink: 'https://files.hasbaratracker.com/10Nov2023_Mahmoud_Ramzi_Instagram.tiff',
+       },
+   ]
+},
 
 
 

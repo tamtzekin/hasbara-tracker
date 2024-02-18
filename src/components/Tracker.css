@@ -528,7 +528,7 @@ ul {
     .search-bar-container {
         display: flex;
         /* position: fixed;
-        margin-top: -14.5%;
+        /* margin-top: -14.5%;
         margin-left: 39.9%;
         margin-bottom: 10%;
         /* background: transparent; */
@@ -541,6 +541,7 @@ ul {
         left: 0;
         position: fixed;
         border-bottom: solid 1px black;
+        z-index: 4;
     }
 
     .claim-filter {
@@ -622,7 +623,7 @@ ul {
         width: 100%;
         margin-left: 0%;
         margin-right: 3%;
-        margin-top: 30%;
+        margin-top: 5rem;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 
     }

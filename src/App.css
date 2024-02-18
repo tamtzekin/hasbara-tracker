@@ -293,13 +293,11 @@ h2 .expand-text {
 
 /* Header */
 .header-container {
-    /* position: absolute; */
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     min-height: 10vh;
-    padding-bottom: 10px;
 }
 
 h1.ht-heading {
@@ -339,11 +337,6 @@ h1.ht-heading {
 .mobile-menu {
     display: none;
   }
-
-.menu-links {
-    display: flex;
-    flex-direction: column;
-}
   
 .menu-links a {
     color: #333;
@@ -425,11 +418,28 @@ h1.ht-heading {
         display: none;
     }
 
-    .footer {
-        display: none;
+    .logo-container {
+        /* max-width: 12rem; */
+        top: 0.5rem;
+        text-align: center;
+       
+    }
+
+    .logo-container svg {
+        vertical-align: middle;
+        /* width: */
+        height: 2rem;
+        margin-left: 50%;
+        margin-right: 50%;
     }
 
     .nav-links {
+        display: none;
+    }
+
+
+    /* Footer */
+    .footer {
         display: none;
     }
 
@@ -445,25 +455,19 @@ h1.ht-heading {
           display: flex;
           align-items: center;
           justify-content: flex-end;
-          position: absolute;
-          top: 3%;
-          right: 4%;
+          position: relative;
+          /* top: 0rem; */
+          right: 25.8rem;
           z-index: 3;
       }
 
     .bar {
-        width: 4px;
-        height: 4px;
-        background-color: #333;
+        width: 0.15rem;
+        height: 0.2rem;
+        background-color: #060606;
         margin: 3px 0;
         transition: 0.4s;
       }
-
-    .logo-container {
-        width: 12rem;
-        top: 0.5rem;
-        left: 1.3rem;
-    }
     
     .menu-icon {
         cursor: crosshair;
@@ -483,12 +487,12 @@ h1.ht-heading {
         position: absolute;
 
         top: 2%;
-        right: 3%;
+        left: 3%;
 
         font-family: 'Helvetica', Helvetica, sans-serif;
         font-size: 1.1em;
         line-height: 1.5em;
-        text-align: right;
+        text-align: left;
     }
 
     .break {
@@ -612,13 +616,6 @@ h1.ht-heading {
           right: 4%;
           z-index: 3;
       }
-
-      .menu-icon {
-        cursor: crosshair;
-        display: flex;
-        flex-direction: column;
-        padding: 0.7em; /* Increase clickable area */
-    }
 
       .bar {
         width: 5px;

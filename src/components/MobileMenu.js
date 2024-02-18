@@ -49,7 +49,7 @@ const MobileMenu = () => {
             >
                 <div className="menu-links">
                     <div class="arrow-menu">
-                        <Link onClick={closeModal}>←</Link>
+                        <Link onClick={closeModal}>⇢</Link>
                     </div>
 
                     <Link to="/" onClick={closeModal}>

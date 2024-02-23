@@ -190,7 +190,6 @@ select.claim-dropdown-box {
     outline: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    &::-ms-expand { display: none };
 
     border: solid 0.5px black;
     padding: 0.5rem 2rem 0.5rem 1rem;
@@ -213,6 +212,10 @@ select.claim-dropdown-box {
     text-overflow: ellipsis; */
     }
 
+    /* Hide default dropdown arrow */
+    select.claim-dropdown-box::-ms-expand {
+        display: none;
+    }
         
     /* Custom arrow */
     background-image:

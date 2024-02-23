@@ -15,7 +15,7 @@ const Footer = () => {
               {/* Newsletter sign-up text and input field */}
               <div className="md:flex md:items-center">
                 <p className="md:mr-4">
-                  Get updates on new & updated claims by email
+                  Get new & updated claims by email
                 </p>
                 <div className="relative flex items-center">
                   <input

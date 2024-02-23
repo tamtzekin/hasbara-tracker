@@ -24,11 +24,11 @@ export default function Tracker() {
 
     
     // Set mobile/phone view dimensions
-    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 480);
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 576);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 480);
+            setIsMobileView(window.innerWidth <= 576);
         };
 
         window.addEventListener('resize', handleResize);

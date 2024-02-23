@@ -81,7 +81,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                         zIndex: 2,
 
                         // On phone: Show modal at bottom of screen
-                        ...(screenWidth <= 480 && {
+                        ...(screenWidth <= 576 && {
                             top: 'auto',
                             bottom: '0',
                             left: '0',

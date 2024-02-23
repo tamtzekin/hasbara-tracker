@@ -400,16 +400,14 @@ h2 .expand-text {
     }
 
     .logo-container {
-        /* max-width: 12rem; */
         top: 0.5rem;
-        text-align: center;
-       
+        width: 100%;
     }
 
     .logo-container svg {
         vertical-align: middle;
         height: 2rem;
-        margin-left: auto;
+        margin: 0 auto;
     }
 
     .nav-links {
@@ -436,7 +434,8 @@ h2 .expand-text {
           justify-content: flex-end;
           position: relative;
           top: 0rem;
-          left: -22.6rem;
+          left: 0.5rem;
+          margin-right: auto;
           z-index: 3;
       }
 
@@ -456,7 +455,7 @@ h2 .expand-text {
     }
 
     .arrow-menu {
-        font-size: 2.5em;
+        font-size: 4em;
         margin-bottom: 15px;
     }
 
@@ -534,14 +533,15 @@ h2 .expand-text {
     }
 
     .logo-container {
-        /* left: 2.5rem; */
         top: 1rem;
         width: 15rem;
+        margin-left: 30%;
+        margin-right: 20%;
         
     }
    
     .arrow-menu {
-        font-size: 2.5em;
+        font-size: 3.5em;
         margin-bottom: 2.5%;
     }
 
@@ -570,16 +570,25 @@ h2 .expand-text {
           justify-content: flex-end;
           position: absolute;
           top: 2%;
-          right: 4%;
+          left: 3%;
           z-index: 3;
       }
 
       .bar {
-        width: 5px;
-        height: 5px;
-        background-color: #333;
-        margin: 3px 0;
+        width: 0.3rem;
+        height: 0.4rem;
+        background-color: #060606;
+        margin: 4px 0;
         transition: 0.4s;
+      }
+
+      .menu-links {
+        font-size: 1.4em;
+        text-align: left;
+        margin-left: 1.5rem;
+
+        display: flex;
+        flex-direction: column;
       }
 
       .nav-links {

@@ -71,7 +71,7 @@ const SubmitClaimForm = () => {
             <Header />
         
             <div className="content-container">
-                <h2>Sign up for updates</h2>
+                <h2 className="subheading">Sign up for updates</h2>
                     <div className="home-text">
                         Get notified by email whenever a new claim is added or major updates are made to the tracker.<br />
                         <br />

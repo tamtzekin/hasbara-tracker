@@ -75,7 +75,7 @@ const SubmitClaimForm = () => {
         <>
             <Header />
             <div className="content-container">
-                <h2>Submit a claim to Hasbara Tracker</h2>
+                <h2 className="subheading">Submit a claim to Hasbara Tracker</h2>
 
                 {/* If user has already submitted that session, prevent repeat submissions */}
                 {isSubmitted ? (

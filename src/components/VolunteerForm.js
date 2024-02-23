@@ -75,7 +75,7 @@ const VolunteerForm = () => {
             <Header />
 
             <div className="content-container">
-                <h2>Volunteer</h2>
+                <h2 className="subheading">Volunteer</h2>
 
                 {/* If user has already submitted that session, prevent repeat submissions */}
                 {isSubmitted ? (

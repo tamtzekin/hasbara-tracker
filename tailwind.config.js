@@ -7,8 +7,12 @@ module.exports = {
                 'grey-light': '',
                 'green-light': '',
             },
+            fontSize: {
+                sm: '1em',
+            }
         },
     fontFamily: {
         sans: ['Helvetica', 'sans-serif'],
-    }
+    },
+
 }

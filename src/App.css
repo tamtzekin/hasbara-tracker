@@ -63,6 +63,15 @@ a.active {
     border: none;
     border-radius: 0;
     font-family: 'Helvetica', Helvetica, sans-serif;
+    transition: 100ms;
+}
+
+/* Specific style for email sign up button */
+.btn-green.sign-up-form {
+    padding: 0 1.5rem 0 1.5rem;
+    height: 2rem;
+    top: 0.15rem;
+    position: relative;
 }
 
 .btn-green:hover {
@@ -83,18 +92,22 @@ h1 a:hover {
     text-decoration: none;
 }
 
-h2 {
+h2.subheading {
     text-align: left;
     font-family: 'Helvetica', Helvetica, sans-serif;
     position: relative;
-    line-height: 1.3em;
+    line-height: 2.1em;
+    font-size: 1.5em;
+    font-weight: 600;
+
+    padding-bottom: 0.1rem;
 }
 
 body {
     background-color: #DADADA;
     font-family: 'Helvetica', Helvetica, sans-serif;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5rem;
 
     margin: 15% 26% 5% 29%;
@@ -238,14 +251,16 @@ h2 .expand-text {
 }
 
 .columns-container {
-    left: 5.1%;
-    top: 15%;
+    /* left: 5.1%; */
+    /* top: 15%; */
 
     display: flex;
     justify-content: space-between;
 
     gap: 100px;
     width: 85%;
+
+    position: relative;
 }
 
 .column {
@@ -269,16 +284,16 @@ h2 .expand-text {
 
 
 .footer {
-    position: absolute;
-    bottom: -6490%;
-    padding-bottom: 50px;
-    right: 5%;
-    display: flex;
-    list-style-type: none;
-    white-space: nowrap;
+    /* position: absolute; */
+    /* bottom: -6490%; */
+    /* padding-bottom: 50px; */
+    /* right: 5%; */
+    /* display: flex; */
+    /* list-style-type: none; */
+    /* white-space: nowrap; */
 }
 
-.footer a {
+/* .footer a {
     text-decoration: none;
     margin: 0 10px;
     font-size: 1em;
@@ -288,8 +303,17 @@ h2 .expand-text {
 .footer a:hover {
     cursor: crosshair;
     text-decoration: dashed underline;
+} */
+
+
+/* For newsletter sign up footer */
+.signup-input {
+    margin-top: 0.1rem;
 }
 
+.signup-input::placeholder {
+    color: red;
+}
 
 /* Header */
 .header-container {
@@ -314,7 +338,7 @@ h1.ht-heading {
 .nav-links {
     position: absolute;
     top: 3.5%;
-    right: 15%;
+    right: 11.5%;
     display: flex;
     list-style-type: none;
     white-space: nowrap;
@@ -410,7 +434,7 @@ h1.ht-heading {
         width: 100%;
     }
 
-    h2 {
+    h2.subheading {
         font-size: 1.1em;
     }
 

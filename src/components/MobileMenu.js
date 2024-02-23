@@ -68,15 +68,15 @@ const MobileMenu = () => {
                         About
                     </Link>
 
-                    {/* <span class="break"></span> */}
+                    <span class="break"></span>
 
-                    {/* <Link to="/newsletter" onClick={closeModal}>
-                        Newsletter
-                    </Link> */}
+                    <Link to="/donate" onClick={closeModal}>
+                        Donate
+                    </Link>
 
-                    {/* <Link to="/contact" onClick={closeModal}>
+                    <Link to="/contact" onClick={closeModal}>
                         Contact
-                    </Link> */}
+                    </Link>
 
                     <Link to="http://instagram.com/hasbaratracker" target="_blank">
                         Instagram

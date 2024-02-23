@@ -282,30 +282,6 @@ h2 .expand-text {
 }
 
 
-
-.footer {
-    /* position: absolute; */
-    /* bottom: -6490%; */
-    /* padding-bottom: 50px; */
-    /* right: 5%; */
-    /* display: flex; */
-    /* list-style-type: none; */
-    /* white-space: nowrap; */
-}
-
-/* .footer a {
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1em;
-}
-
-
-.footer a:hover {
-    cursor: crosshair;
-    text-decoration: dashed underline;
-} */
-
-
 /* For newsletter sign up footer */
 .signup-input {
     margin-top: 0.1rem;
@@ -322,17 +298,6 @@ h2 .expand-text {
     justify-content: space-around;
     flex-direction: column;
     min-height: 10vh;
-}
-
-h1.ht-heading {
-    font-family: 'LoRes_Regular';
-    font-size: 2.05em;
-    position: absolute;
-    flex: 1;
-    left: 5%;
-    /* margin-top: -0.9%; */
-    top: 0;
-    width: 100%;
 }
 
 .nav-links {
@@ -395,6 +360,7 @@ h1.ht-heading {
 @media only screen and (max-width: 576px) {
     .btn-green {
         margin-bottom: 10%;
+        margin-left: 0;
     }
 
     body {
@@ -425,15 +391,6 @@ h1.ht-heading {
         width: 100%;
     }
 
-    h1.ht-heading {
-        font-family: 'LoRes_Regular';
-        font-size: 1.6em;
-        position: absolute;
-        left: 5%;
-        margin-top: 2.85%;
-        width: 100%;
-    }
-
     h2.subheading {
         font-size: 1.1em;
     }
@@ -451,10 +408,8 @@ h1.ht-heading {
 
     .logo-container svg {
         vertical-align: middle;
-        /* width: */
         height: 2rem;
-        margin-left: 50%;
-        margin-right: 50%;
+        margin-left: auto;
     }
 
     .nav-links {
@@ -480,8 +435,8 @@ h1.ht-heading {
           align-items: center;
           justify-content: flex-end;
           position: relative;
-          /* top: 0rem; */
-          right: 25.8rem;
+          top: 0rem;
+          left: -22.6rem;
           z-index: 3;
       }
 
@@ -578,35 +533,13 @@ h1.ht-heading {
         width: 50%;
     }
 
-    .footer {
-        bottom: -6500%;
-        right: 5%;
-    }
-
     .logo-container {
         /* left: 2.5rem; */
         top: 1rem;
         width: 15rem;
         
     }
-
-    
-    h1.ht-heading {
-        top: 0;
-        left: 5%;
-        font-size: 4.3vw;
-    }
-
-    #dots {
-        font-size: 4.4vw;
-        position: relative;
-        left: 0%;
-        margin-top: -5%;
-        transform: translateY(-50%);
-        width: 100%;
-    }
-
-    
+   
     .arrow-menu {
         font-size: 2.5em;
         margin-bottom: 2.5%;
@@ -650,6 +583,10 @@ h1.ht-heading {
       }
 
       .nav-links {
+        display: none;
+      }
+
+      .footer-container {
         display: none;
       }
   }

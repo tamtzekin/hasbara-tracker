@@ -5,11 +5,11 @@ import '../App.css';
 const Footer = () => {
     return (
         <>
+        <div className="footer-container">
       <footer className="flex flex-col items-center bg-neutral-900 text-center text-white mt-20">
         <div className="container mx-auto pt-6">
           {/* Newsletter sign-up form */}
           <div className="flex flex-wrap items-center justify-between gap-4 md:flex-row">
-
             {/* Newsletter sign-up container */}
             <div className="md:flex items-center">
               {/* Newsletter sign-up text and input field */}
@@ -67,7 +67,8 @@ const Footer = () => {
 
           </div>
         </div>
-      </footer>        
+      </footer>    
+      </div>    
 
 
         </>

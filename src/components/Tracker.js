@@ -284,10 +284,10 @@ export default function Tracker() {
                                                             overflow: 'hidden',
                                                             width: // Set fixed column widths
                                                                 index === 0 ? '20%' :
-                                                                index === 1 ? '10%' :
+                                                                index === 1 ? '9%' :
                                                                 index === 2 ? '8%' :
-                                                                index === 3 ? '22%' :
-                                                                '25%',
+                                                                index === 3 ? '35%' :
+                                                                '17%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}

@@ -164,6 +164,10 @@ li.dotted {
     list-style: disc;
 }
 
+li.undotted {
+    margin-right: 6%;
+}
+
 .modal-overlay {
     display: none;
     position: fixed;

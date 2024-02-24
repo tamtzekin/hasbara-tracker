@@ -279,11 +279,6 @@ h2 .expand-text {
 }
 
 
-/* For newsletter sign up footer */
-.signup-input::placeholder {
-    color: red;
-}
-
 /* Header */
 .header-container {
     width: 100%;

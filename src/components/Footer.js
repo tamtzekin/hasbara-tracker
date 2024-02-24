@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="flex flex-col bg-neutral-900 text-center text-white mt-20">
         <div className="container pt-6">
           {/* Newsletter sign-up form */}
-          <div className="flex flex-wrap items-center justify-between gap-4 md:flex-row">
+          <div className="flex flex-wrap items-center justify-end gap-4 md:flex-row">
             {/* Newsletter sign-up container */}
             <div className="md:flex items-center">
               {/* Newsletter sign-up text and input field */}
@@ -20,26 +20,18 @@ const Footer = () => {
                 <div className="relative flex items-center">
                   <input
                     type="text"
-                    className="signup-input peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] text-neutral-200 outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                    className="signup-input peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] text-neutral-200 outline-none transition-all duration-200 ease-linear motion-reduce:transition-none"
                     id="exampleFormControlInput1"
-                    placeholder="Email address"
+                    placeholder="--------@-----.com"
                   />
-                  {/* <label
-                    htmlFor="exampleFormControlInput1"
-                    className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-200 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-neutral-200 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
-                  >
-                    Your email address
-                  </label> */}
                 </div>
               </div>
 
               {/* Newsletter sign-up submit button */}
-              <div className="md:mr-auto">
+              <div className="md:mr-auto flex justify-end">
                 <button
                   type="submit"
                   className="btn-green sign-up-form"
-                  // data-te-ripple-init
-                  // data-te-ripple-color="light"
                 >
               Sign up                
               </button>

@@ -121,6 +121,10 @@ button {
     background: #78ff96;
 }
 
+strike {
+    color: red;
+}
+
 h1.claim-heading {
     font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 1.5em;

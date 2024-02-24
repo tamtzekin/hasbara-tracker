@@ -130,7 +130,7 @@ h1.claim-heading {
 }
 
 .how-to {
-    margin-top: 2%;
+    margin-top: 4%;
     width: 55%;
     margin-left: 25%;
 }
@@ -159,8 +159,9 @@ h1.claim-heading {
 }
 
 li {
-    margin-left: 5.5%;
+    margin-left: 7.5%;
     margin-bottom: 2.5%;
+    list-style: disc;
 }
 
 .modal-overlay {
@@ -327,7 +328,8 @@ u {
 }
 
 ul {
-    margin-left: -8%;
+    margin-left: -5.8%;
+    margin-top: 3%;
 }
 
 /* Hidden messages for Text-to-Speech accessibility */
@@ -506,6 +508,7 @@ ul {
 
     li {
         margin-bottom: 9%;
+        margin-left: 15.5%;
     }
 
     ul {

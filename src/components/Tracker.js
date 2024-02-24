@@ -238,7 +238,8 @@ export default function Tracker() {
                                 <div className="how-to">
                                     How to use the tracker:
                                     <ul>
-                                        <li>Use the search bar to look up words, phrases, or claims (eg. ‘beheaded babies’, ‘hospital’, ‘biden’)</li>
+                                        <li>Use the dropdown list to select a major claim and see all records of the claim.</li>
+                                        <li>Use the search bar to look up words, phrases or topics (eg. ‘hospital’, ‘biden’, ‘al jazeera’)</li>
                                         <li>You can search by type of claim with ‘claim’, ‘debunk’ or ‘context’</li>
                                         <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
                                         <li>Hover over a source with <span className="icon-play"></span> to preview video (If you’re on your phone, tap + hold the link)</li>
@@ -322,11 +323,11 @@ export default function Tracker() {
                                 <div className="how-to">
                                     How to use the tracker:
                                     <ul>
-                                        <li>Use the search bar to look up words, phrases, or claims (eg. ‘beheaded babies’, ‘hospital’, ‘al-shifa’).</li>
-                                        <li>You can also search by Claim / Debunk / Context by searching 'claim', 'debunk' or 'context'</li>
+                                        <li>Use the dropdown list to select a major claim and see all records of the claim.</li>
+                                        <li>Use the search bar to look up words, phrases or topics (eg. ‘hospital’, ‘biden’, ‘al jazeera’)</li>
+                                        <li>You can search by type of claim with ‘claim’, ‘debunk’ or ‘context’</li>
                                         <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
-                                        <li>On your laptop: Hover over a ▷ source to preview video</li>
-                                        <li>On your phone: tap + hold the ▷ link to preview. Click anywhere to close</li>
+                                        <li>Hover over a source with <span className="icon-play"></span> to preview video (If you’re on your phone, tap + hold the link)</li>
                                         <li>Click each Source to open an archived link</li>
                                         <li>Click + and ⎯ to show more or less text</li>
                                     </ul>

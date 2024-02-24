@@ -82,7 +82,7 @@ const SubmitClaimForm = () => {
             <div className="content-container">
                 <h2 className="subheading">Contact us</h2>
                     <div className="home-text">
-                        Fill out the form below if you’d like to get in touch with the Hasbara Tracker team. We’ll get back to you as soon as we can.
+                        Fill out the form below if you’d like to get in touch with the Hasbara Tracker team.
                     </div>
                     <br />
 

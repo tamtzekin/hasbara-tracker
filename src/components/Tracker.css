@@ -197,11 +197,11 @@ select.claim-dropdown-box {
     text-overflow: ellipsis;
 
     /* Firefox styles - remove dotted firefox border */
-    @-moz-document url-prefix() {
+    /* @-moz-document url-prefix() {
         select {
             color: rgba(0,0,0,0);
             text-shadow: 0 0 0 #ffffff;
-        }
+        } */
     
     /* border: solid 0.5px black;
     background-color: #f0f0f0;

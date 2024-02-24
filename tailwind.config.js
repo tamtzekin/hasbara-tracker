@@ -8,6 +8,7 @@ module.exports = {
                 'green-light': '',
             },
             fontSize: {
+                xs: '0.65em',
                 sm: '1em',
             }
         },

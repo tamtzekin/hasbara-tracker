@@ -237,14 +237,14 @@ export default function Tracker() {
                                 <div className="no-results-text">No results found. Try searching a different word or phrase.</div>
                                 <div className="how-to">
                                     How to use the tracker:
-                                    <ul>
-                                        <li>Use the dropdown list to select a major claim and see all records of the claim.</li>
-                                        <li>Use the search bar to look up words, phrases or topics (eg. ‘hospital’, ‘biden’, ‘al jazeera’)</li>
-                                        <li>You can search by type of claim with ‘claim’, ‘debunk’ or ‘context’</li>
-                                        <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
-                                        <li>Hover over a source with <span className="icon-play"></span> to preview video (If you’re on your phone, tap + hold the link)</li>
-                                        <li>Click each Source to open an archived link</li>
-                                        <li>Click + and ⎯ to show more or less text</li>
+                                    <ul className="dotted">
+                                        <li className="dotted">Use the dropdown list to select a major claim and see all records of the claim.</li>
+                                        <li className="dotted">Use the search bar to look up words, phrases or topics (eg. ‘hospital’, ‘biden’, ‘al jazeera’)</li>
+                                        <li className="dotted">You can search by type of claim with ‘claim’, ‘debunk’ or ‘context’</li>
+                                        <li className="dotted">Click ‘Date ▲’ to change the order of events (desktop only)</li>
+                                        <li className="dotted">Hover over a source with <span className="icon-play"></span> to preview video (If you’re on your phone, tap + hold the link)</li>
+                                        <li className="dotted">Click each Source to open an archived link</li>
+                                        <li className="dotted">Click + and ⎯ to show more or less text</li>
                                     </ul>
                                 </div>
                             </>

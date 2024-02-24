@@ -158,7 +158,7 @@ h1.claim-heading {
     vertical-align: -4%;
 }
 
-li {
+li.dotted {
     margin-left: 7.5%;
     margin-bottom: 2.5%;
     list-style: disc;

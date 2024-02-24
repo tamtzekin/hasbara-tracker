@@ -1823,7 +1823,7 @@ const data = [
     },
     description: {
         summary: 'Israeli military press release points to two audio clips and footage as evidence that the Health Ministry rejected fuel',
-        details: '(<b>)Note: The press release, dated 12 November, 2023, links to videos uploaded on 15 November, 2023.<(/b)<br><br>The Israel Occupation Forces press release stated: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel.’',
+        details: '<b>(Note: The press release, dated 12 November, 2023, links to videos uploaded on 15 November, 2023.)</b><br><br>The Israel Occupation Forces press release stated: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel.’',
     },
     sources: [
         {

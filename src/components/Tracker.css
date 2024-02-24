@@ -195,7 +195,7 @@ select.claim-dropdown-box {
     padding: 0.5rem 2rem 0.5rem 1rem;
     margin-top: 1.1rem;
     text-overflow: ellipsis;
-]
+
     /* Firefox styles - remove dotted firefox border */
     /* @-moz-document url-prefix() {
         select {
@@ -210,12 +210,6 @@ select.claim-dropdown-box {
     padding: 0.7rem 1.5rem 0.7rem 1rem;
     border-radius: 3px;
     text-overflow: ellipsis; */
-    
-
-    /* Hide default dropdown arrow */
-    select.claim-dropdown-box::-ms-expand {
-        display: none;
-    }
         
     /* Custom arrow */
     background-image:
@@ -231,6 +225,12 @@ select.claim-dropdown-box {
         5px 5px,
         1px 1.5em;
     background-repeat: no-repeat;
+}
+
+
+/* Hide default dropdown arrow */
+select.claim-dropdown-box::-ms-expand {
+    display: none;
 }
 
 /* Claim dropdown filter + Search bar */

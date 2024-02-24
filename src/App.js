@@ -32,17 +32,17 @@ const App = () => {
             {/* Route redirects to claim searches */}
                 <Route
                     path="/forty-beheaded-babies"
-                    element={<Navigate to="/tracker?filter=Forty%20beheaded%20babies" replace />}
+                    element={<Navigate to="/tracker?claim=Forty%20beheaded%20babies" replace />}
                 />
 
                 <Route
                     path="/al-ahli-attacked"
-                    element={<Navigate to="/tracker?filter=Al-Ahli%20Hospital%20was%20attacked%20by%20Palestinian%20rockets,%20not%20Israeli%20forces" replace />}
+                    element={<Navigate to="/tracker?claim=Al-Ahli%20Hospital%20was%20attacked%20by%20Palestinian%20rockets,%20not%20Israeli%20forces" replace />}
                 />
                 
                 <Route 
                     path="/al-shifa-fuel"
-                    element={<Navigate to="/tracker?filter=Israeli%20state%20offered%20fuel%20to%20Al-Shifa%20Hospital" replace />}
+                    element={<Navigate to="/tracker?claim=Israeli%20state%20offered%20fuel%20to%20Al-Shifa%20Hospital" replace />}
                 />
             </Routes>
         </Router>

@@ -1105,7 +1105,7 @@ const data = [
             sourceName: 'IDF Media Releases',
             sourceLink: 'https://www.idf.il/en/mini-sites/idf-press-releases-regarding-the-hamas-israel-war/october-pr/failed-rocket-launch-by-islamic-jihad-hits-Al Ahli-hospital-in-gaza-city/',
             archiveLink: 'https://archive.ph/V1Xen',
-            isDeleted: 'true',
+            hasBeenDeleted: 'true',
         },
         {
             sourceName: '@IsraelDefenseForces on YouTube',
@@ -2143,7 +2143,7 @@ const data = [
            sourceName: 'Ofir Gendelman on X',
            sourceLink: 'https://twitter.com/ofirgendelman/status/1722561334858961025',
            archiveLink: 'https://archive.is/7FIef',
-           isDeleted: 'true',
+           hasBeenDeleted: 'true',
        },
    ]
 },
@@ -2182,7 +2182,7 @@ const data = [
            sourceName: 'Hen Mazzig on X',
            sourceLink: 'https://twitter.com/HenMazzig/status/1722572056078791010',
            archiveLink: 'https://archive.is/TYE1q',
-           isDeleted: 'true',
+           hasBeenDeleted: 'true',
        },
    ]
 },

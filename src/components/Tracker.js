@@ -147,7 +147,7 @@ export default function Tracker() {
                                         <a href={source.sourceLink} target="_blank" rel="noreferrer"
                                         aria-hidden="true" 
                                         // sets class if source is a deleted source
-                                        className={source.IsDeleted === 'true' ? 'deleted-source' : ''}>
+                                        className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
                                             {/* If there's a video preview available, show a play button icon */}
                                             {source.videoPreviewLink && (
                                                 <>
@@ -163,7 +163,7 @@ export default function Tracker() {
                                             )}
 
                                             {/* If a source has been deleted by the original publisher, show a red strikethrough */}
-                                            {source.isDeleted === 'true' ? (
+                                            {source.hasBeenDeleted === 'true' ? (
                                                 <strike style={{color:'red'}}>
                                                     <span style={{color:'grey'}}>{source.sourceName}</span>
                                                 </strike>

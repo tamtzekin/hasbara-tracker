@@ -652,6 +652,13 @@ ul {
     }
 
 
+    .back-to-top {
+        position: fixed;
+        bottom: 14.3%;
+        margin-left: -1%;
+    }
+
+
 
     .arrow {
         font-size: 1.9em;

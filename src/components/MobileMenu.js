@@ -48,7 +48,7 @@ const MobileMenu = () => {
                 }}
             >
                 <div className="menu-links">
-                    <div class="arrow-menu">
+                    <div className="arrow-menu">
                         <Link onClick={closeModal}>⤎</Link>
                     </div>
 
@@ -68,7 +68,7 @@ const MobileMenu = () => {
                         About
                     </Link>
 
-                    <span class="break"></span>
+                    <span className="break"></span>
 
                     <Link to="/donate" onClick={closeModal}>
                         Donate

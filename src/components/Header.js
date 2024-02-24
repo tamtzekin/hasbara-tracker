@@ -9,14 +9,14 @@ const Header = () =>{
 
     return (
         <>
-        <span class="header-container">
+        <span className="header-container">
             <div className="flex-container">
                 <MobileMenu />
                 <Logo />
             </div>
         </span>
         
-        <div class="nav-links">
+        <div className="nav-links">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
                 <li>
                     <NavLink to="/">Claims</NavLink>

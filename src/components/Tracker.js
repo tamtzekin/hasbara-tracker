@@ -142,7 +142,7 @@ export default function Tracker() {
 
                             {row.original.sources.map((source, index) => (
                                 <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                    <div key={index} class="source">
+                                    <div key={index} className="source">
 
                                         <a href={source.sourceLink} target="_blank" rel="noreferrer"
                                         aria-hidden="true">
@@ -166,12 +166,12 @@ export default function Tracker() {
                                         {/* If there's an archiveLink in the data, add an '(archive)' link next to the source link */}
                                         {source.archiveLink && ( 
                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
-                                                    &nbsp;<span class="archive-link">(archive)</span>
+                                                    &nbsp;<span className="archive-link">(archive)</span>
                                                 </a>
                                             )}
 
                                             {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
-                                            <span class="visually-hidden">Opens in new tab</span>
+                                            <span className="visually-hidden">Opens in new tab</span>
                                     </div>
                                 </VideoPlayer>
                             ))}
@@ -221,7 +221,7 @@ export default function Tracker() {
             {/* Show desktop view of Tracker */}
             {!isMobileView && (
                 <>
-                    <div class="search-bar-container">
+                    <div className="search-bar-container">
                         <ClaimFilter 
                             claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} 
                         />
@@ -230,18 +230,18 @@ export default function Tracker() {
                         />
                     </div>
 
-                    <div class="tracker-container">
+                    <div className="tracker-container">
                         {/* Show 'how to' text when no results are found */}
                         {rows.length === 0 ? (
                             <>
-                                <div class="no-results-text">No results found. Try searching a different word or phrase.</div>
-                                <div class="how-to">
+                                <div className="no-results-text">No results found. Try searching a different word or phrase.</div>
+                                <div className="how-to">
                                     How to use the tracker:
                                     <ul>
                                         <li>Use the search bar to look up words, phrases, or claims (eg. ‘beheaded babies’, ‘hospital’, ‘biden’)</li>
                                         <li>You can search by type of claim with ‘claim’, ‘debunk’ or ‘context’</li>
                                         <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
-                                        <li>Hover over a source with <span class="icon-play"></span> to preview video (If you’re on your phone, tap + hold the link)</li>
+                                        <li>Hover over a source with <span className="icon-play"></span> to preview video (If you’re on your phone, tap + hold the link)</li>
                                         <li>Click each Source to open an archived link</li>
                                         <li>Click + and ⎯ to show more or less text</li>
                                     </ul>
@@ -307,19 +307,19 @@ export default function Tracker() {
             {/* Show mobile/phone view of Tracker */}
             {isMobileView && (
                 <>
-                    <div class="search-bar-container">
-                        <div class="tools-background"></div>
+                    <div className="search-bar-container">
+                        <div className="tools-background"></div>
                         <ClaimFilter claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} />
                         <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
                     </div>
 
-                    <div class="tracker-container">
+                    <div className="tracker-container">
 
                         {/* Show 'how to' text when no results are found */}
                         {rows.length === 0 ? (
                             <>
-                                <div class="no-results-text">No results found. Try searching a different word or phrase.</div>
-                                <div class="how-to">
+                                <div className="no-results-text">No results found. Try searching a different word or phrase.</div>
+                                <div className="how-to">
                                     How to use the tracker:
                                     <ul>
                                         <li>Use the search bar to look up words, phrases, or claims (eg. ‘beheaded babies’, ‘hospital’, ‘al-shifa’).</li>
@@ -356,7 +356,7 @@ export default function Tracker() {
                 </>
             )}
 
-            <div class="back-to-top"><a href="#top">🔺 Back to top</a></div>
+            <div className="back-to-top"><a href="#top">🔺 Back to top</a></div>
 
             <Footer />
         </>

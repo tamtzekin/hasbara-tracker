@@ -6,16 +6,16 @@ const Footer = () => {
     return (
         <>
         <div className="footer-container">
-      <footer className="flex flex-col items-center bg-neutral-900 text-center text-white mt-20">
-        <div className="container mx-auto pt-6">
+      <footer className="flex flex-col bg-neutral-900 text-center text-white mt-20">
+        <div className="container pt-6">
           {/* Newsletter sign-up form */}
           <div className="flex flex-wrap items-center justify-between gap-4 md:flex-row">
             {/* Newsletter sign-up container */}
             <div className="md:flex items-center">
               {/* Newsletter sign-up text and input field */}
               <div className="md:flex md:items-center">
-                <p className="md:mr-4">
-                  Get new & updated claims by email
+                <p className="md:mr-4 mt-2 text-grey">
+                  <em>Get new & updated claims by email</em>
                 </p>
                 <div className="relative flex items-center">
                   <input

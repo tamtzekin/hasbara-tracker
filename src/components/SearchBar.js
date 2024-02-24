@@ -9,7 +9,6 @@ const SearchBar = ({ filter, setFilter }) => {
     return (
         <div className="search-bar">
             <input
-                value={filter || ''}
                 onChange={handleFilterChange}
                 placeholder='Search for ...'
                 />

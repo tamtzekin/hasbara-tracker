@@ -30,8 +30,8 @@ a[target="_blank"]:hover::after {
 }
 
 .back-to-top {
-    margin-left: -4.5%;
     position: fixed;
+    margin-left: -4.5%;
     bottom: 0;
     background: #dadadad9;
     border-radius: 20px;

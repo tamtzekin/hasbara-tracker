@@ -318,11 +318,12 @@ export default function Tracker() {
             {/* Show mobile/phone view of Tracker */}
             {isMobileView && (
                 <>
+                 <div className="tools-background">
                     <div className="search-bar-container">
-                        <div className="tools-background"></div>
                         <ClaimFilter claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} />
                         <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
                     </div>
+                </div>
 
                     <div className="tracker-container">
 

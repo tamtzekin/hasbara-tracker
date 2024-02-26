@@ -6,29 +6,31 @@ const Footer = () => {
     return (
         <>
         <div className="footer-container">
-      <footer className="flex flex-col bg-neutral-900 text-center text-white mt-20">
-        <div className="container pt-6">
+      <footer className="flex-col bg-neutral-900 text-white sm:mt-0 mt-5">
+        {/* To centre within column, add: flex items-center */}
+        
+        <div className="mx-auto pt-6">
           {/* Newsletter sign-up form */}
-          <div className="flex flex-wrap items-center justify-end gap-4 md:flex-row">
+          <div className="flex-wrap items-center justify-center gap-4 md:flex-row">
             {/* Newsletter sign-up container */}
-            <div className="md:flex items-center">
+            <div className="mobile:mb-4 laptop:-ml-10 laptop:-mb-14 flex items-end">
               {/* Newsletter sign-up text and input field */}
-              <div className="md:flex md:items-center">
-                <p className="md:mr-4 mt-2 text-grey">
-                  <em>Get new & updated claims by email</em>
+              <div className="mobile:mb-2 laptop:flex laptop:mb-0.5 desktop:flex md:items-center">
+                <p className="text-grey-faded text-xs laptop:mt-2.5 laptop:mr-3">
+                  Get new & updated claims by email
                 </p>
                 <div className="relative flex items-center">
                   <input
                     type="text"
-                    className="signup-input peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] text-neutral-200 outline-none transition-all duration-200 ease-linear motion-reduce:transition-none"
+                    className="signup-input peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] text-neutral-200 text-grey-darker outline-none transition-all duration-200 ease-linear motion-reduce:transition-none"
                     id="exampleFormControlInput1"
                     placeholder="--------@-----.com"
                   />
                 </div>
               </div>
 
-              {/* Newsletter sign-up submit button */}
-              <div className="md:mr-auto flex justify-end">
+              {/* 'Sign up' button md:mr-auto  */}
+              <div className="md:ml-1 flex items-center ml-2">
                 <button
                   type="submit"
                   className="btn-green sign-up-form"
@@ -39,14 +41,14 @@ const Footer = () => {
             </div>
 
             {/* Links */}
-            <ul className="flex flex-row items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0 justify-end ml-auto">
-              <li>
-                <a href="https://www.paypal.com/donate/?hosted_button_id=44XADNYVGGMPS" target="_blank" rel="noreferrer" className="hover:underline me-4 md:me-6">
+            <ul className="mobile:items-center mobile:-ml-6 mobile:pt-5 laptop:justify-end laptop:ml-auto pt-3 flex flex-row mt-3 text-sm text-gray-500 dark:text-gray-400">
+              <li className="laptop:me-10">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=44XADNYVGGMPS" target="_blank" rel="noreferrer" className="hover:underline">
                   Donate
                 </a>
               </li>
-              <li>
-                <a href="/contact" className="hover:underline me-4 md:me-6">
+              <li className="laptop:me-10">
+                <a href="/contact" className="hover:underline">
                   Contact
                 </a>
               </li>

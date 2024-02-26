@@ -99,8 +99,6 @@ h2.subheading {
     line-height: 2.1em;
     font-size: 1.5em;
     font-weight: 600;
-
-    padding-bottom: 0.1rem;
 }
 
 body {
@@ -157,6 +155,7 @@ details article {
 details[open] article {
     animation: fadeIn 300ms linear forwards;
     cursor: default;
+    margin-bottom: 5%;
 }
 
     @keyframes fadeIn {
@@ -184,7 +183,6 @@ details[open] {
 
 details > summary {
     list-style: none;
-    padding-bottom: 1%;
     font-family: 'Helvetica', Helvetica, sans-serif;
 }
 
@@ -271,7 +269,7 @@ h2 .expand-text {
 
 
 .footer-container {
-    width: 100%;
+    width: 96%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -360,27 +358,24 @@ h2 .expand-text {
     }
 
     .content-container {
-        margin: 15% 0 15% 0;
+        margin: 25% 0 15% 0;
         min-width: 300px;
         left: 0;
     }
 
+    details > summary {
+        padding-bottom: 4%;
+    }
+    
     details.expandable-text-homepage {
-        margin-top: 0;
-    }
+        margin-top: 0%;
+        border-bottom: 0.1em dashed #59595994;
 
-    #dots {
-        /* margin-left: 0%; */
-        font-size: 1.65em; 
-        position: absolute;
-        /* left: 5%; */
-        top: 60%;
-        transform: translateY(-50%);
-        width: 100%;
     }
-
+    
     h2.subheading {
         font-size: 1.1em;
+        margin-top: 2%;
     }
 
     .hide-on-mobile {

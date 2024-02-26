@@ -13,17 +13,17 @@ input {
     /* border-color: #bfc3c8; */
     border-radius: 3px;
     border-style: hidden;
-    background-color: #f0f0f0;
+    background-color: theme('colors.grey-darker');
     font-size: 0.9em;
 }
 
 textarea {
     width: 100%;
     margin-top: 2.5%;
-    /* border-color: #bfc3c8; */
     border-radius: 3px;
     border-style: hidden;
     background-color: #f0f0f0;
+    background-color: theme('colors.grey-darker');
     font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 0.9em;
     padding: 1%;
@@ -36,7 +36,9 @@ select {
     border-radius: 3px;
     font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 0.9em;
-    background-color: #f0f0f0;
+    background-color: theme('colors.grey-darker');
+    padding: 2% 0 2% 1.5%;
+    color: theme('colors.grey-faded');
 }
 
 .required-field {

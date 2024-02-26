@@ -2,13 +2,26 @@
 module.exports = {
     content: ['./src/**/*.{html,js}'],  
         theme: {
-            colors: {
-                'grey': 'rgb(94, 94, 94)',
-                'grey-light': '',
-                'green-light': '',
+            screens: {
+                'mobile': {'max': '576px'}, // => @media (max-width: 576px)
+                'tablet': '768px',
+                'laptop': '1024px',
+                'desktop': '1280px',
             },
+
+            colors: {
+                'grey-light': '#f0f0f0',
+                'grey': '#d6d6d6',
+                'grey-darker': '#cbcbcb',
+                'grey-faded': 'rgb(94, 94, 94)',
+                'grey-darkest':'#595959',
+                'blue': '#b7fbf3',
+                'green': '#78ff96',
+                'green-light': '#bffb9b',
+            },
+            
             fontSize: {
-                xs: '0.65em',
+                xs: '0.9em',
                 sm: '1em',
             }
         },

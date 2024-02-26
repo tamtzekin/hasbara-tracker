@@ -406,12 +406,6 @@ h2 .expand-text {
 
     /* Menu */
     .mobile-menu {
-        /* display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          right: -15%;
-          position: absolute;
-          margin-top: 1%; */
           display: flex;
           align-items: center;
           justify-content: flex-end;

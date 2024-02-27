@@ -141,25 +141,25 @@ h1.claim-heading {
 
 .icon-link {
     content: '';
-    display: inline-block;
-    width: 13px;
-    height: 13px;
     background: url('/public/img/circle-grey.png') no-repeat center center;
     background-size: contain;
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.8rem;
+    vertical-align: 1%;
     margin-right: 3%;
-    vertical-align: -5%;
 }
 
 /* :: after */
 .icon-playarrow {
     content: '';
-    display: inline-block;
-    width: 13px;
-    height: 13px;
     background: url('/public/img/play-triangle.svg') no-repeat center center;
     background-size: contain;
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.8rem;
     margin-right: 3%;
-    vertical-align: -4%;
+    vertical-align: -1%;
 }
 
 li.dotted {

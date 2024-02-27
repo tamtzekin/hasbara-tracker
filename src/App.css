@@ -151,9 +151,10 @@ details article {
 }
   
 details[open] article {
-    animation: fadeIn 300ms linear forwards;
+    animation: fadeIn 0.3s linear forwards;
     cursor: default;
-    margin-bottom: 5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 
     @keyframes fadeIn {

@@ -25,6 +25,11 @@ a[target="_blank"]:hover::after {
     padding-bottom: 0.%;
     vertical-align:  middle;
 }
+
+.archive-link::before {
+    content: "\a";
+    white-space: pre;
+}
   
 .arrow {
     font-size: 3.8em;

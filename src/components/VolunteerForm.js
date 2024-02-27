@@ -80,7 +80,10 @@ const VolunteerForm = () => {
                 {/* If user has already submitted that session, prevent repeat submissions */}
                 {isSubmitted ? (
                     <div className="thank-you-message">
-                        Thank you for signing up to volunteer. We’ll get back to you as soon as we can. 🍉
+                        Thank you for signing up to volunteer. We’ll get back to you as soon as we can.<br />
+                        <br />
+                        
+                        Til liberation 🍉
                     </div>
                 ) : (
                     <>

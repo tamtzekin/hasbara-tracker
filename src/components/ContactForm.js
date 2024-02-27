@@ -82,7 +82,7 @@ const SubmitClaimForm = () => {
             <div className="content-container">
                 <h2 className="subheading">Contact us</h2>
                     <div className="home-text">
-                        Fill out the form below if you’d like to get in touch with the Hasbara Tracker team.
+                        Leave your message with the form below if you’d like to get in touch with the Hasbara Tracker team.
                     </div>
                     <br />
 
@@ -143,7 +143,7 @@ const SubmitClaimForm = () => {
                     </form>
 
                     {isSubmitted && !isLoading && (
-                <p>Thank you.</p>
+                <p>Thanks for your message. Til liberation 🍉</p>
             )}
             </div>
             <Footer />

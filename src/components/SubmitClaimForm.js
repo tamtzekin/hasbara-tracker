@@ -81,7 +81,10 @@ const SubmitClaimForm = () => {
                 {isSubmitted ? (
                     <>
                         <div className="thank-you-message">
-                            Thank you for submitting a claim. We’ll review it as soon as we can.
+                            Thank you for submitting a claim. We’ll review it as soon as we can.<br />
+                            <br />
+                            
+                            Til liberation 🍉
                         </div>
 
                         <button 

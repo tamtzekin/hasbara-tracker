@@ -13,11 +13,12 @@ module.exports = {
                 'grey-light': '#f0f0f0',
                 'grey': '#d6d6d6',
                 'grey-darker': '#cbcbcb',
-                'grey-faded': 'rgb(94, 94, 94)',
+                'grey-faded': '#5e5e5e',
                 'grey-darkest':'#595959',
                 'blue': '#b7fbf3',
                 'green': '#78ff96',
                 'green-light': '#bffb9b',
+                'green-bright': '#9dff20',
             },
             
             fontSize: {

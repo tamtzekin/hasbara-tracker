@@ -175,8 +175,8 @@ export default function Tracker() {
 
                                         {/* If there's an archiveLink in the data, add an '(archive)' link next to the source link */}
                                         {source.archiveLink && ( 
-                                                <a href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
-                                                    &nbsp;<span className="archive-link">(archive)</span>
+                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
+                                                    &nbsp;<span>(archive)</span>
                                                 </a>
                                             )}
 
@@ -291,7 +291,7 @@ export default function Tracker() {
                                                         {...cell.getCellProps()}
                                                         style={{
                                                             padding: '15px',
-                                                            borderBottom: 'dashed 1px gray',
+                                                            borderBottom: '0.1rem dashed grey',
                                                             overflow: 'hidden',
                                                             width: // Set fixed column widths
                                                                 index === 0 ? '20%' :

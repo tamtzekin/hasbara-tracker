@@ -22,7 +22,6 @@ textarea {
     margin-top: 2.5%;
     border-radius: 3px;
     border-style: hidden;
-    background-color: #f0f0f0;
     background-color: theme('colors.grey-darker');
     font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 0.9em;

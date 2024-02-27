@@ -43,13 +43,11 @@
 /* Styles */
 a:hover {
     cursor: crosshair;
-    text-decoration: dashed underline;
+    text-decoration: 0.1rem dashed underline;
 }
 
 a.active {
-    /* background-color: #9dff20; */
-    /* font-style: oblique; */
-    text-decoration: dashed underline !important;
+    text-decoration: 0.1rem dashed underline !important;
   }
   
 .btn-green {
@@ -58,12 +56,12 @@ a.active {
     align-items: center;
     height: 3.2rem;
     padding: 1.7em;
-    background-color: #9dff20;
+    background-color: theme('colors.green-bright');
     font-size: 0.93em;
     border: none;
     border-radius: 0;
     font-family: 'Helvetica', Helvetica, sans-serif;
-    transition: 100ms;
+    transition: 0.2s;
 }
 
 /* Specific style for email sign up button */
@@ -75,8 +73,8 @@ a.active {
 }
 
 .btn-green:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: theme('colors.grey-darkest');
+    color: theme('colors.grey-light');
 }
 
 h1.homepage-heading {
@@ -116,7 +114,7 @@ body {
 }
 
 .claim-link {
-    text-decoration: dashed underline;
+    text-decoration: 0.1rem dashed underline;
     margin-bottom: 1.2rem;
 }
 
@@ -300,11 +298,14 @@ h2 .expand-text {
     margin-left: 10px;
     padding: 2%;
     font-size: 1em;
+    text-decoration-color: transparent;
+    transition: text-decoration 0.2s ease;
 }
 
 .nav-links a:hover {
     cursor: crosshair;
-    text-decoration: dashed underline;
+    text-decoration: 0.1rem dashed underline;
+    text-decoration-color: black;
 }
 
 
@@ -318,6 +319,7 @@ h2 .expand-text {
     text-decoration: none;
     padding: 10px;
     transition: 0.3s;
+    
 }
 
 

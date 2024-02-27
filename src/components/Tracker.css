@@ -6,10 +6,16 @@ a {
 }
 
 /* Icon that shows link opens in external window */
-a[target="_blank"]:hover::after {
+a[target="_blank"]::after {
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
     margin: 0 3px 0 5px;
     white-space:  nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+a[target="_blank"]:hover::after {
+    opacity: 1;
 }
 
 .archive-link {
@@ -623,6 +629,11 @@ ul.dotted {
         margin-bottom: 20px;
         margin-top: 20px;
         border: none;
+    }
+
+    tr:hover {
+        background-color: red;
+        transition: background-color 0.3 ease;
     }
 
     td {

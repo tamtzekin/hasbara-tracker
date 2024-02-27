@@ -291,7 +291,7 @@ export default function Tracker() {
                                                         {...cell.getCellProps()}
                                                         style={{
                                                             padding: '15px',
-                                                            borderBottom: '0.1rem dashed grey',
+                                                            borderBottom: '1px dashed grey',
                                                             overflow: 'hidden',
                                                             width: // Set fixed column widths
                                                                 index === 0 ? '20%' :

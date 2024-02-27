@@ -2186,9 +2186,101 @@ const data = [
        },
    ]
 },
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '9 Nov 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Fact-checking website Snopes spoke to The Reality‘s director who said the disinformation is used to cover up Israeli crimes',
+       details: 'Fact-checking website Snopes.com reached out to Mahmoud Ramzi via Instagram where he explained that he is a Palestinian director born in Lebanon and confirmed he had directed the viral video. ‘I directed a short film that tells about the events related to the Palestine issue around the world and the death bed that we see daily in Gaza.’',
+   },
+   sources: [
+       {
+           sourceName: 'Snopes.com',
+           sourceLink: 'https://www.snopes.com/fact-check/film-crew-footage-gaza/',
+           archiveLink: 'https://archive.ph/mtWjz',
+       },
+  ]
+},
 
-
-
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '10 Nov 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'The Reality‘s director Mahmoud Ramzi debunks Israeli claims, says film shows re-enactment of Palestinian reality',
+       details: 'Mahmoud Ramzi, the director of the film The Reality, shared a story on Instagram explaining the context of the video with text reading: ‘Re-enacting the scenes of the most horrific crimes committed by the enemy against our people. Based on a true story. Our solidarity with our people in Palestine, salam from Lebanon.’',
+   },
+   sources: [
+       {
+           sourceName: 'Instagram',
+           sourceLink: 'https://www.snopes.com/fact-check/film-crew-footage-gaza/',
+           archiveLink: 'https://files.hasbaratracker.com/10Nov2023_Mahmoud_Ramzi_Instagram.tiff',
+       },
+  ]
+},
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '10 Nov 2023',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+       summary: 'The Israeli state‘s Consul General to Midwest India shared the video claiming Bollywood has competition with Palestinians',
+       details: 'Kobbi Shoshani, the Israeli state‘s Consul General to Midwest India, shared the video on X (formerly Twitter) with the caption: ‘Bollywood, you have fake competition in Gaza.’',
+   },
+   sources: [
+       {
+           sourceName: 'X (formerly Twitter)',
+           sourceLink: 'https://twitter.com/KobbiShoshani/status/1722801997206999141?s=20',
+           archiveLink: 'https://archive.is/JZ82W',
+       },
+  ]
+},
+{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '10 Nov 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Film being ‘twisted to accuse Palestinians of faking injuries’: AP News',
+       details: 'US media outlet AP News verified that the claim is false. AP News confirmed with director Mahmoud Ramzi the short film was shot in Lebanon and was filmed to show the ‘pain that Gaza’s people endured.’',
+   },
+   sources: [
+       {
+           sourceName: 'AP News',
+           sourceLink: 'https://apnews.com/article/fact-check-crisis-actor-israel-hamas-war-false-movie-set-975355588351',
+           archiveLink: 'https://archive.is/hXdZk',
+       },
+  ]
+},{
+   claimTitle: 'Makeup used in Gaza to fake injuries',
+   date: '14 Nov 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Video used to ‘falsely claim Palestinians faked injuries’: USA Today',
+       details: 'US media outlet USA Today reported a fact checking article debunking the claim that Palestinians in Gaza, bombarded and attacked by the Israeli state, are faking injuries.',
+   },
+   sources: [
+       {
+           sourceName: 'USA Today',
+           sourceLink: 'https://www.usatoday.com/story/news/factcheck/2023/11/14/video-not-proof-of-fake-palestinian-injuries-fact-check/71568997007/',
+           archiveLink: 'https://archive.is/JYApD',
+       },
+  ]
+},
     
 // TEMPLATE DATA SET (copy and paste this as much as you need it)
 

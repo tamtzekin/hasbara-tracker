@@ -412,7 +412,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         padding: 0.5% 1% 0.1% 1%;  
         width: 14%;
         position: absolute;
-        left: 33%;
+        left: 30%;
         text-align: center;
     }
 
@@ -421,7 +421,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         width: 17%;
         position: absolute;
         text-align: center;
-        left: 33%;
+        left: 30%;
     }
 
     .date {
@@ -435,8 +435,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         padding-left: 0.5%;
         padding-right: 0.5%;
         padding-bottom: -0.3%;
-        min-width: 27%;
-        padding-right: 20%;
+        width: 23.5%;
         padding: 0.3% 0% 0.3% 0%;
       }
 
@@ -454,7 +453,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         padding: 0.5% 1% 0.1% 1%;  
         width: 16%;
         position: absolute;
-        left: 33%;
+        left: 30%;
         text-align: center;
     }
 
@@ -504,7 +503,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         left: 4.5%;
         width: 40%;
         padding-right: 6%;
-        height: 4.63%;
+        height: 4.65%;
         z-index: 1;
 
         /* Red dropdown arrow */

@@ -3,6 +3,7 @@ const data = [
 // CLAIM: Forty beheaded babies
     {   
         claimTitle: 'Forty beheaded babies',
+        // claimSummary: 'Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.',
         date: '1948',
         claim: {
             claimText: 'Context',
@@ -620,6 +621,7 @@ const data = [
 // Claim: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+    // claimSummary: 'The Israeli state says Al-Ahli Hospital was attacked by Palestinian rockets',
 
     date: '12 Oct 2023',
 

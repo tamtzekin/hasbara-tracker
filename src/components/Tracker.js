@@ -1,5 +1,5 @@
 import React, { useMemo, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 
 
@@ -11,6 +11,9 @@ import VideoPlayer from './VideoPlayer';
 import Header from './Header';
 import ClaimFilter from './ClaimFilter';
 import SearchBar from './SearchBar';
+
+import MobileMenu from './MobileMenu';
+import Logo from './Logo';
 import Footer from './Footer';
 
 export default function Tracker() {
@@ -21,7 +24,12 @@ export default function Tracker() {
         }, [data]);
     
     const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
+    
+    // State to hold the current claim's summary
+    const [currentClaimSummary, setCurrentClaimSummary] = useState('');
 
+    const claimTitle = data.map(item => item.claimTitle);
+    const claimSummary = data.map(item => item.claimSummary);
     
     // Set mobile/phone view dimensions
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 576);
@@ -38,13 +46,20 @@ export default function Tracker() {
         };
     }, []);
 
-
+    const claimSummaryText = useMemo (
+        () => [
+            {
+                Header: 'Claim summary',
+                accessor: 'claimSummary',
+            },
+        ]
+    )
     // Pull all the claims data
     const columns = useMemo(
         () => [
             // Claim title eg. 'Forty beheaded babies'
             {
-                Header: 'Claim',
+                Header: 'The claim',
                 accessor: 'claimTitle',
                 Cell: ({ cell }) => (
                     // TODO: Do we want the claim name clickable or not
@@ -65,18 +80,7 @@ export default function Tracker() {
                     </div>
                 ),
             },
-
-            // Context/Claim/Debunk tag
-            {
-                Header: 'What',
-                accessor: (row) => row.claim.claimText,
-                Cell: ({ row }) => (
-                    <span className={row.original.claim.claimTag}>
-                        {row.original.claim.claimText}
-                    </span>
-                ),
-            },
-
+            
             // Detailed description on each claim
             {
                 Header: 'Details',
@@ -90,6 +94,7 @@ export default function Tracker() {
                                 </summary>
                                 <article className="claim-paragraph">
                                     <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+            
             
                                     {/* On Mobile: render Source links inside the expandable element */}
                                     {isMobileView && (
@@ -128,6 +133,18 @@ export default function Tracker() {
                 ),
             },
 
+
+            // Context/Claim/Debunk tag
+            {
+                Header: ' ',
+                accessor: (row) => row.claim.claimText,
+                Cell: ({ row }) => (
+                    <span className={row.original.claim.claimTag}>
+                        {row.original.claim.claimText}
+                    </span>
+                ),
+            },
+
             {
                 Header: 'Sources',
                 accessor: 'sources',
@@ -158,7 +175,7 @@ export default function Tracker() {
                                             {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
                                             {!source.videoPreviewLink && (
                                                 <>
-                                                    <span className='icon-link'></span>
+                                                    <div className='icon-link'></div>
                                                 </>
                                             )}
 
@@ -169,7 +186,7 @@ export default function Tracker() {
                                                 </strike>
 
                                                 ) : (
-                                                    <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
                                                 )}                                        
                                         </a>
 
@@ -226,7 +243,41 @@ export default function Tracker() {
 
     return (
         <>
-        <Header />
+
+<span className="header-container-fixed">
+            <div className="flex-container">
+                <MobileMenu />
+                    <Logo />
+                    <div>{claimSummary}</div>
+            </div>
+        </span>
+        
+        <div className=" mobile:invisible">
+            {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
+                <li className="undotted">
+                    <NavLink to="/">Claims</NavLink>
+                </li>
+            {/* )} */}
+
+            {/* {location.pathname !== '/submit-claim' && ( */}
+            <li className="undotted">
+                <NavLink to="/submit-claim">Submit a claim</NavLink>
+            </li>
+            {/* )} */}
+
+            <li className="undotted">
+                <NavLink to="/volunteer">Volunteer</NavLink>
+            </li>
+
+            <li className="undotted">
+                <NavLink to="/about">About</NavLink>
+            </li>
+        </div>
+
+
+        {/* TODO: make claim summaries */}
+            {/* Summary of claim */}
+            
 
             {/* Show desktop view of Tracker */}
             {!isMobileView && (
@@ -296,8 +347,8 @@ export default function Tracker() {
                                                             width: // Set fixed column widths
                                                                 index === 0 ? '20%' :
                                                                 index === 1 ? '9%' :
-                                                                index === 2 ? '8%' :
-                                                                index === 3 ? '35%' :
+                                                                index === 2 ? '35%' :
+                                                                index === 3 ? '8%' :
                                                                 '17%',
                                                         }}
                                                     >

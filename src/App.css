@@ -13,18 +13,41 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 .header-container {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
     width: 100%;
+    
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    min-height: 10vh;
+
+    min-height: 5vh;
+
+    z-index: 4;
+}
+
+.header-container-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    min-height: 30vh;
+    background-color: theme('colors.grey');
+    border-bottom: 1px solid theme('colors.grey-darker');
+
+    z-index: 4;
 }
 
 .logo-container {
     width: 17rem;
     position: absolute;
-    /* flex: 1; */
-    /* left: 4.6rem; */
+    left: 5%;
     top: 1rem;
     
 }
@@ -36,7 +59,19 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     display: flex;
     list-style-type: none;
     white-space: nowrap;
+    z-index: 4;
 }
+
+.nav-links-fixed {
+    position: fixed;
+    top: 3.5%;
+    right: 13.55%;
+    display: flex;
+    list-style-type: none;
+    white-space: nowrap;
+    z-index: 4;
+}
+
 
 .nav-links a {
     text-decoration: none;
@@ -80,14 +115,15 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3.2rem;
-    padding: 1.7em;
-    background-color: theme('colors.green-bright');
+    height: 0.5rem;
+    padding: 2.2% 0 2.2% 0;
+    background-color: theme('colors.green-light');
     font-size: 0.93em;
-    border: none;
-    border-radius: 0;
+    border: solid 0.5px theme('colors.grey-faded');
+    border-radius: 3px;
     font-family: 'Helvetica', Helvetica, sans-serif;
-    transition: 0.2s;
+    transition: 0.15s;
+    min-width: 13%;
 }
 
 /* Specific style for email sign up button */
@@ -96,11 +132,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     height: 2rem;
     top: 0.15rem;
     position: relative;
+    min-width: 100%;
 }
 
 .btn-green:hover {
     background-color: theme('colors.grey-darkest');
     color: theme('colors.grey-light');
+    border: solid 0.5px theme('colors.grey-light');
 }
 
 
@@ -349,7 +387,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     /* BODY TEXT */
     .content-container {
-        margin: 25% 0 15% 0;
+        margin: 15% 0 15% 0;
         min-width: 300px;
         left: 0;
     }
@@ -382,7 +420,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         top: 0;
         left: 0;
         position: fixed;
-        background: #dadada;
+        background: theme('colors.grey');
         z-index: 5;
         width: 100%;
         /* padding-top: 0px; */
@@ -391,14 +429,15 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
     .logo-container {
-        top: 0.5rem;
         width: 100%;
+        left: -18%;
+        top: 10%;
     }
 
     .logo-container svg {
         vertical-align: middle;
         height: 2rem;
-        margin: 0 auto;
+        margin-left: 28%;
     }
 
     .nav-links {
@@ -420,9 +459,9 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
           display: flex;
           align-items: center;
           justify-content: flex-end;
-          position: relative;
-          top: 0rem;
-          left: 0.5rem;
+          position: absolute;
+          left: 1%;
+          top: -15%;
           margin-right: auto;
           z-index: 3;
       }

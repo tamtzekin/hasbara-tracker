@@ -57,7 +57,7 @@ a {
 }
 
 body {
-    background-color: #dadada;
+    background-color: theme('colors.grey');
     /* font-size: 1.15em; */
     margin: 5% 5% 5% 5%;
 }
@@ -94,7 +94,7 @@ button {
     width: 0.6rem;
     height: 0.8rem;
     vertical-align: 1%;
-    margin-right: 3%;
+    margin-right: 4%;
 }
 
 /* :: after */
@@ -199,7 +199,8 @@ select.claim-dropdown-box::-ms-expand {
 
 /*** SEARCH BAR ***/
 .search-bar-container {
-    display: flex;
+    display: none; /* Hide on desktop for now */
+    /* display: flex; */
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -252,7 +253,7 @@ li.undotted {
 
 /*** TRACKER TABLE ***/
 .tracker-container {
-    margin-top: 5%;
+    margin-top: 30%;
     width: 100%;
     text-wrap: justify;
  }
@@ -321,28 +322,25 @@ table.a:hover {
 }
 
 .claim-tag {
-    border: solid 0.5px;
+    border: solid 0.5px theme('colors.grey-faded');
     padding: 5% 21% 5% 21%;
     border-radius: 3px;
-    /* background: #94ff94; */
-    background: #bffb9b;
+    background: theme('colors.green-light');
 }
 
 .context-tag {
-    border: solid 0.5px;
+    border: solid 0.5px theme('colors.grey-faded');
     padding: 5% 12% 5% 12%;
     border-radius: 3px;
-    /* background: #80ffcc; */
-    background: #b7fbf3;
+    background: theme('colors.blue');
 }
 
 .debunk-tag {
     font-size: 0.95em;
-    border: solid 0.5px;
+    border: solid 0.5px theme('colors.grey-faded');
     padding: 6% 13% 6% 13%;
     border-radius: 3px;
-    /* background: #33ff7d; */
-    background: #78ff96;
+    background: theme('colors.green');
 }
 
 u {
@@ -413,10 +411,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
     
     .claim-tag {
-        padding: 0.5% 1% 0.1% 1%;  
+        padding: 1.8% 1.7% 1.8% 1.7%;
         width: 14%;
-        position: absolute;
-        left: 30%;
+        position: relative;
+        left: 27%;
         text-align: center;
     }
 
@@ -549,14 +547,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
     .source-heading {
-        background: #dcdcdc;
-        padding: 0.3% 0.9% 0.3% 0.9%;
-        border: 0.5px solid black;
+        /* background: #dcdcdc; */
+        /* padding: 0.3% 0.9% 0.3% 0.9%; */
+        /* border: 0.5px solid black; */
         border-radius: 3px;
         width: 20%;
         margin-top: 6%;
         margin-bottom: 3%;
-        text-align: center;
     }
 
     .source-heading::after {

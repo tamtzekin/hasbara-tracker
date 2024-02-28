@@ -253,7 +253,7 @@ li.undotted {
 
 /*** TRACKER TABLE ***/
 .tracker-container {
-    margin-top: 10%;
+    margin-top: 30%;
     width: 100%;
     text-wrap: justify;
  }
@@ -279,7 +279,7 @@ td {
 thead {
     width: 90%;
     text-align: left;
-    margin-top: 10%;
+    margin-top: -7%;
     margin-left: -0.3%;
     border-bottom: 1px dotted #595959;
     background-color: theme('colors.grey');

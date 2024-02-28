@@ -277,18 +277,13 @@ td {
 }
 
 thead {
-    width: 90%;
+    width: 100%;
     text-align: left;
-    margin-top: -7%;
+    margin-top: -5%;
     margin-left: -0.3%;
     border-bottom: 1px dotted #595959;
     background-color: theme('colors.grey');
-    z-index: 4;
- 
-    /* Keeps header titles the same width as table columns */
-    position: fixed;
-    display: table;
-    
+    z-index: 4;    
 }
 
 th {

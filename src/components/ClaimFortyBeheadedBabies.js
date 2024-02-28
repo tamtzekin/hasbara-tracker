@@ -252,7 +252,7 @@ export default function ClaimFortyBeheadedBabies() {
 
 {/* TODO: Refactor this properly to use Logo component */}
 
-            <div className="logo-container mt-">
+            <div className="logo-container mt-7">
                 <Link to="/">
                     {/* <span className="flex">
                         <img className="w-10/12 mt-5" src="/img/ht-logo.png"></img>
@@ -278,12 +278,12 @@ export default function ClaimFortyBeheadedBabies() {
                         <div className="text-lg pl-16 laptop:w-6/12 mb-2 -mt-2 mobile:pl-4">
                             ‘Forty beheaded babies’</div>
                         <div className="
-                            text-sm pl-16 laptop:w-6/12 mb-2 mt-2 text-grey-faded mobile: w-10/12 mobile:pl-4
+                            text-sm pl-16 laptop:w-6/12 laptop:mb-10 mt-2 text-grey-faded mobile: w-10/12 mobile:pl-4
                             ">
-                                Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad',
+                                Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
                     </div>
 
-                    <div>{claimSummary}</div>
+                    {/* <div>{claimSummary}</div> */}
             </div>
         </span>
         
@@ -377,7 +377,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                     <td
                                                         {...cell.getCellProps()}
                                                         style={{
-                                                            padding: '15px',
+                                                            padding: '2% 0 0 0',
                                                             borderBottom: '1px dashed grey',
                                                             overflow: 'hidden',
                                                             width: // Set fixed column widths

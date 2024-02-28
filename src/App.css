@@ -367,10 +367,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
 
-    details > summary {
-        padding-bottom: 4%;
-    }
-    
     details.expandable-text-homepage {
         margin-top: 0%;
         border-bottom: 0.1em dashed #59595994;

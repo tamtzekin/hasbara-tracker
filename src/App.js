@@ -13,6 +13,8 @@ import SubmitClaimForm from './components/SubmitClaimForm';
 import ContactForm from './components/ContactForm';
 import NewsletterSignUpForm from './components/NewsletterSignUpForm';
 
+import FortyBeheadedBabies from './components/ClaimFortyBeheadedBabies';
+
 const App = () => {
     return (
     <>
@@ -28,11 +30,14 @@ const App = () => {
                 <Route path="/contact" element={<ContactForm />} />
                 <Route path="/newsletter" element={<NewsletterSignUpForm />} />
 
+                {/* Individual claim pages */}
+                <Route path="/40-beheaded-babies" element={<FortyBeheadedBabies />} />
+
 
             {/* Route redirects to claim searches */}
                 <Route
                     path="/forty-beheaded-babies"
-                    element={<Navigate to="/tracker?claim=Forty%20beheaded%20babies" replace />}
+                    element={<Navigate to="/40-beheaded-babies" replace />}
                 />
 
                 <Route

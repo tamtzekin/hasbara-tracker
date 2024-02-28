@@ -39,7 +39,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     min-height: 30vh;
     background-color: theme('colors.grey');
-    border-bottom: 1px solid theme('colors.grey-darker');
+    /* border-bottom: 1px solid theme('colors.grey-darker'); */
 
     z-index: 4;
 }

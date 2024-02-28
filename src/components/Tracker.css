@@ -48,9 +48,11 @@ a {
 /* FOOTER */
 .back-to-top {
     position: fixed;
-    margin-left: -4.5%;
+    margin-left: -4%;
+    padding-top: 1%;
     bottom: 0;
-    background: #dadadad9;
+    padding-bottom: 0.5%;
+    background: theme('colors.grey');
     border-radius: 20px;
     width: 100%;
     z-index: 3;
@@ -621,9 +623,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     /*** FOOTER ***/
     .back-to-top {
-        position: fixed;
-        bottom: 0;
-        margin-left: -1%;
+        text-align: center;
     }
     
     

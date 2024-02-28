@@ -354,7 +354,7 @@ a.active {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin-bottom: -3rem;
+    margin-bottom: 10%;
 }
 
 

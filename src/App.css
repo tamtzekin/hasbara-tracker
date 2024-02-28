@@ -201,8 +201,7 @@ details article {
 details[open] article {
     animation: fadeIn 0.3s linear forwards;
     cursor: default;
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin-bottom: 7%;
 }
 
     @keyframes fadeIn {
@@ -367,6 +366,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
 
+    details > summary {
+        padding-bottom: 4%;
+    }
+    
     details.expandable-text-homepage {
         margin-top: 0%;
         border-bottom: 0.1em dashed #59595994;

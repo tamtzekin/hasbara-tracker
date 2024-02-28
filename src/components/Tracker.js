@@ -112,7 +112,7 @@ export default function Tracker() {
 
                                                         {source.archiveLink && (
                                                                 <a href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                    &nbsp;<span className="archive-link">(archive)</span>
+                                                                    &nbsp;<span className="archive-link">Archive</span>
                                                                 </a>
                                                         )}
                                                     </div>
@@ -173,7 +173,7 @@ export default function Tracker() {
                                                 )}                                        
                                         </a>
 
-                                        {/* If there's an archiveLink in the data, add an '(archive)' link next to the source link */}
+                                        {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
                                         {source.archiveLink && ( 
                                                 <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
                                                     <span>Archive</span>

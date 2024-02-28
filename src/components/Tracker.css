@@ -23,7 +23,7 @@ a {
 
 .archive-link {
     color: rgb(96, 96, 96);
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding-left: 3%;
     padding-bottom: 0.%;
     vertical-align:  middle;
@@ -413,7 +413,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         padding: 0.5% 1% 0.1% 1%;  
         width: 14%;
         position: absolute;
-        left: 30%;
+        left: 33%;
         text-align: center;
     }
 
@@ -422,7 +422,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         width: 17%;
         position: absolute;
         text-align: center;
-        left: 30%;
+        left: 33%;
     }
 
     .date {
@@ -436,7 +436,8 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         padding-left: 0.5%;
         padding-right: 0.5%;
         padding-bottom: -0.3%;
-        width: 23.5%;
+        min-width: 27%;
+        padding-right: 20%;
         padding: 0.3% 0% 0.3% 0%;
       }
 
@@ -454,7 +455,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         padding: 0.5% 1% 0.1% 1%;  
         width: 16%;
         position: absolute;
-        left: 30%;
+        left: 33%;
         text-align: center;
     }
 
@@ -537,7 +538,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     /*** SOURCE LINKS ***/
     .source {
-        font-size: 0.85em;
+        font-size: 0.9em;
         margin-bottom: 4%;
     }
 

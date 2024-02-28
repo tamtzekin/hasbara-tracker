@@ -62,6 +62,10 @@ body {
     margin: 5% 5% 5% 5%;
 }
 
+.claim-paragraph {
+    margin-top: 6%;
+}
+
 
 button {
     padding: 10px;
@@ -442,6 +446,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     .data-row {
         margin-top: 4%;
         border-bottom: 0.1em dashed #59595994;
+    }
+
+    .claim-paragraph {
+        margin-top: 3%;
     }
 
     /* Margin spacing above dotted divider/under final source */

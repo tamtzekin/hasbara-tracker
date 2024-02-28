@@ -88,7 +88,7 @@ export default function Tracker() {
                                 <summary><u>{row.original.description.summary}</u>
                                     <span className='expand-text'></span>
                                 </summary>
-                                <article>
+                                <article className="claim-paragraph">
                                     <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
             
                                     {/* On Mobile: render Source links inside the expandable element */}

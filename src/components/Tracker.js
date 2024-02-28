@@ -332,6 +332,7 @@ export default function Tracker() {
                                         </tr>
                                     ))}
                                 </thead>
+                                
                                 <tbody {...getTableBodyProps()}>
                                     {rows.map((row) => {
                                         prepareRow(row);

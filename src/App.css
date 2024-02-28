@@ -29,7 +29,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 .header-container-fixed {
     position: fixed;
-    top: 0;
+    top: -3%;
     left: 0;
     width: 100%;
     
@@ -37,7 +37,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     justify-content: space-around;
     flex-direction: column;
 
-    min-height: 30vh;
+    min-height: 40vh;
     background-color: theme('colors.grey');
     /* border-bottom: 1px solid theme('colors.grey-darker'); */
 
@@ -47,7 +47,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 .logo-container {
     width: 17rem;
     position: absolute;
-    left: 5%;
+    left: 4.3%;
     top: 1rem;
     
 }
@@ -67,6 +67,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     top: 3.5%;
     right: 13.55%;
     display: flex;
+    gap: 10%;
     list-style-type: none;
     white-space: nowrap;
     z-index: 4;
@@ -428,6 +429,11 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         min-height: 5vh;
     }
 
+    .header-container-fixed {
+        border-bottom: 1px solid theme('colors.grey-darker');
+    }
+    
+
     .logo-container {
         width: 100%;
         left: -18%;
@@ -461,7 +467,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
           justify-content: flex-end;
           position: absolute;
           left: 1%;
-          top: -15%;
+          top: 7%;
           margin-right: auto;
           z-index: 3;
       }
@@ -570,7 +576,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
             justify-content: flex-end;
             position: absolute;
             top: 2%;
-            left: 3%;
+            left: 6%;
             z-index: 3;
         }
 

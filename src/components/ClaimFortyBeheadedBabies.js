@@ -16,7 +16,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
 
-export default function FortyBeheadedBabies() {
+export default function ClaimFortyBeheadedBabies() {
     // defines claim tags for dropdown (ClaimFilter.js)
     const uniqueClaimTitles = useMemo(() => {
         const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
@@ -247,19 +247,26 @@ export default function FortyBeheadedBabies() {
 <span className="header-container-fixed">
             <div className="flex-container">
                 <MobileMenu />
+                <div className="mt-20">
                     <Logo />
-                    <span className="mt-20">
-                        <div className="text-md pl-20 w-6/12 mb-2 font-bold">The claim</div>
-                        <div className="text-lg pl-20 w-6/12 mb-2">‘Forty beheaded babies’</div>
-                        <div className="text-sm pl-20 w-6/12 mb-2 text-grey-faded">Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad',
+                </div>
+
+                        <div className="text-md pl-16 laptop:w-6/12 mb-2 font-bold mobile:pl-4">
+                            The claim
+                            </div>
+                        <div className="text-lg pl-16 laptop:w-6/12 mb-2 -mt-2 mobile:pl-4">
+                            ‘Forty beheaded babies’</div>
+                        <div className="
+                            text-sm pl-16 laptop:w-6/12 mb-2 mt-2 text-grey-faded mobile: w-10/12 mobile:pl-4
+                            ">
+                                Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad',
                     </div>
-</span>
 
                     <div>{claimSummary}</div>
             </div>
         </span>
         
-        <div className=" mobile:invisible">
+        <div className="nav-links-fixed mobile:invisible">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
                 <li className="undotted">
                     <NavLink to="/">Claims</NavLink>
@@ -339,6 +346,7 @@ export default function FortyBeheadedBabies() {
                                         </tr>
                                     ))}
                                 </thead>
+                                
                                 <tbody {...getTableBodyProps()}>
                                     {rows.map((row) => {
                                         prepareRow(row);

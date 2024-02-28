@@ -13,7 +13,7 @@ import SubmitClaimForm from './components/SubmitClaimForm';
 import ContactForm from './components/ContactForm';
 import NewsletterSignUpForm from './components/NewsletterSignUpForm';
 
-import FortyBeheadedBabies from './components/ClaimFortyBeheadedBabies';
+import ClaimFortyBeheadedBabies from './components/ClaimFortyBeheadedBabies';
 
 const App = () => {
     return (
@@ -31,7 +31,7 @@ const App = () => {
                 <Route path="/newsletter" element={<NewsletterSignUpForm />} />
 
                 {/* Individual claim pages */}
-                <Route path="/40-beheaded-babies" element={<FortyBeheadedBabies />} />
+                <Route path="/40-beheaded-babies" element={<ClaimFortyBeheadedBabies />} />
 
 
             {/* Route redirects to claim searches */}
@@ -39,6 +39,24 @@ const App = () => {
                     path="/forty-beheaded-babies"
                     element={<Navigate to="/40-beheaded-babies" replace />}
                 />
+
+                <Route
+                    path="/al-ahli-hospital"
+                    element={<Navigate to="/al-ahli-hospital" replace />}
+                />
+                
+                <Route
+                    path="/makeup"
+                    element={<Navigate to="/makeup" replace />}
+                />
+
+    {/* Routes that use search queries */}
+
+                <Route
+                    path="/forty-beheaded-babies"
+                    element={<Navigate to="/tracker?claim=Forty%20beheaded%20babies" replace />}
+                />
+
 
                 <Route
                     path="/al-ahli-attacked"

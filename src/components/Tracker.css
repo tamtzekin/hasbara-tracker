@@ -266,6 +266,8 @@ li.undotted {
 table {
     width: 100%;
     position: relative;
+
+    /* table-layout: fixed; */
 }
 
 td {
@@ -275,13 +277,25 @@ td {
 }
 
 thead {
-    width: 100%;
+    width: 90%;
     text-align: left;
+    margin-top: 10%;
+    margin-left: -0.3%;
+    border-bottom: 1px dotted #595959;
+    background-color: theme('colors.grey');
+    z-index: 4;
+ 
+    /* Keeps header titles the same width as table columns */
+    position: fixed;
+    display: table;
+    
 }
 
 th {
-    padding-bottom: 15px;
-    padding-left: 20px;
+    padding-bottom: 25px;
+    /* padding-left: 20px; */
+    /* width: 100%; */
+    white-space: nowrap;
 }
 
 table.a {
@@ -564,9 +578,9 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     /*** TRACKER TABLE ***/
     .tracker-container {
         width: 100%;
+        margin-top: 25%;
         margin-left: 0%;
         margin-right: 3%;
-        margin-top: 41%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 
     }

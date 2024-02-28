@@ -21,13 +21,12 @@ a {
     z-index: 3;
 }
 
-.archive-link {
-    color: rgb(96, 96, 96);
+/* .archive-link {
+    color: theme('colors.grey-faded');
     font-size: 0.9em;
-    padding-left: 3%;
-    padding-bottom: 0.%;
     vertical-align:  middle;
-}
+    font-style: italic;
+} */
 
 .archive-link::before {
     content: "\a";

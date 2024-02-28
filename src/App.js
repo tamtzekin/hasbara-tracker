@@ -31,13 +31,13 @@ const App = () => {
                 <Route path="/newsletter" element={<NewsletterSignUpForm />} />
 
                 {/* Individual claim pages */}
-                <Route path="/40-beheaded-babies" element={<ClaimFortyBeheadedBabies />} />
+                <Route path="/forty-beheaded-babies" element={<ClaimFortyBeheadedBabies />} />
 
 
             {/* Route redirects to claim searches */}
                 <Route
                     path="/forty-beheaded-babies"
-                    element={<Navigate to="/40-beheaded-babies" replace />}
+                    element={<Navigate to="/forty-beheaded-babies" replace />}
                 />
 
                 <Route

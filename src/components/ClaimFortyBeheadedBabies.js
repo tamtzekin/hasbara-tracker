@@ -229,7 +229,9 @@ export default function ClaimFortyBeheadedBabies() {
             data,
             initialState: {
                 sortBy: [{ id: 'date', desc: false }],
-                globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
+                // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
+
+                globalFilter: 'forty beheaded babies'
             },
             disableSortRemove: true,
         },

@@ -259,7 +259,7 @@ export default function ClaimFortyBeheadedBabies() {
                     </span> */}
                 <svg 
                     preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 1100 250"
+                    viewBox="0 0 1000 350"
                     width="100%"
                     height="100%"
                     fill="none" 
@@ -288,7 +288,7 @@ export default function ClaimFortyBeheadedBabies() {
             </div>
         </span>
         
-        <div className="nav-links-fixed mobile:invisible">
+        <div className="nav-links-fixed top-16 mobile:invisible">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
                 <li className="undotted">
                     <NavLink to="/">Claims</NavLink>

@@ -32,6 +32,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     top: -3%;
     left: 0;
     width: 100%;
+    min-height: 50vh;
     
     display: flex;
     justify-content: space-around;
@@ -45,10 +46,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 .logo-container {
-    width: 17rem;
-    position: absolute;
-    left: 4.3%;
-    top: 1%;
+    /* width: 17rem; */
+    /* position: absolute; */
+    /* left: 4.3%; */
+    /* top: 1%; */
     
 }
 
@@ -354,7 +355,7 @@ a.active {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 

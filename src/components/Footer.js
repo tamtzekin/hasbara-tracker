@@ -42,7 +42,8 @@ const Footer = () => {
 
             {/* Footer links */}
             <ul className="mobile:flex-col mobile:items-left mobile:-ml-14 mobile:pt-5 mobile:-mb-2 mobile:justify-between laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">
-              <li className="mobile:me-2 laptop:me-10 whitespace-nowrap">
+
+              <li className="mobile:me-2 laptop:me-6 whitespace-nowrap">
                 <a href="https://www.paypal.com/donate/?hosted_button_id=44XADNYVGGMPS" target="_blank" rel="noreferrer" className="hover:underline">
                   Support us
                 </a>
@@ -54,9 +55,9 @@ const Footer = () => {
                 </a>
               </li>
 
-              <li className="mobile:me-2 laptop:me-10">
+              <li className="mobile:me-2 laptop:me-6">
                 <a href="https://www.instagram.com/hasbaratracker/" target="_blank" rel="noreferrer" className="hover:underline">
-                  IG
+                  Instagram
                 </a>
               </li>
 

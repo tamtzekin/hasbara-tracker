@@ -410,7 +410,6 @@ export default function ClaimFortyBeheadedBabies() {
                 </div>
 
                     <div className="tracker-container">
-
                         {/* Show 'how to' text when no results are found */}
                         {rows.length === 0 ? (
                             <>
@@ -428,13 +427,20 @@ export default function ClaimFortyBeheadedBabies() {
                                     </ul>
                                 </div>
                             </>
+
                         ) : (
+
                             // Renders all claims data in div blocks, instead of a table
                             <div {...getTableBodyProps()}>
                                 {rows.map((row) => {
                                     prepareRow(row);
                                     return (
-                                        <div key={row.id} className="data-row" style={{ display: 'block', alignItems: 'center' }}>
+                                        <div key={row.id} 
+                                            className="data-row" 
+                                            style={{ 
+                                                display: 'block',
+                                                alignItems: 'center' 
+                                            }}>
                                             {row.cells.map((cell, index) => (
                                                 <div
                                                     key={cell.column.id}

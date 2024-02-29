@@ -159,7 +159,7 @@ export default function ClaimFortyBeheadedBabies() {
 
                             {row.original.sources.map((source, index) => (
                                 <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                    <div key={index} className="source">
+                                    <div key={index} className="source text-xs">
 
                                         <a href={source.sourceLink} target="_blank" rel="noreferrer"
                                         aria-hidden="true" 

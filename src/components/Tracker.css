@@ -273,8 +273,6 @@ li.undotted {
 table {
     width: 100%;
     position: relative;
-
-    table-layout: fixed;
 }
 
 td {

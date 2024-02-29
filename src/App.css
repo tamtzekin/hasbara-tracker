@@ -211,7 +211,7 @@ h2 .expand-text {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 8% 20% 0 20%;
+    margin: 8% 20% 5% 20%;
     padding-bottom: 3%;
     min-width: 500px;
 }    

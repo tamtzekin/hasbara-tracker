@@ -15,7 +15,7 @@ const Footer = () => {
             {/* Newsletter sign-up container */}
             <div className="mobile:mb-4 tablet:mb-20 laptop:-ml-10 laptop:-mb-10 flex items-end">
               {/* Newsletter sign-up text and input field */}
-              <div className="mobile:mb-2 laptop:flex laptop:mb-0.5 desktop:flex md:items-center">
+              <div className="mobile:w-full mobile:mb-2 laptop:flex laptop:mb-0.5 desktop:flex md:items-center">
                 <p className="text-grey-faded text-xs laptop:mt-2.5 laptop:mr-3">
                   Stay updated by email
                 </p>
@@ -30,7 +30,7 @@ const Footer = () => {
               </div>
 
               {/* 'Sign up' button md:mr-auto  */}
-              <div className="md:ml-2 flex items-center ml-2">
+              <div className="mobile:whitespace-nowrap flex items-center ml-2">
                 <button
                   type="submit"
                   className="btn-green sign-up-form"
@@ -40,21 +40,21 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Links */}
-            <ul className="mobile:items-center mobile:-ml-14 mobile:pt-5 mobile:justify-between laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">
-              <li className="laptop:me-10">
+            {/* Footer links */}
+            <ul className="mobile:flex-col mobile:items-left mobile:-ml-14 mobile:pt-5 mobile:-mb-2 mobile:justify-between laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">
+              <li className="mobile:me-2 laptop:me-10 whitespace-nowrap">
                 <a href="https://www.paypal.com/donate/?hosted_button_id=44XADNYVGGMPS" target="_blank" rel="noreferrer" className="hover:underline">
                   Support us
                 </a>
               </li>
 
-              <li className="laptop:me-10">
+              <li className="mobile:me-2 laptop:me-10">
                 <a href="/contact" className="hover:underline">
                   Contact
                 </a>
               </li>
 
-              <li className="laptop:me-10">
+              <li className="mobile:me-2 laptop:me-10">
                 <a href="https://www.instagram.com/hasbaratracker/" target="_blank" rel="noreferrer" className="hover:underline">
                   IG
                 </a>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Logo = () =>{
     return (
         <>
-            <div className="relative w-72 l-4.3 -mt-14">
+            <div className="relative w-72 l-4.3 -mt-14 mobile:w-1/2 mobile:mt-2 mobile:ml-10">
 
             {/* /* width: 17rem; */
     /* position: absolute; */

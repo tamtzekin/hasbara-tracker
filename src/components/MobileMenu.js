@@ -34,7 +34,7 @@ const MobileMenu = () => {
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
                         border: 'none',
-                        background: '#cbcbcb',
+                        background: '#d6d6d6',
                         padding: '20',
                         height: '100%',
                         width: '100%',

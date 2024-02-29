@@ -376,7 +376,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                         style={{
                                                             padding: '3% 3% 0 0',
                                                             borderBottom: '1px dashed grey',
-                                                            overflow: 'hidden',
+                                                            overflow: 'visible',
                                                             width: // Set fixed column widths
                                                                 index === 0 ? '20%' :
                                                                 index === 1 ? '9%' :

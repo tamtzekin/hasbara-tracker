@@ -372,7 +372,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                     <td
                                                         {...cell.getCellProps()}
                                                         style={{
-                                                            padding: '3% 3% 0 0',
+                                                            padding: '3% 3% 2.5% 0',
                                                             borderBottom: '1px dashed grey',
                                                             overflow: 'visible',
                                                             width: // Set fixed column widths

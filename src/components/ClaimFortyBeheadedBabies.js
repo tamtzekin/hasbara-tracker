@@ -259,7 +259,7 @@ export default function ClaimFortyBeheadedBabies() {
                     </span> */}
                 <svg 
                     preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 1000 350"
+                    viewBox="0 0 1100 350"
                     width="100%"
                     height="100%"
                     fill="none" 

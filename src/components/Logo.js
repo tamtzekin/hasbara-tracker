@@ -11,7 +11,7 @@ const Logo = () =>{
                     </span> */}
                 <svg 
                     preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 1100 250"
+                    viewBox="0 0 1050 250"
                     width="100%"
                     height="100%"
                     fill="none" 

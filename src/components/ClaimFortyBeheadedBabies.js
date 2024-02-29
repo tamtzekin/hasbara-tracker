@@ -252,7 +252,7 @@ export default function ClaimFortyBeheadedBabies() {
 
 {/* TODO: Refactor this properly to use Logo component */}
 
-            <div className="logo-container w-64 ml-20">
+            <div className="logo-container w-1/5 mt-1 ml-20">
                 <Link to="/">
                     {/* <span className="flex">
                         <img className="w-10/12 mt-5" src="/img/ht-logo.png"></img>

@@ -38,7 +38,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     justify-content: space-around;
     flex-direction: column;
 
-    min-height: 40vh;
     background-color: theme('colors.grey');
     /* border-bottom: 1px solid theme('colors.grey-darker'); */
 
@@ -65,7 +64,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 .nav-links-fixed {
     position: fixed;
-    top: 3.5%;
     right: 13.55%;
     display: flex;
     gap: 10%;

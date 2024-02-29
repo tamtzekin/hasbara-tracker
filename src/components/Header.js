@@ -12,7 +12,7 @@ const Header = () =>{
         {/* <span className="header-container">
         </span> */}
 
-            <div className="flex flex-wrap items-center justify-between gap-5 relative">
+            <div className="flex flex-wrap items-center justify-between gap-5 relative -mt-6">
                 <MobileMenu />
                 <Logo />
         

@@ -78,8 +78,12 @@ const MobileMenu = () => {
                         Contact
                     </Link>
 
-                    <Link to="http://instagram.com/hasbaratracker" target="_blank">
+                    <Link to="http://instagram.com/hasbaratracker">
                         Instagram
+                    </Link>
+
+                    <Link to="https://twitter.com/hasbaratracker">
+                        X
                     </Link>
                 </div>
             </Modal>

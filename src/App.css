@@ -57,9 +57,9 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 } */
 
 .nav-links {
-    position: absolute;
-    top: 7.5%;
-    right: 11.5%;
+    position: relative;
+    margin-top: 2%;
+    right: 30%;
     display: flex;
     list-style-type: none;
     white-space: nowrap;
@@ -460,7 +460,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         margin-top: 2%;
     }
 
-
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /* MENU */
     .mobile-menu {
@@ -468,15 +467,15 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
           align-items: center;
           justify-content: flex-end;
           position: absolute;
-          left: 2%;
-          top: 9%;
+          right: 0%;
+          top: 26%;
           margin-right: auto;
           z-index: 3;
       }
 
     .bar {
-        width: 0.15rem;
-        height: 0.2rem;
+        width: 0.3rem;
+        height: 0.35rem;
         background-color: #060606;
         margin: 3px 0;
         transition: 0.4s;
@@ -490,7 +489,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
     .arrow-menu {
-        font-size: 2.5em;
+        font-size: 3em;
         margin-bottom: 15px;
     }
 
@@ -499,13 +498,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         flex-direction: column;
         position: absolute;
 
-        top: 2%;
-        left: 3%;
+        top: 3%;
+        right: 5%;
 
         font-family: 'Helvetica', Helvetica, sans-serif;
         font-size: 1.1em;
         line-height: 1.5em;
-        text-align: left;
+        text-align: right;
     }
 
     .break {
@@ -533,6 +532,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 /* Tablets and small desktops */
 @media only screen and (min-width: 577px) and (max-width: 767px) {
 /* Styles for screens between 577px and 767px wide (typically tablets) */
+
+/* HEADER */
+    .logo-container {
+        min-width: 40%;
+        left: 1%;
+        top: -0.05rem;
+    }
     .content-container {
         position: relative;
         margin: 0 20% 0 20%;
@@ -557,13 +563,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
 
-    /* HEADER */
-    /* .logo-container {
-        top: 1rem;
-        width: 15rem;
-        margin-left: 30%;
-        margin-right: 20%;
-    } */
 
     .nav-links {
         display: none;
@@ -577,29 +576,30 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
             align-items: center;
             justify-content: flex-end;
             position: absolute;
-            top: 2%;
-            left: 6%;
+            top: 17%;
+            right: 0%;
             z-index: 3;
         }
 
         .bar {
-        width: 0.3rem;
-        height: 0.4rem;
+        width: 0.4rem;
+        height: 0.5rem;
         background-color: #060606;
-        margin: 4px 0;
+        margin: 8px 0;
         transition: 0.4s;
         }
 
     /* Menu open */
     .arrow-menu {
-        font-size: 2em;
+        font-size: 3em;
         margin-bottom: 2.5%;
     }
 
     .menu-links {
         font-size: 1.2em;
-        text-align: left;
-        margin-left: 1.5rem;
+        text-align: right;
+        margin-right: 1.5rem;
+        margin-top: 5%;
 
         display: flex;
         flex-direction: column;

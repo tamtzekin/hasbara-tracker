@@ -211,8 +211,7 @@ h2 .expand-text {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 0 20% 0 20%;
-    left: 0%;
+    margin: 8% 20% 0 20%;
     padding-bottom: 3%;
     min-width: 500px;
 }    
@@ -267,7 +266,7 @@ details[open] .expand-text::after {
 details { 
     display: inline;
     cursor: crosshair;
-    margin-bottom: 8%;
+    /* margin-bottom: 8%; */
 }
 
 details[open] {
@@ -337,8 +336,7 @@ a.active {
 /* COLUMN LAYOUT */
 
 .columns-container {
-    /* left: 5.1%; */
-    /* top: 15%; */
+    margin-top: 6%;
 
     display: flex;
     justify-content: space-between;

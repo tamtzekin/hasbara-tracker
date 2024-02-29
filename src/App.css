@@ -285,7 +285,7 @@ details > summary::-webkit-details-marker {
 
 details[open] .expand-text::after {
     content: '—';
-    font-size: 0.5em;
+    font-size: 0.7em;
 }
 
 .expand-text {
@@ -297,6 +297,7 @@ details[open] .expand-text::after {
 
 .expand-text::after {
     content: "+";
+    font-size: 1.1em;
 }
 
 
@@ -396,7 +397,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     /* BODY TEXT */
     .content-container {
-        margin: 15% 0 15% 0;
+        margin: 25% 0 15% 0;
         min-width: 300px;
         left: 0;
     }
@@ -419,7 +420,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     
     details.expandable-text-homepage {
         margin-top: 0%;
-        border-bottom: 0.1em dashed #59595994;
+        border-bottom: 0.1em solid theme('colors.grey-darker');
     }
 
 
@@ -466,8 +467,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
           align-items: center;
           justify-content: flex-end;
           position: absolute;
-          left: 1%;
-          top: 7%;
           left: 2%;
           top: 9%;
           margin-right: auto;

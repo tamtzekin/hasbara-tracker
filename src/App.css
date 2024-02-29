@@ -45,7 +45,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 .header-container-border {
     border-bottom: 1px dashed theme('colors.grey-faded');
     z-index: 3;
-    width: 500%;
+    width: 415%;
 }
 
 /* .logo-container {

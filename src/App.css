@@ -39,9 +39,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     flex-direction: column;
 
     background-color: theme('colors.grey');
-    /* border-bottom: 1px solid theme('colors.grey-darker'); */
-
     z-index: 4;
+}
+
+.header-container-border {
+    border-bottom: 1px dashed theme('colors.grey-faded');
+    z-index: 3;
+    width: 500%;
 }
 
 .logo-container {
@@ -239,7 +243,6 @@ details article {
 details[open] article {
     animation: fadeIn 0.3s linear forwards;
     cursor: default;
-    margin-bottom: 7%;
 }
 
     @keyframes fadeIn {
@@ -259,15 +262,16 @@ details[open] .expand-text::after {
 details { 
     display: inline;
     cursor: crosshair;
+    margin-bottom: 8%;
 }
 
 details[open] {
     cursor: n-resize;
+    margin-bottom: 7%;
 }
 
 details > summary {
     list-style: none;
-    font-family: 'Helvetica', Helvetica, sans-serif;
 }
 
 details > summary::-webkit-details-marker {

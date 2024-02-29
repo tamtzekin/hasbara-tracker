@@ -269,7 +269,7 @@ table {
     width: 100%;
     position: relative;
 
-    /* table-layout: fixed; */
+    table-layout: fixed;
 }
 
 td {
@@ -279,20 +279,21 @@ td {
 }
 
 thead {
-    width: 100%;
+    width: 90%;
     text-align: left;
-    margin-top: -5%;
-    margin-left: -0.3%;
     border-bottom: 1px dotted #595959;
     background-color: theme('colors.grey');
-    z-index: 4;    
+    z-index: 4;  
+    position: sticky;
+    top: 42%;
 }
 
 th {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     /* padding-left: 20px; */
     /* width: 100%; */
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    /* position: fixed; */
 }
 
 table.a {

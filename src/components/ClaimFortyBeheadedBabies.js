@@ -282,6 +282,7 @@ export default function ClaimFortyBeheadedBabies() {
                             ">
                                 Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
                     </div>
+
                     </div>
 
                     {/* <div>{claimSummary}</div> */}
@@ -344,7 +345,7 @@ export default function ClaimFortyBeheadedBabies() {
                         ) : (
                             // Renders all claims data as a table
                             <table {...getTableProps()}>
-                                <thead>
+                                <thead className="">
                                     {headerGroups.map((headerGroup) => (
                                         <tr {...headerGroup.getHeaderGroupProps()}>
                                             {headerGroup.headers.map((column) => (
@@ -363,6 +364,8 @@ export default function ClaimFortyBeheadedBabies() {
                                             ))}
                                         </tr>
                                     ))}
+                                                        <div className="header-container-border"></div>
+
                                 </thead>
                                 
                                 <tbody {...getTableBodyProps()}>

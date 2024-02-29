@@ -58,11 +58,12 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 .nav-links {
     position: absolute;
-    top: 3.5%;
-    right: 13.55%;
+    top: 7.5%;
+    right: 11.5%;
     display: flex;
     list-style-type: none;
     white-space: nowrap;
+    gap: 3.5%;
     z-index: 4;
 }
 

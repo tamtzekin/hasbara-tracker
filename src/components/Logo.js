@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 const Logo = () =>{
     return (
         <>
-            <div className="logo-container">
+            <div className="relative w-72 l-4.3 -mt-14">
+
+            {/* /* width: 17rem; */
+    /* position: absolute; */
+    /* left: 4.3%; */
+    /* top: 1%; */}
                 <Link to="/">
                     {/* <span className="flex">
                         <img className="w-10/12 mt-5" src="/img/ht-logo.png"></img>

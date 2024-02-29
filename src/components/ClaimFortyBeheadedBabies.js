@@ -136,7 +136,7 @@ export default function ClaimFortyBeheadedBabies() {
 
             // Context/Claim/Debunk tag
             {
-                Header: ' ',
+                Header: 'Type',
                 accessor: (row) => row.claim.claimText,
                 Cell: ({ row }) => (
                     <span className={row.original.claim.claimTag}>
@@ -252,7 +252,7 @@ export default function ClaimFortyBeheadedBabies() {
 
 {/* TODO: Refactor this properly to use Logo component */}
 
-            <div className="logo-container mt-7">
+            <div className="logo-container w-64 ml-20">
                 <Link to="/">
                     {/* <span className="flex">
                         <img className="w-10/12 mt-5" src="/img/ht-logo.png"></img>
@@ -271,16 +271,17 @@ export default function ClaimFortyBeheadedBabies() {
 
                 </Link>
             </div>
-
-                        <div className="text-md pl-16 laptop: mt-20 laptop:w-6/12 mb-5 font-bold mobile:pl-4">
+                    <div className="container mt-12 ml-20">
+                        <div className="text-md laptop:w-1/2 mb-5 font-bold mobile:pl-4">
                             The claim
                             </div>
-                        <div className="text-lg pl-16 laptop:w-6/12 mb-2 -mt-2 mobile:pl-4">
+                        <div className="text-lg laptop:w-1/2 mb-2 -mt-2 mobile:pl-4">
                             ‘Forty beheaded babies’</div>
                         <div className="
-                            text-sm pl-16 laptop:w-6/12 laptop:mb-10 mt-2 text-grey-faded mobile: w-10/12 mobile:pl-4
+                            text-md laptop:w-1/2 laptop:mb-10 mt-2 text-grey-faded mobile: w-10/12 mobile:pl-4
                             ">
                                 Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
+                    </div>
                     </div>
 
                     {/* <div>{claimSummary}</div> */}
@@ -309,10 +310,6 @@ export default function ClaimFortyBeheadedBabies() {
             </li>
         </div>
 
-
-        {/* TODO: make claim summaries */}
-            {/* Summary of claim */}
-            
 
             {/* Show desktop view of Tracker */}
             {!isMobileView && (
@@ -377,7 +374,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                     <td
                                                         {...cell.getCellProps()}
                                                         style={{
-                                                            padding: '2% 0 0 0',
+                                                            padding: '3% 3% 0 0',
                                                             borderBottom: '1px dashed grey',
                                                             overflow: 'hidden',
                                                             width: // Set fixed column widths
@@ -385,7 +382,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                                 index === 1 ? '9%' :
                                                                 index === 2 ? '35%' :
                                                                 index === 3 ? '8%' :
-                                                                '17%',
+                                                                '14%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}

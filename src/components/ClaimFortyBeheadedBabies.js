@@ -267,7 +267,7 @@ export default function ClaimFortyBeheadedBabies() {
                 </Link>
             </div>
                     <div className="claim-summary container mt-12 mobile:mt-10">
-                        <div className="text-md laptop:w-1/2 mb-5 font-bold mobile:ml-1">
+                        <div className="font-mono text-md laptop:w-1/2 mb-5 font-bold mobile:ml-1">
                             The claim
                             </div>
                         <div className="text-lg laptop:w-1/2 mb-2 -mt-2 mobile:ml-1">
@@ -340,7 +340,7 @@ export default function ClaimFortyBeheadedBabies() {
                         ) : (
                             // Renders all claims data as a table
                             <table {...getTableProps()}>
-                                <thead className="">
+                                <thead className="font-mono">
                                     {headerGroups.map((headerGroup) => (
                                         <tr {...headerGroup.getHeaderGroupProps()}>
                                             {headerGroup.headers.map((column) => (

@@ -30,6 +30,7 @@ module.exports = {
         },
     fontFamily: {
         sans: ['Helvetica', 'sans-serif'],
+        mono: ['LoRes_Regular', 'monospace'],
     },
 
 }

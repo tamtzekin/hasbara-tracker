@@ -252,7 +252,7 @@ export default function ClaimFortyBeheadedBabies() {
 
 {/* TODO: Refactor this properly to use Logo component */}
 
-            <div className="laptop:w-1/5 mt-1 ml-[5%] mobile:w-1/2 mobile:ml-10 mobile:-mt-9">
+            <div className="laptop:w-1/5 mt-1 ml-[5%] mobile:w-1/2 mobile:ml-10 mobile:mt-2">
                 <Link to="/">
                 <svg 
                     preserveAspectRatio="xMidYMid meet"
@@ -268,14 +268,14 @@ export default function ClaimFortyBeheadedBabies() {
 
                 </Link>
             </div>
-                    <div className="claim-summary container mt-12">
-                        <div className="text-md laptop:w-1/2 mb-5 font-bold mobile:pl-4">
+                    <div className="claim-summary container mt-12 mobile:mt-3">
+                        <div className="text-md laptop:w-1/2 mb-5 font-bold mobile:ml-1">
                             The claim
                             </div>
-                        <div className="text-lg laptop:w-1/2 mb-2 -mt-2 mobile:pl-4">
+                        <div className="text-lg laptop:w-1/2 mb-2 -mt-2 mobile:ml-1">
                             ‘Forty beheaded babies’</div>
                         <div className="
-                            text-md laptop:w-1/2 laptop:mb-10 mt-2 text-grey-faded mobile: w-10/12 mobile:pl-4
+                            text-md laptop:w-1/2 laptop:mb-10 mt-2 text-grey-faded mobile:w-10/12 mobile:ml-1
                             ">
                                 Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
                     </div>

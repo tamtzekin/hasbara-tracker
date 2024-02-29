@@ -438,6 +438,8 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     .header-container-fixed {
         border-bottom: 1px solid theme('colors.grey-darker');
+        min-height: 40vh;
+
     }
     
     /* .logo-container svg {

@@ -443,11 +443,12 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         position: absolute;
         text-align: center;
         left: 30%;
+        margin-top: -27.5%;
     }
 
     .date {
         font-size: 1em;
-        background: #cbcbcb;
+        background: theme('colors.grey-darker');
         border: 0.5px solid black;
         border-radius: 3px;
         position: absolute;

@@ -261,13 +261,13 @@ export default function ClaimFortyBeheadedBabies() {
 
 {/* TODO: Refactor this properly to use Logo component */}
 
-            <div className="laptop:w-1/5 mt-1 ml-[5%] mobile:w-1/2 mobile:ml-10 mobile:mt-11">
+            <div className="mobile:w-1/2 mobile:ml-10 mobile:mt-11 laptop:w-1/5 mt-0 ml-[5%]">
                 <Link to="/">
                     <Logo />
                 </Link>
             </div>
                     <div className="claim-summary container mt-12 mobile:mt-10">
-                        <div className="font-mono text-md laptop:w-1/2 mb-5 font-bold mobile:ml-1">
+                        <div className="mobile:ml-1 laptop:w-1/2 font-mono text-md mt-2 mb-5 font-bold">
                             The claim
                             </div>
                         <div className="text-lg laptop:w-1/2 mb-2 -mt-2 mobile:ml-1">
@@ -284,7 +284,7 @@ export default function ClaimFortyBeheadedBabies() {
             </div>
         </span>
         
-        <div className="nav-links-fixed top-16 mobile:invisible">
+        <div className="nav-links-fixed top-20 mobile:invisible">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
                 <li className="undotted">
                     <NavLink to="/">Claims</NavLink>

@@ -139,9 +139,9 @@ export default function ClaimFortyBeheadedBabies() {
                 Header: 'Type',
                 accessor: (row) => row.claim.claimText,
                 Cell: ({ row }) => (
-                    <span className={row.original.claim.claimTag}>
-                        {row.original.claim.claimText}
-                    </span>
+                        <span className={row.original.claim.claimTag}>
+                            {row.original.claim.claimText}
+                        </span>
                 ),
             },
 

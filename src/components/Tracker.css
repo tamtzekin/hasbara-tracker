@@ -333,15 +333,17 @@ table.a:hover {
 }
 
 .claim-tag {
+    font-size: 0.95em;
     border: solid 0.5px theme('colors.grey-faded');
-    padding: 5% 21% 5% 21%;
+    padding: 6.5% 26% 6.5% 26%;
     border-radius: 3px;
     background: theme('colors.green-light');
 }
 
 .context-tag {
+    font-size: 0.95em;
     border: solid 0.5px theme('colors.grey-faded');
-    padding: 5% 12% 5% 12%;
+    padding: 7.5% 18% 7.5% 18%;
     border-radius: 3px;
     background: theme('colors.blue');
 }
@@ -349,7 +351,7 @@ table.a:hover {
 .debunk-tag {
     font-size: 0.95em;
     border: solid 0.5px theme('colors.grey-faded');
-    padding: 6% 13% 6% 13%;
+    padding: 7.5% 18% 7.5% 18%;
     border-radius: 3px;
     background: theme('colors.green');
 }

@@ -70,8 +70,8 @@ const MobileMenu = () => {
 
                     <span className="break"></span>
 
-                    <Link to="/donate" onClick={closeModal}>
-                        Donate
+                    <Link to="/support" onClick={closeModal}>
+                        Support us
                     </Link>
 
                     <Link to="/contact" onClick={closeModal}>

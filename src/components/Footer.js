@@ -44,7 +44,7 @@ const Footer = () => {
             <ul className="mobile:items-center mobile:-ml-16 mobile:pt-5 mobile:justify-between laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">
               <li className="laptop:me-10">
                 <a href="https://www.paypal.com/donate/?hosted_button_id=44XADNYVGGMPS" target="_blank" rel="noreferrer" className="hover:underline">
-                  Donate
+                  Support us
                 </a>
               </li>
 

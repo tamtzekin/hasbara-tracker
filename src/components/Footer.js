@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="mobile:mb-4 tablet:mb-20 laptop:-ml-10 laptop:-mb-10 flex items-end">
               {/* Newsletter sign-up text and input field */}
               <div className="mobile:w-full mobile:mb-2 laptop:flex laptop:mb-0.5 desktop:flex md:items-center">
-                <p className="text-grey-faded text-xs laptop:mt-2.5 laptop:mr-3">
+                <p className="text-grey-faded text-xs laptop:mt-2 laptop:mr-3">
                   Stay updated by email
                 </p>
                 <div className="relative flex items-center">

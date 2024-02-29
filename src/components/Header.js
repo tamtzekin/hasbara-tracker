@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from './Logo';
 import MobileMenu from './MobileMenu';
 import '../App.css';
@@ -9,33 +9,32 @@ const Header = () =>{
 
     return (
         <>
-        <span className="header-container">
-            <div className="flex-container">
+        {/* <span className="header-container">
+        </span> */}
+
+            <div className="flex flex-wrap items-center justify-between gap-5 relative">
                 <MobileMenu />
                 <Logo />
-            </div>
-        </span>
         
-        <div className="nav-links">
-            {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
-                <li className="undotted">
-                    <NavLink to="/">Claims</NavLink>
-                </li>
-            {/* )} */}
+        <div className="flex lg:order-1 max-sm:ml-auto">
+                <div className="nav-links">
+                        <li className="undotted">
+                            <NavLink to="/">Claims</NavLink>
+                        </li>
 
-            {/* {location.pathname !== '/submit-claim' && ( */}
-            <li className="undotted">
-                <NavLink to="/submit-claim">Submit a claim</NavLink>
-            </li>
-            {/* )} */}
+                    <li className="undotted">
+                        <NavLink to="/submit-claim">Submit a claim</NavLink>
+                    </li>
 
-            <li className="undotted">
-                <NavLink to="/volunteer">Volunteer</NavLink>
-            </li>
+                    <li className="undotted">
+                        <NavLink to="/volunteer">Volunteer</NavLink>
+                    </li>
 
-            <li className="undotted">
-                <NavLink to="/about">About</NavLink>
-            </li>
+                    <li className="undotted">
+                        <NavLink to="/about">About</NavLink>
+                    </li>
+                </div>
+            </div>
         </div>
     </>
 

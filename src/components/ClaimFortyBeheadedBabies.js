@@ -246,6 +246,15 @@ export default function ClaimFortyBeheadedBabies() {
     return (
         <>
 
+<head>
+    {/* Twitter link preview */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@hasbaratracker" />
+    <meta name="twitter:title" content="Claim: 40 beheaded babies" />
+    <meta name="twitter:description" content="Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad." />
+    <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
+</head>
+
 <span className="header-container-fixed">
             <div className="flex-container">
                 <MobileMenu />

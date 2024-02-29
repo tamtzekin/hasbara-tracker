@@ -5,7 +5,7 @@ import '../App.css';
 const Footer = () => {
     return (
         <>
-        <div className="footer-container">
+        <div className="footer-container ml-10">
       <footer className="flex-col bg-neutral-900 text-white sm:mt-0 mt-5">
         {/* To centre within column, add: flex items-center */}
         
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
 
             {/* Links */}
-            <ul className="mobile:items-center mobile:-ml-16 mobile:pt-5 mobile:justify-between laptop:justify-end laptop:ml-auto flex flex-row mt-3 text-sm">
+            <ul className="mobile:items-center mobile:-ml-16 mobile:pt-5 mobile:justify-between laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">
               <li className="laptop:me-10">
                 <a href="https://www.paypal.com/donate/?hosted_button_id=44XADNYVGGMPS" target="_blank" rel="noreferrer" className="hover:underline">
                   Donate

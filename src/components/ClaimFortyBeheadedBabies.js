@@ -271,7 +271,7 @@ export default function ClaimFortyBeheadedBabies() {
 
                 </Link>
             </div>
-                    <div className="container mt-12 ml-20">
+                    <div className="claim-summary container mt-12">
                         <div className="text-md laptop:w-1/2 mb-5 font-bold mobile:pl-4">
                             The claim
                             </div>

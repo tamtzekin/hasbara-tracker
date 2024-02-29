@@ -234,6 +234,10 @@ body {
     padding-bottom: 1rem;
 }
 
+.claim-summary {
+    margin-left: 5%;
+}
+
 
 /* Expandable text */
 details article {

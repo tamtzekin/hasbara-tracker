@@ -95,25 +95,25 @@ button {
 /* SOURCE LINKS */
 .icon-link {
     content: '';
-    background: url('/public/img/circle-grey.png') no-repeat center center;
+    background: url('/public/img/circle-grey-dark.png') no-repeat center center;
     background-size: contain;
     display: inline-block;
     width: 0.6rem;
     height: 0.8rem;
-    vertical-align: 1%;
+    vertical-align: -5%;
     margin-right: 4%;
 }
 
 /* :: after */
 .icon-playarrow {
     content: '';
-    background: url('/public/img/play-triangle.svg') no-repeat center center;
+    background: url('/public/img/play-arrow-grey-dark.svg') no-repeat center center;
     background-size: contain;
     display: inline-block;
     width: 0.6rem;
     height: 0.8rem;
     margin-right: 3%;
-    vertical-align: -1%;
+    vertical-align: -5%;
 }
 
 .modal-overlay {

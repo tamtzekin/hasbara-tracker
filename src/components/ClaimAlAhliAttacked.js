@@ -462,9 +462,9 @@ export default function ClaimAlAhliAttacked() {
                                                             width: // Set fixed column widths
                                                                 index === 0 ? '20%' :
                                                                 index === 1 ? '9%' :
-                                                                index === 2 ? '32%' :
-                                                                index === 3 ? '8%' :
-                                                                '14%',
+                                                                index === 2 ? '36%' :
+                                                                index === 3 ? '7%' :
+                                                                '15%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}

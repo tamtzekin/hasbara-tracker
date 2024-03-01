@@ -338,24 +338,24 @@ table.a:hover {
 
 .claim-tag {
     font-size: 0.95em;
-    border: solid 0.5px theme('colors.grey-faded');
-    padding: 2.5% 8.5% 2.5% 8.5%;
+    border: solid 0.5px theme('colors.grey-light');
+    padding: 5% 21% 5% 21%;
     border-radius: 3px;
     background: theme('colors.green-light');
 }
 
 .context-tag {
     font-size: 0.95em;
-    border: solid 0.5px theme('colors.grey-faded');
-    padding: 2.5% 5% 2.5% 5%;
+    border: solid 0.5px theme('colors.grey-light');
+    padding: 5% 12% 5% 12%;
     border-radius: 3px;
     background: theme('colors.blue');
 }
 
 .debunk-tag {
     font-size: 0.95em;
-    border: solid 0.5px theme('colors.grey-faded');
-    padding: 2.5% 5% 2.5% 5%;
+    border: solid 0.5px theme('colors.grey-light');
+    padding: 6% 13% 6% 13%;
     border-radius: 3px;
     background: theme('colors.green');
 }

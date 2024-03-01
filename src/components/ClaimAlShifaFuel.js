@@ -355,24 +355,23 @@ export default function ClaimAlShifaFuel() {
                 <MobileMenu />
             </span>
 
-            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-0 ml-[4.9%]">
+            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 -mt-24 ml-[4.9%]">
                 <Link to="/">
                     <Logo />
                 </Link>
             </div>
-                    <div className="claim-summary container mt-12 mobile:mt-0">
+                    <div className="claim-summary container -mt-5 mobile:mt-0">
                         <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
                             The claim
-                            </div>
+                        </div>
                         <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
-                            ‘Forty beheaded babies’</div>
-                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-7/12 laptop:mb-10 text-md text-grey-faded mt-2">
-                            Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
+                        ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’</div>
+                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-7/12 laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
+                        Israeli officials claimed Hamas refused fuel to keep the hospital running. Israel made the supplies impossible to receive while continuing to bomb hospitals.
+                        </div>
                     </div>
+                    </span>
 
-                    </div>
-
-        </span>
         
         <div className="nav-links-fixed top-20 mobile:invisible">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}

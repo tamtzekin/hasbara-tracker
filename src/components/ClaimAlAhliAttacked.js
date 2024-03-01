@@ -350,29 +350,29 @@ export default function ClaimAlAhliAttacked() {
 
 <span className="header-container-fixed">
 
+
             {/* TODO: mobile menu isgetting stuck */}
+
             <span className="mobile:invisible">
                 <MobileMenu />
             </span>
 
-            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-0 ml-[4.9%]">
+            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 -mt-24 ml-[4.9%]">
                 <Link to="/">
                     <Logo />
                 </Link>
             </div>
-                    <div className="claim-summary container mt-12 mobile:mt-0">
+                    <div className="claim-summary container -mt-5 mobile:mt-0">
                         <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
                             The claim
-                            </div>
+                        </div>
                         <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
-                            ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</div>
-                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-7/12 laptop:mb-10 text-md text-grey-faded mt-2">
-                                Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
+                        ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</div>
+                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-7/12 laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
+                        Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
+                        </div>
                     </div>
-
-                    </div>
-
-        </span>
+                    </span>
         
         <div className="nav-links-fixed top-20 mobile:invisible">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}

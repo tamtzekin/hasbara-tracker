@@ -58,7 +58,7 @@ export default function ClaimFortyBeheadedBabies() {
     const columns = useMemo(() => {
 
 
-        // Mobile: the 'Type' is higher up, so the context/claim/debunk elements can be positioned properly
+        // Mobile: the 'Type' is higher up, so the context/claim/debunk tags can be positioned properly
         if (isMobileView) {    
         return [
             {
@@ -361,7 +361,7 @@ export default function ClaimFortyBeheadedBabies() {
                             </div>
                         <div className="text-lg laptop:w-1/2 mb-2 -mt-2">
                             ‘Forty beheaded babies’</div>
-                        <div className="mobile:w-10/12 laptop:w-1/2 laptop:mb-10 text-md text-grey-faded mt-2">
+                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-1/2 laptop:mb-10 text-md text-grey-faded mt-2">
                                 Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
                     </div>
 

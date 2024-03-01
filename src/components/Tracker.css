@@ -429,11 +429,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     
     /* Type tags */
     .claim-tag {
-        padding: 1.7% 1.7% 1.7% 1.7%;
+        padding: 0.5% 1% 0.1% 1%;  
         width: 14%;
-        position: relative;
-        top: 8%;
-        left: 27.5%;
+        position: absolute;
+        left: 30%;
         text-align: center;
     }
 
@@ -444,6 +443,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         text-align: center;
         left: 30%;
     }
+
 
     .debunk-tag {
         padding: 0.5% 1% 0.1% 1%;  

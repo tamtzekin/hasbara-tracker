@@ -256,32 +256,29 @@ export default function ClaimFortyBeheadedBabies() {
 </head>
 
 <span className="header-container-fixed">
-            <div className="flex-container">
+
+            {/* TODO: mobile menu isgetting stuck */}
+            <span className="mobile:invisible">
                 <MobileMenu />
+            </span>
 
-{/* TODO: Refactor this properly to use Logo component */}
-
-            <div className="mobile:w-1/2 mobile:ml-10 mobile:mt-11 laptop:w-1/5 mt-0 ml-[5%]">
+            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-0 ml-[5%]">
                 <Link to="/">
                     <Logo />
                 </Link>
             </div>
-                    <div className="claim-summary container mt-12 mobile:mt-10">
-                        <div className="mobile:ml-1 laptop:w-1/2 font-mono text-md mt-2 mb-5 font-bold">
+                    <div className="claim-summary container mt-12 mobile:mt-0">
+                        <div className="laptop:w-1/2 font-mono text-md mt-2 mb-5 font-bold">
                             The claim
                             </div>
-                        <div className="text-lg laptop:w-1/2 mb-2 -mt-2 mobile:ml-1">
+                        <div className="text-lg laptop:w-1/2 mb-2 -mt-2">
                             ‘Forty beheaded babies’</div>
-                        <div className="
-                            text-md laptop:w-1/2 laptop:mb-10 mt-2 text-grey-faded mobile:w-10/12 mobile:ml-1
-                            ">
+                        <div className="mobile:w-10/12 laptop:w-1/2 laptop:mb-10 text-md text-grey-faded mt-2">
                                 Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
                     </div>
 
                     </div>
 
-                    {/* <div>{claimSummary}</div> */}
-            </div>
         </span>
         
         <div className="nav-links-fixed top-20 mobile:invisible">

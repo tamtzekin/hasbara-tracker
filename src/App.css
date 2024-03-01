@@ -396,7 +396,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     /* BODY TEXT */
     .content-container {
-        margin: 25% 0 15% 0;
+        margin: 10% 0 15% 0;
         min-width: 300px;
         left: 0;
     }
@@ -439,7 +439,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     .header-container-fixed {
         border-bottom: 1px solid theme('colors.grey-darker');
-        min-height: 50vh;
+        min-height: 40vh;
 
     }
     

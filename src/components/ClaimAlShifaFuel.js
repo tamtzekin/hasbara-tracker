@@ -2,7 +2,6 @@ import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 
-
 import './Tracker.css';
 import '../App.css';
 
@@ -16,7 +15,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
 
-export default function ClaimFortyBeheadedBabies() {
+export default function ClaimAlShifaFuel() {
     // defines claim tags for dropdown (ClaimFilter.js)
     const uniqueClaimTitles = useMemo(() => {
         const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
@@ -319,7 +318,7 @@ export default function ClaimFortyBeheadedBabies() {
                 sortBy: [{ id: 'date', desc: false }],
                 // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
 
-                globalFilter: 'forty beheaded babies'
+                globalFilter: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas'
             },
             disableSortRemove: true,
         },
@@ -360,9 +359,9 @@ export default function ClaimFortyBeheadedBabies() {
                             The claim
                             </div>
                         <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
-                            ‘Forty beheaded babies’</div>
+                            ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’</div>
                         <div className="mobile:w-[90%] mobile:text-xs laptop:w-7/12 laptop:mb-10 text-md text-grey-faded mt-2">
-                                Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
+                                Israeli officials claimed the director of Al-Shifa Hospital refused a supply of fuel. Israel made it impossible for the hospital to receive the fuel.
                     </div>
 
                     </div>

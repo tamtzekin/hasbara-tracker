@@ -14,6 +14,9 @@ import ContactForm from './components/ContactForm';
 import NewsletterSignUpForm from './components/NewsletterSignUpForm';
 
 import ClaimFortyBeheadedBabies from './components/ClaimFortyBeheadedBabies';
+import ClaimAlAhliAttacked from './components/ClaimAlAhliAttacked';
+import ClaimAlShifaFuel from './components/ClaimAlShifaFuel';
+
 
 const App = () => {
     return (
@@ -32,6 +35,8 @@ const App = () => {
 
                 {/* Individual claim pages */}
                 <Route path="/forty-beheaded-babies" element={<ClaimFortyBeheadedBabies />} />
+                <Route path="/al-ahli-attacked" element={<ClaimAlAhliAttacked />} />
+                <Route path="/al-shifa-fuel" element={<ClaimAlShifaFuel />} />
 
 
             {/* Route redirects to claim searches */}
@@ -41,8 +46,8 @@ const App = () => {
                 />
 
                 <Route
-                    path="/al-ahli-hospital"
-                    element={<Navigate to="/al-ahli-hospital" replace />}
+                    path="/al-ahli-attacked"
+                    element={<Navigate to="/al-ahli-attacked" replace />}
                 />
                 
                 <Route

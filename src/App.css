@@ -317,6 +317,17 @@ a.active {
     margin-bottom: 1.2rem;
 }
 
+.claim-link::before {
+    content: '';
+    background: url('/public/img/arrow-red.svg') no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.8rem;
+    vertical-align: -5%;
+    margin-right: 2%;
+}
+
 .claim-coming-soon {
     text-decoration: none;
     color: rgb(94, 94, 94);

@@ -458,7 +458,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                         {...cell.getCellProps()}
                                                         style={{
                                                             padding: '3% 3% 2.5% 0',
-                                                            borderBottom: '1px dashed grey',
+                                                            borderBottom: '1px dashed #5e5e5e',
                                                             overflow: 'visible',
                                                             width: // Set fixed column widths
                                                                 index === 0 ? '20%' :

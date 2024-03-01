@@ -43,7 +43,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 .header-container-border {
-    border-bottom: 1px dashed theme('colors.grey-faded');
+    border-bottom: 1px dashed theme('colors.grey-darker');
     z-index: 3;
     width: 415%;
 }

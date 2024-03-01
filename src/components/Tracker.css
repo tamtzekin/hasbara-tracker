@@ -284,7 +284,7 @@ td {
 thead {
     width: 90%;
     text-align: left;
-    border-bottom: 1px dotted #595959;
+    border-bottom: 1px dashed #595959;
     background-color: theme('colors.grey');
     z-index: 4;  
     position: sticky;

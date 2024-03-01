@@ -1250,7 +1250,7 @@ const data = [
     date: '20 Oct 2023',
 
     claim: {
-        claimText: 'debunk',
+        claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
 
@@ -1285,7 +1285,7 @@ const data = [
     date: '20 Oct 2023',
 
     claim: {
-        claimText: 'debunk',
+        claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
 

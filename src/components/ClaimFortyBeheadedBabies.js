@@ -355,7 +355,7 @@ export default function ClaimFortyBeheadedBabies() {
                 <MobileMenu />
             </span>
 
-            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-0 ml-[5%]">
+            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-0 ml-[4.9%]">
                 <Link to="/">
                     <Logo />
                 </Link>

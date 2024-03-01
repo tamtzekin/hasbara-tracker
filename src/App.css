@@ -478,7 +478,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
           justify-content: flex-end;
           position: absolute;
           right: 0%;
-          top: 26%;
+          top: 50%;
           margin-right: auto;
           z-index: 3;
       }

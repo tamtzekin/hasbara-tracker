@@ -2,7 +2,6 @@ import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 
-
 import './Tracker.css';
 import '../App.css';
 
@@ -122,9 +121,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                                         {!source.videoPreviewLink && (
                                                                             <span className='icon-link'></span>
                                                                         )}
-                                                                        
                                                                         <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-            
                                                                     </a>
             
                                                                     {source.archiveLink && (
@@ -254,34 +251,42 @@ export default function ClaimFortyBeheadedBabies() {
                                                     className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
                                                         {/* If there's a video preview available, show a play button icon */}
                                                         {source.videoPreviewLink && (
-                                                            <>
-                                                                <span className='icon-playarrow'></span>
-                                                            </>
+                                                                <ul className='icon-playarrow'>
+                                                                    <li>
+                                                                        <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                    </li>
+                                                                </ul>
                                                         )}
             
                                                         {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
                                                         {!source.videoPreviewLink && (
-                                                            <>
-                                                                <div className='icon-link'></div>
-                                                            </>
+                                                                <ul className='icon-link'>
+                                                                    <li>
+                                                                        <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                    </li>
+                                                                </ul>
                                                         )}
             
                                                         {/* If a source has been deleted by the original publisher, show a red strikethrough */}
-                                                        {source.hasBeenDeleted === 'true' ? (
+                                                        {/* {source.hasBeenDeleted === 'true' ? (
                                                             <strike style={{color:'red'}}>
                                                                 <span style={{color:'grey'}}>{source.sourceName}</span>
                                                             </strike>
             
                                                             ) : (
                                                                 <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                            )}                                        
+                                                            )}                                         */}
                                                     </a>
             
                                                     {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
                                                     {source.archiveLink && ( 
+                                                        <ul>
+                                                        <li className="ml-[11.5%] -mt-6">
                                                             <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
-                                                                <span className="text-grey-faded text-xs italic ml-4">Archive</span>
+                                                                <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
                                                             </a>
+                                                        </li>
+                                                        </ul>
                                                         )}
             
                                                         {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
@@ -319,7 +324,7 @@ export default function ClaimFortyBeheadedBabies() {
                 sortBy: [{ id: 'date', desc: false }],
                 // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
 
-                globalFilter: 'forty beheaded babies'
+                globalFilter: 'Forty beheaded babies'
             },
             disableSortRemove: true,
         },
@@ -338,7 +343,7 @@ export default function ClaimFortyBeheadedBabies() {
     {/* Twitter link preview */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
-    <meta name="twitter:title" content="Claim: 40 beheaded babies" />
+    <meta name="twitter:title" content="Claim: Forty beheaded babies" />
     <meta name="twitter:description" content="Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad." />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
@@ -362,7 +367,7 @@ export default function ClaimFortyBeheadedBabies() {
                         <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
                             ‘Forty beheaded babies’</div>
                         <div className="mobile:w-[90%] mobile:text-xs laptop:w-7/12 laptop:mb-10 text-md text-grey-faded mt-2">
-                                Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
+                            Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
                     </div>
 
                     </div>
@@ -463,9 +468,9 @@ export default function ClaimFortyBeheadedBabies() {
                                                             width: // Set fixed column widths
                                                                 index === 0 ? '20%' :
                                                                 index === 1 ? '9%' :
-                                                                index === 2 ? '32%' :
-                                                                index === 3 ? '8%' :
-                                                                '14%',
+                                                                index === 2 ? '36%' :
+                                                                index === 3 ? '7%' :
+                                                                '15%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}

@@ -3,7 +3,7 @@
 a[target="_blank"]::after {
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
     margin: 0 3px 0 5px;
-    white-space:  nowrap;
+    white-space: nowrap;
     opacity: 0;
     transition: opacity 0.2s ease;
 }
@@ -27,11 +27,6 @@ a {
     vertical-align:  middle;
     font-style: italic;
 } */
-
-.archive-link::before {
-    content: "\a";
-    white-space: pre;
-}
   
 .arrow {
     font-size: 3.8em;
@@ -93,27 +88,40 @@ button {
 
 
 /* SOURCE LINKS */
-.icon-link {
-    content: '';
-    background: url('/public/img/circle-grey-dark.png') no-repeat center center;
-    background-size: contain;
-    display: inline-block;
-    width: 0.6rem;
-    height: 0.8rem;
-    vertical-align: -5%;
-    margin-right: 4%;
+
+li span {
+    position: relative;
+    left: 2%;
+    top: 0;
 }
 
-/* :: after */
-.icon-playarrow {
+.icon-link li {
     content: '';
-    background: url('/public/img/play-arrow-grey-dark.svg') no-repeat center center;
-    background-size: contain;
-    display: inline-block;
-    width: 0.6rem;
-    height: 0.8rem;
-    margin-right: 3%;
-    vertical-align: -5%;
+    /* background: url('/public/img/circle-grey-dark.png') no-repeat center center; */
+    list-style-image: url('/public/img/circle-grey-dark.png');
+    /* background-size: contain; */
+    /* display: inline-block; */
+    /* width: 0.1rem; */
+    /* height: 0.8rem; */
+    /* vertical-align: -5%; */
+    /* margin-right: 5%; */
+    /* list-style: square; */
+    margin-left: 12%;
+}
+
+.icon-playarrow li {
+    content: '';
+    /* background: url('/public/img/play-arrow-grey-dark.svg') no-repeat center center; */
+    list-style-image: url('/public/img/play-arrow-grey-dark.svg');
+    /* background-size: contain; */
+    /* display: inline-block; */
+    /* width: 0.6rem; */
+    /* height: 0.8rem; */
+    /* width: 16px; */
+    /* height: 16px; */
+    /* margin-right: 3%; */
+    /* vertical-align: -5%; */
+    margin-left: 12%;
 }
 
 .modal-overlay {

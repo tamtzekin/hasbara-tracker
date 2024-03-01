@@ -121,9 +121,7 @@ export default function ClaimAlAhliAttacked() {
                                                                         {!source.videoPreviewLink && (
                                                                             <span className='icon-link'></span>
                                                                         )}
-                                                                        
                                                                         <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-            
                                                                     </a>
             
                                                                     {source.archiveLink && (
@@ -253,34 +251,42 @@ export default function ClaimAlAhliAttacked() {
                                                     className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
                                                         {/* If there's a video preview available, show a play button icon */}
                                                         {source.videoPreviewLink && (
-                                                            <>
-                                                                <span className='icon-playarrow'></span>
-                                                            </>
+                                                                <ul className='icon-playarrow'>
+                                                                    <li>
+                                                                        <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                    </li>
+                                                                </ul>
                                                         )}
             
                                                         {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
                                                         {!source.videoPreviewLink && (
-                                                            <>
-                                                                <div className='icon-link'></div>
-                                                            </>
+                                                                <ul className='icon-link'>
+                                                                    <li>
+                                                                        <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                    </li>
+                                                                </ul>
                                                         )}
             
                                                         {/* If a source has been deleted by the original publisher, show a red strikethrough */}
-                                                        {source.hasBeenDeleted === 'true' ? (
+                                                        {/* {source.hasBeenDeleted === 'true' ? (
                                                             <strike style={{color:'red'}}>
                                                                 <span style={{color:'grey'}}>{source.sourceName}</span>
                                                             </strike>
             
                                                             ) : (
                                                                 <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                            )}                                        
+                                                            )}                                         */}
                                                     </a>
             
                                                     {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
                                                     {source.archiveLink && ( 
+                                                        <ul>
+                                                        <li className="ml-[11.5%] -mt-6">
                                                             <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
-                                                                <span className="text-grey-faded text-xs italic ml-4">Archive</span>
+                                                                <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
                                                             </a>
+                                                        </li>
+                                                        </ul>
                                                         )}
             
                                                         {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}

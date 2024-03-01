@@ -357,7 +357,7 @@ export default function ClaimAlAhliAttacked() {
                 <MobileMenu />
             </span>
 
-            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-[-3.3%] ml-[4.9%]">
+            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-[-5.15%] ml-[4.82%]">
                 <Link to="/">
                     <Logo />
                 </Link>
@@ -372,9 +372,8 @@ export default function ClaimAlAhliAttacked() {
                         Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
                         </div>
                     </div>
-                    </span>
         
-        <div className="nav-links-fixed top-20 mobile:invisible">
+        <div className="nav-links-fixed top-[10%] mobile:invisible">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
                 <li className="undotted">
                     <NavLink to="/">Claims</NavLink>
@@ -395,6 +394,7 @@ export default function ClaimAlAhliAttacked() {
                 <NavLink to="/about">About</NavLink>
             </li>
         </div>
+        </span>
 
 
             {/* Show desktop view of Tracker */}

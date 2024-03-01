@@ -357,7 +357,7 @@ export default function ClaimAlAhliAttacked() {
                 <MobileMenu />
             </span>
 
-            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 -mt-24 ml-[4.9%]">
+            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-[-3.3%] ml-[4.9%]">
                 <Link to="/">
                     <Logo />
                 </Link>

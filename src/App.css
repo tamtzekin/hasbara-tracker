@@ -69,9 +69,9 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 .nav-links-fixed {
     position: fixed;
-    right: 13.55%;
+    right: 12.8%;
     display: flex;
-    gap: 10%;
+    gap: 8.4%;
     list-style-type: none;
     white-space: nowrap;
     z-index: 4;

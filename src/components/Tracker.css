@@ -427,11 +427,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         padding: 0.3% 0% 0.3% 0%; */
     }
     
+    /* Type tags */
     .claim-tag {
-        padding: 1.8% 1.7% 1.8% 1.7%;
+        padding: 1.7% 1.7% 1.7% 1.7%;
         width: 14%;
         position: relative;
-        left: 27%;
+        top: 8%;
+        left: 27.5%;
         text-align: center;
     }
 
@@ -441,7 +443,14 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         position: absolute;
         text-align: center;
         left: 30%;
-        margin-top: -27.5%;
+    }
+
+    .debunk-tag {
+        padding: 0.5% 1% 0.1% 1%;  
+        width: 16%;
+        position: absolute;
+        left: 30%;
+        text-align: center;
     }
 
     .date {
@@ -460,7 +469,8 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
       }
 
     .data-row {
-        margin-top: 4%;
+        margin-top: 8%;
+        padding-bottom: 15px;
         border-bottom: 0.1em dashed #59595994;
     }
 
@@ -473,13 +483,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         margin-top: 1%;
     }
 
-    .debunk-tag {
-        padding: 0.5% 1% 0.1% 1%;  
-        width: 16%;
-        position: absolute;
-        left: 30%;
-        text-align: center;
-    }
 
     /* Specific styles to tracker grid, different to <details> on other pages */
     details[open] {
@@ -487,7 +490,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
     details {
-        margin-top: 12%;
+        margin-top: 15%;
         line-height: 1.45rem;
     }
     

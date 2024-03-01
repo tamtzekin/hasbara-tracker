@@ -55,9 +55,12 @@ export default function ClaimFortyBeheadedBabies() {
         ]
     )
     // Pull all the claims data
-    const columns = useMemo(
-        () => [
-            // Claim title eg. 'Forty beheaded babies'
+    const columns = useMemo(() => {
+
+
+        // Mobile: the 'Type' is higher up, so the context/claim/debunk elements can be positioned properly
+        if (isMobileView) {    
+        return [
             {
                 Header: 'The claim',
                 accessor: 'claimTitle',
@@ -80,140 +83,225 @@ export default function ClaimFortyBeheadedBabies() {
                     </div>
                 ),
             },
-            
-            // Detailed description on each claim
-            {
-                Header: 'Details',
-                accessor: (row) => `${row.description.summary} ${row.description.details}`,
-                Cell: ({ row }) => (
-                    <>
-                        <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
-                            <details>
-                                <summary><u>{row.original.description.summary}</u>
-                                    <span className='expand-text'></span>
-                                </summary>
-                                <article className="claim-paragraph">
-                                    <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
-            
-            
-                                    {/* On Mobile: render Source links inside the expandable element */}
-                                    {isMobileView && (
-                                        <>
-                                            <div className="source-heading"></div>
-                                            {row.original.sources.map((source, index) => (
-                                                <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                                    <div key={index} className="source">
-                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                            {source.videoPreviewLink && (
-                                                                <span className='icon-playarrow'></span>
-                                                            )}
-                                                            {!source.videoPreviewLink && (
-                                                                <span className='icon-link'></span>
-                                                            )}
-                                                            
-                                                            <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
 
-                                                        </a>
+                        // Context/Claim/Debunk tag
+                        {
+                            Header: 'Type',
+                            accessor: (row) => row.claim.claimText,
+                            Cell: ({ row }) => (
+                                    <span className={row.original.claim.claimTag}>
+                                        {row.original.claim.claimText}
+                                    </span>
+                            ),
+                        },
 
-                                                        {source.archiveLink && (
-                                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                    <span className="text-grey-faded italic text-xs ml-4">Archive</span>
-                                                                </a>
-                                                        )}
-                                                    </div>
-                                                </VideoPlayer>
-                                            ))}
-                                        </>
-                                    )}
+
+                        // Detailed description on each claim
+                        {
+                            Header: 'Details',
+                            accessor: (row) => `${row.description.summary} ${row.description.details}`,
+                            Cell: ({ row }) => (
+                                <>
+                                    <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
+                                        <details>
+                                            <summary><u>{row.original.description.summary}</u>
+                                                <span className='expand-text'></span>
+                                            </summary>
+                                            <article className="claim-paragraph">
+                                                <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+                        
+                                                {/* Render Source links within the expandable element */}
+                                                        <div className="source-heading"></div>
+                                                        {row.original.sources.map((source, index) => (
+                                                            <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                                                <div key={index} className="source">
+                                                                    <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                                        {source.videoPreviewLink && (
+                                                                            <span className='icon-playarrow'></span>
+                                                                        )}
+                                                                        {!source.videoPreviewLink && (
+                                                                            <span className='icon-link'></span>
+                                                                        )}
+                                                                        
+                                                                        <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
             
+                                                                    </a>
+            
+                                                                    {source.archiveLink && (
+                                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                                <span className="text-grey-faded italic text-xs ml-4">Archive</span>
+                                                                            </a>
+                                                                    )}
+                                                                </div>
+                                                            </VideoPlayer>
+                                                        ))}
+                                            </article>
+                                        </details>
+                                    </div>
+                                </>
+                            ),
+                        },
+        ];
+
+        // Render desktop tracker, with different order of columns
+        } else {
+            return [
+
+                {
+                    Header: 'The claim',
+                    accessor: 'claimTitle',
+                    Cell: ({ cell }) => (
+                        // TODO: Do we want the claim name clickable or not
+                        <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
+                    )
+                },
+
+                {
+                    Header: 'Date',
+                    accessor: 'date',
+                    sortType: (rowA, rowB, columnId) => {
+                        const dateA = new Date(rowA.values[columnId]);
+                        const dateB = new Date(rowB.values[columnId]);
+                        return dateA.getTime() - dateB.getTime();
+                    },
+                    Cell: ({ cell }) => (
+                        <div>
+                            {cell.value}
+                        </div>
+                    ),
+                },
+                
+                // Detailed description on each claim
+                {
+                    Header: 'Details',
+                    accessor: (row) => `${row.description.summary} ${row.description.details}`,
+                    Cell: ({ row }) => (
+                        <>
+                            <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
+                                <details>
+                                    <summary><u>{row.original.description.summary}</u>
+                                        <span className='expand-text'></span>
+                                    </summary>
+                                    <article className="claim-paragraph">
+                                        <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+                
+                
+                                        {/* On Mobile: render Source links inside the expandable element */}
+                                        {isMobileView && (
+                                            <>
+                                                <div className="source-heading"></div>
+                                                {row.original.sources.map((source, index) => (
+                                                    <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                                        <div key={index} className="source">
+                                                            <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                                {source.videoPreviewLink && (
+                                                                    <span className='icon-playarrow'></span>
+                                                                )}
+                                                                {!source.videoPreviewLink && (
+                                                                    <span className='icon-link'></span>
+                                                                )}
+                                                                
+                                                                <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+
+                                                            </a>
+
+                                                            {source.archiveLink && (
+                                                                    <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                        <span className="text-grey-faded italic text-xs ml-4">Archive</span>
+                                                                    </a>
+                                                            )}
+                                                        </div>
+                                                    </VideoPlayer>
+                                                ))}
+                                            </>
+                                        )}
                                 </article>
                             </details>
                         </div>
                     </>
                 ),
             },
+            
 
+                        // Context/Claim/Debunk tag
+                        {
+                            Header: 'Type',
+                            accessor: (row) => row.claim.claimText,
+                            Cell: ({ row }) => (
+                                    <span className={row.original.claim.claimTag}>
+                                        {row.original.claim.claimText}
+                                    </span>
+                            ),
+                        },
+                        {
+                            Header: 'Sources',
+                            accessor: 'sources',
+                            Cell: ({ row }) => {
+                                const sources = row.original.sources || [];
+            
+                                // On Desktop: render the sources on the right side. If on mobile, hide them.
+                                return (
+                                    <>
+                                        <div className="source-heading"></div>
+            
+                                        {row.original.sources.map((source, index) => (
+                                            <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                                <div key={index} className="source text-xs">
+            
+                                                    <a href={source.sourceLink} target="_blank" rel="noreferrer"
+                                                    aria-hidden="true" 
+                                                    // sets class if source is a deleted source
+                                                    className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
+                                                        {/* If there's a video preview available, show a play button icon */}
+                                                        {source.videoPreviewLink && (
+                                                            <>
+                                                                <span className='icon-playarrow'></span>
+                                                            </>
+                                                        )}
+            
+                                                        {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
+                                                        {!source.videoPreviewLink && (
+                                                            <>
+                                                                <div className='icon-link'></div>
+                                                            </>
+                                                        )}
+            
+                                                        {/* If a source has been deleted by the original publisher, show a red strikethrough */}
+                                                        {source.hasBeenDeleted === 'true' ? (
+                                                            <strike style={{color:'red'}}>
+                                                                <span style={{color:'grey'}}>{source.sourceName}</span>
+                                                            </strike>
+            
+                                                            ) : (
+                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            )}                                        
+                                                    </a>
+            
+                                                    {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
+                                                    {source.archiveLink && ( 
+                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
+                                                                <span className="text-grey-faded text-xs italic ml-4">Archive</span>
+                                                            </a>
+                                                        )}
+            
+                                                        {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
+                                                        <span className="visually-hidden">Opens in new tab</span>
+                                                </div>
+                                            </VideoPlayer>
+                                        ))}
+                                    </>
+                                );
+                                
+                            },
+                        },
+                        
 
-            // Context/Claim/Debunk tag
-            {
-                Header: 'Type',
-                accessor: (row) => row.claim.claimText,
-                Cell: ({ row }) => (
-                        <span className={row.original.claim.claimTag}>
-                            {row.original.claim.claimText}
-                        </span>
-                ),
-            },
+    
 
-            {
-                Header: 'Sources',
-                accessor: 'sources',
-                Cell: ({ row }) => {
-                    const sources = row.original.sources || [];
+            ];
+        }
+    }, [isMobileView]);
 
-                    // On Desktop: render the sources on the right side. If on mobile, hide them.
-                    if (!isMobileView) {
-                    return (
-                        <>
-                            <div className="source-heading"></div>
-
-                            {row.original.sources.map((source, index) => (
-                                <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                    <div key={index} className="source text-xs">
-
-                                        <a href={source.sourceLink} target="_blank" rel="noreferrer"
-                                        aria-hidden="true" 
-                                        // sets class if source is a deleted source
-                                        className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
-                                            {/* If there's a video preview available, show a play button icon */}
-                                            {source.videoPreviewLink && (
-                                                <>
-                                                    <span className='icon-playarrow'></span>
-                                                </>
-                                            )}
-
-                                            {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
-                                            {!source.videoPreviewLink && (
-                                                <>
-                                                    <div className='icon-link'></div>
-                                                </>
-                                            )}
-
-                                            {/* If a source has been deleted by the original publisher, show a red strikethrough */}
-                                            {source.hasBeenDeleted === 'true' ? (
-                                                <strike style={{color:'red'}}>
-                                                    <span style={{color:'grey'}}>{source.sourceName}</span>
-                                                </strike>
-
-                                                ) : (
-                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                )}                                        
-                                        </a>
-
-                                        {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
-                                        {source.archiveLink && ( 
-                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
-                                                    <span className="text-grey-faded text-xs italic ml-4">Archive</span>
-                                                </a>
-                                            )}
-
-                                            {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
-                                            <span className="visually-hidden">Opens in new tab</span>
-                                    </div>
-                                </VideoPlayer>
-                            ))}
-                        </>
-                    );
-                    
-                    // On Mobile: don't show the sources in the last column
-                    } else {
-                        return null;
-                    }
-                },
-            },
-        ],
-        []
-    );
 
     const {
         getTableProps,

@@ -355,11 +355,33 @@ export default function ClaimFortyBeheadedBabies() {
                 <MobileMenu />
             </span>
 
-            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:-mt-13 laptop:w-1/5 mt-[-12%] ml-[4.82%]">
+            <div className="nav-links-fixed top-[10%] mobile:invisible">
+                <li className="undotted">
+                    <NavLink to="/">Claims</NavLink>
+                </li>
+
+            <li className="undotted">
+                <NavLink to="/submit-claim">Submit a claim</NavLink>
+            </li>
+
+            <li className="undotted">
+                <NavLink to="/volunteer">Volunteer</NavLink>
+            </li>
+
+            <li className="undotted">
+                <NavLink to="/about">About</NavLink>
+            </li>
+        </div>
+
+
+<span className="">
+            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:-mt-13 laptop:w-1/5 mt-[-5%] ml-[4.82%]">
                 <Link to="/">
                     <Logo />
                 </Link>
             </div>
+
+    </span>
                     <div className="claim-summary container -mt-5 mobile:mt-0">
                         <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
                             The claim
@@ -371,30 +393,6 @@ export default function ClaimFortyBeheadedBabies() {
                     </div>
 
                     </div>
-
-
-                    <div className="nav-links-fixed top-[10%] mobile:invisible">
-            {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
-                <li className="undotted">
-                    <NavLink to="/">Claims</NavLink>
-                </li>
-            {/* )} */}
-
-            {/* {location.pathname !== '/submit-claim' && ( */}
-            <li className="undotted">
-                <NavLink to="/submit-claim">Submit a claim</NavLink>
-            </li>
-            {/* )} */}
-
-            <li className="undotted">
-                <NavLink to="/volunteer">Volunteer</NavLink>
-            </li>
-
-            <li className="undotted">
-                <NavLink to="/about">About</NavLink>
-            </li>
-        </div>
-
 
         </span>
         

@@ -1878,7 +1878,7 @@ const data = [
     },
     description: {
         summary: 'Israeli Foreign Affairs X account posts audio clip and alleged footage of Israeli forces delivering fuel to Al-Shifa',
-        details: 'The official Israeli Ministry of Foreign Affairs account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liaison officer with the Israeli military. They also shared alongside it in the single post a video, alleging it is footage of Israeli forces delivering fuel to Al-Shifa Hospital.<br><br>The post reads:<br> ‘Breaking: Hamas prevented the Shifa Hospital from receiving 300 liters of fuel from the IDF for urgent medical purposes.<br>📸 (left) A recorded conversation between an IDF officer and a senior official in the health ministry in Gaza who states that the Hamas Health Ministry prevented them from receiving the fuel.<br>📸 (right) Footage of IDF delivering fuel.’'
+        details: 'The official Israeli Ministry of Foreign Affairs account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liaison officer with the Israeli military. They also shared alongside it in the single post a video, alleging it is footage of Israeli forces delivering fuel to Al-Shifa Hospital.<br><br>The post reads:<br><br>‘Breaking: Hamas prevented the Shifa Hospital from receiving 300 liters of fuel from the IDF for urgent medical purposes.<br>📸 (left) A recorded conversation between an IDF officer and a senior official in the health ministry in Gaza who states that the Hamas Health Ministry prevented them from receiving the fuel.<br>📸 (right) Footage of IDF delivering fuel.’'
     },
     sources: [
         {
@@ -1898,7 +1898,7 @@ const data = [
     },
     description: {
         summary: 'Israeli military spokesperson for Arab media says 300L of fuel offered that Hamas rejected',
-        details: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br><br>The post, written in Arabic and translated to English, stated:<br><br>"An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!"',
+        details: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br><br>The post, written in Arabic and translated to English, stated:<br><br>‘An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!’',
     },
     sources: [
         {
@@ -1970,28 +1970,7 @@ const data = [
     },
     description: {
         summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
-        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri’i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
-    },
-    // MISSING
-    sources: [
-        {
-            sourceName: 'Israel Occupation Forces',
-            sourceLink: '',
-            archiveLink: '',
-        }
-    ]
-},
-
-{
-    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
-    date: '15 Nov 2023',
-    claim: {
-        claimText: 'Claim',
-        claimTag: 'claim-tag',
-    },
-    description: {
-        summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
-        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri‘i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
+        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel.’<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>‘We’ll place the fuel at Al Majlis A-Tashri’i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he’ll tell you they’re there. Then, after we put the gallons, our forces will move back so that our forces won’t be near the junction. (Then) you will send an ambulance, take the fuel.’',
     },
     sources: [
         {
@@ -2017,7 +1996,7 @@ const data = [
     },
     description: {
         summary: 'Director of Al-Shifa Hospital and other senior healthworkers arrested and detained by Israeli forces',
-        details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state‘s assertion that there was "evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre."<br><br>The now-deleted IOF press release on the arrest was titled: "Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning."',
+        details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state’s assertion that there was ‘evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre.’<br><br>The now-deleted IOF press release on the arrest was titled: ‘Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning.’',
     },
     sources: [
         {

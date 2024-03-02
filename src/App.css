@@ -195,14 +195,11 @@ h2 .expand-text {
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* BODY TEXT */
-
-/* For all screens bigger than a mobile – handles how columns are shown on homepage */
+/* BODY TEXT */    
 .hide-on-desktop {
     display: none;
 }
-
-        
+    
 .content-container {
     position: relative;
     display: flex;
@@ -381,13 +378,12 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 /* Tablets and small desktops */
 @media only screen and (min-width: 577px) and (max-width: 767px) {
     /* Styles for screens between 577px and 767px wide (typically tablets) */
-    
 
-        .btn-green {
-            margin-bottom: 10%;
-            margin-left: 0;
-            padding: 6% 8% 6% 8%;
-        }
+    .btn-green {
+        margin-bottom: 10%;
+        margin-left: 0;
+        padding: 6% 8% 6% 8%;
+    }
     
     /* HEADER */
         .content-container {
@@ -399,6 +395,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         }
     
         /* COLUMN LAYOUT */
+        /* hides 1-column view on desktop */
         .columns-container {
             position: relative;
             left: 0%;
@@ -608,6 +605,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /* COLUMNS */
+    /* hides 2 column view on mobile */
     .hide-on-mobile {
         display: none;
     }

@@ -395,6 +395,19 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     .search-bar {
         flex: 1;
     }
+
+    .claim-summary {
+        padding-bottom: 3%;
+        
+    }
+
+    thead {
+        top: 38%;
+    }
+
+    .tracker-container {
+        margin-top: 55%;
+    }
 }
 
 

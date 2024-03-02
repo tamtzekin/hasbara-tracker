@@ -225,6 +225,7 @@ body {
 
 .claim-summary {
     margin-left: 5%;
+    min-height: 210px; /* prevents it from being squashed when window is pulled up */
 }
 
 

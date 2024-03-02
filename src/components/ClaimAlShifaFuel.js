@@ -460,7 +460,7 @@ export default function ClaimAlShifaFuel() {
                                                     <td
                                                         {...cell.getCellProps()}
                                                         style={{
-                                                            padding: '3% 3% 2.5% 0',
+                                                            padding: '40px 40px 40px 0',
                                                             borderBottom: '1px dashed #5e5e5e',
                                                             overflow: 'visible',
                                                             width: // Set fixed column widths

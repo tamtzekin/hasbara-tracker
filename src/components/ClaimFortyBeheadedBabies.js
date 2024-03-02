@@ -464,7 +464,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                     <td
                                                         {...cell.getCellProps()}
                                                         style={{
-                                                            padding: '3% 3% 2.5% 0',
+                                                            padding: '40px 40px 40px 0',
                                                             borderBottom: '1px dashed #5e5e5e',
                                                             overflow: 'visible',
                                                             width: // Set fixed column widths
@@ -472,7 +472,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                                 index === 1 ? '9%' :
                                                                 index === 2 ? '36%' :
                                                                 index === 3 ? '7%' :
-                                                                '15%',
+                                                                '18%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}

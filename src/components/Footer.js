@@ -5,7 +5,7 @@ import '../App.css';
 const Footer = () => {
     return (
         <>
-        <div className="footer-container ml-10 mobile:ml-0">
+        <div className="footer-container ml-10 mobile:ml-0 mobile:mt-[-25%]">
       <footer className="flex-col bg-neutral-900 text-white sm:mt-0 mt-5">
         {/* To centre within column, add: flex items-center */}
         

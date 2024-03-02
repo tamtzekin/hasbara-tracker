@@ -351,11 +351,11 @@ export default function ClaimFortyBeheadedBabies() {
 <span className="header-container-fixed">
 
             {/* TODO: mobile menu isgetting stuck */}
-            <span className="mobile:invisible">
-                <MobileMenu />
+`            <span className="mobile:invisible">
+`                <MobileMenu />
             </span>
 
-            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-[-3.28%] ml-[4.82%]">
+            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-[-12%] ml-[4.82%]">
                 <Link to="/">
                     <Logo />
                 </Link>

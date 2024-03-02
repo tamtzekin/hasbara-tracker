@@ -16,14 +16,14 @@ const MobileMenu = () => {
 
     return (
         <>
-            <div className="">
+            <span className="">
                 {/* menu-toggle */}
-                <div className="menu-icon" onClick={openModal}>
+                <div className="menu-toggle" onClick={openModal}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
-            </div>
+            </span>
 
             <Modal
                 isOpen={modalOpen}

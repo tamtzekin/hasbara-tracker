@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
 
             {/* Footer links */}
-            <ul className="mobile:flex-col mobile:items-left mobile:-ml-[18%] mobile:pt-5 mobile:-mb-2 mobile:justify-between laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">
+            <ul className="mobile:flex-col mobile:items-left mobile:ml-[6%] mobile:pt-5 mobile:-mb-2 mobile:justify-between laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">
 
               <li className="mobile:me-2 laptop:me-6 whitespace-nowrap">
                 <a href="https://www.paypal.com/donate/?hosted_button_id=44XADNYVGGMPS" target="_blank" rel="noreferrer" className="hover:underline">

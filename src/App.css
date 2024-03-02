@@ -195,11 +195,7 @@ h2 .expand-text {
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* BODY TEXT */    
-.hide-on-desktop {
-    display: none;
-}
-    
+/* BODY TEXT */        
 .content-container {
     position: relative;
     display: flex;
@@ -603,14 +599,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-    /* COLUMNS */
-    /* hides 2 column view on mobile */
-    .hide-on-mobile {
-        display: none;
-    }
-
-    
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /* FOOTER */
     .footer {

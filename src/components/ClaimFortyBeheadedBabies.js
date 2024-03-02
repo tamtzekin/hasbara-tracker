@@ -348,14 +348,14 @@ export default function ClaimFortyBeheadedBabies() {
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 
-<span className="header-container-fixed">
+<span className="header-container-fixed mobile:mt-[4%]">
 
             {/* TODO: mobile menu isgetting stuck */}
-`            <span className="mobile:invisible">
-`                <MobileMenu />
+            <span className="ml-auto ml-[90%]">
+                <MobileMenu />
             </span>
 
-            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-[-12%] ml-[4.82%]">
+            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:-mt-13 laptop:w-1/5 mt-[-12%] ml-[4.82%]">
                 <Link to="/">
                     <Logo />
                 </Link>

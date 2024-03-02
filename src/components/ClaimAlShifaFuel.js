@@ -15,7 +15,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
 
-export default function ClaimAlShifaFuel() {
+export default function ClaimFortyBeheadedBabies() {
     // defines claim tags for dropdown (ClaimFilter.js)
     const uniqueClaimTitles = useMemo(() => {
         const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
@@ -344,45 +344,27 @@ export default function ClaimAlShifaFuel() {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
     <meta name="twitter:title" content="Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas" />
-    <meta name="twitter:description" content="Israeli officials claimed the director of Al-Shifa Hospital refused a supply of fuel. Israel made it impossible for the hospital to receive the fuel." />
+    <meta name="twitter:description" content="Israeli officials claimed Hamas refused fuel to keep the hospital running. Israel made the supplies impossible to receive while continuing to bomb hospitals.
+" />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 
 <span className="header-container-fixed">
 
+    <span className="flex mobile:mt-[4%]">
             {/* TODO: mobile menu isgetting stuck */}
-            <span className="mobile:invisible">
+            <span className="ml-auto ml-[88%]">
                 <MobileMenu />
             </span>
 
-            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-[-5.15%] ml-[4.82%]">
-                <Link to="/">
-                    <Logo />
-                </Link>
-            </div>
-                    <div className="claim-summary container -mt-5 mobile:mt-0">
-                        <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
-                            The claim
-                        </div>
-                        <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
-                        ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’</div>
-                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
-                        Israeli officials claimed Hamas refused fuel to keep the hospital running. Israel made the supplies impossible to receive while continuing to bomb hospitals.
-                        </div>
-                    </div>
-        
-        <div className="nav-links-fixed top-[10%] mobile:invisible">
-            {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
+            <div className="nav-links-fixed top-[10%] mobile:invisible">
                 <li className="undotted">
                     <NavLink to="/">Claims</NavLink>
                 </li>
-            {/* )} */}
 
-            {/* {location.pathname !== '/submit-claim' && ( */}
             <li className="undotted">
                 <NavLink to="/submit-claim">Submit a claim</NavLink>
             </li>
-            {/* )} */}
 
             <li className="undotted">
                 <NavLink to="/volunteer">Volunteer</NavLink>
@@ -392,8 +374,31 @@ export default function ClaimAlShifaFuel() {
                 <NavLink to="/about">About</NavLink>
             </li>
         </div>
-        </span>
+    </span>
 
+
+<span className="">
+            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[-5%] ml-[4.82%]">
+                <Link to="/">
+                    <Logo />
+                </Link>
+            </div>
+
+    </span>
+                    <div className="claim-summary container -mt-5 mobile:mt-[5%]">
+                        <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
+                            The claim
+                            </div>
+                        <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
+                            Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas</div>
+                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
+                            Israeli officials claimed Hamas refused fuel to keep the hospital running. Israel made the supplies impossible to receive while continuing to bomb hospitals.
+                    </div>
+
+                    </div>
+
+        </span>
+        
 
             {/* Show desktop view of Tracker */}
             {!isMobileView && (
@@ -468,7 +473,7 @@ export default function ClaimAlShifaFuel() {
                                                                 index === 1 ? '9%' :
                                                                 index === 2 ? '36%' :
                                                                 index === 3 ? '7%' :
-                                                                '15%',
+                                                                '18%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}

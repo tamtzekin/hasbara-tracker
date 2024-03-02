@@ -15,7 +15,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
 
-export default function ClaimAlAhliAttacked() {
+export default function ClaimFortyBeheadedBabies() {
     // defines claim tags for dropdown (ClaimFilter.js)
     const uniqueClaimTitles = useMemo(() => {
         const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
@@ -56,6 +56,7 @@ export default function ClaimAlAhliAttacked() {
     // Pull all the claims data
     const columns = useMemo(() => {
 
+
         // Mobile: the 'Type' is higher up, so the context/claim/debunk tags can be positioned properly
         if (isMobileView) {    
         return [
@@ -67,7 +68,6 @@ export default function ClaimAlAhliAttacked() {
                     <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
                 )
             },
-
             {
                 Header: 'Date',
                 accessor: 'date',
@@ -83,74 +83,61 @@ export default function ClaimAlAhliAttacked() {
                 ),
             },
 
-            // Context/Claim/Debunk tag
-            {
-                Header: 'Type',
-                accessor: (row) => row.claim.claimText,
-                Cell: ({ row }) => (
-                        <span className={row.original.claim.claimTag}>
-                            {row.original.claim.claimText}
-                        </span>
-                ),
-            },
+                        // Context/Claim/Debunk tag
+                        {
+                            Header: 'Type',
+                            accessor: (row) => row.claim.claimText,
+                            Cell: ({ row }) => (
+                                    <span className={row.original.claim.claimTag}>
+                                        {row.original.claim.claimText}
+                                    </span>
+                            ),
+                        },
 
-            // Detailed description on each claim
-            {
-                Header: 'Details',
-                accessor: (row) => `${row.description.summary} ${row.description.details}`,
-                Cell: ({ row }) => (
-                    <>
-                        <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
-                            <details>
-                                <summary><u>{row.original.description.summary}</u><span className='expand-text'></span></summary>
-                                <article className="claim-paragraph">
-                                    <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+
+                        // Detailed description on each claim
+                        {
+                            Header: 'Details',
+                            accessor: (row) => `${row.description.summary} ${row.description.details}`,
+                            Cell: ({ row }) => (
+                                <>
+                                    <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
+                                        <details>
+                                            <summary><u>{row.original.description.summary}</u>
+                                                <span className='expand-text'></span>
+                                            </summary>
+                                            <article className="claim-paragraph">
+                                                <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+                        
+                                                {/* Render Source links within the expandable element */}
+                                                        <div className="source-heading"></div>
+                                                        {row.original.sources.map((source, index) => (
+                                                            <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                                                <div key={index} className="source">
+                                                                    <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                                        {source.videoPreviewLink && (
+                                                                            <span className='icon-playarrow'></span>
+                                                                        )}
+                                                                        {!source.videoPreviewLink && (
+                                                                            <span className='icon-link'></span>
+                                                                        )}
+                                                                        <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                    </a>
             
-                                    {/* Render Source links within the expandable element */}
-                                    <div className="source-heading"></div>
-
-                                    {row.original.sources.map((source, index) => (
-                                        <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                            <div key={index} className="source">
-                                                
-                                                <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                    {/* If there's a video preview available, show a play button icon */}
-                                                    {source.videoPreviewLink && (
-                                                            <ul className='icon-playarrow'>
-                                                                <li>
-                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                </li>
-                                                            </ul>
-                                                    )}
-        
-                                                    {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
-                                                    {!source.videoPreviewLink && (
-                                                            <ul className='icon-link'>
-                                                                 <li>
-                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                </li>
-                                                            </ul>
-                                                    )}
-                                                </a>
-
-                                                {source.archiveLink && ( 
-                                                <ul>
-                                                    <li className="ml-[4%] -mt-14">
-                                                        <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
-                                                            <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                    )}
-                                            </div>
-                                        </VideoPlayer>
-                                    ))}
-                                </article>
-                            </details>
-                        </div>
-                    </>
-                ),
-            },
+                                                                    {source.archiveLink && (
+                                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                                <span className="text-grey-faded italic text-xs ml-4">Archive</span>
+                                                                            </a>
+                                                                    )}
+                                                                </div>
+                                                            </VideoPlayer>
+                                                        ))}
+                                            </article>
+                                        </details>
+                                    </div>
+                                </>
+                            ),
+                        },
         ];
 
         // Render desktop tracker, with different order of columns
@@ -216,13 +203,9 @@ export default function ClaimAlAhliAttacked() {
                                                             </a>
 
                                                             {source.archiveLink && (
-                                                        <ul>
-                                                        <li className="ml-[11.5%] -mt-6">
-                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
-                                                                <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
-                                                            </a>
-                                                        </li>
-                                                        </ul>
+                                                                    <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                        <span className="text-grey-faded italic text-xs ml-4">Archive</span>
+                                                                    </a>
                                                             )}
                                                         </div>
                                                     </VideoPlayer>
@@ -360,56 +343,27 @@ export default function ClaimAlAhliAttacked() {
     {/* Twitter link preview */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
-    <meta name="twitter:title" content="Claim: 40 beheaded babies" />
-    <meta name="twitter:description" content="Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad." />
+    <meta name="twitter:title" content="Claim: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces" />
+    <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 
 <span className="header-container-fixed">
 
-
+    <span className="flex mobile:mt-[4%]">
             {/* TODO: mobile menu isgetting stuck */}
-
-            <span className="mobile:invisible">
+            <span className="ml-auto ml-[88%]">
                 <MobileMenu />
             </span>
 
-            {/* Logo container */}
-            <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-[-5.15%] ml-[4.82%]">
-            {/* Logo component */}
-                <Link to="/">
-                    <Logo />
-                </Link>
-            </div>
-
-            {/*
-            Claim summary container 'The claim'
-            'Claim name' 
-            'Summary'
-            */}
-                <div className="claim-summary container -mt-5 mobile:mt-0">
-                    <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
-                        The claim
-                    </div>
-                    <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
-                    ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</div>
-                    <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
-                    Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
-                    </div>
-                </div>
-        
-        <div className="nav-links-fixed top-[10%] mobile:invisible">
-            {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}
+            <div className="nav-links-fixed top-[10%] mobile:invisible">
                 <li className="undotted">
                     <NavLink to="/">Claims</NavLink>
                 </li>
-            {/* )} */}
 
-            {/* {location.pathname !== '/submit-claim' && ( */}
             <li className="undotted">
                 <NavLink to="/submit-claim">Submit a claim</NavLink>
             </li>
-            {/* )} */}
 
             <li className="undotted">
                 <NavLink to="/volunteer">Volunteer</NavLink>
@@ -419,8 +373,31 @@ export default function ClaimAlAhliAttacked() {
                 <NavLink to="/about">About</NavLink>
             </li>
         </div>
-        </span>
+    </span>
 
+
+<span className="">
+            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[-5%] ml-[4.82%]">
+                <Link to="/">
+                    <Logo />
+                </Link>
+            </div>
+
+    </span>
+                    <div className="claim-summary container -mt-5 mobile:mt-[5%]">
+                        <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
+                            The claim
+                            </div>
+                        <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
+                            ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</div>
+                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
+                            Israeli officials claim the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance, and that the IOF do not bomb hospitals.
+                    </div>
+
+                    </div>
+
+        </span>
+        
 
             {/* Show desktop view of Tracker */}
             {!isMobileView && (
@@ -495,7 +472,7 @@ export default function ClaimAlAhliAttacked() {
                                                                 index === 1 ? '9%' :
                                                                 index === 2 ? '36%' :
                                                                 index === 3 ? '7%' :
-                                                                '15%',
+                                                                '18%',
                                                         }}
                                                     >
                                                         {cell.render('Cell')}

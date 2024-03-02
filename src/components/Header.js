@@ -37,7 +37,7 @@ const Header = () =>{
             </div>
         </div> */}
 
-<header className="bg-white flex flex-wrap items-center">
+<header className="flex flex-wrap items-center">
     <div class="flex-1 flex justify-between items-center">
         <Logo />
     </div>

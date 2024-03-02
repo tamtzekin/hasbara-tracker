@@ -348,10 +348,11 @@ export default function ClaimFortyBeheadedBabies() {
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 
-<span className="header-container-fixed mobile:mt-[4%]">
+<span className="header-container-fixed">
 
+    <span className="flex mobile:mt-[4%]">
             {/* TODO: mobile menu isgetting stuck */}
-            <span className="ml-auto ml-[90%]">
+            <span className="ml-auto ml-[88%]">
                 <MobileMenu />
             </span>
 
@@ -372,17 +373,18 @@ export default function ClaimFortyBeheadedBabies() {
                 <NavLink to="/about">About</NavLink>
             </li>
         </div>
+    </span>
 
 
 <span className="">
-            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:-mt-13 laptop:w-1/5 mt-[-5%] ml-[4.82%]">
+            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[-5%] ml-[4.82%]">
                 <Link to="/">
                     <Logo />
                 </Link>
             </div>
 
     </span>
-                    <div className="claim-summary container -mt-5 mobile:mt-0">
+                    <div className="claim-summary container -mt-5 mobile:mt-[5%]">
                         <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
                             The claim
                             </div>

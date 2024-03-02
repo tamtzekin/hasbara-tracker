@@ -125,11 +125,18 @@ export default function ClaimFortyBeheadedBabies() {
                                                                     </a>
             
                                                                     {source.archiveLink && (
+                                                                        <ul>
+                                                                            <li>
                                                                             <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                                
+                                                                            
                                                                                 <span className="text-grey-faded italic text-xs ml-4">Archive</span>
                                                                             </a>
+                                                                            </li>
+                                                                        </ul>
                                                                     )}
                                                                 </div>
+                                                                
                                                             </VideoPlayer>
                                                         ))}
                                             </article>

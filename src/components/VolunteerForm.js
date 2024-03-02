@@ -105,6 +105,7 @@ const VolunteerForm = () => {
                                 <b>Full name</b><span className="required-field">*</span>
                                 <br />
                                 <input
+                                    className="w-full p-1 mt-[2.5%] mb-9"
                                     type="text"
                                     name="fullName"
                                     value={formData.fullName}
@@ -119,6 +120,7 @@ const VolunteerForm = () => {
                             <b>Email</b><span className="required-field">*</span>
                                 <br />
                                 <input
+                                    className="w-full p-1 mt-[2.5%] mb-9"
                                     type="email"
                                     name="email"
                                     value={formData.email}
@@ -132,6 +134,7 @@ const VolunteerForm = () => {
                             <b>Tell us a little bit about your background and skills so we can match you with the right task.</b><span className="required-field">*</span>
                                 <br />
                                 <textarea
+                                    className="w-full p-5 mt-[2.5%] mb-9"
                                     name="backgroundAndSkills"
                                     value={formData.backgroundAndSkills}
                                     onChange={handleChange}
@@ -145,6 +148,7 @@ const VolunteerForm = () => {
                                 <b>How many hours can you commit?</b>
                                 <br />
                                 <select
+                                    className="w-full p-1 mt-[2.5%] mb-9"
                                     name="hoursCommitted"
                                     value={formData.hoursCommitted}
                                     onChange={handleChange}
@@ -178,6 +182,7 @@ const VolunteerForm = () => {
                             <label>
                                 <b>This isn’t necessary, but do you understand Arabic and/or Hebrew? Let us know what level.</b>
                                 <input
+                                    className="w-full p-5 mt-[2.5%]"
                                     type="text"
                                     name="languageSkill"
                                     value={formData.languageSkill}

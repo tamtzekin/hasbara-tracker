@@ -82,16 +82,16 @@ const SubmitClaimForm = () => {
             <div className="content-container">
                 <h2 className="subheading">Contact us</h2>
                     <div className="home-text">
-                        Leave your message with the form below if you’d like to get in touch with the Hasbara Tracker team.
+                        Leave your message below if you’d like to get in touch with the Hasbara Tracker team.
                     </div>
                     <br />
 
                     <form onSubmit={handleSubmit}>
-                        <label>
+                        <label className="form-field font-semibold">
                             Name <span className="required-field">*</span>
-                            <br />
-                            
+
                             <input
+                                className="w-full p-1 mt-[2.5%] mb-9"
                                 type="text"
                                 name="fullName"
                                 value={formData.fullName}
@@ -102,11 +102,11 @@ const SubmitClaimForm = () => {
                         </label>
                         <br />
 
-                        <label>
+                        <label className="form-field font-semibold w-full">
                             Email address<span className="required-field">*</span>
-                            <br />
-
+                            
                             <input
+                                className="w-full p-1 mt-[2.5%] mb-9"
                                 type="email"
                                 name="email"
                                 value={formData.email}
@@ -117,10 +117,11 @@ const SubmitClaimForm = () => {
                         </label>
                         <br />
                         
-                        <label>
-                            Your message (max 500 words)<span className="required-field">*</span><br />
+                        <label className="font-semibold">
+                            Your message (max 500 words)<span className="required-field ">*</span><br />
                             
-                            <textarea
+                            <textarea 
+                                className="w-full p-5 mt-[2.5%] mb-9"
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}

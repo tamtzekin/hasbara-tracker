@@ -366,7 +366,7 @@ export default function ClaimAlShifaFuel() {
                         </div>
                         <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
                         ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’</div>
-                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-7/12 laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
+                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
                         Israeli officials claimed Hamas refused fuel to keep the hospital running. Israel made the supplies impossible to receive while continuing to bomb hospitals.
                         </div>
                     </div>

@@ -374,21 +374,29 @@ export default function ClaimAlAhliAttacked() {
                 <MobileMenu />
             </span>
 
+            {/* Logo container */}
             <div className="mobile:w-9/10 mobile:ml-5 mobile:-mt-16 laptop:w-1/5 mt-[-5.15%] ml-[4.82%]">
+            {/* Logo component */}
                 <Link to="/">
                     <Logo />
                 </Link>
             </div>
-                    <div className="claim-summary container -mt-5 mobile:mt-0">
-                        <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
-                            The claim
-                        </div>
-                        <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
-                        ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</div>
-                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-7/12 laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
-                        Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
-                        </div>
+
+            {/*
+            Claim summary container 'The claim'
+            'Claim name' 
+            'Summary'
+            */}
+                <div className="claim-summary container -mt-5 mobile:mt-0">
+                    <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
+                        The claim
                     </div>
+                    <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
+                    ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</div>
+                    <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
+                    Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
+                    </div>
+                </div>
         
         <div className="nav-links-fixed top-[10%] mobile:invisible">
             {/* {location.pathname !== '/about' && location.pathname !== '/' && ( */}

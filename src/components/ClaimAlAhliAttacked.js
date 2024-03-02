@@ -56,7 +56,6 @@ export default function ClaimAlAhliAttacked() {
     // Pull all the claims data
     const columns = useMemo(() => {
 
-
         // Mobile: the 'Type' is higher up, so the context/claim/debunk tags can be positioned properly
         if (isMobileView) {    
         return [
@@ -68,6 +67,7 @@ export default function ClaimAlAhliAttacked() {
                     <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
                 )
             },
+
             {
                 Header: 'Date',
                 accessor: 'date',
@@ -83,61 +83,74 @@ export default function ClaimAlAhliAttacked() {
                 ),
             },
 
-                        // Context/Claim/Debunk tag
-                        {
-                            Header: 'Type',
-                            accessor: (row) => row.claim.claimText,
-                            Cell: ({ row }) => (
-                                    <span className={row.original.claim.claimTag}>
-                                        {row.original.claim.claimText}
-                                    </span>
-                            ),
-                        },
+            // Context/Claim/Debunk tag
+            {
+                Header: 'Type',
+                accessor: (row) => row.claim.claimText,
+                Cell: ({ row }) => (
+                        <span className={row.original.claim.claimTag}>
+                            {row.original.claim.claimText}
+                        </span>
+                ),
+            },
 
-
-                        // Detailed description on each claim
-                        {
-                            Header: 'Details',
-                            accessor: (row) => `${row.description.summary} ${row.description.details}`,
-                            Cell: ({ row }) => (
-                                <>
-                                    <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
-                                        <details>
-                                            <summary><u>{row.original.description.summary}</u>
-                                                <span className='expand-text'></span>
-                                            </summary>
-                                            <article className="claim-paragraph">
-                                                <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
-                        
-                                                {/* Render Source links within the expandable element */}
-                                                        <div className="source-heading"></div>
-                                                        {row.original.sources.map((source, index) => (
-                                                            <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                                                <div key={index} className="source">
-                                                                    <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                                        {source.videoPreviewLink && (
-                                                                            <span className='icon-playarrow'></span>
-                                                                        )}
-                                                                        {!source.videoPreviewLink && (
-                                                                            <span className='icon-link'></span>
-                                                                        )}
-                                                                        <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                    </a>
+            // Detailed description on each claim
+            {
+                Header: 'Details',
+                accessor: (row) => `${row.description.summary} ${row.description.details}`,
+                Cell: ({ row }) => (
+                    <>
+                        <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
+                            <details>
+                                <summary><u>{row.original.description.summary}</u><span className='expand-text'></span></summary>
+                                <article className="claim-paragraph">
+                                    <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
             
-                                                                    {source.archiveLink && (
-                                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                                <span className="text-grey-faded italic text-xs ml-4">Archive</span>
-                                                                            </a>
-                                                                    )}
-                                                                </div>
-                                                            </VideoPlayer>
-                                                        ))}
-                                            </article>
-                                        </details>
-                                    </div>
-                                </>
-                            ),
-                        },
+                                    {/* Render Source links within the expandable element */}
+                                    <div className="source-heading"></div>
+
+                                    {row.original.sources.map((source, index) => (
+                                        <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                            <div key={index} className="source">
+                                                
+                                                <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                    {/* If there's a video preview available, show a play button icon */}
+                                                    {source.videoPreviewLink && (
+                                                            <ul className='icon-playarrow'>
+                                                                <li>
+                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                </li>
+                                                            </ul>
+                                                    )}
+        
+                                                    {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
+                                                    {!source.videoPreviewLink && (
+                                                            <ul className='icon-link'>
+                                                                 <li>
+                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                </li>
+                                                            </ul>
+                                                    )}
+                                                </a>
+
+                                                {source.archiveLink && ( 
+                                                <ul>
+                                                    <li className="ml-[4%] -mt-14">
+                                                        <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
+                                                            <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                    )}
+                                            </div>
+                                        </VideoPlayer>
+                                    ))}
+                                </article>
+                            </details>
+                        </div>
+                    </>
+                ),
+            },
         ];
 
         // Render desktop tracker, with different order of columns
@@ -203,9 +216,13 @@ export default function ClaimAlAhliAttacked() {
                                                             </a>
 
                                                             {source.archiveLink && (
-                                                                    <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                        <span className="text-grey-faded italic text-xs ml-4">Archive</span>
-                                                                    </a>
+                                                        <ul>
+                                                        <li className="ml-[11.5%] -mt-6">
+                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
+                                                                <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
+                                                            </a>
+                                                        </li>
+                                                        </ul>
                                                             )}
                                                         </div>
                                                     </VideoPlayer>

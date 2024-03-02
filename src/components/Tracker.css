@@ -590,6 +590,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         text-decoration: underline;
     }
     
+    .icon-link li {
+        margin-left: 4%;
+    }
+
+    .icon-playarrow li {
+        margin-left: 4%;
+    }
 
     /*** TRACKER TABLE ***/
     .tracker-container {

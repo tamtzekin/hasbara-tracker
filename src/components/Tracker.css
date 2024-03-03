@@ -296,6 +296,7 @@ thead {
     background-color: theme('colors.grey');
     z-index: 4;  
     /* position: sticky; */
+    /* position: relative; */
     top: 30%;
 }
 
@@ -392,6 +393,10 @@ TABLET VIEW
 
 oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
 @media only screen and (min-width: 577px) and (max-width: 767px) {
+    .logo-container {
+        margin-top: 10.5%;
+    }
+
     .search-bar {
         flex: 1;
     }
@@ -406,7 +411,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
     .tracker-container {
-        margin-top: 55%;
+        margin-top: 45%;
     }
 }
 
@@ -615,7 +620,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     /*** TRACKER TABLE ***/
     .tracker-container {
         width: 100%;
-        margin-top: 90%;
+        margin-top: 77%;
         margin-left: 0%;
         margin-right: 3%;
         overflow-x: auto;

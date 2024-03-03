@@ -338,7 +338,7 @@ export default function ClaimFortyBeheadedBabies() {
                 sortBy: [{ id: 'date', desc: false }],
                 // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
 
-                globalFilter: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces'
+                globalFilter: 'Forty beheaded babies'
             },
             disableSortRemove: true,
         },
@@ -363,7 +363,6 @@ export default function ClaimFortyBeheadedBabies() {
 </head>
 
 <span className="header-container-fixed">
-
     <span id="logo-menu-claimsummary" className="flex mobile:mt-[4%]">
             <span className="ml-auto mobile:ml-[88%]">
                 <MobileMenu />

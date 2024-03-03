@@ -358,7 +358,7 @@ export default function ClaimFortyBeheadedBabies() {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
     <meta name="twitter:title" content="Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas" />
-    <meta name="twitter:description" content="Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital." />
+    <meta name="twitter:description" content="Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital. The IOF made it impossible to receive supplies." />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 
@@ -403,7 +403,7 @@ export default function ClaimFortyBeheadedBabies() {
                         <span className="laptop:text-md laptop:w-7/12 mb-2 -mt-2">
                             &nbsp;‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’</span>
                         <div className="mobile:w-[90%] mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-7">
-                        Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital.
+                        Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital. The IOF made it impossible to receive supplies.
                     </div>
 
                     </div>

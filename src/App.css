@@ -27,7 +27,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 .header-container-fixed {
-    position: fixed;
+    position: absolute; /* fixed */
     top: 0%;
     left: 0;
     width: 100%;
@@ -59,7 +59,8 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 .nav-links-fixed {
-    position: fixed;
+    position: absolute; /* fixed */
+    top: 35%; /* temporary, for when nav links arent fixed */
     right: 12.8%;
     display: flex;
     gap: 8.4%;
@@ -536,9 +537,9 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
     .header-container-fixed {
-        border-bottom: 1px solid theme('colors.grey-darker');
+        border-bottom: 1px dashed theme('colors.grey-faded');
         min-height: 10%;
-
+        position: fixed;
     }
 
 

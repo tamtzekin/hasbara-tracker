@@ -268,7 +268,7 @@ li.undotted {
 
 /*** TRACKER TABLE ***/
 .tracker-container {
-    margin-top: 20%;
+    margin-top: 21%;
     width: 100%;
     text-wrap: justify;
  }
@@ -295,7 +295,7 @@ thead {
     border-bottom: 1px dashed #595959;
     background-color: theme('colors.grey');
     z-index: 4;  
-    position: sticky;
+    /* position: sticky; */
     top: 30%;
 }
 
@@ -533,14 +533,14 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
     /* Background that holds Claim filter dropdown + search bar */
-    .tools-background {
+    /* .tools-background {
         background: #dadada;
         padding: 5rem 20rem 3rem 20rem;
         left: 0;
         top: 2%;
         position: fixed;
         z-index: 2;
-    }
+    } */
 
     
     /*** CLAIM DROPDOWN FILTER ***/
@@ -615,7 +615,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     /*** TRACKER TABLE ***/
     .tracker-container {
         width: 100%;
-        margin-top: 70%;
+        margin-top: 90%;
         margin-left: 0%;
         margin-right: 3%;
         overflow-x: auto;

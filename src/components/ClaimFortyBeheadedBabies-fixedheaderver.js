@@ -338,7 +338,7 @@ export default function ClaimFortyBeheadedBabies() {
                 sortBy: [{ id: 'date', desc: false }],
                 // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
 
-                globalFilter: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas'
+                globalFilter: 'Forty beheaded babies'
             },
             disableSortRemove: true,
         },
@@ -357,17 +357,17 @@ export default function ClaimFortyBeheadedBabies() {
     {/* Twitter link preview */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
-    <meta name="twitter:title" content="Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas" />
-    <meta name="twitter:description" content="Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital." />
+    <meta name="twitter:title" content="Claim: Forty beheaded babies" />
+    <meta name="twitter:description" content="Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad." />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 
 <span className="header-container-fixed">
 
     <span id="logo-menu-claimsummary" className="flex mobile:mt-[4%]">
-            <span className="ml-auto mobile:ml-[88%]">
-                <MobileMenu />
-            </span>
+        <span className="ml-auto mobile:ml-[88%]">
+            <MobileMenu />
+        </span>
 
             <div className="nav-links-fixed top-[10%] mobile:invisible">
                 <li className="undotted">
@@ -390,20 +390,21 @@ export default function ClaimFortyBeheadedBabies() {
 
 
 <span className="">
-            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[3.5%] ml-[4.82%]">
+            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[-5%] ml-[4.82%]">
                 <Link to="/">
                     <Logo />
                 </Link>
             </div>
 
     </span>
-                    <div className="claim-summary container mt-7 mobile:mt-[5%]">
-                        <span className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
-                            The claim:</span>
-                        <span className="laptop:text-md laptop:w-7/12 mb-2 -mt-2">
-                            &nbsp;‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’</span>
-                        <div className="mobile:w-[90%] mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-7">
-                        Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital.
+                    <div className="claim-summary container -mt-5 mobile:mt-[5%]">
+                        <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
+                            The claim
+                            </div>
+                        <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
+                            ‘Forty beheaded babies’</div>
+                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] text-lg text-grey-faded mt-4 mb-4 leading-7">
+                            Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
                     </div>
 
                     </div>

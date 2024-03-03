@@ -268,7 +268,7 @@ li.undotted {
 
 /*** TRACKER TABLE ***/
 .tracker-container {
-    margin-top: 30%;
+    margin-top: 20%;
     width: 100%;
     text-wrap: justify;
  }
@@ -296,7 +296,7 @@ thead {
     background-color: theme('colors.grey');
     z-index: 4;  
     position: sticky;
-    top: 45%;
+    top: 30%;
 }
 
 th {
@@ -615,7 +615,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     /*** TRACKER TABLE ***/
     .tracker-container {
         width: 100%;
-        margin-top: 88%;
+        margin-top: 70%;
         margin-left: 0%;
         margin-right: 3%;
         overflow-x: auto;

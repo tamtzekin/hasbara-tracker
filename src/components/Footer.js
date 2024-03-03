@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="flex-col bg-neutral-900 text-white sm:mt-0 mt-5">
         {/* To centre within column, add: flex items-center */}
         
-        <div className="mx-auto pt-20">
+        <div className="mobile:mt-[-15%] mx-auto pt-20">
           {/* Newsletter sign-up form */}
           <div className="flex-wrap items-center justify-center gap-4 md:flex-row">
             {/* Newsletter sign-up container */}

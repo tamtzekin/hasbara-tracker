@@ -518,9 +518,11 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     
     details.expandable-text-homepage {
         margin-top: 0%;
-        border-bottom: 0.1em solid theme('colors.grey-darker');
     }
 
+    details.expandable-text-homepage > summary {
+        padding-bottom: 0%;
+    }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /* HEADER */

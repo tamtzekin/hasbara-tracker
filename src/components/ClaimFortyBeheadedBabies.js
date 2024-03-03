@@ -115,26 +115,35 @@ export default function ClaimFortyBeheadedBabies() {
                                                             <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                                                 <div key={index} className="source">
                                                                     <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                                        {source.videoPreviewLink && (
-                                                                            <span className='icon-playarrow'></span>
-                                                                        )}
-                                                                        {!source.videoPreviewLink && (
-                                                                            <span className='icon-link'></span>
-                                                                        )}
-                                                                        <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                    </a>
+                                                                                {source.videoPreviewLink && (
+                                                                            <ul className='icon-playarrow'>
+                                                                                <li>
+                                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                                </li>
+                                                                            </ul>
+                                                                    )}
+                        
+
+                                                        {!source.videoPreviewLink && (
+                                                            <ul className='icon-link'>
+                                                                <li>
+                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                </li>
+                                                            </ul>
+                                                        )}                                                                    </a>
             
-                                                                    {source.archiveLink && (
-                                                                        <ul>
-                                                                            <li>
-                                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                                
-                                                                            
-                                                                                <span className="text-grey-faded italic text-xs ml-4">Archive</span>
-                                                                            </a>
-                                                                            </li>
-                                                                        </ul>                                                                    )}
-                                                                </div>
+                                                        {source.archiveLink && (
+                                                            <ul>
+                                                                <li>
+                                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                    
+                                                                
+                                                                <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
+                                                                </a>
+                                                                </li>
+                                                            </ul>                                                                    
+                                                            )}
+                                                    </div>
                                                             </VideoPlayer>
                                                         ))}
                                             </article>

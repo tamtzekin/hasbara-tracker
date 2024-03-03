@@ -115,26 +115,35 @@ export default function ClaimFortyBeheadedBabies() {
                                                             <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                                                 <div key={index} className="source">
                                                                     <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                                        {source.videoPreviewLink && (
-                                                                            <span className='icon-playarrow'></span>
-                                                                        )}
-                                                                        {!source.videoPreviewLink && (
-                                                                            <span className='icon-link'></span>
-                                                                        )}
-                                                                        <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                    </a>
+                                                                                {source.videoPreviewLink && (
+                                                                            <ul className='icon-playarrow'>
+                                                                                <li>
+                                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                                </li>
+                                                                            </ul>
+                                                                    )}
+                        
+
+                                                        {!source.videoPreviewLink && (
+                                                            <ul className='icon-link'>
+                                                                <li>
+                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                </li>
+                                                            </ul>
+                                                        )}                                                                    </a>
             
-                                                                    {source.archiveLink && (
-                                                                        <ul>
-                                                                            <li>
-                                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                                
-                                                                            
-                                                                                <span className="text-grey-faded italic text-xs ml-4">Archive</span>
-                                                                            </a>
-                                                                            </li>
-                                                                        </ul>                                                                    )}
-                                                                </div>
+                                                        {source.archiveLink && (
+                                                            <ul>
+                                                                <li>
+                                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                    
+                                                                
+                                                                <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
+                                                                </a>
+                                                                </li>
+                                                            </ul>                                                                    
+                                                            )}
+                                                    </div>
                                                             </VideoPlayer>
                                                         ))}
                                             </article>
@@ -349,8 +358,7 @@ export default function ClaimFortyBeheadedBabies() {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
     <meta name="twitter:title" content="Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas" />
-    <meta name="twitter:description" content="Israeli officials claimed Hamas refused fuel to keep the hospital running. Israel made the supplies impossible to receive while continuing to bomb hospitals.
-" />
+    <meta name="twitter:description" content="Israeli officials claimed Hamas refused supplies of fuel." />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 
@@ -395,9 +403,9 @@ export default function ClaimFortyBeheadedBabies() {
                             The claim
                             </div>
                         <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
-                            Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas</div>
+                            ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’</div>
                         <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
-                            Israeli officials claimed Hamas refused fuel to keep the hospital running. Israel made the supplies impossible to receive while continuing to bomb hospitals.
+                        Israeli officials claimed Hamas refused supplies of fuel.
                     </div>
 
                     </div>

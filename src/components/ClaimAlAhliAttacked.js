@@ -115,28 +115,35 @@ export default function ClaimFortyBeheadedBabies() {
                                                             <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                                                 <div key={index} className="source">
                                                                     <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                                        {source.videoPreviewLink && (
-                                                                            <span className='icon-playarrow'></span>
-                                                                        )}
-                                                                        {!source.videoPreviewLink && (
-                                                                            <span className='icon-link'></span>
-                                                                        )}
-                                                                        <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                    </a>
-            
-                                                                    {source.archiveLink && (
-                                                                        <ul>
-                                                                            <li>
-                                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                                
-                                                                            
-                                                                                <span className="text-grey-faded italic text-xs ml-4">Archive</span>
-                                                                            </a>
-                                                                            </li>
-                                                                        </ul>
+                                                                                {source.videoPreviewLink && (
+                                                                            <ul className='icon-playarrow'>
+                                                                                <li>
+                                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                                </li>
+                                                                            </ul>
                                                                     )}
-                                                                </div>
+                        
+
+                                                        {!source.videoPreviewLink && (
+                                                            <ul className='icon-link'>
+                                                                <li>
+                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                </li>
+                                                            </ul>
+                                                        )}                                                                    </a>
+            
+                                                        {source.archiveLink && (
+                                                            <ul>
+                                                                <li>
+                                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                    
                                                                 
+                                                                <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
+                                                                </a>
+                                                                </li>
+                                                            </ul>                                                                    
+                                                            )}
+                                                    </div>
                                                             </VideoPlayer>
                                                         ))}
                                             </article>
@@ -351,7 +358,8 @@ export default function ClaimFortyBeheadedBabies() {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
     <meta name="twitter:title" content="Claim: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces" />
-    <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+    <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
+" />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 
@@ -398,7 +406,7 @@ export default function ClaimFortyBeheadedBabies() {
                         <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
                             ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</div>
                         <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] laptop:mb-10 text-lg text-grey-faded mt-4 leading-7">
-                            Israeli officials claim the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance, and that the IOF do not bomb hospitals.
+                            Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
                     </div>
 
                     </div>

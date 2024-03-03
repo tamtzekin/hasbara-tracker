@@ -398,12 +398,12 @@ export default function ClaimFortyBeheadedBabies() {
             </div>
 
     </span>
-                    <div className="claim-summary container mt-7 mobile:mt-[5%]">
+                    <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
                         <span className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
                             The claim:</span>
                         <span className="laptop:text-md laptop:w-7/12 mb-2 -mt-2">
                             &nbsp;‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</span>
-                        <div className="mobile:w-[90%] mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-7">
+                        <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-7">
                             Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
                     </div>
 

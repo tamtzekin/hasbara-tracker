@@ -365,9 +365,8 @@ export default function ClaimFortyBeheadedBabies() {
 
 <span className="header-container-fixed">
 
-    <span className="flex mobile:mt-[4%]">
-            {/* TODO: mobile menu isgetting stuck */}
-            <span className="ml-auto ml-[88%]">
+    <span id="logo-menu-claimsummary" className="flex mobile:mt-[4%]">
+            <span className="ml-auto mobile:ml-[88%]">
                 <MobileMenu />
             </span>
 

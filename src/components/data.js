@@ -15,6 +15,11 @@ const summaries = [
         claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital. The IOF made it impossible to receive supplies.',
     },
 
+    {
+        claimMainTitle: '',
+        claimSummary: '',
+    },
+
 ]
 
 const data = [

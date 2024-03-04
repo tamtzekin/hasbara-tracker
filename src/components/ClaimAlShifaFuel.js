@@ -397,15 +397,14 @@ export default function ClaimFortyBeheadedBabies() {
             </div>
 
     </span>
+
                     <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
-                        <span className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
-                            The claim:</span>
-                        <span className="laptop:text-md laptop:w-7/12 mb-2 -mt-2">
-                            &nbsp;‘{summaries[2].claimMainTitle}’</span>
+                        <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
+                            The claim</div>
+                        <div className="mobile:mt-0 laptop:text-md laptop:w-7/12 mb-2 -mt-2">‘{summaries[2].claimMainTitle}’</div>
                         <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
                         {summaries[2].claimSummary}
                     </div>
-
                     </div>
 
         </span>

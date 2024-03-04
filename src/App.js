@@ -39,8 +39,9 @@ const App = () => {
                 <Route path="/al-shifa-fuel" element={<ClaimAlShifaFuel />} />
 
 
-            {/* Route redirects to claim searches */}
-                <Route
+                
+                {/* Route redirects to claim searches */}
+                {/* <Route
                     path="/forty-beheaded-babies"
                     element={<Navigate to="/forty-beheaded-babies" replace />}
                 />
@@ -53,11 +54,10 @@ const App = () => {
                 <Route
                     path="/makeup"
                     element={<Navigate to="/makeup" replace />}
-                />
+                /> */}
 
-    {/* Routes that use search queries */}
-
-                <Route
+                {/* Routes that use search queries */}
+                {/* <Route
                     path="/forty-beheaded-babies"
                     element={<Navigate to="/tracker?claim=Forty%20beheaded%20babies" replace />}
                 />
@@ -71,7 +71,7 @@ const App = () => {
                 <Route 
                     path="/al-shifa-fuel"
                     element={<Navigate to="/tracker?claim=Israeli%20state%20offered%20fuel%20to%20Al-Shifa%20Hospital" replace />}
-                />
+                /> */}
             </Routes>
         </Router>
     </>

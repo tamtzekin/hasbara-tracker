@@ -400,9 +400,9 @@ export default function ClaimFortyBeheadedBabies() {
                         <span className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
                             The claim:</span>
                         <span className="laptop:text-md laptop:w-7/12 mb-2 -mt-2">
-                            &nbsp;‘{summaries[0].claimMainTitle}’</span>
+                            &nbsp;‘Forty beheaded babies’</span>
                         <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
-                        {summaries[0].claimSummary}
+                        Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
                     </div>
 
                     </div>

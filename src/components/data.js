@@ -1,26 +1,21 @@
-const summaries = [
+ const summaries = [
     {
         claimMainTitle: 'Forty beheaded babies',
         claimSummary:
         'Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.',
     },
-
+ 
     {
         claimMainTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
         claimSummary: 'Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.',
     },
-
+ 
     {
         claimMainTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
         claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital. The IOF made it impossible to receive supplies.',
     },
-
-    {
-        claimMainTitle: '',
-        claimSummary: '',
-    },
-
 ]
+
 
 const data = [
 // CLAIM: Forty beheaded babies
@@ -52,8 +47,8 @@ const data = [
             },
         ]
     },    
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '10 Oct 2023',
@@ -61,12 +56,12 @@ const data = [
             claimText: 'Claim',
             claimTag: 'claim-tag',
     },
-
+ 
         description: {
             summary: 'Israeli state claims babies and toddlers found with ‘heads decapitated’ in the Kfar Aza kibbutz',
             details: 'A spokesperson for the Israeli state’s Prime Minister claimed babies and toddlers were found with their ‘heads decapitated’ in the Kfar Aza kibbutz after Hamas fighters entered Occupied Palestine (what constitutes part of the State of Israel today) on 7 October 2023.<br /><br />Nicole Zedeck, a reporter with Tel Aviv-based news channel i24, interviewed IOF soldier David Ben Zion, who made the same claim on 10 October 2023. He said, ‘They cut heads of children, they cut heads of women.’<br /><br />Ben Zion’s claims made the front page of The Metro newspaper in the UK.',
         },
-
+ 
         sources: [
             {
                 sourceName: 'i24NEWS',
@@ -81,8 +76,8 @@ const data = [
             },
         ]
     },
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '10 Oct 2023',
@@ -94,7 +89,7 @@ const data = [
             summary: 'CNN reporter Nic Robertson claims babies’ heads cut off',
             details: 'Nic Robertson, a CNN reporter, claimed Palestinian resistance fighters carried out ‘ISIS-style executions’ by ‘cutting the heads off of people’, including babies and killing their pets.<br /><br />‘Men, women, children, hands bound, shot, executed, heads cut.’',
         },
-
+ 
         sources: [
             {
                 sourceName: 'CNN',    
@@ -104,8 +99,8 @@ const data = [
             },
         ]
     },
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
@@ -117,7 +112,7 @@ const data = [
             summary: 'Israeli Foreign Affairs Ministry runs ads about 40 murdered babies',
             details: 'The Israeli Foreign Affairs Ministry starts running ads targeting children’s content on YouTube. The 28-second video advertisement is titled ‘Babies Can’t Read The Text In This Video But Their Parents Can’ and shows an animated rainbow and unicorn. The text in the video reads:<br /><br />‘We know that your child cannot read this. We have an important message to tell you as parents. 40 infants were murdered in Israel by the Hamas terrorists (ISIS). Just as you would do everything for your child. We will do everything to protect ours. Now hug your baby and stand with us.’',
         },
-
+ 
         sources: [
             {
                 sourceName: '@IsraelMFA on YouTube',    
@@ -127,8 +122,8 @@ const data = [
             },
         ]
     },
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
@@ -140,7 +135,7 @@ const data = [
             summary: 'Israeli first responder group Zaka representative claims he saw beheaded babies',
             details: 'In an interview with American news outlet CBS News, Yossi Landau, Head of Operations in the ‘southern region’ with Israeli first responder group Zaka said he saw ‘with his own eyes children and babies who had been beheaded’.',
         },
-
+ 
         sources: [
             {
                 sourceName: 'CBS News',
@@ -149,8 +144,8 @@ const data = [
             },
         ]
     },
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
@@ -162,7 +157,7 @@ const data = [
             summary: 'US President Biden claims he saw ‘pictures’ of babies being beheaded',
             details: 'In an address to Jewish community leaders on 11 October 2023, US President Joe Biden said: ‘I never really thought that I would see and have confirmed pictures of terrorists beheading children.’',
         },
-
+ 
         sources: [
             {
                 sourceName: 'Fox News',
@@ -172,8 +167,8 @@ const data = [
             },
         ]
     },
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
@@ -193,8 +188,8 @@ const data = [
             },
         ]
     },
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
@@ -215,8 +210,8 @@ const data = [
             },
         ]
     },
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
@@ -236,8 +231,8 @@ const data = [
             },
         ]
     },    
-    
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
@@ -258,7 +253,7 @@ const data = [
             },
         ]
     },    
-    
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '11 Oct 2023',
@@ -283,7 +278,7 @@ const data = [
             },
         ]
     },    
-    
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
@@ -303,7 +298,7 @@ const data = [
             },
         ]
     },    
-    
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
@@ -323,7 +318,7 @@ const data = [
             },
         ]
     },    
-    
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
@@ -344,8 +339,8 @@ const data = [
             },
         ]
     },    
-    
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
@@ -365,8 +360,8 @@ const data = [
             },
         ]
     },    
-    
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '12 Oct 2023',
@@ -386,8 +381,8 @@ const data = [
             },
         ]
     },
-    
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '13 Oct 2023',
@@ -407,8 +402,8 @@ const data = [
             },
         ]
     },    
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '17 Oct 2023',
@@ -429,8 +424,8 @@ const data = [
             },
         ]
     },    
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '18 Oct 2023',
@@ -450,7 +445,7 @@ const data = [
             },
         ]
     },    
-    
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '26 Oct 2023',
@@ -471,8 +466,8 @@ const data = [
             },
         ]
     },    
-    
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '28 Oct 2023',
@@ -493,8 +488,8 @@ const data = [
             },
         ]
     },    
-    
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '15 Nov 2023',
@@ -515,8 +510,8 @@ const data = [
             },
         ]
     },    
-    
-     
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '4 Dec 2023',
@@ -536,8 +531,8 @@ const data = [
             },
         ]
     },    
-
-
+ 
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '12 Dec 2023',
@@ -557,7 +552,7 @@ const data = [
             },
         ]
     },    
-    
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '26 Dec 2023',
@@ -577,7 +572,7 @@ const data = [
             },
         ]
      },
-
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '20 Jan 2024',
@@ -598,7 +593,7 @@ const data = [
             },
         ]
     },
-
+ 
     {
         claimTitle: 'Forty beheaded babies',
         date: '21 Jan 2024',
@@ -618,7 +613,7 @@ const data = [
             },
         ]
     },
-
+ 
     {
     claimTitle: 'Forty beheaded babies',
     date: '22 Jan 2024',
@@ -639,20 +634,20 @@ const data = [
         },
     ]
 },
-
-
+ 
+ 
 // Claim: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
     // claimSummary: 'The Israeli state says Al-Ahli Hospital was attacked by Palestinian rockets',
-
+ 
     date: '12 Oct 2023',
-
+ 
     claim: {
         claimText: 'Context',
         claimTag: 'context-tag',
     },
-
+ 
     description: {
         summary: 'The Israeli state says it has dropped 6,000 bombs on Gaza within the first week of the genocide',
         details: 'As reported by Al Jazeera, the Israeli state said it ‘dropped 6,000 bombs weighing 4,000 tonnes on Gaza’ within the first six days of the attack on Gaza, ‘killing more than 1,400 people’.<br /><br />The number of explosives used to attack Gaza in one week almost amounts to what the US and allied forces used in Afghanistan in all of 2019 – 7,432 bombs. It is the heaviest year of aerial bombardment there since the US Air Force began releasing monthly strike data in 2006.',
@@ -663,13 +658,13 @@ const data = [
             sourceLink: 'https://www.aljazeera.com/news/2023/10/12/israel-says-6000-bombs-dropped-on-gaza-as-war-with-hamas-nears-a-week',
             archiveLink: 'https://archive.is/KQ76U',
         },
-
+ 
         {
             sourceName: 'The Washington Post',
             sourceLink: 'https://www.washingtonpost.com/world/2023/11/05/israel-strike-targets-gaza-civilians-hamas/',
             archiveLink: 'https://archive.ph/rCJbc',
         },
-
+ 
         {
             sourceName: 'USAF 2013–2019 Airpower Statistics',
             sourceLink: 'https://www.afcent.af.mil/Portals/82/Documents/Airpower%20summary/(U)%20APPROVED%20Dec%202019%20APS%20Data.pdf?ver=2020-01-27-023439-697',
@@ -677,17 +672,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '14 Oct 2023',
-
+ 
     claim: {
         claimText: 'Context',
         claimTag: 'context-tag',
     },
-
+ 
     description: {
         summary: 'An Israeli airstrike severely damaged two floors of Al-Ahli Hospital’s cancer treatment centre',
         details: 'An Israeli airstrike severely damaged upper two floors of the Al-Ahli Hospital’s Diagnostic Cancer Treatment Centre, which contained the ultrasound and mammography wards, injuring four staff members.<br /><br />The Washington Post reported that an Anglican pastor working for the Anglican diocese filmed a video showing a 155mm artillery illumination shell in the hospital’s ultrasound room.',
@@ -698,13 +693,13 @@ const data = [
             sourceLink: 'https://www.palestinechronicle.com/al-ahli-hospital-in-gaza-hit-with-direct-israeli-strike-photos-video/#',
             archiveLink: 'https://archive.is/XIzL9',
         },
-
+ 
         {
             sourceName: 'Al Jazeera',
             sourceLink: 'https://www.aljazeera.com/news/liveblog/2023/10/17/israel-hamas-war-live-anger-after-israeli-strike-kills-500-in-hospital?update=2417884',
             archiveLink: 'https://archive.ph/QOf8t',
         },
-
+ 
         {
             sourceName: 'The Washington Post',
             sourceLink: 'https://www.washingtonpost.com/investigations/2023/10/26/gaza-hospital-blast-evidence-israel-hamas/',
@@ -712,17 +707,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Context',
         claimTag: 'context-tag',
     },
-
+ 
     description: {
         summary: 'Al-Ahli Hospital in Gaza was bombed, killing hundreds',
         details: 'Al-Ahli Hospital in Gaza – also known as Al-Ahli Hospital and Al-Ahli Baptist Hospital – was bombed, killing 471 Palestinians.<br /><br />The Gaza Health Ministry reported on their Facebook page that 342 people were injured.<br /><br />As reported by the United Nations news outlet, Hyo-jeong Kim, Lead of WHO’s Attacks on Health Care Initiative said in a virtual press conference held on 17 October, 2023 21:15 PM CEST that before this bombing, there were at least 51 attacks on health facilities and hospitals in Gaza by Israel Occupation Forces between 7 and 17 October 2023, killing 15 hospital workers and injuring 27 others.',
@@ -733,13 +728,13 @@ const data = [
             sourceLink: 'https://www.dci-palestine.org/hundreds_of_palestinian_men_women_and_children_killed_at_al_ahli_hospital',
             archiveLink: 'https://archive.ph/W2Z4i',
         },
-
+ 
         {
             sourceName: 'Ministry of Health Gaza',
             sourceLink: 'https://www.facebook.com/MOHGaza1994/posts/pfbid02VihLzssMVKvwphaoxK71rs9X4fUtNFaXBj9nFamjZ4Z9A56Vu6SZ7GcTLS2yo23fl',
             archiveLink: 'https://archive.ph/5bFAE',
         },
-
+ 
         {
             sourceName: 'United Nations',
             sourceLink: 'https://news.un.org/en/story/2023/10/1142472',
@@ -747,17 +742,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli military spokesperson Daniel Hagari claimed it is too early to tell whether Israeli forces hit Al-Ahli Hospital',
         details: 'Seen in a video shared on the YouTube channel of Bloomberg Quicktake, the live news platform run by Bloomberg, Daniel Hagari, an IOF spokesperson, said reports of Israeli involvement in an airstrike against Al-Ahli Hospital in Gaza are still under review, attempting to cast doubt on Israeli involvement.',
@@ -776,17 +771,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli officials claim Al-Ahli Hospital hit by stray Palestinian Islamic Jihad (PIJ) rockets',
         details: 'The Israeli Occupation Forces’ spokesperson account on X (formerly Twitter) @IDFSpokesperson, operated by Daniel Hagari, posts that the hospital was hit by stray Palestinian Islamic Jihad (PIJ) rockets.',
@@ -799,17 +794,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli military spokesperson Daniel Hagari claimed ‘no craters can be identified’',
         details: 'In a press briefing, recorded and shared on the official IOF YouTube channel, IOF spokesperson Daniel Hagari claimed that there were no craters at the site of the Al-Ahli Hospital bombing. He said if the Israeli state was behind the attack, ‘we would have seen craters and structural damage to buildings, both of which haven’t been identified in this incident. The size of the damage we see here is due to the warhead of the Islamic Jihad rocket.’<br /><br />Video is incorrectly dated as ‘11.09.23’ – visible in the bottom left corner of the video at timestamp 0:00 – 0:04. The correct date of the video is 17.10.23.',
@@ -823,17 +818,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Social media advisor to Israeli Prime Minister Netanyahu said Israeli Air Force struck the hospital',
         details: 'Hananya Naftali, the social media advisor to Netanyahu since 2018, posted on X (formerly Twitter) saying the Israeli Air Force struck the hospital, claiming it hid a ‘Hamas terrorist base’. The post was swiftly removed and retracted shortly after.<br /><br />The post read: ‘BREAKING: Israeli Air Force struck a Hamas terrorist base inside a hospital in Gaza. A multiple number of terrorists are dead. It’s heartbreaking that Hamas is launching rockets from hospitals, Mosques, schools and using civilians as human shields.’',
@@ -844,7 +839,7 @@ const data = [
             sourceLink: 'https://twitter.com/Lowkey0nline/status/1714357150594588816/photo/1',
             archiveLink: 'https://archive.md/EniBp',
         },
-
+ 
         {
             sourceName: '@HananyaNaftali on X',
             sourceLink: 'https://twitter.com/HananyaNaftali/status/1714400598991261966',
@@ -852,17 +847,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: '@Israel account shared video claiming a Palestinian rocket hit the hospital',
         details: 'The official @Israel X (formerly Twitter) account posted a video claiming an ‘enemy rocket barrage was carried out towards Israel, which passed through the vicinity of the hospital when it was hit’.',
@@ -876,17 +871,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: '@Israel post was edited to remove the video because it showed an incorrect timestamp',
         details: 'The official @Israel account on X (formerly Twitter) edited its post 22 minutes later to remove the video after New York Times reporter Aric Toler (@AricToler) pointed out the video clip was timestamped at about 8:00 PM, about 40 minutes after the hospital was hit.',
@@ -899,17 +894,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli ambassador to the US Michael Herzog shared video claiming a Palestinian rocket hit the hospital',
         details: 'One minute later, the Israeli ambassador to the US Michael Herzog posted a video on X (formerly Twitter) on the account @AmbHerzog that claimed to show a rocket fired from Gaza caused the explosion at the hospital. It is the same video the @Israel account removed from their post one minute earlier.',
@@ -923,17 +918,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Israeli ambassador to the US Michael Herzog edited X (formerly Twitter) post to remove the video because of incorrect timestamp',
         details: 'The Israeli ambassador to the US Michael Herzog edited his post on X (formerly Twitter) 32 minutes later to remove the video after the official @Israel account removed the video after New York Times reporter Aric Toler (@AricToler) noticed the video clip was timestamped at around 8:00 PM, about 40 minutes after the hospital was hit.',
@@ -946,17 +941,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli official claimed that Israeli forces do not target hospitals',
         details: 'Talya Lankri, a senior reserves officer and the former deputy head of the Israeli state’s National Security Council, said on Israeli TV’s Channel 12 news that ‘the IDF does not hit hospitals. That is not a target.’'
@@ -969,17 +964,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Social media advisor to Israeli Prime Minister Benjamin Netanyahu deleted post and claimed Israeli forces do not bomb hospitals',
         details: 'Hananya Naftali, the social media advisor to Netanyahu since 2018, posted a statement on X (formerly Twitter) denying that the IOF targets hospitals, despite declaring that the IOF bombed Al-Ahli Hospital hours earlier.<br /><br />The post read:<br /><br />‘Earlier today I shared a report that was published on @reuters about the bombing at the hospital in Gaza which falsely stated Israel struck the hospital. I mistakenly shared this information in a since deleted post in which I referenced Hamas’ routine use of hospitals to store weapons caches and conduct terrorist activity. I apologize for this error. As the IDF does not bomb hospitals, I assumed Israel was targeting one of the Hamas bases in Gaza. It is known that Hamas is using civilians as human shields, it is a war crime and a crime against humanity. This should be the focus.’',
@@ -992,17 +987,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli military posted video claiming a misfired rocket by the Palestinian resistance hit Al-Ahli Hospital',
         details: 'The official @IDF account posted a video on X (formerly Twitter) claiming it shows a misfired at 6:59 PM.<br /><br />The post read: ‘RAW FOOTAGE: A rocket aimed at Israel misfired and exploded at 18:59 – the same moment a hospital was hit in Gaza.’',
@@ -1016,17 +1011,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli military spokesperson shared image claiming to depict Islamic Jihad rocket',
         details: 'Israel Occupation Forces (IOF) spokesperson Daniel Hagari posted an image on the @IDFSpokesperson account on X (formerly Twitter) which depicts rocket flight paths travelling west to east towards Al-Ahli Hospital. The image is labelled as being ‘taken by IDF Radar Footage’.<br /><br />The post read: ‘Attached is a visual related to the failed rocket launch by the Islamic Jihad that hit the Al Ahli hospital.’',
@@ -1039,17 +1034,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '18 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'US President Joe Biden blamed ‘errant rocket by a terrorist group in Gaza’ for Al-Ahli Hospital bombing',
         details: 'At a press conference in Tel Aviv in Occupied Palestine (what constitutes the Israeli state today), US President Joe Biden said the attack at Al-Ahli Hospital was caused by an ‘errant rocket fired by a terrorist group in Gaza.’<br /><br />Biden went on to say: ‘Based on the information we’ve seen to date, it appears as a result of an errant rocket fired by a terrorist group in Gaza. The United States unequivocally stands for the protection of civilian life during conflict.’ (heard in the video at 00:12)',
@@ -1063,17 +1058,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '18 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Former Pentagon Chief claimed size of crater at the site of Al-Ahli Hospital attack was inconsistent with US-supplied JDAM munitions used by Israeli military',
         details: 'Marc Garlasco, former Pentagon chief, said he size of craters observed at the Al-Ahli Hospital did not align with the characteristics of the Joint Direct Attack Munition (JDAM) munitions typically used by the Israel Occupation Forces (IOF).<br /><br />He told The Guardian newspaper ‘The number [of casualties] is astronomically high, an absolute high range of all time if true. The crater is not consistent with an airstrike, it is more likely to be a weapon that failed and released its payload over a wide area. The crater and surrounding damage is also not consistent with a JDAM aerial bomb. The hole on the ground occurred from kinetic energy.’',
@@ -1086,17 +1081,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '18 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli state released an alleged interecepted phone call between Hamas members',
         details: 'The official @Israel account on X (formerly Twitter) posted a recording claiming it is a conversation between two Hamas members. The post read:<br /><br />‘Hamas terrorists in their own voices:<br /><br />Listen to the conversation between Hamas operatives as they discuss the failed Islamic Jihad rocket launch on the Al-Ahli Baptist Hospital on October 17, 2023.’<br /><br />The video is titled: ‘A Recording of a Conversation Regarding the Hospital Launch Incident by the Islamic Jihad Terror Organization 17.10.2023’<br /><br />The video is titled: ‘A Recording of a Conversation Regarding the Hospital Launch Incident by the Islamic Jihad Terror Organization 17.10.2023’<br /><br />Note that the following video has evident errors in attributing voices and quotes to alleged operatives. We are attributing it to each voice accordingly due to editing errors by the IOF.<br /><br />Video Transcript:<br /><br />Speaker 1: ‘I’m telling you this is the first time we see a missile like this falling and so that‘s why we are saying it belongs to the Palestinian Islamic Jihad.’<br /><br />Speaker 2: ‘What?’<br /><br />Speaker 1: ‘They are are saying it belongs to Palestinian Islamic Jihad.’<br /><br />Speaker 2: ‘It’s from us?’<br /><br />Speaker 1: ‘It looks like it.’<br /><br />Speaker 2: ‘Who says this.’<br /><br />Speaker 1: ‘They are saying that the shrapnel from the missile is local shrapnel and not like Israeli shrapnel.’<br /><br />Speaker 2: ‘What are you saying (name redacted)?’<br /><br />Speaker 1: (Silence)',
@@ -1110,17 +1105,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '18 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli military presented material alleging the massacre at Al-Ahli Hospital was by Palestinian rockets fired from a cemetery',
         details: 'The Israel Occupation Forces (IOF) issued a press release, briefing video, and files asserting that Palestinian Islamic Jihad (PIJ) fired rockets from a nearby cemetery, resulting in a misfire that struck Al-Ahli Hospital.<br /><br /><b>The provided files include:</b><br /><br />Aerial maps claimed by the IOF to exhibit no signs of craters or blast damage to buildings, with a comparison of IOF crater sizes.<br />An image illustrating rocket flight paths travelling from west to east.<br />An alleged phone conversation between PIJ members admitting to the rocket failure.',
@@ -1139,17 +1134,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '18 Oct 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Bellingcat geolocated videos contradicting Israel Occupation Forces (IOF) claims of no craters',
         details: 'Open-source investigative group Bellingcat employed geolocation techniques on videos sourced from Telegram and X (formerly Twitter), presenting evidence of craters and blast damage to buildings. These findings stand in contrast to the claims made in the Israeli military press release and briefing of no craters.',
@@ -1167,17 +1162,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '18 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'US spokesperson said Israeli state not responsible for hospital attack',
         details: 'The US National Security Council Spokesperson Adrienne Watson posted on X (formerly Twitter) from the account @NSC_Spox that the Israeli state is not responsible for the hospital attack, based on analysis of ‘overhead imagery, intercepts and open source information’.<br /><br />The post read: ‘While we continue to collect information, our current assessment, based on analysis of overhead imagery, intercepts and open source information, is that Israel is not responsible for the explosion at the hospital in Gaza yesterday.’',
@@ -1190,17 +1185,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '19 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Israeli army spokesman said crater ‘too small’ to be caused by Israeli bombs',
         details: 'The @IDF X (formerly Twitter) account broadcasted a video briefing featuring the Israeli army’s international spokesperson Jonathan Conricus. He pointed to a TV screen showing footage and images. At the 08:38 mark, he stated that the ‘only picture of a crater is here in this area... and it’s a very small one’. He claimed Palestinian rockets ‘misfired’ from a nearby cemetery.<br /><br />‘Scroll through pictures of rockets that impacted in Sderot, Ashkelon, in Be’er-Sheva, unfortunately there are many of those pictures, you’ll see very very similar sites... a small crater, lots of soot and fire remarks and you can see, by the way, that all of the buildings around are generally intact. If a big Israeli bomb had been dropped here, none of this would have been intact.’',
@@ -1214,17 +1209,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '19 Oct 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Inconsistencies in Israeli military spokesperson’s map of Al-Ahli Hospital site found',
         details: 'UK state broadcaster‘s fact checking team BBC Verify noted that Israel Occupation Forces (IOF) spokesperson Jonathan Cornicus claimed Palestinian Islamic Jihad (PIJ) rockets were fired from a nearby cemetery next to the hospital. However, the map displayed by Cornicus showed a launch site further away. BBC Verify say they have not been able to locate a cemetery there.',
@@ -1237,17 +1232,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '19 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'The Pentagon said ‘physical evidence’ proved that the Israeli forces did not strike the hospital',
         details: 'US news outlet ABC News reported that they were told by two US officials that the Pentagon ‘independently concluded the Gaza hospital blast was likely caused by a Palestinian Islamic Jihad (PIJ) rocket that fell short of its target’.<br /><br />In an interview with the Israeli news channel i24, Joel Rayburn, Director of the American Centre for Levant Studies and former US Special Envoy for Syria, expanded on this conclusion by saying: ’If it had been a bomb dropped by an aircraft, the crater would have been massive.’ – timestamp 00:19.',
@@ -1258,7 +1253,7 @@ const data = [
             sourceLink: 'https://abcnews.go.com/International/us-initial-independent-review-shows-evidence-bomb-strike/story?id=104126146',
             archiveLink: 'https://archive.ph/lM2b4',
         },
-
+ 
         {
             sourceName: 'i24 News',
             archiveLink: 'https://www.youtube.com/watch?v=jaN8TUSHYyM',
@@ -1266,17 +1261,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '20 Oct 2023',
-
+ 
     claim: {
-        claimText: 'Debunk',
+        claimText: 'debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Joint 3D analysis by investigative human rights groups showed strike came from northeast, not west as Israeli state claims',
         details: 'Investigative human rights groups Forensic Architecture, Palestinian human rights organisation Al-Haq and and audio investigation organisation Earshot released preliminary analysis on X (formerly Twitter) indicating that there are ‘patterns of radial fragmentation on the southwest side of the impact crater, as well as a shallow channel leading into the crater from the northeast. Such patterns indicate a likely projectile trajectory with northeast origins’.<br /><br />This ‘casts significant doubt on IOF claims that the source of the deadly explosion was a Palestinian-fired rocket travelling west to east.’<br /><br />Chris Cobb-Smith, a war crimes investigator and explosive weapons expert reviewed the analysis and agreed that the fragmentation patterns ‘may indicate the projectile came from the northeast – the direction of the Israeli-controlled side of the Gaza perimeter – and not from the west, as claimed by the IOF.’<br /><br />@ForensicArchi @alhaq_org @earshot_ngo',
@@ -1287,13 +1282,13 @@ const data = [
             sourceLink: 'https://twitter.com/ForensicArchi/status/1715422493274427414',
             archiveLink: 'https://archive.ph/i6iZa',
         },
-
+ 
         {
             sourceName: '@ForensicArchi on X',
             sourceLink: 'https://twitter.com/ForensicArchi/status/1715422493274427414',
             archiveLink: 'https://archive.ph/RdRuI',
         },
-
+ 
         {
             sourceName: '@ForensicArchi on X',
             sourceLink: 'https://twitter.com/ForensicArchi/status/1715422505035235474',
@@ -1301,17 +1296,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '20 Oct 2023',
-
+ 
     claim: {
-        claimText: 'Debunk',
+        claimText: 'debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'The missile travelled for 4km and could not have been fired from nearby cemetery as Israeli officials claim',
         details: 'However, according to videos available online, including one aired by Al Jazeera Mubasher showing the moment the hospital was bombed, the missile was in the air for approximately 13 seconds before exploding. This indicates it covered a distance of at least 4 kilometers, which is quite far and somewhat aligns with the hospital surroundings.',
@@ -1325,17 +1320,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '20 Oct 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Audio analysis of alleged intercepted call between Hamas members revealed it was manipulated digitally by the Israeli state',
         details: 'Audio investigations organisation Earshot assessed the audio which revealed that the voices of the two ‘Hamas operatives’ are divided across two channels. If a call was intercepted, both voices would be on the same single monophonic audio channel.<br /><br />Post 3: ‘The fact that this recording is made up of two separate channels demonstrates that these two voices have been recorded independently. These two independent recordings have then been edited together with added effects (such as pan control).’<br /><br />Post 4: ‘Though this audio analysis cannot categorically state that the audible dialogue is fake, <a href="https://earshot.ngo/" target="_blank">Earshot.ngo</a>’s opinion is that the level of manipulation required to edit these two voices together disqualifies it as a source of credible evidence.’<br /><br />Earshot posted its analysis on X (formerly Twitter) at @earshot.ngo in a 4-part post.',
@@ -1349,17 +1344,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '21 Oct 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Audio investigation of missile shows a rocket could not have travelled west as the Israeli state claimed',
         details: 'Audio investigations organisation Earshot mapped the pitch of the doppler on the rocket/missile sound and concludes the launch would have come from the east side of the hospital, not the west as the IOF claimed.',
@@ -1373,17 +1368,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '24 Oct 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Anonymous US intelligence officials said they are confident blast not by Israeli forces',
         details: 'In security briefings to reporters over the phone, US intelligence officials said they have ‘high confidence’ the attack was caused by misfired Palestinian rockets. They based this on analysed videos of the projectiles’ flight path, and an examination of the blast site.',
@@ -1396,17 +1391,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '13 Nov 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Palestinian-British surgeon Doctor Ghassan Abu Sitta reported ongoing Israeli attacks by remote-controlled quadcopters',
         details: 'In a voice note to the UK news outlet The Telegraph, Palestinian-British doctor Doctor Ghassan Abu Sitta said remote-controlled quadcopters equipped with rifles have been firing at Al-Ahli Hospital, which continued to be a target after the first attacks. Dr Abu Sitta was treating patients and sheltering in the hospital along with thousands of displaced Palestinians in Gaza. Palestinians are referred to it as a quadcopter, a large drone mounted with a gun.<br /><br />Dr Abu Sitta said the drones were hovering in ‘the vicinity of the hospital’ and were firing ‘single bullets’.',
@@ -1419,17 +1414,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '14 Nov 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Forensic Architecture and Al-Haq debunked Israeli claims on rocket misfires',
         details: 'In a 7-post thread on X (formerly Twitter), investigative human rights group Forensic Architecture and Palestinian human rights organisation Al-Haq debunked Israeli spokespeople in the media who presented evidence of rockets misfired.<br /><br />@ForensicArchi @alhaq_org',
@@ -1443,17 +1438,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '26 Nov 2023',
-
+ 
     claim: {
         claimText: 'Claim',
         claimTag: 'claim-tag',
     },
-
+ 
     description: {
         summary: 'Human Rights Watch – inconclusive and without evidence – suggested misfired rockets hit Al-Ahli Hospital',
         details: 'International NGO Human Rights Watch released a report suggesting the strike came from misfired rockets but does not provide evidence or come to any conclusion. The report read: ‘There are no known images of any munition remnants publicly available, and Human Rights Watch was unable to visit the scene, preventing conclusive identification of the munition.<br /><br />However, the sound preceding the explosion, the fireball that accompanied it, the size of the resulting crater, the type of splatter adjoining it, and the type and pattern of fragmentation visible around the crater are all consistent with the impact of a rocket.’<br /><br />The report has since been removed from their website.',
@@ -1466,7 +1461,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
     date: '15 Dec 2023',
@@ -1474,7 +1469,7 @@ const data = [
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'UN aid worker recounted Israeli machine gun attacks during emergency medical supply delivery',
         details: 'Jake Morland, an aid worker with the UN, described delivering emergency medical supplies to Al-Ahli Hospital with a convoy of ambulances. Morland told the UK state broadcaster BBC that IOF soldiers were aiming machine guns at Palestinian paramedics and UN vehicles on the way to the hospital. The ambulances were shot at by IOF on their journey. He describes the ongoing deaths at Al-Ahli Hospital when they arrived.',
@@ -1487,7 +1482,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
     date: '17 Dec 2023',
@@ -1508,17 +1503,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '17 Dec 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Al-Ahli Hospital surgeon’s daughter reported continued Israeli shelling and attacks',
         details: 'Nour Naim, the daughter of Al-Ahli Hospital‘s Head of Orthopaedic Surgery Fadel Naim, shared reports on X (formerly Twiter) from her father of continued shelling by Israel Occupation Forces (IOF) targeting the hospital, tanks firing at doctors trying to return, and snipers aiming at people inside the hospital. The post was made under the account @NourNaim88.<br /><br />The post read:<br /><br />‘🚨In a phone call with my father<br /><br />@fnaim65<br /><br />from Al-Ahli Baptist Hospital #Gaza , after communication was cut off 🧵:<br /><br />– The hospital temporarily stopped operating due to intense and targeted shelling on its surroundings since yesterday.’',
@@ -1531,17 +1526,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '18 Oct 2023',
-
+ 
     claim: {
         claimText: 'Context',
         claimTag: 'context-tag',
     },
-
+ 
     description: {
         summary: 'Doctor Ghassan Abu Sitta reported hospitals in Gaza were being re-targeted by Israeli forces',
         details: 'Dr. Ghassan Abu Sitta said hospitals were being re-targeted by Israeli forces, including Al-Awda (17 December, 2023), and Al-Shifa and Al-Ahli (18 December, 2023). In a post shared on X (formerly Twitter), Dr. Abu Sitta wrote: ‘Palestinian hospitals giving any health care, even as a First Aid stations, are being re-targeted by the Israeli army. Yesturday it was Al Awda hospital. Morning they shelled Shifa Hospital. This afternoon they attacked Al Ahli hospital and are rounding up the staff and wounded.’<br /><br />The post was made under the account @GhassanAbuSitt1.',
@@ -1554,17 +1549,17 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-
+ 
     date: '19 Dec 2023',
-
+ 
     claim: {
         claimText: 'Debunk',
         claimTag: 'debunk-tag',
     },
-
+ 
     description: {
         summary: 'Al-Ahli Hospital shut down due to ongoing Israeli attacks and detentions',
         details: 'Fadel Naim, Al-Ahli’s head of orthopaedic surgery, told news wire AFP that Al-Ahli Hospital had continued to be attacked. He said doctors, medical staff and patients had been detained by the Israel Occupation Forces (IOF) and soldiers had destroyed part of the building’s grounds.',
@@ -1577,7 +1572,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
     date: '20 Dec 2023',
@@ -1598,9 +1593,9 @@ const data = [
         }
     ]
 },
-
-
-
+ 
+ 
+ 
 // Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
@@ -1622,7 +1617,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '9 Oct 2023',
@@ -1643,7 +1638,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '3 Nov 2023',
@@ -1651,7 +1646,7 @@ const data = [
         claimText: 'Context',
         claimTag: 'context-tag'
     },
-
+ 
     description: {
         summary: 'Israeli forces hit ambulance convoy leaving Al-Shifa Hospital with airstrikes',
         details: 'An Israeli airstrike targeted an ambulance convoy leaving Al-Shifa Hospital, killing 15 Palestinians and injuring 60. <br><br> The Israeli state claimed Hamas was using the ambulances – an unfounded claim. <br><br> The Palestine Red Crescent Society also reported that the Israeli state targeted Al-Shifa ambulances seven times before this attack and killed four of their staff.'
@@ -1662,19 +1657,19 @@ const data = [
             sourceLink: 'https://twitter.com/PalestineRCS/status/1720579687682838812',
             archiveLink: 'https://archive.ph/9gvAk',
         },
-
+ 
         {
             sourceName: 'Palestine Red Crescent Society',
             sourceLink: 'https://www.palestinercs.org/public/files/image/2023/News/112023/PRCS%20Statement%2003112023.pdf',
             archiveLink: 'https://archive.ph/TZY0m',
         },
-
+ 
         {
             sourceName: 'CNN',
             sourceLink: 'https://www.cnn.com/2023/11/03/middleeast/casualties-gazas-shifa-hospital-idf/index.html',
             archiveLink: 'https://archive.ph/guy5q',
         },
-
+ 
         {
             sourceName: 'The Guardian',
             sourceLink: 'https://www.youtube.com/watch?v=8LAWhj4MLMs',
@@ -1682,7 +1677,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '6 Nov 2023',
@@ -1690,7 +1685,7 @@ const data = [
         claimText: 'Context',
         claimTag: 'context-tag'
     },
-
+ 
     description: {
         summary: 'Solar panels at Al-Shifa Hospital destroyed by Israeli forces',
         details: 'Israeli forces destroyed the solar panels atop the hospital, leaving it fully reliant on back-up generators powered by dwindling fuel supplies. <br><br>Dr. Ghassan Abu Sitta, a Palestinian-British surgeon treating Palestinians at Al-Shifa Hospital, posted on X (formerly Twitter): ‘Israel just hit the solar panels on the roof of Shifa hospital. Shifa MUST go dark. Israeli necropolitics means it needs to declare victory over a hospital.‘ <br><br> Cameraman Omar Abu Nada posted a video on Instagram showing and describing the damage of the solar panels at Al-Shifa Hospital. <br><br> The Israeli state denies destroying solar panels.'
@@ -1701,13 +1696,13 @@ const data = [
             sourceLink: 'https://twitter.com/GhassanAbuSitt1/status/1721545920322375747',
             archiveLink: 'https://archive.ph/y3ygE',
         },
-
+ 
         {
             sourceName: 'Al Jazeera',
             sourceLink: 'https://www.aljazeera.com/news/2023/11/6/israeli-forces-target-solar-panels-at-gazas-al-shifa-hospital',
             archiveLink: 'https://archive.ph/e8FNi',
         },
-
+ 
         {
             sourceName: 'Cameraman Omar Abu Nada on Instagram',
             sourceLink: 'https://www.instagram.com/reel/CzTlWjcNixb/',
@@ -1715,7 +1710,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '9 Nov 2023',
@@ -1727,7 +1722,7 @@ const data = [
         summary: 'Israeli forces bomb Al-Shifa Hospital multiple times',
         details: 'Israeli strikes hit the yard of the Al-Shifa Hospital complex. Gaza‘s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br><br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],’ he said.'
     },
-
+ 
     sources: [
         {
             sourceName: 'Al Jazeera',
@@ -1736,7 +1731,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '10 Nov 2023',
@@ -1757,7 +1752,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '11 Nov 2023',
@@ -1777,7 +1772,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '11 Nov 2023',
@@ -1797,7 +1792,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1817,7 +1812,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1838,7 +1833,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1858,7 +1853,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1877,13 +1872,13 @@ const data = [
             archiveLink: 'https://archive.ph/aMVX8',
             videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_Alleged_Audio_IOF_Fuel_AlShifa_Gaza_Health_Ministry.mp4'
         },
-
+ 
         {
             sourceName: 'Israel Occupation Force',
             sourceLink: 'https://www.idf.il/en/mini-sites/hamas-israel-war-24/war-on-hamas-2023-resources/hamas-refuses-fuel-delivery-to-shifa-hospital/',
             archiveLink: 'https://archive.is/xihlp',
         },
-
+ 
         {
             sourceName: 'YouTube',
             sourceLink: 'https://www.youtube.com/watch?v=cg0CEhWhguI',
@@ -1891,7 +1886,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1901,7 +1896,7 @@ const data = [
     },
     description: {
         summary: 'Israeli Foreign Affairs X account posts audio clip and alleged footage of Israeli forces delivering fuel to Al-Shifa',
-        details: 'The official Israeli Ministry of Foreign Affairs account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liaison officer with the Israeli military. They also shared alongside it in the single post a video, alleging it is footage of Israeli forces delivering fuel to Al-Shifa Hospital.<br><br>The post reads:<br><br>‘Breaking: Hamas prevented the Shifa Hospital from receiving 300 liters of fuel from the IDF for urgent medical purposes.<br>📸 (left) A recorded conversation between an IDF officer and a senior official in the health ministry in Gaza who states that the Hamas Health Ministry prevented them from receiving the fuel.<br>📸 (right) Footage of IDF delivering fuel.’'
+        details: 'The official Israeli Ministry of Foreign Affairs account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liaison officer with the Israeli military. They also shared alongside it in the single post a video, alleging it is footage of Israeli forces delivering fuel to Al-Shifa Hospital.<br><br>The post reads:<br> ‘Breaking: Hamas prevented the Shifa Hospital from receiving 300 liters of fuel from the IDF for urgent medical purposes.<br>📸 (left) A recorded conversation between an IDF officer and a senior official in the health ministry in Gaza who states that the Hamas Health Ministry prevented them from receiving the fuel.<br>📸 (right) Footage of IDF delivering fuel.’'
     },
     sources: [
         {
@@ -1911,7 +1906,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '12 Nov 2023',
@@ -1921,7 +1916,7 @@ const data = [
     },
     description: {
         summary: 'Israeli military spokesperson for Arab media says 300L of fuel offered that Hamas rejected',
-        details: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br><br>The post, written in Arabic and translated to English, stated:<br><br>‘An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!’',
+        details: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br><br>The post, written in Arabic and translated to English, stated:<br><br>"An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!"',
     },
     sources: [
         {
@@ -1931,7 +1926,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     claim: {
@@ -1951,7 +1946,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '13 Nov 2023',
@@ -1969,13 +1964,13 @@ const data = [
             sourceLink: 'https://news.sky.com/story/israel-and-hamas-dispute-claims-of-gaza-hospital-fuel-offer-as-babies-among-12-dead-13006949',
             archiveLink: 'https://archive.ph/FivPS',
         },
-
+ 
         {
             sourceName: 'Al Bawaba',
             sourceLink: 'https://www.albawaba.com/news/hamas-denies-claims-refusing-receive-fuel-al-shifa-hospital-gaza-1541324',
             archiveLink: 'https://archive.is/7DUiu',
         },
-
+ 
         {
             sourceName: 'The Guardian',
             sourceLink: 'https://www.theguardian.com/world/2023/nov/13/in-the-circle-of-death-gaza-doctors-say-patients-are-under-siege-in-al-shifa',
@@ -1983,7 +1978,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '15 Nov 2023',
@@ -1993,7 +1988,28 @@ const data = [
     },
     description: {
         summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
-        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel.’<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>‘We’ll place the fuel at Al Majlis A-Tashri’i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he’ll tell you they’re there. Then, after we put the gallons, our forces will move back so that our forces won’t be near the junction. (Then) you will send an ambulance, take the fuel.’',
+        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri’i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
+    },
+    // MISSING
+    sources: [
+        {
+            sourceName: 'Israel Occupation Forces',
+            sourceLink: '',
+            archiveLink: '',
+        }
+    ]
+},
+ 
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '15 Nov 2023',
+    claim: {
+        claimText: 'Claim',
+        claimTag: 'claim-tag',
+    },
+    description: {
+        summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
+        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri‘i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
     },
     sources: [
         {
@@ -2009,7 +2025,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '23 Nov 2023',
@@ -2019,7 +2035,7 @@ const data = [
     },
     description: {
         summary: 'Director of Al-Shifa Hospital and other senior healthworkers arrested and detained by Israeli forces',
-        details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state’s assertion that there was ‘evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre.’<br><br>The now-deleted IOF press release on the arrest was titled: ‘Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning.’',
+        details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state‘s assertion that there was "evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre."<br><br>The now-deleted IOF press release on the arrest was titled: "Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning."',
     },
     sources: [
         {
@@ -2030,7 +2046,7 @@ const data = [
         }
     ]
 },
-
+ 
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
     date: '5 Dec 2023',
@@ -2050,9 +2066,9 @@ const data = [
         }
     ]
 },
-
+ 
 // CLAIM: Makeup used in Gaza to fake injuries
-
+ 
 {
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '2005',
@@ -2111,6 +2127,7 @@ const data = [
        },
    ]
 },
+
 {
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '8 Nov 2023',
@@ -2131,6 +2148,7 @@ const data = [
        },
    ]
 },
+
 {
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '9 Nov 2023',
@@ -2151,6 +2169,7 @@ const data = [
        },
    ]
 },
+
 {
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '9 Nov 2023',
@@ -2170,6 +2189,7 @@ const data = [
        },
    ]
 },
+
 {
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '9 Nov 2023',
@@ -2190,6 +2210,7 @@ const data = [
        },
    ]
 },
+
 {
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '9 Nov 2023',
@@ -2209,7 +2230,7 @@ const data = [
        },
   ]
 },
-
+ 
 {
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '10 Nov 2023',
@@ -2229,6 +2250,7 @@ const data = [
        },
   ]
 },
+
 {
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '10 Nov 2023',
@@ -2248,6 +2270,7 @@ const data = [
        },
   ]
 },
+
 {
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '10 Nov 2023',
@@ -2266,7 +2289,9 @@ const data = [
            archiveLink: 'https://archive.is/hXdZk',
        },
   ]
-},{
+},
+
+{
    claimTitle: 'Makeup used in Gaza to fake injuries',
    date: '14 Nov 2023',
    claim: {
@@ -2283,9 +2308,59 @@ const data = [
            sourceLink: 'https://www.usatoday.com/story/news/factcheck/2023/11/14/video-not-proof-of-fake-palestinian-injuries-fact-check/71568997007/',
            archiveLink: 'https://archive.is/JYApD',
        },
-  ]
+    ]
 },
-    
+ 
+// CLAIM: Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '16 Dec 2023',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'Israeli tanks fired on Holy Family Church‘s Convent in Gaza',
+           details: 'On the morning of 16 December, 2023, Israeli forces fired a rocket at the Convent of Sisters of Mother Theresa (Missionaries of Charity) which sits in the Holy Family Parish compound. The Holy Family Parish is a Catholic church in Gaza. <br> The rocket caused an explosion and fire, which destroyed the building‘s generator and fuel resources – its only source of electricity. Israeli forces fired two more rockets from a tank, displacing the 54 disabled people there and leaving them without access to respirators that some of them need to survive, the statement said. Water tanks and solar panels were also destroyed.',
+   },
+   sources: [
+       {
+           sourceName: 'The Latin Patriarch of Jerusalem',
+           sourceLink: 'https://twitter.com/LPJerusalem/status/1736057252086268025',
+           archiveLink: 'https://archive.ph/u4lkL',
+           videoPreviewLink: 'https://files.hasbaratracker.com/16Dec_attack__Holy_Family_Parish_compound.webp',
+       },
+   ]
+},
+
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '16 Dec 2023',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'Palestinian mother and daughter seeking refuge in church killed by Israeli snipers',
+           details: '"Mother and daughter Nahida and Samar Anton were seeking refuge in the Holy Family Church in Gaza. Nahida, also known as Um Emad (mother of Emad) and her daughter Samar left the church to walk over to the Sisters’ Convent to use the bathroom. ‘A sniper bullet cracked through the air and into Samar’s head. Another hit Nahida, a grandmother of 15, in the stomach.’ <br> Family members witnessed the murders. A relative of Nahida and Samar spoke to UK news outlet The Independent, stating: ‘Some of our relatives rushed out to help. One of them was a surgeon called Dr Elias, the others were my family members including a cousin, who is just 16 years old. But they were then hit by a kind of bomb. <br> Seven in total were injured from shrapnel – including my teenage cousins. There is no way to properly treat them there are no working hospitals in north Gaza.’',
+   },
+   sources: [
+       {
+           sourceName: 'The Independent',
+           sourceLink: 'https://www.independent.co.uk/news/world/middle-east/israel-gaza-church-palestinians-christians-b2466049.html',
+           archiveLink: 'https://archive.is/C1lE9',
+       },
+
+        {
+            sourceName: 'YouTube',
+            sourceLink: 'https://www.youtube.com/watch?v=zs-2vw5lfgQ',
+            archiveLink: 'https://archive.ph/UCvws',
+        },
+    ]
+},
+
+]
+
 // TEMPLATE DATA SET (copy and paste this as much as you need it)
 
 // {
@@ -2315,6 +2390,5 @@ const data = [
 //     ]
 // },
 
-]
-
 export { data, summaries };
+ 

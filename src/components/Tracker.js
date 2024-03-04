@@ -15,7 +15,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
 
-export default function ClaimFortyBeheadedBabies() {
+export default function Tracker() {
     // defines claim tags for dropdown (ClaimFilter.js)
     const uniqueClaimTitles = useMemo(() => {
         const claimTitlesSet = new Set(data.map((item) => item.claimTitle));

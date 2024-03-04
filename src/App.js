@@ -11,11 +11,14 @@ import ScrollToTop from './components/utils/ScrollToTop';
 import VolunteerForm from './components/VolunteerForm';
 import SubmitClaimForm from './components/SubmitClaimForm';
 import ContactForm from './components/ContactForm';
-import NewsletterSignUpForm from './components/NewsletterSignUpForm';
+// import NewsletterSignUpForm from './components/NewsletterSignUpForm';
 
 import ClaimFortyBeheadedBabies from './components/ClaimFortyBeheadedBabies';
 import ClaimAlAhliAttacked from './components/ClaimAlAhliAttacked';
 import ClaimAlShifaFuel from './components/ClaimAlShifaFuel';
+import ClaimMakeup from './components/ClaimMakeup';
+import ClaimHamasChemicalWeapons from './components/ClaimHamasChemicalWeapons';
+import ClaimIsraeliDeniesChurchKilling from './components/ClaimIsraeliDeniesChurchKilling';
 
 
 const App = () => {
@@ -31,13 +34,15 @@ const App = () => {
                 <Route path="/tracker" element={<Tracker />} />
                 <Route path="/volunteer" element={<VolunteerForm />} />
                 <Route path="/contact" element={<ContactForm />} />
-                <Route path="/newsletter" element={<NewsletterSignUpForm />} />
+                {/* <Route path="/newsletter" element={<NewsletterSignUpForm />} /> */}
 
                 {/* Individual claim pages */}
                 <Route path="/forty-beheaded-babies" element={<ClaimFortyBeheadedBabies />} />
                 <Route path="/al-ahli-attacked" element={<ClaimAlAhliAttacked />} />
                 <Route path="/al-shifa-fuel" element={<ClaimAlShifaFuel />} />
-
+                <Route path="/makeup" element={<ClaimMakeup />} />
+                <Route path="/hamas-chemical-weapons" element={<ClaimHamasChemicalWeapons />} />
+                <Route path="/israel-denies-church-killing" element={<ClaimIsraeliDeniesChurchKilling />} />
 
                 
                 {/* Route redirects to claim searches */}

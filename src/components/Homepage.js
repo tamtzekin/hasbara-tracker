@@ -17,7 +17,6 @@ const Homepage = () => {
         </head>
         <Header />
 
-
         {/* 1-column view */}
         <span className="laptop:hidden">
             <div className="content-container">

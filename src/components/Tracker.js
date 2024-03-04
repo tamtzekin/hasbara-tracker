@@ -6,7 +6,7 @@ import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 import './Tracker.css';
 import '../App.css';
 
-import data from './data';
+import { summaries, data } from './data';
 import VideoPlayer from './VideoPlayer';
 import Header from './Header';
 import ClaimFilter from './ClaimFilter';

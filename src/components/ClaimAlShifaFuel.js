@@ -5,7 +5,7 @@ import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 import './Tracker.css';
 import '../App.css';
 
-import data from './data';
+import { summaries, data } from './data';
 import VideoPlayer from './VideoPlayer';
 import Header from './Header';
 import ClaimFilter from './ClaimFilter';
@@ -25,10 +25,10 @@ export default function ClaimFortyBeheadedBabies() {
     const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
     
     // State to hold the current claim's summary
-    const [currentClaimSummary, setCurrentClaimSummary] = useState('');
+    // const [currentClaimSummary, setCurrentClaimSummary] = useState('');
 
-    const claimTitle = data.map(item => item.claimTitle);
-    const claimSummary = data.map(item => item.claimSummary);
+    // const claimTitle = data.map(item => item.claimTitle);
+    // const claimSummary = data.map(item => item.claimSummary);
     
     // Set mobile/phone view dimensions
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 576);
@@ -401,9 +401,9 @@ export default function ClaimFortyBeheadedBabies() {
                         <span className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
                             The claim:</span>
                         <span className="laptop:text-md laptop:w-7/12 mb-2 -mt-2">
-                            &nbsp;‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’</span>
+                            &nbsp;‘{summaries[2].claimMainTitle}’</span>
                         <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
-                        Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital. The IOF made it impossible to receive supplies.
+                        {summaries[2].claimSummary}
                     </div>
 
                     </div>

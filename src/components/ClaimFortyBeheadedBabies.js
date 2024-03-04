@@ -23,13 +23,7 @@ export default function ClaimFortyBeheadedBabies() {
         }, [data]);
     
     const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
-    
-    // State to hold the current claim's summary
-    // const [currentClaimSummary, setCurrentClaimSummary] = useState('');
-
-    // const claimTitle = data.map(item => item.claimTitle);
-    // const claimSummary = data.map(item => item.claimSummary);
-    
+        
     // Set mobile/phone view dimensions
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 576);
 
@@ -64,8 +58,7 @@ export default function ClaimFortyBeheadedBabies() {
                 Header: 'The claim',
                 accessor: 'claimTitle',
                 Cell: ({ cell }) => (
-                    // TODO: Do we want the claim name clickable or not
-                    <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
+                    <>{cell.value}</>
                 )
             },
             {
@@ -162,8 +155,7 @@ export default function ClaimFortyBeheadedBabies() {
                     Header: 'The claim',
                     accessor: 'claimTitle',
                     Cell: ({ cell }) => (
-                        // TODO: Do we want the claim name clickable or not
-                        <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
+                        <>{cell.value}</>
                     )
                 },
 

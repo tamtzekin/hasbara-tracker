@@ -37,7 +37,7 @@ const App = () => {
                 {/* <Route path="/newsletter" element={<NewsletterSignUpForm />} /> */}
 
                 {/* Individual claim pages */}
-                <Route path="/forty-beheaded-babies" element={<ClaimFortyBeheadedBabies />} />
+                {/* <Route path="/forty-beheaded-babies" element={<ClaimFortyBeheadedBabies />} /> */}
                 <Route path="/al-ahli-attacked" element={<ClaimAlAhliAttacked />} />
                 <Route path="/al-shifa-fuel" element={<ClaimAlShifaFuel />} />
                 <Route path="/makeup" element={<ClaimMakeup />} />
@@ -62,6 +62,11 @@ const App = () => {
                 /> */}
 
                 {/* Routes that use search queries */}
+                <Route
+                    path="/forty-beheaded-babies"
+                    element={<Navigate to="/tracker?claim=Forty%20beheaded%20babies" replace />}
+                />
+                    
                 {/* <Route
                     path="/forty-beheaded-babies"
                     element={<Navigate to="/tracker?claim=Forty%20beheaded%20babies" replace />}

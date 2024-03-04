@@ -328,7 +328,8 @@ export default function ClaimFortyBeheadedBabies() {
             data,
             initialState: {
                 sortBy: [{ id: 'date', desc: false }],
-                globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
+                globalFilter: '',
+                // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
             },
             disableSortRemove: true,
         },

@@ -458,24 +458,24 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         padding: 0.8% 1% 0% 1%;  
         width: 14%;
         position: absolute;
-        left: 30%;
+        left: 30.5%;
         text-align: center;
     }
 
     .context-tag {
-        padding: 0.5% 1.3% 0.1% 1%;  
+        padding: 0.5% 1.3% 0.25% 1%;  
         width: 17%;
         position: absolute;
         text-align: center;
-        left: 30%;
+        left: 30.5%;
     }
 
 
     .debunk-tag {
-        padding: 0.5% 1% 0.1% 1%;  
+        padding: 0.5% 1% 0.2% 1%;  
         width: 16%;
         position: absolute;
-        left: 30%;
+        left: 30.5%;
         text-align: center;
     }
 

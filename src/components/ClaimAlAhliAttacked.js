@@ -403,7 +403,7 @@ export default function ClaimFortyBeheadedBabies() {
                             The claim:</span>
                         <span className="laptop:text-md laptop:w-7/12 mb-2 -mt-2">
                             &nbsp;‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</span>
-                        <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-7">
+                        <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
                             Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
                     </div>
 

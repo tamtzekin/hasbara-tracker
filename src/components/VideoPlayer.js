@@ -65,9 +65,9 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                 contentLabel="Video Modal"
                 style={{
                     content: {
-                        top: '52%',
+                        top: '25%',
                         left: '30%',
-                        right: '25%',
+                        right: '30%',
                         transform: 'none',
                         border: 'none',
                         background: 'none',

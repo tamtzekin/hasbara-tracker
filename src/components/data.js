@@ -2311,8 +2311,7 @@ const data = [
     ]
 },
  
-// CLAIM: Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish
-
+// CLAIM: Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish
 {
    claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
    date: '16 Dec 2023',
@@ -2343,7 +2342,7 @@ const data = [
    },
    description: {
        summary: 'Palestinian mother and daughter seeking refuge in church killed by Israeli snipers',
-           details: 'Mother and daughter Nahida and Samar Anton were seeking refuge in the Holy Family Church in Gaza. Nahida, also known as Um Emad (mother of Emad) and her daughter Samar left the church to walk over to the Sisters’ Convent to use the bathroom. ‘A sniper bullet cracked through the air and into Samar’s head. Another hit Nahida, a grandmother of 15, in the stomach.’ <br> Family members witnessed the murders. A relative of Nahida and Samar spoke to UK news outlet The Independent, stating: ‘Some of our relatives rushed out to help. One of them was a surgeon called Dr Elias, the others were my family members including a cousin, who is just 16 years old. But they were then hit by a kind of bomb. <br> Seven in total were injured from shrapnel – including my teenage cousins. There is no way to properly treat them there are no working hospitals in north Gaza.’',
+           details: '"Mother and daughter Nahida and Samar Anton were seeking refuge in the Holy Family Church in Gaza. Nahida, also known as Um Emad (mother of Emad) and her daughter Samar left the church to walk over to the Sisters’ Convent to use the bathroom. ‘A sniper bullet cracked through the air and into Samar’s head. Another hit Nahida, a grandmother of 15, in the stomach.’ <br> Family members witnessed the murders. A relative of Nahida and Samar spoke to UK news outlet The Independent, stating: ‘Some of our relatives rushed out to help. One of them was a surgeon called Dr Elias, the others were my family members including a cousin, who is just 16 years old. But they were then hit by a kind of bomb. <br> Seven in total were injured from shrapnel – including my teenage cousins. There is no way to properly treat them there are no working hospitals in north Gaza.’',
    },
    sources: [
        {
@@ -2357,66 +2356,6 @@ const data = [
             sourceLink: 'https://www.youtube.com/watch?v=zs-2vw5lfgQ',
             archiveLink: 'https://archive.ph/UCvws',
         },
-    ]
-},
-
-{
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
-   date: '16 Dec 2023',
-   claim: {
-       claimText: 'Debunk',
-       claimTag: 'debunk-tag',
-   },
-   description: {
-       summary: 'Latin Patriarch of Jerusalem confirms Israeli sniper murdered two women inside Holy Family Parish',
-           details: 'Patriarchate Cardinal Pizzaballa of the Latin Patriarch of Jerusalem issued a statement confirming the murder of mother and daughter Nahida and Samar Anton, two Christian Palestinian women, by Israeli forces. <br>The statement read:  ‘Around noon today, December 16, 2023, a sniper of the IDF murdered two Christian women inside the Holy Family Parish in Gaza, where the majority of Christian families has taken refuge since the start of the war. Nahida and her daughter Samar were shot and killed as they walked to the Sister’s Convent. One was killed as she tried to carry the other to safety.’ <br> The statement said another seven people were ‘shot and wounded’ while trying to ‘protect others inside the church compound’. <br> ‘No warning was given, no notification was provided,’ the Patriarchate said. ‘They were shot in cold blood inside the premises of the Parish, where there are no belligerents.’',
-   },
-   sources: [
-       {
-           sourceName: 'The Latin Patriarch of Jerusalem',
-           sourceLink: 'https://www.lpj.org/en/gaza-16th-december-2023',
-           archiveLink: 'https://archive.ph/ByVDW',
-       },
-    ]
-},
-
-{
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
-   date: '16 Dec 2023',
-   claim: {
-       claimText: 'Debunk',
-       claimTag: 'debunk-tag',
-   },
-   description: {
-       summary: 'Catholic Bishops’ president condemns murder by Israeli forces',
-           details: 'Cardinal Vincent Nichols, President of the Catholic Bishops’ Conference of England and Wales, issued a statement describing the murder of Nahida and Samar, who were taking refuge in the Holy Family Parish in Gaza, as callous. <br> The statement by Cardinal Nichols read: ‘I am heartbroken at the information provided by Cardinal Pizzaballa, the Latin Patriarch of Jerusalem, of killings in the Church compound of the Catholic Parish of the Holy Family in Gaza City. I have immediately sent a message to His Eminence, expressing my horror at these events and assuring him of the prayers of Catholics in England and Wales.’ <br> He added: ‘The information provided by the Cardinal gives a picture of seemingly deliberate and callous killing by IDF soldiers of innocent civilians: an elderly woman and her daughter in the grounds of a church. This killing has to stop. It can never be justified.’',
-   },
-   sources: [
-       {
-           sourceName: 'Friends of the Holy Land',
-           sourceLink: 'https://www.friendsoftheholyland.org.uk/blog/cardinal-vincent-nichols-statement-on-holy-family-parish-in-gaza',
-           archiveLink: 'https://archive.ph/8jBdR',
-       },
-    ]
-},
-
-{
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
-   date: '16 Dec 2023',
-   claim: {
-       claimText: 'Claim',
-       claimTag: 'claim-tag',
-   },
-   description: {
-       summary: 'Israeli ambassador says Israeli forces ‘misidentified’ the women, accuses Latin Patriarch of ‘blood libel’',
-           details: 'Raphael Schutz, the Israeli ambassador to the Holy See (the Holy See refers to the jurisdiction of the pope in his role as the Bishop of Rome), shared multiple posts on X (formerly Twitter) claiming that Israeli forces ‘apparently misidentified two Catholic women... as terrorists’, and called the press release from the Latin Patriarch of Jerusalem describing the attack as cold-blooded murder as ‘blood libel’. <br> The statement, separated as three posts, reads: <br> 1. ‘War is terrible and chaotic. Yesterday Israeli forces mistakenly killed three Israeli hostages and today an Israeli sniper apparently misidentified two Catholic women, mother and daughter, as terrorists and killed them. Under such circumstances, describing the tragic event as a’ <br> 2. ‘Under such circumstances, when there is no shred of proof that the event was anything but a terrible mistake, describing it as "a cold blooded murder" as in the text released today by the communication office of the Latin Patriarchate of Jerusalem,’ <br> 3. ‘is to be condemned in the harshest terms as a blood libel. This kind of fallacies must be rejected by every decent human being.’ <br> In the third post, the press release by the Latin Patriarch of Jerusalem was shared.',
-   },
-   sources: [
-       {
-           sourceName: 'Raphael Schutz on X',
-           sourceLink: 'https://twitter.com/RafiSchutz/status/1736103162359005412',
-           archiveLink: 'https://archive.ph/rZCXm',
-       },
     ]
 },
 

@@ -399,7 +399,7 @@ export default function ClaimMakeup() {
                     <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
                         <span className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
                             The claim:</span>
-                        <span className="laptop:text-md laptop:w-7/12 mb-2 mt-1">
+                        <span className="mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
                             &nbsp;‘Makeup used in Gaza to fake injuries’</span>
                         <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
                         description here

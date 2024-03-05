@@ -191,6 +191,7 @@ const VolunteerForm = () => {
                                 />
                             </label>
                             <br />
+                            <br />
 
                             {/* When submitting is loading, disable SUBMIT button */}
                             {isLoading ? (

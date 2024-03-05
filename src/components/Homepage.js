@@ -51,7 +51,7 @@ const Homepage = () => {
 
 
         {/* 2-column view */}
-        <span className="mobile:hidden">
+        <span className="mobile:hidden hide-on-tablet">
             <div className="columns-container">
                 <span className="column">
                     <details>

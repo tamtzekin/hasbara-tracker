@@ -338,7 +338,7 @@ export default function ClaimIsraeliDeniesChurchKilling() {
                 sortBy: [{ id: 'date', desc: false }],
                 // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
 
-                globalFilter: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish'
+                globalFilter: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish'
             },
             disableSortRemove: true,
         },

@@ -11,7 +11,7 @@ import ScrollToTop from './components/utils/ScrollToTop';
 import VolunteerForm from './components/VolunteerForm';
 import SubmitClaimForm from './components/SubmitClaimForm';
 import ContactForm from './components/ContactForm';
-// import NewsletterSignUpForm from './components/NewsletterSignUpForm';
+import MailSignUpForm from './components/MailSignUpForm';
 
 import ClaimFortyBeheadedBabies from './components/ClaimFortyBeheadedBabies';
 import ClaimAlAhliAttacked from './components/ClaimAlAhliAttacked';
@@ -34,7 +34,7 @@ const App = () => {
                 <Route path="/tracker" element={<Tracker />} />
                 <Route path="/volunteer" element={<VolunteerForm />} />
                 <Route path="/contact" element={<ContactForm />} />
-                {/* <Route path="/newsletter" element={<NewsletterSignUpForm />} /> */}
+                <Route path="/sign-up" element={<MailSignUpForm />} />
 
                 {/* Individual claim pages */}
                 <Route path="/forty-beheaded-babies" element={<ClaimFortyBeheadedBabies />} />

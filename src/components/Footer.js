@@ -17,27 +17,28 @@ const Footer = () => {
               {/* Newsletter sign-up text and input field */}
               <div className="mobile:w-full mobile:mb-2 laptop:flex laptop:mb-0.5 desktop:flex md:items-center">
                 <p className="text-grey-faded text-xs laptop:mt-2 laptop:mr-3">
-                  Stay updated by email
+                  <Link to="/sign-up">Stay updated by email</Link>
                 </p>
-                <div className="relative flex items-center">
+                {/* <div className="relative flex items-center">
                   <input
                     type="text"
                     className="signup-input peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] text-xs leading-[1.6] text-neutral-200 text-grey-darkest outline-none transition-all duration-200 ease-linear motion-reduce:transition-none"
                     id="exampleFormControlInput1"
                     placeholder="------------@--------.com"
                   />
-                </div>
+                </div> */}
               </div>
 
               {/* 'Sign up' button md:mr-auto  */}
-              <div className="mobile:whitespace-nowrap flex items-center ml-2">
+              {/* <div className="mobile:whitespace-nowrap flex items-center ml-2">
                 <button
                   type="submit"
                   className="btn-green sign-up-form"
                 >
                 Sign up    
               </button>
-              </div>
+              </div> */}
+
             </div>
 
             {/* <Link to="/sign-up">Sign up</Link> */}

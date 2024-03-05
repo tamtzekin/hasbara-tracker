@@ -164,7 +164,7 @@ const MailSignUpForm = () => {
                     </form>
 
                     {isSubmitted && !isLoading && (
-                <p>Thank you for signing up to Hasbara Tracker. We’re working on documenting and debunking claims made by the Israeli state during its most recent — and unprecedented — genocidal campaign in Gaza since 7 Oct, 2023.</p>
+                <p>Thank you for signing up to Hasbara Tracker.</p>
             )}
             </div>
             <Footer />

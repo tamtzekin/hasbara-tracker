@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../App.css';
 
 const Footer = () => {
+
+
+  // To prevent email sign up link from appearing on actual sign up page
+  const location = useLocation();
+  const isSignUpPage = location.pathname === '/sign-up';
+
+
     return (
         <>
         <div className="footer-container ml-10 mobile:ml-0 mobile:mt-[0%]">
@@ -17,7 +24,7 @@ const Footer = () => {
               {/* Newsletter sign-up text and input field */}
               <div className="mobile:w-full mobile:mb-2 laptop:flex laptop:mb-0.5 desktop:flex md:items-center">
                 <p className="text-grey-faded text-xs laptop:mt-2 laptop:mr-3">
-                  <Link to="/sign-up">Stay updated by email ✉</Link>
+                  {isSignUpPage ? null : <Link to="/sign-up">Stay updated by email ✉</Link>}
                 </p>
                 {/* <div className="relative flex items-center">
                   <input

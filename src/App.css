@@ -366,6 +366,17 @@ a.active {
 }
 
 
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+SEMI TABLET VIEW
+
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
+@media only screen and (min-width: 577px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+
 
 /* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
@@ -611,21 +622,20 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 
-
-
 /* Medium-sized devices */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
 /* Styles for screens between 768px and 991px wide (small desktops) */
+/* @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-}
+} */
 
 /* Large desktops */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
 /* Styles for screens between 992px and 1199px wide (medium desktops) */
+/* @media only screen and (min-width: 992px) and (max-width: 1199px) {
 
-}
+} */
 
 /* Extra-large desktops */
-@media only screen and (min-width: 1200px) {
 /* Styles for screens wider than 1199px (large desktops) */
-}
+/* @media only screen and (min-width: 1200px) {
+
+} */

@@ -86,9 +86,9 @@ const MailSignUpForm = () => {
                     </div>
                     <br />
 
-                    <form onSubmit={handleSubmit} class="mt-8">
+                    <form onSubmit={handleSubmit} class="mt-7">
                         <label className="form-field font-semibold">
-                            First name <span className="required-field">*</span>
+                            First name<span className="required-field">*</span>
 
                             <input
                                 className="w-full p-1 mt-[2.5%] mb-9"
@@ -109,7 +109,7 @@ const MailSignUpForm = () => {
                         <br />
 
                         <label className="form-field font-semibold">
-                            Last name <span className="required-field">*</span>
+                            Last name<span className="required-field">*</span>
                             <input
                                 className="w-full p-1 mt-[2.5%] mb-9"
                                 type="text"

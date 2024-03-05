@@ -35,10 +35,12 @@ const Footer = () => {
                   type="submit"
                   className="btn-green sign-up-form"
                 >
-              Sign up                
+                Sign up    
               </button>
               </div>
             </div>
+
+            {/* <Link to="/sign-up">Sign up</Link> */}
 
             {/* Footer links */}
             <ul className="mobile:hidden laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">

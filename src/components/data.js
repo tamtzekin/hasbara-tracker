@@ -2529,6 +2529,29 @@ const data = [
    ]
 },
 
+// CLAIM: Hamas were carrying instructions on how to make chemical weapons
+{
+   claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+   date: '16 Dec 2023',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'Israeli tanks fired on Holy Family Church‘s Convent in Gaza',
+           details: 'On the morning of 16 December, 2023, Israeli forces fired a rocket at the Convent of Sisters of Mother Theresa (Missionaries of Charity) which sits in the Holy Family Parish compound. <br><br>The Holy Family Parish is a Catholic church in Gaza. <br><br> The rocket caused an explosion and fire, which destroyed the building‘s generator and fuel resources – its only source of electricity. Israeli forces fired two more rockets from a tank, displacing the 54 disabled people there and leaving them without access to respirators that some of them need to survive, the statement said. <br><br>Water tanks and solar panels were also destroyed.',
+   },
+   sources: [
+       {
+           sourceName: 'The Latin Patriarch of Jerusalem',
+           sourceLink: 'https://twitter.com/LPJerusalem/status/1736057252086268025',
+           archiveLink: 'https://archive.ph/u4lkL',
+           videoPreviewLink: 'https://files.hasbaratracker.com/16Dec_attack__Holy_Family_Parish_compound.webp',
+       },
+   ]
+},
+
+
 ]
 
 // TEMPLATE DATA SET (copy and paste this as much as you need it)

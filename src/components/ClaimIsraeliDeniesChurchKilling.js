@@ -402,7 +402,7 @@ export default function ClaimIsraeliDeniesChurchKilling() {
                             The claim</div>
                         <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">‘Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish’</div>
                         <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
-                        In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women.
+                   Following the murder of Nahida and Samar Anton by an Israeli sniper, Israeli officials gave different explanations: from mistaking the women for ‘terrorists’ to denying any involvement to blaming Hamas.
                     </div>
 
                     </div>

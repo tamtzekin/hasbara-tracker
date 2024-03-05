@@ -402,7 +402,7 @@ export default function ClaimMakeup() {
                         <span className="mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
                             &nbsp;‘Makeup used in Gaza to fake injuries’</span>
                         <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
-                        description here
+                        Israeli officials shared behind-the-scenes footage of a short film claiming it featured Palestinians in Gaza using makeup to fake injuries.
                     </div>
 
                     </div>

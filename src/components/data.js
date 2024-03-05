@@ -2321,7 +2321,7 @@ const data = [
    },
    description: {
        summary: 'Israeli tanks fired on Holy Family Church‘s Convent in Gaza',
-           details: 'On the morning of 16 December, 2023, Israeli forces fired a rocket at the Convent of Sisters of Mother Theresa (Missionaries of Charity) which sits in the Holy Family Parish compound. The Holy Family Parish is a Catholic church in Gaza. <br> The rocket caused an explosion and fire, which destroyed the building‘s generator and fuel resources – its only source of electricity. Israeli forces fired two more rockets from a tank, displacing the 54 disabled people there and leaving them without access to respirators that some of them need to survive, the statement said. Water tanks and solar panels were also destroyed.',
+           details: 'On the morning of 16 December, 2023, Israeli forces fired a rocket at the Convent of Sisters of Mother Theresa (Missionaries of Charity) which sits in the Holy Family Parish compound. <br><br>The Holy Family Parish is a Catholic church in Gaza. <br><br> The rocket caused an explosion and fire, which destroyed the building‘s generator and fuel resources – its only source of electricity. Israeli forces fired two more rockets from a tank, displacing the 54 disabled people there and leaving them without access to respirators that some of them need to survive, the statement said. <br><br>Water tanks and solar panels were also destroyed.',
    },
    sources: [
        {
@@ -2342,7 +2342,7 @@ const data = [
    },
    description: {
        summary: 'Palestinian mother and daughter seeking refuge in church killed by Israeli snipers',
-           details: '"Mother and daughter Nahida and Samar Anton were seeking refuge in the Holy Family Church in Gaza. Nahida, also known as Um Emad (mother of Emad) and her daughter Samar left the church to walk over to the Sisters’ Convent to use the bathroom. ‘A sniper bullet cracked through the air and into Samar’s head. Another hit Nahida, a grandmother of 15, in the stomach.’ <br> Family members witnessed the murders. A relative of Nahida and Samar spoke to UK news outlet The Independent, stating: ‘Some of our relatives rushed out to help. One of them was a surgeon called Dr Elias, the others were my family members including a cousin, who is just 16 years old. But they were then hit by a kind of bomb. <br> Seven in total were injured from shrapnel – including my teenage cousins. There is no way to properly treat them there are no working hospitals in north Gaza.’',
+           details: 'Mother and daughter Nahida and Samar Anton were seeking refuge in the Holy Family Church in Gaza. They are Palestinian Christians.  <br><br>Nahida, also known as Um Emad (mother of Emad) and her daughter Samar left the church to walk over to the Sisters’ Convent to use the bathroom. <br><br>‘A sniper bullet cracked through the air and into Samar’s head. Another hit Nahida, a grandmother of 15, in the stomach.’ <br><br> Family members witnessed the murders. A relative of Nahida and Samar spoke to UK news outlet The Independent, stating: ‘Some of our relatives rushed out to help. One of them was a surgeon called Dr Elias, the others were my family members including a cousin, who is just 16 years old. But they were then hit by a kind of bomb. <br><br> Seven in total were injured from shrapnel – including my teenage cousins. There is no way to properly treat them there are no working hospitals in north Gaza.’',
    },
    sources: [
        {
@@ -2352,11 +2352,181 @@ const data = [
        },
 
         {
-            sourceName: 'YouTube',
-            sourceLink: 'https://www.youtube.com/watch?v=zs-2vw5lfgQ',
-            archiveLink: 'https://archive.ph/UCvws',
+            sourceName: 'LPJerusalem on X',
+            sourceLink: 'https://twitter.com/LPJerusalem/status/1736057252086268025',
+            archiveLink: 'https://archive.ph/u4lkL',
         },
     ]
+},
+
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '16 Dec 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Latin Patriarch of Jerusalem confirms Israeli sniper murdered two women inside Holy Family Parish',
+           details: 'Patriarchate Cardinal Pizzaballa of the Latin Patriarch of Jerusalem issued a statement confirming the murder of mother and daughter Nahida and Samar Anton by Israeli forces. <br><br> The statement read: <br><br> ‘Around noon today, December 16, 2023, a sniper of the IDF murdered two Christian women inside the Holy Family Parish in Gaza, where the majority of Christian families has taken refuge since the start of the war. Nahida and her daughter Samar were shot and killed as they walked to the Sister’s Convent. One was killed as she tried to carry the other to safety.’<br><br> The statement said another seven people were ‘shot and wounded’ while trying to ‘protect others inside the church compound’.<br><br>‘No warning was given, no notification was provided,’ the Patriarchate said. ‘They were shot in cold blood inside the premises of the Parish, where there are no belligerents.’',
+   },
+   sources: [
+       {
+           sourceName: 'The Latin Patriarch of Jerusalem',
+           sourceLink: 'https://www.lpj.org/en/gaza-16th-december-2023',
+           archiveLink: 'https://archive.ph/ByVDW',
+       },
+    ]
+},
+
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '16 Dec 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Catholic Bishops’ president condemns murder by Israeli forces',
+           details: 'Cardinal Vincent Nichols, President of the Catholic Bishops’ Conference of England and Wales, issued a statement describing the murder of Nahida and Samar, who were taking refuge in the Holy Family Parish in Gaza, as callous.<br><br> The statement by Cardinal Nichols read:<br><br>‘I am heartbroken at the information provided by Cardinal Pizzaballa, the Latin Patriarch of Jerusalem, of killings in the Church compound of the Catholic Parish of the Holy Family in Gaza City. I have immediately sent a message to His Eminence, expressing my horror at these events and assuring him of the prayers of Catholics in England and Wales.’<br><br>He added: ‘The information provided by the Cardinal gives a picture of seemingly deliberate and callous killing by IDF soldiers of innocent civilians: an elderly woman and her daughter in the grounds of a church. This killing has to stop. It can never be justified.’',
+   },
+   sources: [
+       {
+           sourceName: 'Friends of the Holy Land',
+           sourceLink: 'https://www.friendsoftheholyland.org.uk/blog/cardinal-vincent-nichols-statement-on-holy-family-parish-in-gaza',
+           archiveLink: 'https://archive.ph/8jBdR',
+       },
+    ]
+},
+
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '16 Dec 2023',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+       summary: 'Israeli ambassador says Israeli forces ‘misidentified’ the women, accuses Latin Patriarch of ‘blood libel’',
+           details: 'Raphael Schutz, the Israeli ambassador to the Holy See (the Holy See refers to the jurisdiction of the Pope in his role as the Bishop of Rome), shared multiple posts on X (formerly Twitter) claiming that Israeli forces ‘apparently misidentified two Catholic women... as terrorists’.<br><br> He called the press release from the Latin Patriarch of Jerusalem describing the attack as cold-blooded murder as ‘blood libel’. <br><br>The statement, separated as three posts, reads:<br><br> 1. ‘War is terrible and chaotic. Yesterday Israeli forces mistakenly killed three Israeli hostages and today an Israeli sniper apparently misidentified two Catholic women, mother and daughter, as terrorists and killed them. Under such circumstances, describing the tragic event as a’<br><br>2. ‘Under such circumstances, when there is no shred of proof that the event was anything but a terrible mistake, describing it as "a cold blooded murder" as in the text released today by the communication office of the Latin Patriarchate of Jerusalem,’<br><br>3. ‘is to be condemned in the harshest terms as a blood libel. This kind of fallacies must be rejected by every decent human being.’<br><br>In the third post, the press release by the Latin Patriarch of Jerusalem was shared.',
+   },
+   sources: [
+       {
+           sourceName: 'Raphael Schutz on X',
+           sourceLink: 'https://twitter.com/RafiSchutz/status/1736103162359005412',
+           archiveLink: 'https://archive.ph/rZCXm',
+       },
+    ]
+},
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '17 Dec 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Pope Francis condemns the Israeli attack, calling it terrorism',
+           details: 'Head of the Catholic Church Pope Francis delivered a speech following his Sunday Angelus prayer at The Vatican condemning the killing of Nahida and Samar.<br><br>‘I continue to receive very serious and painful news from Gaza. Unarmed civilians are subjected to bombings and shootings.’<br><br>‘And this even happened inside the parish complex of the Holy Family, where there are no terrorists, but families, children, sick and disabled people, nuns.’<br><br>‘Yes, it’s war, it’s terrorism,’ the Pope said.',
+   },
+   sources: [
+       {
+           sourceName: 'Vatican News on X',
+           sourceLink: 'https://twitter.com/VaticanNews/status/1736400607240659092',
+           archiveLink: 'https://archive.ph/hIYfl',
+       },
+        {
+            sourceName: 'Vatican News on YouTube',
+            sourceLink: 'https://www.youtube.com/watch?v=AXHte30VVqE',
+            videoPreviewLink: 'https://files.hasbaratracker.com/17Dec_Pope_condemns_IOF_church_attack_Gaza.mp4',
+        },
+   ]
+},
+
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '18 Dec 2023 ',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+       summary: 'Israeli forces deny attacking the Holy Family Parish',
+           details: 'Israeli forces denied attacking the Holy Family Church, stating that were ‘no reports of a hit on the church, nor civilians being injured or killed, were raised’.<br><br> In a statement to Agence France-Presse, Israeli forces claimed it ‘does not target civilians, no matter their religion’. They also said a review they carried out of its own ‘operational findings’ supported this.',
+   },
+   sources: [
+       {
+           sourceName: 'The Times of Israel',
+           sourceLink: 'https://www.timesofisrael.com/idf-refutes-claim-it-targeted-sole-catholic-church-in-gaza-after-2-women-said-killed/',
+           archiveLink: 'https://archive.is/VSxx4',
+       },
+   ]
+},
+
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '18 Dec 2023',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+       summary: 'Israeli Prime Minister’s senior adviser blames Hamas for the Holy Family Parish attacks',
+           details: 'In an interview with UK news outlet Sky News, Mark Regev – senior adviser to Israeli Prime Minister Benjamin Netanyahu – denied Israel Occupation Forces were behind the murders, claiming it was not something Israeli forces did, and blamed Palestinian resistance fighters with Hamas.<br><br>In the interview, which featured Cardinal Vincent Nichols, Regev said he rejected the Cardinal’s description of it as a cold-blooded killing.<br><br>‘I would reject the categorisation of the words he used: ‘coldblooded killing.’ That would indicate a deliberate targeting of civilians; that’s something we don’t do.’<br><br>‘We don’t shoot people who are going to church to pray; that just doesn’t happen. That’s not the way the IDF operates.’<br><br>‘To say that Israel is deliberately targeting Christian worshippers, that’s a terrible accusation that is unfounded.’<‘br><br>æCould they have been killed by Palestinian terrorists who were shooting at people indiscriminately? I don’t know,’ he said.',
+   },
+   sources: [
+       {
+           sourceName: 'Sky News UK',
+           sourceLink: 'https://twitter.com/SkyNews/status/1736681550564020520',
+           archiveLink: 'https://archive.ph/etLzV',
+           videoPreviewLink: 'https://files.hasbaratracker.com/18Dec2023_Mark_Regev_church_attack_denial.mp4',
+       },
+   ]
+},
+
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '18 Dec 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Church attacks are ‘cold-blooded killing’, says British Cardinal',
+           details: 'In an interview with the UK news outlet Sky News, Cardinal Vincent Nichols – President of the Catholic Bishops’ Conference of England and Wales – said he did not believe the denial from the Israeli state, saying it ‘hard to believe’.<br><br>‘The people in Gaza and the Cardinal Archbishop of Jerusalem, they’re not given to tell lies,’ Cardinal Nichols said.',
+   },
+   sources: [
+       {
+           sourceName: 'Sky News UK',
+           sourceLink: 'https://twitter.com/SkyNews/status/1736681550564020520',
+           archiveLink: 'https://archive.ph/etLzV',
+       },
+   ]
+},
+
+{
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   date: '21 Dec 2023',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+        summary: 'Israeli forces say their review showed they were firing at ‘Hamas spotters’, still deny killing mother and daughter',
+           details: 'Israeli forces denied killing Nahida and Samar Anton, claiming that Palestinian resistance fighters fired an RPG from the vicinity of the church and that Israeli forces hit back at people they claim were ‘spotting’ for Hamas. They claimed to they were continuing an ‘examination of the incident’.<br><br>The Israel Occupation Forces (IOF)’s statement to the Catholic News Agency:<br><br>‘Following the reports of two women that were shot in the area of the Latin Church in Shejaya, the IDF has finished conducting an initial review of the incident. The review found that on December 17th, in the early afternoon, Hamas terrorists launched a Rocket Propelled Grenade (RPG) at IDF troops from the vicinity of the church. The troops then identified three people in the vicinity, operating as spotters for Hamas by guiding their attacks in the direction of the IDF troops. In response, our troops fired towards the spotters and hits were identified.’<br><br>‘While this incident occurred in the area where the two women were reportedly killed, the reports received do not match the conclusion of our initial review which found that the IDF troops were targeting spotters in enemy lookouts. We are continuing our examination of the incident.’<br><br>‘The IDF takes claims of strikes on sensitive sites very seriously, especially churches that are the holy sites for the Christian faith. The IDF directs its operations against the Hamas terrorist organization and not against civilians, regardless of their religious affiliation.’<br><br> ‘The IDF takes many measures to mitigate harm to civilians in the Gaza Strip. These efforts stand in contrast to Hamas that does everything in its power to endanger civilians and exploits them, as well as religious sites, as human shields for their terrorist activities.’',
+   },
+   sources: [
+       {
+           sourceName: 'Catholic News Agency',
+           sourceLink: 'https://www.catholicnewsagency.com/news/256335/after-military-review-idf-again-denies-killing-two-women-at-gaza-catholic-church',
+           archiveLink: 'https://archive.is/g191i',
+       },
+       {
+           sourceName: 'Times of Israel',
+           sourceLink: 'https://www.timesofisrael.com/idf-again-denies-killing-mother-and-daughter-at-gaza-church-cites-hamas-fire-in-area/',
+           archiveLink: 'https://archive.ph/dcDcM',
+       },
+   ]
 },
 
 ]

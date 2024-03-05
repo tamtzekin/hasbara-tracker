@@ -43,15 +43,14 @@ const Footer = () => {
             {/* <Link to="/sign-up">Sign up</Link> */}
 
             {/* Footer links */}
-            <ul className="mobile:hidden laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">
-
+            <ul className="mobile:hidden tablet:justify-end tablet:gap-5 laptop:justify-end laptop:-mr-7 flex flex-row mt-3 text-sm">
               <li className="mobile:me-2 laptop:me-6 whitespace-nowrap">
                 <a href="https://www.paypal.com/donate/?hosted_button_id=44XADNYVGGMPS" target="_blank" rel="noreferrer" className="hover:underline">
                   Support us
                 </a>
               </li>
 
-              <li className="mobile:me-2 laptop:me-10">
+              <li className="mobile:me-2 tablet:me-5 laptop:me-10">
                 <a href="/contact" className="hover:underline">
                   Contact
                 </a>

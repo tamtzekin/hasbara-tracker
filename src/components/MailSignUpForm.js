@@ -38,36 +38,6 @@ const MailSignUpForm = () => {
             }));
         };
     
-        
-        // On submit, send data to a Google sheet
-        // const handleSubmit = async (e) => {
-        //     e.preventDefault();
-    
-        //     try {
-        //         setIsLoading(true);
-    
-        //         const response = await fetch('https://script.google.com/macros/s/AKfycbxzWa1PniI7sDkNvAhXR09Gf2967LOE1GlnxUOXG7VWjYkNGFOcdbJyHZ80WYpnAASXSw/exec', {
-        //             method: 'POST',
-        //             headers: {
-        //                 'Content-Type': 'application/x-www-form-urlencoded',
-        //             },
-        //             body: new URLSearchParams(formData).toString(),
-        //         });
-    
-        //         if (response.ok) {
-        //             console.log('Form submitted successfully');
-        //             setIsSubmitted(true);
-        //             sessionStorage.setItem('hasSubmitted', 'true'); // Set session storage flag
-        //             setFormData(initialFormData); // Reset form data
-        //         } else {
-        //             console.error('Error submitting form');
-        //         }
-        //     } catch (error) {
-        //         console.error('Error:', error);
-        //     } finally {
-        //         setIsLoading(false);
-        //     }
-        // };
 
         // On submit, send to MailerLite
         const handleSubmit = async (e) => {

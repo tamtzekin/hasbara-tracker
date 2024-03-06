@@ -3,7 +3,7 @@ const summaries = [
     {
         // claimMainTitle: 'Forty beheaded babies',
         // claimSummary:
-        // 'Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.',
+        // 'Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.',
     },
  
     {
@@ -13,7 +13,7 @@ const summaries = [
  
     {
         // claimMainTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
-        // claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital. The IOF made it impossible to receive supplies.',
+        // claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors.',
     },
 ]
 

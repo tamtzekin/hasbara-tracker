@@ -358,7 +358,7 @@ export default function ClaimFortyBeheadedBabies() {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
     <meta name="twitter:title" content="Claim: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces" />
-    <meta name="twitter:description" content="" />
+    <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 

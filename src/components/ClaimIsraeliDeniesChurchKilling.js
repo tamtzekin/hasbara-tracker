@@ -358,7 +358,7 @@ export default function ClaimIsraeliDeniesChurchKilling() {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
     <meta name="twitter:title" content="Claim: Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish" />
-    <meta name="twitter:description" content="" />
+    <meta name="twitter:description" content="In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women." />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
 </head>
 

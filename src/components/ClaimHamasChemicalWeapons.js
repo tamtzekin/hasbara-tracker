@@ -355,13 +355,13 @@ export default function ClaimHamasChemicalWeapons() {
         <>
 
     <Helmet>
-        <title>Claim: Hamas were carrying instructions on how to make chemical weapons | Hasbara Tracker</title>
+        <title>Claim: ‘Hamas were carrying instructions on how to make chemical weapons’ | Hasbara Tracker</title>
         <meta name="description" content="" />
         
         {/* Twitter link preview */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@hasbaratracker" />
-        <meta name="twitter:title" content="Claim: Hamas were carrying instructions on how to make chemical weapons" />
+        <meta name="twitter:title" content="Claim: ‘Hamas were carrying instructions on how to make chemical weapons’" />
         <meta name="twitter:description" content="" />
         <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
     </Helmet>

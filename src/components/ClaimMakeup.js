@@ -355,7 +355,7 @@ export default function ClaimMakeup() {
         <>
 
     <Helmet>
-        <title>Hasbara Tracker: ’Makeup used in Gaza to fake injuries’ | Hasbara Tracker</title>
+        <title>Claim: ’Makeup used in Gaza to fake injuries’ | Hasbara Tracker</title>
         <meta name="description" content="" />
 
         {/* Twitter link preview */}

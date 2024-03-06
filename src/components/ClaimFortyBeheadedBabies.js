@@ -365,40 +365,42 @@ export default function ClaimFortyBeheadedBabies() {
                     <NavLink to="/">Claims</NavLink>
                 </li>
 
-            <li className="undotted">
-                <NavLink to="/submit-claim">Submit a claim</NavLink>
-            </li>
+                <li className="undotted">
+                    <NavLink to="/submit-claim">Submit a claim</NavLink>
+                </li>
 
-            <li className="undotted">
-                <NavLink to="/volunteer">Volunteer</NavLink>
-            </li>
+                <li className="undotted">
+                    <NavLink to="/volunteer">Volunteer</NavLink>
+                </li>
 
-            <li className="undotted">
-                <NavLink to="/about">About</NavLink>
-            </li>
+                <li className="undotted">
+                    <NavLink to="/about">About</NavLink>
+                </li>
+            </div>
+    </span>
+
+
+    <span className="logo">
+        <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[3.5%] ml-[4.82%]">
+            <Link to="/"><Logo /></Link>
         </div>
     </span>
 
-
-<span className="">
-            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[3.5%] ml-[4.82%]">
-                <Link to="/">
-                    <Logo />
-                </Link>
+        <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
+            <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
+                The claim
             </div>
 
-    </span>
-                    <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
-                        <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
-                            The claim</div>
-                        <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">‘Forty beheaded babies’</div>
-                        <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
-                        Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
-                    </div>
+            <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
+                ‘Forty beheaded babies’
+            </div>
 
-                    </div>
+            <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
+                Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
+            </div>
+        </div>
 
-        </span>
+</span>
         
 
             {/* Show desktop view of Tracker */}

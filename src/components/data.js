@@ -1,18 +1,19 @@
- const summaries = [
+// IGNORE summaries for now
+const summaries = [
     {
-        claimMainTitle: 'Forty beheaded babies',
-        claimSummary:
-        'Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.',
+        // claimMainTitle: 'Forty beheaded babies',
+        // claimSummary:
+        // 'Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.',
     },
  
     {
-        claimMainTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-        claimSummary: 'Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.',
+        // claimMainTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+        // claimSummary: 'Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.',
     },
  
     {
-        claimMainTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
-        claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital. The IOF made it impossible to receive supplies.',
+        // claimMainTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+        // claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel that were sent to the hospital. The IOF made it impossible to receive supplies.',
     },
 ]
 

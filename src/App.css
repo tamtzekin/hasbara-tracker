@@ -38,7 +38,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     flex-direction: column;
 
     background-color: theme('colors.grey');
-    z-index: 4;
+    z-index: 1;
 }
 
 .header-container-border {

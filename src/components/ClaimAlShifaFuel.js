@@ -1,6 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
+import { Helmet } from 'react-helmet-async';
 
 import './Tracker.css';
 import '../App.css';
@@ -353,14 +354,17 @@ export default function ClaimFortyBeheadedBabies() {
     return (
         <>
 
-<head>
-    {/* Twitter link preview */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@hasbaratracker" />
-    <meta name="twitter:title" content="Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas" />
-    <meta name="twitter:description" content="Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors." />
-    <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
-</head>
+        <Helmet>
+            <title>Claim: ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’ | Hasbara Tracker</title>
+            <meta name="descrption" content="Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors." />
+
+            {/* Twitter link preview */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@hasbaratracker" />
+            <meta name="twitter:title" content="Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas" />
+            <meta name="twitter:description" content="Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors." />
+            <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
+        </Helmet>
 
 <span className="header-container-fixed">
 

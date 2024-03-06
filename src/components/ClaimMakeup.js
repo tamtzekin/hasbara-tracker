@@ -1,6 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
+import { Helmet } from 'react-helmet-async';
 
 import './Tracker.css';
 import '../App.css';
@@ -353,14 +354,17 @@ export default function ClaimMakeup() {
     return (
         <>
 
-<head>
-    {/* Twitter link preview */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@hasbaratracker" />
-    <meta name="twitter:title" content="Claim: Forty beheaded babies" />
-    <meta name="twitter:description" content="Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad." />
-    <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
-</head>
+    <Helmet>
+        <title>Hasbara Tracker: ’Makeup used in Gaza to fake injuries’ | Hasbara Tracker</title>
+        <meta name="description" content="" />
+
+        {/* Twitter link preview */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@hasbaratracker" />
+        <meta name="twitter:title" content="Claim: ’Makeup used in Gaza to fake injuries’" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
+    </Helmet>
 
 <span className="header-container-fixed">
     <span id="logo-menu-claimsummary" className="flex mobile:mt-[4%]">

@@ -1,6 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
+import { Helmet } from 'react-helmet-async';
 
 import './Tracker.css';
 import '../App.css';
@@ -353,14 +354,18 @@ export default function ClaimFortyBeheadedBabies() {
     return (
         <>
 
-<head>
+<Helmet>
+    <title>Claim: ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’ | Hasbara Tracker</title>
+    <meta name="description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+
     {/* Twitter link preview */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hasbaratracker" />
     <meta name="twitter:title" content="Claim: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces" />
     <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
     <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
-</head>
+</Helmet>
+
 
 <span className="header-container-fixed">
 

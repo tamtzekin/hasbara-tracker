@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 import './App.css';
 
@@ -21,9 +22,16 @@ import ClaimHamasChemicalWeapons from './components/ClaimHamasChemicalWeapons';
 import ClaimIsraeliDeniesChurchKilling from './components/ClaimIsraeliDeniesChurchKilling';
 
 
+
 const App = () => {
+
+    // Helmet handles metadata for link previews
+    const helmetContext = {};
+
+
     return (
     <>
+    <HelmetProvider context={helmetContext}>
         <Router>
             <VideoPlayer />
             <ScrollToTop />
@@ -79,6 +87,7 @@ const App = () => {
                 /> */}
             </Routes>
         </Router>
+    </HelmetProvider>
     </>
   );  
 }

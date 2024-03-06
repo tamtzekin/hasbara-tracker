@@ -1,6 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
+import { Helmet } from 'react-helmet-async';
 
 import './Tracker.css';
 import '../App.css';
@@ -353,14 +354,17 @@ export default function ClaimHamasChemicalWeapons() {
     return (
         <>
 
-<head>
-    {/* Twitter link preview */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@hasbaratracker" />
-    <meta name="twitter:title" content="Claim: Hamas were carrying instructions on how to make chemical weapons" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
-</head>
+    <Helmet>
+        <title>Claim: Hamas were carrying instructions on how to make chemical weapons | Hasbara Tracker</title>
+        <meta name="description" content="" />
+        
+        {/* Twitter link preview */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@hasbaratracker" />
+        <meta name="twitter:title" content="Claim: Hamas were carrying instructions on how to make chemical weapons" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
+    </Helmet>
 
 <span className="header-container-fixed">
     <span id="logo-menu-claimsummary" className="flex mobile:mt-[4%]">

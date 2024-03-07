@@ -373,7 +373,8 @@ export default function ClaimFortyBeheadedBabies() {
                 <MobileMenu />
             </span>
 
-            <div className="nav-links-fixed top-[10%] mobile:invisible">
+
+            <span className="nav-links-fixed mobile:invisible">
                 <li className="undotted">
                     <NavLink to="/">Claims</NavLink>
                 </li>
@@ -389,18 +390,18 @@ export default function ClaimFortyBeheadedBabies() {
                 <li className="undotted">
                     <NavLink to="/about">About</NavLink>
                 </li>
-            </div>
+            </span>
     </span>
 
 
-    <span className="logo">
-        <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[3.5%] ml-[4.82%]">
+    {/* <span className="logo"> */}
+        <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5">
             <Link to="/"><Logo /></Link>
         </div>
-    </span>
+    {/* </span> */}
 
-        <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
-            <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
+        <span className="claim-summary container mt-10 mobile:w-[90%] mobile:mt-[5%] mobile:ml-[5%]">
+            <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono font-bold">
                 The claim
             </div>
 
@@ -411,7 +412,7 @@ export default function ClaimFortyBeheadedBabies() {
             <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
                 Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.
             </div>
-        </div>
+        </span>
 
 </span>
         

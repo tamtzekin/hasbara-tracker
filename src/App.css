@@ -27,7 +27,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 .header-container-fixed {
-    position: absolute; /* fixed */
+    position: relative; /* fixed */
     top: 0%;
     left: 0;
     width: 100%;
@@ -60,10 +60,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 .nav-links-fixed {
     position: absolute; /* fixed */
-    top: 35%; /* temporary, for when nav links arent fixed */
-    right: 12.8%;
+    top: 12%; /* temporary, for when nav links arent fixed */
+    right: 9%;
     display: flex;
-    gap: 8.4%;
+    gap: 7.2%;
     list-style-type: none;
     white-space: nowrap;
     z-index: 4;
@@ -225,7 +225,6 @@ body {
 }
 
 .claim-summary {
-    margin-left: 5%;
     min-height: 100px; /* prevents it from being squashed when window is pulled up */
 }
 
@@ -566,19 +565,11 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /* MENU */
     .menu-toggle {
-          /* display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          position: absolute;
-          right: 0%;
-          top: 50%;
-          margin-right: auto;
-          z-index: 3; */
           cursor: crosshair;
           display: flex;
           flex-direction: column;
           padding: 0.7em; /* Increase clickable area */
-      }
+        }
 
     .bar {
         width: 0.3rem;

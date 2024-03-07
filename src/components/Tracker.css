@@ -268,7 +268,7 @@ li.undotted {
 
 /*** TRACKER TABLE ***/
 .tracker-container {
-    margin-top: 25%;
+    margin-top: 5%;
     width: 100%;
     text-wrap: justify;
  }
@@ -408,10 +408,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     thead {
         top: 38%;
-    }
-
-    .tracker-container {
-        margin-top: 45%;
     }
 }
 

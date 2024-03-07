@@ -353,7 +353,7 @@ export default function ClaimFortyBeheadedBabies() {
             <meta name="twitter:site" content="@hasbaratracker" />
             <meta name="twitter:title" content="Claim: Forty beheaded babies" />
             <meta name="twitter:description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally." />
-            <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
+            <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
         </Helmet>
 
 <span className="header-container-fixed">

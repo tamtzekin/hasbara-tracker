@@ -363,7 +363,7 @@ export default function ClaimMakeup() {
         <meta name="twitter:site" content="@hasbaratracker" />
         <meta name="twitter:title" content="Claim: ’Makeup used in Gaza to fake injuries’" />
         <meta name="twitter:description" content="" />
-        <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
+        <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
     </Helmet>
 
 <span className="header-container-fixed">

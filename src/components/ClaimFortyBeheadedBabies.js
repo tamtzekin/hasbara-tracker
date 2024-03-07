@@ -353,7 +353,7 @@ export default function ClaimFortyBeheadedBabies() {
             <meta property="og:description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally" />
             <meta property="og:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
             <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
-            <meta property="og:type" content="article" />
+            <meta property="og:type" content="website" />
             <meta property="og:site_name" content="Hasbara Tracker" />
 
             <meta name="twitter:site" content="@hasbaratracker" />

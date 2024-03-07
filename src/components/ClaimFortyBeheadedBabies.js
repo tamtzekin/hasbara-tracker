@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 import './Tracker.css';
 import '../App.css';

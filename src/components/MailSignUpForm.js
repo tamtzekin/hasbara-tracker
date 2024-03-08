@@ -84,9 +84,8 @@ const MailSignUpForm = () => {
                     <div className="home-text">
                         Sign up for news + updates from Hasbara Tracker and get claims straight to your inbox.
                     </div>
-                    <br />
 
-                    <form onSubmit={handleSubmit} class="mt-7">
+                    <form onSubmit={handleSubmit} class="mt-5">
                         <label className="form-field font-semibold">
                             First name<span className="required-field">*</span>
 

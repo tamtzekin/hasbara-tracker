@@ -16,7 +16,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
 
-export default function ClaimAlShifaFuel() {
+export default function ClaimIsraelDeniesChurchKilling() {
     // defines claim tags for dropdown (ClaimFilter.js)
     const uniqueClaimTitles = useMemo(() => {
         const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
@@ -296,7 +296,7 @@ export default function ClaimAlShifaFuel() {
             data,
             initialState: {
                 sortBy: [{ id: 'date', desc: false }],
-                globalFilter: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas'
+                globalFilter: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish'
                 // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
             },
             disableSortRemove: true,
@@ -313,22 +313,22 @@ export default function ClaimAlShifaFuel() {
         <>
         <Helmet>
             {/* HTML meta tags */}
-            <title>Claim: ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’ | Hasbara Tracker</title>
-            <meta name="description" content="Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors." />
+            <title>Claim: ‘Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish’</title>
+            <meta name="description" content="In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women." />
 
-            <meta property="og:url" content="https://hasbaratracker.com/al-shifa-fuel" />
+            <meta property="og:url" content="https://hasbaratracker.com/israel-denies-church-killing" />
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content="Hasbara Tracker" />
-            <meta property="og:title" content="Claim: ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’" />
-            <meta property="og:description" content="Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors." />
+            <meta property="og:title" content="Claim: ‘Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish’" />
+            <meta property="og:description" content=" In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women." />
             <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta property="twitter:domain" content="hasbaratracker.com" />
             <meta name="twitter:site" content="@hasbaratracker" />
-            <meta property="twitter:url" content="https://hasbaratracker.com/al-shifa-fuel" />
-            <meta name="twitter:title" content="Claim: ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’" />
-            <meta name="twitter:description" content="Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors." />
+            <meta property="twitter:url" content="https://hasbaratracker.com/israel-denies-church-killing" />
+            <meta name="twitter:title" content="Claim: ‘Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish’" />
+            <meta name="twitter:description" content=" In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women." />
             <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
             <meta name="twitter:creator" content="@hasbaratracker" />
         </Helmet>
@@ -372,11 +372,11 @@ export default function ClaimAlShifaFuel() {
             </div>
 
             <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
-                ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’
+                ‘Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish’
             </div>
 
             <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
-                Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors.
+                In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women.
             </div>
         </span>
 

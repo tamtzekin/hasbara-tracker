@@ -314,13 +314,13 @@ export default function ClaimFortyBeheadedBabies() {
         <Helmet>
             {/* HTML meta tags */}
             <title>Claim: ‘Forty beheaded babies’</title>
-            <meta name="description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally" />
+            <meta name="description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally." />
 
             <meta property="og:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content="Hasbara Tracker" />
             <meta property="og:title" content="Claim: ‘Forty beheaded babies’" />
-            <meta property="og:description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally" />
+            <meta property="og:description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally." />
             <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
 
             <meta name="twitter:card" content="summary_large_image" />

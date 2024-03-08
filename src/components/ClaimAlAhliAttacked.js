@@ -1,12 +1,12 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 import './Tracker.css';
 import '../App.css';
 
-import { summaries, data } from './data';
+import { data, summaries } from './data';
 import VideoPlayer from './VideoPlayer';
 import Header from './Header';
 import ClaimFilter from './ClaimFilter';
@@ -16,7 +16,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
 
-export default function ClaimFortyBeheadedBabies() {
+export default function ClaimAlAhliAttacked() {
     // defines claim tags for dropdown (ClaimFilter.js)
     const uniqueClaimTitles = useMemo(() => {
         const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
@@ -24,13 +24,8 @@ export default function ClaimFortyBeheadedBabies() {
         }, [data]);
     
     const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
-    
-    // State to hold the current claim's summary
-    // const [currentClaimSummary, setCurrentClaimSummary] = useState('');
+        
 
-    // const claimTitle = data.map(item => item.claimTitle);
-    // const claimSummary = data.map(item => item.claimSummary);
-    
     // Set mobile/phone view dimensions
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 576);
 
@@ -46,128 +41,125 @@ export default function ClaimFortyBeheadedBabies() {
         };
     }, []);
 
-    const claimSummaryText = useMemo (
-        () => [
-            {
-                Header: 'Claim summary',
-                accessor: 'claimSummary',
-            },
-        ]
-    )
+
     // Pull all the claims data
     const columns = useMemo(() => {
 
-
         // Mobile: the 'Type' is higher up, so the context/claim/debunk tags can be positioned properly
         if (isMobileView) {    
-        return [
-            {
-                Header: 'The claim',
-                accessor: 'claimTitle',
-                Cell: ({ cell }) => (
-                    // TODO: Do we want the claim name clickable or not
-                    <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
-                )
-            },
-            {
-                Header: 'Date',
-                accessor: 'date',
-                sortType: (rowA, rowB, columnId) => {
-                    const dateA = new Date(rowA.values[columnId]);
-                    const dateB = new Date(rowB.values[columnId]);
-                    return dateA.getTime() - dateB.getTime();
+            return [
+
+                // Title of claim
+                {
+                    Header: 'The claim',
+                    accessor: 'claimTitle',
+                    Cell: ({ cell }) => (
+                        <>{cell.value}</>
+                    )
                 },
-                Cell: ({ cell }) => (
-                    <div>
-                        {cell.value}
-                    </div>
-                ),
-            },
 
-                        // Context/Claim/Debunk tag
-                        {
-                            Header: 'Type',
-                            accessor: (row) => row.claim.claimText,
-                            Cell: ({ row }) => (
-                                    <span className={row.original.claim.claimTag}>
-                                        {row.original.claim.claimText}
-                                    </span>
-                            ),
-                        },
+                // Date
+                {
+                    Header: 'Date',
+                    accessor: 'date',
+                    sortType: (rowA, rowB, columnId) => {
+                        const dateA = new Date(rowA.values[columnId]);
+                        const dateB = new Date(rowB.values[columnId]);
+                        return dateA.getTime() - dateB.getTime();
+                    },
+                    Cell: ({ cell }) => (
+                        <div>
+                            {cell.value}
+                        </div>
+                    ),
+                },
+
+                // Context/Claim/Debunk tag
+                {
+                    Header: 'Type',
+                    accessor: (row) => row.claim.claimText,
+                    Cell: ({ row }) => (
+                        <span className={row.original.claim.claimTag}>
+                            {row.original.claim.claimText}
+                        </span>
+                    ),
+                },
 
 
-                        // Detailed description on each claim
-                        {
-                            Header: 'Details',
-                            accessor: (row) => `${row.description.summary} ${row.description.details}`,
-                            Cell: ({ row }) => (
-                                <>
-                                    <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
-                                        <details>
-                                            <summary><u>{row.original.description.summary}</u>
-                                                <span className='expand-text'></span>
-                                            </summary>
-                                            <article className="claim-paragraph">
-                                                <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
-                        
-                                                {/* Render Source links within the expandable element */}
-                                                        <div className="source-heading"></div>
-                                                        {row.original.sources.map((source, index) => (
-                                                            <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                                                <div key={index} className="source">
-                                                                    <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                                                {source.videoPreviewLink && (
-                                                                            <ul className='icon-playarrow'>
-                                                                                <li>
-                                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                                </li>
-                                                                            </ul>
-                                                                    )}
-                        
-
-                                                        {!source.videoPreviewLink && (
-                                                            <ul className='icon-link'>
-                                                                <li>
-                                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                </li>
-                                                            </ul>
-                                                        )}                                                                    </a>
+                // Detailed description on each claim
+                {
+                    Header: 'Details',
+                    accessor: (row) => `${row.description.summary} ${row.description.details}`,
+                    Cell: ({ row }) => (
+                        <>
+                        <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
+                            <details>
+                                <summary><u>{row.original.description.summary}</u>
+                                    <span className='expand-text'></span>
+                                </summary>
+                                <article className="claim-paragraph">
+                                    <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
             
-                                                        {source.archiveLink && (
-                                                            <ul>
-                                                                <li>
-                                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                    
-                                                                
-                                                                <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
-                                                                </a>
-                                                                </li>
-                                                            </ul>                                                                    
-                                                            )}
-                                                    </div>
-                                                            </VideoPlayer>
-                                                        ))}
-                                            </article>
-                                        </details>
-                                    </div>
-                                </>
-                            ),
-                        },
+                                    {/* Show source links inside the expandable element */}
+                                    <div className="source-heading"></div>
+                                    {row.original.sources.map((source, index) => (
+                                        <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                            <div key={index} className="source">
+                                                <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                    {source.videoPreviewLink && (
+                                                        <ul className='icon-playarrow'>
+                                                            <li>
+                                                                <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            </li>
+                                                        </ul>
+                                                    )}
+            
+                                                    {/* If there's no video link, show icon link (circle) */}
+                                                    {!source.videoPreviewLink && (
+                                                        <ul className='icon-link'>
+                                                            <li>
+                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            </li>
+                                                        </ul>
+                                                    )}                                                                    
+                                                </a>
+
+                                    {/* If there is an archive link, show the archive link */}
+                                    {source.archiveLink && (
+                                        <ul>
+                                            <li>
+                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                    <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
+                                                </a>
+                                            </li>
+                                        </ul>                                                                    
+                                        )}
+                                </div>
+                                        </VideoPlayer>
+                                    ))}
+                                </article>
+                            </details>
+                        </div>
+                        </>
+                    ),
+                },
         ];
+
 
         // Render desktop tracker, with different order of columns
         } else {
             return [
 
+                // Title of claim
                 {
                     Header: 'The claim',
                     accessor: 'claimTitle',
                     Cell: ({ cell }) => (
-                        // TODO: Do we want the claim name clickable or not
-                        <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
+                        <>{cell.value}</>
                     )
                 },
 
+                // Date claim was made
                 {
                     Header: 'Date',
                     accessor: 'date',
@@ -183,141 +175,108 @@ export default function ClaimFortyBeheadedBabies() {
                     ),
                 },
                 
-                // Detailed description on each claim
+                // Detailed description on each claim, expandable
                 {
                     Header: 'Details',
                     accessor: (row) => `${row.description.summary} ${row.description.details}`,
                     Cell: ({ row }) => (
                         <>
-                            <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
-                                <details>
-                                    <summary><u>{row.original.description.summary}</u>
-                                        <span className='expand-text'></span>
-                                    </summary>
-                                    <article className="claim-paragraph">
-                                        <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
-                
-                
-                                        {/* On Mobile: render Source links inside the expandable element */}
-                                        {isMobileView && (
-                                            <>
-                                                <div className="source-heading"></div>
-                                                {row.original.sources.map((source, index) => (
-                                                    <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                                        <div key={index} className="source">
-                                                            <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                                {source.videoPreviewLink && (
-                                                                    <span className='icon-playarrow'></span>
-                                                                )}
-                                                                {!source.videoPreviewLink && (
-                                                                    <span className='icon-link'></span>
-                                                                )}
-                                                                
-                                                                <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-
-                                                            </a>
-
-                                                            {source.archiveLink && (
-                                                                    <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                        <span className="text-grey-faded italic text-xs ml-4">Archive</span>
-                                                                    </a>
-                                                            )}
-                                                        </div>
-                                                    </VideoPlayer>
-                                                ))}
-                                            </>
-                                        )}
+                        <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
+                            <details>
+                                <summary><u>{row.original.description.summary}</u>
+                                    <span className='expand-text'></span>
+                                </summary>
+                                
+                                <article className="claim-paragraph">
+                                    <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
                                 </article>
                             </details>
                         </div>
-                    </>
-                ),
-            },
+                        </>
+                    ),
+                },
             
 
-                        // Context/Claim/Debunk tag
-                        {
-                            Header: 'Type',
-                            accessor: (row) => row.claim.claimText,
-                            Cell: ({ row }) => (
-                                    <span className={row.original.claim.claimTag}>
-                                        {row.original.claim.claimText}
-                                    </span>
-                            ),
-                        },
-                        {
-                            Header: 'Sources',
-                            accessor: 'sources',
-                            Cell: ({ row }) => {
-                                const sources = row.original.sources || [];
-            
-                                // On Desktop: render the sources on the right side. If on mobile, hide them.
-                                return (
-                                    <>
-                                        <div className="source-heading"></div>
-            
-                                        {row.original.sources.map((source, index) => (
-                                            <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
-                                                <div key={index} className="source text-xs">
-            
-                                                    <a href={source.sourceLink} target="_blank" rel="noreferrer"
-                                                    aria-hidden="true" 
-                                                    // sets class if source is a deleted source
-                                                    className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
-                                                        {/* If there's a video preview available, show a play button icon */}
-                                                        {source.videoPreviewLink && (
-                                                                <ul className='icon-playarrow'>
-                                                                    <li>
-                                                                        <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                    </li>
-                                                                </ul>
-                                                        )}
-            
-                                                        {/* If no video preview available, assume it's a regular link, show a circle icon instead */}
-                                                        {!source.videoPreviewLink && (
-                                                                <ul className='icon-link'>
-                                                                    <li>
-                                                                        <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                    </li>
-                                                                </ul>
-                                                        )}
-            
-                                                        {/* If a source has been deleted by the original publisher, show a red strikethrough */}
-                                                        {/* {source.hasBeenDeleted === 'true' ? (
-                                                            <strike style={{color:'red'}}>
-                                                                <span style={{color:'grey'}}>{source.sourceName}</span>
-                                                            </strike>
-            
-                                                            ) : (
-                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                            )}                                         */}
-                                                    </a>
-            
-                                                    {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
-                                                    {source.archiveLink && ( 
-                                                        <ul>
-                                                        <li className="ml-[11.5%] -mt-6">
-                                                            <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
-                                                                <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
-                                                            </a>
-                                                        </li>
-                                                        </ul>
-                                                        )}
-            
-                                                        {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
-                                                        <span className="visually-hidden">Opens in new tab</span>
-                                                </div>
-                                            </VideoPlayer>
-                                        ))}
-                                    </>
-                                );
-                                
-                            },
-                        },
+                // Context/Claim/Debunk tag
+                {
+                    Header: 'Type',
+                    accessor: (row) => row.claim.claimText,
+                    Cell: ({ row }) => (
+                            <span className={row.original.claim.claimTag}>
+                                {row.original.claim.claimText}
+                            </span>
+                    ),
+                },
                         
-
+                // Source links, and how source link icons are handled
+                {
+                    Header: 'Sources',
+                    accessor: 'sources',
+                    Cell: ({ row }) => {
+                        const sources = row.original.sources || [];
     
+                        // Render source links in last column (for desktop)
+                        return (
+                            <>
+                            <div className="source-heading"></div>
 
+                            {row.original.sources.map((source, index) => (
+                                <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
+                                    <div key={index} className="source text-xs">
+
+                                        <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" 
+                                        // sets class if source is a deleted source
+                                        className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
+                                            {/* If there's a video preview available, show play icon (play triangle) */}
+                                            {source.videoPreviewLink && (
+                                                    <ul className='icon-playarrow'>
+                                                        <li>
+                                                            <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                        </li>
+                                                    </ul>
+                                            )}
+    
+                                            {/* If no video preview, show link icon (circle)) */}
+                                            {!source.videoPreviewLink && (
+                                                    <ul className='icon-link'>
+                                                        <li>
+                                                            <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                        </li>
+                                                    </ul>
+                                            )}
+    
+                                            {/* If a source has been deleted by the original publisher, show a red strikethrough */}
+                                            {/* {source.hasBeenDeleted === 'true' ? (
+                                                <strike style={{color:'red'}}>
+                                                    <span style={{color:'grey'}}>{source.sourceName}</span>
+                                                </strike>
+
+                                                ) : (
+                                                    <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                )}                                         */}
+                                            </a>
+    
+                                            {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
+                                            {source.archiveLink && ( 
+                                                <ul>
+                                                    <li className="ml-[11.5%] -mt-6">
+                                                        <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
+                                                            <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            )}
+    
+                                            {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
+                                            <span className="visually-hidden">Opens in new tab</span>
+                                        </div>
+                                        
+                                    </VideoPlayer>
+                                ))}
+                            </>
+                        );  
+                    },
+                },    
             ];
         }
     }, [isMobileView]);
@@ -337,9 +296,8 @@ export default function ClaimFortyBeheadedBabies() {
             data,
             initialState: {
                 sortBy: [{ id: 'date', desc: false }],
-                // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
-
                 globalFilter: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces'
+                // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
             },
             disableSortRemove: true,
         },
@@ -353,68 +311,79 @@ export default function ClaimFortyBeheadedBabies() {
 
     return (
         <>
+        <Helmet>
+            {/* HTML meta tags */}
+            <title>Claim: ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’ | Hasbara Tracker</title>
+            <meta name="description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
 
-<Helmet>
-    <title>Claim: ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’ | Hasbara Tracker</title>
-    <meta name="description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+            <meta property="og:url" content="https://hasbaratracker.com/al-ahli-attacked" />
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="Hasbara Tracker" />
+            <meta property="og:title" content="Claim: ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’" />
+            <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+            <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
 
-    {/* Twitter link preview */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@hasbaratracker" />
-    <meta name="twitter:title" content="Claim: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces" />
-    <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
-    <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
-</Helmet>
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta property="twitter:domain" content="hasbaratracker.com" />
+            <meta name="twitter:site" content="@hasbaratracker" />
+            <meta property="twitter:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
+            <meta name="twitter:title" content="Claim: ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’" />
+            <meta name="twitter:description" content=" Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+            <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
+            <meta name="twitter:creator" content="@hasbaratracker" />
+        </Helmet>
 
+    {/* Header (fixed) */}
+    <span className="header-container-fixed">
+        <span className="flex mobile:mt-[4%]">
+            {/* Logo */}
+            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[0%] laptop:w-1/5 mr-auto">
+                <Link to="/"><Logo /></Link>
+            </div>
 
-<span className="header-container-fixed">
-
-    <span id="logo-menu-claimsummary" className="flex mobile:mt-[4%]">
-            <span className="ml-auto mobile:ml-[88%]">
+        {/* Mobile menu toggle */}
+            <span className="mobile:mr-[5%] mobile:mt-[-0.5%]">
                 <MobileMenu />
             </span>
 
-            <div className="nav-links-fixed top-[10%] mobile:invisible">
+            {/* Nav links */}
+            <span className="nav-links-fixed mobile:invisible">
                 <li className="undotted">
                     <NavLink to="/">Claims</NavLink>
                 </li>
-
-            <li className="undotted">
-                <NavLink to="/submit-claim">Submit a claim</NavLink>
-            </li>
-
-            <li className="undotted">
-                <NavLink to="/volunteer">Volunteer</NavLink>
-            </li>
-
-            <li className="undotted">
-                <NavLink to="/about">About</NavLink>
-            </li>
-        </div>
-    </span>
-
-
-<span className="">
-            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[3.5%] ml-[4.82%]">
-                <Link to="/">
-                    <Logo />
-                </Link>
-            </div>
-    </span>
-
-                    <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
-                        <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
-                            The claim</div>
-                        <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</div>
-                        <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
-                        Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
-                    </div>
-                    </div>
-
+                <li className="undotted">
+                    <NavLink to="/submit-claim">Submit a claim</NavLink>
+                </li>
+                <li className="undotted">
+                    <NavLink to="/volunteer">Volunteer</NavLink>
+                </li>
+                <li className="undotted">
+                    <NavLink to="/about">About</NavLink>
+                </li>
         </span>
+
+    </span>
+
+
+        {/* Claim summary */}
+        <span className="claim-summary container mt-10 mobile:w-[90%] mobile:mt-[5%] mobile:ml-[5%]">
+            <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono font-bold">
+                The claim
+            </div>
+
+            <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
+                ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’
+            </div>
+
+            <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
+                Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
+            </div>
+        </span>
+
+</span>
         
 
-            {/* Show desktop view of Tracker */}
+            {/* Show desktop view of Tracker - as a table */}
             {!isMobileView && (
                 <>
                     <div className="search-bar-container">
@@ -504,15 +473,15 @@ export default function ClaimFortyBeheadedBabies() {
             )}
 
             
-            {/* Show mobile/phone view of Tracker */}
+            {/* Show mobile view of Tracker table - as cards */}
             {isMobileView && (
                 <>
-                 <div className="tools-background">
-                    <div className="search-bar-container">
-                        <ClaimFilter claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} />
-                        <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+                    <div className="tools-background">
+                        <div className="search-bar-container">
+                            <ClaimFilter claimTitles={uniqueClaimTitles} setGlobalFilter={setGlobalFilter} />
+                            <SearchBar filter={globalFilter || ''} setFilter={setGlobalFilter} />
+                        </div>
                     </div>
-                </div>
 
                     <div className="tracker-container">
                         {/* Show 'how to' text when no results are found */}
@@ -531,41 +500,38 @@ export default function ClaimFortyBeheadedBabies() {
                                         <li>Click + and ⎯ to show more or less text</li>
                                     </ul>
                                 </div>
-                            </>
-
-                        ) : (
-
-                            // Renders all claims data in div blocks, instead of a table
-                            <div {...getTableBodyProps()}>
-                                {rows.map((row) => {
-                                    prepareRow(row);
-                                    return (
-                                        <div key={row.id} 
-                                            className="data-row" 
-                                            style={{ 
-                                                display: 'block',
-                                                alignItems: 'center' 
-                                            }}>
-                                            {row.cells.map((cell, index) => (
-                                                <div
-                                                    key={cell.column.id}
-                                                    className={`data-cell ${cell.column.Header.toLowerCase()}`}
-                                                >
-                                                    {cell.render('Cell')}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        )}
-                    </div>
                 </>
-            )}
 
-            <div className="back-to-top"><a href="#top">🔺 Back to top</a></div>
+                ) : (
 
-            <Footer />
+                    // Renders all claims data in divs, instead of a table
+                    <div {...getTableBodyProps()}>
+                        {rows.map((row) => {
+                            prepareRow(row);
+                            return (
+                                <div key={row.id} 
+                                    className="data-row" 
+                                    style={{ 
+                                        display: 'block',
+                                        alignItems: 'center' 
+                                    }}>
+                                    {row.cells.map((cell, index) => (
+                                        <div key={cell.column.id} className={`data-cell ${cell.column.Header.toLowerCase()}`}>
+                                            {cell.render('Cell')}
+                                        </div>
+                                    ))}
+                                </div>
+                            );
+                        })}
+                    </div>
+                )}
+            </div>
         </>
+    )}
+
+    <div className="back-to-top"><a href="#top">🔺 Back to top</a></div>
+
+    <Footer />
+    </>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import './App.css';
 
@@ -19,7 +19,7 @@ import ClaimAlAhliAttacked from './components/ClaimAlAhliAttacked';
 import ClaimAlShifaFuel from './components/ClaimAlShifaFuel';
 import ClaimMakeup from './components/ClaimMakeup';
 import ClaimHamasChemicalWeapons from './components/ClaimHamasChemicalWeapons';
-import ClaimIsraeliDeniesChurchKilling from './components/ClaimIsraeliDeniesChurchKilling';
+import ClaimIsraelDeniesChurchKilling from './components/ClaimIsraelDeniesChurchKilling';
 
 
 
@@ -50,7 +50,7 @@ const App = () => {
                 <Route path="/al-shifa-fuel" element={<ClaimAlShifaFuel />} />
                 <Route path="/makeup" element={<ClaimMakeup />} />
                 <Route path="/hamas-chemical-weapons" element={<ClaimHamasChemicalWeapons />} />
-                <Route path="/israel-denies-church-killing" element={<ClaimIsraeliDeniesChurchKilling />} />
+                <Route path="/israel-denies-church-killing" element={<ClaimIsraelDeniesChurchKilling />} />
 
                 
                 {/* Route redirects to claim searches */}

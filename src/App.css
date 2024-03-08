@@ -395,7 +395,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     
     /* HEADER */
         .header-container-fixed {
-            margin-top: -16%;
+            margin-top: -4%;
         }
 
         .content-container {
@@ -404,10 +404,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
             padding-bottom: 3%;
             min-width: 450px;
             left: -4%;
-        }
-
-        .logo-container {
-            /* margin-bottom: 10%; */
         }
             
         .nav-links-fixed {
@@ -444,7 +440,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         .menu-toggle {
             padding-right: 5px;
             margin-left: 93%;
-            margin-top: 15%;
+            margin-top: 53px;
             margin-left: 10px;
         }
     

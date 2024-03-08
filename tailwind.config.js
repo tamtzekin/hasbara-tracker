@@ -20,6 +20,11 @@ module.exports = {
                 'green-light': '#bffb9b',
                 'green-bright': '#9dff20',
             },
+
+            fontFamily: {
+                'helvetica': ['Helvetica', 'sans-serif'],
+                'lores': ['LoRes_Regular', 'monospace'],
+            },
             
             fontSize: {
                 xs: '0.9em',

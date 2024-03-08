@@ -102,28 +102,31 @@ export default function ClaimAlAhliAttacked() {
             
                                     {/* Show source links inside the expandable element */}
                                     <div className="source-heading"></div>
+                                    
                                     {row.original.sources.map((source, index) => (
                                         <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                             <div key={index} className="source">
-                                                <a href={source.sourceLink} target="_blank" rel="noreferrer">
                                                     {source.videoPreviewLink && (
-                                                        <ul className='icon-playarrow'>
-                                                            <li>
-                                                                <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                            </li>
-                                                        </ul>
+                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                            <ul className="icon-playarrow">
+                                                                <li>
+                                                                    <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                </li>
+                                                            </ul>
+                                                        </a>
                                                     )}
             
                                                     {/* If there's no video link, show icon link (circle) */}
                                                     {!source.videoPreviewLink && (
-                                                        <ul className='icon-link'>
-                                                            <li>
-                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                            </li>
-                                                        </ul>
-                                                    )}                                                                    
-                                                </a>
-
+                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                            <ul className="icon-link">
+                                                                <li>
+                                                                    <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                </li>
+                                                            </ul>
+                                                        </a>
+                                                    )}
+                                                                                                        
                                     {/* If there is an archive link, show the archive link */}
                                     {source.archiveLink && (
                                         <ul>
@@ -224,14 +227,13 @@ export default function ClaimAlAhliAttacked() {
                                 <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                     <div key={index} className="source text-xs">
 
-                                        <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" 
-                                        // sets class if source is a deleted source
-                                        className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
                                             {/* If there's a video preview available, show play icon (play triangle) */}
                                             {source.videoPreviewLink && (
-                                                    <ul className='icon-playarrow'>
+                                                    <ul className="icon-playarrow">
                                                         <li>
-                                                            <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
+                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            </a>
                                                         </li>
                                                     </ul>
                                             )}
@@ -240,7 +242,9 @@ export default function ClaimAlAhliAttacked() {
                                             {!source.videoPreviewLink && (
                                                     <ul className='icon-link'>
                                                         <li>
-                                                            <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
+                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            </a>
                                                         </li>
                                                     </ul>
                                             )}
@@ -254,12 +258,12 @@ export default function ClaimAlAhliAttacked() {
                                                 ) : (
                                                     <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
                                                 )}                                         */}
-                                            </a>
+
     
                                             {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
                                             {source.archiveLink && ( 
                                                 <ul>
-                                                    <li className="ml-4 -mt-6">
+                                                    <li className="ml-4">
                                                         <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
                                                             <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
                                                         </a>

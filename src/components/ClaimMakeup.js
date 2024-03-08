@@ -102,28 +102,31 @@ export default function ClaimFortyBeheadedBabies() {
             
                                     {/* Show source links inside the expandable element */}
                                     <div className="source-heading"></div>
+                                    
                                     {row.original.sources.map((source, index) => (
                                         <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                             <div key={index} className="source">
-                                                <a href={source.sourceLink} target="_blank" rel="noreferrer">
                                                     {source.videoPreviewLink && (
-                                                        <ul className='icon-playarrow'>
-                                                            <li>
-                                                                <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                            </li>
-                                                        </ul>
+                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                            <ul className="icon-playarrow">
+                                                                <li>
+                                                                    <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                </li>
+                                                            </ul>
+                                                        </a>
                                                     )}
             
                                                     {/* If there's no video link, show icon link (circle) */}
                                                     {!source.videoPreviewLink && (
-                                                        <ul className='icon-link'>
-                                                            <li>
-                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                            </li>
-                                                        </ul>
-                                                    )}                                                                    
-                                                </a>
-
+                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                            <ul className="icon-link">
+                                                                <li>
+                                                                    <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                </li>
+                                                            </ul>
+                                                        </a>
+                                                    )}
+                                                    
                                     {/* If there is an archive link, show the archive link */}
                                     {source.archiveLink && (
                                         <ul>
@@ -224,27 +227,28 @@ export default function ClaimFortyBeheadedBabies() {
                                 <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                     <div key={index} className="source text-xs">
 
-                                        <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" 
-                                        // sets class if source is a deleted source
-                                        className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
                                             {/* If there's a video preview available, show play icon (play triangle) */}
                                             {source.videoPreviewLink && (
-                                                    <ul className='icon-playarrow'>
+                                                    <ul className="icon-playarrow">
                                                         <li>
-                                                            <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
+                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            </a>
                                                         </li>
                                                     </ul>
                                             )}
-    
+
                                             {/* If no video preview, show link icon (circle)) */}
                                             {!source.videoPreviewLink && (
                                                     <ul className='icon-link'>
                                                         <li>
-                                                            <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
+                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                            </a>
                                                         </li>
                                                     </ul>
                                             )}
-    
+
                                             {/* If a source has been deleted by the original publisher, show a red strikethrough */}
                                             {/* {source.hasBeenDeleted === 'true' ? (
                                                 <strike style={{color:'red'}}>
@@ -254,19 +258,19 @@ export default function ClaimFortyBeheadedBabies() {
                                                 ) : (
                                                     <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
                                                 )}                                         */}
-                                            </a>
-    
+
+
                                             {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
                                             {source.archiveLink && ( 
                                                 <ul>
-                                                    <li className="ml-4 -mt-6">
+                                                    <li className="ml-4">
                                                         <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
                                                             <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
                                                         </a>
                                                     </li>
                                                 </ul>
-                                            )}
-    
+                                            )}  
+
                                             {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
                                             <span className="visually-hidden">Opens in new tab</span>
                                         </div>

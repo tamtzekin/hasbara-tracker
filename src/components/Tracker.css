@@ -106,7 +106,7 @@ li span {
     /* vertical-align: -5%; */
     /* margin-right: 5%; */
     /* list-style: square; */
-    margin-left: 12%;
+    margin-left: 1rem;
 }
 
 .icon-playarrow li {
@@ -121,7 +121,7 @@ li span {
     /* height: 16px; */
     /* margin-right: 3%; */
     /* vertical-align: -5%; */
-    margin-left: 12%;
+    margin-left: 1rem;
 }
 
 .modal-overlay {
@@ -145,7 +145,7 @@ li span {
 }
 
 .source {
-    margin-bottom: 7%
+    margin-bottom: 7%;
 }
 
 /* for sources that have been deleted by original poster */

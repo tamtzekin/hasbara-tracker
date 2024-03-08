@@ -259,7 +259,7 @@ export default function ClaimAlAhliAttacked() {
                                             {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
                                             {source.archiveLink && ( 
                                                 <ul>
-                                                    <li className="ml-[11.5%] -mt-6">
+                                                    <li className="ml-4 -mt-6">
                                                         <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
                                                             <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
                                                         </a>

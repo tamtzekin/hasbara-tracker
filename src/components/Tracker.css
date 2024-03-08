@@ -18,7 +18,7 @@ a {
     color: black;
     text-decoration: none;
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
 
 /* .archive-link {
@@ -294,9 +294,7 @@ thead {
     text-align: left;
     border-bottom: 1px dashed #595959;
     background-color: theme('colors.grey');
-    z-index: 4;  
-    /* position: sticky; */
-    /* position: relative; */
+    z-index: 1;  
     top: 30%;
 }
 
@@ -420,7 +418,7 @@ MOBILE VIEW
 oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
 @media only screen and (max-width: 576px) {
     a {
-        z-index: 1; /* makes the a link text hide under the video, on mobile*/
+        z-index: -10; /* hide link text under video*/
     }
 
     .claim-header-container {

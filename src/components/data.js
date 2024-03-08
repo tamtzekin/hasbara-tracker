@@ -1721,7 +1721,7 @@ const data = [
     },
     description: {
         summary: 'Israeli forces bomb Al-Shifa Hospital multiple times',
-        details: 'Israeli strikes hit the yard of the Al-Shifa Hospital complex. Gaza‘s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br><br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],’ he said.'
+        details: 'Israeli strikes hit the yard of the Al-Shifa Hospital complex. Gaza’s Health Ministry spokesperson Ashraf al-Qudra told Al Jazeera Arabic that there were a number of casualties. <br><br> ‘The medical teams are still inspecting the area to find out if there were dead or wounded [victims],’ he said.'
     },
  
     sources: [
@@ -2312,9 +2312,9 @@ const data = [
     ]
 },
  
-// CLAIM: Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish
+// CLAIM: Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '16 Dec 2023',
    claim: {
        claimText: 'Context',
@@ -2335,7 +2335,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '16 Dec 2023',
    claim: {
        claimText: 'Context',
@@ -2361,7 +2361,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '16 Dec 2023',
    claim: {
        claimText: 'Debunk',
@@ -2381,7 +2381,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '16 Dec 2023',
    claim: {
        claimText: 'Debunk',
@@ -2401,7 +2401,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '16 Dec 2023',
    claim: {
        claimText: 'Claim',
@@ -2420,7 +2420,7 @@ const data = [
     ]
 },
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '17 Dec 2023',
    claim: {
        claimText: 'Debunk',
@@ -2445,7 +2445,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '18 Dec 2023 ',
    claim: {
        claimText: 'Claim',
@@ -2465,7 +2465,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '18 Dec 2023',
    claim: {
        claimText: 'Claim',
@@ -2486,7 +2486,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '18 Dec 2023',
    claim: {
        claimText: 'Debunk',
@@ -2506,7 +2506,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza‘s Holy Family Parish',
+   claimTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
    date: '21 Dec 2023',
    claim: {
        claimText: 'Claim',

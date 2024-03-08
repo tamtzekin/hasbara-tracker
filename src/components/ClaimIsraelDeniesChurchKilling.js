@@ -367,7 +367,7 @@ export default function ClaimIsraelDeniesChurchKilling() {
 
         {/* Claim summary */}
         <span className="claim-summary container mt-10 mobile:w-[90%] mobile:mt-[5%] mobile:ml-[5%]">
-            <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono font-bold">
+            <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
                 The claim
             </div>
 
@@ -416,7 +416,7 @@ export default function ClaimIsraelDeniesChurchKilling() {
                         ) : (
                             // Renders all claims data as a table
                             <table {...getTableProps()}>
-                                <thead className="font-mono">
+                                <thead className="font-lores">
                                     {headerGroups.map((headerGroup) => (
                                         <tr {...headerGroup.getHeaderGroupProps()}>
                                             {headerGroup.headers.map((column) => (

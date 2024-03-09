@@ -369,23 +369,21 @@ export default function ClaimFortyBeheadedBabies() {
     </span>
 
 
-        {/* Claim summary */}
+            {/* Claim summary */}
             <span className="claim-summary container mt-10 mobile:w-[90%] mobile:mt-[5%] mobile:ml-[5%]">
                 <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
                     The claim</div>
+                    
                 <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
                     ‘Forty beheaded babies’</div>
-                <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
+
+                <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
                     Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.
                 </div>
-            </span>
-
-            <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
-                Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.
-            </div>
+            </span>            
         </span>
         
-        
+    
 
             {/* Show desktop view of Tracker - as a table */}
             {!isMobileView && (

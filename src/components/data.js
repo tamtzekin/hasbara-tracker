@@ -2533,25 +2533,353 @@ const data = [
 // CLAIM: Hamas were carrying instructions on how to make chemical weapons
 {
    claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
-   date: '16 Dec 2023',
+   date: '1948',
    claim: {
        claimText: 'Context',
        claimTag: 'context-tag',
    },
    description: {
-       summary: 'Israeli tanks fired on Holy Family Church‘s Convent in Gaza',
-           details: 'On the morning of 16 December, 2023, Israeli forces fired a rocket at the Convent of Sisters of Mother Theresa (Missionaries of Charity) which sits in the Holy Family Parish compound. <br><br>The Holy Family Parish is a Catholic church in Gaza. <br><br> The rocket caused an explosion and fire, which destroyed the building‘s generator and fuel resources – its only source of electricity. Israeli forces fired two more rockets from a tank, displacing the 54 disabled people there and leaving them without access to respirators that some of them need to survive, the statement said. <br><br>Water tanks and solar panels were also destroyed.',
+       summary: 'The Israeli state’s use of chemical weapons: How the chemical weapons‘ research wing of the Israeli forces came to be',
+           details: 'The Israeli settler-colony‘s first prime minister David Ben-Gurion wrote to Ehud Avriel, an operative for the Jewish Agency in Europe, instructing him to search and recruit Jewish scientists who could ‘either increase the capacity to kill masses or to cure masses’.<br><br>Following Ben-Gurion’s instructions, Jewish scientists were recruited and formed the chemical weapons research wing of the occupation forces, known as ‘HEMED’.  Within it was a unit named ‘HEMED BEIT’ devoted to developing biological weapons.<br><br><strong> Further context:</strong> <br><br><li class="one">Ehud Avriel was one of the key figures behind the Haganah militia’s arms purchasing unit, Rekhesh.</li><br><li class="one">HEMED later became the Israel Institute for Biological Research.     </li><br><li class="one">The Israeli state has neither signed nor ratified the 1972 Biological Weapons Convention which prohibits the development, production, acquisition, transfer, stockpiling and use of biological and toxin weapons     </li><br><li class="one">On 1 April, 1948, Ben-Gurion wrote in his journal about ‘the development of science and speeding up its application in warfare.’     </li><br><li class="one">Later in May 1948, Ben-Gurion wrote about ‘biological materials’ that were purchased for $2,000.    </li>',
    },
    sources: [
        {
-           sourceName: 'The Latin Patriarch of Jerusalem',
-           sourceLink: 'https://twitter.com/LPJerusalem/status/1736057252086268025',
-           archiveLink: 'https://archive.ph/u4lkL',
-           videoPreviewLink: 'https://files.hasbaratracker.com/16Dec_attack__Holy_Family_Parish_compound.webp',
+           sourceName: '<em>Israel and chemical/biological weapons: History, deterrence, and arms control</em> by Avner Cohen, 2001',
+           sourceLink: 'https://files.hasbaratracker.com/2001_Avner_Cohen_Israel_and_chemical_biological_weapons.pdf',
+           archiveLink: 'https://files.hasbaratracker.com/2001_Avner_Cohen_Israel_and_chemical_biological_weapons.pdf',
        },
    ]
 },
 
+{
+   claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+   date: '1948',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'The Israeli state’s use of chemical weapons: Jewish militias poisoned Palestinian water sources during the Nakba in 1948',
+           details: 'During the Nakba – the ethnic cleansing and mass displacement of Palestinians in 1948 – Jewish forces poisoned water supplies causing outbreaks of disease among Palestinians in an operation named Cast Thy Bread.<br><br> Israeli military historian Uri Milstein said Jewish militias – which would later form the Israel Occupation Forces – poisoned water supplies in many Palestinian villages ‘to prevent the inhabitants from coming back’.<br><br> One of the largest operations of this water poisoning campaign is believed to have taken place in Akka shortly before it was taken by Jewish militias on 17 May, 1948.<br><br>According to Milstein, Jewish forces contaminated water supplies leading to a typhoid epidemic. Milstein interviewed and named Yaacov Pundaq, a Haganah commander in the Carmeli Brigade’s 21st Battalion, who was involved in the operation.',
+   },
+   sources: [
+       {
+           sourceName: '<em>Cast thy bread: Israeli biological warfare during the 1948 War</em> by Benny Morris and Benjamin Z. Kedar, 2022',
+           sourceLink: 'https://www.tandfonline.com/doi/abs/10.1080/00263206.2022.2122448',
+           archiveLink: 'https://archive.ph/86Deo',
+       },
+       {
+           sourceName: '<em>Israel and chemical/biological weapons: History, deterrence, and arms control</em> by Avner Cohen, 2001',
+           sourceLink: 'https://files.hasbaratracker.com/2001_Avner_Cohen_Israel_and_chemical_biological_weapons.pdf',
+           archiveLink: 'https://files.hasbaratracker.com/2001_Avner_Cohen_Israel_and_chemical_biological_weapons.pdf',
+       },
+       {
+           sourceName: 'Ha’aretz',
+           sourceLink: 'https://www.haaretz.com/israel-news/2022-10-14/ty-article-magazine/.highlight/documents-confirm-israelis-poisoned-arab-wells-in-1948/00000183-d2b2-d8cc-afc7-fefed64d0000',
+           archiveLink: 'https://archive.is/2t2XH',
+       },
+   ]
+},
+
+{
+   claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+   date: '1993',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'The Chemical Weapons Convention under International Humanitarian Law',
+           details: 'The Chemical Weapons Convention prohibits the manufacture, stockpiling and use of chemical weapons.',
+   },
+   sources: [
+       {
+           sourceName: 'International Humanitarian Law Databases – ICRC',
+           sourceLink: 'https://ihl-databases.icrc.org/en/ihl-treaties/cwc-1993#:~:text=The%20Chemical%20Weapons%20Convention%20(CWC,facilities%20and%20the%20weapons%20themselves.',
+           archiveLink: 'https://archive.ph/86Deo',
+       },
+   ]
+},
+
+{
+   claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+   date: '25 Sep 1997',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'The Israeli state’s use of chemical weapons: Poisoning Khaled Mashaal with fentanyl',
+           details: 'In 1997, two Israeli Mossad agents posing as a couple on vacation attempted to poison Khaled Mashaal – then chairman of Hamas’ political bureau – in Amman, Jordan, with a fatal dose of the synthetic opiate fentanyl.<br><br>The Israeli state was pressured to give the antidote to reverse its effects by the Clinton administration. <br><br>The weapon was allegedly manufactored at the Israel Institute for Biological Research.',
+   },
+   sources: [
+       {
+           sourceName: 'Time',
+           sourceLink: 'https://time.com/khaled-mashaal/',
+           archiveLink: 'https://archive.md/jkSc7',
+       },
+   ]
+},
+
+
+{
+   claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+   date: '15 Feb 2001',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'The Israeli state’s use of chemical weapons: Using poison gas against Palestinian protestors',
+           details: 'During the Second Intifada, the Israeli state used ‘novel gas’ weapons against Palestinians in Gaza and the West Bank. American filmmaker James Longley was there at the time, and documented attacks and Palestinian testimonies in his documentary Gaza Strip (2002).<br><br>In one particular incident on 12 February, 2001, Israeli forces attacked protestors in Khan Younis that was unlike the tear gas Israeli forces usually deployed. It was reported at the time that 80 Palestinians attacked were hospitalised and were experiencing violent convulsions.<br><br>One Palestinian man in Nasser Hospital at the time said: ‘We were sitting in our house. There was shooting. We fled our homes. The house where we were was hit. We saw a fire, and we tried to put it out. First we saw white smoke, then yellow smoke and other colours. There was the smell of mint. When you breathe it in you don’t feel pain. It feels good. After 45 minutes you start feeling like you can’t breathe.’<br><br>News outlet Voice of Ramallah in Palestine reported at the time that specialists believed Israeli forces used an internationally banned nerve gas.<br><br>Dr Muhammad Abdallah Abd-al-Mun’im, official in charge of medical teams who treated the injured, said that the gas bombs fired last night on the western camp of Khan Yunis gave off heavy yellowish and highly-concentrated smoke. Those who inhaled it, he said, suffered a nervous breakdown and vomited blood.’',
+   },
+   sources: [
+       {
+           sourceName: 'CNN',
+           sourceLink: 'https://edition.cnn.com/2001/WORLD/meast/02/15/arafat.gas/index.html',
+           archiveLink: 'https://archive.md/lSEor',
+       },
+       {
+           sourceName: 'Selected interview transcripts from <em>Gaza Strip (2002)</em> by James Longley',
+           sourceLink: 'https://files.hasbaratracker.com/12Feb_2001_selected_transcripts_use_of_gas_iof.pdf',
+           archiveLink: 'https://files.hasbaratracker.com/12Feb_2001_selected_transcripts_use_of_gas_iof.pdf',
+       },
+       {
+           sourceName: 'Voice of Palestine',
+           sourceLink: 'https://files.hasbaratracker.com/13Feb_2001_voiceofpalestine_report.png',
+           archiveLink: 'https://files.hasbaratracker.com/13Feb_2001_voiceofpalestine_report.png',
+       },
+   ]
+},
+
+ {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '10 Oct 2023',
+     claim: {
+         claimText: 'Context',
+         claimTag: 'context-tag',
+     },
+     description: {
+         summary: 'The Israeli state’s use of chemical weapons: White phosphorous',
+         details: 'The Israeli state used the banned chemical weapon white phosphorous against Lebanese civilians during the Israeli occoupations of Lebanon in 1982 and in 2006, and against Palestinian civilians in Gaza during multiple attacks and besiegements, first used in 2008 and 2009, which killed over 1,400 Palestinians.<br><br>Days after Operation Al-Aqsa Flood on 7 October, 2023, Human Rights Watch verified video evidence of Israeli forces using white phosphorous in Gaza and in Lebanon.',
+     },
+     sources: [
+         {
+             sourceName: 'Human Rights Watch',
+             sourceLink: 'https://www.hrw.org/news/2023/10/12/israel-white-phosphorus-used-gaza-lebanon',
+             archiveLink: 'https://archive.md/u4ZUW',
+         },
+     ]
+ },
+
+
+ {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '12 Oct 2023',
+     claim: {
+         claimText: 'Claim',
+         claimTag: 'claim-tag',
+     },
+     description: {
+         summary: 'Israeli military claims it found an ‘al-Qaeda/ISIS’ training booklet on the body of one Hamas fighter',
+         details: 'The official Israel Occupation Forces account @idfonline on X (formerly Twitter) claimed ‘an al-Qaeda/Daesh training and inspiration booklet’ was found with the dead body of a Hamas fighter in Kibbutz Be’eri.<br><br>Translated from Hebrew to English, the post reads: ‘The cover of an al-Qaeda/ISIS training and inspiration booklet that was found on the body of a terrorist who infiltrated the territory of the State of Israel’ along with an image of what is the front of the booklet.’',
+     },
+     sources: [
+         {
+             sourceName: '@idfonline on X',
+             sourceLink: 'https://twitter.com/idfonline/status/1712522756556722600',
+             archiveLink: 'https://archive.is/tRb3Y',
+         },
+     ]
+ },
+
+  {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '15 Oct 2023',
+     claim: {
+         claimText: 'Claim',
+         claimTag: 'claim-tag',
+     },
+     description: {
+         summary: 'Israeli President claims on CNN another ‘al-Qaeda’ booklet found on how to ‘take captives’ on the ‘body of one of the terrorists’',
+         details: 'In an interview with US outlet CNN, Israeli President Isaac Herzog claimed occupation forces found an instruction guide on how to torture, abduct and kidnap people.',
+     },
+     sources: [
+         {
+             sourceName: 'Isaac Herzog on X',
+             sourceLink: 'https://twitter.com/Isaac_Herzog/status/1713661051986678189?lang=en-GB',
+             archiveLink: 'https://files.hasbaratracker.com/15Oct_Isaac_Herzog_CNN_interview.mp4',
+             videoPreviewLink: 'https://files.hasbaratracker.com/15Oct_Isaac_Herzog_CNN_interview.mp4',
+         },
+     ]
+ },
+
+  {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '15 Oct 2023',
+     claim: {
+         claimText: 'Claim',
+         claimTag: 'claim-tag',
+     },
+     description: {
+         summary: 'Israeli Ministry of Foreign Affairs repeats claim that ‘captive taking handbook’ was found on Hamas fighter',
+         details: 'The Israeli Ministry of Foreign Affairs shared a press release describing how Israeli President Isaac Herzog showed viewers a booklet entitled ‘The Warrior’s Guide - Jihad Version’ that was ‘recovered in the battlefield on a Hamas terrorist’.',
+     },
+     sources: [
+         {
+             sourceName: 'Israeli Ministry of Foreign Affairs ',
+             sourceLink: 'https://www.gov.il/en/departments/news/president-herzog-reveals-hamas-captive-taking-handbook-15-oct-2023#:~:text=In%20CNN%20interview%2C%20President%20Herzog,shocks%20and%20carry%20out%20executions.',
+             archiveLink: 'https://archive.md/h8o5S',
+         },
+     ]
+ },
+
+ {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '21 Oct 2023',
+     claim: {
+         claimText: 'Claim',
+         claimTag: 'claim-tag',
+     },
+     description: {
+         summary: 'Anonymous Israeli officials claim booklet had instructions on how to make a cyanide bomb and was found on a USB stick',
+         details: 'Israeli officials again claimed they found the ‘2003 al-Qaeda manual’ on a USB stick on the body of a Hamas fighter, adding that it also included instructions for the production of a ‘cyanide dispersion device’, according to two unnamed Israeli officials and a copy of a classified Israeli Foreign Ministry cable given to US news outlet Axios’ reporter Barak Ravid in an exclusive article.<br><br>The Axios report stated that in the cable, the Israeli Foreign Ministry instructed diplomats to tell their counterparts that Hamas wants ‘to conduct attacks in a similar way that ISIS tried to do’.',
+     },
+     sources: [
+         {
+             sourceName: 'Axios',
+             sourceLink: 'https://www.axios.com/2023/10/21/israel-hamas-cyanide-weapon-instructions',
+             archiveLink: 'https://archive.is/wjSVX',
+         },
+     ]
+ },
+
+  {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '21 Oct 2023',
+     claim: {
+         claimText: 'Context',
+         claimTag: 'context-tag',
+     },
+     description: {
+         summary: 'Axios reporter Barak Ravid with cyanide bomb ‘scoop’ is a former member of the Israeli military intelligence unit, Unit 8200',
+         details: 'Barak Ravid, a reporter for US news outlet Axios and formerly Israeli newspaper Ha’aretz, was a member of the Israeli military intelligence unit Unit 8200, and remained a reservist for the occupation forces until March 2023.',
+     },
+     sources: [
+         {
+             sourceName: 'Forward',
+             sourceLink: 'https://forward.com/opinion/205716/meet-the-good-kids-who-refuse-to-spy-for-israel/',
+             archiveLink: 'https://archive.ph/NwBBc',
+         },
+     ]
+ },
+
+ {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '22 Oct 2023',
+     claim: {
+         claimText: 'Claim',
+         claimTag: 'claim-tag',
+     },
+     description: {
+         summary: 'Israeli President claims instructions on how to make chemical weapons found on body of Hamas fighter',
+         details: 'Israeli President Isaac Herzog held up the booklet the Israeli military shared on 12 October, 2023, in an interview with UK news outlet Sky News.<br><br>He claimed it included ‘training materials for the use of chemical warfare agents’ found on the ‘body of one of those sadistic villains’.<br><br>‘This is material which was found on the body of one of those sadistic villains. It’s al-Qaeda material, official al-Qaeda material. When dealing with ISIS, al-Qaeda, and Hamas, this is what we’re dealing with. And in this material, there were instructions, how to produce chemical weapons.’<br><br>Sky News noted that it was unable to independently verify the claims.',
+     },
+     sources: [
+         {
+             sourceName: 'Sky News',
+             sourceLink: 'https://news.sky.com/story/hamas-terrorists-were-carrying-instructions-on-how-to-make-chemical-weapons-israeli-president-claims-12990547',
+             archiveLink: 'https://archive.md/d9XUO',
+         },
+         {
+             sourceName: 'Sky News on YouTube',
+             sourceLink: 'https://www.youtube.com/watch?v=iNJgylkJKvI&ab_channel=SkyNews',
+             archiveLink: 'https://files.hasbaratracker.com/22Oct_2023_Isaac_Herzog_Sky_News.mp4',
+             videoPreviewLink: 'https://files.hasbaratracker.com/22Oct_2023_Isaac_Herzog_Sky_News.mp4',
+         }
+     ]
+ },
+
+ {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '23 Oct 2023',
+     claim: {
+         claimText: 'Claim',
+         claimTag: 'claim-tag',
+     },
+     description: {
+         summary: 'Israeli Prime Minister’s Office says ‘training materials for the use of chemical warfare agents’ found on USB',
+         details: 'The Israeli Prime Minister’s Office repeated Israeli President Isaac Herzog’s claims to Sky News. In its statement it wrote: ‘A USB key found on the body of a Hamas terrorist who infiltrated Israeli territory, was found to contain detailed instructions on creating chemical weapons and implementing their use among the civilian population. The source of the document is a manual from the al-Qaeda terrorist organisation dated 2003.’<br><br>‘Revealed materials found on the bodies of Hamas terrorists, including training materials for the use of chemical warfare agents, intended to be used by the terrorist organisation in its murderous rampage against innocent civilians.’',
+     },
+     sources: [
+         {
+             sourceName: 'Israeli Prime Minister’s Office',
+             sourceLink: 'https://www.gov.il/en/departments/news/ironswords231020233',
+             archiveLink: 'https://archive.md/DIshr',
+         },
+     ]
+ },
+
+  {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '23 Oct 2023',
+     claim: {
+         claimText: 'Debunk',
+         claimTag: 'debunk-tag',
+     },
+     description: {
+         summary: 'The document does not contain chemical weapons instructions, is a short biography',
+         details: 'The document shown and provided by Israeli President Isaac Herzog as evidence of Hamas’ intent to build and use chemical weapons contains no instructions on how to make chemical weapons and is, in fact, a biography of Ramzi Yousef, an al-Qaeda operative who is in prison for his attack on the World Trade Centre in 1993.',
+     },
+     sources: [
+         {
+             sourceName: 'Middle East Eye',
+             sourceLink: 'https://www.middleeasteye.net/news/israel-palestine-war-chemical-weapons-manual-biography-bomber',
+             archiveLink: 'https://archive.is/i1JNg',
+         },
+     ]
+ },
+
+  {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '23 Oct 2023',
+     claim: {
+         claimText: 'Debunk',
+         claimTag: 'debunk-tag',
+     },
+     description: {
+         summary: 'Israeli military general Michael Edelstein cannot verify if Hamas fighters were in posession of instructions',
+         details: 'When asked about whether Palestinian fighters had chemical weapons capabilities, Israeli military general Michael Edelstein said ‘we are still looking for evidence about whether they had it or not.’',
+     },
+     sources: [
+         {
+             sourceName: 'Sky News',
+             sourceLink: 'https://news.sky.com/story/israel-says-it-has-evidence-of-iranian-involvement-in-hamas-attack-but-cannot-elaborate-12991025',
+             archiveLink: 'https://archive.md/i1JNg',
+         },
+     ]
+ },
+
+  {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '24 Oct 2023',
+     claim: {
+         claimText: 'Debunk',
+         claimTag: 'debunk-tag',
+     },
+     description: {
+         summary: 'Diagrams shown on TV by Israeli President from different sources, not the manual they claimed it came from',
+         details: 'Israeli President Isaac Herzog showed a labelled diagram of a bomb with one version in Arabic, the second in English, in one of his interviews, however neither diagram exists in the manuals Israeli forces purported to find.<br><br>Aimen Dean, former ISIS member confirmed to Sky News that the diagram shown by Herzog was one that he had made while in ISIS.',
+     },
+     sources: [
+         {
+             sourceName: 'Sky News',
+             sourceLink: 'https://www.youtube.com/watch?v=u4ycA8tbEuQ&ab_channel=SkyNews',
+             archiveLink: 'https://files.hasbaratracker.com/24Oct_2023_Isaac_Herzog_manual_debunk.mp4',
+             videoPreviewLink: 'https://files.hasbaratracker.com/24Oct_2023_Isaac_Herzog_manual_debunk.mp4',
+         },
+     ]
+ },
 
 ]
 

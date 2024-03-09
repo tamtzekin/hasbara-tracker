@@ -16,7 +16,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
 
-export default function ClaimFortyBeheadedBabies() {
+export default function ClaimMakeup() {
     // defines claim tags for dropdown (ClaimFilter.js)
     const uniqueClaimTitles = useMemo(() => {
         const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
@@ -317,14 +317,14 @@ export default function ClaimFortyBeheadedBabies() {
         <>
         <Helmet>
             {/* HTML meta tags */}
-            <title>Claim: ‘Makeup used in Gaza to fake injuries’’</title>
-            <meta name="description" content="" />
+            <title>Claim: ‘Makeup used in Gaza to fake injuries’</title>
+            <meta name="description" content="Israeli officials shared behind-the-scenes footage of a short film claiming it featured Palestinians in Gaza using makeup to fake injuries." />
 
             <meta property="og:url" content="https://hasbaratracker.com/makeup" />
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content="Hasbara Tracker" />
             <meta property="og:title" content="Claim: ‘Makeup used in Gaza to fake injuries’" />
-            <meta property="og:description" content="" />
+            <meta property="og:description" content="Israeli officials shared behind-the-scenes footage of a short film claiming it featured Palestinians in Gaza using makeup to fake injuries." />
             <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
 
             <meta name="twitter:card" content="summary_large_image" />
@@ -332,7 +332,7 @@ export default function ClaimFortyBeheadedBabies() {
             <meta name="twitter:site" content="@hasbaratracker" />
             <meta property="twitter:url" content="https://hasbaratracker.com/makeup" />
             <meta name="twitter:title" content="Claim: ‘Makeup used in Gaza to fake injuries’" />
-            <meta name="twitter:description" content="" />
+            <meta name="twitter:description" content="Israeli officials shared behind-the-scenes footage of a short film claiming it featured Palestinians in Gaza using makeup to fake injuries." />
             <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
             <meta name="twitter:creator" content="@hasbaratracker" />
         </Helmet>
@@ -374,30 +374,13 @@ export default function ClaimFortyBeheadedBabies() {
             <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
                 The claim
             </div>
-
-<<<<<<< HEAD
-    </span>
-                    <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
-                        <span className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
-                            The claim:</span>
-                        <span className="mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
-                            &nbsp;‘Makeup used in Gaza to fake injuries’</span>
-                        <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
-                        Israeli officials shared behind-the-scenes footage of a short film claiming it featured Palestinians in Gaza using makeup to fake injuries.
-                    </div>
-
-                    </div>
-=======
             <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
                 ‘Makeup used in Gaza to fake injuries’
             </div>
->>>>>>> 0961d3121aad84d8689e13ed16b410556381aa89
-
             <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
-                description ....
+                Israeli officials shared behind-the-scenes footage of a short film claiming it featured Palestinians in Gaza using makeup to fake injuries.
             </div>
         </span>
-
 </span>
         
 

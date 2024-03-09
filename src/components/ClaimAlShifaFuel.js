@@ -320,23 +320,12 @@ export default function ClaimAlShifaFuel() {
             <title>Claim: ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’ | Hasbara Tracker</title>
             <meta name="description" content="Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors." />
 
-<<<<<<< HEAD
-<head>
-    {/* Twitter link preview */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@hasbaratracker" />
-    <meta name="twitter:title" content="Claim: Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas" />
-    <meta name="twitter:description" content="Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors." />
-    <meta name="twitter:image" content="/public/img/htlogo_twittercard.jpg" />
-</head>
-=======
             <meta property="og:url" content="https://hasbaratracker.com/al-shifa-fuel" />
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content="Hasbara Tracker" />
             <meta property="og:title" content="Claim: ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’" />
             <meta property="og:description" content="Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors." />
             <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
->>>>>>> 0961d3121aad84d8689e13ed16b410556381aa89
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta property="twitter:domain" content="hasbaratracker.com" />
@@ -381,33 +370,23 @@ export default function ClaimAlShifaFuel() {
 
 
         {/* Claim summary */}
-        <span className="claim-summary container mt-10 mobile:w-[90%] mobile:mt-[5%] mobile:ml-[5%]">
+                <span className="claim-summary container mt-10 mobile:w-[90%] mobile:mt-[5%] mobile:ml-[5%]">
             <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
                 The claim
             </div>
 
-<<<<<<< HEAD
-    </span>
-
-                    <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
-                        <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
-                            The claim</div>
-                        <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">‘{summaries[2].claimMainTitle}’</div>
-                        <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors.
-                    </div>
-                    </div>
-=======
             <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
                 ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’
             </div>
->>>>>>> 0961d3121aad84d8689e13ed16b410556381aa89
 
             <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
                 Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors.
             </div>
         </span>
 
-</span>
+
+        </span>
+        
         
 
             {/* Show desktop view of Tracker - as a table */}

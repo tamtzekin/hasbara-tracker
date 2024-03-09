@@ -2654,6 +2654,26 @@ const data = [
 
  {
      claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+     date: '7 Oct 2004',
+     claim: {
+         claimText: 'Context',
+         claimTag: 'context-tag',
+     },
+     description: {
+         summary: 'Precedent: Fabricated claims of chemical weapons used to justify invasion of Iraq',
+         details: 'The American George W. Bush administration manufactured and fabricated claims of weapons of mass destruction in Iraq in 2003 as a precursor to invading the country.<br><br>In 2004, the verdict – following two years of searching – revealed there were no weapons of mass destruction in Iraq.',
+     },
+     sources: [
+         {
+             sourceName: 'The Guardian',
+             sourceLink: 'https://www.theguardian.com/world/2004/oct/07/usa.iraq1',
+             archiveLink: 'https://archive.ph/qOn1e',
+         },
+     ]
+ },
+
+ {
+     claimTitle: 'Hamas were carrying instructions on how to make chemical weapons',
      date: '10 Oct 2023',
      claim: {
          claimText: 'Context',

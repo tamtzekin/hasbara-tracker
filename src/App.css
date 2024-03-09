@@ -150,6 +150,14 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 @font-face {
+    font-family: 'CartographCF_Light';
+    src:url("./fonts/CartographCF-Light.woff2") format("woff2");
+        url:("./fonts/CartographCF-Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Helvetica';
     src:url('/src/fonts/helvetica.woff2') format('woff2'),
         url('/src/fonts/helvetica.woff') format('woff');
@@ -180,10 +188,10 @@ h1 a:hover {
 
 h2.subheading {
     text-align: left;
-    font-family: 'Helvetica', Helvetica, sans-serif;
+    font-family: theme('fontFamily.mono');
     position: relative;
     line-height: 2.1em;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 

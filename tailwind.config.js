@@ -24,6 +24,7 @@ module.exports = {
             fontFamily: {
                 'helvetica': ['Helvetica', 'sans-serif'],
                 'lores': ['LoRes_Regular', 'monospace'],
+                'mono': ['CartographCF_Light', 'monospace'],
             },
             
             fontSize: {
@@ -33,9 +34,4 @@ module.exports = {
                 lg: '1.3em',
             }
         },
-    fontFamily: {
-        sans: ['Helvetica', 'sans-serif'],
-        mono: ['LoRes_Regular', 'monospace'],
-    },
-
 }

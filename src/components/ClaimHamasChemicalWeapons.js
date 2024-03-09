@@ -324,7 +324,7 @@ export default function ClaimHamasChemicalWeapons() {
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content="Hasbara Tracker" />
             <meta property="og:title" content="Claim: ‘Hamas were carrying instructions on how to make chemical weapons’" />
-            <meta property="og:description" content="" />
+            <meta property="og:description" content="The ‘training manuals’ Israeli officials claimed to find on bodies of Hamas fighters do not contain instructions on how to make chemical weapons." />
             <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
 
             <meta name="twitter:card" content="summary_large_image" />
@@ -332,7 +332,7 @@ export default function ClaimHamasChemicalWeapons() {
             <meta name="twitter:site" content="@hasbaratracker" />
             <meta property="twitter:url" content="https://hasbaratracker.com/hamas-chemical-weapons" />
             <meta name="twitter:title" content="Claim: ‘Hamas were carrying instructions on how to make chemical weapons’" />
-            <meta name="twitter:description" content="" />
+            <meta name="twitter:description" content="The ‘training manuals’ Israeli officials claimed to find on bodies of Hamas fighters do not contain instructions on how to make chemical weapons." />
             <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
             <meta name="twitter:creator" content="@hasbaratracker" />
         </Helmet>
@@ -380,7 +380,7 @@ export default function ClaimHamasChemicalWeapons() {
             </div>
 
             <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
-                description.....
+                The ‘training manuals’ Israeli officials claimed to find on bodies of Hamas fighters do not contain instructions on how to make chemical weapons.
             </div>
         </span>
 

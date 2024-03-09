@@ -20,6 +20,12 @@ module.exports = {
                 'green-light': '#bffb9b',
                 'green-bright': '#9dff20',
             },
+
+            fontFamily: {
+                'helvetica': ['Helvetica', 'sans-serif'],
+                'lores': ['LoRes_Regular', 'monospace'],
+                'mono': ['CartographCF_Light', 'monospace'],
+            },
             
             fontSize: {
                 xs: '0.9em',
@@ -28,9 +34,4 @@ module.exports = {
                 lg: '1.3em',
             }
         },
-    fontFamily: {
-        sans: ['Helvetica', 'sans-serif'],
-        mono: ['LoRes_Regular', 'monospace'],
-    },
-
 }

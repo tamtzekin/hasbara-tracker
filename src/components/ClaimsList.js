@@ -15,7 +15,7 @@ const ClaimsList = () => {
 
         <Link to="/hamas-chemical-weapons"><div className="claim-link">‘Hamas were carrying instructions on how to make chemical weapons’</div></Link>
 
-        <Link to="/israel-denies-church-killing"><div className="claim-link">Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish</div></Link>
+        <Link to="/israel-denies-church-killing"><div className="claim-link">‘Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish’</div></Link>
 
         <div className="claim-coming-soon"><em>Coming soon:</em> ‘Israeli state denies striking Al-Shifa hospital’</div>
 

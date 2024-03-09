@@ -16,7 +16,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
 
-export default function ClaimAlAhliAttacked() {
+export default function ClaimIsraelDeniesChurchKilling() {
     // defines claim tags for dropdown (ClaimFilter.js)
     const uniqueClaimTitles = useMemo(() => {
         const claimTitlesSet = new Set(data.map((item) => item.claimTitle));
@@ -126,7 +126,7 @@ export default function ClaimAlAhliAttacked() {
                                                             </ul>
                                                         </a>
                                                     )}
-                                                                                                        
+                                                    
                                     {/* If there is an archive link, show the archive link */}
                                     {source.archiveLink && (
                                         <ul>
@@ -237,7 +237,7 @@ export default function ClaimAlAhliAttacked() {
                                                         </li>
                                                     </ul>
                                             )}
-    
+
                                             {/* If no video preview, show link icon (circle)) */}
                                             {!source.videoPreviewLink && (
                                                     <ul className='icon-link'>
@@ -248,7 +248,7 @@ export default function ClaimAlAhliAttacked() {
                                                         </li>
                                                     </ul>
                                             )}
-    
+
                                             {/* If a source has been deleted by the original publisher, show a red strikethrough */}
                                             {/* {source.hasBeenDeleted === 'true' ? (
                                                 <strike style={{color:'red'}}>
@@ -259,7 +259,7 @@ export default function ClaimAlAhliAttacked() {
                                                     <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
                                                 )}                                         */}
 
-    
+
                                             {/* If there's an archiveLink in the data, add an 'Archive' link below the source link */}
                                             {source.archiveLink && ( 
                                                 <ul>
@@ -269,8 +269,8 @@ export default function ClaimAlAhliAttacked() {
                                                         </a>
                                                     </li>
                                                 </ul>
-                                            )}
-    
+                                            )}  
+
                                             {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
                                             <span className="visually-hidden">Opens in new tab</span>
                                         </div>
@@ -300,7 +300,7 @@ export default function ClaimAlAhliAttacked() {
             data,
             initialState: {
                 sortBy: [{ id: 'date', desc: false }],
-                globalFilter: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces'
+                globalFilter: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish'
                 // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
             },
             disableSortRemove: true,
@@ -317,22 +317,22 @@ export default function ClaimAlAhliAttacked() {
         <>
         <Helmet>
             {/* HTML meta tags */}
-            <title>Claim: ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’ | Hasbara Tracker</title>
-            <meta name="description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+            <title>Claim: ‘Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish’</title>
+            <meta name="description" content="In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women." />
 
-            <meta property="og:url" content="https://hasbaratracker.com/al-ahli-attacked" />
+            <meta property="og:url" content="https://hasbaratracker.com/israel-denies-church-killing" />
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content="Hasbara Tracker" />
-            <meta property="og:title" content="Claim: ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’" />
-            <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+            <meta property="og:title" content="Claim: ‘Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish’" />
+            <meta property="og:description" content=" In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women." />
             <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta property="twitter:domain" content="hasbaratracker.com" />
             <meta name="twitter:site" content="@hasbaratracker" />
-            <meta property="twitter:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
-            <meta name="twitter:title" content="Claim: ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’" />
-            <meta name="twitter:description" content=" Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+            <meta property="twitter:url" content="https://hasbaratracker.com/israel-denies-church-killing" />
+            <meta name="twitter:title" content="Claim: ‘Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish’" />
+            <meta name="twitter:description" content=" In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women." />
             <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
             <meta name="twitter:creator" content="@hasbaratracker" />
         </Helmet>
@@ -376,11 +376,11 @@ export default function ClaimAlAhliAttacked() {
             </div>
 
             <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
-                ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’
+                ‘Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish’
             </div>
 
             <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
-                Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.
+                In the days following the murder of Nahida Anton and her daughter Samar Anton at Gaza’s Catholic church by an Israeli sniper, representatives of the Israeli state gave different explanations: that the women were mistaken for ‘terrorists’ by Israeli forces, to denial of any Israeli involvement in the vicinity of the church, to suggestions the attack was by Palestinian resistance fighters, to claiming that they were targeting Hamas spotters at the church and did not hit the two women.
             </div>
         </span>
 

@@ -98,9 +98,9 @@ const VolunteerForm = () => {
                             information about how to document and archive. Anyone can help —
                             especially if they have a propensity for research and collecting
                             receipts.
-                        </div><br />
+                        </div>
 
-                        <form onSubmit={handleSubmit}>
+                        <form className="mt-5" onSubmit={handleSubmit}>
                             <label>
                                 <b>Full name</b><span className="required-field">*</span>
                                 <br />

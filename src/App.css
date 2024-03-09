@@ -27,7 +27,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 .header-container-fixed {
-    position: absolute; /* fixed */
+    position: relative; /* fixed */
     top: 0%;
     left: 0;
     width: 100%;
@@ -38,7 +38,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     flex-direction: column;
 
     background-color: theme('colors.grey');
-    z-index: 4;
+    z-index: 1;
 }
 
 .header-container-border {
@@ -60,10 +60,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 .nav-links-fixed {
     position: absolute; /* fixed */
-    top: 35%; /* temporary, for when nav links arent fixed */
-    right: 12.8%;
+    top: 12%; /* temporary, for when nav links arent fixed */
+    right: 9%;
     display: flex;
-    gap: 8.4%;
+    gap: 7.2%;
     list-style-type: none;
     white-space: nowrap;
     z-index: 4;
@@ -150,6 +150,14 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 }
 
 @font-face {
+    font-family: 'CartographCF_Light';
+    src:url("./fonts/CartographCF-Light.woff2") format("woff2");
+        url:("./fonts/CartographCF-Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Helvetica';
     src:url('/src/fonts/helvetica.woff2') format('woff2'),
         url('/src/fonts/helvetica.woff') format('woff');
@@ -180,10 +188,10 @@ h1 a:hover {
 
 h2.subheading {
     text-align: left;
-    font-family: 'Helvetica', Helvetica, sans-serif;
+    font-family: theme('fontFamily.mono');
     position: relative;
     line-height: 2.1em;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -225,7 +233,6 @@ body {
 }
 
 .claim-summary {
-    margin-left: 5%;
     min-height: 100px; /* prevents it from being squashed when window is pulled up */
 }
 
@@ -396,7 +403,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     
     /* HEADER */
         .header-container-fixed {
-            margin-top: -16%;
+            margin-top: -4%;
         }
 
         .content-container {
@@ -405,10 +412,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
             padding-bottom: 3%;
             min-width: 450px;
             left: -4%;
-        }
-
-        .logo-container {
-            /* margin-bottom: 10%; */
         }
             
         .nav-links-fixed {
@@ -445,7 +448,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         .menu-toggle {
             padding-right: 5px;
             margin-left: 93%;
-            margin-top: 15%;
+            margin-top: 53px;
             margin-left: 10px;
         }
     
@@ -566,19 +569,11 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /* MENU */
     .menu-toggle {
-          /* display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          position: absolute;
-          right: 0%;
-          top: 50%;
-          margin-right: auto;
-          z-index: 3; */
           cursor: crosshair;
           display: flex;
           flex-direction: column;
           padding: 0.7em; /* Increase clickable area */
-      }
+        }
 
     .bar {
         width: 0.3rem;

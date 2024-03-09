@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import './App.css';
 
@@ -11,19 +12,26 @@ import ScrollToTop from './components/utils/ScrollToTop';
 import VolunteerForm from './components/VolunteerForm';
 import SubmitClaimForm from './components/SubmitClaimForm';
 import ContactForm from './components/ContactForm';
-// import NewsletterSignUpForm from './components/NewsletterSignUpForm';
+import MailSignUpForm from './components/MailSignUpForm';
 
 import ClaimFortyBeheadedBabies from './components/ClaimFortyBeheadedBabies';
 import ClaimAlAhliAttacked from './components/ClaimAlAhliAttacked';
 import ClaimAlShifaFuel from './components/ClaimAlShifaFuel';
 import ClaimMakeup from './components/ClaimMakeup';
 import ClaimHamasChemicalWeapons from './components/ClaimHamasChemicalWeapons';
-import ClaimIsraeliDeniesChurchKilling from './components/ClaimIsraeliDeniesChurchKilling';
+import ClaimIsraelDeniesChurchKilling from './components/ClaimIsraelDeniesChurchKilling';
+
 
 
 const App = () => {
+
+    // Helmet handles metadata for link previews
+    const helmetContext = {};
+
+
     return (
     <>
+    <HelmetProvider context={helmetContext}>
         <Router>
             <VideoPlayer />
             <ScrollToTop />
@@ -34,7 +42,7 @@ const App = () => {
                 <Route path="/tracker" element={<Tracker />} />
                 <Route path="/volunteer" element={<VolunteerForm />} />
                 <Route path="/contact" element={<ContactForm />} />
-                {/* <Route path="/newsletter" element={<NewsletterSignUpForm />} /> */}
+                <Route path="/sign-up" element={<MailSignUpForm />} />
 
                 {/* Individual claim pages */}
                 <Route path="/forty-beheaded-babies" element={<ClaimFortyBeheadedBabies />} />
@@ -42,7 +50,7 @@ const App = () => {
                 <Route path="/al-shifa-fuel" element={<ClaimAlShifaFuel />} />
                 <Route path="/makeup" element={<ClaimMakeup />} />
                 <Route path="/hamas-chemical-weapons" element={<ClaimHamasChemicalWeapons />} />
-                <Route path="/israel-denies-church-killing" element={<ClaimIsraeliDeniesChurchKilling />} />
+                <Route path="/israel-denies-church-killing" element={<ClaimIsraelDeniesChurchKilling />} />
 
                 
                 {/* Route redirects to claim searches */}
@@ -79,6 +87,7 @@ const App = () => {
                 /> */}
             </Routes>
         </Router>
+    </HelmetProvider>
     </>
   );  
 }

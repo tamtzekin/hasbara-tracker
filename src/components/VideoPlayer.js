@@ -65,9 +65,9 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                 contentLabel="Video Modal"
                 style={{
                     content: {
-                        top: '52%',
+                        top: '25%',
                         left: '30%',
-                        right: '25%',
+                        right: '30%',
                         transform: 'none',
                         border: 'none',
                         background: 'none',
@@ -78,7 +78,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                         overflow: 'hidden',
                         animationFillMode: 'forwards',
                         position: 'absolute',
-                        zIndex: 2,
+                        // zIndex: 2,
 
                         // On phone: Show modal at bottom of screen
                         ...(screenWidth <= 576 && {
@@ -103,7 +103,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                     height="100%"
                     style={{
                         position: 'relative',
-                        zIndex: 3,
+                        zIndex: 50,
                     }}
                     onEnded={closeModal}
                 >

@@ -86,7 +86,7 @@ const SubmitClaimForm = () => {
                     </div>
                     <br />
 
-                    <form onSubmit={handleSubmit}>
+                    <form className="mt-5" onSubmit={handleSubmit}>
                         <label className="form-field font-semibold">
                             Name <span className="required-field">*</span>
 

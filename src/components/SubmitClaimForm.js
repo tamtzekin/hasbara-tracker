@@ -114,7 +114,7 @@ const SubmitClaimForm = () => {
                         Thanks for contributing to our efforts to document, archive, debunk and give context to hasbara – a.k.a ‘explanations’.
                         </div>
 
-                        <form className="mt-9" onSubmit={handleSubmit}>
+                        <form className="mt-5" onSubmit={handleSubmit}>
                             <label>
                                 <b>Full name</b><span className="required-field">*</span>
                                 

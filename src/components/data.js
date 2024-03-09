@@ -767,7 +767,7 @@ const data = [
         {
             sourceName: 'Bloomberg Quicktake',
             sourceLink: 'https://www.youtube.com/watch?v=FUS0LgMG40k',
-            archiveLink: 'https://www.youtube.com/watch?v=FUS0LgMG40k',
+            archiveLink: 'https://files.hasbaratracker.com/20231017_BloombergQuicktake_AlAhli.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231017_BloombergQuicktake_AlAhli.mp4',
         }
     ]

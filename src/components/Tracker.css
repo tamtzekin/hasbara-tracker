@@ -526,6 +526,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         margin-left: -6%;
     }
 
+    li.dotpoint {
+        margin-left: 4%;
+    }
+
     /* Claim dropdown filter + Search bar */
     .no-results-text {
         margin-left: 1%;

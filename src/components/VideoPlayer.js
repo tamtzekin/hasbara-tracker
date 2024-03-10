@@ -65,17 +65,17 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                 contentLabel="Video Modal"
                 style={{
                     content: {
-                        top: '25%',
-                        left: '30%',
-                        right: '30%',
+                        // top: '0%',
+                        left: '0',
+                        bottom: '0',
                         transform: 'none',
                         border: 'none',
                         background: 'none',
                         padding: 0,
                         width: '100%',
-                        maxWidth: '600px',
-                        maxHeight: '90%',
-                        overflow: 'hidden',
+                        // maxWidth: '600px',
+                        // maxHeight: '100%',
+                        // overflow: 'hidden',
                         animationFillMode: 'forwards',
                         position: 'absolute',
                         // zIndex: 2,
@@ -102,8 +102,12 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                     width="100%"
                     height="100%"
                     style={{
-                        position: 'relative',
+                        position: 'absolute',
+                        bottom: '0',
+                        left: '0',
                         zIndex: 50,
+                        maxHeight: '800px',
+                        maxWidth: '550px',
                     }}
                     onEnded={closeModal}
                 >

@@ -418,7 +418,7 @@ export default function ClaimFortyBeheadedBabies() {
                         ) : (
                             // Renders all claims data as a table
                             <table {...getTableProps()}>
-                                <thead className="font-lores sticky top-0">
+                                <thead className="font-mono sticky top-0">
                                     {headerGroups.map((headerGroup) => (
                                         <tr {...headerGroup.getHeaderGroupProps()}>
                                             {headerGroup.headers.map((column) => (

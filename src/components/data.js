@@ -2079,14 +2079,13 @@ const data = [
    },
    description: {
        summary: 'The context of the term ‘Pallywood’: Atrocity denial that suggests media showing Palestinian suffering is fabricated',
-           details: 'Pallywood is a term which combines the words ‘Palestine’ and ‘Hollywood’ to suggest that Palestinians produce fabricated or manipulated media content to gain sympathy for the cause and to influence public opinion of the Israeli occupation. It is used to dismiss the reality of Palestinians by claiming there is a deliberate effort to stage events, create misleading narratives, or exaggerate circumstances in order to portray the Israeli military occupation as the aggressors. It is a form of atrocity denial, used as a form of exonerating the Israeli state.<br><br>The term started being used following the killing of 12-year-old Palestinian boy Muhammad al-Durrah in Gaza by Israeli forces during the Second Intifada in 2000. The Israeli state and its pundits launched a denial campaign, questioning the authenticty of the photographic and video evidence by France24. The Israeli state has initially admitted that it had killed Muhammad al-Durrah, then retracted it.<br><br> American author Richard Landes, who specialises in medieval millenial thinking, credits himself with coining the term and popularising it through his online documentary titled ‘Pallywood: According to Palestinian Sources’ published in 2005.',
+           details: 'Pallywood is a term which combines the words ‘Palestine’ and ‘Hollywood’ to suggest that Palestinians produce fabricated or manipulated media content to gain sympathy for the cause and to influence public opinion of the Israeli occupation. It is used to dismiss the reality of Palestinians by claiming there is a deliberate effort to stage events, create misleading narratives, or exaggerate circumstances in order to portray the Israeli military occupation as the aggressors. It is a form of atrocity denial, used as a form of exonerating the Israeli state.<br><br>The term started being used following the killing of 12-year-old Palestinian boy Muhammad al-Durrah in Gaza by Israeli forces during the Second Intifada in 2000. The Israeli state and its pundits launched a denial campaign, questioning the authenticty of the photographic and video evidence by France24. The Israeli state initially admitted that it had killed Muhammad al-Durrah, then retracted it.<br><br> American author Richard Landes, who specialises in medieval millenial thinking, credits himself with coining the term and popularising it through his online documentary titled ‘Pallywood: According to Palestinian Sources’ published in 2005.',
    },
    sources: [
        {
-           sourceName: '',
-           sourceLink: '',
-           archiveLink: '',
-           videoPreviewLink: '',
+           sourceName: '<em>Friends of Israel: The Backlash Against Palestine Solidarity</em> by Hil Aked, 2023',
+           sourceLink: 'https://www.google.co.uk/books/edition/Friends_of_Israel/cKCvEAAAQBAJ?hl=en&gbpv=1&dq=pallywood%20denial&pg=PR265&printsec=frontcover',
+           archiveLink: 'https://files.hasbaratracker.com/2023_friendsofisrael_hil_aked_pallywood.png',
        },
    ]
 },

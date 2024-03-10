@@ -85,10 +85,12 @@ button {
     margin-left: 25%;
 }
 
-
+/* DETAILS */
+li.dotpoint {
+    margin-left: 0.9rem;
+}
 
 /* SOURCE LINKS */
-
 li span {
     position: relative;
     left: 2%;

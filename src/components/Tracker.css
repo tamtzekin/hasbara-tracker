@@ -18,7 +18,7 @@ a {
     color: black;
     text-decoration: none;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* .archive-link {
@@ -418,7 +418,7 @@ MOBILE VIEW
 oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
 @media only screen and (max-width: 576px) {
     a {
-        z-index: -10; /* hide link text under video*/
+        z-index: 1; /* hide link text under video*/
     }
 
     .claim-header-container {

@@ -2214,7 +2214,7 @@ const data = [
    },
    description: {
        summary: 'Israeli spokesperson to Arab media Ofir Gendelman posted the video: ‘Pallywood gets busted again’',
-       details: 'Ofir Gendelman, the Israeli Prime Minister‘s spokesperson to Arab media, shared the behind-the-scenes footage of the Lebanese short film on X (formerly Twitter), claiming it showed Palestinians faking injuries and staging evacuations.<br><br>The post read: ‘The Palestinians are fooling the international media and public opinion. DON’T FALL FOR IT. See for yourselves how they fake injuries and evacuating "injured" civilians, all in front of thr cameras. Pallywood gets busted again.’<br><br>As of 10 November, 2023, the video on Gendelman‘s profile had 22.6 million views. It has since been deleted – date unknown.',
+       details: 'Ofir Gendelman, the Israeli Prime Minister’s spokesperson to Arab media, shared the behind-the-scenes footage of the Lebanese short film on X (formerly Twitter), claiming it showed Palestinians faking injuries and staging evacuations.<br><br>The post read: ‘The Palestinians are fooling the international media and public opinion. DON’T FALL FOR IT. See for yourselves how they fake injuries and evacuating "injured" civilians, all in front of thr cameras. Pallywood gets busted again.’<br><br>As of 10 November, 2023, the video on Gendelman‘s profile had 22.6 million views. It has since been deleted – date unknown.',
    },
    sources: [
        {

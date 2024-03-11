@@ -346,7 +346,7 @@ export default function ClaimMakeup() {
             </div>
 
         {/* Mobile menu toggle */}
-            <span className="mobile:mt-[-0.5%]">
+            <span className="mobile:mt-[3%]">
                 <MobileMenu />
             </span>
 

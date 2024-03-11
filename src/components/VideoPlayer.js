@@ -76,7 +76,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
 
                         // On phone: Show modal at bottom of screen
                         ...(screenWidth <= 576 && {
-                            // display: 'none',
+                            display: 'none',
                             // top: 'auto',
                             // bottom: '0',
                             // left: '0',

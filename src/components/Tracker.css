@@ -447,6 +447,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     
     /* Type tags */
     .claim-tag {
+        font-size: 0.9em;
         padding: 0.8% 1% 0% 1%;  
         width: 14%;
         position: absolute;
@@ -455,6 +456,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
     .context-tag {
+        font-size: 0.9em;
         padding: 0.5% 1.3% 0.25% 1%;  
         width: 17%;
         position: absolute;
@@ -464,6 +466,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 
     .debunk-tag {
+        font-size: 0.9em;
         padding: 0.5% 1% 0.2% 1%;  
         width: 16%;
         position: absolute;
@@ -472,7 +475,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     }
 
     .date {
-        font-size: 1em;
+        font-size: 0.9em;
         background: theme('colors.grey-darker');
         border: 0.5px solid black;
         border-radius: 3px;

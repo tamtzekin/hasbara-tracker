@@ -67,6 +67,7 @@ const data = [
             {
                 sourceName: '<em>The birth of the Palestinian refugee problem revisited</em> by Benny Morris, 2004',
                 sourceLink: 'https://www.google.co.uk/books/edition/The_Birth_of_the_Palestinian_Refugee_Pro/uM_kFX6edX8C?hl=en&gbpv=1&pg=PR21&printsec=frontcover',
+                archiveLink: 'https://files.hasbaratracker.com/Birth_of_the_Palestinian_Refugee_Problem_Revisited_Benny_Morris_2004.pdf',
             },
             {
                 sourceName: 'Palestine Remembered',
@@ -76,6 +77,7 @@ const data = [
             {
                 sourceName: '<em>The Palestinian Nakba 1948</em>, by Salman Abu Sitta, 2000 ',
                 sourceLink: 'https://www.plands.org/en/books-reports/books/the-palestinian-nakba-1948/pdf/the-register-of-depopulated-localities-in-palestine',
+                archiveLink: 'https://files.hasbaratracker.com/Register-of-Depopulated-Localities-in-Palestine-updated-Salman-Abu-Sitta.pdf',  
             },
         ]
     },    
@@ -843,11 +845,11 @@ const data = [
     },
     sources: [
         {
-            sourceName: '@IsraelDefenseForces on YouTube',
+            sourceName: 'IOF on YouTube',
             sourceLink: 'https://www.youtube.com/watch?v=mYqlG3dKIFo',
             archiveLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/HagariBriefing_preview.mp4',
-        }
+        },
     ]
 },
  
@@ -892,7 +894,7 @@ const data = [
  
     description: {
         summary: '@Israel account shares video claiming it shows Palestinian rocket hitting hospital',
-        details: 'The official @Israel X (formerly Twitter) account posted a video claiming an ‘enemy rocket barrage was carried out towards Israel, which passed through the vicinity of the hospital when it was hit’.',
+        details: 'The official @Israel account on X (formerly Twitter) posted a video claiming an ‘enemy rocket barrage was carried out towards Israel, which passed through the vicinity of the hospital when it was hit’.',
     },
     sources: [
         {
@@ -1154,14 +1156,15 @@ const data = [
     },
     sources: [
         {
-            sourceName: 'IDF Media Releases',
+            sourceName: 'IOF Media Release',
             sourceLink: 'https://www.idf.il/en/mini-sites/idf-press-releases-regarding-the-hamas-israel-war/october-pr/failed-rocket-launch-by-islamic-jihad-hits-Al Ahli-hospital-in-gaza-city/',
             archiveLink: 'https://archive.ph/V1Xen',
             hasBeenDeleted: 'true',
         },
         {
-            sourceName: '@IsraelDefenseForces on YouTube',
+            sourceName: 'IOF on YouTube',
             sourceLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
+            archiveLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/HagariBriefing_18Oct2023.mp4',
         }
     ]
@@ -1188,7 +1191,7 @@ const data = [
             archiveLink: 'https://archive.ph/L3ohJ',
         },
         {
-            sourceName: 'IDF Media Releases',
+            sourceName: 'IOF Media Release',
             sourceLink: 'https://idfanc.activetrail.biz/ANC1810156854',
             archiveLink: 'https://archive.ph/to7Az',
         }
@@ -1466,6 +1469,12 @@ const data = [
             sourceName: '@ForensicArchi on X',
             sourceLink: 'https://twitter.com/ForensicArchi/status/1724525673325199410',
             archiveLink: 'https://archive.ph/OF8Lb',
+
+        },
+         {
+            sourceName: 'FA x Al-Haq',
+            sourceLink: 'https://files.hasbaratracker.com/20231114_ForensicArchiAlAhli.mp4',
+            archiveLink: 'https://files.hasbaratracker.com/20231114_ForensicArchiAlAhli.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231114_ForensicArchiAlAhli.mp4',
         }
     ]
@@ -1613,14 +1622,14 @@ const data = [
         claimTag: 'context-tag',
     },
     description: {
-        summary: 'Israeli military continuetargeting hospitals, multiple missiles hit Kuwaiti Hospital',
+        summary: 'Israeli military continue targeting hospitals, multiple missiles hit Kuwaiti Hospital',
         details: 'Israel Occupation Forces continued targeting hospitals. The Kuwaiti Hospital in Rafah was attacked by multiple missiles while Al-Jazeera journalist Hani Mahmoud was reporting live on air for Al Jazeera English.',
     },
     sources: [
         {
             sourceName: 'Al Jazeera',
             sourceLink: 'https://twitter.com/AJEnglish/status/1737451718676230618',
-            archiveLink: 'https://archive.ph/G7vud',
+            archiveLink: 'https://files.hasbaratracker.com/23Dec_2023_AlJazeera_Kuwaiti_Hospital_Rafah_Attack.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/AlJazeera_20Dec2023.mp4',
         }
     ]
@@ -1663,7 +1672,7 @@ const data = [
     },
     sources: [
         {
-            sourceName: 'X',
+            sourceName: 'Israel Katz on X',
             sourceLink: 'https://twitter.com/Israel_katz/status/1712356130377113904',
             archiveLink: 'https://archive.ph/Am4Xe',
         }
@@ -1704,6 +1713,7 @@ const data = [
         {
             sourceName: 'The Guardian',
             sourceLink: 'https://www.youtube.com/watch?v=8LAWhj4MLMs',
+            archiveLink: 'https://files.hasbaratracker.com/Nov_2023_TheGuardian_israeli_airstrike_ambulance.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/Nov_2023_TheGuardian_israeli_airstrike_ambulance.mp4'
         }
     ]
@@ -1737,6 +1747,7 @@ const data = [
         {
             sourceName: 'Cameraman Omar Abu Nada on Instagram',
             sourceLink: 'https://www.instagram.com/reel/CzTlWjcNixb/',
+             archiveLink: 'https://files.hasbaratracker.com/06Nov2023_AlShifa_Hospital_Solar_Panels_Targeted.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/06Nov2023_AlShifa_Hospital_Solar_Panels_Targeted.mp4'
         }
     ]
@@ -1779,8 +1790,7 @@ const data = [
             sourceName: 'International Committee of the Red Cross',
             sourceLink: 'https://www.icrc.org/en/document/israel-and-occupied-territories-icrc-demands-protection-patients-healthcare-workers-medical-facilities-in-gaza',
             archiveLink: 'https://archive.is/qcrZx',
-            videoPreviewLink: ''
-        }
+        },
     ]
 },
  
@@ -1839,6 +1849,7 @@ const data = [
         {
             sourceName: 'NBC',
             sourceLink: 'https://www.youtube.com/watch?v=dRThvlOjkq0',
+             archiveLink: 'https://files.hasbaratracker.com/12Nov_2023_Netanyahu_NBC_fuel.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/12Nov_2023_Netanyahu_NBC_fuel.mp4'
         }
     ]
@@ -1853,7 +1864,7 @@ const data = [
     },
     description: {
         summary: 'Al-Shifa Hospital accepted fuel, Israeli forces refused to deliver it through Red Cross',
-        details: 'The Director of Al-Shifa Hospital in Gaza, Dr. Muhammad Abu Salmiya, said an Israeli military operative contacted him on the phone and offered to supply the hospital with 2000 litres of fuel, which the hospital accepted.<br><br> In an interview with Al Jazeera Arabic, Dr. Abu Salmiya said the quantity was accepted and that he requested the Israelis deliver the fuel through the Red Cross.<br><br>However, Israeli forces rescinded the offer of 2000 litres and said it would instead offer 300 litres of fuel.<br><br>The Israeli military rejected delivering fuel through the Red Cross or any other international humanitarian organisation, and said the fuel would have to be picked up at 2am from an area being hit with Israeli bombardments.<br><br>‘We are ready to take fuel from anybody through the International Red Cross.’ <br><br>See the transcript of Dr. Abu Salmiya’s interview with Al Jazeera in the sources provided.'
+        details: 'The Director of Al-Shifa Hospital in Gaza, Dr. Muhammed Abu Salmiya, said an Israeli military operative contacted him on the phone and offered to supply the hospital with 2000 litres of fuel, which the hospital accepted.<br><br> In an interview with Al Jazeera Arabic, Dr. Abu Salmiya said the quantity was accepted and that he requested the Israelis deliver the fuel through the Red Cross.<br><br>However, Israeli forces rescinded the offer of 2000 litres and said it would instead offer 300 litres of fuel.<br><br>The Israeli military rejected delivering fuel through the Red Cross or any other international humanitarian organisation, and said the fuel would have to be picked up at 2am from an area being hit with Israeli bombardments.<br><br>‘We are ready to take fuel from anybody through the International Red Cross.’ <br><br>See the transcript of Dr. Abu Salmiya’s interview with Al Jazeera in the sources provided.'
     },
     sources: [
         {
@@ -1878,14 +1889,15 @@ const data = [
         claimTag: 'claim-tag'
     },
     description: {
-        summary: 'Israeli military press release points to two audio clips and footage as evidence that the Health Ministry rejected fuel',
+        summary: 'Israeli military press release points to two audio clips and footage as evidence that Health Ministry rejected fuel',
         details: '<b>(Note: The press release, dated 12 November, 2023, links to videos uploaded on 15 November, 2023.)</b><br><br>The Israel Occupation Forces press release stated: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel.’',
     },
     sources: [
         {
             sourceName: 'Israel Occupation Forces',
             sourceLink: 'https://youtu.be/-P9euA1Le_g',
-            videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_Alleged_Audio_IOF_Fuel_AlShifa_Gaza_Health_Ministry.mp4'
+            archiveLink: 'https://files.hasbaratracker.com/15Nov2023_Alleged_Audio_IOF_Fuel_AlShifa_Gaza_Health_Ministry.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_Alleged_Audio_IOF_Fuel_AlShifa_Gaza_Health_Ministry.mp4',
         }
     ]
 },
@@ -1899,7 +1911,7 @@ const data = [
     },
     description: {
         summary: 'Israeli military posts short audio clip on X claiming Gaza health official says Health Ministry rejected fuel',
-        details: 'The official Israeli forces account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liasion officer with the Israeli military.<br>The post reads: ‘The IDF provided 300 liters of fuel for urgent medical purposes to the Shifa Hospital, but there was a problem that prevented the fuel from getting to its destination. Why? Because the CEO of the Hamas Health Ministry, Yosef Abu Rish, forbade it. Watch for yourselves:’'
+        details: 'The official Israeli forces account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liasion officer with the Israeli military.<br><br>The post reads: ‘The IDF provided 300 liters of fuel for urgent medical purposes to the Shifa Hospital, but there was a problem that prevented the fuel from getting to its destination. Why? Because the CEO of the Hamas Health Ministry, Yosef Abu Rish, forbade it. Watch for yourselves:’'
     },
     sources: [
         {
@@ -1910,7 +1922,7 @@ const data = [
         },
  
         {
-            sourceName: 'Israel Occupation Force',
+            sourceName: 'Israel Occupation Forces',
             sourceLink: 'https://www.idf.il/en/mini-sites/hamas-israel-war-24/war-on-hamas-2023-resources/hamas-refuses-fuel-delivery-to-shifa-hospital/',
             archiveLink: 'https://archive.is/xihlp',
         },
@@ -1918,6 +1930,7 @@ const data = [
         {
             sourceName: 'YouTube',
             sourceLink: 'https://www.youtube.com/watch?v=cg0CEhWhguI',
+            archiveLink: 'https://files.hasbaratracker.com/15Nov2023_IOF_Fuel_Delivery_Footage_Claim.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_IOF_Fuel_Delivery_Footage_Claim.mp4'
         }
     ]
@@ -1931,8 +1944,8 @@ const data = [
         claimTag: 'claim-tag'
     },
     description: {
-        summary: 'Israeli Foreign Affairs X account posts audio clip and alleged footage of Israeli forces delivering fuel to Al-Shifa',
-        details: 'The official Israeli Ministry of Foreign Affairs account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liaison officer with the Israeli military. They also shared alongside it in the single post a video, alleging it is footage of Israeli forces delivering fuel to Al-Shifa Hospital.<br><br>The post reads:<br> ‘Breaking: Hamas prevented the Shifa Hospital from receiving 300 liters of fuel from the IDF for urgent medical purposes.<br>📸 (left) A recorded conversation between an IDF officer and a senior official in the health ministry in Gaza who states that the Hamas Health Ministry prevented them from receiving the fuel.<br>📸 (right) Footage of IDF delivering fuel.’'
+        summary: 'Israeli Foreign Affairs posts audio clip and alleged footage of Israeli forces delivering fuel to Al-Shifa',
+        details: 'The official Israeli Ministry of Foreign Affairs account on X (formerly Twitter) posted a short nine-second audio clip purporting that it was a conversation between a Gaza health official and a liaison officer with the Israeli military. <br><br> They also shared a video in the same post alleging it was footage of Israeli forces delivering fuel to Al-Shifa Hospital.<br><br>The post reads:<br><br> ‘Breaking: Hamas prevented the Shifa Hospital from receiving 300 liters of fuel from the IDF for urgent medical purposes.<br><br>📸 (left) A recorded conversation between an IDF officer and a senior official in the health ministry in Gaza who states that the Hamas Health Ministry prevented them from receiving the fuel.<br><br>📸 (right) Footage of IDF delivering fuel.’'
     },
     sources: [
         {
@@ -1951,8 +1964,8 @@ const data = [
         claimTag: 'claim-tag',
     },
     description: {
-        summary: 'Israeli military spokesperson for Arab media says 300L of fuel offered that Hamas rejected',
-        details: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br><br>The post, written in Arabic and translated to English, stated:<br><br>"An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!"',
+        summary: 'Israeli military spokesperson for Arab media says ‘Hamas rejected’ 300L of fuel',
+        details: 'Avichay Adraee, Israeli military spokesperson for Arab media, claimed on X (formerly Twitter) that Hamas factions prevented the hospital from receiving 300 litres of fuel.<br><br>The post, written in Arabic and translated to English, stated:<br><br>‘An IDF force provided Al-Shifa Hospital with 300 litres of diesel for urgent medical purposes, but Hamas prevents receiving the fuel! After bringing the diesel to the hospital, the IDF received testimonies about Hamas factions preventing the hospital from receiving fuel. God suffices me, and He is the best disposer of affairs for Hamas and its leaders!’',
     },
     sources: [
         {
@@ -1971,7 +1984,7 @@ const data = [
     },
     date: '13 Nov 2023',
     description: {
-        summary: 'At least 10,000 litres of fuel is needed to run vital parts of the hospital',
+        summary: 'At least 10,000 litres of fuel needed to run vital parts of the hospital',
         details: 'Dr. Munir Boursh from Gaza’s Health Ministry stated the amount of fuel offered was barely enough to power the generators inside Al-Shifa Hospital for half an hour.<br><br>‘We consume at least 500 litres per hour to run our generators, we need around 10,000 litres each day. Three hundred litres is nothing.’',
     },
     sources: [
@@ -2014,6 +2027,34 @@ const data = [
         }
     ]
 },
+
+{
+    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+    date: '13 Nov 2023',
+    claim: {
+        claimText: 'Claim',
+        claimTag: 'claim-tag',
+    },
+    description: {
+        summary: 'Netanyahu adviser claims they would have given hospital more fuel if they used the untouched 300L they allegedly dropped off 300m away',
+        details: 'Mark Regev, a senior adviser to the Israeli Prime Minister and former Israeli ambassador to the UK, told Sky News in the UK that the Israeli military dropped fuel off 300 metres away from Al-Shifa Hospital and claimed Hamas prevented it from being picked up.<br><br>On X (formerly Twitter), Mark Regev shared the link to the interview in a post that read: ‘The IDF offered fuel to Shifa hospital. Hamas refused. It prefers pictures of a hospital without power.’<br><br>He also claimed that the healthcare workers being interviewed about the matter are ‘doing so with the authorisation of Hamas’. Regev made the claim that ‘none of the people giving interviews from the hospital have talked about the Hamas military infrastructure underneath the hospital’. The Sky News interview was also shared by an official Israeli state account called National Hasbara.',
+    },
+    sources: [
+        {
+            sourceName: 'Sky News UK',
+            sourceLink: 'https://www.youtube.com/watch?v=Rxn7sUzf_yk',
+            archiveLink: 'https://files.hasbaratracker.com/13Nov2023_MarkRegev_SkyNews_Fuel.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/13Nov2023_MarkRegev_SkyNews_Fuel.mp4',
+        },
+ 
+        {
+            sourceName: 'Mark Regev on X',
+            sourceLink: 'https://twitter.com/MarkRegev/status/1724025184766574902',
+            archiveLink: 'https://archive.ph/yLf3l',
+        },
+    ]
+},
+
  
 {
     claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
@@ -2024,40 +2065,20 @@ const data = [
     },
     description: {
         summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
-        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri’i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
+        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote:<br><br>‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel.’<br><br>They shared an unlisted video on YouTube of an IOF member speaking in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>‘We’ll place the fuel at Al Majlis A-Tashri’i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
     },
     // MISSING
     sources: [
         {
-            sourceName: 'Israel Occupation Forces',
-            sourceLink: '',
-            archiveLink: '',
-        }
-    ]
-},
- 
-{
-    claimTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
-    date: '15 Nov 2023',
-    claim: {
-        claimText: 'Claim',
-        claimTag: 'claim-tag',
-    },
-    description: {
-        summary: 'Audio clip of soldier allegedly giving instructions for fuel delivery',
-        details: 'In a press release dated 12 November, 2023, with links to videos uploaded to YouTube on 15 November, 2023, Israel Occupation Forces (IOF) wrote: ‘The Israeli Defense Forces (IDF) provided 300 liters of fuel for urgent medical needs at Shifa Hospital. However, Hamas stopped the hospital from receiving the fuel."<br><br>They shared an unlisted video on YouTube of an IOF member in broken Arabic with a Hebrew accent allegedly giving directions to someone at Al-Shifa Hospital.<br><br>"We‘ll place the fuel at Al Majlis A-Tashri‘i Junction. That is, the junction linking Omar al-Mukhtar and Nasr streets. Omar al-Mukhtar and Nasr, okay. [Redacted] will talk to you. After we place the gallons, he‘ll tell you they‘re there. Then, after we put the gallons, our forces will move back so that our forces won‘t be near the junction. (Then) you will send an ambulance, take the fuel.’',
-    },
-    sources: [
-        {
-            sourceName: 'Israel Occupation Forces',
+            sourceName: 'IOF Media Release',
             sourceLink: 'https://www.idf.il/en/mini-sites/hamas-israel-war-24/war-on-hamas-2023-resources/hamas-refuses-fuel-delivery-to-shifa-hospital/',
             archiveLink: 'https://archive.ph/xihlp',
-            videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_IOF_Claim_Audio_Fuel_Delivery.mp4'
         },
         {
-            sourceName: 'YouTube',
+            sourceName: 'IOF on YouTube',
             sourceLink: 'https://www.youtube.com/watch?v=zs-2vw5lfgQ',
-            archiveLink: 'https://archive.ph/UCvws',
+            archiveLink: 'https://files.hasbaratracker.com/15Nov2023_IOF_Claim_Audio_Fuel_Delivery.mp4',
+              videoPreviewLink: 'https://files.hasbaratracker.com/15Nov2023_IOF_Fuel_Delivery_Footage_Claim.mp4'
         }
     ]
 },
@@ -2071,14 +2092,13 @@ const data = [
     },
     description: {
         summary: 'Director of Al-Shifa Hospital and other senior healthworkers arrested and detained by Israeli forces',
-        details: 'The Israeli military arrested Dr. Muhammad Abu Salmiya and other health professionals at Al-Shifa Hospital. Dr. Abu Salmiya was held for questioning following the Israeli state‘s assertion that there was "evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre."<br><br>The now-deleted IOF press release on the arrest was titled: "Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning."',
+        details: 'The Israeli military arrested Dr. Muhammed Abu Salmiya and other health professionals at Al-Shifa Hospital.<br><br>Dr. Abu Salmiya was held for questioning following the Israeli state‘s assertion that there was ‘evidence showing that Shifa Hospital, under his direct management, served as a Hamas command and control centre.’<br><br>The now-deleted IOF press release on the arrest was titled: <em>‘Following evidence the Shifa Hospital was used as a Hamas command and control centre under his management – the director of the Shifa Hospital was apprehended and transferred to ISA for questioning.’</em>',
     },
     sources: [
         {
         sourceName: 'Al Jazeera',
         sourceLink: 'https://www.aljazeera.com/news/2023/11/23/al-shifa-hospital-director-arrested-by-israeli-army-in-gaza',
         archiveLink: 'https://archive.is/Npk8h',
-        videoPreviewLink: ''
         }
     ]
 },
@@ -2091,8 +2111,8 @@ const data = [
         claimTag: 'context-tag',
     },
     description: {
-        summary: 'Director of Al-Shifa Hospital being held and interrogated by Shin Bet under Israeli ‘emergency war rules’',
-        details: 'Dr. Muhammad Abu Salmiya is being criminally probed by the Shin Bet (Israel Security Agency) under ‘current war emergency regulations relating to Hamas’ according to Israeli state officials.',
+        summary: 'Director of Al-Shifa Hospital held and interrogated by Shin Bet under ‘emergency war rules’',
+        details: 'Dr. Muhammed Abu Salmiya is being criminally probed by the Shin Bet (Israel Security Agency) under ‘current war emergency regulations relating to Hamas’ according to Israeli state officials.',
     },
     sources: [
         {
@@ -2114,7 +2134,7 @@ const data = [
    },
    description: {
        summary: 'The context of the term ‘Pallywood’: Atrocity denial that suggests media showing Palestinian suffering is fabricated',
-           details: 'Pallywood is a term which combines the words ‘Palestine’ and ‘Hollywood’ to suggest that Palestinians produce fabricated or manipulated media content to gain sympathy for the cause and to influence public opinion of the Israeli occupation. It is used to dismiss the reality of Palestinians by claiming there is a deliberate effort to stage events, create misleading narratives, or exaggerate circumstances in order to portray the Israeli military occupation as the aggressors. It is a form of atrocity denial, used as a form of exonerating the Israeli state.<br><br>The term started being used following the killing of 12-year-old Palestinian boy Muhammad al-Durrah in Gaza by Israeli forces during the Second Intifada in 2000. The Israeli state and its pundits launched a denial campaign, questioning the authenticty of the photographic and video evidence by France24. The Israeli state initially admitted that it had killed Muhammad al-Durrah, then retracted it.<br><br> American author Richard Landes, who specialises in medieval millenial thinking, credits himself with coining the term and popularising it through his online documentary titled ‘Pallywood: According to Palestinian Sources’ published in 2005.',
+           details: 'Pallywood is a term which combines the words ‘Palestine’ and ‘Hollywood’ to suggest that Palestinians produce fabricated or manipulated media content to gain sympathy for the cause and to influence public opinion of the Israeli occupation.<br><br>It is used to dismiss the reality of Palestinians by claiming there is a deliberate effort to stage events, create misleading narratives, or exaggerate circumstances in order to portray the Israeli military occupation as the aggressors. It is a form of atrocity denial, used as a form of exonerating the Israeli state.<br><br>The term started being used following the killing of 12-year-old Palestinian boy Muhammad al-Durrah in Gaza by Israeli forces during the Second Intifada in 2000. The Israeli state and its pundits launched a denial campaign, questioning the authenticty of the photographic and video evidence by France24. The Israeli state initially admitted that it had killed Muhammad al-Durrah, then retracted it.<br><br> American author Richard Landes, who specialises in ‘medieval millenial thinking’, credits himself with coining the term and popularising it through his online documentary titled ‘Pallywood: According to Palestinian Sources’ published in 2005.',
    },
    sources: [
        {
@@ -2139,6 +2159,7 @@ const data = [
        {
            sourceName: 'Instagram',
            sourceLink: 'https://www.instagram.com/p/Cy_Y4Qeqq9L',
+           archiveLink: 'https://files.hasbaratracker.com/28Oct2023_TheReality_Film_BehindTheScenes.mp4',
            videoPreviewLink: 'https://files.hasbaratracker.com/28Oct2023_TheReality_Film_BehindTheScenes.mp4',
        },
    ]
@@ -2152,7 +2173,7 @@ const data = [
    },
    description: {
        summary: 'Israeli model Nataly Dadon shared the behind-the-scenes video suggesting Palestinians in Gaza were crisis actors, faking injuries',
-       details: 'Israeli model Nataly Dadon shared the video to 900k+ followers on her Instagram profile suggesting Palestinians were faking injuries and are crisis actors for propaganda purposes.<br><br>Her caption read:<br><br>‘And the Oscar goes to…’<br><br>#gazawood<br><br>Wait for it…’',
+       details: 'Israeli model Nataly Dadon shared the video to 900k+ followers on her Instagram profile suggesting Palestinians were faking injuries and are crisis actors for propaganda purposes.<br><br>Her caption read:<br><br>‘And the Oscar goes to…<br><br>#gazawood<br><br>Wait for it…’',
    },
    sources: [
        {
@@ -2172,7 +2193,7 @@ const data = [
    },
    description: {
        summary: 'The clip is from the set of short film The Reality',
-       details: 'People online quickly pointed out that the clip is from the behind-the-scenes of the filming of Lebanese short film ‘The Reality’ directed by Mahmoud Ramzi. The post shows the making of the film and the process behind the scenes, which explores the reality of Palestinians in Gaza.<br><br>The clip opens with a child who appears to be wounded being treated on a stretcher as protesters wave Palestinian flags. As the video goes on, a makeup artist can be seen applying makeup to the girl to depict blood and wounds, and the child smiles at the camera.',
+       details: 'People online quickly pointed out that the clip is from the behind-the-scenes of the filming of Lebanese short film ‘The Reality’ directed by Mahmoud Ramzi. The post shows the making of the film, which explores the reality of Palestinians in Gaza.<br><br>The clip opens with a child who appears wounded being treated on a stretcher as protesters wave Palestinian flags. As the video goes on, a makeup artist can be seen applying makeup to the girl to depict blood and wounds, and the child smiles at the camera.',
    },
    sources: [
        {
@@ -2255,7 +2276,7 @@ const data = [
    },
    description: {
        summary: 'Fact-checking website Snopes spoke to The Reality‘s director who said the disinformation is used to cover up Israeli crimes',
-       details: 'Fact-checking website Snopes.com reached out to Mahmoud Ramzi via Instagram where he explained that he is a Palestinian director born in Lebanon and confirmed he had directed the viral video. ‘I directed a short film that tells about the events related to the Palestine issue around the world and the death bed that we see daily in Gaza.’',
+       details: 'Fact-checking website Snopes.com reached out to Mahmoud Ramzi via Instagram where he explained that he is a Palestinian director born in Lebanon and confirmed he had directed the viral video.<br><br> ‘I directed a short film that tells about the events related to the Palestine issue around the world and the death bed that we see daily in Gaza.’',
    },
    sources: [
        {
@@ -2275,7 +2296,7 @@ const data = [
    },
    description: {
        summary: 'The Reality‘s director Mahmoud Ramzi debunks Israeli claims, says film shows re-enactment of Palestinian reality',
-       details: 'Mahmoud Ramzi, the director of the film The Reality, shared a story on Instagram explaining the context of the video with text reading: ‘Re-enacting the scenes of the most horrific crimes committed by the enemy against our people. Based on a true story. Our solidarity with our people in Palestine, salam from Lebanon.’',
+       details: 'Mahmoud Ramzi, the director of the film The Reality, shared a story on Instagram explaining the context of the video with text reading:<br><br> ‘Re-enacting the scenes of the most horrific crimes committed by the enemy against our people. Based on a true story. Our solidarity with our people in Palestine, salam from Lebanon.’',
    },
    sources: [
        {
@@ -2863,7 +2884,7 @@ const data = [
      },
      description: {
          summary: 'Israeli Prime Minister’s Office says ‘training materials for the use of chemical warfare agents’ found on USB',
-         details: 'The Israeli Prime Minister’s Office repeated Israeli President Isaac Herzog’s claims to Sky News. In its statement it wrote: ‘A USB key found on the body of a Hamas terrorist who infiltrated Israeli territory, was found to contain detailed instructions on creating chemical weapons and implementing their use among the civilian population. The source of the document is a manual from the al-Qaeda terrorist organisation dated 2003.’<br><br>‘Revealed materials found on the bodies of Hamas terrorists, including training materials for the use of chemical warfare agents, intended to be used by the terrorist organisation in its murderous rampage against innocent civilians.’',
+         details: 'The Israeli Prime Minister’s Office repeated Israeli President Isaac Herzog’s claims to Sky News. In its statement it wrote:<br><br> ‘A USB key found on the body of a Hamas terrorist who infiltrated Israeli territory, was found to contain detailed instructions on creating chemical weapons and implementing their use among the civilian population. The source of the document is a manual from the al-Qaeda terrorist organisation dated 2003.’<br><br>‘Revealed materials found on the bodies of Hamas terrorists, including training materials for the use of chemical warfare agents, intended to be used by the terrorist organisation in its murderous rampage against innocent civilians.’',
      },
      sources: [
          {

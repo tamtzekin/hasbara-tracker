@@ -72,7 +72,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                         width: '100%',
                         animationFillMode: 'forwards',
                         position: 'absolute',
-                        // zIndex: 2,
+                        // zIndex: 20,
 
                         // On phone: Show modal at bottom of screen
                         ...(screenWidth <= 576 && {
@@ -88,7 +88,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                     overlay: {
                         backgroundColor: videoPreviewLink ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0)',
                         animationFillMode: 'forwards',
-                        zIndex: 1,
+                        zIndex: 10,
                     },
                 }}
             >

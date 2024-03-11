@@ -18,7 +18,7 @@ a {
     color: black;
     text-decoration: none;
     position: relative;
-    z-index: 3;
+    z-index: 30;
 }
 
 /* .archive-link {
@@ -50,7 +50,7 @@ a {
     padding: 0.3% 1%;
     background: #d6d6d6e5;
     border-radius: 20px;
-    z-index: 1;
+    z-index: 10;
     text-align: center;
 }
 
@@ -292,7 +292,7 @@ thead {
     text-align: left;
     border-bottom: 1px dashed #595959;
     background-color: theme('colors.grey');
-    z-index: 1;  
+    z-index: 10;  
     top: 30%;
 }
 
@@ -333,7 +333,7 @@ table.a:hover {
     position: fixed;
     left: 0;
     width: 100%;
-    z-index: 4;
+    z-index: 40;
     opacity: 0.97;
     background: #cbcbcb;
     height: 60px;
@@ -541,7 +541,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         left: 0;
         top: 2%;
         position: fixed;
-        z-index: 2;
+        z-index: 20;
     } */
 
     
@@ -554,7 +554,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         width: 40%;
         padding-right: 6%;
         height: 4.65%;
-        z-index: 1;
+        z-index: 10;
 
         /* Red dropdown arrow */
         background-position:
@@ -652,7 +652,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         height: 80px;
         top: 5%;
         left: 1%;
-        z-index: 2;
+        z-index: 20;
         border-bottom: #867d7d solid 0.5px;
     }
 

@@ -47,10 +47,6 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
         }, []);
 
 
-    // Render the modal only when the screen width is above 576 pixels (adjust as needed)
-    const renderModal = screenWidth > 576;
-        
-
     return (
         <>
             <a
@@ -61,9 +57,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
             >
                 {children}
             </a>
-
-        {renderModal && (
-
+ d
             <Modal
             isOpen={isModalOpen}
             onRequestClose={closeModal}
@@ -114,12 +108,9 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                     >
                 
                 <source src={videoPreviewLink} type="video/mp4" />
-                
                     Your browser does not support video previews. Try Safari, Chrome or Firefox instead.
-                
                 </video>
             </Modal>
-        )}
         </>
     );
 };

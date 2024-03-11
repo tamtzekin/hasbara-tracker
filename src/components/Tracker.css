@@ -291,7 +291,7 @@ thead {
     width: 90%;
     text-align: left;
     border-bottom: 1px dashed #595959;
-    background-color: theme('colors.grey');
+    /* background-color: theme('colors.grey'); */
     z-index: 10;  
     top: 30%;
 }

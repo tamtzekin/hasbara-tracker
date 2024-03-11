@@ -20,11 +20,11 @@ const Footer = () => {
           {/* Newsletter sign-up form */}
           <div className="flex-wrap items-center justify-center gap-4 md:flex-row">
             {/* Newsletter sign-up container */}
-            <div className="mobile:mb-4 tablet:mb-20 laptop:-ml-10 laptop:-mb-10 flex items-end">
+            <div className="mobile:mb-4 mobile:text-center tablet:mb-20 laptop:-ml-10 laptop:-mb-10 flex items-end">
               {/* Newsletter sign-up text and input field */}
-              <div className="mobile:w-full mobile:text-center mobile:text-xs mobile:mb-[10%] laptop:flex laptop:mb-0.5 desktop:flex md:items-center">
+              <div className="mobile:w-full mobile:text-xs mobile:mb-[10%] laptop:flex laptop:mb-0.5 desktop:flex md:items-center">
                 <p className="text-grey-faded text-sm laptop:mt-2 laptop:mr-3">
-                  {isSignUpPage ? null : <Link to="/sign-up">Stay updated by email ✉</Link>}
+                  {isSignUpPage ? null : <Link to="/sign-up">✉ Stay updated by email</Link>}
                 </p>
                 {/* <div className="relative flex items-center">
                   <input

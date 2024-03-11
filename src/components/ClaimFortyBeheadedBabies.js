@@ -104,7 +104,6 @@ export default function ClaimFortyBeheadedBabies() {
                                     <div className="source-heading"></div>
                                     
                                     {row.original.sources.map((source, index) => (
-                                        <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                             <div key={index} className="source">
                                                     {source.videoPreviewLink && (
                                                         <a href={source.sourceLink} target="_blank" rel="noreferrer">
@@ -115,6 +114,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                             </ul>
                                                         </a>
                                                     )}
+                                                    
             
                                                     {/* If there's no video link, show icon link (circle) */}
                                                     {!source.videoPreviewLink && (
@@ -128,6 +128,7 @@ export default function ClaimFortyBeheadedBabies() {
                                                     )}
 
                                                     {/* If there is an archive link, show the archive link */}
+                                                    {/* also does not show VideoPlayer */}
                                                     {source.archiveLink && (
                                                         <ul>
                                                             <li>
@@ -138,7 +139,6 @@ export default function ClaimFortyBeheadedBabies() {
                                                         </ul>                                                                    
                                                     )}
                                         </div>
-                                        </VideoPlayer>
                                     ))}
                                 </article>
                             </details>

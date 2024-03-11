@@ -1349,7 +1349,7 @@ const data = [
             sourceLink: 'https://twitter.com/yousuf_tw/status/1714367757968384106',
             archiveLink: 'https://files.hasbaratracker.com/20231020_%40ajmubasher.mp4',
             videoPreviewLink: 'https://files.hasbaratracker.com/20231020_%40ajmubasher.mp4',
-        }
+        },
     ]
 },
  
@@ -1861,6 +1861,11 @@ const data = [
             sourceLink: 'https://www.youtube.com/watch?v=a2cd4pgbdkM',
             archiveLink: 'https://archive.is/aj65S',
             videoPreviewLink: 'https://files.hasbaratracker.com/12Nov2023_AlShifa_Hospital_Director_Muhammed_Abu_Salmiya_Fuel_AlJazeera.mp4'
+        },
+        {
+            sourceName: 'Transcript (English)',
+            sourceLink: 'https://files.hasbaratracker.com/12Nov_2023_dr_abu_salmiya_aljazeera_mubasher_fuel_interview_transcript.pdf',
+            archiveLink: 'https://files.hasbaratracker.com/12Nov_2023_dr_abu_salmiya_aljazeera_mubasher_fuel_interview_transcript.pdf',
         }
     ]
 },

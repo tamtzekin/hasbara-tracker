@@ -65,28 +65,24 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                 contentLabel="Video Modal"
                 style={{
                     content: {
-                        // top: '0%',
-                        left: '0',
-                        bottom: '0',
                         transform: 'none',
                         border: 'none',
                         background: 'none',
                         padding: 0,
                         width: '100%',
-                        // maxWidth: '600px',
-                        // maxHeight: '100%',
-                        // overflow: 'hidden',
                         animationFillMode: 'forwards',
                         position: 'absolute',
                         // zIndex: 2,
 
                         // On phone: Show modal at bottom of screen
                         ...(screenWidth <= 576 && {
-                            top: 'auto',
-                            bottom: '0',
-                            left: '0',
-                            right: '0',
-                            maxWidth: '100%',
+                            // display: 'none',
+                            // top: 'auto',
+                            // bottom: '0',
+                            // left: '0',
+                            // right: '0',
+                            // maxWidth: '100%',
+                            // background: 'none',
                         }),
                     },
                     overlay: {
@@ -95,24 +91,27 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                         zIndex: 1,
                     },
                 }}
-                // className="modal-mobile"
             >
                 <video
                     autoPlay
                     width="100%"
                     height="100%"
                     style={{
-                        position: 'absolute',
-                        bottom: '0',
-                        left: '0',
+                        position: 'relative',
+                        top: '50%',
+                        left: '47%',
+                        transform: 'translate(-50%, -50%)',
                         zIndex: 50,
                         maxHeight: '800px',
-                        maxWidth: '550px',
+                        maxWidth: '700px',
                     }}
                     onEnded={closeModal}
                 >
-                    <source src={videoPreviewLink} type="video/mp4" />
+                
+                <source src={videoPreviewLink} type="video/mp4" />
+                
                     Your browser does not support video previews. Try Safari, Chrome or Firefox instead.
+                
                 </video>
             </Modal>
         </>

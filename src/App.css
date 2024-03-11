@@ -518,6 +518,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         font-size: 0.95em;
     }
 
+    a[target="_blank"]:hover::after {
+        display: none; /* disable the external window icon */
+    }
+
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /* LINKS */

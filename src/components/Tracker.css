@@ -620,9 +620,8 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     /*** TRACKER TABLE ***/
     .tracker-container {
         width: 100%;
-        margin-top: 65%;
-        margin-left: 0%;
-        margin-right: 3%;
+        /* flex: 1; */
+        margin-top: 0%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; 
     }

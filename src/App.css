@@ -559,7 +559,8 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     .header-container-fixed {
         border-bottom: 1px dashed theme('colors.grey-faded');
         min-height: 10%;
-        position: fixed;
+        position: sticky;
+        top: 0;
     }
 
 

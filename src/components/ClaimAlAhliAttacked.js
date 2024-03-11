@@ -265,7 +265,7 @@ export default function ClaimAlAhliAttacked() {
                                                 <ul>
                                                     <li className="ml-4">
                                                         <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
-                                                            <span className="text-grey-faded text-xs italic">Archive&nbsp;</span>
+                                                            <span className="text-grey-faded text-xs italic">Archive</span>
                                                         </a>
                                                     </li>
                                                 </ul>

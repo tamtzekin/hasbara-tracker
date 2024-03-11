@@ -1,23 +1,54 @@
-// IGNORE summaries for now
+// The title + summary of claim at the top of each Claim page 
 const summaries = [
     {
-        // claimMainTitle: 'Forty beheaded babies',
-        // claimSummary:
-        // 'Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.',
+        claimMainTitle: 'Forty beheaded babies',
+        claimSummary:
+        'Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.',
     },
  
     {
-        // claimMainTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-        // claimSummary: 'Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.',
+        claimMainTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+        claimSummary: 'Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.',
     },
  
     {
-        // claimMainTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
-        // claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors.',
+        claimMainTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+        claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors.',
+    },
+
+    {
+        claimMainTitle: 'Makeup used in Gaza to fake injuries',
+        claimSummary: 'Israeli officials shared behind-the-scenes footage of a short film claiming it featured Palestinians in Gaza using makeup to fake injuries.',
+    },
+
+    {
+        claimMainTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+        claimSummary: 'The ‘training manuals’ Israeli officials claimed to find on bodies of Hamas fighters do not contain instructions on how to make chemical weapons.',
+    },
+
+    {
+        claimMainTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
+        claimSummary: 'In the days following the murder of Nahida and Samar Anton at Gaza’s Catholic church by an Israeli sniper, Israeli officials gave contradictory stories.',
+    },
+
+    {
+        claimMainTitle: '',
+        claimSummary: '',
+    },
+
+    {
+        claimMainTitle: '',
+        claimSummary: '',
+    },
+
+    {
+        claimMainTitle: '',
+        claimSummary: '',
     },
 ]
 
 
+// All claims data, stored in the tracker
 const data = [
 // CLAIM: Forty beheaded babies
     {   

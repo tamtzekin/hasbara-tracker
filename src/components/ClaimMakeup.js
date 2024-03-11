@@ -369,19 +369,20 @@ export default function ClaimMakeup() {
     </span>
 
 
-        {/* Claim summary */}
-        <span className="claim-summary container mt-10 mobile:w-[90%] mobile:mt-[5%] mobile:ml-[5%]">
-            <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
-                The claim
-            </div>
-            <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
-                ‘Makeup used in Gaza to fake injuries’
-            </div>
-            <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
-                Israeli officials shared behind-the-scenes footage of a short film claiming it featured Palestinians in Gaza using makeup to fake injuries.
-            </div>
+            {/* Claim summary */}
+            <div className="claim-summary container mt-10 mobile:w-[100%] mobile:mt-[5%]">
+                <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
+                    The claim</div>
+                    
+                <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
+                    ‘{summaries[3].claimMainTitle}’</div>
+
+                <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
+                    {summaries[3].claimSummary}
+                </div>
+            </div>            
         </span>
-</span>
+
         
 
             {/* Show desktop view of Tracker - as a table */}

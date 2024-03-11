@@ -339,14 +339,14 @@ export default function ClaimIsraelDeniesChurchKilling() {
 
     {/* Header (fixed) */}
     <span className="header-container-fixed">
-        <span className="flex mobile:mt-[4%]">
+        <span className="flex mobile:mt-[1%] mobile:ml-[-0.3%]">
             {/* Logo */}
-            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[0%] laptop:w-1/5 mr-auto">
+            <div className="mobile:w-9/10 laptop:w-1/5 mr-auto">
                 <Link to="/"><Logo /></Link>
             </div>
 
         {/* Mobile menu toggle */}
-            <span className="mobile:mr-[5%] mobile:mt-[-0.5%]">
+            <span className="mobile:mt-[-0.5%]">
                 <MobileMenu />
             </span>
 

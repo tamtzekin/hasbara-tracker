@@ -46,6 +46,9 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
             };
         }, []);
 
+
+    // Render the modal only when the screen width is above 576 pixels (adjust as needed)
+    const renderModal = screenWidth > 576;
         
 
     return (
@@ -59,38 +62,40 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                 {children}
             </a>
 
-            <Modal
-                isOpen={isModalOpen}
-                onRequestClose={closeModal}
-                contentLabel="Video Modal"
-                style={{
-                    content: {
-                        transform: 'none',
-                        border: 'none',
-                        background: 'none',
-                        padding: 0,
-                        width: '100%',
-                        animationFillMode: 'forwards',
-                        position: 'absolute',
-                        // zIndex: 20,
+        {renderModal && (
 
-                        // On phone: Show modal at bottom of screen
-                        ...(screenWidth <= 576 && {
-                            display: 'none',
-                            // top: 'auto',
-                            // bottom: '0',
-                            // left: '0',
-                            // right: '0',
-                            // maxWidth: '100%',
-                            // background: 'none',
-                        }),
-                    },
-                    overlay: {
-                        backgroundColor: videoPreviewLink ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0)',
-                        animationFillMode: 'forwards',
-                        zIndex: 10,
-                    },
-                }}
+            <Modal
+            isOpen={isModalOpen}
+            onRequestClose={closeModal}
+            contentLabel="Video Modal"
+            style={{
+                content: {
+                    transform: 'none',
+                    border: 'none',
+                    background: 'none',
+                    padding: 0,
+                    width: '100%',
+                    animationFillMode: 'forwards',
+                    position: 'absolute',
+                    // zIndex: 20,
+                    
+                    // On phone: Show modal at bottom of screen
+                    ...(screenWidth <= 576 && {
+                        // display: 'none',
+                        // top: 'auto',
+                        // bottom: '0',
+                        // left: '0',
+                        // right: '0',
+                        // maxWidth: '100%',
+                        // background: 'none',
+                    }),
+                },
+                overlay: {
+                    backgroundColor: videoPreviewLink ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0)',
+                    animationFillMode: 'forwards',
+                    zIndex: 10,
+                },
+            }}
             >
                 <video
                     autoPlay
@@ -106,7 +111,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                         maxWidth: '700px',
                     }}
                     onEnded={closeModal}
-                >
+                    >
                 
                 <source src={videoPreviewLink} type="video/mp4" />
                 
@@ -114,6 +119,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                 
                 </video>
             </Modal>
+        )}
         </>
     );
 };

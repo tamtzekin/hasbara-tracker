@@ -300,6 +300,25 @@ details[open] .expand-text::after {
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* LINKS */
+a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    z-index: 30;
+}
+
+/* Icon that shows link opens in external window */
+a[target="_blank"]::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0 3px 0 5px;
+    white-space: nowrap;
+    display: none;
+}
+
+a[target="_blank"]:hover::after {
+    opacity: 1;
+    display: inline;
+}
 
 a:hover {
     cursor: crosshair;
@@ -518,13 +537,17 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
         font-size: 0.95em;
     }
 
-    a[target="_blank"]:hover::after {
-        display: none; /* disable the external window icon */
-    }
-
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /* LINKS */
+    /* for links next to Archive links */
+    a[target="_blank"]::after {
+        content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+        margin: 0 3px 0 12px;
+        white-space: nowrap;
+        opacity: 0;
+    }
+
     .claim-link {
         margin-bottom: 5%;
     }

@@ -337,16 +337,17 @@ export default function ClaimFortyBeheadedBabies() {
             <meta name="twitter:creator" content="@hasbaratracker" />
         </Helmet>
 
+
     {/* Header (fixed) */}
     <span className="header-container-fixed">
-        <span className="flex mobile:mt-[4%]">
+        <span className="flex mobile:mt-[1%] mobile:ml-[-0.3%]">
             {/* Logo */}
-            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[0%] laptop:w-1/5 mr-auto">
+            <div className="mobile:w-9/10 laptop:w-1/5 mr-auto">
                 <Link to="/"><Logo /></Link>
             </div>
 
         {/* Mobile menu toggle */}
-            <span className="mobile:mr-[5%] mobile:mt-[-0.5%]">
+            <span className="mobile:mt-[-0.5%]">
                 <MobileMenu />
             </span>
 
@@ -370,17 +371,17 @@ export default function ClaimFortyBeheadedBabies() {
 
 
             {/* Claim summary */}
-            <span className="claim-summary container mt-10 mobile:w-[90%] mobile:mt-[5%] mobile:ml-[5%]">
+            <div className="claim-summary container mt-10 mobile:w-[100%] mobile:mt-[5%]">
                 <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
                     The claim</div>
                     
                 <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
-                    ‘Forty beheaded babies’</div>
+                    ‘{summaries[0].claimMainTitle}’</div>
 
                 <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
-                    Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.
+                    {summaries[0].claimSummary}
                 </div>
-            </span>            
+            </div>            
         </span>
         
     
@@ -502,7 +503,7 @@ export default function ClaimFortyBeheadedBabies() {
                                         <li>Click + and ⎯ to show more or less text</li>
                                     </ul>
                                 </div>
-                </>
+                        </>
 
                 ) : (
 

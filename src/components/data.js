@@ -1,23 +1,54 @@
-// IGNORE summaries for now
+// The title + summary of claim at the top of each Claim page 
 const summaries = [
     {
-        // claimMainTitle: 'Forty beheaded babies',
-        // claimSummary:
-        // 'Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.',
+        claimMainTitle: 'Forty beheaded babies',
+        claimSummary:
+        'Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.',
     },
  
     {
-        // claimMainTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-        // claimSummary: 'Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.',
+        claimMainTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
+        claimSummary: 'Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.',
     },
  
     {
-        // claimMainTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
-        // claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors.',
+        claimMainTitle: 'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas',
+        claimSummary: 'Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors.',
+    },
+
+    {
+        claimMainTitle: 'Makeup used in Gaza to fake injuries',
+        claimSummary: 'Israeli officials shared behind-the-scenes footage of a short film claiming it featured Palestinians in Gaza using makeup to fake injuries.',
+    },
+
+    {
+        claimMainTitle: 'Hamas were carrying instructions on how to make chemical weapons',
+        claimSummary: 'The ‘training manuals’ Israeli officials claimed to find on bodies of Hamas fighters do not contain instructions on how to make chemical weapons.',
+    },
+
+    {
+        claimMainTitle: 'Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish',
+        claimSummary: 'In the days following the murder of Nahida and Samar Anton at Gaza’s Catholic church by an Israeli sniper, Israeli officials gave contradictory stories.',
+    },
+
+    {
+        claimMainTitle: '',
+        claimSummary: '',
+    },
+
+    {
+        claimMainTitle: '',
+        claimSummary: '',
+    },
+
+    {
+        claimMainTitle: '',
+        claimSummary: '',
     },
 ]
 
 
+// All claims data, stored in the tracker
 const data = [
 // CLAIM: Forty beheaded babies
     {   
@@ -2471,7 +2502,7 @@ const data = [
    },
    description: {
        summary: 'Israeli Prime Minister’s senior adviser blames Hamas for the Holy Family Parish attacks',
-           details: 'In an interview with UK news outlet Sky News, Mark Regev – senior adviser to Israeli Prime Minister Benjamin Netanyahu – denied Israel Occupation Forces were behind the murders, claiming it was not something Israeli forces did, and blamed Palestinian resistance fighters with Hamas.<br><br>In the interview, which featured Cardinal Vincent Nichols, Regev said he rejected the Cardinal’s description of it as a cold-blooded killing.<br><br>‘I would reject the categorisation of the words he used: ‘coldblooded killing.’ That would indicate a deliberate targeting of civilians; that’s something we don’t do.’<br><br>‘We don’t shoot people who are going to church to pray; that just doesn’t happen. That’s not the way the IDF operates.’<br><br>‘To say that Israel is deliberately targeting Christian worshippers, that’s a terrible accusation that is unfounded.’<‘br><br>æCould they have been killed by Palestinian terrorists who were shooting at people indiscriminately? I don’t know,’ he said.',
+           details: 'In an interview with UK news outlet Sky News, Mark Regev – senior adviser to Israeli Prime Minister Benjamin Netanyahu – denied Israel Occupation Forces were behind the murders, claiming it was not something Israeli forces did, and blamed Palestinian resistance fighters with Hamas.<br><br>In the interview, which featured Cardinal Vincent Nichols, Regev said he rejected the Cardinal’s description of it as a cold-blooded killing.<br><br>‘I would reject the categorisation of the words he used: ‘coldblooded killing.’ That would indicate a deliberate targeting of civilians; that’s something we don’t do.’<br><br>‘We don’t shoot people who are going to church to pray; that just doesn’t happen. That’s not the way the IDF operates.’<br><br>‘To say that Israel is deliberately targeting Christian worshippers, that’s a terrible accusation that is unfounded.’<br><br>Could they have been killed by Palestinian terrorists who were shooting at people indiscriminately? I don’t know,’ he said.',
    },
    sources: [
        {

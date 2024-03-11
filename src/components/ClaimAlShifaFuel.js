@@ -339,14 +339,14 @@ export default function ClaimAlShifaFuel() {
 
     {/* Header (fixed) */}
     <span className="header-container-fixed">
-        <span className="flex mobile:mt-[4%]">
+        <span className="flex mobile:mt-[1%] mobile:ml-[-0.3%]">
             {/* Logo */}
-            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[0%] laptop:w-1/5 mr-auto">
+            <div className="mobile:w-9/10 laptop:w-1/5 mr-auto">
                 <Link to="/"><Logo /></Link>
             </div>
 
         {/* Mobile menu toggle */}
-            <span className="mobile:mr-[5%] mobile:mt-[-0.5%]">
+            <span className="mobile:mt-[-0.5%]">
                 <MobileMenu />
             </span>
 
@@ -369,22 +369,18 @@ export default function ClaimAlShifaFuel() {
     </span>
 
 
-        {/* Claim summary */}
-                <span className="claim-summary container mt-10 mobile:w-[90%] mobile:mt-[5%] mobile:ml-[5%]">
-            <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
-                The claim
-            </div>
+            {/* Claim summary */}
+            <div className="claim-summary container mt-10 mobile:w-[100%] mobile:mt-[5%]">
+                <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
+                    The claim</div>
+                    
+                <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
+                    ‘{summaries[2].claimMainTitle}’</div>
 
-            <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
-                ‘Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas’
-            </div>
-
-            <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
-                Israeli officials claimed Hamas refused supplies of fuel to the hospital. What actually happened: Israeli forces refused to give fuel through Red Cross as requested by Al-Shifa’s doctors.
-            </div>
-        </span>
-
-
+                <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
+                    {summaries[2].claimSummary}
+                </div>
+            </div>            
         </span>
         
         

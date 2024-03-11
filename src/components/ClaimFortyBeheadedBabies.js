@@ -143,7 +143,7 @@ export default function ClaimFortyBeheadedBabies() {
                                             <ul>
                                                 <li>
                                                     <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                        <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
+                                                        <span className="text-grey-faded italic text-xs ml-4 mobile:ml-[10.5%]">Archive</span>
                                                     </a>
                                                 </li>
                                             </ul>                                                                    

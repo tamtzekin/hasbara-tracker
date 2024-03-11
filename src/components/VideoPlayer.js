@@ -57,7 +57,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
             >
                 {children}
             </a>
- d
+ 
             <Modal
             isOpen={isModalOpen}
             onRequestClose={closeModal}

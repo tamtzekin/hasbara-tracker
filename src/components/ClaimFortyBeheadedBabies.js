@@ -127,17 +127,17 @@ export default function ClaimFortyBeheadedBabies() {
                                                         </a>
                                                     )}
 
-                                    {/* If there is an archive link, show the archive link */}
-                                    {source.archiveLink && (
-                                        <ul>
-                                            <li>
-                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                    <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
-                                                </a>
-                                            </li>
-                                        </ul>                                                                    
-                                        )}
-                                </div>
+                                                    {/* If there is an archive link, show the archive link */}
+                                                    {source.archiveLink && (
+                                                        <ul>
+                                                            <li>
+                                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                                    <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>                                                                    
+                                                    )}
+                                        </div>
                                         </VideoPlayer>
                                     ))}
                                 </article>
@@ -227,27 +227,27 @@ export default function ClaimFortyBeheadedBabies() {
                                 <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                     <div key={index} className="source text-xs">
 
-                                            {/* If there's a video preview available, show play icon (play triangle) */}
+                                            {/* Video preview links - If there's a video preview available, show play icon (play triangle) */}
                                             {source.videoPreviewLink && (
                                                     <ul className="icon-playarrow">
                                                         <li>
                                                             <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
-                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
                                                             </a>
                                                         </li>
                                                     </ul>
                                             )}
     
-                                            {/* If no video preview, show link icon (circle)) */}
+                                            {/* Normal links - If no video preview, show link icon (circle)) */}
                                             {!source.videoPreviewLink && (
                                                     <ul className='icon-link'>
                                                         <li>
                                                             <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
-                                                                <span className="" dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
                                                             </a>
                                                         </li>
                                                     </ul>
-                                            )}
+                                            )}  
     
                                             {/* If a source has been deleted by the original publisher, show a red strikethrough */}
                                             {/* {source.hasBeenDeleted === 'true' ? (
@@ -264,11 +264,24 @@ export default function ClaimFortyBeheadedBabies() {
                                             {source.archiveLink && ( 
                                                 <ul>
                                                     <li className="ml-4 mt-0">
+                                                        <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer" aria-hidden="true">
                                                             <span className="text-grey-faded text-xs italic">Archive</span>
                                                         </a>
                                                     </li>
                                                 </ul>
                                             )}
+
+                                            {/* Show file links */}
+                                            {source.fileLink && ( 
+                                                <ul>
+                                                    <li className="ml-4 mt-0">
+                                                        <a className="file-link" href={source.fileLink} target="_blank" rel="noreferrer" aria-hidden="true">
+                                                            <span className="text-grey-faded text-xs italic">File&nbsp;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            )}
+
     
                                             {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
                                             <span className="visually-hidden">Opens in new tab</span>

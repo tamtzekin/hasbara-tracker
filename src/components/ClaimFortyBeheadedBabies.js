@@ -24,14 +24,22 @@ export default function ClaimFortyBeheadedBabies() {
         }, [data]);
     
     const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
-        
+    
 
     // Set mobile/phone view dimensions
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 576);
 
+    // Force to render if <= 576, so the Sourrce links don't have the hovered video player attached.
+    const [forceRender, setForceRender] = useState(false);
+    
     useEffect(() => {
         const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 576);
+            const newIsMobileView = window.innerWidth <= 576;
+            setIsMobileView(newIsMobileView);
+            if (newIsMobileView) {
+                setForceRender((prev) => !prev); // Toggle forceRender
+                console.log('rerender');
+            }
         };
 
         window.addEventListener('resize', handleResize);
@@ -45,112 +53,119 @@ export default function ClaimFortyBeheadedBabies() {
     // Pull all the claims data
     const columns = useMemo(() => {
 
-        // Mobile: the 'Type' is higher up, so the context/claim/debunk tags can be positioned properly
+        // Mobile tracker: data is displayed like an expandable card
         if (isMobileView) {    
-            return [
-
-                // Title of claim
-                {
-                    Header: 'The claim',
-                    accessor: 'claimTitle',
-                    Cell: ({ cell }) => (
-                        <>{cell.value}</>
-                    )
-                },
-
-                // Date
-                {
-                    Header: 'Date',
-                    accessor: 'date',
-                    sortType: (rowA, rowB, columnId) => {
-                        const dateA = new Date(rowA.values[columnId]);
-                        const dateB = new Date(rowB.values[columnId]);
-                        return dateA.getTime() - dateB.getTime();
+            return (
+                [
+                    // Title of claim
+                    {
+                        Header: 'The claim',
+                        accessor: 'claimTitle',
+                        Cell: ({ cell }) => (
+                            <>{cell.value}</>
+                        )
                     },
-                    Cell: ({ cell }) => (
-                        <div>
-                            {cell.value}
-                        </div>
-                    ),
-                },
 
-                // Context/Claim/Debunk tag
-                {
-                    Header: 'Type',
-                    accessor: (row) => row.claim.claimText,
-                    Cell: ({ row }) => (
-                        <span className={row.original.claim.claimTag}>
-                            {row.original.claim.claimText}
-                        </span>
-                    ),
-                },
+                    // Date
+                    {
+                        Header: 'Date',
+                        accessor: 'date',
+                        sortType: (rowA, rowB, columnId) => {
+                            const dateA = new Date(rowA.values[columnId]);
+                            const dateB = new Date(rowB.values[columnId]);
+                            return dateA.getTime() - dateB.getTime();
+                        },
+                        Cell: ({ cell }) => (
+                            <div>
+                                {cell.value}
+                            </div>
+                        ),
+                    },
 
-
-                // Detailed description on each claim
-                {
-                    Header: 'Details',
-                    accessor: (row) => `${row.description.summary} ${row.description.details}`,
-                    Cell: ({ row }) => (
-                        <>
-                        <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
-                            <details>
-                                <summary><u>{row.original.description.summary}</u>
-                                    <span className='expand-text'></span>
-                                </summary>
-                                <article className="claim-paragraph">
-                                    <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
-            
-                                    {/* Show source links inside the expandable element */}
-                                    <div className="source-heading"></div>
-                                    
-                                    {row.original.sources.map((source, index) => (
-                                            <div key={index} className="source">
-                                                    {source.videoPreviewLink && (
-                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                            <ul className="icon-playarrow">
-                                                                <li>
-                                                                    <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                </li>
-                                                            </ul>
-                                                        </a>
-                                                    )}
-                                                    
-            
-                                                    {/* If there's no video link, show icon link (circle) */}
-                                                    {!source.videoPreviewLink && (
-                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer">
-                                                            <ul className="icon-link">
-                                                                <li>
-                                                                    <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                                </li>
-                                                            </ul>
-                                                        </a>
-                                                    )}
-
-                                                    {/* If there is an archive link, show the archive link */}
-                                                    {/* also does not show VideoPlayer */}
-                                                    {source.archiveLink && (
-                                                        <ul>
-                                                            <li>
-                                                                <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
-                                                                    <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>                                                                    
-                                                    )}
-                                        </div>
-                                    ))}
-                                </article>
-                            </details>
-                        </div>
-                        </>
-                    ),
-                },
-        ];
+                    // Context/Claim/Debunk tag
+                    {
+                        Header: 'Type',
+                        accessor: (row) => row.claim.claimText,
+                        Cell: ({ row }) => (
+                            <span className={row.original.claim.claimTag}>
+                                {row.original.claim.claimText}
+                            </span>
+                        ),
+                    },
 
 
-        // Render desktop tracker, with different order of columns
+                    // Detailed description on each claim
+                    {
+                        Header: 'Details',
+                        accessor: (row) => `${row.description.summary} ${row.description.details}`,
+                        Cell: ({ row }) => (
+                            <>
+                            <div style={{ maxWidth: 650, textWrap: 'pretty' }}>
+                                {/* The Claim text */}
+                                <details>
+                                    <summary><u>{row.original.description.summary}</u>
+                                        <span className='expand-text'></span>
+                                    </summary>
+
+                                    {/* Details text */}
+                                    <article className="claim-paragraph">
+                                        <div dangerouslySetInnerHTML={{ __html: row.original.description.details }} />
+                                        
+                                        {/* Source links */}
+                                        <div className="source-heading"></div>
+
+                                        {/* Display video link with play icon */}
+                                        {row.original.sources.map((source, index) => (
+                                                <div key={index} className="source">
+                                                        {source.videoPreviewLink && (
+                                                            <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                                <ul className="icon-playarrow">
+                                                                    <li>
+                                                                        <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                    </li>
+                                                                </ul>
+                                                            </a>
+                                                        )}
+                                                        
+                                        {/* Display link with circle icon */}
+                                        {!source.videoPreviewLink && (
+                                            <a href={source.sourceLink} target="_blank" rel="noreferrer">
+                                                <ul className="icon-link">
+                                                    <li>
+                                                        <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        )}
+
+                                        {/* Show archive link */}
+                                        {source.archiveLink && (
+                                            <ul>
+                                                <li>
+                                                    <a className="archive-link" href={source.archiveLink} target="_blank" rel="noreferrer">
+                                                        <span className="text-grey-faded italic text-xs ml-4 mobile:ml-8">Archive</span>
+                                                    </a>
+                                                </li>
+                                            </ul>                                                                    
+                                        )}
+                                            </div>
+                                        ))}
+                                    </article>
+                                </details>
+                            </div>
+                            </>
+                        ),
+                    },
+                ]
+            );
         } else {
+            
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+            // Desktop tracker: with different order of columns
             return [
 
                 // Title of claim

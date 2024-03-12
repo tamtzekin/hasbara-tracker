@@ -1152,7 +1152,7 @@ const data = [
  
     description: {
         summary: 'Israeli military presents material in now deleted press release alleging the massacre at Al-Ahli Hospital by Palestinian rockets fired from a cemetery',
-        details: 'The Israel Occupation Forces (IOF) issued a press release, briefing video, and files asserting that Palestinian Islamic Jihad (PIJ) fired rockets from a nearby cemetery, resulting in a misfire that struck Al-Ahli Hospital. The media release has been removed from their website.<br /><br /><b>The provided files include:</b><br /><br /><li class="dotpoint">Aerial maps claimed by the IOF to exhibit no signs of craters or blast damage to buildings, with a comparison of IOF crater sizes.</li><br /><li class="dotpoint">An image illustrating rocket flight paths travelling from west to east.</li><br /><li class="dotpoint">An alleged phone conversation between PIJ members admitting to the rocket failure.</li>',
+        details: 'The Israel Occupation Forces (IOF) issued a press release, briefing video, and files asserting that Palestinian Islamic Jihad (PIJ) fired rockets from a nearby cemetery, resulting in a misfire that struck Al-Ahli Hospital. The media release has been removed from their website.<br /><br /><b>The provided files include:</b><br /><br /><li class="dotpoint">Aerial maps claimed by the IOF to exhibit no signs of craters or blast damage to buildings, with a comparison of IOF crater sizes.</li><br /><li class="dotpoint">An image illustrating rocket flight paths travelling from west to east.</li><br /><li class="dotpoint">An alleged phone conversation between PIJ members admitting to the rocket failure.</li><br />',
     },
     sources: [
         {

@@ -2,6 +2,7 @@ import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 import { Helmet } from 'react-helmet';
+import { HelmetProvider } from 'react-helmet-async';
 
 import './Tracker.css';
 import '../App.css';
@@ -15,6 +16,7 @@ import SearchBar from './SearchBar';
 import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import Footer from './Footer';
+
 
 export default function ClaimFortyBeheadedBabies() {
     // defines claim tags for dropdown (ClaimFilter.js)
@@ -346,7 +348,12 @@ export default function ClaimFortyBeheadedBabies() {
     // Sets state based on what is in the search box
     const { globalFilter } = state;
 
-    return (
+  // Helmet handles metadata for link previews
+  const helmetContext = {};
+
+
+  return (
+        <HelmetProvider context={helmetContext}>
         <>
         <Helmet>
             {/* HTML meta tags */}
@@ -572,5 +579,6 @@ export default function ClaimFortyBeheadedBabies() {
 
     <Footer />
     </>
+    </HelmetProvider>
     );
 }

@@ -34,4 +34,5 @@ module.exports = {
                 lg: '1.3em',
             }
         },
+        purge: ["./src/**/*.js"],
 }

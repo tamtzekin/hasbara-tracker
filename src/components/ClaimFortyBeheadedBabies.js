@@ -472,9 +472,17 @@ export default function ClaimFortyBeheadedBabies() {
                                                         cursor: column.id === 'date' ? 'ns-resize' : 'auto',
                                                     }}
                                                 >
-                                                    {column.render('Header')}
-                                                    {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
-                                                </th>
+                                                    {/* 'Date' heading */}
+                                                    <span style={{ marginRight: '0.25rem'}}>
+                                                        {column.render('Header')}
+                                                    </span>
+
+                                                    {/* 'Date' asc/desc arrow */}
+                                                    {column.id === 'date' && column.isSorted ? (
+                                                        <span style={{ verticalAlign: 'middle' }}>
+                                                            {column.isSortedDesc ? '▼' : '▲'} 
+                                                        </span>
+                                                    ) : ''}                                                </th>
                                             ))}
                                         </tr>
                                     ))}

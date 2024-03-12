@@ -2377,14 +2377,14 @@ const data = [
    },
    description: {
        summary: 'Israeli tanks fired on Holy Family Church‘s Convent in Gaza',
-           details: 'On the morning of 16 December, 2023, Israeli forces fired a rocket at the Convent of Sisters of Mother Theresa (Missionaries of Charity) which sits in the Holy Family Parish compound. <br><br>The Holy Family Parish is a Catholic church in Gaza. <br><br> The rocket caused an explosion and fire, which destroyed the building‘s generator and fuel resources – its only source of electricity. Israeli forces fired two more rockets from a tank, displacing the 54 disabled people there and leaving them without access to respirators that some of them need to survive, the statement said. <br><br>Water tanks and solar panels were also destroyed.',
+           details: 'On the morning of 16 December, 2023, Israeli forces fired a rocket at the Convent of Sisters of Mother Theresa (Missionaries of Charity) which sits in the Holy Family Parish compound. <br><br>The Holy Family Parish is a Catholic church in Gaza. <br><br> The rocket caused an explosion and fire, which destroyed the building’s generator and fuel resources – its only source of electricity. Israeli forces fired two more rockets from a tank, displacing the 54 disabled people there and leaving them without access to respirators that some of them need to survive, the statement said. <br><br>Water tanks and solar panels were also destroyed.',
    },
    sources: [
        {
            sourceName: 'The Latin Patriarch of Jerusalem',
            sourceLink: 'https://twitter.com/LPJerusalem/status/1736057252086268025',
            archiveLink: 'https://archive.ph/u4lkL',
-           videoPreviewLink: 'https://files.hasbaratracker.com/16Dec_attack__Holy_Family_Parish_compound.webp',
+        //    videoPreviewLink: 'https://files.hasbaratracker.com/16Dec_attack__Holy_Family_Parish_compound.webp',
        },
    ]
 },
@@ -2464,7 +2464,7 @@ const data = [
    },
    description: {
        summary: 'Israeli ambassador says Israeli forces ‘misidentified’ the women, accuses Latin Patriarch of ‘blood libel’',
-           details: 'Raphael Schutz, the Israeli ambassador to the Holy See (the Holy See refers to the jurisdiction of the Pope in his role as the Bishop of Rome), shared multiple posts on X (formerly Twitter) claiming that Israeli forces ‘apparently misidentified two Catholic women... as terrorists’.<br><br> He called the press release from the Latin Patriarch of Jerusalem describing the attack as cold-blooded murder as ‘blood libel’. <br><br>The statement, separated as three posts, reads:<br><br> 1. ‘War is terrible and chaotic. Yesterday Israeli forces mistakenly killed three Israeli hostages and today an Israeli sniper apparently misidentified two Catholic women, mother and daughter, as terrorists and killed them. Under such circumstances, describing the tragic event as a’<br><br>2. ‘Under such circumstances, when there is no shred of proof that the event was anything but a terrible mistake, describing it as "a cold blooded murder" as in the text released today by the communication office of the Latin Patriarchate of Jerusalem,’<br><br>3. ‘is to be condemned in the harshest terms as a blood libel. This kind of fallacies must be rejected by every decent human being.’<br><br>In the third post, the press release by the Latin Patriarch of Jerusalem was shared.',
+           details: 'Raphael Schutz, the Israeli ambassador to the Holy See (the Holy See refers to the jurisdiction of the Pope in his role as the Bishop of Rome), shared multiple posts on X (formerly Twitter) claiming that Israeli forces ‘apparently misidentified two Catholic women... as terrorists’.<br><br> He called the press release from the Latin Patriarch of Jerusalem describing the attack as cold-blooded murder as ‘blood libel’. <br><br>The statement, separated as three posts, reads:<br><br> 1. ‘War is terrible and chaotic. Yesterday Israeli forces mistakenly killed three Israeli hostages and today an Israeli sniper apparently misidentified two Catholic women, mother and daughter, as terrorists and killed them. Under such circumstances, describing the tragic event as a’<br><br>2. ‘Under such circumstances, when there is no shred of proof that the event was anything but a terrible mistake, describing it as “a cold blooded murder” as in the text released today by the communication office of the Latin Patriarchate of Jerusalem,’<br><br>3. ‘is to be condemned in the harshest terms as a blood libel. This kind of fallacies must be rejected by every decent human being.’<br><br>In the third post, the press release by the Latin Patriarch of Jerusalem was shared.',
    },
    sources: [
        {
@@ -2798,7 +2798,7 @@ const data = [
      },
      description: {
          summary: 'Israeli Ministry of Foreign Affairs repeats claim that ‘captive taking handbook’ was found on Hamas fighter',
-         details: 'The Israeli Ministry of Foreign Affairs shared a press release describing how Israeli President Isaac Herzog showed viewers a booklet entitled ‘The Warrior’s Guide - Jihad Version’ that was ‘recovered in the battlefield on a Hamas terrorist’.',
+         details: 'The Israeli Ministry of Foreign Affairs shared a press release describing how Israeli President Isaac Herzog showed viewers a booklet entitled ‘The Warrior’s Guide – Jihad Version’ that was ‘recovered in the battlefield on a Hamas terrorist’.',
      },
      sources: [
          {

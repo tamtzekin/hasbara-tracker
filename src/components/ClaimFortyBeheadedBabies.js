@@ -350,25 +350,26 @@ export default function ClaimFortyBeheadedBabies() {
         <>
         <Helmet>
             {/* HTML meta tags */}
-            <title>Claim: ‘Forty beheaded babies’</title>
-            <meta name="description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally." />
+            {/* Important metadata */}
+            <meta name="url" property="og:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
+            <meta name="type" property="og:type" content="article">
+            <meta name="site_name" property="og:site_name" content="Claim: ‘Forty beheaded babies’" />
+            <meta name="site_name" property="og:site_name" content="Hasbara Tracker" />
+            <meta name="title" property="og:title" content="Claim: ‘Forty beheaded babies‘" />
+            <meta name="description" property="og:description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally." />
+            <meta name="image" property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
+            
+            <meta property="twitter:image:alt" content="In a pixellated font, the title reads: Hasbara Tracker - Debunking Israeli propaganda" />
 
-            <meta property="og:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
-            <meta property="og:type" content="website" />
-            <meta property="og:site_name" content="Hasbara Tracker" />
-            <meta property="og:title" content="Claim: ‘Forty beheaded babies’" />
-            <meta property="og:description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally." />
-            <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
-
+            {/* Twitter link preview metadata */}
             <meta name="twitter:card" content="summary_large_image" />
-            <meta property="twitter:domain" content="hasbaratracker.com" />
             <meta name="twitter:site" content="@hasbaratracker" />
-            <meta property="twitter:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
-            <meta name="twitter:title" content="Claim: Forty beheaded babies" />
+            <meta name="twitter:title" content="Claim: ‘Forty beheaded babies’" />
+            <meta name="twitter:creator" content="@hasbaratracker" />
             <meta name="twitter:description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally." />
             <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
-            <meta name="twitter:creator" content="@hasbaratracker" />
-        </Helmet>
+            <meta property="twitter:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
+            <meta property="twitter:domain" content="hasbaratracker.com" />
 
 
     {/* Header (fixed) */}

@@ -352,7 +352,7 @@ export default function ClaimFortyBeheadedBabies() {
             {/* HTML meta tags */}
             {/* Important metadata */}
             <meta name="url" property="og:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
-            <meta name="type" property="og:type" content="article">
+            <meta name="type" property="og:type" content="article" />
             <meta name="site_name" property="og:site_name" content="Claim: ‘Forty beheaded babies’" />
             <meta name="site_name" property="og:site_name" content="Hasbara Tracker" />
             <meta name="title" property="og:title" content="Claim: ‘Forty beheaded babies‘" />
@@ -370,6 +370,7 @@ export default function ClaimFortyBeheadedBabies() {
             <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
             <meta property="twitter:url" content="https://hasbaratracker.com/forty-beheaded-babies" />
             <meta property="twitter:domain" content="hasbaratracker.com" />
+        </Helmet>
 
 
     {/* Header (fixed) */}

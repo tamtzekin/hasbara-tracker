@@ -17,21 +17,7 @@ const ClaimsList = () => {
 
         <Link to="/israel-denies-church-killing"><div className="claim-link">‘Israeli state denies killing mother and daughter seeking refuge in Gaza’s Holy Family Parish’</div></Link>
 
-        <div className="claim-coming-soon"><em>Coming soon:</em> ‘Israeli state denies striking Al-Shifa hospital’</div>
-
-        <div className="claim-coming-soon"><em>Coming soon:</em> ‘Hamas tunnel found at the Qatari Hospital’</div>
-
-        <div className="claim-coming-soon"><em>Coming soon:</em> ‘Israeli state denies ordering World Health Organisation to remove medical supplies from its warehouse’</div>
-
-        <div className="claim-coming-soon"><em>Coming soon:</em> ‘Gaza’s electricity not cut off because “Palestinians are using phones”’</div>
-
-        <div className="claim-coming-soon"><em>Coming soon:</em> ‘Israeli state denies using white phosphorus munitions in Gaza’</div>
-
-        <div className="claim-coming-soon"><em>Coming soon:</em> ‘There are no churches in Gaza’</div>
-
-        <div className="claim-coming-soon"><em>Coming soon:</em> ‘Hostage gave birth in captivity’</div>
-
-        <div className="claim-coming-soon">+ more</div>
+        <div className="claim-coming-soon">+ more coming soon</div>
 
         </>
     )

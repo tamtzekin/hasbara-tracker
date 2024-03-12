@@ -46,7 +46,6 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
             };
         }, []);
 
-        
 
     return (
         <>
@@ -58,44 +57,39 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
             >
                 {children}
             </a>
-
+ 
             <Modal
-                isOpen={isModalOpen}
-                onRequestClose={closeModal}
-                contentLabel="Video Modal"
-                style={{
-                    content: {
-                        top: '10%',
-                        left: '30%',
-                        right: '25%',
-                        transform: 'none',
-                        border: 'none',
-                        background: 'none',
-                        padding: 0,
-                        width: '100%',
-                        maxWidth: '600px',
-                        maxHeight: '90%',
-                        overflow: 'hidden',
-                        animationFillMode: 'forwards',
-                        position: 'absolute',
-                        zIndex: 2,
-
-                        // On phone: Show modal at bottom of screen
-                        ...(screenWidth <= 480 && {
-                            top: 'auto',
-                            bottom: '0',
-                            left: '0',
-                            right: '0',
-                            maxWidth: '100%',
-                        }),
-                    },
-                    overlay: {
-                        backgroundColor: videoPreviewLink ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0)',
-                        animationFillMode: 'forwards',
-                        zIndex: 1,
-                    },
-                }}
-                // className="modal-mobile"
+            isOpen={isModalOpen}
+            onRequestClose={closeModal}
+            contentLabel="Video Modal"
+            style={{
+                content: {
+                    transform: 'none',
+                    border: 'none',
+                    background: 'none',
+                    padding: 0,
+                    width: '100%',
+                    animationFillMode: 'forwards',
+                    position: 'absolute',
+                    // zIndex: 20,
+                    
+                    // On phone: Show modal at bottom of screen
+                    ...(screenWidth <= 576 && {
+                        // display: 'none',
+                        // top: 'auto',
+                        // bottom: '0',
+                        // left: '0',
+                        // right: '0',
+                        // maxWidth: '100%',
+                        // background: 'none',
+                    }),
+                },
+                overlay: {
+                    backgroundColor: videoPreviewLink ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0)',
+                    animationFillMode: 'forwards',
+                    zIndex: 10,
+                },
+            }}
             >
                 <video
                     autoPlay
@@ -103,11 +97,17 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
                     height="100%"
                     style={{
                         position: 'relative',
-                        zIndex: 3,
+                        top: '50%',
+                        left: '47%',
+                        transform: 'translate(-50%, -50%)',
+                        zIndex: 50,
+                        maxHeight: '800px',
+                        maxWidth: '700px',
                     }}
                     onEnded={closeModal}
-                >
-                    <source src={videoPreviewLink} type="video/mp4" />
+                    >
+                
+                <source src={videoPreviewLink} type="video/mp4" />
                     Your browser does not support video previews. Try Safari, Chrome or Firefox instead.
                 </video>
             </Modal>

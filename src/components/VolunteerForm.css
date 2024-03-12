@@ -1,29 +1,19 @@
-label {
-    width: 100%;
-    margin-bottom: 9px;
-    display: block;
-    font-family: 'Helvetica', Helvetica, sans-serif;
-    font-size: 1em;
-}
-
 input {
-    width: 100%;
-    padding: 5px;
-    margin-top: 2.5%;
+    /* width: 100%; */
+    /* margin-top: 2.5%; */
     /* border-color: #bfc3c8; */
     border-radius: 3px;
     border-style: hidden;
-    background-color: #f0f0f0;
+    background-color: theme('colors.grey-darker');
     font-size: 0.9em;
 }
 
 textarea {
-    width: 100%;
-    margin-top: 2.5%;
-    /* border-color: #bfc3c8; */
+    /* width: 100%; */
+    /* margin-top: 2.5%; */
     border-radius: 3px;
     border-style: hidden;
-    background-color: #f0f0f0;
+    background-color: theme('colors.grey-darker');
     font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 0.9em;
     padding: 1%;
@@ -36,7 +26,9 @@ select {
     border-radius: 3px;
     font-family: 'Helvetica', Helvetica, sans-serif;
     font-size: 0.9em;
-    background-color: #f0f0f0;
+    background-color: theme('colors.grey-darker');
+    padding: 2% 0 2% 1.5%;
+    color: theme('colors.grey-faded');
 }
 
 .required-field {
@@ -45,14 +37,14 @@ select {
 
 
 /* Mobile devices (portrait and landscape) */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     input {
         /* margin-top: 5%; */
-        width: 95%;
+        width: 104%;
     }
 
     textarea {
-        width: 95%;
+        width: 104%;
     }
 
     select {
@@ -61,6 +53,6 @@ select {
 
     label {
         line-height: 30px;
-        width: 96%;
+        /* width: 96%; */
     }
 }

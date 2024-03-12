@@ -5,7 +5,7 @@ import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 import './Tracker.css';
 import '../App.css';
 
-import { data, summaries } from './data';
+import data from './data';
 import VideoPlayer from './VideoPlayer';
 import Header from './Header';
 import ClaimFilter from './ClaimFilter';
@@ -23,7 +23,13 @@ export default function ClaimFortyBeheadedBabies() {
         }, [data]);
     
     const [selectedClaimTitle, setSelectedClaimTitle] = useState('');
-        
+    
+    // State to hold the current claim's summary
+    const [currentClaimSummary, setCurrentClaimSummary] = useState('');
+
+    const claimTitle = data.map(item => item.claimTitle);
+    const claimSummary = data.map(item => item.claimSummary);
+    
     // Set mobile/phone view dimensions
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 576);
 
@@ -58,7 +64,8 @@ export default function ClaimFortyBeheadedBabies() {
                 Header: 'The claim',
                 accessor: 'claimTitle',
                 Cell: ({ cell }) => (
-                    <>{cell.value}</>
+                    // TODO: Do we want the claim name clickable or not
+                    <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
                 )
             },
             {
@@ -155,7 +162,8 @@ export default function ClaimFortyBeheadedBabies() {
                     Header: 'The claim',
                     accessor: 'claimTitle',
                     Cell: ({ cell }) => (
-                        <>{cell.value}</>
+                        // TODO: Do we want the claim name clickable or not
+                        <Link to="/tracker?filter={cell.value}">{cell.value}</Link>
                     )
                 },
 
@@ -328,7 +336,9 @@ export default function ClaimFortyBeheadedBabies() {
             data,
             initialState: {
                 sortBy: [{ id: 'date', desc: false }],
-                globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
+                // globalFilter: new URLSearchParams(window.location.search).get('claim') || '', // allows URL queries to set filter
+
+                globalFilter: 'Forty beheaded babies'
             },
             disableSortRemove: true,
         },
@@ -353,10 +363,11 @@ export default function ClaimFortyBeheadedBabies() {
 </head>
 
 <span className="header-container-fixed">
+
     <span id="logo-menu-claimsummary" className="flex mobile:mt-[4%]">
-            <span className="ml-auto mobile:ml-[88%]">
-                <MobileMenu />
-            </span>
+        <span className="ml-auto mobile:ml-[88%]">
+            <MobileMenu />
+        </span>
 
             <div className="nav-links-fixed top-[10%] mobile:invisible">
                 <li className="undotted">
@@ -379,20 +390,21 @@ export default function ClaimFortyBeheadedBabies() {
 
 
 <span className="">
-            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[3.5%] ml-[4.82%]">
+            <div className="mobile:w-9/10 mobile:ml-[5%] mobile:mt-[-14.8%] laptop:w-1/5 mt-[-5%] ml-[4.82%]">
                 <Link to="/">
                     <Logo />
                 </Link>
             </div>
 
     </span>
-                    <div className="claim-summary container mt-7 mobile:w-[90%] mobile:mt-[5%]">
-                        <span className="mobile:text-xs laptop:w-7/12 laptop:text-md font-mono mt-2 font-bold">
-                            The claim:</span>
-                        <span className="laptop:text-md laptop:w-7/12 mb-2 -mt-2">
-                            &nbsp;‘Title here’</span>
-                        <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] text-sm text-grey-faded mt-2 leading-6">
-                        description here.
+                    <div className="claim-summary container -mt-5 mobile:mt-[5%]">
+                        <div className="laptop:w-7/12 font-mono text-md mt-2 mb-5 font-bold">
+                            The claim
+                            </div>
+                        <div className="text-lg laptop:w-7/12 mb-2 -mt-2">
+                            ‘Forty beheaded babies’</div>
+                        <div className="mobile:w-[90%] mobile:text-xs laptop:w-[60%] text-lg text-grey-faded mt-4 mb-4 leading-7">
+                            Israeli soldiers claimed they found up to 40 decapitated or murdered babies in kibbutzes across occupied Palestine. This has been repeated by politicians and the media abroad.
                     </div>
 
                     </div>

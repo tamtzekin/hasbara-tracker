@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -75,12 +74,15 @@ const VolunteerForm = () => {
             <Header />
 
             <div className="content-container">
-                <h2>Volunteer</h2>
+                <h2 className="subheading">Volunteer</h2>
 
                 {/* If user has already submitted that session, prevent repeat submissions */}
                 {isSubmitted ? (
                     <div className="thank-you-message">
-                        Thank you for signing up to volunteer. We’ll get back to you as soon as we can. 🍉
+                        Thank you for signing up to volunteer. We’ll get back to you as soon as we can.<br />
+                        <br />
+                        
+                        Til liberation 🍉
                     </div>
                 ) : (
                     <>
@@ -95,13 +97,14 @@ const VolunteerForm = () => {
                             information about how to document and archive. Anyone can help —
                             especially if they have a propensity for research and collecting
                             receipts.
-                        </div><br />
+                        </div>
 
-                        <form onSubmit={handleSubmit}>
+                        <form className="mt-5" onSubmit={handleSubmit}>
                             <label>
                                 <b>Full name</b><span className="required-field">*</span>
                                 <br />
                                 <input
+                                    className="w-full p-1 mt-[2.5%] mb-9"
                                     type="text"
                                     name="fullName"
                                     value={formData.fullName}
@@ -116,6 +119,7 @@ const VolunteerForm = () => {
                             <b>Email</b><span className="required-field">*</span>
                                 <br />
                                 <input
+                                    className="w-full p-1 mt-[2.5%] mb-9"
                                     type="email"
                                     name="email"
                                     value={formData.email}
@@ -129,6 +133,7 @@ const VolunteerForm = () => {
                             <b>Tell us a little bit about your background and skills so we can match you with the right task.</b><span className="required-field">*</span>
                                 <br />
                                 <textarea
+                                    className="w-full p-5 mt-[2.5%] mb-9"
                                     name="backgroundAndSkills"
                                     value={formData.backgroundAndSkills}
                                     onChange={handleChange}
@@ -142,6 +147,7 @@ const VolunteerForm = () => {
                                 <b>How many hours can you commit?</b>
                                 <br />
                                 <select
+                                    className="w-full p-1 mt-[2.5%] mb-9"
                                     name="hoursCommitted"
                                     value={formData.hoursCommitted}
                                     onChange={handleChange}
@@ -175,6 +181,7 @@ const VolunteerForm = () => {
                             <label>
                                 <b>This isn’t necessary, but do you understand Arabic and/or Hebrew? Let us know what level.</b>
                                 <input
+                                    className="w-full p-5 mt-[2.5%]"
                                     type="text"
                                     name="languageSkill"
                                     value={formData.languageSkill}
@@ -182,6 +189,7 @@ const VolunteerForm = () => {
                                     maxLength={150}
                                 />
                             </label>
+                            <br />
                             <br />
 
                             {/* When submitting is loading, disable SUBMIT button */}

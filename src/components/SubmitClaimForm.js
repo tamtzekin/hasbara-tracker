@@ -75,13 +75,16 @@ const SubmitClaimForm = () => {
         <>
             <Header />
             <div className="content-container">
-                <h2>Submit a claim to Hasbara Tracker</h2>
+                <h2 className="subheading">Submit a claim</h2>
 
                 {/* If user has already submitted that session, prevent repeat submissions */}
                 {isSubmitted ? (
                     <>
                         <div className="thank-you-message">
-                            Thank you for submitting a claim. We’ll review it as soon as we can.
+                            Thank you for submitting a claim. We’ll review it as soon as we can.<br />
+                            <br />
+                            
+                            Til liberation 🍉
                         </div>
 
                         <button 
@@ -111,11 +114,12 @@ const SubmitClaimForm = () => {
                         Thanks for contributing to our efforts to document, archive, debunk and give context to hasbara – a.k.a ‘explanations’.
                         </div>
 
-                        <form onSubmit={handleSubmit}>
+                        <form className="mt-5" onSubmit={handleSubmit}>
                             <label>
                                 <b>Full name</b><span className="required-field">*</span>
-                                <br />
+                                
                                 <input
+                                    className="w-full p-1 mt-[2.5%] mb-9" 
                                     type="text"
                                     name="fullName"
                                     value={formData.fullName}
@@ -124,12 +128,12 @@ const SubmitClaimForm = () => {
                                     maxLength={30}
                                 />
                             </label>
-                            <br />
 
                             <label>
                                 <b>Email address</b><span className="required-field">*</span>
                                 <br />
                                 <input
+                                    className="w-full p-1 mt-[2.5%] mb-9"
                                     type="email"
                                     name="email"
                                     value={formData.email}
@@ -145,6 +149,7 @@ const SubmitClaimForm = () => {
                                 <em>Describe it briefly.</em>
                                 <br />
                                 <textarea
+                                    className="w-full p-5 mt-[2.5%] mb-9"
                                     name="whatIsClaim"
                                     value={formData.whatIsClaim}
                                     onChange={handleChange}
@@ -152,13 +157,13 @@ const SubmitClaimForm = () => {
                                     maxLength={250}
                                 />
                             </label>
-                            <br />
 
                             <label>
                             <b>Where did you see it?</b><br />
                                 <em>Provide information on where you encountered this claim if you are able to.</em>
                                 <br />
                                 <textarea
+                                    className="w-full p-5 mt-[2.5%] mb-9"
                                     name="locationOfClaim"
                                     value={formData.locationOfClaim}
                                     onChange={handleChange}
@@ -172,6 +177,7 @@ const SubmitClaimForm = () => {
                                <b>Additional comments</b><br />
                                 <em>Feel free to include any additional context or comments that might be helpful.</em>
                                 <input
+                                    className="w-full p-8 mt-[2.5%]"
                                     type="text"
                                     name="commentsAboutClaim"
                                     value={formData.commentsAboutClaim}
@@ -185,7 +191,7 @@ const SubmitClaimForm = () => {
                             {isLoading ? (
                                 <p>Submitting...</p>
                             ) : (
-                                <button className="btn-green" type="submit" disabled={isSubmitted}>
+                                <button className="btn-green mt-9" type="submit" disabled={isSubmitted}>
                                     Submit
                                 </button>
                             )}

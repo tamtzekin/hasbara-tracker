@@ -16,13 +16,14 @@ const MobileMenu = () => {
 
     return (
         <>
-            <div className="mobile-menu">
-                <div className="menu-icon" onClick={openModal}>
+            <span className="">
+                {/* menu-toggle */}
+                <div className="menu-toggle" onClick={openModal}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
-            </div>
+            </span>
 
             <Modal
                 isOpen={modalOpen}
@@ -34,7 +35,7 @@ const MobileMenu = () => {
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
                         border: 'none',
-                        background: '#cbcbcb',
+                        background: '#d6d6d6',
                         padding: '20',
                         height: '100%',
                         width: '100%',
@@ -48,8 +49,8 @@ const MobileMenu = () => {
                 }}
             >
                 <div className="menu-links">
-                    <div class="arrow-menu">
-                        <Link onClick={closeModal}>←</Link>
+                    <div className="arrow-menu">
+                        <Link onClick={closeModal}>⤎</Link>
                     </div>
 
                     <Link to="/" onClick={closeModal}>
@@ -68,18 +69,22 @@ const MobileMenu = () => {
                         About
                     </Link>
 
-                    {/* <span class="break"></span> */}
+                    <span className="break"></span>
 
-                    {/* <Link to="/newsletter" onClick={closeModal}>
-                        Newsletter
-                    </Link> */}
+                    <Link to="/support" onClick={closeModal}>
+                        Support us
+                    </Link>
 
-                    {/* <Link to="/contact" onClick={closeModal}>
+                    <Link to="/contact" onClick={closeModal}>
                         Contact
-                    </Link> */}
+                    </Link>
 
-                    <Link to="http://instagram.com/hasbaratracker" target="_blank">
+                    <Link to="http://instagram.com/hasbaratracker">
                         Instagram
+                    </Link>
+
+                    <Link to="https://twitter.com/hasbaratracker">
+                        X
                     </Link>
                 </div>
             </Modal>

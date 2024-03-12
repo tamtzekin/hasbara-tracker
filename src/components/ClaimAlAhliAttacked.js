@@ -465,13 +465,23 @@ export default function ClaimAlAhliAttacked() {
                                                         cursor: column.id === 'date' ? 'ns-resize' : 'auto',
                                                     }}
                                                 >
-                                                    {column.render('Header')}
-                                                    {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
+                                                
+                                                    {/* 'Date' heading */}
+                                                    <span style={{ marginRight: '0.25rem'}}>
+                                                        {column.render('Header')}
+                                                    </span>
+
+                                                    {/* 'Date' asc/desc arrow */}
+                                                    {column.id === 'date' && column.isSorted ? (
+                                                        <span style={{ verticalAlign: 'middle' }}>
+                                                            {column.isSortedDesc ? '▼' : '▲'} 
+                                                        </span>
+                                                    ) : ''}
                                                 </th>
                                             ))}
                                         </tr>
                                     ))}
-                                                        <div className="header-container-border"></div>
+                                                    <div className="header-container-border"></div>
 
                                 </thead>
                                 

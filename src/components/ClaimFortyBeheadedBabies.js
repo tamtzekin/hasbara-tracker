@@ -1,8 +1,8 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
-import { Helmet } from 'react-helmet';
-import { HelmetProvider } from 'react-helmet-async';
+
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import './Tracker.css';
 import '../App.css';
@@ -348,13 +348,10 @@ export default function ClaimFortyBeheadedBabies() {
     // Sets state based on what is in the search box
     const { globalFilter } = state;
 
-  // Helmet handles metadata for link previews
-  const helmetContext = {};
-
 
   return (
-        <HelmetProvider context={helmetContext}>
-        <>
+    <HelmetProvider>
+    <>
         <Helmet>
             {/* HTML meta tags */}
             {/* Important metadata */}
@@ -575,9 +572,9 @@ export default function ClaimFortyBeheadedBabies() {
         </>
     )}
 
-    <div className="back-to-top"><a href="#top">🔺 Back to top</a></div>
+        <div className="back-to-top"><a href="#top">🔺 Back to top</a></div>
 
-    <Footer />
+        <Footer />
     </>
     </HelmetProvider>
     );

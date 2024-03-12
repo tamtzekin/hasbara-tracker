@@ -24,14 +24,9 @@ import ClaimIsraelDeniesChurchKilling from './components/ClaimIsraelDeniesChurch
 
 
 const App = () => {
-
-    // Helmet handles metadata for link previews
-    const helmetContext = {};
-
-
     return (
     <>
-    <HelmetProvider context={helmetContext}>
+    <HelmetProvider>
         <Router>
             <VideoPlayer />
             <ScrollToTop />

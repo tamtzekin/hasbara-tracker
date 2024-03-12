@@ -61,7 +61,7 @@ const Homepage = () => {
                     </span>
                     </article>
                 </details>
-
+                    
                 <ClaimsList />
             <br />
             </div>

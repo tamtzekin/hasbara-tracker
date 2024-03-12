@@ -29,7 +29,7 @@ const ClaimsList = () => {
 
         <div className="claim-coming-soon"><em>Coming soon:</em> ‘There are no churches in Gaza’</div>
 
-        <div className="claim-coming-soon"><em>Coming soon:</em> ‘Hostage gave birth in captivity’</div
+        <div className="claim-coming-soon"><em>Coming soon:</em> ‘Hostage gave birth in captivity’</div>
 
         <div className="claim-coming-soon">+ more</div>
 

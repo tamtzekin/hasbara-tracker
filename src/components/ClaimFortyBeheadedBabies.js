@@ -355,6 +355,7 @@ export default function ClaimFortyBeheadedBabies() {
             <meta name="type" property="og:type" content="article" />
             <meta name="site_name" property="og:site_name" content="Claim: ‘Forty beheaded babies’" />
             <meta name="site_name" property="og:site_name" content="Hasbara Tracker" />
+            <title>Claim: ‘Forty beheaded babies’</title>
             <meta name="title" property="og:title" content="Claim: ‘Forty beheaded babies‘" />
             <meta name="description" property="og:description" content="Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally." />
             <meta name="image" property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />

@@ -112,7 +112,7 @@ const SubmitClaimForm = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                maxLength={50}
+                                maxLength={100}
                             />
                         </label>
                         <br />

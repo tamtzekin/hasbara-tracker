@@ -24,14 +24,14 @@ const Homepage = () => {
             <meta property="twitter:image:alt" content="In a pixellated font, the title reads: Hasbara Tracker - Debunking Israeli propaganda" />
 
             {/* Twitter link preview metadata */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:site" content="@hasbaratracker" />
-            <meta name="twitter:title" content="Hasbara Tracker" />
-            <meta name="twitter:creator" content="@hasbaratracker" />
-            <meta name="twitter:description" content="A database tracking and debunking fabrications by the Israeli state during its current genocidal campaign against Palestinians in Gaza since 7 October 2023." />
-            <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
-            <meta property="twitter:url" content="https://hasbaratracker.com/" />
-            <meta property="twitter:domain" content="hasbaratracker.com" />
+            <meta name="twitter:card" content="summary_large_image" data-rh="true" />
+            <meta name="twitter:site" content="@hasbaratracker" data-rh="true" />
+            <meta name="twitter:title" content="A database tracking and debunking fabrications by the Israeli state during its current genocidal campaign against Palestinians in Gaza since 7 October 2023." data-rh="true" />
+            <meta name="twitter:description" content="A database tracking and debunking fabrications by the Israeli state during its current genocidal campaign against Palestinians in Gaza since 7 October 2023." data-rh="true" />
+            <meta name="twitter:creator" content="@hasbaratracker" data-rh="true" />
+            <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" data-rh="true" />
+            <meta property="twitter:url" content="https://hasbaratracker.com" data-rh="true" />
+            <meta property="twitter:domain" content="hasbaratracker.com" data-rh="true" />
         </Helmet>
 
         <Header />

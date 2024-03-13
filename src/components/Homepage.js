@@ -13,7 +13,7 @@ const Homepage = () => {
         <Helmet>
             {/* HTML meta tags */}
             {/* Important metadata */}
-            <meta name="url" property="og:url" content="https://hasbaratracker.com/" />
+            {/* <meta name="url" property="og:url" content="https://hasbaratracker.com/" /> */}
             <meta name="type" property="og:type" content="article" />
             <meta name="site_name" property="og:site_name" content="Hasbara Tracker" />
             <title>Hasbara Tracker</title>
@@ -30,8 +30,8 @@ const Homepage = () => {
             <meta name="twitter:description" content="A database tracking and debunking fabrications by the Israeli state during its current genocidal campaign against Palestinians in Gaza since 7 October 2023." data-rh="true" />
             <meta name="twitter:creator" content="@hasbaratracker" data-rh="true" />
             <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" data-rh="true" />
-            <meta property="twitter:url" content="https://hasbaratracker.com" data-rh="true" />
-            <meta property="twitter:domain" content="hasbaratracker.com" data-rh="true" />
+            {/* <meta property="twitter:url" content="https://hasbaratracker.com" data-rh="true" /> */}
+            {/* <meta property="twitter:domain" content="hasbaratracker.com" data-rh="true" /> */}
         </Helmet>
 
         <Header />

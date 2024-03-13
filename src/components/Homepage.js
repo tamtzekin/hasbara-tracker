@@ -17,7 +17,7 @@ const Homepage = () => {
             <meta name="type" property="og:type" content="article" />
             <meta name="site_name" property="og:site_name" content="Hasbara Tracker" />
             <title>Hasbara Tracker</title>
-            <meta name="title" property="og:title" content="Hasbara Tracker" />
+            <meta name="title" property="og:title" content="Hasbara Tracker | Tracking Israeli propaganda" />
             <meta name="description" property="og:description" content="A database tracking and debunking fabrications by the Israeli state during its current genocidal campaign against Palestinians in Gaza since 7 October 2023." />
             <meta name="image" property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
             
@@ -26,7 +26,7 @@ const Homepage = () => {
             {/* Twitter link preview metadata */}
             <meta name="twitter:card" content="summary_large_image" data-rh="true" />
             <meta name="twitter:site" content="@hasbaratracker" data-rh="true" />
-            <meta name="twitter:title" content="A database tracking and debunking fabrications by the Israeli state during its current genocidal campaign against Palestinians in Gaza since 7 October 2023." data-rh="true" />
+            <meta name="twitter:title" content="Hasbara Tracker | Tracking Israeli propaganda." data-rh="true" />
             <meta name="twitter:description" content="A database tracking and debunking fabrications by the Israeli state during its current genocidal campaign against Palestinians in Gaza since 7 October 2023." data-rh="true" />
             <meta name="twitter:creator" content="@hasbaratracker" data-rh="true" />
             <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" data-rh="true" />

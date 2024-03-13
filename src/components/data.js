@@ -8,7 +8,7 @@ const summaries = [
  
     {
         claimMainTitle: 'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces',
-        claimSummary: 'Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance.',
+        claimSummary: 'Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Ahli Hospital attack was a misfired rocket from the Palestinian resistance.',
     },
  
     {

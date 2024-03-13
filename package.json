@@ -64,5 +64,11 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1"
+  },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
   }
 }

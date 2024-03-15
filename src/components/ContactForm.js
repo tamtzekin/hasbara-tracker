@@ -50,16 +50,26 @@ const SubmitClaimForm = () => {
         try {
             setIsLoading(true);
 
+            // Get current date and time
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleString();
+
+            // Include current date and time in form data
+            const updatedFormData = {
+                ...formData,
+                dateTime: formattedDate // Add dateTime field to form data
+            };
+            
             const response = await fetch('https://script.google.com/macros/s/AKfycbxzWa1PniI7sDkNvAhXR09Gf2967LOE1GlnxUOXG7VWjYkNGFOcdbJyHZ80WYpnAASXSw/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: new URLSearchParams(formData).toString(),
+                body: new URLSearchParams(updatedFormData).toString(),
             });
 
             if (response.ok) {
-                console.log('Form submitted successfully');
+                console.log('Form submitted successfully', updatedFormData);
                 setIsSubmitted(true);
                 sessionStorage.setItem('hasSubmitted', 'true'); // Set session storage flag
                 setFormData(initialFormData); // Reset form data

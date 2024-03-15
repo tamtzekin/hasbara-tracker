@@ -97,7 +97,7 @@ const SubmitClaimForm = () => {
                                 value={formData.fullName}
                                 onChange={handleChange}
                                 required
-                                maxLength={50}
+                                maxLength={80}
                             />
                         </label>
                         <br />
@@ -112,7 +112,7 @@ const SubmitClaimForm = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                maxLength={100}
+                                maxLength={60}
                             />
                         </label>
                         <br />
@@ -125,8 +125,7 @@ const SubmitClaimForm = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                // required 
-                                maxLength={500}
+                                maxLength={1250}
                             />
                         </label>
                         <br />

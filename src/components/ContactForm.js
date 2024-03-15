@@ -7,7 +7,7 @@ import Footer from './Footer';
 import '../App.css';
 import './VolunteerForm.css';
 
-const SubmitClaimForm = () => {
+const ContactForm = () => {
     const initialFormData = {
         fullName: '',
         email: '',
@@ -151,4 +151,4 @@ const SubmitClaimForm = () => {
     );
 };
 
-export default SubmitClaimForm;
+export default ContactForm;

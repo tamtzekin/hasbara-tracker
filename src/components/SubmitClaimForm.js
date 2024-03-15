@@ -125,7 +125,7 @@ const SubmitClaimForm = () => {
                                     value={formData.fullName}
                                     onChange={handleChange}
                                     required
-                                    maxLength={30}
+                                    maxLength={80}
                                 />
                             </label>
 
@@ -139,7 +139,7 @@ const SubmitClaimForm = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    maxLength={50}
+                                    maxLength={60}
                                 />
                             </label>
                             <br />
@@ -154,7 +154,7 @@ const SubmitClaimForm = () => {
                                     value={formData.whatIsClaim}
                                     onChange={handleChange}
                                     required
-                                    maxLength={250}
+                                    maxLength={1250}
                                 />
                             </label>
 
@@ -167,7 +167,7 @@ const SubmitClaimForm = () => {
                                     name="locationOfClaim"
                                     value={formData.locationOfClaim}
                                     onChange={handleChange}
-                                    maxLength={250}
+                                    maxLength={1250}
                                 />
                             </label>
                             <br />
@@ -182,7 +182,7 @@ const SubmitClaimForm = () => {
                                     name="commentsAboutClaim"
                                     value={formData.commentsAboutClaim}
                                     onChange={handleChange}
-                                    maxLength={250}
+                                    maxLength={1250}
                                 />
                             </label>
                             <br />

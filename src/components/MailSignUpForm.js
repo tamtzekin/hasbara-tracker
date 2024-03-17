@@ -96,7 +96,7 @@ const MailSignUpForm = () => {
                                 value={formData.firstName}
                                 onChange={handleChange}
                                 required
-                                maxLength={20}
+                                maxLength={50}
 
                                 aria-label="name" 
                                 aria-required="true" 
@@ -116,7 +116,7 @@ const MailSignUpForm = () => {
                                 value={formData.lastName}
                                 onChange={handleChange}
                                 required
-                                maxLength={20}
+                                maxLength={50}
 
                                 aria-label="last_name" 
                                 aria-required="true"
@@ -138,7 +138,7 @@ const MailSignUpForm = () => {
                                 value={formData.emailAddress}
                                 onChange={handleChange}
                                 required
-                                maxLength={20}
+                                maxLength={100}
 
                                 aria-label="email"
                                 aria-required="true" 

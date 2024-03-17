@@ -44,12 +44,22 @@ const VolunteerForm = () => {
         try {
             setIsLoading(true);
 
+            // Get current date and time
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleString();
+
+            // Include current date and time in form data
+            const updatedFormData = {
+                dateTime: formattedDate, // Add dateTime field to form data
+                ...formData
+            };
+
             const response = await fetch('https://script.google.com/macros/s/AKfycbxW-EKbkyQjHMby5HOp1kqf4R1E1YI3Ap9lWn7_TEzaQ6VHK0d_Scz5DTjwlEt2ga5W8g/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: new URLSearchParams(formData).toString(),
+                body: new URLSearchParams(updatedFormData).toString(),
             });
 
             if (response.ok) {
@@ -125,7 +135,7 @@ const VolunteerForm = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    maxLength={50}
+                                    maxLength={100}
                                 />
                             </label>
                             <br />

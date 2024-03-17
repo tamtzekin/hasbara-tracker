@@ -7,7 +7,7 @@ import Footer from './Footer';
 import '../App.css';
 import './VolunteerForm.css';
 
-const SubmitClaimForm = () => {
+const ContactForm = () => {
     const initialFormData = {
         fullName: '',
         email: '',
@@ -56,8 +56,8 @@ const SubmitClaimForm = () => {
 
             // Include current date and time in form data
             const updatedFormData = {
-                ...formData,
-                dateTime: formattedDate // Add dateTime field to form data
+                dateTime: formattedDate, // Add dateTime field to form data
+                ...formData
             };
             
             const response = await fetch('https://script.google.com/macros/s/AKfycbxzWa1PniI7sDkNvAhXR09Gf2967LOE1GlnxUOXG7VWjYkNGFOcdbJyHZ80WYpnAASXSw/exec', {
@@ -161,4 +161,4 @@ const SubmitClaimForm = () => {
     );
 };
 
-export default SubmitClaimForm;
+export default ContactForm;

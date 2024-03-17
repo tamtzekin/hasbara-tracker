@@ -357,15 +357,15 @@ export default function ClaimAlAhliAttacked() {
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content="Hasbara Tracker" />
             <meta property="og:title" content="Claim: ‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’" />
-            <meta property="og:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+            <meta property="og:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Ahli Hospital attack was a misfired rocket from the Palestinian resistance." />
             <meta property="og:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
 
             <meta name="twitter:card" content="summary_large_image" />
-            <meta property="twitter:domain" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+            <meta property="twitter:domain" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Ahli  Hospital attack was a misfired rocket from the Palestinian resistance." />
             <meta name="twitter:site" content="@hasbaratracker" />
             <meta property="twitter:url" content="https://hasbaratracker.com/al-ahli-hospital" />
             <meta name="twitter:title" content="Claim: Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces" />
-            <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Shifa Hospital attack was a misfired rocket from the Palestinian resistance." />
+            <meta name="twitter:description" content="Israeli officials claim Israeli forces do not bomb hospitals, and that the Al-Ahli  Hospital attack was a misfired rocket from the Palestinian resistance." />
             <meta name="twitter:image" content="https://files.hasbaratracker.com/htlogo_twittercard.jpg" />
             <meta name="twitter:creator" content="@hasbaratracker" />
         </Helmet>
@@ -465,13 +465,23 @@ export default function ClaimAlAhliAttacked() {
                                                         cursor: column.id === 'date' ? 'ns-resize' : 'auto',
                                                     }}
                                                 >
-                                                    {column.render('Header')}
-                                                    {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
+                                                
+                                                    {/* 'Date' heading */}
+                                                    <span style={{ marginRight: '0.25rem'}}>
+                                                        {column.render('Header')}
+                                                    </span>
+
+                                                    {/* 'Date' asc/desc arrow */}
+                                                    {column.id === 'date' && column.isSorted ? (
+                                                        <span style={{ verticalAlign: 'middle' }}>
+                                                            {column.isSortedDesc ? '▼' : '▲'} 
+                                                        </span>
+                                                    ) : ''}
                                                 </th>
                                             ))}
                                         </tr>
                                     ))}
-                                                        <div className="header-container-border"></div>
+                                                    <div className="header-container-border"></div>
 
                                 </thead>
                                 

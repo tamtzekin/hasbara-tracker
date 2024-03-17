@@ -40,12 +40,22 @@ const SubmitClaimForm = () => {
         try {
             setIsLoading(true);
 
+            // Get current date and time
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleString();
+
+            // Include current date and time in form data
+            const updatedFormData = {
+                dateTime: formattedDate, // Add dateTime field to form data
+                ...formData
+            };
+
             const response = await fetch('https://script.google.com/macros/s/AKfycbxy7-eu3grhA1TQoVIMkiPtdjHFZz3Xz9gyuKuYMg93ujPoApXCWdu3OFarPxmDCEk/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: new URLSearchParams(formData).toString(),
+                body: new URLSearchParams(updatedFormData).toString(),
             });
 
             if (response.ok) {

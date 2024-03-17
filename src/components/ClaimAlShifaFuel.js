@@ -465,8 +465,17 @@ export default function ClaimAlShifaFuel() {
                                                         cursor: column.id === 'date' ? 'ns-resize' : 'auto',
                                                     }}
                                                 >
-                                                    {column.render('Header')}
-                                                    {column.id === 'date' && column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
+                                                    {/* 'Date' heading */}
+                                                    <span style={{ marginRight: '0.25rem'}}>
+                                                        {column.render('Header')}
+                                                    </span>
+
+                                                    {/* 'Date' asc/desc arrow */}
+                                                    {column.id === 'date' && column.isSorted ? (
+                                                        <span style={{ verticalAlign: 'middle' }}>
+                                                            {column.isSortedDesc ? '▼' : '▲'} 
+                                                        </span>
+                                                    ) : ''}                                                
                                                 </th>
                                             ))}
                                         </tr>

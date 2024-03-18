@@ -2757,7 +2757,7 @@ const data = [
      },
      description: {
          summary: 'Israeli military claims it found an ‘al-Qaeda/ISIS’ training booklet on the body of one Hamas fighter',
-         details: 'The official Israel Occupation Forces account @idfonline on X (formerly Twitter) claimed ‘an al-Qaeda/Daesh training and inspiration booklet’ was found with the dead body of a Hamas fighter in Kibbutz Be’eri.<br><br>Translated from Hebrew to English, the post reads: ‘The cover of an al-Qaeda/ISIS training and inspiration booklet that was found on the body of a terrorist who infiltrated the territory of the State of Israel’ along with an image of what is the front of the booklet.’',
+         details: 'The official Israel Occupation Forces account @idfonline on X (formerly Twitter) claimed ‘an al-Qaeda/Daesh training and inspiration booklet’ was found with the dead body of a Hamas fighter in Kibbutz Be’eri.<br><br>Translated from Hebrew to English, the post reads: ‘The cover of an al-Qaeda/ISIS training and inspiration booklet that was found on the body of a terrorist who infiltrated the territory of the State of Israel’ along with an image of what is the front of the booklet.',
      },
      sources: [
          {

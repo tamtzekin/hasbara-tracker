@@ -5,7 +5,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './Tracker.css';
 import '../App.css';
 
-import { data, summaries } from './data';
+import { data } from './data';
 import ClaimFilter from './ClaimFilter';
 import SearchBar from './SearchBar';
 import TrackerColumns from './TrackerColumns';
@@ -15,6 +15,7 @@ import Logo from './Logo';
 import NavLinks from './NavLinks'
 import Footer from './Footer';
 import BackToTop from './BackToTop';
+import ClaimSummary from './ClaimSummary';
 import RenderTrackerDesktop from './RenderTrackerDesktop';
 import RenderTrackerMobile from './RenderTrackerMobile';
 
@@ -123,19 +124,9 @@ export default function ClaimFortyBeheadedBabies() {
             <NavLinks />
         </span>
 
-            {/* Claim summary */}
-            <div className="claim-summary container mt-10 mobile:w-[100%] mobile:mt-[5%]">
-                <div className="mobile:text-xs laptop:w-7/12 laptop:text-md font-lores font-bold">
-                    The claim</div>
-                    
-                <div className="mobile:mt-0 mobile:text-xs laptop:text-md laptop:w-7/12 mb-2 mt-1">
-                    ‘{summaries[0].claimMainTitle}’</div>
-
-                <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
-                    {summaries[0].claimSummary}
-                </div>
-            </div>            
-        </span>
+        {/* Shows title and summary of the claim */}
+        <ClaimSummary id={0} />
+    </span>
         
     
 

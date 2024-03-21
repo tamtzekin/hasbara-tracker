@@ -18,6 +18,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import NavLinks from './NavLinks'
 import Footer from './Footer';
+import BackToTop from './BackToTop';
 
 
 export default function ClaimFortyBeheadedBabies() {
@@ -294,8 +295,7 @@ export default function ClaimFortyBeheadedBabies() {
         </>
     )}
 
-        <div className="back-to-top"><a href="#top">🔺 Back to top</a></div>
-
+        <BackToTop />
         <Footer />
     </>
     </HelmetProvider>

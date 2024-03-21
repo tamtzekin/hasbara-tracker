@@ -16,6 +16,7 @@ import TrackerColumns from './TrackerColumns';
 
 import MobileMenu from './MobileMenu';
 import Logo from './Logo';
+import NavLinks from './NavLinks'
 import Footer from './Footer';
 
 
@@ -117,35 +118,11 @@ export default function ClaimFortyBeheadedBabies() {
 
     {/* Header (fixed) */}
     <span className="header-container-fixed">
-        <span className="flex mobile:mt-[1%] mobile:ml-[-0.3%]">
-            {/* Logo */}
-            <div className="mobile:w-9/10 laptop:w-1/5 mr-auto">
-                <Link to="/"><Logo /></Link>
-            </div>
-
-        {/* Mobile menu toggle */}
-            <span className="mobile:mt-[3%]">
-                <MobileMenu />
-            </span>
-
-            {/* Nav links */}
-            <span className="nav-links-fixed mobile:invisible">
-                <li className="undotted">
-                    <NavLink to="/">Claims</NavLink>
-                </li>
-                <li className="undotted">
-                    <NavLink to="/submit-claim">Submit a claim</NavLink>
-                </li>
-                <li className="undotted">
-                    <NavLink to="/volunteer">Volunteer</NavLink>
-                </li>
-                <li className="undotted">
-                    <NavLink to="/about">About</NavLink>
-                </li>
+        <span className="flex">
+            <Logo />
+            <MobileMenu />
+            <NavLinks />
         </span>
-
-    </span>
-
 
             {/* Claim summary */}
             <div className="claim-summary container mt-10 mobile:w-[100%] mobile:mt-[5%]">

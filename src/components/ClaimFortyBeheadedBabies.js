@@ -13,7 +13,7 @@ import BackToTop from './BackToTop';
 
 // Tracker
 import './Tracker.css';
-import { data } from './data';
+import { data, summaries } from './data';
 import TrackerColumns from './TrackerColumns';
 import ClaimSummary from './ClaimSummary';
 import RenderTrackerDesktop from './RenderTrackerDesktop';
@@ -22,10 +22,11 @@ import RenderTrackerMobile from './RenderTrackerMobile';
 export default function ClaimFortyBeheadedBabies() {    
     const metadataProps = {
         url: "https://hasbaratracker.com/forty-beheaded-babies",
-        title: "Claim: ‘Forty beheaded babies’",
-        description: "Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.",
-        twitterTitle: "Claim: ‘Forty beheaded babies’",
-        twitterDescription: "Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.",
+        title: summaries[0].claimMainTitle,
+        description: summaries[0].claimSummary,
+        
+        twitterTitle: summaries[0].claimMainTitle,
+        twitterDescription: summaries[0].claimSummary,
         twitterUrl: "https://hasbaratracker.com/forty-beheaded-babies",
     };
 

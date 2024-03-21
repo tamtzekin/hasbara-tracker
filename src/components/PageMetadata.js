@@ -28,8 +28,8 @@ const PageMetadata = ({
             <meta name="url" property="og:url" content={url} />
             <meta name="type" property="og:type" content={type} />
             <meta name="site_name" property="og:site_name" content={siteName} />
-            <title>{title}</title>
-            <meta name="title" property="og:title" content={title} />
+            <title>Claim: ‘{title}’</title>
+            <meta name="title" property="og:title" content='Claim: ‘{title}’' />
             <meta name="description" property="og:description" content={description} />
             <meta name="image" property="og:image" content={image} />
             

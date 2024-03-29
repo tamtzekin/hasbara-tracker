@@ -71,7 +71,7 @@ const MobileMenu = () => {
 
                     <span className="break"></span>
 
-                    <Link to="/support" onClick={closeModal}>
+                    <Link to="https://www.paypal.com/donate/?hosted_button_id=44XADNYVGGMPS">
                         Support us
                     </Link>
 

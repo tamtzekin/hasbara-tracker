@@ -7,7 +7,7 @@ import Footer from './Footer';
 import '../App.css';
 import './VolunteerForm.css';
 
-const SubmitClaimForm = () => {
+const ContactForm = () => {
     const initialFormData = {
         fullName: '',
         email: '',
@@ -50,16 +50,26 @@ const SubmitClaimForm = () => {
         try {
             setIsLoading(true);
 
+            // Get current date and time
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleString();
+
+            // Include current date and time in form data
+            const updatedFormData = {
+                dateTime: formattedDate, // Add dateTime field to form data
+                ...formData
+            };
+            
             const response = await fetch('https://script.google.com/macros/s/AKfycbxzWa1PniI7sDkNvAhXR09Gf2967LOE1GlnxUOXG7VWjYkNGFOcdbJyHZ80WYpnAASXSw/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: new URLSearchParams(formData).toString(),
+                body: new URLSearchParams(updatedFormData).toString(),
             });
 
             if (response.ok) {
-                console.log('Form submitted successfully');
+                console.log('Form submitted successfully', updatedFormData);
                 setIsSubmitted(true);
                 sessionStorage.setItem('hasSubmitted', 'true'); // Set session storage flag
                 setFormData(initialFormData); // Reset form data
@@ -97,7 +107,7 @@ const SubmitClaimForm = () => {
                                 value={formData.fullName}
                                 onChange={handleChange}
                                 required
-                                maxLength={50}
+                                maxLength={80}
                             />
                         </label>
                         <br />
@@ -112,7 +122,7 @@ const SubmitClaimForm = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                maxLength={100}
+                                maxLength={60}
                             />
                         </label>
                         <br />
@@ -125,8 +135,7 @@ const SubmitClaimForm = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                // required 
-                                maxLength={500}
+                                maxLength={3000}
                             />
                         </label>
                         <br />
@@ -152,4 +161,4 @@ const SubmitClaimForm = () => {
     );
 };
 
-export default SubmitClaimForm;
+export default ContactForm;

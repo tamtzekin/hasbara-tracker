@@ -20,7 +20,7 @@ import ClaimAlShifaFuel from './components/ClaimAlShifaFuel';
 import ClaimMakeup from './components/ClaimMakeup';
 import ClaimHamasChemicalWeapons from './components/ClaimHamasChemicalWeapons';
 import ClaimIsraelDeniesChurchKilling from './components/ClaimIsraelDeniesChurchKilling';
-
+import ClaimIsraelHelpsElderlyMan from './components/ClaimIsraelHelpsElderlyMan';
 
 
 const App = () => {
@@ -40,6 +40,7 @@ const App = () => {
                 <Route path="/sign-up" element={<MailSignUpForm />} />
 
                 {/* Individual claim pages */}
+                <Route path="/israel-helps-elderly-man" element={<ClaimIsraelHelpsElderlyMan />} />
                 <Route path="/forty-beheaded-babies" element={<ClaimFortyBeheadedBabies />} />
                 <Route path="/al-ahli-attacked" element={<ClaimAlAhliAttacked />} />
                 <Route path="/al-shifa-fuel" element={<ClaimAlShifaFuel />} />

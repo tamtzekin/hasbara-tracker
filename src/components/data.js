@@ -2,8 +2,7 @@
 const summaries = [
     {
         claimMainTitle: 'Forty beheaded babies',
-        claimSummary:
-        'Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.',
+        claimSummary: 'Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.',
     },
  
     {
@@ -32,8 +31,8 @@ const summaries = [
     },
 
     {
-        claimMainTitle: '',
-        claimSummary: '',
+        claimMainTitle: 'Israeli soldier helps elderly Palestinian man in ‘safe corridor’',
+        claimSummary: 'Israeli state falsely depicts soldier assisting an elderly Palestinian man in a ‘safe corridor’, while the man, Bashir Hajji, was killed by Israeli forces days earlier.',
     },
 
     {
@@ -2757,7 +2756,7 @@ const data = [
      },
      description: {
          summary: 'Israeli military claims it found an ‘al-Qaeda/ISIS’ training booklet on the body of one Hamas fighter',
-         details: 'The official Israel Occupation Forces account @idfonline on X (formerly Twitter) claimed ‘an al-Qaeda/Daesh training and inspiration booklet’ was found with the dead body of a Hamas fighter in Kibbutz Be’eri.<br><br>Translated from Hebrew to English, the post reads: ‘The cover of an al-Qaeda/ISIS training and inspiration booklet that was found on the body of a terrorist who infiltrated the territory of the State of Israel’ along with an image of what is the front of the booklet.’',
+         details: 'The official Israel Occupation Forces account @idfonline on X (formerly Twitter) claimed ‘an al-Qaeda/Daesh training and inspiration booklet’ was found with the dead body of a Hamas fighter in Kibbutz Be’eri.<br><br>Translated from Hebrew to English, the post reads: ‘The cover of an al-Qaeda/ISIS training and inspiration booklet that was found on the body of a terrorist who infiltrated the territory of the State of Israel’ along with an image of what is the front of the booklet.',
      },
      sources: [
          {
@@ -2956,6 +2955,93 @@ const data = [
      ]
  },
 
+ // CLAIM: Israeli soldier helps elderly Palestinian man in ‘safe corridor’
+
+{
+   claimTitle: 'Israeli soldier helped elderly Palestinian man in ‘safe corridor’',
+   date: '9 Nov 2023',
+   claim: {
+       claimText: 'Context',
+       claimTag: 'context-tag',
+   },
+   description: {
+       summary: 'Elderly Palestinian man Bashir Hajji is killed by Israeli forces in the ‘safe corridor’',
+           details: 'The son of elderly Palestinian man Bashir Hajji described how his father was shot and killed by Israeli snipers on Salah Al-Din Street near a roundabout in Gaza in an interview with Arabic broadcaster Al-Araby in Gaza on 9 November, 2023.<br><br>He recounted that his elderly parents were attempting to walk further south of Gaza, in the Israeli-named ‘humanitarian corridor’ that the Israeli state has been forcibly displacing Palestinians into.<br><br>Bashir Hajji’s son said in the interview:<br><br>’My parents and I were trying to get to the southern area. After the Kuwaiti roundabout we found a man with a cart who was transporting the elderly.<br>br>I wanted to transport my elderly father on the cart. I carried our belongings and started walking, and I could hear their voices behind me. In that area, you can’t look around or turn to see behind you. Suddenly, I couldn’t hear them anymore. I turned around and couldn’t find my parents or the cart.<br><br>I sent back some of the young men who were going back and forth. I saw my mother in a car and felt relieved, and then a man told me that he had gotten my father out. I was relieved and started running to reach them.<br><br>They told me he (my father) was lying inside. I went in thinking he had had a diabetic attack, as he gets those sometimes. I went in to the Bakron Building to locate him, and found him dead, and they tried to shoot at the building while we were getting his body out.',
+   },
+   sources: [
+       {
+           sourceName: 'Al-Araby',
+           sourceLink: 'https://youtu.be/j6pKGJ3CM0c',
+           archiveLink: 'https://files.hasbaratracker.com/09Nov_2023_Bashir%20Hajji_son_interview_alaraby.mp4',
+           videoPreviewLink: 'https://files.hasbaratracker.com/09Nov_2023_Bashir%20Hajji_son_interview_alaraby.mp4',
+       },
+   ]
+},
+
+{
+   claimTitle: 'Israeli soldier helped elderly Palestinian man in ‘safe corridor’',
+   date: '14 Nov 2023',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+       summary: 'Israeli state’s social media shares image of soldier speaking to Bashir Hajji shortly before he was killed to highlight that they are ‘kind’ to the elderly',
+           details: 'Days later, the official Israeli state’s Arabic account on X (formerly Twitter) posted an image with two photos side by side to contrast how Israelis treat the elderly compared to Palestinians.<br><br>The photo on the left with Arabic text translating to ‘terrorist organisation’ showed a Palestinian resistance fighter with a seated elderly settler doing the peace sign with a rifle on her lap from the Al-Aqsa Flood operation on 7 October, 2023. The woman was unharmed.<br><br>The photo on the right with Arabic text translating to ‘Israel’ showed an Israeli soldier in Gaza seemingly speaking to an elderly Palestinian man with a walking stick.<br><br>The post’s text lauded the morals and politeness of Israel Occupation Force soldiers. It read (from Hebrew to English):<br><br>‘Among the obligations and morals of the three heavenly religions: Islam, Judaism, and Christianity, are honouring one’s parents and the elderly, being kind to them, being kind to them, and being polite to them in word and deed.’<br><br>It says in the Bible in the Book of Exodus: Honor your father and your mother, so that your days may be long in the land that the Lord your God is giving you. The IDF soldiers adhere to and work according to this lofty principle, while the monsters of Hamas and Islamic Jihad, who have no religion or morals, kidnap the elderly and detain them in harsh conditions.’',
+   },
+   sources: [
+       {
+           sourceName: '@IsraelArabic on X',
+           sourceLink: 'https://twitter.com/IsraelArabic/status/1724371929413365779',
+           archiveLink: 'https://archive.ph/1WtmU',
+       },
+   ]
+},
+
+{
+   claimTitle: 'Israeli soldier helped elderly Palestinian man in ‘safe corridor’',
+   date: '14 Nov 2023',
+   claim: {
+       claimText: 'Claim',
+       claimTag: 'claim-tag',
+   },
+   description: {
+       summary: 'Israeli content and social website for soldiers run by soldiers shares image of Bashir Hajji to claim soldiers treat Palestinians well',
+           details: 'The Instagram account @idftweets – for the <em>idtweets.co.il</em>  news, social and jobs posting website for Israeli forces founded by Nadav Fried – shared the image of the Israeli soldier seemingly speaking to an elderly Palestinian man with a walking stick.<br><br>The photo was shared with the claim that the soldier was helping the elderly Palestinian man in the ‘safe zone’.<br><br>The photo was credited to the former Chief Arabic Content Officer for the Israeli Ministry of Foreign Affairs, Lorena Khateeb.<br><br>The caption reads (from Hebrew to English):<br><br>‘Our soldiers are humans before they are fighters. A combat engineering fighter member of the Druze community helps in the middle of the humanitarian axis in the heart of Gaza to an elderly Palestinian who needs help. Great pride that these are our fighters!! Take care of yourselves and return to peace and with a overwhelming victory over Hamas! We are going to win! 🇮🇱💪 Lorena Khateeb’.',
+   },
+   sources: [
+       {
+           sourceName: '@idftweets on Instagram',
+           sourceLink: 'https://www.instagram.com/p/CzntPuut0dw/',
+           archiveLink: 'https://archive.is/Ay32Y',
+       },
+   ]
+},
+
+{
+   claimTitle: 'Israeli soldier helped elderly Palestinian man in ‘safe corridor’',
+   date: '14 Nov 2023',
+   claim: {
+       claimText: 'Debunk',
+       claimTag: 'debunk-tag',
+   },
+   description: {
+       summary: 'Granddaughter of Bashir Hajji confirms elderly man in Israeli propaganda photo was her grandfather, executed by Israeli forces',
+           details: 'The independent nonprofit organisation Euro-Med Human Rights Monitor identified the elderly man as Bashir Hajji in the photo shared by the Israeli state. The organisation confirmed identification with Bashir Hajji’s granddaughter, Hala, who also posted a eulogy to her grandfather on Instagram.<br><br>Her Instagram story read (Arabic to English): ‘I want the whole world to know your story, my grandfather. My grandfather was tired. He was 75 years old. He was walking in the corridor of death, which they said was a safety corridor. He wanted to flee to the south. Because of the bombing around him, he got lost among the people and my uncle was unable to reach him. They (Israeli forces) started trampling on (attacking) the people, but my grandfather did not manage to escape and was betrayed by his crutch. And the whole world betrayed him and betrayed him. He kept walking alone. We talked to him and said that there was no one around him. We contacted the first aid and the Red Cross, but no one was able to do anything. Then he told us that he sat in a bombed house, taking shelter until someone could come to take him. My uncle was close to the area and reached (the shelter) in the morning. He went to the place where he was and looked for him until he found him. They shot him in the head and back while he was sleeping. My grandfather was killed tired, cold, thirsty and hungry.’<br><br>In an Instagram post, Hala shared the photo being used by Israeli forces to claim they were helping the elderly alongside an image of her slain grandfather’s body. The caption read (Arabic to English):<br><br>‘They (the Israeli state) want to show the world that they helped my grandfather and that they are humanitarian but in reality they killed him. God is enough for us. (You are) among the martyrs in heaven, my grandfather, my love.’',
+   },
+   sources: [
+       {
+           sourceName: 'Instagram',
+           sourceLink: 'https://www.instagram.com/p/Czn0nvoNacV/?img_index=1',
+           archiveLink: 'https://archive.ph/rrIZ8',
+       },
+       {
+           sourceName: 'Euro-Med Human Rights Monitor',
+           sourceLink: 'https://euromedmonitor.org/en/article/5944/Israeli-army-executes-an-elderly-Palestinian-after-using-him-in-propaganda-campaign-about-its-%E2%80%98safe-corridor%E2%80%99-in-Gaza',
+           archiveLink: 'https://archive.ph/9B6Iz',
+       },
+   ]
+},
 ]
 
 // TEMPLATE DATA SET (copy and paste this as much as you need it)

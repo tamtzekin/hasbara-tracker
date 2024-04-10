@@ -5,6 +5,8 @@ const ClaimsList = () => {
     return (
     <>
         <h2 className="subheading mb-1 mobile:mb-4">Claims</h2>
+        <Link to="/israel-helps-elderly-man"><div className="claim-link">‘Israeli soldier helps elderly Palestinian man in “safe corridor”’</div></Link>
+
         <Link to="/forty-beheaded-babies"><div className="claim-link">‘Forty beheaded babies’</div></Link>
 
         <Link to="/al-ahli-attacked"><div className="claim-link">‘Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces’</div></Link>

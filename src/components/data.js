@@ -2958,7 +2958,7 @@ const data = [
  // CLAIM: Israeli soldier helps elderly Palestinian man in ‘safe corridor’
 
 {
-   claimTitle: 'Israeli soldier helped elderly Palestinian man in ‘safe corridor’',
+   claimTitle: 'Israeli soldier helps elderly Palestinian man in ‘safe corridor’',
    date: '9 Nov 2023',
    claim: {
        claimText: 'Context',
@@ -2966,7 +2966,7 @@ const data = [
    },
    description: {
        summary: 'Elderly Palestinian man Bashir Hajji is killed by Israeli forces in the ‘safe corridor’',
-           details: 'The son of elderly Palestinian man Bashir Hajji described how his father was shot and killed by Israeli snipers on Salah Al-Din Street near a roundabout in Gaza in an interview with Arabic broadcaster Al-Araby in Gaza on 9 November, 2023.<br><br>He recounted that his elderly parents were attempting to walk further south of Gaza, in the Israeli-named ‘humanitarian corridor’ that the Israeli state has been forcibly displacing Palestinians into.<br><br>Bashir Hajji’s son said in the interview:<br><br>’My parents and I were trying to get to the southern area. After the Kuwaiti roundabout we found a man with a cart who was transporting the elderly.<br>br>I wanted to transport my elderly father on the cart. I carried our belongings and started walking, and I could hear their voices behind me. In that area, you can’t look around or turn to see behind you. Suddenly, I couldn’t hear them anymore. I turned around and couldn’t find my parents or the cart.<br><br>I sent back some of the young men who were going back and forth. I saw my mother in a car and felt relieved, and then a man told me that he had gotten my father out. I was relieved and started running to reach them.<br><br>They told me he (my father) was lying inside. I went in thinking he had had a diabetic attack, as he gets those sometimes. I went in to the Bakron Building to locate him, and found him dead, and they tried to shoot at the building while we were getting his body out.',
+           details: 'The son of elderly Palestinian man Bashir Hajji described how his father was shot and killed by Israeli snipers on Salah Al-Din Street near a roundabout in Gaza in an interview with Arabic broadcaster Al-Araby in Gaza on 9 November, 2023.<br><br>He recounted that his elderly parents were attempting to walk further south of Gaza, in the Israeli-named ‘humanitarian corridor’ that the Israeli state has been forcibly displacing Palestinians into.<br><br>Bashir Hajji’s son said in the interview:<br><br>’My parents and I were trying to get to the southern area. After the Kuwaiti roundabout we found a man with a cart who was transporting the elderly.<br><br>I wanted to transport my elderly father on the cart. I carried our belongings and started walking, and I could hear their voices behind me. In that area, you can’t look around or turn to see behind you. Suddenly, I couldn’t hear them anymore. I turned around and couldn’t find my parents or the cart.<br><br>I sent back some of the young men who were going back and forth. I saw my mother in a car and felt relieved, and then a man told me that he had gotten my father out. I was relieved and started running to reach them.<br><br>They told me he (my father) was lying inside. I went in thinking he had had a diabetic attack, as he gets those sometimes. I went in to the Bakron Building to locate him, and found him dead, and they tried to shoot at the building while we were getting his body out.’',
    },
    sources: [
        {
@@ -2979,7 +2979,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli soldier helped elderly Palestinian man in ‘safe corridor’',
+   claimTitle: 'Israeli soldier helps elderly Palestinian man in ‘safe corridor’',
    date: '14 Nov 2023',
    claim: {
        claimText: 'Claim',
@@ -2999,7 +2999,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli soldier helped elderly Palestinian man in ‘safe corridor’',
+   claimTitle: 'Israeli soldier helps elderly Palestinian man in ‘safe corridor’',
    date: '14 Nov 2023',
    claim: {
        claimText: 'Claim',
@@ -3019,7 +3019,7 @@ const data = [
 },
 
 {
-   claimTitle: 'Israeli soldier helped elderly Palestinian man in ‘safe corridor’',
+   claimTitle: 'Israeli soldier helps elderly Palestinian man in ‘safe corridor’',
    date: '14 Nov 2023',
    claim: {
        claimText: 'Debunk',

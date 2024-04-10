@@ -2,8 +2,7 @@
 const summaries = [
     {
         claimMainTitle: 'Forty beheaded babies',
-        claimSummary:
-        'Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.',
+        claimSummary: 'Israeli officials claimed up to 40 babies were decapitated in kibbutzes following Operation Al-Aqsa Flood on 7 October, 2023. Versions of this fabrication have been repeated by politicians and the media globally.',
     },
  
     {
@@ -3036,7 +3035,6 @@ const data = [
            sourceLink: 'https://www.instagram.com/p/Czn0nvoNacV/?img_index=1',
            archiveLink: 'https://archive.ph/rrIZ8',
        },
-    sources: [
        {
            sourceName: 'Euro-Med Human Rights Monitor',
            sourceLink: 'https://euromedmonitor.org/en/article/5944/Israeli-army-executes-an-elderly-Palestinian-after-using-him-in-propaganda-campaign-about-its-%E2%80%98safe-corridor%E2%80%99-in-Gaza',

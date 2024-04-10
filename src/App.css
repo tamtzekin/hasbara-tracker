@@ -88,11 +88,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* MOBILE MENU */
-
-/* don't show it on desktop */
-.menu-toggle {
-    /* display: none; */
-  }
   
 /* TODO: move this to somewhere that makes sense */
 .menu-links a {

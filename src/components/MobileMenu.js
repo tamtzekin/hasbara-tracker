@@ -16,9 +16,9 @@ const MobileMenu = () => {
 
     return (
         <>
-            <span className="">
+            <span className="ml-auto">
                 {/* menu-toggle */}
-                <div className="menu-toggle" onClick={openModal}>
+                <div className="menu-toggle mobile:mt-1" onClick={openModal}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>

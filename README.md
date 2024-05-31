@@ -6,6 +6,6 @@ We’re working on documenting and debunking claims made by the Israeli regime d
 
 [hasbaratracker.com](https://hasbaratracker.com)
 
-[Instagram @hasbaratracker](http://instagram.com/hasbaratracker)
+Instagram [@hasbaratracker](http://instagram.com/hasbaratracker)
 
-[Twitter @hasbaratracker](https://twitter.com/hasbaratracker)
+Twitter [@hasbaratracker](https://twitter.com/hasbaratracker)

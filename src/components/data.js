@@ -3263,7 +3263,7 @@ const data = [
         {
             sourceName: 'UNRWA',
             sourceLink: 'https://www.unrwa.org/resources/reports/unrwa-situation-report-52-situation-gaza-strip-and-west-bank-including-east-Jerusalem',
-            archiveLink: 'https://archive.ph/4cgcI',
+            archiveLink: 'https://archive.md/x98nI',
         }
     ]
 },

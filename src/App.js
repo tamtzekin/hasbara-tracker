@@ -21,6 +21,7 @@ import ClaimMakeup from './components/ClaimMakeup';
 import ClaimHamasChemicalWeapons from './components/ClaimHamasChemicalWeapons';
 import ClaimIsraelDeniesChurchKilling from './components/ClaimIsraelDeniesChurchKilling';
 import ClaimIsraelHelpsElderlyMan from './components/ClaimIsraelHelpsElderlyMan';
+import ClaimCaptivesStripped from './components/ClaimCaptivesStripped';
 
 
 const App = () => {
@@ -47,6 +48,7 @@ const App = () => {
                 <Route path="/makeup" element={<ClaimMakeup />} />
                 <Route path="/hamas-chemical-weapons" element={<ClaimHamasChemicalWeapons />} />
                 <Route path="/israel-denies-church-killing" element={<ClaimIsraelDeniesChurchKilling />} />
+                <Route path="/captives-stripped" element={<ClaimCaptivesStripped />} />
 
                 
                 {/* Route redirects to claim searches */}

@@ -36,8 +36,8 @@ const summaries = [
     },
 
     {
-        claimMainTitle: '',
-        claimSummary: '',
+        claimMainTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+        claimSummary: 'In an interview with Sky News UK, Mark Regev – former Israeli ambassador to the UK – claimed Palestinian captives were stripped to underwear because of ‘warm weather’.',
     },
 
     {
@@ -3042,6 +3042,339 @@ const data = [
        },
    ]
 },
+
+// CLAIM: Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '1948 – present',
+    claim: {
+        claimText: 'Context',
+        claimTag: 'context-tag',
+    },
+    description: {
+        summary: 'A history of torturing and humiliating Palestinian captives and prisoners, including stripping their clothes',
+        details: 'The Israeli state holds Palestinians prisoners indefinitely without charge, which is known as administrative detention. Even the semblance of ‘due process’ does not exist, which logically cannot under settler-colonial apartheid and occupation. Israeli administrative detention can be traced back to the British Mandate’s Mandatory Emergency Law Act of 1945 (Addameer).<br /><br />Palestinian prisoners and captives – arrested administratively or otherwise – have always been subjected to physical and psychological torture by the Israeli state, including methods specifically designed to break down prisoners’ dignity and resilience, such as beatings, stripping clothes, and other forms of abuse. This has been a consistent pattern, with frequent reports of prisoners, including children, being stripped and humiliated​.<br /><br />The research document <em>Palestinian Prisoners’ Movement in Jails</em> by Dr. Ra’fat Khalil Hamdouna (2020) details instances where prisoners, including women and children, were subjected to humiliating strip searches upon arrival at the facilities. These searches were often conducted in a degrading manner with the intent to intimidate and exert control over the new detainees.<br /><br /><br /><u>Some examples of prisoner and captive degradation over time</u><br /><br /><b>Before and during the Nakba (1948)</b><br /><br />During the Nakba of 1948, Jewish militias such as the Haganah, Irgun, and Lehi were involved in various acts against Palestinian civilians that included holding captives, massacres, and expulsions from their homes. Specific incidents documented include the Deir Yassin Massacre – one of the most notorious.<br /><br />On April 9, 1948, Zionist paramilitary groups Irgun and Lehi, supported by the Haganah, attacked the village of Deir Yassin, killing at least 107 villagers, including women and children. Survivors were paraded through West Jerusalem and some were executed afterwards. The attack was part of a broader strategy to induce fear and prompt the flight of Palestinians from their towns and villages.<br /><br /><b>The Naksa (1967)</b><br />During the decade following the Naksa in 1967 – often referred to as the 1967 Six-Day War – the Israeli state’s military occupation of the West Bank and Gaza led to widespread arrests and detentions. Palestinian detainees faced severe interrogation techniques and prison conditions. Reports from human rights organisations and former prisoners highlight physical and psychological abuse, including humiliation tactics, were common during interrogations.<br /><br /><b>First Intifada (1987 – 1993)</b><br />During the First Intifada, the Israeli military used tactics of humiliation and psychological warfare against Palestinians. This included instances where Palestinian men and boys were dragged into public areas like schoolyards, stripped naked, forced to kneel for extended periods, and subjected to verbal abuse and physical beatings by Israeli soldiers using loudspeakers.<br /><br /><b>Second Intifada (2000 – 2005)</b><br />During the Second Intifada, numerous reports emerged about the harsh treatment of Palestinian detainees, including strip searches and other forms of physical abuse​. ‘They forced Yasser to take off all his clothes including his underwear…they ordered him to walk like a dog and then he burst into tears …’ (<em>Searching Jenin: Eyewitness Accounts of the Israeli Invasion 2002</em> by Dr. Ramzy Baroud, 2003).<br /><br /><b>The imprisonment of Mohammed El-Halabi (2016)</b><br />Mohammed El-Halabi, the former director of the Gaza branch of World Vision, a humanitarian aid organisation, was arrested by Israeli forces in June 2016 after being falsely accused of diverting millions of dollars to Hamas. Despite extensive audits by World Vision and the Australian Department of Foreign Affairs and Trade, which found no evidence of misappropriation of funds, El-Halabi was convicted in 2022 and sentenced to 12 years in prison.<br /><br />His arrest and imprisonment featured prolonged pre-trial detention, use of secret evidence, and was conducted largely in closed sessions.<br /><br />His father testified that: ‘Israeli intelligence officers placed a filthy bag over his head and hung him from the ceiling for prolonged periods… kicked him, especially in his genitals, and then strangled him… he felt that he was about to die … At times, they placed him in a small room and played extremely loud music until the pain in his ears became unbearable. In the summer, they would strip him naked, and then blast him with flashes of hot air. They would repeat the same process in the winter, but with cold air, instead.’',
+    },
+    sources: [
+        {
+            sourceName: 'Palestinian Prisoners’ Movement in Israeli Jails by Dr. Ra’fat Khalil Hamdouna (2020)  ',
+            sourceLink: 'https://drive.google.com/file/d/1pUXigwbKtWnPqpoSF6DzZzNRrE1sifTA/view?usp=drive_link',
+            archiveLink: 'https://drive.google.com/file/d/1pUXigwbKtWnPqpoSF6DzZzNRrE1sifTA/view?usp=drive_link',
+        },
+        {
+            sourceName: 'Searching Jenin: Eyewitness Accounts of the Israeli Invasion, 2002 by Dr. Ramzy Baroud (2003)',
+            sourceLink: 'https://www.palestine-studies.org/en/node/433212',
+            archiveLink: 'https://archive.ph/2Hm2r',
+        },
+        {
+            sourceName: 'Amnesty International',
+            sourceLink: 'https://www.amnesty.org/en/latest/news/2023/11/israel-opt-horrifying-cases-of-torture-and-degrading-treatment-of-palestinian-detainees-amid-spike-in-arbitrary-arrests/',
+            archiveLink: 'https://archive.ph/f2QOV',
+        },
+        {
+            sourceName: 'Palestine Chronicle',
+            sourceLink: 'https://www.palestinechronicle.com/urinating-on-prisoners-how-palestinian-pride-canceled-israels-politics-of-humiliation/',
+            archiveLink: 'https://archive.ph/yNITl',
+        },
+        {
+            sourceName: 'Palestine Chronicle',
+            sourceLink: 'https://www.palestinechronicle.com/humiliation-vs-self-respect-the-untold-story-of-the-abuse-of-palestinian-women-in-hebron/',
+            archiveLink: 'https://archive.ph/gg0O1',
+        },
+        {
+            sourceName: 'Al Shabaka',
+            sourceLink: 'https://al-shabaka.org/briefs/the-systematic-torture-of-palestinians-in-israeli-detention/',
+            archiveLink: 'https://archive.ph/091LR',
+        },
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '12 Oct 2023',
+    claim: {
+        claimText: 'Context',
+        claimTag: 'context-tag',
+    },
+    description: {
+        summary: 'Palestinians in West Bank blindfolded, stripped and beaten',
+        details: 'Israeli forces raided the town of Wadi al-Seeq in the occupied West Bank, taking captive three Palestinian men who were blindfolded, stripped down to their underwear, and subjected to severe physical abuse.<br /><br />Two women were also detained in East Jerusalem and strip-searched by police before being released without charges​.',
+    },
+    sources: [
+        {
+            sourceName: 'Amnesty International',
+            sourceLink: 'https://www.amnesty.org/en/latest/news/2023/11/israel-opt-horrifying-cases-of-torture-and-degrading-treatment-of-palestinian-detainees-amid-spike-in-arbitrary-arrests/',
+            archiveLink: 'https://archive.ph/f2QOV',
+        },
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '23 Nov 2023',
+    claim: {
+        claimText: 'Debunk',
+        claimTag: 'debunk-tag',
+    },
+    description: {
+        summary: 'Palestinians overcrowded and cold, stripped of dignity, observes UNRWA Commissioner-General in visit to Gaza',
+        details: 'The UNRWA Commissioner-General Philippe Lazzarini during his trip to Gaza observed:<br /><br />‘South of Gaza: At an overcrowded UNRWA shelter, it’s cold, sewage is flooding. A father burst into tears. He wore the same clothes for 45 days. Sleeps on the floor, asked for food. Stripped of dignity.’',
+    },
+    sources: [
+        {
+            sourceName: 'UNRWA',
+            sourceLink: 'https://www.unrwa.org/resources/reports/unrwa-situation-report-37-situation-gaza-strip-and-west-bank-including-east-Jerusalem',
+            archiveLink: 'https://archive.md/nZpuE',
+        },
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '7 Dec 2023',
+    claim: {
+        claimText: 'Context',
+        claimTag: 'context-tag',
+    },
+    description: {
+        summary: 'Palestinian men and children in Gaza detained, stripped, blindfolded and paraded',
+        details: 'Israeli forces detained approximately 100 Palestinian men and boys from northern Gaza in Beit Lahia.<br /><br />Videos emerged of the captives stripped down to their underwear, blindfolded, and forced to kneel on the ground.<br /><br />The video was shared by Israeli news outlet Channel 11’s military correspondent Itay Blumental on X (formerly Twitter).<br /><br />The caption stated (originally in Hebrew): ‘During the maneuver in the Gaza Strip, the IDF forces arrested dozens of men who surrendered and raised their hands. Now they are checking to see if any of them are terrorists or Hamas or Islamic Jihad operatives’. He also shared images of bound and blindfolded Palestinian captives with the caption (originally in Hebrew): ‘IDF spokesman Hagari says this evening: Terrorists handed themselves over to IDF fighters’.<br /><br />Among the captives were researcher Ayman Lubad from the Palestinian Centre for Human Rights and New Arab journalist Diaa Al-Kahlout.<br /><br />Subsequent reports from Amnesty International and the Al Mezan Center for Human Rights highlighted the incident as an example of war crimes.',
+    },
+    sources: [
+        {
+            sourceName: 'Al Jazeera',
+            sourceLink: 'https://www.aljazeera.com/news/2023/12/8/video-photos-appear-to-show-detainees-stripped-to-underwear-in-gaza',
+            archiveLink: 'https://archive.ph/xxW4s',
+        },
+        {
+            sourceName: 'Itay Blumental on X',
+            sourceLink: 'https://x.com/ItayBlumental/status/1732763863076979005',
+            archiveLink: 'https://archive.ph/1aFjh',
+            videoPreviewLink: 'https://files.hasbaratracker.com/07122023_Palestinian_captives_stripped_bound_video.mp4',
+        },
+        {
+            sourceName: 'Itay Blumental on X',
+            sourceLink: 'https://x.com/ItayBlumental/status/1732830916446204010',
+            archiveLink: 'https://archive.ph/gW4hj',
+        },
+        {
+            sourceName: 'Baruch Yedid on X',
+            sourceLink: 'https://x.com/BaruchYedid/status/1732770910946353163',
+            archiveLink: 'https://archive.ph/Zd2Un',
+            videoPreviewLink: 'https://files.hasbaratracker.com/07122023_Palestinian_captives_stripped_bound_video.mp4',
+        },
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '8 Dec 2023',
+    claim: {
+        claimText: 'Context',
+        claimTag: 'context-tag',
+    },
+    description: {
+        summary: 'Israeli forces load stripped Palestinians into military truck',
+        details: 'Israeli forces rounded up more Palestinian men, women and boys in northern Gaza, bounding them and stripping them to their underwear before loading them into the back of a military truck.<br /><br />This act was captured in a photograph by Reuters, which showed the captives being transported under heavy guard. Israeli media sources described the detained Palestinians as ‘terror suspects’.',
+    },
+    sources: [
+        {
+            sourceName: 'NBC',
+            sourceLink: 'https://www.nbcnews.com/news/world/israel-hamas-war-images-palestinians-stripped-blindfolded-gaza-rcna128685',
+            archiveLink: 'https://archive.ph/jRB1b',
+        },
+        {
+            sourceName: 'Le Monde',
+            sourceLink: 'https://www.lemonde.fr/en/international/article/2023/12/11/israel-justifies-arrests-of-palestinians-after-images-showing-stripped-men-detained-in-gaza_6331848_4.html',
+            archiveLink: 'https://archive.ph/USLLM',
+        },
+        {
+            sourceName: 'Times of Israel',
+            sourceLink: 'https://www.timesofisrael.com/footage-shows-numerous-gaza-terror-suspects-who-apparently-surrendered-to-idf-troops/',
+            archiveLink: 'https://archive.ph/gaDpc',
+        },
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '8 Dec 2023',
+    claim: {
+        claimText: 'Claim',
+        claimTag: 'claim-tag',
+    },
+    description: {
+        summary: 'Former Israeli ambassador to the UK Mark Regev claims Palestinian captives are stripped as relief from the ‘warm weather’ in the Middle East',
+        details: 'In an interview with Sky News UK, Mark Regev – the former Israeli ambassador to the United Kingdom – claimed Palestinians taken captive were stripped down to their underwear because of the warm weather in the Middle East.<br /><br />‘First of all, remember, it’s the Middle East, and it’s warmer here, and especially during the day when it’s sunny, it’s, ah… to be asked to take off your shirt – it might not be pleasant but it’s not the end of the world.’<br /><br />He then went on to claim: ‘We are looking for people who would have concealed weapons, especially suicide bombers with explosive vests.’',
+    },
+    sources: [
+        {
+            sourceName: 'Sky News on YouTube',
+            sourceLink: 'https://www.youtube.com/watch?v=OXgDoVwpo3o',
+            archiveLink: 'https://files.hasbaratracker.com/08122023_Mark_Regev_Detained_Palestinians_SkyNews_UK.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/08122023_Mark_Regev_Detained_Palestinians_SkyNews_UK.mp4',
+        },
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '10 Dec 2023',
+    claim: {
+        claimText: 'Debunk',
+        claimTag: 'debunk-tag',
+    },
+    description: {
+        summary: 'Israeli forces ask for donations for thermals and winter gear to protect from ‘cold outside’',
+        details: 'December in Palestine and the Levant marks the winter season. Throughout December 2023, Israeli forces were accepting donations for thermals and winter supplies, and were shown thanking supporters for winter donations to protect from the ‘cold outside’.<br /><br />The Israeli media network Israel National News ran a headline stating: ‘Join the effort: It is cold outside, the soldiers at the front need your help’.<br /><br />Vaad Hatzedaka, an Israeli non-profit organisation established in 2021 that focuses on ‘raising charity funds’ to ‘support on the front and the rear in Israel’s war on Hamas’, have uploaded a constant stream of videos showing Israeli soldiers thanking people for their winter donations. The organisation sends equipment such as uniforms, drones and generators.',
+    },
+    sources: [
+        {
+            sourceName: 'Israel National News',
+            sourceLink: 'https://www.israelnationalnews.com/news/381718',
+            archiveLink: 'https://archive.ph/6nPR2',
+        },
+        {
+            sourceName: 'Vaad Hatzedaka',
+            sourceLink: 'https://www.youtube.com/watch?v=PVuuDnaqOuw',
+            archiveLink: 'https://files.hasbaratracker.com/10122023_IOF_receive_winter_thermals_Vaad_HaTzedaka.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/10122023_IOF_receive_winter_thermals_Vaad_HaTzedaka.mp4',
+        }
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '14 Dec 2023',
+    claim: {
+        claimText: 'Debunk',
+        claimTag: 'debunk-tag',
+    },
+    description: {
+        summary: 'Aid officials say winter rain worsening conditions for hundreds of thousands Palestinians displaced in makeshift tents',
+        details: 'Aid officials have said the arrival of winter rain has worsened conditions for hundreds of thousands of displaced Palestinians who are sleeping rough in makeshift tents, reported by Reuters.<br /><br />The relentless airstrikes and harsh weather have combined to create a severe crisis.',
+    },
+    sources: [
+        {
+            sourceName: 'Reuters',
+            sourceLink: 'https://www.reuters.com/world/middle-east/un-demands-ceasefire-gaza-israel-us-show-increasing-divisions-2023-12-13/',
+            archiveLink: 'https://archive.ph/Sm3Zf',
+        },
+        {
+            sourceName: 'UNRWA',
+            sourceLink: 'https://www.unrwa.org/resources/reports/unrwa-situation-report-52-situation-gaza-strip-and-west-bank-including-east-Jerusalem',
+            archiveLink: 'https://archive.ph/4cgcI',
+        }
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '15 Dec 2023',
+    claim: {
+        claimText: 'Debunk',
+        claimTag: 'debunk-tag',
+    },
+    description: {
+        summary: 'Young displaced girl in Gaza interviewed about dire cold and wet conditions',
+        details: 'A young girl in Gaza interviewed with Al Jazeera Mubasher in Arabic spoke of the harsh winter conditions.<br /><br />‘The situation here is extremely difficult. Many people have lost their homes due to the continuous airstrikes, and now they are living in makeshift tents or out in the open. The arrival of winter has only worsened the situation. It’s very cold, and we are experiencing heavy rains.<br /><br />‘These conditions are unbearable, especially for the children and the elderly. They lack proper shelter, blankets, and warm clothes. The aid we receive is insufficient, and we are struggling to meet even the most basic needs... We need more tents, blankets, and heaters to protect people from the cold. We also need medical supplies and food. The health situation is deteriorating as many people are falling ill due to the cold and lack of proper nutrition. We urgently appeal to the international community to step up their efforts and provide more substantial support to help us survive this harsh winter.’',
+    },
+    sources: [
+        {
+            sourceName: 'Al Jazeera',
+            sourceLink: 'https://x.com/ajmubasher/status/1735662830181834989',
+            archiveLink: 'https://files.hasbaratracker.com/15122023_AlJazeera_interview_Gaza_cold_winter.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/15122023_AlJazeera_interview_Gaza_cold_winter.mp4',
+        },
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '18 Dec 2023',
+    claim: {
+        claimText: 'Context',
+        claimTag: 'context-tag',
+    },
+    description: {
+        summary: 'Palestinians in Gaza taken captive die in Israeli concentration camp',
+        details: 'Hundreds of Palestinians who were taken captive in Gaza were being held at a concentration camp in the south of occupied Historic Palestine, at a military base named Sde Teiman in Bersheeba (Bir-a-Saba).<br /><br />Israeli occupation forces said that the prisoners who died were ‘terrorists’ and that the cause of their deaths were being ‘examined’.',
+    },
+    sources: [
+        {
+            sourceName: 'Ha’aretz',
+            sourceLink: 'https://www.haaretz.com/israel-news/2023-12-18/ty-article/.premium/hundreds-of-gazans-arrested-during-war-held-blindfolded-and-handcuffed-at-israeli-base/0000018c-7ce6-de44-a9be-7df678fd0000',
+            archiveLink: 'https://archive.ph/cpv4v',
+        },
+        {
+            sourceName: 'Addameer',
+            sourceLink: 'https://www.addameer.org/news/5252',
+            archiveLink: 'https://archive.ph/a6LqT',
+        }
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '24 Dec 2023',
+    claim: {
+        claimText: 'Context',
+        claimTag: 'context-tag',
+    },
+    description: {
+        summary: 'Israeli military video shows detained Palestinians, including children, stripped and blindfolded',
+        details: 'Israeli military photograher Yosee Gamzoo Letova uploaded a video to his YouTube account showing Israeli forces detaining stripped, bound and blindfolded Palestinians in Yarmouk Stadium in Gaza, including children.<br /><br />The now deleted video was titled ‘Operation Light to the Gentiles – Battalion 932 of the Nahal’.',
+    },
+    sources: [
+        {
+            sourceName: 'YoSee Gamzoo Letova on YouTube',
+            sourceLink: 'https://www.youtube.com/watch?v=j-4cpFrIsAE',
+            archiveLink: 'https://files.hasbaratracker.com/24122023_Operation_Light_to_the_Gentiles_Battalion_932_of_the_Nahal_Yosee_Gamzoo_Letova.mp4',
+            videoPreviewLink: 'https://files.hasbaratracker.com/24122023_Operation_Light_to_the_Gentiles_Battalion_932_of_the_Nahal_Yosee_Gamzoo_Letova.mp4',
+        },
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '23 Jan 2024',
+    claim: {
+        claimText: 'Context',
+        claimTag: 'context-tag',
+    },
+    description: {
+        summary: 'Thousands of Palestinians detained in horrific conditions, some freed wearing only diapers',
+        details: 'Later reports emerged in January 2024 that thousands of Palestinians had been detained, stripped and vanished, and held in horrific conditions. Some were freed wearing only diapers',
+    },
+    sources: [
+        {
+            sourceName: 'New York Times',
+            sourceLink: 'https://www.nytimes.com/2024/01/23/world/middleeast/israel-gaza-palestinian-detainees.html',
+            archiveLink: 'https://archive.ph/k7hwQ',
+        },
+    ]
+},
+
+{
+    claimTitle: 'Palestinian captives stripped down naked because of ‘warm weather’ in the Middle East, says Mark Regev',
+    date: '24 Jan 2024',
+    claim: {
+        claimText: 'Debunk',
+        claimTag: 'debunk-tag',
+    },
+    description: {
+        summary: 'Israeli news outlet reports on ‘harsh winter conditions’',
+        details: 'Israeli news outlet YNet News ran a story – sponsored by Vaad Hatzedaka – headlined: ‘The soldiers in the freezing Hermon want to win’. The story stated: ‘Thermal clothing and drone cameras play a crucial role in saving soldiers’ lives, both from harsh winter conditions and deadly terrorist ambushes’. ',
+    },
+    sources: [
+        {
+            sourceName: 'YNet News',
+            sourceLink: 'https://www.ynetnews.com/magazine/article/h1ttoahhp',
+            archiveLink: 'https://archive.ph/JMgcN',
+        },
+    ]
+},
+
 ]
 
 // TEMPLATE DATA SET (copy and paste this as much as you need it)

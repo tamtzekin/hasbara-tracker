@@ -5,6 +5,9 @@ const ClaimsList = () => {
     return (
     <>
         <h2 className="subheading mb-1 mobile:mb-4">Claims</h2>
+
+        <Link to="/captives-stripped"><div className="claim-link">Palestinian captives stripped down naked because of ’warm weather’ in the Middle East, says Mark Regev</div></Link>
+
         <Link to="/israel-helps-elderly-man"><div className="claim-link">‘Israeli soldier helps elderly Palestinian man in “safe corridor”’</div></Link>
 
         <Link to="/forty-beheaded-babies"><div className="claim-link">‘Forty beheaded babies’</div></Link>

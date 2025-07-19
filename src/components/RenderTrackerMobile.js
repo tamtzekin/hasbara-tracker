@@ -21,10 +21,10 @@ function RenderTrackerMobile({ headerGroups, getTableProps, getTableBodyProps, r
                     How to use the tracker:
                     <ul>
                         <li>Use the dropdown list to select a major claim and see all records of the claim.</li>
-                        <li>Use the search bar to look up words, phrases or topics (eg. ‘hospital’, ‘biden’, ‘al jazeera’)</li>
-                        <li>You can search by type of claim with ‘claim’, ‘debunk’ or ‘context’</li>
-                        <li>Click ‘Date ▲’ to change the order of events (desktop only)</li>
-                        <li>Hover over a source with <span className="icon-play"></span> to preview video (If you’re on your phone, tap + hold the link)</li>
+                        <li>Use the search bar to look up words, phrases or topics (eg. 'hospital', 'biden', 'al jazeera')</li>
+                        <li>You can search by type of claim with 'claim', 'debunk' or 'context'</li>
+                        <li>Click 'Date ▲' to change the order of events (desktop only)</li>
+                        <li>Hover over a source with <span className="icon-play"></span> to preview video (If you're on your phone, tap + hold the link)</li>
                         <li>Click each Source to open an archived link</li>
                         <li>Click + and ⎯ to show more or less text</li>
                     </ul>
@@ -37,6 +37,17 @@ function RenderTrackerMobile({ headerGroups, getTableProps, getTableBodyProps, r
     <div {...getTableBodyProps()}>
         {rows.map((row) => {
             prepareRow(row);
+            
+            // Separate the date and type cells from other cells
+            const dateCells = row.cells.filter(cell => 
+                cell.column.Header.toLowerCase() === 'date' || 
+                cell.column.Header.toLowerCase() === 'type'
+            );
+            const otherCells = row.cells.filter(cell => 
+                cell.column.Header.toLowerCase() !== 'date' && 
+                cell.column.Header.toLowerCase() !== 'type'
+            );
+            
             return (
                 <div key={row.id} 
                     className="data-row" 
@@ -44,7 +55,18 @@ function RenderTrackerMobile({ headerGroups, getTableProps, getTableBodyProps, r
                         display: 'block',
                         alignItems: 'center' 
                     }}>
-                    {row.cells.map((cell, index) => (
+                    
+                    {/* Group date and type tags in a flex container */}
+                    <div className="tag-container">
+                        {dateCells.map((cell) => (
+                            <div key={cell.column.id} className={`data-cell ${cell.column.Header.toLowerCase()}`}>
+                                {cell.render('Cell')}
+                            </div>
+                        ))}
+                    </div>
+                    
+                    {/* Render other cells normally */}
+                    {otherCells.map((cell) => (
                         <div key={cell.column.id} className={`data-cell ${cell.column.Header.toLowerCase()}`}>
                             {cell.render('Cell')}
                         </div>

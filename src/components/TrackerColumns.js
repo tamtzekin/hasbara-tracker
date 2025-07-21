@@ -186,17 +186,18 @@ function TrackerColumns({ isMobileView }) {
                         <div className="source-heading"></div>
 
                         {row.original.sources.map((source, index) => (
-                            <VideoPlayer key={index} videoPreviewLink={source.videoPreviewLink}>
                                 <div key={index} className="source text-xs">
 
                                         {/* Video preview links - If there's a video preview available, show play icon (play triangle) */}
                                         {source.videoPreviewLink && (
                                                 <ul className="icon-playarrow">
                                                     <li>
-                                                        <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
-                                                            <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
-                                                            &nbsp;
-                                                        </a>
+                                                        <VideoPlayer videoPreviewLink={source.videoPreviewLink}>
+                                                            <a href={source.sourceLink} target="_blank" rel="noreferrer" aria-hidden="true" className={source.hasBeenDeleted === 'true' ? 'deleted-source' : ''}>
+                                                                <span dangerouslySetInnerHTML={{ __html: source.sourceName }} />
+                                                                &nbsp;
+                                                            </a>
+                                                        </VideoPlayer>
                                                     </li>
                                                 </ul>
                                         )}
@@ -252,8 +253,6 @@ function TrackerColumns({ isMobileView }) {
                                         {/* Warns users that the link opens in new tab – only visible to Text-To-Speech */}
                                         <span className="visually-hidden">Opens in new tab</span>
                                     </div>
-                                    
-                                </VideoPlayer>
                             ))}
                         </>
                     );  

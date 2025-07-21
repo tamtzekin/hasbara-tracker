@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
 
 const VideoPlayer = ({ videoPreviewLink, children }) => {
 
     // Manages state for whether modal is open or closed
     const [isModalOpen, setIsModalOpen] = useState(false);
-    let hoverTimeout;
+    const hoverTimeoutRef = useRef(null);
 
     const openModal = (event) => {
-        hoverTimeout = setTimeout(() => {
+        clearTimeout(hoverTimeoutRef.current);
+        if (!videoPreviewLink) return; // Only show modal if there's actually a video
+        
+        hoverTimeoutRef.current = setTimeout(() => {
             setIsModalOpen(true);
-        }, 100);
+        }, 150);
 
         event.preventDefault(); // stops page from jumping to the top after hovering over link
     };
@@ -21,7 +24,7 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
     };
 
     const handleMouseLeave = () => {
-        clearTimeout(hoverTimeout);
+        clearTimeout(hoverTimeoutRef.current);
         closeModal(); // Close the modal when the mouse leaves the link
     };
 
@@ -49,14 +52,22 @@ const VideoPlayer = ({ videoPreviewLink, children }) => {
 
     return (
         <>
-            <a
-                href="javascript:void(0);" // prevent page/scroll jump after hover
+            <div
+                role="button"
+                tabIndex={0}
+                style={{ cursor: 'pointer', display: 'inline' }}
                 onMouseEnter={openModal}
                 onMouseLeave={handleMouseLeave}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openModal(e);
+                    }
+                }}
                 // onTouchStart={handleTouchStart}
             >
                 {children}
-            </a>
+            </div>
  
             <Modal
             isOpen={isModalOpen}

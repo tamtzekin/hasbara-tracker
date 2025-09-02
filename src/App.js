@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { AuthProvider } from './contexts/AuthContext';
 
 import './App.css';
 
@@ -12,8 +13,12 @@ import ScrollToTop from './components/utils/ScrollToTop';
 import VolunteerForm from './components/VolunteerForm';
 import SubmitClaimForm from './components/SubmitClaimForm';
 import AdminClaimForm from './components/AdminClaimForm';
+import EditableClaimTracker from './components/EditableClaimTracker';
 import ContactForm from './components/ContactForm';
 import MailSignUpForm from './components/MailSignUpForm';
+import Login from './components/Login';
+import AdminPanel from './components/AdminPanel';
+import ProtectedRoute from './components/ProtectedRoute';
 
 import ClaimFortyBeheadedBabies from './components/ClaimFortyBeheadedBabies';
 import ClaimAlAhliAttacked from './components/ClaimAlAhliAttacked';
@@ -29,13 +34,24 @@ const App = () => {
     return (
     <>
     <HelmetProvider>
-        <Router>
-            <VideoPlayer />
-            <ScrollToTop />
-            <Routes>
+        <AuthProvider>
+            <Router>
+                <VideoPlayer />
+                <ScrollToTop />
+                <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/submit-claim" element={<SubmitClaimForm />} />
-                <Route path="/submit" element={<AdminClaimForm />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/claim-editor" element={
+                    <ProtectedRoute allowedPermissions={['claim_editor']}>
+                        <EditableClaimTracker />
+                    </ProtectedRoute>
+                } />
+                <Route path="/admin" element={
+                    <ProtectedRoute requireAdmin={true}>
+                        <AdminPanel />
+                    </ProtectedRoute>
+                } />
                 <Route path="/about" element={<About />} />
                 <Route path="/tracker" element={<Tracker />} />
                 <Route path="/volunteer" element={<VolunteerForm />} />
@@ -85,8 +101,9 @@ const App = () => {
                     path="/al-shifa-fuel"
                     element={<Navigate to="/tracker?claim=Israeli%20state%20offered%20fuel%20to%20Al-Shifa%20Hospital" replace />}
                 /> */}
-            </Routes>
-        </Router>
+                </Routes>
+            </Router>
+        </AuthProvider>
     </HelmetProvider>
     </>
   );  

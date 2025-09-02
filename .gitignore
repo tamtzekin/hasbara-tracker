@@ -14,10 +14,30 @@
 
 # misc
 .DS_Store
+
+# Security: Never commit environment variables or secrets
+.env
+.env.*
+*.key
+*.pem
+secrets/
+**/config/secrets.*
+**/config/keys.*
+
+# Environment files
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Cloudflare Workers and serverless configs
+wrangler.toml
+workers/
+
+# Test files with sensitive data
+test-auth.js
+*-test.js
+cloudflare-worker-*.js
 
 # file types
 *.mp4

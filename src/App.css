@@ -107,7 +107,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
     justify-content: center;
     align-items: center;
     height: 0.5rem;
-    padding: 3.5% 5% 3.5% 5%;
+    padding: 2.5% 3.5% 2.5% 3.5%;
     background-color: theme('colors.green-light');
     font-size: 0.93em;
     border: solid 0.5px theme('colors.grey-faded');

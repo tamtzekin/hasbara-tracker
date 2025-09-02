@@ -1,11 +1,14 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Logo from './Logo';
 import MobileMenu from './MobileMenu';
+import { useAuth } from '../contexts/AuthContext';
 import '../App.css';
 
 const Header = () =>{
-    // const location = useLocation();
+    const { user, logout, isAdmin, isLoggedIn } = useAuth();
+    const location = useLocation();
+    const isClaimEditorPage = location.pathname === '/claim-editor';
 
     return (
         <>
@@ -80,6 +83,42 @@ const Header = () =>{
                     <li className="undotted">
                         <NavLink to="/about">About</NavLink>
                     </li>
+
+                    {/* Authentication-based navigation - show on claim-editor page or when logged in */}
+                    {(isLoggedIn() || isClaimEditorPage) && (
+                        <li className="undotted">
+                            <NavLink to="/claim-editor" className="font-semibold text-blue-600">
+                                Claim Editor
+                            </NavLink>
+                        </li>
+                    )}
+
+                    {(isAdmin() || isClaimEditorPage) && (
+                        <li className="undotted">
+                            <NavLink to="/admin" className="font-semibold text-purple-600">
+                                Admin
+                            </NavLink>
+                        </li>
+                    )}
+
+                    {/* Show user info and logout only when logged in */}
+                    {isLoggedIn() && (
+                        <li className="undotted">
+                            <div className="flex items-center space-x-2">
+                                <span className="text-sm text-gray-500 hidden sm:inline">
+                                    {user?.email}
+                                </span>
+                                <button
+                                    onClick={logout}
+                                    className="text-red-600 hover:text-red-800 font-medium"
+                                >
+                                    Logout
+                                </button>
+                            </div>
+                        </li>
+                    )}
+                    
+                    {/* Login link is only accessible via direct URL /login - not shown in navigation */}
 
 </ul>
         </nav>

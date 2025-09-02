@@ -11,6 +11,7 @@ import VideoPlayer from './components/VideoPlayer';
 import ScrollToTop from './components/utils/ScrollToTop';
 import VolunteerForm from './components/VolunteerForm';
 import SubmitClaimForm from './components/SubmitClaimForm';
+import AdminClaimForm from './components/AdminClaimForm';
 import ContactForm from './components/ContactForm';
 import MailSignUpForm from './components/MailSignUpForm';
 
@@ -34,6 +35,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/submit-claim" element={<SubmitClaimForm />} />
+                <Route path="/submit" element={<AdminClaimForm />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/tracker" element={<Tracker />} />
                 <Route path="/volunteer" element={<VolunteerForm />} />

@@ -13,37 +13,9 @@ const fetchAdminUsers = async () => {
         // Fallback for development
     }
     
-    // Development fallback - admin emails fetched from secure Cloudflare storage in production
-    // TODO: Remove these when Cloudflare secrets are implemented
-    return [
-        {
-            id: 'u001',
-            email: atob('aW5mb0BoYXNiYXJhdHJhY2tlci5jb20='),
-            role: 'admin',
-            permissions: ['claim_editor', 'admin_panel', 'user_management'],
-            assignedClaims: [],
-            createdAt: new Date().toISOString(),
-            isActive: true
-        },
-        {
-            id: 'u002', 
-            email: atob('c3dhbjQ0NDQ0NDRAcHJvdG9ubWFpbC5jb20='),
-            role: 'admin',
-            permissions: ['claim_editor', 'admin_panel', 'user_management'],
-            assignedClaims: [],
-            createdAt: new Date().toISOString(),
-            isActive: true
-        },
-        {
-            id: 'u003',
-            email: atob('aGFzYmFyYXRyYWNrZXJAcHJvdG9uLm1l'),
-            role: 'admin', 
-            permissions: ['claim_editor', 'admin_panel', 'user_management'],
-            assignedClaims: [],
-            createdAt: new Date().toISOString(),
-            isActive: true
-        }
-    ];
+    // Production: Admin emails fetched from encrypted Cloudflare storage only
+    // No fallback - forces proper encryption setup
+    return [];
 };
 
 // Initialize admin users

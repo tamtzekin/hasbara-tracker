@@ -14,7 +14,8 @@ import {
     verifySession,
     deleteSession,
     resetAdminUsers,
-    ensureAdminUsersExist
+    ensureAdminUsersExist,
+    ADMIN_USERS
 } from '../data/users';
 
 import { emailService } from './emailService';
@@ -274,6 +275,35 @@ async function handleMockAPI(url, options) {
             const userId = url.split('/')[4];
             const result = await adminAPI.deleteUser(authToken, userId);
             return createMockResponse(200, result);
+            
+        } else if (url === '/api/auth/admin-users' && method === 'GET') {
+            // Try to fetch from Cloudflare worker first, fallback to local
+            try {
+                const workerUrl = process.env.REACT_APP_WORKER_URL || 'https://email-worker.izumi-ky.workers.dev';
+                const apiKey = process.env.REACT_APP_CLOUDFLARE_API_KEY;
+                
+                if (workerUrl && apiKey) {
+                    const response = await fetch(`${workerUrl}/api/auth/admin-users`, {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${apiKey}`,
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        const adminUsers = await response.json();
+                        if (adminUsers && adminUsers.length > 0) {
+                            return createMockResponse(200, adminUsers);
+                        }
+                    }
+                }
+            } catch (error) {
+                console.warn('Failed to fetch admin users from Cloudflare worker, using fallback:', error.message);
+            }
+            
+            // Fallback to current ADMIN_USERS from users.js
+            return createMockResponse(200, ADMIN_USERS);
         }
         
         // Unknown endpoint

@@ -319,27 +319,42 @@ table.a:hover {
 }
 
 .claim-tag {
-    font-size: 0.95em;
+    font-size: 1em;
     border: solid 0.5px theme('colors.grey-faded');
-    padding: 5% 21% 5% 21%;
+    padding: 0.21rem 1.2rem;
     border-radius: 3px;
     background: theme('colors.green-light');
+    display: inline-block;
+    vertical-align: top;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .context-tag {
-    font-size: 0.95em;
+    font-size: 1em;
     border: solid 0.5px theme('colors.grey-faded');
-    padding: 5% 12% 5% 12%;
+    padding: 0.21rem 0.8rem;
     border-radius: 3px;
     background: theme('colors.blue');
+    display: inline-block;
+    vertical-align: top;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .debunk-tag {
-    font-size: 0.95em;
+    font-size: 1em;
     border: solid 0.5px theme('colors.grey-faded');
-    padding: 6% 13% 6% 13%;
+    padding: 0.21rem 0.9rem;
     border-radius: 3px;
     background: theme('colors.green');
+    display: inline-block;
+    vertical-align: top;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 u {
@@ -412,33 +427,31 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
   }
   
   /* Type tags - FIXED: Flexible single-line layout */
-  .claim-tag, .context-tag, .debunk-tag, .date {
-      font-size: 0.8em;
+  .claim-tag, .context-tag, .debunk-tag {
+      font-size: 0.85em;
       display: inline-block;
-      margin: 0.2rem 0.4rem 0.5rem 0;
-      padding: 0.3rem 0.6rem;
+      margin: 0rem 0.25rem 0.5rem 0;
+      padding: 0.21rem 0.6rem;
       position: relative;
-      border-radius: 4px;
+      border-radius: 3px;
       white-space: nowrap; /* Prevent text wrapping inside tags */
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: 0.5px solid theme('colors.grey-faded');
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
   }
 
   .claim-tag {
       background: theme('colors.green-light');
-      border: 0.5px solid theme('colors.grey-faded');
   }
 
   .context-tag {
-    background: theme('colors.blue');
-    border: 0.5px solid theme('colors.grey-faded');
-    border-radius: 3px;
-}
+      background: theme('colors.blue');
+  }
 
-.debunk-tag {
-    background: theme('colors.green');
-    border: 0.5px solid theme('colors.grey-faded');
-    border-radius: 3px;
-}
+  .debunk-tag {
+      background: theme('colors.green');
+  }
 
 .date {
     font-size: 0.85em;

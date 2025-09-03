@@ -61,9 +61,9 @@ export const AuthProvider = ({ children }) => {
             const workerUrl = process.env.REACT_APP_WORKER_URL || 'https://email-worker.izumi-ky.workers.dev';
             const apiKey = process.env.REACT_APP_CLOUDFLARE_API_KEY;
             
-            // Create proper email template
+            // Create email template matching Hasbara Tracker design
             const emailTemplate = {
-                subject: '🔐 Your secure login link - Hasbara Tracker',
+                subject: 'Login to Hasbara Tracker - Secure Access',
                 html: `
                     <!DOCTYPE html>
                     <html>
@@ -72,40 +72,73 @@ export const AuthProvider = ({ children }) => {
                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
                         <title>Login to Hasbara Tracker</title>
                     </head>
-                    <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-                        <div style="text-align: center; margin-bottom: 30px;">
-                            <h1 style="color: #2563eb; margin-bottom: 10px;">🔐 Secure Login</h1>
-                            <p style="color: #6b7280; font-size: 16px;">Hasbara Tracker - Claim Editor Access</p>
-                        </div>
-                        
-                        <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 30px; margin-bottom: 30px;">
-                            <h2 style="color: #1f2937; margin-top: 0;">Login Request</h2>
-                            <p style="margin-bottom: 20px;">Hello,</p>
-                            <p style="margin-bottom: 20px;">You requested access to the Hasbara Tracker Claim Editor. Click the secure link below to sign in:</p>
-                            
-                            <div style="text-align: center; margin: 30px 0;">
-                                <a href="${magicLink}" style="display: inline-block; background: #16a34a; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;">
-                                    🔓 Sign In Securely
-                                </a>
-                            </div>
-                            
-                            <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 6px; padding: 15px; margin: 20px 0;">
-                                <p style="margin: 0; color: #92400e; font-size: 14px;">
-                                    ⚠️ <strong>Important:</strong> This link will expire in 15 minutes for security reasons.
-                                </p>
-                            </div>
-                            
-                            <p style="font-size: 14px; color: #6b7280;">
-                                If the button doesn't work, copy and paste this link into your browser:<br>
-                                <a href="${magicLink}" style="color: #2563eb; word-break: break-all;">${magicLink}</a>
+                    <body style="font-family: Helvetica, Arial, sans-serif; line-height: 1.4; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f0f0f0;">
+                        <!-- Header matching site design -->
+                        <div style="background-color: #d6d6d6; padding: 30px 20px; text-align: center; border-radius: 3px; margin-bottom: 20px;">
+                            <h1 style="margin: 0; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #333; font-weight: normal;">
+                                Hasbara Tracker
+                            </h1>
+                            <p style="margin: 10px 0 0 0; font-size: 14px; color: #595959;">
+                                Secure Login Access
                             </p>
                         </div>
                         
-                        <div style="border-top: 1px solid #e5e7eb; padding-top: 20px; font-size: 14px; color: #6b7280; text-align: center;">
-                            <p>If you didn't request this login link, you can safely ignore this email.</p>
-                            <p>This email was sent from Hasbara Tracker's secure authentication system.</p>
-                            <p style="margin-top: 20px;">
-                                <strong>Stay secure:</strong> Never share this link with anyone else.
+                        <!-- Main content -->
+                        <div style="background: white; padding: 40px 30px; border-radius: 3px; border: 1px solid #cbcbcb;">
+                            <h2 style="color: #333; margin-top: 0; font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: normal;">
+                                Login Request
+                            </h2>
+                            
+                            <p style="margin-bottom: 20px; font-size: 14px; line-height: 1.5;">
+                                Hello,
+                            </p>
+                            
+                            <p style="margin-bottom: 30px; font-size: 14px; line-height: 1.5;">
+                                You requested access to the Hasbara Tracker Claim Editor. Click the button below to sign in securely:
+                            </p>
+                            
+                            <!-- Button matching site's btn-green style -->
+                            <div style="text-align: center; margin: 35px 0;">
+                                <a href="${magicLink}" 
+                                   style="display: inline-block; 
+                                          background-color: #bffb9b; 
+                                          color: #333; 
+                                          padding: 12px 20px; 
+                                          text-decoration: none; 
+                                          border-radius: 3px; 
+                                          font-family: Helvetica, Arial, sans-serif; 
+                                          font-size: 14px; 
+                                          font-weight: normal;
+                                          border: 1px solid #5e5e5e;
+                                          transition: all 0.2s ease;">
+                                    Access Hasbara Tracker
+                                </a>
+                            </div>
+                            
+                            <!-- Warning box -->
+                            <div style="background: #78ff96; border: 1px solid #5e5e5e; border-radius: 3px; padding: 15px; margin: 25px 0; text-align: center;">
+                                <p style="margin: 0; color: #333; font-size: 13px; font-weight: normal;">
+                                    ⚠️ <strong>Important:</strong> This link expires in 15 minutes for security.
+                                </p>
+                            </div>
+                            
+                            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #cbcbcb;">
+                                <p style="font-size: 13px; color: #595959; margin-bottom: 15px;">
+                                    If the button doesn't work, copy this link:
+                                </p>
+                                <p style="font-size: 12px; color: #595959; word-break: break-all; background: #f0f0f0; padding: 10px; border-radius: 3px; font-family: monospace;">
+                                    ${magicLink}
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div style="text-align: center; margin-top: 30px; padding: 20px; color: #595959; font-size: 12px;">
+                            <p style="margin: 0 0 10px 0;">
+                                If you didn't request this login link, you can safely ignore this email.
+                            </p>
+                            <p style="margin: 0;">
+                                Hasbara Tracker Secure Authentication System
                             </p>
                         </div>
                     </body>

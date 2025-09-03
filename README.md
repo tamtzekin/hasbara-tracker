@@ -9,3 +9,6 @@ We’re working on documenting and debunking claims made by the Israeli regime d
 Instagram [@hasbaratracker](http://instagram.com/hasbaratracker)
 
 Twitter [@hasbaratracker](https://twitter.com/hasbaratracker)
+
+# New features
+– Users can login to contribute to claims.

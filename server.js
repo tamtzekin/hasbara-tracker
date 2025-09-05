@@ -1036,6 +1036,193 @@ app.delete('/api/claims/:claimTitle/file', verifyAdminToken, (req, res) => {
     }
 });
 
+// API endpoint for approved user emails from CSV (for Cloudflare Worker)
+app.get('/api/approved-users', (req, res) => {
+    try {
+        console.log('📧 Cloudflare Worker requesting approved users...');
+        console.log('📧 Request headers:', req.headers);
+        
+        // Verify the request is from your Cloudflare Worker
+        const workerSecret = req.headers['x-worker-secret'];
+        const expectedSecret = process.env.WORKER_SECRET || 'your-secure-worker-secret-key-123';
+        
+        console.log('🔐 Worker secret check:', { 
+            received: workerSecret, 
+            expected: expectedSecret,
+            match: workerSecret === expectedSecret
+        });
+        
+        if (workerSecret !== expectedSecret) {
+            console.log('❌ Unauthorized request to approved users API');
+            return res.status(401).json({ error: 'Unauthorized' });
+        }
+        
+        const fs = require('fs');
+        const path = require('path');
+        const crypto = require('crypto');
+        
+        // Get decryption key from environment
+        const encryptionKey = process.env.VOLUNTEERS_ENCRYPTION_KEY;
+        if (!encryptionKey) {
+            return res.status(500).json({ error: 'Volunteers encryption key not configured' });
+        }
+        
+        const encryptedPath = path.join(__dirname, 'volunteers.encrypted');
+        
+        if (!fs.existsSync(encryptedPath)) {
+            return res.status(404).json({ error: 'Encrypted volunteers file not found' });
+        }
+        
+        // Read and decrypt CSV
+        const encryptedData = JSON.parse(fs.readFileSync(encryptedPath, 'utf8'));
+        
+        // Decrypt the data
+        const keyBuffer = Buffer.from(encryptionKey, 'hex');
+        const decipher = crypto.createDecipher('aes-256-gcm', keyBuffer);
+        decipher.setAuthTag(Buffer.from(encryptedData.authTag, 'hex'));
+        
+        let csvData = decipher.update(encryptedData.encrypted, 'hex', 'utf8');
+        csvData += decipher.final('utf8');
+        const lines = csvData.split('\n');
+        const headers = lines[0].split(',');
+        const emailIndex = headers.findIndex(h => h.toLowerCase().includes('email'));
+        
+        if (emailIndex === -1) {
+            return res.status(500).json({ error: 'Email column not found in CSV' });
+        }
+        
+        const approvedEmails = [];
+        
+        // Extract emails from CSV
+        for (let i = 1; i < lines.length; i++) {
+            const columns = lines[i].split(',');
+            if (columns[emailIndex] && columns[emailIndex].trim()) {
+                const email = columns[emailIndex].trim().toLowerCase();
+                if (email && email.includes('@') && !approvedEmails.includes(email)) {
+                    approvedEmails.push(email);
+                }
+            }
+        }
+        
+        console.log(`📧 Returning ${approvedEmails.length} approved user emails to Cloudflare Worker`);
+        console.log(`📧 Sample emails:`, approvedEmails.slice(0, 3));
+        
+        // Also check if assigned users are included
+        if (global.userAssignments) {
+            const assignedEmails = Object.keys(global.userAssignments);
+            console.log(`📧 Additional assigned users:`, assignedEmails);
+            
+            // Add assigned users to approved emails if not already included
+            assignedEmails.forEach(email => {
+                if (!approvedEmails.includes(email)) {
+                    approvedEmails.push(email);
+                }
+            });
+            
+            console.log(`📧 Total with assignments: ${approvedEmails.length} emails`);
+        }
+        
+        res.json({
+            success: true,
+            emails: approvedEmails,
+            count: approvedEmails.length
+        });
+        
+    } catch (error) {
+        console.error('❌ Error getting approved users:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// API endpoint to manage user claim assignments
+app.post('/api/assign-user-to-claim', (req, res) => {
+    try {
+        const { email, claimTitle } = req.body;
+        
+        if (!email || !claimTitle) {
+            return res.status(400).json({ error: 'Email and claimTitle are required' });
+        }
+        
+        // Initialize assignments storage if not exists
+        if (!global.userAssignments) {
+            global.userAssignments = {};
+        }
+        
+        const emailKey = email.toLowerCase().trim();
+        
+        // Create or update user assignment
+        if (!global.userAssignments[emailKey]) {
+            global.userAssignments[emailKey] = {
+                email: emailKey,
+                assignedClaims: [],
+                assignedAt: Date.now()
+            };
+        }
+        
+        // Add claim if not already assigned
+        if (!global.userAssignments[emailKey].assignedClaims.includes(claimTitle)) {
+            global.userAssignments[emailKey].assignedClaims.push(claimTitle);
+        }
+        
+        console.log(`✅ Assigned ${email} to claim: "${claimTitle}"`);
+        
+        res.json({
+            success: true,
+            message: 'User assigned to claim successfully',
+            assignments: global.userAssignments[emailKey]
+        });
+        
+    } catch (error) {
+        console.error('❌ Error assigning user to claim:', error);
+        res.status(500).json({ error: 'Failed to assign user to claim' });
+    }
+});
+
+// API endpoint to get user assignments
+app.get('/api/user-assignments/:email', (req, res) => {
+    try {
+        const { email } = req.params;
+        
+        if (!global.userAssignments) {
+            global.userAssignments = {};
+        }
+        
+        // Get assignments for specific user
+        const emailKey = email.toLowerCase().trim();
+        const userAssignments = global.userAssignments[emailKey] || { 
+            email: emailKey, 
+            assignedClaims: [] 
+        };
+        
+        res.json({
+            success: true,
+            assignments: userAssignments
+        });
+        
+    } catch (error) {
+        console.error('❌ Error getting user assignments:', error);
+        res.status(500).json({ error: 'Failed to get user assignments' });
+    }
+});
+
+// API endpoint to get all user assignments
+app.get('/api/user-assignments', (req, res) => {
+    try {
+        if (!global.userAssignments) {
+            global.userAssignments = {};
+        }
+        
+        res.json({
+            success: true,
+            assignments: global.userAssignments
+        });
+        
+    } catch (error) {
+        console.error('❌ Error getting all user assignments:', error);
+        res.status(500).json({ error: 'Failed to get user assignments' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`🚀 Data publishing server running on port ${PORT}`);
     console.log(`📡 Ready to accept requests at http://localhost:${PORT}/api/publish-data`);

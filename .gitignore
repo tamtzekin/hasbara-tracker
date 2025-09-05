@@ -40,6 +40,11 @@ test-auth.js
 *-test.js
 cloudflare-worker-*.js
 
+# Encrypted volunteers data and keys
+.encryption-key
+volunteers.csv
+encrypt-csv.js
+
 # file types
 *.mp4
 

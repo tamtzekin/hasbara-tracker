@@ -76,6 +76,7 @@ export const AuthProvider = ({ children }) => {
     const sendMagicLink = async (email) => {
         try {
             console.log('🔗 Requesting magic link for:', email);
+            console.log('📧 Email being checked:', email.toLowerCase());
             
             // Generate a unique magic link token (matching GitHub working version)
             const magicToken = `token_${Date.now()}_${Math.random().toString(36).substr(2, 20)}`;
@@ -199,6 +200,8 @@ Hasbara Tracker Authentication System
                           process.env.CLOUDFLARE_API_KEY || 
                           'test-key-123'; // Fallback for testing
             
+            console.log('🌐 Sending request to worker:', workerUrl);
+            console.log('🔑 Using API key (first 10 chars):', apiKey.substring(0, 10) + '...');
             
             const response = await fetch(workerUrl, {
                 method: 'POST',
@@ -216,9 +219,17 @@ Hasbara Tracker Authentication System
             });
 
 
+            console.log('📨 Worker response status:', response.status);
+            
             if (!response.ok) {
                 const errorText = await response.text();
                 console.error('❌ Worker error:', response.status, errorText);
+                console.error('❌ This usually means the email was not approved by the worker');
+                console.error('❌ Check if:', {
+                    serverRunning: 'http://localhost:3001 is accessible from Cloudflare',
+                    emailInCSV: `${email} is in volunteers.csv`,
+                    emailAssigned: `${email} has been assigned to claims`
+                });
                 throw new Error(`Worker error ${response.status}: ${errorText}`);
             }
 
@@ -261,15 +272,42 @@ Hasbara Tracker Authentication System
             tokenData.used = true;
             localStorage.setItem(tokenKey, JSON.stringify(tokenData));
             
-            // Create admin session for the authenticated email
+            // Determine user role and permissions
+            let userData;
+            const isAdmin = await checkIfAdmin(tokenData.email);
+            
+            if (isAdmin) {
+                // Create admin session
+                userData = {
+                    id: `admin_${Date.now()}`,
+                    email: tokenData.email,
+                    role: 'admin',
+                    permissions: ['admin', 'claim_editor'],
+                    assignedClaims: []
+                };
+            } else {
+                // Create regular user session and fetch assignments
+                userData = {
+                    id: `user_${Date.now()}`,
+                    email: tokenData.email,
+                    role: 'user',
+                    permissions: ['claim_editor'],
+                    assignedClaims: []
+                };
+                
+                // Fetch user's claim assignments
+                try {
+                    const assignResponse = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:3001'}/api/user-assignments/${tokenData.email}`);
+                    if (assignResponse.ok) {
+                        const assignData = await assignResponse.json();
+                        userData.assignedClaims = assignData.assignments?.assignedClaims || [];
+                    }
+                } catch (error) {
+                    console.warn('Could not fetch user assignments:', error.message);
+                }
+            }
+            
             const sessionToken = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-            const userData = {
-                id: `admin_${Date.now()}`,
-                email: tokenData.email,
-                role: 'admin',
-                permissions: ['admin', 'claim_editor'],
-                assignedClaims: []
-            };
             
             // Store session in sessionStorage for browser session persistence
             sessionStorage.setItem('hasbaratracker_token', sessionToken);
@@ -331,6 +369,15 @@ Hasbara Tracker Authentication System
         if (!user) return false;
         if (user.role === 'admin') return true;
         return user.assignedClaims?.includes(claimTitle) || false;
+    };
+
+    // Check if email is admin (uses environment variables for security)
+    const checkIfAdmin = async (email) => {
+        // Get admin emails from environment variables
+        const adminEmailsEnv = process.env.REACT_APP_ADMIN_EMAILS || 'admin@hasbaratracker.com';
+        const adminEmails = adminEmailsEnv.split(',').map(e => e.trim().toLowerCase());
+        
+        return adminEmails.includes(email.toLowerCase());
     };
 
     const value = {

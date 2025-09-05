@@ -1235,6 +1235,28 @@ First download the file/image/video, and then upload it into the corresponding G
                                                         draftData.push(...newDraftData);
                                                         draftSummaries.push(...newDraftSummaries);
                                                         
+                                                        // Delete the associated component file
+                                                        try {
+                                                            const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
+                                                            const response = await fetch(`http://localhost:3001/api/claims/${encodeURIComponent(selectedClaimTitle)}/file`, {
+                                                                method: 'DELETE',
+                                                                headers: {
+                                                                    'Authorization': `Bearer ${token}`,
+                                                                    'Content-Type': 'application/json'
+                                                                }
+                                                            });
+                                                            
+                                                            if (response.ok) {
+                                                                const result = await response.json();
+                                                                console.log('✅ Component file deletion result:', result.message);
+                                                            } else {
+                                                                console.warn('⚠️ Failed to delete component file:', await response.text());
+                                                            }
+                                                        } catch (fileDeleteError) {
+                                                            console.error('❌ Error deleting component file:', fileDeleteError);
+                                                            // Don't block the claim deletion if file deletion fails
+                                                        }
+                                                        
                                                         // Publish the deletion
                                                         await publishDraftToLive();
                                                         

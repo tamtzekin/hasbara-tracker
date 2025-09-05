@@ -29,27 +29,14 @@ import ClaimHamasChemicalWeapons from './components/ClaimHamasChemicalWeapons';
 import ClaimIsraelDeniesChurchKilling from './components/ClaimIsraelDeniesChurchKilling';
 import ClaimIsraelHelpsElderlyMan from './components/ClaimIsraelHelpsElderlyMan';
 import ClaimCaptivesStripped from './components/ClaimCaptivesStripped';
-import ClaimAlahliHospitalWasAttackedByPalestinianRocketsNotIsraeliForces from './components/ClaimAlahliHospitalWasAttackedByPalestinianRocketsNotIsraeliForces';
-import ClaimIsraeliStateOfferedFuelToAlshifaHospitalAndItWasRefusedByHamas from './components/ClaimIsraeliStateOfferedFuelToAlshifaHospitalAndItWasRefusedByHamas';
-import ClaimMakeupUsedInGazaToFakeInjuries from './components/ClaimMakeupUsedInGazaToFakeInjuries';
-import ClaimHamasWereCarryingInstructionsOnHowToMakeChemicalWeapons from './components/ClaimHamasWereCarryingInstructionsOnHowToMakeChemicalWeapons';
-import ClaimIsraeliStateDeniesKillingMotherAndDaughterSeekingRefugeInGazasHolyFamilyParish from './components/ClaimIsraeliStateDeniesKillingMotherAndDaughterSeekingRefugeInGazasHolyFamilyParish';
-import ClaimIsraeliSoldierHelpsElderlyPalestinianManInSafeCorridor from './components/ClaimIsraeliSoldierHelpsElderlyPalestinianManInSafeCorridor';
-import ClaimPalestinianCaptivesStrippedDownNakedBecauseOfWarmWeatherInTheMiddleEastSaysMarkRegev from './components/ClaimPalestinianCaptivesStrippedDownNakedBecauseOfWarmWeatherInTheMiddleEastSaysMarkRegev';
 import Claim from './components/Claim';
-import ClaimThisIsANewClaim from './components/ClaimThisIsANewClaim';
-import ClaimFuckIsrael from './components/ClaimFuckIsrael';
-import ClaimAnotherClaim from './components/ClaimAnotherClaim';
-import ClaimIsraelSucks from './components/ClaimIsraelSucks';
-import ClaimTestClaim from './components/ClaimTestClaim';
-import ClaimTest from './components/ClaimTest';
 import ClaimNewClaim from './components/ClaimNewClaim';
 import ClaimChurchKillingDenial from './components/ClaimChurchKillingDenial';
 import ClaimElderlyManHelp from './components/ClaimElderlyManHelp';
 import ClaimNakedCaptivesWeather from './components/ClaimNakedCaptivesWeather';
-import ClaimAda from './components/ClaimAda';
-import ClaimSs from './components/ClaimSs';
-import ClaimAfaf from './components/ClaimAfaf';
+import ClaimIsraeliStateDeniesKillingMotherAndDaughterSeekingRefugeInGazasHolyFamilyParish from './components/ClaimIsraeliStateDeniesKillingMotherAndDaughterSeekingRefugeInGazasHolyFamilyParish';
+import ClaimIsraeliSoldierHelpsElderlyPalestinianManInSafeCorridor from './components/ClaimIsraeliSoldierHelpsElderlyPalestinianManInSafeCorridor';
+import ClaimPalestinianCaptivesStrippedDownNakedBecauseOfWarmWeatherInTheMiddleEastSaysMarkRegev from './components/ClaimPalestinianCaptivesStrippedDownNakedBecauseOfWarmWeatherInTheMiddleEastSaysMarkRegev';
 
 
 const App = () => {
@@ -94,9 +81,6 @@ const App = () => {
                 <Route path="/hamas-chemical-weapons" element={<ClaimHamasChemicalWeapons />} />
                 <Route path="/israel-denies-church-killing" element={<ClaimIsraelDeniesChurchKilling />} />
                 <Route path="/captives-stripped" element={<ClaimCaptivesStripped />} />
-                <Route path="/afaf" element={<ClaimAfaf />} />
-                <Route path="/ss" element={<ClaimSs />} />
-                <Route path="/ada" element={<ClaimAda />} />
                 <Route path="/palestinian-captives-stripped" element={<ClaimPalestinianCaptivesStrippedDownNakedBecauseOfWarmWeatherInTheMiddleEastSaysMarkRegev />} />
                 <Route path="/israeli-soldier-helps" element={<ClaimIsraeliSoldierHelpsElderlyPalestinianManInSafeCorridor />} />
                 <Route path="/israeli-state-denies" element={<ClaimIsraeliStateDeniesKillingMotherAndDaughterSeekingRefugeInGazasHolyFamilyParish />} />
@@ -105,20 +89,7 @@ const App = () => {
                 <Route path="/israeli-soldier-helps" element={<ClaimElderlyManHelp />} />
                 <Route path="/palestinian-captives-stripped" element={<ClaimNakedCaptivesWeather />} />
                 <Route path="/new-claim" element={<ClaimNewClaim />} />
-                <Route path="/test" element={<ClaimTest />} />
-                <Route path="/test-claim" element={<ClaimTestClaim />} />
-                <Route path="/israel-sucks" element={<ClaimIsraelSucks />} />
-                <Route path="/another-claim" element={<ClaimAnotherClaim />} />
-                <Route path="/fuck-israel" element={<ClaimFuckIsrael />} />
-                <Route path="/this-is-a-new-claim" element={<ClaimThisIsANewClaim />} />
                 <Route path="/" element={<Claim />} />
-                <Route path="/palestinian-captives-stripped-down-naked-because-of-warm-weather-in-the-middle-east-says-mark-regev" element={<ClaimPalestinianCaptivesStrippedDownNakedBecauseOfWarmWeatherInTheMiddleEastSaysMarkRegev />} />
-                <Route path="/israeli-soldier-helps-elderly-palestinian-man-in-safe-corridor" element={<ClaimIsraeliSoldierHelpsElderlyPalestinianManInSafeCorridor />} />
-                <Route path="/israeli-state-denies-killing-mother-and-daughter-seeking-refuge-in-gazas-holy-family-parish" element={<ClaimIsraeliStateDeniesKillingMotherAndDaughterSeekingRefugeInGazasHolyFamilyParish />} />
-                <Route path="/hamas-were-carrying-instructions-on-how-to-make-chemical-weapons" element={<ClaimHamasWereCarryingInstructionsOnHowToMakeChemicalWeapons />} />
-                <Route path="/makeup-used-in-gaza-to-fake-injuries" element={<ClaimMakeupUsedInGazaToFakeInjuries />} />
-                <Route path="/israeli-state-offered-fuel-to-al-shifa-hospital-and-it-was-refused-by-hamas" element={<ClaimIsraeliStateOfferedFuelToAlshifaHospitalAndItWasRefusedByHamas />} />
-                <Route path="/al-ahli-hospital-was-attacked-by-palestinian-rockets-not-israeli-forces" element={<ClaimAlahliHospitalWasAttackedByPalestinianRocketsNotIsraeliForces />} />
 
                 
                 {/* Route redirects to claim searches */}

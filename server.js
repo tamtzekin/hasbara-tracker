@@ -996,6 +996,46 @@ app.get('/debug/fix-auth', (req, res) => {
 });
 
 
+// Delete claim file endpoint
+app.delete('/api/claims/:claimTitle/file', verifyAdminToken, (req, res) => {
+    try {
+        const { claimTitle } = req.params;
+        
+        console.log(`🗑️ Attempting to delete claim file for: ${claimTitle}`);
+        
+        // Generate the component name for this claim
+        const componentName = titleToComponentName(claimTitle);
+        const componentFilePath = path.join(__dirname, 'src', 'components', `${componentName}.js`);
+        
+        // Check if file exists before attempting to delete
+        if (fs.existsSync(componentFilePath)) {
+            fs.unlinkSync(componentFilePath);
+            console.log(`✅ Successfully deleted component file: ${componentName}.js`);
+            res.json({ 
+                success: true, 
+                message: `Component file ${componentName}.js deleted successfully`,
+                componentName: componentName,
+                filePath: componentFilePath
+            });
+        } else {
+            console.log(`⚠️ Component file not found: ${componentName}.js`);
+            res.json({ 
+                success: true, 
+                message: `Component file ${componentName}.js not found (may have already been deleted)`,
+                componentName: componentName,
+                filePath: componentFilePath
+            });
+        }
+        
+    } catch (error) {
+        console.error('❌ Error deleting claim file:', error);
+        res.status(500).json({ 
+            error: 'Failed to delete claim file',
+            message: error.message 
+        });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`🚀 Data publishing server running on port ${PORT}`);
     console.log(`📡 Ready to accept requests at http://localhost:${PORT}/api/publish-data`);

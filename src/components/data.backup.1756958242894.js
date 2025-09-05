@@ -2412,7 +2412,7 @@ const data = [
     },
     {
         "claimTitle": "Hamas were carrying instructions on how to make chemical weapons",
-        "date": "2025-09-24",
+        "date": "2025-09-25",
         "claim": {
             "claimText": "Context",
             "claimTag": "context-tag"
@@ -2429,7 +2429,7 @@ const data = [
             }
         ],
         "lastEditedBy": "swan4444444@protonmail.com",
-        "lastEditedAt": "2025-09-04T05:36:20.265Z",
+        "lastEditedAt": "2025-09-04T03:53:03.791Z",
         "isDraft": false
     },
     {
@@ -3198,9 +3198,34 @@ const data = [
         "isDraft": false
     },
     {
+        "id": 1756957884290.2322,
+        "claimTitle": "Hamas were carrying instructions on how to make chemical weapons",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": "claim-tag"
+        },
+        "description": {
+            "summary": "",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": ""
+            }
+        ],
+        "lastEditedBy": "swan4444444@protonmail.com",
+        "lastEditedAt": "2025-09-04T03:51:24.290Z",
+        "isEditing": true,
+        "isNew": true,
+        "isDraft": false
+    },
+    {
         "id": 1756957884297.9248,
         "claimTitle": "Hamas were carrying instructions on how to make chemical weapons",
-        "date": "2025-09-24",
+        "date": "",
         "claim": {
             "claimText": "",
             "claimTag": "claim-tag"
@@ -3217,7 +3242,7 @@ const data = [
             }
         ],
         "lastEditedBy": "swan4444444@protonmail.com",
-        "lastEditedAt": "2025-09-04T05:36:20.265Z",
+        "lastEditedAt": "2025-09-04T03:51:24.297Z",
         "isEditing": true,
         "isNew": true,
         "isDraft": false

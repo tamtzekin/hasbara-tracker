@@ -35,6 +35,10 @@ const summaries = [
     {
         "claimMainTitle": "",
         "claimSummary": ""
+    },
+    {
+        "claimMainTitle": "afaf",
+        "claimSummary": "affa"
     }
 ];
 
@@ -3221,6 +3225,29 @@ const data = [
         "isEditing": true,
         "isNew": true,
         "isDraft": false
+    },
+    {
+        "claimTitle": "afaf",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": ""
+        },
+        "description": {
+            "summary": "affa",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": "",
+                "videoPreviewLink": ""
+            }
+        ],
+        "isDraft": false,
+        "lastEditedBy": "current_user",
+        "lastEditedAt": "2025-09-05T08:02:33.704Z"
     }
 ];
 

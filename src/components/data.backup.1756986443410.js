@@ -35,6 +35,14 @@ const summaries = [
     {
         "claimMainTitle": "",
         "claimSummary": ""
+    },
+    {
+        "claimMainTitle": "This is a new claim",
+        "claimSummary": "The new claim is here"
+    },
+    {
+        "claimMainTitle": "ANOTHER CLAIM",
+        "claimSummary": "ANOTHER CLAIM HERE"
     }
 ];
 
@@ -3218,6 +3226,152 @@ const data = [
         ],
         "lastEditedBy": "swan4444444@protonmail.com",
         "lastEditedAt": "2025-09-04T05:36:20.265Z",
+        "isEditing": true,
+        "isNew": true,
+        "isDraft": false
+    },
+    {
+        "claimTitle": "This is a new claim",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": ""
+        },
+        "description": {
+            "summary": "The new claim is here",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": "",
+                "videoPreviewLink": ""
+            }
+        ],
+        "isDraft": false,
+        "lastEditedBy": "current_user",
+        "lastEditedAt": "2025-09-04T05:37:24.739Z"
+    },
+    {
+        "claimTitle": "ANOTHER CLAIM",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": ""
+        },
+        "description": {
+            "summary": "ANOTHER CLAIM HERE",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": "",
+                "videoPreviewLink": ""
+            }
+        ],
+        "isDraft": false,
+        "lastEditedBy": "current_user",
+        "lastEditedAt": "2025-09-04T06:44:52.744Z"
+    },
+    {
+        "id": 1756968496515.4563,
+        "claimTitle": "",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": "claim-tag"
+        },
+        "description": {
+            "summary": "",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": ""
+            }
+        ],
+        "lastEditedBy": "swan4444444@protonmail.com",
+        "lastEditedAt": "2025-09-04T06:48:16.515Z",
+        "isEditing": true,
+        "isNew": true,
+        "isDraft": false
+    },
+    {
+        "id": 1756968496521.2434,
+        "claimTitle": "",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": "claim-tag"
+        },
+        "description": {
+            "summary": "",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": ""
+            }
+        ],
+        "lastEditedBy": "swan4444444@protonmail.com",
+        "lastEditedAt": "2025-09-04T06:48:16.521Z",
+        "isEditing": true,
+        "isNew": true,
+        "isDraft": false
+    },
+    {
+        "id": 1756968498075.8677,
+        "claimTitle": "",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": "claim-tag"
+        },
+        "description": {
+            "summary": "",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": ""
+            }
+        ],
+        "lastEditedBy": "swan4444444@protonmail.com",
+        "lastEditedAt": "2025-09-04T06:48:18.075Z",
+        "isEditing": true,
+        "isNew": true,
+        "isDraft": false
+    },
+    {
+        "id": 1756968498079.3916,
+        "claimTitle": "",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": "claim-tag"
+        },
+        "description": {
+            "summary": "",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": ""
+            }
+        ],
+        "lastEditedBy": "swan4444444@protonmail.com",
+        "lastEditedAt": "2025-09-04T06:48:18.079Z",
         "isEditing": true,
         "isNew": true,
         "isDraft": false

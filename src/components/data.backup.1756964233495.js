@@ -2412,28 +2412,6 @@ const data = [
     },
     {
         "claimTitle": "Hamas were carrying instructions on how to make chemical weapons",
-        "date": "2025-09-24",
-        "claim": {
-            "claimText": "Context",
-            "claimTag": "context-tag"
-        },
-        "description": {
-            "summary": "TEST NEW DATA",
-            "details": "TEST NEW DATA"
-        },
-        "sources": [
-            {
-                "sourceName": "<em>Israel and chemical/biological weapons: History, deterrence, and arms control</em> by Avner Cohen, 2001",
-                "sourceLink": "https://files.hasbaratracker.com/2001_Avner_Cohen_Israel_and_chemical_biological_weapons.pdf",
-                "archiveLink": "https://files.hasbaratracker.com/2001_Avner_Cohen_Israel_and_chemical_biological_weapons.pdf"
-            }
-        ],
-        "lastEditedBy": "swan4444444@protonmail.com",
-        "lastEditedAt": "2025-09-04T05:36:20.265Z",
-        "isDraft": false
-    },
-    {
-        "claimTitle": "Hamas were carrying instructions on how to make chemical weapons",
         "date": "1948",
         "claim": {
             "claimText": "Context",

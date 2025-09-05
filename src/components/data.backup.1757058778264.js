@@ -35,6 +35,10 @@ const summaries = [
     {
         "claimMainTitle": "",
         "claimSummary": ""
+    },
+    {
+        "claimMainTitle": "ss",
+        "claimSummary": "ssss"
     }
 ];
 
@@ -3221,6 +3225,29 @@ const data = [
         "isEditing": true,
         "isNew": true,
         "isDraft": false
+    },
+    {
+        "claimTitle": "ss",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": ""
+        },
+        "description": {
+            "summary": "ssss",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": "",
+                "videoPreviewLink": ""
+            }
+        ],
+        "isDraft": false,
+        "lastEditedBy": "current_user",
+        "lastEditedAt": "2025-09-05T07:52:47.136Z"
     }
 ];
 

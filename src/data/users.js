@@ -4,16 +4,28 @@
 // Fetch admin users from secure storage
 const fetchAdminUsers = async () => {
     try {
+        // Get authentication token
+        const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
+        
         // In production, this fetches from your Cloudflare Worker
-        const response = await fetch('/api/auth/admin-users');
+        const headers = {};
+        if (token) {
+            headers['Authorization'] = `Bearer ${token}`;
+        }
+        
+        const response = await fetch('http://localhost:3001/api/admin/users', {
+            headers
+        });
+        
         if (response.ok) {
             return await response.json();
         }
     } catch (error) {
         // Fallback for development
+        console.log('Could not fetch admin users from server:', error.message);
     }
     
-    // Production: Admin emails fetched from encrypted Cloudflare storage only
+    // Production: Admin emails fetched from encrypted Cloudflare storage only  
     // No fallback - forces proper encryption setup
     return [];
 };

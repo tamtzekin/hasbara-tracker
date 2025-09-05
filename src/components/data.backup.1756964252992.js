@@ -3196,31 +3196,6 @@ const data = [
             }
         ],
         "isDraft": false
-    },
-    {
-        "id": 1756957884297.9248,
-        "claimTitle": "Hamas were carrying instructions on how to make chemical weapons",
-        "date": "2025-09-24",
-        "claim": {
-            "claimText": "",
-            "claimTag": "claim-tag"
-        },
-        "description": {
-            "summary": "TEST NEW DATA",
-            "details": "TEST NEW DATA"
-        },
-        "sources": [
-            {
-                "sourceName": "",
-                "sourceLink": "",
-                "archiveLink": ""
-            }
-        ],
-        "lastEditedBy": "swan4444444@protonmail.com",
-        "lastEditedAt": "2025-09-04T05:36:20.265Z",
-        "isEditing": true,
-        "isNew": true,
-        "isDraft": false
     }
 ];
 

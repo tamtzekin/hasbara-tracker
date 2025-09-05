@@ -34,22 +34,81 @@ const AdminPanel = () => {
 
     const fetchUsers = async () => {
         try {
-            const token = localStorage.getItem('hasbaratracker_token');
-            const response = await fetch('/api/admin/users', {
+            const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
+            console.log('🔑 AdminPanel token check:', {
+                token: token ? token.substring(0, 20) + '...' : 'NULL',
+                sessionStorage: !!sessionStorage.getItem('hasbaratracker_token'),
+                localStorage: !!localStorage.getItem('hasbaratracker_token')
+            });
+            
+            if (!token) {
+                console.log('❌ No token found in AdminPanel, cannot make authenticated request');
+                setMessage('Authentication required. Please log in again.');
+                setMessageType('error');
+                return;
+            }
+            
+            console.log('🚀 About to fetch from: http://localhost:3001/api/admin/users');
+            console.log('🔑 Using token:', token?.substring(0, 20) + '...');
+            
+            // First test if we can reach the server at all
+            try {
+                const testResponse = await fetch('http://localhost:3001/api/admin/users', {
+                    method: 'OPTIONS'
+                });
+                console.log('🔍 CORS preflight test:', {
+                    status: testResponse.status,
+                    headers: Object.fromEntries(testResponse.headers.entries())
+                });
+            } catch (preflightError) {
+                console.error('❌ CORS preflight failed:', preflightError);
+            }
+            
+            const response = await fetch('http://localhost:3001/api/admin/users', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
             });
 
+            console.log('📡 Load Users response:', {
+                status: response.status,
+                statusText: response.statusText,
+                ok: response.ok,
+                url: response.url
+            });
+
             if (response.ok) {
                 const usersData = await response.json();
+                console.log('✅ Load Users success response:', usersData);
+                console.log('📊 Setting users state with', usersData.length, 'users');
                 setUsers(usersData);
+                
+                // Clear any error messages on success
+                if (usersData.length > 0) {
+                    setMessage('');
+                    setMessageType('');
+                }
             } else {
-                setMessage('Failed to load users');
-                setMessageType('error');
+                console.log('❌ Load Users error response status:', response.status);
+                try {
+                    const error = await response.json();
+                    console.log('❌ Load Users error response body:', error);
+                    setMessage(error.message || error.error || 'Failed to load users');
+                    setMessageType('error');
+                } catch (parseError) {
+                    console.log('❌ Could not parse Load Users error response as JSON:', parseError);
+                    const errorText = await response.text();
+                    console.log('❌ Load Users error response text:', errorText);
+                    setMessage(`Server error: ${response.status} ${response.statusText}`);
+                    setMessageType('error');
+                }
             }
         } catch (error) {
-            setMessage('Error loading users');
+            console.error('❌ Load Users network/fetch error:', error);
+            console.error('❌ Error name:', error.name);
+            console.error('❌ Error message:', error.message);
+            console.error('❌ Full error object:', JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            setMessage(`Error loading users: ${error.message}`);
             setMessageType('error');
         } finally {
             setLoading(false);
@@ -68,8 +127,15 @@ const AdminPanel = () => {
         setActionLoading(true);
         
         try {
-            const token = localStorage.getItem('hasbaratracker_token');
-            const response = await fetch('/api/admin/users', {
+            const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
+            console.log('🔑 Add User token check:', {
+                token: token ? token.substring(0, 20) + '...' : 'NULL',
+                email: newUserEmail,
+                role: newUserRole,
+                claims: newUserRole === 'user' ? selectedClaims : []
+            });
+            
+            const response = await fetch('http://localhost:3001/api/admin/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -82,7 +148,17 @@ const AdminPanel = () => {
                 })
             });
 
+            console.log('📡 Add User response:', {
+                status: response.status,
+                statusText: response.statusText,
+                ok: response.ok,
+                url: response.url,
+                headers: Object.fromEntries(response.headers.entries())
+            });
+
             if (response.ok) {
+                const userData = await response.json();
+                console.log('✅ Add User success response:', userData);
                 setMessage(`User ${newUserEmail} added successfully`);
                 setMessageType('success');
                 setNewUserEmail('');
@@ -90,9 +166,19 @@ const AdminPanel = () => {
                 setSelectedClaims([]);
                 fetchUsers();
             } else {
-                const error = await response.json();
-                setMessage(error.message || 'Failed to add user');
-                setMessageType('error');
+                console.log('❌ Add User error response status:', response.status);
+                try {
+                    const error = await response.json();
+                    console.log('❌ Add User error response body:', error);
+                    setMessage(error.message || error.error || 'Failed to add user');
+                    setMessageType('error');
+                } catch (parseError) {
+                    console.log('❌ Could not parse error response as JSON:', parseError);
+                    const errorText = await response.text();
+                    console.log('❌ Add User error response text:', errorText);
+                    setMessage(`Server error: ${response.status} ${response.statusText}`);
+                    setMessageType('error');
+                }
             }
         } catch (error) {
             setMessage('Error adding user');
@@ -110,8 +196,8 @@ const AdminPanel = () => {
         setActionLoading(true);
         
         try {
-            const token = localStorage.getItem('hasbaratracker_token');
-            const response = await fetch(`/api/admin/users/${userId}`, {
+            const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
+            const response = await fetch(`http://localhost:3001/api/admin/users/${userId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -139,8 +225,8 @@ const AdminPanel = () => {
         setActionLoading(true);
         
         try {
-            const token = localStorage.getItem('hasbaratracker_token');
-            const response = await fetch(`/api/admin/users/${userId}/claims`, {
+            const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
+            const response = await fetch(`http://localhost:3001/api/admin/users/${userId}/claims`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

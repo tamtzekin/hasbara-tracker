@@ -18,7 +18,6 @@ import {
     ADMIN_USERS
 } from '../data/users';
 
-import { emailService } from './emailService';
 
 // Initialize users on app start
 initializeUsers();
@@ -28,16 +27,6 @@ initializeUsers();
 // Simulate network delay
 const delay = (ms = 500) => new Promise(resolve => setTimeout(resolve, ms));
 
-// Email service - uses the configured email provider (Cloudflare Workers)
-const sendMagicLinkEmail = async (email, magicLink) => {
-    try {
-        const result = await emailService.sendMagicLink(email, magicLink);
-        return result;
-    } catch (error) {
-        // Email sending failed - return error without exposing details
-        return { success: false, message: 'Failed to send magic link' };
-    }
-};
 
 // Auth API endpoints
 export const authAPI = {
@@ -61,9 +50,7 @@ export const authAPI = {
         // Store token
         storeMagicLinkToken(email, token);
         
-        // Send email (mocked)
-        await sendMagicLinkEmail(email, magicLink);
-        
+        // Note: Email sending is handled by the server API
         return { 
             success: true, 
             message: 'Magic link sent to your email'
@@ -227,15 +214,16 @@ export const adminAPI = {
 // Mock API server - intercept fetch requests
 const originalFetch = window.fetch;
 
-window.fetch = function(url, options = {}) {
-    // Only intercept our API calls
-    if (typeof url === 'string' && url.startsWith('/api/')) {
-        return handleMockAPI(url, options);
-    }
-    
-    // Pass through all other requests
-    return originalFetch.apply(this, arguments);
-};
+// DISABLED: Mock API interception - using real server instead
+// window.fetch = function(url, options = {}) {
+//     // Only intercept our API calls
+//     if (typeof url === 'string' && url.startsWith('/api/')) {
+//         return handleMockAPI(url, options);
+//     }
+//     
+//     // Pass through all other requests
+//     return originalFetch.apply(this, arguments);
+// };
 
 // Handle mock API requests
 async function handleMockAPI(url, options) {

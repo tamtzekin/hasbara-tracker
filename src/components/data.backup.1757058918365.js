@@ -35,6 +35,10 @@ const summaries = [
     {
         "claimMainTitle": "",
         "claimSummary": ""
+    },
+    {
+        "claimMainTitle": "NEW CLAIM",
+        "claimSummary": "aa"
     }
 ];
 
@@ -3221,6 +3225,29 @@ const data = [
         "isEditing": true,
         "isNew": true,
         "isDraft": false
+    },
+    {
+        "claimTitle": "NEW CLAIM",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": ""
+        },
+        "description": {
+            "summary": "aa",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": "",
+                "videoPreviewLink": ""
+            }
+        ],
+        "isDraft": false,
+        "lastEditedBy": "current_user",
+        "lastEditedAt": "2025-09-05T07:55:02.597Z"
     }
 ];
 

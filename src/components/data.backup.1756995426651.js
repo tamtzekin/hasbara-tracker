@@ -35,6 +35,14 @@ const summaries = [
     {
         "claimMainTitle": "",
         "claimSummary": ""
+    },
+    {
+        "claimMainTitle": "ANOTHER CLAIM",
+        "claimSummary": "ANOTHER CLAIM HERE"
+    },
+    {
+        "claimMainTitle": "Israel sucks",
+        "claimSummary": "askfjlkajfklajklsf"
     }
 ];
 
@@ -3221,6 +3229,52 @@ const data = [
         "isEditing": true,
         "isNew": true,
         "isDraft": false
+    },
+    {
+        "claimTitle": "ANOTHER CLAIM",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": ""
+        },
+        "description": {
+            "summary": "ANOTHER CLAIM HERE",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": "",
+                "videoPreviewLink": ""
+            }
+        ],
+        "isDraft": false,
+        "lastEditedBy": "current_user",
+        "lastEditedAt": "2025-09-04T06:44:52.744Z"
+    },
+    {
+        "claimTitle": "Israel sucks",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": ""
+        },
+        "description": {
+            "summary": "askfjlkajfklajklsf",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": "",
+                "videoPreviewLink": ""
+            }
+        ],
+        "isDraft": false,
+        "lastEditedBy": "current_user",
+        "lastEditedAt": "2025-09-04T06:47:02.111Z"
     }
 ];
 

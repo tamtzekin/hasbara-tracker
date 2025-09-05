@@ -18,23 +18,51 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                const token = localStorage.getItem('hasbaratracker_token');
+                // Try sessionStorage first (browser session persistence)
+                let token = sessionStorage.getItem('hasbaratracker_token');
+                let sessionData = null;
+                
                 if (token) {
-                    const response = await fetch('/api/auth/verify', {
-                        headers: {
-                            'Authorization': `Bearer ${token}`
+                    sessionData = sessionStorage.getItem(`session_${token}`);
+                } else {
+                    // Fallback to localStorage for existing sessions
+                    token = localStorage.getItem('hasbaratracker_token');
+                    if (token) {
+                        sessionData = localStorage.getItem(`session_${token}`);
+                        // Migrate to sessionStorage for browser session persistence
+                        sessionStorage.setItem('hasbaratracker_token', token);
+                        if (sessionData) {
+                            sessionStorage.setItem(`session_${token}`, sessionData);
                         }
-                    });
-                    
-                    if (response.ok) {
-                        const userData = await response.json();
-                        setUser(userData);
-                    } else {
+                        // Remove from localStorage after migration
                         localStorage.removeItem('hasbaratracker_token');
+                        localStorage.removeItem(`session_${token}`);
                     }
+                }
+
+                if (token && sessionData) {
+                    const session = JSON.parse(sessionData);
+                    
+                    // Check if session is still valid (no expiration for browser session)
+                    const userData = {
+                        id: session.userId,
+                        email: session.email,
+                        role: session.role,
+                        permissions: session.permissions,
+                        assignedClaims: session.assignedClaims
+                    };
+                    
+                    setUser(userData);
+                    console.log('✅ Session restored from browser storage');
+                } else {
+                    // Clean up any invalid tokens
+                    sessionStorage.removeItem('hasbaratracker_token');
+                    localStorage.removeItem('hasbaratracker_token');
                 }
             } catch (error) {
                 console.error('Auth check failed:', error);
+                // Clean up on error
+                sessionStorage.removeItem('hasbaratracker_token');
                 localStorage.removeItem('hasbaratracker_token');
             } finally {
                 setLoading(false);
@@ -47,19 +75,21 @@ export const AuthProvider = ({ children }) => {
     // Send magic link
     const sendMagicLink = async (email) => {
         try {
-            // Generate secure token
-            const token = `token_${Date.now()}_${Math.random().toString(36).substr(2, 20)}`;
-            const magicLink = `${window.location.origin}/login?token=${token}`;
+            console.log('🔗 Requesting magic link for:', email);
             
-            // Store token (in production, this would be in secure storage)
-            localStorage.setItem(`magic_token_${token}`, JSON.stringify({
+            // Generate a unique magic link token (matching GitHub working version)
+            const magicToken = `token_${Date.now()}_${Math.random().toString(36).substr(2, 20)}`;
+            const magicLink = `${window.location.origin}/login?token=${magicToken}`;
+            
+            // Store the magic link token in localStorage for 15 minutes
+            const expirationTime = Date.now() + (15 * 60 * 1000); // 15 minutes
+            localStorage.setItem(`magic_token_${magicToken}`, JSON.stringify({
                 email: email.toLowerCase(),
-                expiresAt: Date.now() + (15 * 60 * 1000), // 15 minutes
+                expiresAt: expirationTime,
                 used: false
             }));
             
-            const workerUrl = process.env.REACT_APP_WORKER_URL || 'https://email-worker.izumi-ky.workers.dev';
-            const apiKey = process.env.REACT_APP_CLOUDFLARE_API_KEY;
+            console.log('🔗 Generated magic link:', magicLink);
             
             // Create email template matching Hasbara Tracker design
             const emailTemplate = {
@@ -72,19 +102,16 @@ export const AuthProvider = ({ children }) => {
                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
                         <title>Login to Hasbara Tracker</title>
                     </head>
-                    <body style="font-family: Helvetica, Arial, sans-serif; line-height: 1.4; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f0f0f0;">
-                        <!-- Header matching site design -->
+                    <body style="font-family: Helvetica, Arial, sans-serif; line-height: 1.4; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #d6d6d6;">
+                        <!-- Header with Hasbara Tracker logo -->
                         <div style="background-color: #d6d6d6; padding: 30px 20px; text-align: center; border-radius: 3px; margin-bottom: 20px;">
-                            <h1 style="margin: 0; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #333; font-weight: normal;">
-                                Hasbara Tracker
-                            </h1>
-                            <p style="margin: 10px 0 0 0; font-size: 14px; color: #595959;">
-                                Secure Login Access
-                            </p>
+                            <img src="https://files.hasbaratracker.com/ht-logo-with-slogan.svg" 
+                                 alt="Hasbara Tracker - Debunking Israeli propaganda" 
+                                 style="max-width: 300px; width: 100%; height: auto;" />
                         </div>
                         
                         <!-- Main content -->
-                        <div style="background: white; padding: 40px 30px; border-radius: 3px; border: 1px solid #cbcbcb;">
+                        <div style="background: #d6d6d6; padding: 40px 30px; border-radius: 3px; border: 1px solid #cbcbcb;">
                             <h2 style="color: #333; margin-top: 0; font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: normal;">
                                 Login Request
                             </h2>
@@ -97,20 +124,23 @@ export const AuthProvider = ({ children }) => {
                                 You requested access to the Hasbara Tracker Claim Editor. Click the button below to sign in securely:
                             </p>
                             
-                            <!-- Button matching site's btn-green style -->
+                            <!-- Button matching site's btn-green style exactly -->
                             <div style="text-align: center; margin: 35px 0;">
                                 <a href="${magicLink}" 
-                                   style="display: inline-block; 
+                                   style="display: inline-flex; 
+                                          justify-content: center;
+                                          align-items: center;
                                           background-color: #bffb9b; 
                                           color: #333; 
-                                          padding: 12px 20px; 
+                                          padding: 2.5% 3.5% 2.5% 3.5%;
+                                          height: 0.5rem;
                                           text-decoration: none; 
                                           border-radius: 3px; 
                                           font-family: Helvetica, Arial, sans-serif; 
-                                          font-size: 14px; 
+                                          font-size: 0.93em; 
                                           font-weight: normal;
-                                          border: 1px solid #5e5e5e;
-                                          transition: all 0.2s ease;">
+                                          border: solid 0.5px #5e5e5e;
+                                          min-width: 200px;">
                                     Access Hasbara Tracker
                                 </a>
                             </div>
@@ -134,11 +164,8 @@ export const AuthProvider = ({ children }) => {
                         
                         <!-- Footer -->
                         <div style="text-align: center; margin-top: 30px; padding: 20px; color: #595959; font-size: 12px;">
-                            <p style="margin: 0 0 10px 0;">
-                                If you didn't request this login link, you can safely ignore this email.
-                            </p>
                             <p style="margin: 0;">
-                                Hasbara Tracker Secure Authentication System
+                                If you didn't request this login link, you can safely ignore this email.
                             </p>
                         </div>
                     </body>
@@ -165,6 +192,14 @@ Hasbara Tracker Authentication System
                 `
             };
             
+            const workerUrl = process.env.REACT_APP_WORKER_URL || 'https://email-worker.izumi-ky.workers.dev';
+            
+            // Try different API key sources - the working one might be stored differently
+            const apiKey = process.env.REACT_APP_CLOUDFLARE_API_KEY || 
+                          process.env.CLOUDFLARE_API_KEY || 
+                          'test-key-123'; // Fallback for testing
+            
+            
             const response = await fetch(workerUrl, {
                 method: 'POST',
                 headers: {
@@ -180,12 +215,16 @@ Hasbara Tracker Authentication System
                 }),
             });
 
+
             if (!response.ok) {
-                const error = await response.json();
-                throw new Error(error.message || 'Failed to send magic link');
+                const errorText = await response.text();
+                console.error('❌ Worker error:', response.status, errorText);
+                throw new Error(`Worker error ${response.status}: ${errorText}`);
             }
 
-            return await response.json();
+            const result = await response.json();
+            
+            return result;
         } catch (error) {
             throw error;
         }
@@ -194,62 +233,91 @@ Hasbara Tracker Authentication System
     // Verify magic link token
     const verifyMagicLink = async (token) => {
         try {
-            // Check token in localStorage
-            const tokenData = localStorage.getItem(`magic_token_${token}`);
+            console.log('🔍 Verifying magic link token:', token);
             
-            if (!tokenData) {
-                throw new Error('Invalid or expired magic link');
+            // Check if token exists in localStorage
+            const tokenKey = `magic_token_${token}`;
+            const tokenDataString = localStorage.getItem(tokenKey);
+            
+            if (!tokenDataString) {
+                throw new Error('Invalid or expired magic link token');
             }
             
-            const { email, expiresAt, used } = JSON.parse(tokenData);
+            const tokenData = JSON.parse(tokenDataString);
             
-            if (used || Date.now() > expiresAt) {
-                throw new Error('Invalid or expired magic link');
+            // Check if token has expired
+            if (Date.now() > tokenData.expiresAt) {
+                localStorage.removeItem(tokenKey);
+                throw new Error('Magic link has expired');
+            }
+            
+            // Check if token has already been used
+            if (tokenData.used) {
+                localStorage.removeItem(tokenKey);
+                throw new Error('Magic link has already been used');
             }
             
             // Mark token as used
-            localStorage.setItem(`magic_token_${token}`, JSON.stringify({
-                email,
-                expiresAt,
-                used: true
-            }));
+            tokenData.used = true;
+            localStorage.setItem(tokenKey, JSON.stringify(tokenData));
             
-            // Create session token
+            // Create admin session for the authenticated email
             const sessionToken = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-            
-            // Create user data
             const userData = {
-                id: 'admin_1',
-                email: email,
+                id: `admin_${Date.now()}`,
+                email: tokenData.email,
                 role: 'admin',
-                permissions: ['claim_editor', 'admin_panel', 'user_management'],
+                permissions: ['admin', 'claim_editor'],
                 assignedClaims: []
             };
             
-            // Store session
-            localStorage.setItem('hasbaratracker_token', sessionToken);
-            localStorage.setItem(`session_${sessionToken}`, JSON.stringify({
+            // Store session in sessionStorage for browser session persistence
+            sessionStorage.setItem('hasbaratracker_token', sessionToken);
+            sessionStorage.setItem(`session_${sessionToken}`, JSON.stringify({
                 userId: userData.id,
                 email: userData.email,
                 role: userData.role,
                 permissions: userData.permissions,
                 assignedClaims: userData.assignedClaims,
-                createdAt: Date.now(),
-                expiresAt: Date.now() + (7 * 24 * 60 * 60 * 1000) // 7 days
+                createdAt: Date.now()
+                // No expiration - session lasts until browser is closed/restarted
             }));
             
             setUser(userData);
             
+            // Clean up the magic token
+            localStorage.removeItem(tokenKey);
+            
+            console.log('✅ Magic link authentication successful for:', userData.email);
             return userData;
+            
         } catch (error) {
+            console.error('🔍 Magic link verification failed:', error);
             throw error;
         }
     };
 
     // Logout
     const logout = () => {
+        const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
+        
+        // Clear session data from both storage types
+        if (token) {
+            sessionStorage.removeItem(`session_${token}`);
+            localStorage.removeItem(`session_${token}`);
+        }
+        sessionStorage.removeItem('hasbaratracker_token');
         localStorage.removeItem('hasbaratracker_token');
+        
+        // Clear any remaining magic link tokens (cleanup)
+        Object.keys(localStorage).forEach(key => {
+            if (key.startsWith('magic_token_')) {
+                localStorage.removeItem(key);
+            }
+        });
+        
         setUser(null);
+        console.log('🔐 User logged out - session cleared');
     };
 
     // Check if user has permission

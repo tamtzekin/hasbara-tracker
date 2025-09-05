@@ -9,9 +9,12 @@
     "browserify": "^17.0.0",
     "browserify-zlib": "^0.2.0",
     "buffer": "^6.0.3",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
     "dgram-browserify": "^0.0.13",
     "dns": "^0.2.2",
     "emailjs-com": "^3.2.0",
+    "express": "^5.1.0",
     "helmet": "^7.1.0",
     "https-browserify": "^1.0.0",
     "notion-api-worker": "^0.1.0",
@@ -41,7 +44,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm start\""
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +67,8 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

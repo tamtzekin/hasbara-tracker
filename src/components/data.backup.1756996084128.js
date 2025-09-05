@@ -35,6 +35,10 @@ const summaries = [
     {
         "claimMainTitle": "",
         "claimSummary": ""
+    },
+    {
+        "claimMainTitle": "New claim",
+        "claimSummary": "new"
     }
 ];
 
@@ -3218,6 +3222,79 @@ const data = [
         ],
         "lastEditedBy": "swan4444444@protonmail.com",
         "lastEditedAt": "2025-09-04T05:36:20.265Z",
+        "isEditing": true,
+        "isNew": true,
+        "isDraft": false
+    },
+    {
+        "claimTitle": "New claim",
+        "date": "2025-09-17",
+        "claim": {
+            "claimText": "",
+            "claimTag": ""
+        },
+        "description": {
+            "summary": "moredata",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "Soruce1 田",
+                "sourceLink": "田畾",
+                "archiveLink": "",
+                "videoPreviewLink": ""
+            }
+        ],
+        "isDraft": false,
+        "lastEditedBy": "swan4444444@protonmail.com",
+        "lastEditedAt": "2025-09-04T14:24:36.656Z"
+    },
+    {
+        "id": 1756995865868.936,
+        "claimTitle": "New claim",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": "claim-tag"
+        },
+        "description": {
+            "summary": "",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "",
+                "sourceLink": "",
+                "archiveLink": ""
+            }
+        ],
+        "lastEditedBy": "swan4444444@protonmail.com",
+        "lastEditedAt": "2025-09-04T14:24:25.868Z",
+        "isEditing": true,
+        "isNew": true,
+        "isDraft": false
+    },
+    {
+        "id": 1756995865870.3179,
+        "claimTitle": "New claim",
+        "date": "",
+        "claim": {
+            "claimText": "",
+            "claimTag": "claim-tag"
+        },
+        "description": {
+            "summary": "moredata",
+            "details": ""
+        },
+        "sources": [
+            {
+                "sourceName": "Soruce1 田",
+                "sourceLink": "田畾",
+                "archiveLink": ""
+            }
+        ],
+        "lastEditedBy": "swan4444444@protonmail.com",
+        "lastEditedAt": "2025-09-04T14:24:25.870Z",
         "isEditing": true,
         "isNew": true,
         "isDraft": false

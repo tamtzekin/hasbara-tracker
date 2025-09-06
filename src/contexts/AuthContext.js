@@ -406,12 +406,15 @@ Hasbara Tracker Authentication System
                             
                             if (assignResponse.ok) {
                                 const assignData = await assignResponse.json();
-                                console.log('📋 Assignment data received:', assignData);
+                                console.log(`📋 CLAIM-EDITOR: Assignment data received from ${apiUrl}:`, JSON.stringify(assignData, null, 2));
                                 userData.assignedClaims = assignData.assignments?.assignedClaims || [];
-                                console.log(`✅ User ${tokenData.email} has ${userData.assignedClaims.length} assigned claims:`, userData.assignedClaims);
+                                console.log(`✅ CLAIM-EDITOR: User ${tokenData.email} has ${userData.assignedClaims.length} assigned claims from ${apiUrl}:`);
+                                console.log(`✅ CLAIM-EDITOR: Claims list:`, userData.assignedClaims);
+                                console.log(`✅ CLAIM-EDITOR: Using API endpoint: ${apiUrl}`);
                                 break; // Success - stop trying other APIs
                             } else {
-                                console.log(`❌ API ${apiUrl} returned ${assignResponse.status}`);
+                                const errorText = await assignResponse.text();
+                                console.log(`❌ CLAIM-EDITOR: API ${apiUrl} returned ${assignResponse.status}: ${errorText}`);
                             }
                         } catch (apiError) {
                             console.log(`❌ Error with API ${apiUrl}:`, apiError.message);

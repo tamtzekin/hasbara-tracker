@@ -465,17 +465,30 @@ export default function EditableClaimTracker() {
 
     // Get unique claim titles for dropdown (filtered by user permissions) - using draft data
     const uniqueClaimTitles = useMemo(() => {
+        console.log(`🔍 CLAIM-EDITOR: Building dropdown claims list...`);
+        console.log(`🔍 CLAIM-EDITOR: User is admin:`, isAdmin());
+        console.log(`🔍 CLAIM-EDITOR: User assigned claims:`, user?.assignedClaims);
+        console.log(`🔍 CLAIM-EDITOR: Total claims in draftData:`, draftData.length);
+        
         const titles = draftData.reduce((acc, item) => {
             if (item.claimTitle && !acc.includes(item.claimTitle)) {
-                // If admin, show all claims. If regular user, only show assigned claims
-                if (isAdmin() || canAccessClaim(item.claimTitle)) {
+                const hasAccess = isAdmin() || canAccessClaim(item.claimTitle);
+                console.log(`🔍 CLAIM-EDITOR: Checking claim "${item.claimTitle}" - hasAccess: ${hasAccess}`);
+                
+                if (hasAccess) {
                     acc.push(item.claimTitle);
+                    console.log(`✅ CLAIM-EDITOR: Added claim to dropdown: "${item.claimTitle}"`);
+                } else {
+                    console.log(`❌ CLAIM-EDITOR: Skipped claim (no access): "${item.claimTitle}"`);
                 }
             }
             return acc;
         }, []);
+        
+        console.log(`📋 CLAIM-EDITOR: Final dropdown claims list:`, titles);
+        console.log(`📊 CLAIM-EDITOR: Total accessible claims: ${titles.length}`);
         return titles.sort();
-    }, [isAdmin, canAccessClaim, claimDataVersion]);
+    }, [isAdmin, canAccessClaim, claimDataVersion, user]);
 
     // Get selected claim summary - using draft summaries
     const selectedClaimSummary = useMemo(() => {

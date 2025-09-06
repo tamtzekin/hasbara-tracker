@@ -304,15 +304,20 @@ const VolunteersPage = () => {
 
             if (response.ok) {
                 const result = await response.json();
-                console.log(`📡 API Response data:`, result);
+                console.log(`📡 VOLUNTEER-MANAGER: API Response data:`, JSON.stringify(result, null, 2));
                 
                 const actionText = action === 'assign' ? 'assigned to' : 'unassigned from';
                 showToast(`Volunteer ${actionText} claim successfully. ${result.loginMessage || ''}`);
                 
+                console.log(`📡 VOLUNTEER-MANAGER: Server responded for ${action} operation on user ${result.email}`);
+                console.log(`📋 VOLUNTEER-MANAGER: New assignedClaims from server:`, result.assignedClaims);
+                console.log(`🎯 VOLUNTEER-MANAGER: This should update user permissions for claim-editor access`);
+                
                 // Update with server response to ensure consistency
                 setVolunteers(prev => prev.map(volunteer => {
                     if (volunteer.id === volunteerId) {
-                        console.log(`🔄 SYNC WITH SERVER: Setting claims to`, result.assignedClaims);
+                        console.log(`🔄 VOLUNTEER-MANAGER: Syncing volunteer ${volunteer.email} with server response`);
+                        console.log(`🔄 VOLUNTEER-MANAGER: Setting assignedClaims to:`, result.assignedClaims);
                         return {
                             ...volunteer,
                             assignedClaims: result.assignedClaims || [],
@@ -322,6 +327,9 @@ const VolunteersPage = () => {
                     }
                     return volunteer;
                 }));
+
+                // Sync with Cloudflare Worker for production consistency
+                await syncWithCloudflareWorker(result.email, result.assignedClaims || [], action);
             } else {
                 const error = await response.json();
                 console.error(`❌ API Error:`, error);
@@ -334,6 +342,44 @@ const VolunteersPage = () => {
             showToast('Error assigning volunteer: ' + error.message, 'error');
             // Revert optimistic update on error
             fetchVolunteers();
+        }
+    };
+
+    const syncWithCloudflareWorker = async (email, assignedClaims, action) => {
+        try {
+            console.log(`🔄 VOLUNTEER-MANAGER: Syncing with Cloudflare Worker for ${email}`);
+            console.log(`📋 VOLUNTEER-MANAGER: Claims to sync:`, assignedClaims);
+            
+            const workerUrl = 'https://user-backend.izumi-ky.workers.dev/api/sync-assignments';
+            const syncData = {
+                email,
+                assignedClaims,
+                action,
+                secretKey: 'hasbara-sync-secret-2025' // This should match worker's secret
+            };
+            
+            console.log(`📡 VOLUNTEER-MANAGER: Sending sync request to ${workerUrl}`);
+            
+            const syncResponse = await fetch(workerUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(syncData)
+            });
+            
+            if (syncResponse.ok) {
+                const syncResult = await syncResponse.json();
+                console.log(`✅ VOLUNTEER-MANAGER: Successfully synced with Cloudflare Worker:`, syncResult);
+                showToast(`✅ Synced with production servers`, 'success');
+            } else {
+                const errorText = await syncResponse.text();
+                console.error(`❌ VOLUNTEER-MANAGER: Sync failed with status ${syncResponse.status}:`, errorText);
+                showToast(`⚠️ Local update successful, but sync with production failed`, 'error');
+            }
+        } catch (syncError) {
+            console.error(`❌ VOLUNTEER-MANAGER: Sync error:`, syncError);
+            showToast(`⚠️ Local update successful, but couldn't reach production servers`, 'error');
         }
     };
 

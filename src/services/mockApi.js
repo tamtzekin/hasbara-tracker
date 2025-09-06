@@ -36,7 +36,7 @@ export const authAPI = {
         
         const user = findUserByEmail(email);
         if (!user) {
-            throw new Error('Email not found or not approved for access');
+            throw new Error('This user does not have access to the tracker. Please contact info@hasbaratracker.com.');
         }
         
         if (!user.isActive) {

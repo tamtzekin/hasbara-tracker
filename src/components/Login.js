@@ -81,7 +81,7 @@ const Login = () => {
                 <Header />
                 <div className="content-container">
                     <div className="text-center py-20">
-                        <div className="text-xl mb-4">Verifying your magic link...</div>
+                        <div className="text-xl mb-4">Verifying ...</div>
                         <div className="loader"></div>
                     </div>
                 </div>
@@ -127,10 +127,10 @@ const Login = () => {
                                 {isLoading ? (
                                     <span className="flex items-center justify-center">
                                         <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                                        Sending Magic Link...
+                                        Sending login link...
                                     </span>
                                 ) : (
-                                    'Send Magic Link'
+                                    'Send login link'
                                 )}
                             </button>
                         </form>

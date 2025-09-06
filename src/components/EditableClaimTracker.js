@@ -1203,7 +1203,7 @@ First download the file/image/video, and then upload it into the corresponding G
                                 PUBLISH
                             </button>
                         )}
-                            {selectedClaimTitle && (
+                            {selectedClaimTitle && isAdmin() && (
                                 <button
                                     onClick={async () => {
                                         const doubleConfirm = window.confirm(`⚠️ WARNING: You are about to permanently delete the entire claim "${selectedClaimTitle}" from the database.\n\nThis will:\n- Remove all data for this claim\n- Create a backup of the current data.js file\n- This action CANNOT be undone\n\nAre you absolutely sure you want to proceed?`);

@@ -61,7 +61,7 @@ const VolunteersPage = () => {
     const [hoursFilter, setHoursFilter] = useState('all');
     const [claimFilter, setClaimFilter] = useState('all');
 
-    const { user, isAdmin } = useAuth();
+    const { user, isAdmin, refreshUserAssignments } = useAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -372,6 +372,16 @@ const VolunteersPage = () => {
                 const syncResult = await syncResponse.json();
                 console.log(`✅ VOLUNTEER-MANAGER: Successfully synced with Cloudflare Worker:`, syncResult);
                 showToast(`✅ Synced with production servers`, 'success');
+                
+                // Refresh any logged-in user's assignments so claim-editor updates
+                try {
+                    console.log(`🔄 VOLUNTEER-MANAGER: Refreshing logged-in user assignments after sync`);
+                    await refreshUserAssignments();
+                    console.log(`✅ VOLUNTEER-MANAGER: User assignments refreshed successfully`);
+                } catch (refreshError) {
+                    console.warn(`⚠️ VOLUNTEER-MANAGER: Could not refresh user assignments:`, refreshError);
+                    // Don't show error to user as this is not critical
+                }
             } else {
                 const errorText = await syncResponse.text();
                 console.error(`❌ VOLUNTEER-MANAGER: Sync failed with status ${syncResponse.status}:`, errorText);

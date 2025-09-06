@@ -490,6 +490,80 @@ Hasbara Tracker Authentication System
         return user.assignedClaims?.includes(claimTitle) || false;
     };
 
+    // Refresh user assignments (call after assignments are changed via Volunteer Manager)
+    const refreshUserAssignments = async () => {
+        try {
+            if (!user || user.role === 'admin') {
+                console.log('🔄 Skip assignment refresh for admin or no user');
+                return;
+            }
+
+            console.log('🔄 Refreshing assignments for user:', user.email);
+
+            // Try multiple API sources for user assignments
+            const apiUrls = [
+                'https://user-backend.izumi-ky.workers.dev', // Your user-backend worker
+                process.env.REACT_APP_API_URL,               // Environment variable
+                'http://localhost:3001'                     // Local development fallback
+            ].filter(Boolean); // Remove undefined values
+
+            console.log('🔄 Fetching updated assignments from APIs:', apiUrls);
+
+            let updatedAssignments = [];
+            for (const apiUrl of apiUrls) {
+                try {
+                    console.log(`🔄 Refreshing assignments from: ${apiUrl}`);
+                    const assignResponse = await fetch(`${apiUrl}/api/user-assignments/${encodeURIComponent(user.email)}`);
+                    
+                    console.log(`📨 Refresh response from ${apiUrl}: ${assignResponse.status}`);
+                    
+                    if (assignResponse.ok) {
+                        const assignData = await assignResponse.json();
+                        console.log(`📋 REFRESH: Assignment data received from ${apiUrl}:`, JSON.stringify(assignData, null, 2));
+                        updatedAssignments = assignData.assignments?.assignedClaims || [];
+                        console.log(`✅ REFRESH: User ${user.email} now has ${updatedAssignments.length} assigned claims from ${apiUrl}:`);
+                        console.log(`✅ REFRESH: Updated claims list:`, updatedAssignments);
+                        break; // Success - stop trying other APIs
+                    } else {
+                        const errorText = await assignResponse.text();
+                        console.log(`❌ REFRESH: API ${apiUrl} returned ${assignResponse.status}: ${errorText}`);
+                    }
+                } catch (apiError) {
+                    console.log(`❌ Error refreshing from API ${apiUrl}:`, apiError.message);
+                    continue; // Try next API
+                }
+            }
+
+            // Update the user object with new assignments
+            const updatedUser = {
+                ...user,
+                assignedClaims: updatedAssignments
+            };
+
+            // Update both memory and session storage
+            setUser(updatedUser);
+
+            const token = sessionStorage.getItem('hasbaratracker_token');
+            if (token) {
+                const sessionKey = `session_${token}`;
+                const sessionDataString = sessionStorage.getItem(sessionKey);
+                if (sessionDataString) {
+                    const sessionData = JSON.parse(sessionDataString);
+                    sessionData.assignedClaims = updatedAssignments;
+                    sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+                    console.log('✅ REFRESH: Updated session storage with new assignments');
+                }
+            }
+
+            console.log(`✅ REFRESH: Successfully updated user assignments (${updatedAssignments.length} claims)`);
+            return updatedAssignments;
+
+        } catch (error) {
+            console.error('❌ Error refreshing user assignments:', error);
+            throw error;
+        }
+    };
+
     // Check if email is admin (uses environment variables for security)
     const checkIfAdmin = async (email) => {
         // Get admin emails from environment variables with fallback for development
@@ -521,6 +595,7 @@ Hasbara Tracker Authentication System
         logout,
         hasPermission,
         canAccessClaim,
+        refreshUserAssignments,
         isAdmin: () => user?.role === 'admin',
         isLoggedIn: () => !!user,
     };

@@ -467,6 +467,7 @@ export default function EditableClaimTracker() {
     const uniqueClaimTitles = useMemo(() => {
         console.log(`🔍 CLAIM-EDITOR: Building dropdown claims list...`);
         console.log(`🔍 CLAIM-EDITOR: User is admin:`, isAdmin());
+        console.log(`🔍 CLAIM-EDITOR: User object:`, user);
         console.log(`🔍 CLAIM-EDITOR: User assigned claims:`, user?.assignedClaims);
         console.log(`🔍 CLAIM-EDITOR: Total claims in draftData:`, draftData.length);
         

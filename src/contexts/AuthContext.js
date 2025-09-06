@@ -494,23 +494,21 @@ Hasbara Tracker Authentication System
             return true;
         }
         
-        const hasAccess = user.assignedClaims?.includes(claimTitle) || false;
-        console.log(`🔍 AUTH-CONTEXT: canAccessClaim("${claimTitle}")`);
-        console.log(`🔍 AUTH-CONTEXT: User assignedClaims:`, user.assignedClaims);
-        console.log(`🔍 AUTH-CONTEXT: Checking exact match for: "${claimTitle}"`);
-        console.log(`🔍 AUTH-CONTEXT: Result: ${hasAccess}`);
+        // Normalize strings by replacing curly quotes with straight quotes for comparison
+        const normalizeQuotes = (str) => {
+            return str.replace(/'/g, "'").replace(/'/g, "'"); // Replace left/right curly quotes with straight quotes
+        };
         
-        // Debug each assigned claim for exact matching
-        if (user.assignedClaims) {
-            user.assignedClaims.forEach((assignedClaim, index) => {
-                const matches = assignedClaim === claimTitle;
-                console.log(`🔍 AUTH-CONTEXT: [${index}] "${assignedClaim}" === "${claimTitle}" -> ${matches}`);
-                if (!matches) {
-                    console.log(`🔍 AUTH-CONTEXT: Length comparison: ${assignedClaim.length} vs ${claimTitle.length}`);
-                    console.log(`🔍 AUTH-CONTEXT: Character codes:`, assignedClaim.split('').map(c => c.charCodeAt(0)), 'vs', claimTitle.split('').map(c => c.charCodeAt(0)));
-                }
-            });
-        }
+        const normalizedClaimTitle = normalizeQuotes(claimTitle);
+        const normalizedAssignedClaims = user.assignedClaims?.map(claim => normalizeQuotes(claim)) || [];
+        
+        const hasAccess = normalizedAssignedClaims.includes(normalizedClaimTitle);
+        
+        console.log(`🔍 AUTH-CONTEXT: canAccessClaim("${claimTitle}")`);
+        console.log(`🔍 AUTH-CONTEXT: Normalized claim title: "${normalizedClaimTitle}"`);
+        console.log(`🔍 AUTH-CONTEXT: User assignedClaims:`, user.assignedClaims);
+        console.log(`🔍 AUTH-CONTEXT: Normalized assigned claims:`, normalizedAssignedClaims);
+        console.log(`🔍 AUTH-CONTEXT: Result: ${hasAccess}`);
         
         return hasAccess;
     };

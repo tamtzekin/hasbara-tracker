@@ -504,11 +504,7 @@ Hasbara Tracker Authentication System
         
         const hasAccess = normalizedAssignedClaims.includes(normalizedClaimTitle);
         
-        console.log(`🔍 AUTH-CONTEXT: canAccessClaim("${claimTitle}")`);
-        console.log(`🔍 AUTH-CONTEXT: Normalized claim title: "${normalizedClaimTitle}"`);
-        console.log(`🔍 AUTH-CONTEXT: User assignedClaims:`, user.assignedClaims);
-        console.log(`🔍 AUTH-CONTEXT: Normalized assigned claims:`, normalizedAssignedClaims);
-        console.log(`🔍 AUTH-CONTEXT: Result: ${hasAccess}`);
+        console.log(`🔍 AUTH-CONTEXT: "${claimTitle}" -> ${hasAccess ? '✅ GRANTED' : '❌ DENIED'}`);
         
         return hasAccess;
     };

@@ -1264,18 +1264,33 @@ app.get('/api/user-assignments/:email', (req, res) => {
         const { email } = req.params;
         console.log(`📋 Getting user assignments for: ${email}`);
         
-        // Look up user in the users array (where volunteer assignments are actually stored)
-        const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+        // First try to find user in users array (for admin users)
+        let user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
         
-        if (user && user.assignedClaims) {
-            console.log(`✅ Found user assignments:`, user.assignedClaims);
+        // If not found in users array, look in volunteers data (where assignments are actually stored)
+        if (!user) {
+            const volunteers = getVolunteers();
+            const volunteer = volunteers.find(v => v.email.toLowerCase() === email.toLowerCase());
+            if (volunteer && volunteer.assignedClaims) {
+                user = {
+                    email: volunteer.email,
+                    assignedClaims: volunteer.assignedClaims,
+                    role: 'user',
+                    permissions: ['claim_editor']
+                };
+                console.log(`📋 Found volunteer with assignments:`, volunteer.assignedClaims);
+            }
+        }
+        
+        if (user && user.assignedClaims && user.assignedClaims.length > 0) {
+            console.log(`✅ Returning ${user.assignedClaims.length} assignments for ${email}:`, user.assignedClaims);
             res.json({
                 success: true,
                 assignments: {
                     email: user.email,
                     assignedClaims: user.assignedClaims,
-                    role: user.role,
-                    permissions: user.permissions
+                    role: user.role || 'user',
+                    permissions: user.permissions || ['claim_editor']
                 }
             });
         } else {

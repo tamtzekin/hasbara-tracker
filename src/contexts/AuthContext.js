@@ -494,12 +494,12 @@ Hasbara Tracker Authentication System
             return true;
         }
         
-        // Normalize strings for fuzzy matching - handles your standard curly quotes/apostrophes
+        // Normalize strings for fuzzy matching - handles ALL quote variants
         const normalizeForMatching = (str) => {
             return str
-                // Normalize ALL single quote/apostrophe variants to standard curly apostrophe
-                .replace(/['''`ʼ]/g, "'")
-                // Normalize ALL double quote variants to standard straight quotes (covers both left and right curly)
+                // Normalize ALL single quote/apostrophe variants to straight apostrophe
+                .replace(/['''\u2018\u2019`ʼ]/g, "'")  // Includes Unicode left/right single quotes
+                // Normalize ALL double quote variants to straight double quotes
                 .replace(/["""\u201C\u201D]/g, '"')  // Unicode escapes for left (\u201C) and right (\u201D) curly quotes
                 // Normalize whitespace (multiple spaces → single space)
                 .replace(/\s+/g, ' ')

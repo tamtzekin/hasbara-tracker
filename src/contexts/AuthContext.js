@@ -193,6 +193,90 @@ Hasbara Tracker Authentication System
                 `
             };
             
+            // Determine if we're in development or production
+            const isDevelopment = process.env.NODE_ENV === 'development' || window.location.hostname === 'localhost';
+            const forceEmailInDev = process.env.REACT_APP_FORCE_EMAIL_DEV === 'true';
+            const isAdmin = await checkIfAdmin(email);
+            
+            console.log('🌍 Environment check:', {
+                isDevelopment,
+                forceEmailInDev,
+                hostname: window.location.hostname,
+                nodeEnv: process.env.NODE_ENV,
+                isAdminEmail: isAdmin
+            });
+            
+            // In development, validate locally but optionally send email for testing
+            if (isDevelopment && !forceEmailInDev) {
+                console.log('🌍 Development mode: Validating permissions locally');
+                
+                if (!isAdmin) {
+                    // Check if user is assigned to claims by calling local API
+                    try {
+                        console.log('🔍 Development mode: Checking local assignments for:', email);
+                        const assignResponse = await fetch(`http://localhost:3001/api/user-assignments/${email}`);
+                        if (assignResponse.ok) {
+                            const assignData = await assignResponse.json();
+                            if (!assignData.assignments?.assignedClaims?.length) {
+                                console.log('❌ Development mode: User not assigned to any claims');
+                                throw new Error('User not assigned to any claims in development mode');
+                            }
+                            console.log('✅ Development mode: User has assignments, proceeding');
+                        } else {
+                            console.log('❌ Development mode: Could not check assignments');
+                            throw new Error('Could not verify user assignments in development mode');
+                        }
+                    } catch (devError) {
+                        console.error('❌ Development mode error checking assignments:', devError);
+                        throw new Error(`Development mode: ${devError.message}`);
+                    }
+                }
+                
+                // Default development behavior - just log the magic link
+                console.log('📧 Development mode: Skipping actual email send, magic link available in browser');
+                console.log('🔗 Development Magic Link:', magicLink);
+                console.log('💡 Development tip: Copy the magic link from console and visit it directly');
+                console.log('🚀 To test email sending in dev, set REACT_APP_FORCE_EMAIL_DEV=true');
+                
+                return {
+                    success: true,
+                    message: 'Magic link created successfully (development mode - check console for link)',
+                    messageId: 'dev-mode-local',
+                    magicLink: magicLink // Include the link for development
+                };
+            }
+            
+            // Handle development mode with forced email testing
+            if (isDevelopment && forceEmailInDev) {
+                console.log('🌍 Development mode with FORCE EMAIL: Validating permissions locally then sending email');
+                
+                if (!isAdmin) {
+                    // Check if user is assigned to claims by calling local API
+                    try {
+                        console.log('🔍 Development mode: Checking local assignments for:', email);
+                        const assignResponse = await fetch(`http://localhost:3001/api/user-assignments/${email}`);
+                        if (assignResponse.ok) {
+                            const assignData = await assignResponse.json();
+                            if (!assignData.assignments?.assignedClaims?.length) {
+                                console.log('❌ Development mode: User not assigned to any claims');
+                                throw new Error('User not assigned to any claims in development mode');
+                            }
+                            console.log('✅ Development mode: User has assignments, proceeding to send email');
+                        } else {
+                            console.log('❌ Development mode: Could not check assignments');
+                            throw new Error('Could not verify user assignments in development mode');
+                        }
+                    } catch (devError) {
+                        console.error('❌ Development mode error checking assignments:', devError);
+                        throw new Error(`Development mode: ${devError.message}`);
+                    }
+                }
+                
+                console.log('📧 Development mode: Proceeding to send email via Cloudflare Worker...');
+                // Fall through to normal email sending logic
+            }
+            
+            // For production or non-admin users, use Cloudflare Worker
             const workerUrl = process.env.REACT_APP_WORKER_URL || 'https://email-worker.izumi-ky.workers.dev';
             
             // Try different API key sources - the working one might be stored differently
@@ -218,15 +302,22 @@ Hasbara Tracker Authentication System
                 }),
             });
 
-
             console.log('📨 Worker response status:', response.status);
             
             if (!response.ok) {
                 const errorText = await response.text();
                 console.error('❌ Worker error:', response.status, errorText);
-                console.error('❌ This usually means the email was not approved by the worker');
+                
+                if (isDevelopment) {
+                    console.error('❌ Development mode: Worker cannot access localhost:3001');
+                    console.error('💡 For development testing of regular users, deploy server to a public URL or use admin emails');
+                } else {
+                    console.error('❌ Production mode: Check if user is assigned to claims');
+                }
+                
                 console.error('❌ Check if:', {
-                    serverRunning: 'http://localhost:3001 is accessible from Cloudflare',
+                    environment: isDevelopment ? 'development (localhost)' : 'production',
+                    serverAccess: isDevelopment ? 'Worker cannot reach localhost' : 'Check if server is reachable',
                     emailInCSV: `${email} is in volunteers.csv`,
                     emailAssigned: `${email} has been assigned to claims`
                 });
@@ -373,11 +464,25 @@ Hasbara Tracker Authentication System
 
     // Check if email is admin (uses environment variables for security)
     const checkIfAdmin = async (email) => {
-        // Get admin emails from environment variables
-        const adminEmailsEnv = process.env.REACT_APP_ADMIN_EMAILS || 'admin@hasbaratracker.com';
+        // Get admin emails from environment variables with fallback for development
+        let adminEmailsEnv = process.env.REACT_APP_ADMIN_EMAILS;
+        
+        // Development fallback - include common admin emails
+        if (!adminEmailsEnv) {
+            console.warn('⚠️ REACT_APP_ADMIN_EMAILS not set, using development fallback');
+            adminEmailsEnv = 'admin@hasbaratracker.com,swan4444444@protonmail.com';
+        }
+        
         const adminEmails = adminEmailsEnv.split(',').map(e => e.trim().toLowerCase());
         
-        return adminEmails.includes(email.toLowerCase());
+        console.log('🔍 Admin check for:', email.toLowerCase());
+        console.log('🔍 Admin emails configured:', adminEmails);
+        console.log('🔍 Environment:', process.env.NODE_ENV);
+        
+        const isAdmin = adminEmails.includes(email.toLowerCase());
+        console.log('🔍 Is admin result:', isAdmin);
+        
+        return isAdmin;
     };
 
     const value = {

@@ -3221,56 +3221,6 @@ const data = [
         "isEditing": true,
         "isNew": true,
         "isDraft": false
-    },
-    {
-        "id": 1757087650789.4827,
-        "claimTitle": "",
-        "date": "",
-        "claim": {
-            "claimText": "",
-            "claimTag": "claim-tag"
-        },
-        "description": {
-            "summary": "",
-            "details": ""
-        },
-        "sources": [
-            {
-                "sourceName": "",
-                "sourceLink": "",
-                "archiveLink": ""
-            }
-        ],
-        "lastEditedBy": "swan4444444@protonmail.com",
-        "lastEditedAt": "2025-09-05T15:54:10.789Z",
-        "isEditing": true,
-        "isNew": true,
-        "isDraft": false
-    },
-    {
-        "id": 1757087650795.0486,
-        "claimTitle": "",
-        "date": "",
-        "claim": {
-            "claimText": "",
-            "claimTag": "claim-tag"
-        },
-        "description": {
-            "summary": "",
-            "details": ""
-        },
-        "sources": [
-            {
-                "sourceName": "",
-                "sourceLink": "",
-                "archiveLink": ""
-            }
-        ],
-        "lastEditedBy": "swan4444444@protonmail.com",
-        "lastEditedAt": "2025-09-05T15:54:10.795Z",
-        "isEditing": true,
-        "isNew": true,
-        "isDraft": false
     }
 ];
 

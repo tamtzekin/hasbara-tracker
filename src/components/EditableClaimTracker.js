@@ -924,20 +924,22 @@ First download the file/image/video, and then upload it into the corresponding G
                     >
                         {editingRows.has(row.index) ? 'Save' : 'Edit'}
                     </button>
-                    <button
-                        onClick={() => removeRow(row.index)}
-                        className="btn-green"
-                        style={{ 
-                            padding: '4px 8px', 
-                            fontSize: '11px', 
-                            minWidth: 'auto',
-                            height: 'auto',
-                            backgroundColor: 'rgb(251, 124, 124)',
-                            cursor: 'crosshair'
-                        }}
-                    >
-                        Delete
-                    </button>
+                    {isAdmin() && (
+                        <button
+                            onClick={() => removeRow(row.index)}
+                            className="btn-green"
+                            style={{ 
+                                padding: '4px 8px', 
+                                fontSize: '11px', 
+                                minWidth: 'auto',
+                                height: 'auto',
+                                backgroundColor: 'rgb(251, 124, 124)',
+                                cursor: 'crosshair'
+                            }}
+                        >
+                            Delete
+                        </button>
+                    )}
                 </div>
             ),
             width: 120,
@@ -1156,7 +1158,8 @@ First download the file/image/video, and then upload it into the corresponding G
                             >
                                 SAVE AS DRAFT
                             </button>
-                            <button
+                            {isAdmin() && (
+                                <button
                                 onClick={async () => {
                                     const confirmed = window.confirm('Are you sure you want to publish all draft changes to the live data.js file? This action cannot be undone.');
                                     if (confirmed) {
@@ -1179,6 +1182,7 @@ First download the file/image/video, and then upload it into the corresponding G
                             >
                                 PUBLISH
                             </button>
+                        )}
                             {selectedClaimTitle && (
                                 <button
                                     onClick={async () => {

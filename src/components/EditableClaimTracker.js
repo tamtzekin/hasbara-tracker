@@ -465,6 +465,7 @@ export default function EditableClaimTracker() {
 
     // Get unique claim titles for dropdown (filtered by user permissions) - using draft data
     const uniqueClaimTitles = useMemo(() => {
+        console.log(`🚨 CLAIM-EDITOR: STARTING UNIQUE CLAIMS CALCULATION`);
         console.log(`🔍 CLAIM-EDITOR: Building dropdown claims list...`);
         console.log(`🔍 CLAIM-EDITOR: User is admin:`, isAdmin());
         console.log(`🔍 CLAIM-EDITOR: User assigned claims:`, user?.assignedClaims);

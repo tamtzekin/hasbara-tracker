@@ -388,13 +388,38 @@ Hasbara Tracker Authentication System
                 
                 // Fetch user's claim assignments
                 try {
-                    const assignResponse = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:3001'}/api/user-assignments/${tokenData.email}`);
-                    if (assignResponse.ok) {
-                        const assignData = await assignResponse.json();
-                        userData.assignedClaims = assignData.assignments?.assignedClaims || [];
+                    // Try multiple API sources for user assignments
+                    const apiUrls = [
+                        'https://user-backend.izumi-ky.workers.dev', // Your user-backend worker
+                        process.env.REACT_APP_API_URL,               // Environment variable
+                        'http://localhost:3001'                     // Local development fallback
+                    ].filter(Boolean); // Remove undefined values
+
+                    console.log('🔍 Fetching user assignments from APIs:', apiUrls);
+
+                    for (const apiUrl of apiUrls) {
+                        try {
+                            console.log(`🔍 Trying to fetch assignments from: ${apiUrl}`);
+                            const assignResponse = await fetch(`${apiUrl}/api/user-assignments/${encodeURIComponent(tokenData.email)}`);
+                            
+                            console.log(`📨 Assignment API response from ${apiUrl}: ${assignResponse.status}`);
+                            
+                            if (assignResponse.ok) {
+                                const assignData = await assignResponse.json();
+                                console.log('📋 Assignment data received:', assignData);
+                                userData.assignedClaims = assignData.assignments?.assignedClaims || [];
+                                console.log(`✅ User ${tokenData.email} has ${userData.assignedClaims.length} assigned claims:`, userData.assignedClaims);
+                                break; // Success - stop trying other APIs
+                            } else {
+                                console.log(`❌ API ${apiUrl} returned ${assignResponse.status}`);
+                            }
+                        } catch (apiError) {
+                            console.log(`❌ Error with API ${apiUrl}:`, apiError.message);
+                            continue; // Try next API
+                        }
                     }
                 } catch (error) {
-                    console.warn('Could not fetch user assignments:', error.message);
+                    console.warn('Could not fetch user assignments from any API:', error.message);
                 }
             }
             

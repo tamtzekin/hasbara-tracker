@@ -485,9 +485,34 @@ Hasbara Tracker Authentication System
 
     // Check if user can access specific claim
     const canAccessClaim = (claimTitle) => {
-        if (!user) return false;
-        if (user.role === 'admin') return true;
-        return user.assignedClaims?.includes(claimTitle) || false;
+        if (!user) {
+            console.log(`🔍 AUTH-CONTEXT: canAccessClaim("${claimTitle}") - no user`);
+            return false;
+        }
+        if (user.role === 'admin') {
+            console.log(`🔍 AUTH-CONTEXT: canAccessClaim("${claimTitle}") - admin access`);
+            return true;
+        }
+        
+        const hasAccess = user.assignedClaims?.includes(claimTitle) || false;
+        console.log(`🔍 AUTH-CONTEXT: canAccessClaim("${claimTitle}")`);
+        console.log(`🔍 AUTH-CONTEXT: User assignedClaims:`, user.assignedClaims);
+        console.log(`🔍 AUTH-CONTEXT: Checking exact match for: "${claimTitle}"`);
+        console.log(`🔍 AUTH-CONTEXT: Result: ${hasAccess}`);
+        
+        // Debug each assigned claim for exact matching
+        if (user.assignedClaims) {
+            user.assignedClaims.forEach((assignedClaim, index) => {
+                const matches = assignedClaim === claimTitle;
+                console.log(`🔍 AUTH-CONTEXT: [${index}] "${assignedClaim}" === "${claimTitle}" -> ${matches}`);
+                if (!matches) {
+                    console.log(`🔍 AUTH-CONTEXT: Length comparison: ${assignedClaim.length} vs ${claimTitle.length}`);
+                    console.log(`🔍 AUTH-CONTEXT: Character codes:`, assignedClaim.split('').map(c => c.charCodeAt(0)), 'vs', claimTitle.split('').map(c => c.charCodeAt(0)));
+                }
+            });
+        }
+        
+        return hasAccess;
     };
 
     // Refresh user assignments (call after assignments are changed via Volunteer Manager)

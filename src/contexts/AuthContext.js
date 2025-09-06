@@ -494,9 +494,17 @@ Hasbara Tracker Authentication System
             return true;
         }
         
-        // Normalize strings by replacing curly quotes with straight quotes for comparison
+        // Normalize strings by replacing ALL types of quotes and special characters for comparison
         const normalizeQuotes = (str) => {
-            return str.replace(/'/g, "'").replace(/'/g, "'"); // Replace left/right curly quotes with straight quotes
+            return str
+                // Replace all types of single quotes with straight single quote
+                .replace(/['''`]/g, "'")
+                // Replace all types of double quotes with straight double quote  
+                .replace(/["""]/g, '"')
+                // Normalize whitespace (replace multiple spaces/tabs/newlines with single space)
+                .replace(/\s+/g, ' ')
+                // Trim leading/trailing whitespace
+                .trim();
         };
         
         const normalizedClaimTitle = normalizeQuotes(claimTitle);
@@ -504,7 +512,14 @@ Hasbara Tracker Authentication System
         
         const hasAccess = normalizedAssignedClaims.includes(normalizedClaimTitle);
         
-        console.log(`🔍 AUTH-CONTEXT: "${claimTitle}" -> ${hasAccess ? '✅ GRANTED' : '❌ DENIED'}`);
+        // Enhanced debugging for quote normalization issues
+        if (!hasAccess && user.assignedClaims && user.assignedClaims.length > 0) {
+            console.log(`🔍 AUTH-CONTEXT: "${claimTitle}" -> ❌ DENIED`);
+            console.log(`🔍 AUTH-CONTEXT: Normalized: "${normalizedClaimTitle}"`);
+            console.log(`🔍 AUTH-CONTEXT: Available normalized claims:`, normalizedAssignedClaims);
+        } else {
+            console.log(`🔍 AUTH-CONTEXT: "${claimTitle}" -> ✅ GRANTED`);
+        }
         
         return hasAccess;
     };

@@ -90,7 +90,7 @@ export const AuthProvider = ({ children }) => {
                 used: false
             }));
             
-            console.log('🔗 Generated magic link:', magicLink);
+            // console.log('🔗 Generated magic link:', magicLink);
             
             // Create email template matching Hasbara Tracker design
             const emailTemplate = {
@@ -408,8 +408,8 @@ Hasbara Tracker Authentication System
                                 const assignData = await assignResponse.json();
                                 console.log(`📋 CLAIM-EDITOR: Assignment data received from ${apiUrl}:`, JSON.stringify(assignData, null, 2));
                                 userData.assignedClaims = assignData.assignments?.assignedClaims || [];
-                                console.log(`✅ CLAIM-EDITOR: User ${tokenData.email} has ${userData.assignedClaims.length} assigned claims from ${apiUrl}:`);
-                                console.log(`✅ CLAIM-EDITOR: Claims list:`, userData.assignedClaims);
+                                // console.log(`✅ CLAIM-EDITOR: User ${tokenData.email} has ${userData.assignedClaims.length} assigned claims from ${apiUrl}:`);
+                                // console.log(`✅ CLAIM-EDITOR: Claims list:`, userData.assignedClaims);
                                 console.log(`✅ CLAIM-EDITOR: Using API endpoint: ${apiUrl}`);
                                 break; // Success - stop trying other APIs
                             } else {
@@ -556,8 +556,8 @@ Hasbara Tracker Authentication System
                         const assignData = await assignResponse.json();
                         console.log(`📋 REFRESH: Assignment data received from ${apiUrl}:`, JSON.stringify(assignData, null, 2));
                         updatedAssignments = assignData.assignments?.assignedClaims || [];
-                        console.log(`✅ REFRESH: User ${user.email} now has ${updatedAssignments.length} assigned claims from ${apiUrl}:`);
-                        console.log(`✅ REFRESH: Updated claims list:`, updatedAssignments);
+                        // console.log(`✅ REFRESH: User ${user.email} now has ${updatedAssignments.length} assigned claims from ${apiUrl}:`);
+                        // console.log(`✅ REFRESH: Updated claims list:`, updatedAssignments);
                         break; // Success - stop trying other APIs
                     } else {
                         const errorText = await assignResponse.text();

@@ -469,11 +469,12 @@ export default function EditableClaimTracker() {
         console.log(`🔍 CLAIM-EDITOR: Building dropdown claims list...`);
         console.log(`🔍 CLAIM-EDITOR: User is admin:`, isAdmin());
         console.log(`🔍 CLAIM-EDITOR: User assigned claims:`, user?.assignedClaims);
-        console.log(`🔍 CLAIM-EDITOR: Total claims in draftData:`, draftData.length);
+        console.log(`🔍 CLAIM-EDITOR: Total evidence rows in draftData:`, draftData.length);
         
         // Debug: Show all unique claim titles in draftData
         const allClaimTitles = [...new Set(draftData.map(item => item.claimTitle).filter(Boolean))];
-        console.log(`🔍 CLAIM-EDITOR: All unique claim titles in draftData:`, allClaimTitles);
+        console.log(`🔍 CLAIM-EDITOR: Total unique claim titles: ${allClaimTitles.length}`);
+        console.log(`🔍 CLAIM-EDITOR: All unique claim titles:`, allClaimTitles);
         
         // Get unique claim titles first to avoid duplicate permission checks
         const uniqueTitles = [...new Set(draftData.map(item => item.claimTitle).filter(Boolean))];

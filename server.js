@@ -709,24 +709,65 @@ app.get('/api/volunteers', verifyAdminToken, (req, res) => {
 app.put('/api/volunteers/:volunteerId/assign', verifyAdminToken, (req, res) => {
     try {
         const { volunteerId } = req.params;
-        const { claimTitle } = req.body;
+        console.log(`📥 SERVER: Raw request body:`, req.body);
+        const { claimTitle, action } = req.body; // action can be 'assign' or 'unassign'
+        
+        console.log(`🎯 SERVER: Received assignment request - volunteerId=${volunteerId}, claimTitle="${claimTitle}", action="${action}"`);
+        console.log(`🔍 SERVER: Action type:`, typeof action, `Action value:`, action);
         
         const volunteerIndex = volunteers.findIndex(v => v.id === volunteerId);
         if (volunteerIndex === -1) {
+            console.log(`❌ SERVER: Volunteer not found: ${volunteerId}`);
             return res.status(404).json({ error: 'Volunteer not found' });
         }
         
         const volunteer = volunteers[volunteerIndex];
         const volunteerEmail = volunteer.email;
         
-        // Update volunteer assignment
-        volunteers[volunteerIndex].assignedClaim = claimTitle || null;
-        volunteers[volunteerIndex].assignedAt = claimTitle ? new Date().toISOString() : null;
+        console.log(`📋 SERVER: Current volunteer data:`, {
+            email: volunteerEmail,
+            assignedClaims: volunteer.assignedClaims,
+            assignedClaim: volunteer.assignedClaim
+        });
+        
+        // Initialize assignedClaims array if it doesn't exist
+        if (!volunteers[volunteerIndex].assignedClaims) {
+            volunteers[volunteerIndex].assignedClaims = [];
+            console.log(`🔧 SERVER: Initialized empty assignedClaims array`);
+        }
         
         let loginMessage = '';
+        let effectiveAction = action;
         
-        if (claimTitle) {
-            // ASSIGN CLAIM: Add volunteer to users list with claim editor permission
+        // Handle backward compatibility - if no action provided, infer from claimTitle
+        if (!action) {
+            if (!claimTitle || claimTitle === null) {
+                effectiveAction = 'unassign_all'; // Old style unassign all
+                console.log(`🔄 SERVER: Backward compatibility - treating as UNASSIGN_ALL (no action, no claimTitle)`);
+            } else {
+                effectiveAction = 'assign'; // Old style assign
+                console.log(`🔄 SERVER: Backward compatibility - treating as ASSIGN (no action, has claimTitle)`);
+            }
+        }
+        
+        console.log(`🎯 SERVER: Effective action: "${effectiveAction}"`);
+        
+        if (effectiveAction === 'assign' && claimTitle) {
+            console.log(`✅ SERVER: Processing ASSIGN action for claim "${claimTitle}"`);
+            console.log(`📋 SERVER: Before assign - Claims:`, volunteers[volunteerIndex].assignedClaims);
+            
+            // ASSIGN CLAIM: Add claim to volunteer's assigned claims
+            if (!volunteers[volunteerIndex].assignedClaims.includes(claimTitle)) {
+                volunteers[volunteerIndex].assignedClaims.push(claimTitle);
+                volunteers[volunteerIndex].assignedAt = new Date().toISOString();
+                console.log(`✅ SERVER: Added claim "${claimTitle}" to volunteer`);
+            } else {
+                console.log(`⚠️ SERVER: Claim "${claimTitle}" already assigned`);
+            }
+            
+            console.log(`📋 SERVER: After assign - Claims:`, volunteers[volunteerIndex].assignedClaims);
+            
+            // Update user permissions
             let userIndex = users.findIndex(u => u.email === volunteerEmail);
             
             if (userIndex === -1) {
@@ -740,7 +781,7 @@ app.put('/api/volunteers/:volunteerId/assign', verifyAdminToken, (req, res) => {
                     createdAt: new Date().toISOString()
                 };
                 users.push(newUser);
-                console.log(`✅ Created login access for volunteer: ${volunteerEmail}`);
+                console.log(`✅ SERVER: Created login access for volunteer: ${volunteerEmail}`);
                 loginMessage = `Login access granted. They can now log in at /login with email: ${volunteerEmail}`;
             } else {
                 // Update existing user's assigned claims
@@ -750,33 +791,72 @@ app.put('/api/volunteers/:volunteerId/assign', verifyAdminToken, (req, res) => {
                 if (!users[userIndex].permissions.includes('claim_editor')) {
                     users[userIndex].permissions.push('claim_editor');
                 }
-                console.log(`✅ Updated login access for volunteer: ${volunteerEmail}`);
+                console.log(`✅ SERVER: Updated login access for volunteer: ${volunteerEmail}`);
                 loginMessage = `Login access updated. They can now log in at /login with email: ${volunteerEmail}`;
             }
-        } else {
-            // UNASSIGN CLAIM: Remove this claim from user's permissions
+            
+            console.log(`👤 SERVER: Successfully assigned volunteer ${volunteerEmail} to claim: ${claimTitle}`);
+            
+        } else if ((effectiveAction === 'unassign' && claimTitle) || effectiveAction === 'unassign_all') {
+            if (effectiveAction === 'unassign_all') {
+                console.log(`❌ SERVER: Processing UNASSIGN_ALL action (old compatibility mode)`);
+                console.log(`📋 SERVER: Before unassign_all - Claims:`, volunteers[volunteerIndex].assignedClaims);
+                
+                // UNASSIGN ALL: Remove all claims (old behavior)
+                volunteers[volunteerIndex].assignedClaims = [];
+                console.log(`📋 SERVER: After unassign_all - Claims:`, volunteers[volunteerIndex].assignedClaims);
+            } else {
+                console.log(`❌ SERVER: Processing UNASSIGN action for claim "${claimTitle}"`);
+                console.log(`📋 SERVER: Before unassign - Claims:`, volunteers[volunteerIndex].assignedClaims);
+                
+                // UNASSIGN SPECIFIC CLAIM: Remove specific claim from assignments
+                volunteers[volunteerIndex].assignedClaims = volunteers[volunteerIndex].assignedClaims.filter(c => c !== claimTitle);
+                console.log(`📋 SERVER: After unassign - Claims:`, volunteers[volunteerIndex].assignedClaims);
+            }
+            
             const userIndex = users.findIndex(u => u.email === volunteerEmail);
             if (userIndex !== -1) {
-                // Remove all assigned claims for this volunteer (since we only allow one claim per volunteer)
-                users[userIndex].assignedClaims = [];
+                if (effectiveAction === 'unassign_all') {
+                    // Remove all claims from user
+                    users[userIndex].assignedClaims = [];
+                    console.log(`❌ SERVER: Removed all claims from volunteer: ${volunteerEmail}`);
+                    loginMessage = `All claims unassigned. Login access removed.`;
+                } else {
+                    // Remove specific claim from user's assigned claims
+                    users[userIndex].assignedClaims = users[userIndex].assignedClaims.filter(c => c !== claimTitle);
+                    console.log(`❌ SERVER: Removed claim "${claimTitle}" from volunteer: ${volunteerEmail}`);
+                    loginMessage = users[userIndex].assignedClaims.length > 0 
+                        ? `Claim unassigned. They still have access to other claims.` 
+                        : `All claims unassigned. Login access removed.`;
+                }
+                
                 // Remove claim_editor permission if no claims assigned
                 if (users[userIndex].assignedClaims.length === 0) {
                     users[userIndex].permissions = users[userIndex].permissions.filter(p => p !== 'claim_editor');
+                    volunteers[volunteerIndex].assignedAt = null;
                 }
-                console.log(`❌ Removed login access for volunteer: ${volunteerEmail}`);
-                loginMessage = `Login access removed for this volunteer.`;
             }
+            
+            const actionText = effectiveAction === 'unassign_all' ? 'all claims' : `claim: ${claimTitle}`;
+            console.log(`👤 SERVER: Successfully unassigned volunteer ${volunteerEmail} from ${actionText}`);
         }
         
-        console.log(`👤 ${claimTitle ? 'Assigned' : 'Unassigned'} volunteer ${volunteerEmail} ${claimTitle ? 'to' : 'from'} claim: ${claimTitle || 'none'}`);
+        // Keep backward compatibility with single assignedClaim field
+        volunteers[volunteerIndex].assignedClaim = volunteers[volunteerIndex].assignedClaims.length > 0 
+            ? volunteers[volunteerIndex].assignedClaims[0] 
+            : null;
         
-        res.json({
+        const responseData = {
             id: volunteers[volunteerIndex].id,
             email: volunteers[volunteerIndex].email,
-            assignedClaim: volunteers[volunteerIndex].assignedClaim,
+            assignedClaims: volunteers[volunteerIndex].assignedClaims,
+            assignedClaim: volunteers[volunteerIndex].assignedClaim, // backward compatibility
             assignedAt: volunteers[volunteerIndex].assignedAt,
             loginMessage: loginMessage
-        });
+        };
+        
+        console.log(`📡 SERVER: Sending response:`, responseData);
+        res.json(responseData);
     } catch (error) {
         console.error('Error assigning volunteer:', error);
         res.status(500).json({ error: 'Failed to assign volunteer' });
@@ -1182,22 +1262,32 @@ app.post('/api/assign-user-to-claim', (req, res) => {
 app.get('/api/user-assignments/:email', (req, res) => {
     try {
         const { email } = req.params;
+        console.log(`📋 Getting user assignments for: ${email}`);
         
-        if (!global.userAssignments) {
-            global.userAssignments = {};
+        // Look up user in the users array (where volunteer assignments are actually stored)
+        const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+        
+        if (user && user.assignedClaims) {
+            console.log(`✅ Found user assignments:`, user.assignedClaims);
+            res.json({
+                success: true,
+                assignments: {
+                    email: user.email,
+                    assignedClaims: user.assignedClaims,
+                    role: user.role,
+                    permissions: user.permissions
+                }
+            });
+        } else {
+            console.log(`❌ No assignments found for user: ${email}`);
+            res.json({
+                success: true,
+                assignments: {
+                    email: email.toLowerCase().trim(),
+                    assignedClaims: []
+                }
+            });
         }
-        
-        // Get assignments for specific user
-        const emailKey = email.toLowerCase().trim();
-        const userAssignments = global.userAssignments[emailKey] || { 
-            email: emailKey, 
-            assignedClaims: [] 
-        };
-        
-        res.json({
-            success: true,
-            assignments: userAssignments
-        });
         
     } catch (error) {
         console.error('❌ Error getting user assignments:', error);

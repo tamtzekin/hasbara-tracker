@@ -8,6 +8,37 @@ import { testVolunteers } from '../data/volunteersData';
 
 import '../App.css';
 
+// Add CSS animations for toast notifications
+const toastStyles = `
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+`;
+
+// Inject styles
+if (typeof document !== 'undefined') {
+    const styleSheet = document.createElement('style');
+    styleSheet.type = 'text/css';
+    styleSheet.innerText = toastStyles;
+    document.head.appendChild(styleSheet);
+}
+
 const VolunteersPage = () => {
     const [volunteers, setVolunteers] = useState([]);
     const [filteredVolunteers, setFilteredVolunteers] = useState([]);
@@ -15,6 +46,8 @@ const VolunteersPage = () => {
     const [loading, setLoading] = useState(true);
     const [message, setMessage] = useState('');
     const [messageType, setMessageType] = useState('');
+    const [toastMessages, setToastMessages] = useState([]);
+    const [expandedRows, setExpandedRows] = useState(new Set());
 
     // Filter states
     const [searchTerm, setSearchTerm] = useState('');
@@ -179,43 +212,141 @@ const VolunteersPage = () => {
         // Claim assignment filter
         if (claimFilter !== 'all') {
             if (claimFilter === 'unassigned') {
-                filtered = filtered.filter(volunteer => !volunteer.assignedClaim);
+                filtered = filtered.filter(volunteer => !volunteer.assignedClaims || volunteer.assignedClaims.length === 0);
             } else {
-                filtered = filtered.filter(volunteer => volunteer.assignedClaim === claimFilter);
+                filtered = filtered.filter(volunteer => volunteer.assignedClaims && volunteer.assignedClaims.includes(claimFilter));
             }
         }
 
         setFilteredVolunteers(filtered);
     };
 
-    const handleAssignClaim = async (volunteerId, claimTitle) => {
+    const showToast = (message, type = 'success') => {
+        const id = Date.now() + Math.random();
+        const toast = { id, message, type };
+        
+        setToastMessages(prev => [...prev, toast]);
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            setToastMessages(prev => prev.filter(t => t.id !== id));
+        }, 5000);
+    };
+
+    const handleAssignClaim = async (volunteerId, claimTitle, action) => {
+        console.log(`🎯 FRONTEND: handleAssignClaim called: volunteerId=${volunteerId}, claimTitle="${claimTitle}", action="${action}"`);
+        console.log(`🎯 FRONTEND: Action parameter type:`, typeof action, `Action parameter value:`, action);
+        
+        // Find current volunteer state
+        const currentVolunteer = volunteers.find(v => v.id === volunteerId);
+        if (!currentVolunteer) {
+            console.error(`❌ FRONTEND: Volunteer not found: ${volunteerId}`);
+            return;
+        }
+        
+        const currentClaims = currentVolunteer.assignedClaims || [];
+        console.log(`📋 FRONTEND: Current claims for volunteer:`, currentClaims);
+        
+        // Optimistically update UI first
+        setVolunteers(prev => prev.map(volunteer => {
+            if (volunteer.id === volunteerId) {
+                const updatedVolunteer = { ...volunteer };
+                
+                // Initialize assignedClaims if it doesn't exist
+                if (!updatedVolunteer.assignedClaims) {
+                    updatedVolunteer.assignedClaims = [];
+                }
+                
+                console.log(`🔄 Before update - Claims:`, updatedVolunteer.assignedClaims);
+                
+                if (action === 'assign') {
+                    if (!updatedVolunteer.assignedClaims.includes(claimTitle)) {
+                        updatedVolunteer.assignedClaims = [...updatedVolunteer.assignedClaims, claimTitle];
+                        console.log(`✅ OPTIMISTIC ASSIGN: Added "${claimTitle}"`);
+                    } else {
+                        console.log(`⚠️ Claim already assigned: "${claimTitle}"`);
+                    }
+                } else if (action === 'unassign') {
+                    updatedVolunteer.assignedClaims = updatedVolunteer.assignedClaims.filter(c => c !== claimTitle);
+                    console.log(`❌ OPTIMISTIC UNASSIGN: Removed "${claimTitle}"`);
+                }
+                
+                console.log(`🔄 After update - Claims:`, updatedVolunteer.assignedClaims);
+                
+                // Update backward compatibility field
+                updatedVolunteer.assignedClaim = updatedVolunteer.assignedClaims.length > 0 
+                    ? updatedVolunteer.assignedClaims[0] 
+                    : null;
+                
+                return updatedVolunteer;
+            }
+            return volunteer;
+        }));
+        
+        // Then make API call
         try {
             const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
+            const endpoint = `http://localhost:3001/api/volunteers/${volunteerId}/assign`;
             
-            const response = await fetch(`http://localhost:3001/api/volunteers/${volunteerId}/assign`, {
+            console.log(`📡 Making API call to: ${endpoint}`);
+            console.log(`📡 Request body:`, { claimTitle, action });
+            
+            const response = await fetch(endpoint, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify({ claimTitle: claimTitle || null })
+                body: JSON.stringify({ claimTitle, action })
             });
+
+            console.log(`📡 API Response status: ${response.status}`);
 
             if (response.ok) {
                 const result = await response.json();
-                setMessage(`Volunteer ${claimTitle ? 'assigned to' : 'unassigned from'} claim successfully. ${result.loginMessage || ''}`);
-                setMessageType('success');
-                fetchVolunteers(); // Refresh the list
+                console.log(`📡 API Response data:`, result);
+                
+                const actionText = action === 'assign' ? 'assigned to' : 'unassigned from';
+                showToast(`Volunteer ${actionText} claim successfully. ${result.loginMessage || ''}`);
+                
+                // Update with server response to ensure consistency
+                setVolunteers(prev => prev.map(volunteer => {
+                    if (volunteer.id === volunteerId) {
+                        console.log(`🔄 SYNC WITH SERVER: Setting claims to`, result.assignedClaims);
+                        return {
+                            ...volunteer,
+                            assignedClaims: result.assignedClaims || [],
+                            assignedClaim: result.assignedClaim,
+                            assignedAt: result.assignedAt
+                        };
+                    }
+                    return volunteer;
+                }));
             } else {
                 const error = await response.json();
-                setMessage(error.error || 'Failed to assign volunteer');
-                setMessageType('error');
+                console.error(`❌ API Error:`, error);
+                showToast(error.error || 'Failed to assign volunteer', 'error');
+                // Revert optimistic update on error
+                fetchVolunteers();
             }
         } catch (error) {
-            console.error('Error assigning volunteer:', error);
-            setMessage('Error assigning volunteer: ' + error.message);
-            setMessageType('error');
+            console.error('❌ Network Error:', error);
+            showToast('Error assigning volunteer: ' + error.message, 'error');
+            // Revert optimistic update on error
+            fetchVolunteers();
         }
+    };
+
+    const toggleRowExpansion = (volunteerId) => {
+        setExpandedRows(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(volunteerId)) {
+                newSet.delete(volunteerId);
+            } else {
+                newSet.add(volunteerId);
+            }
+            return newSet;
+        });
     };
 
     const handleDeleteVolunteer = async (volunteerId, volunteerEmail) => {
@@ -467,7 +598,7 @@ const VolunteersPage = () => {
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Availability</th>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Skills</th>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Languages</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Assigned Claim</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Assign Claims</th>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Actions</th>
                                 </tr>
                             </thead>
@@ -493,16 +624,62 @@ const VolunteersPage = () => {
                                             )}
                                         </td>
                                         <td className="px-4 py-3 text-sm">
-                                            <select
-                                                value={volunteer.assignedClaim || ''}
-                                                onChange={(e) => handleAssignClaim(volunteer.id, e.target.value)}
-                                                className="text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            >
-                                                <option value="">Unassigned</option>
-                                                {availableClaims.map(claim => (
-                                                    <option key={claim} value={claim}>{claim}</option>
-                                                ))}
-                                            </select>
+                                            <div className="max-w-sm">
+                                                <button 
+                                                    onClick={() => toggleRowExpansion(volunteer.id)}
+                                                    className="mb-2 text-blue-600 hover:text-blue-800 text-xs font-medium flex items-center"
+                                                >
+                                                    {expandedRows.has(volunteer.id) ? '▼' : '▶'} 
+                                                    <span className="ml-1">
+                                                        {volunteer.assignedClaims?.length || 0} claims assigned
+                                                    </span>
+                                                </button>
+                                                
+                                                {expandedRows.has(volunteer.id) && (
+                                                    <div className="space-y-1 max-h-60 overflow-y-auto">
+                                                        {availableClaims.map(claim => {
+                                                            const isAssigned = volunteer.assignedClaims?.includes(claim);
+                                                            return (
+                                                                <div 
+                                                                    key={claim} 
+                                                                    className={`p-2 border rounded text-xs flex items-center justify-between ${
+                                                                        isAssigned 
+                                                                            ? 'bg-green-100 border-green-300' 
+                                                                            : 'bg-gray-50 border-gray-200'
+                                                                    }`}
+                                                                    style={isAssigned ? { backgroundColor: 'rgba(176,245,85,.424)' } : {}}
+                                                                >
+                                                                    <span className="flex-1 pr-2 text-left" title={claim}>
+                                                                        {claim.length > 35 ? `${claim.substring(0, 32)}...` : claim}
+                                                                    </span>
+                                                                    {isAssigned ? (
+                                                                        <button
+                                                                            onClick={() => handleAssignClaim(volunteer.id, claim, 'unassign')}
+                                                                            className="bg-red-500 text-white px-2 py-1 rounded text-xs hover:bg-red-600 whitespace-nowrap"
+                                                                            title={`Unassign from ${claim}`}
+                                                                        >
+                                                                            UNASSIGN
+                                                                        </button>
+                                                                    ) : (
+                                                                        <button
+                                                                            onClick={() => handleAssignClaim(volunteer.id, claim, 'assign')}
+                                                                            className="bg-blue-500 text-white px-2 py-1 rounded text-xs hover:bg-blue-600 whitespace-nowrap"
+                                                                            title={`Assign to ${claim}`}
+                                                                        >
+                                                                            ASSIGN
+                                                                        </button>
+                                                                    )}
+                                                                </div>
+                                                            );
+                                                        })}
+                                                        {(!volunteer.assignedClaims || volunteer.assignedClaims.length === 0) && (
+                                                            <div className="text-xs text-gray-500 italic p-2">
+                                                                No claims assigned
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                )}
+                                            </div>
                                         </td>
                                         <td className="px-4 py-3 text-sm">
                                             <button
@@ -535,6 +712,35 @@ const VolunteersPage = () => {
                         {message}
                     </div>
                 )}
+                
+                {/* Toast notifications */}
+                <div className="fixed bottom-0 left-0 right-0 z-50 pointer-events-none">
+                    <div className="flex flex-col items-center pb-4 space-y-2">
+                        {toastMessages.map((toast) => (
+                            <div
+                                key={toast.id}
+                                className={`px-4 py-3 rounded-md shadow-lg max-w-md mx-4 text-sm animate-pulse pointer-events-auto ${
+                                    toast.type === 'success'
+                                        ? 'bg-green-600 text-white'
+                                        : 'bg-red-600 text-white'
+                                }`}
+                                style={{
+                                    animation: 'fadeInUp 0.5s ease-out forwards, fadeOut 1s ease-in 4s forwards'
+                                }}
+                            >
+                                <div className="flex items-center justify-between">
+                                    <span>{toast.message}</span>
+                                    <button
+                                        onClick={() => setToastMessages(prev => prev.filter(t => t.id !== toast.id))}
+                                        className="ml-3 text-white hover:text-gray-200"
+                                    >
+                                        ×
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
             <Footer />
         </>

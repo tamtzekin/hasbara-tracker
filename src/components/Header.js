@@ -103,15 +103,14 @@ const Header = () =>{
                     )}
                     */}
 
-                    {/* Volunteers panel hidden for now
-                    {isAdmin() && (
+                    {/* Show Volunteer Manager for admins only when logged in */}
+                    {isLoggedIn() && isAdmin() && (
                         <li className="undotted">
                             <NavLink to="/volunteers" className="font-semibold text-green-600">
-                                Volunteers
+                                Volunteer Manager
                             </NavLink>
                         </li>
                     )}
-                    */}
 
                     {/* Show user info and logout only when logged in */}
                     {isLoggedIn() && (

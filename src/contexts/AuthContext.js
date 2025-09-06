@@ -499,8 +499,8 @@ Hasbara Tracker Authentication System
             return str
                 // Normalize ALL single quote/apostrophe variants to standard curly apostrophe
                 .replace(/['''`ʼ]/g, "'")
-                // Normalize ALL double quote variants to standard curly quotes
-                .replace(/["""]/g, """)
+                // Normalize ALL double quote variants to standard straight quotes (covers both left and right curly)
+                .replace(/["""\u201C\u201D]/g, '"')  // Unicode escapes for left (\u201C) and right (\u201D) curly quotes
                 // Normalize whitespace (multiple spaces → single space)
                 .replace(/\s+/g, ' ')
                 .trim()

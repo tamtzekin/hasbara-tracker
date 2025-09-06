@@ -475,20 +475,21 @@ export default function EditableClaimTracker() {
         const allClaimTitles = [...new Set(draftData.map(item => item.claimTitle).filter(Boolean))];
         console.log(`🔍 CLAIM-EDITOR: All unique claim titles in draftData:`, allClaimTitles);
         
-        const titles = draftData.reduce((acc, item) => {
-            if (item.claimTitle && !acc.includes(item.claimTitle)) {
-                const hasAccess = isAdmin() || canAccessClaim(item.claimTitle);
-                console.log(`🔍 CLAIM-EDITOR: Checking claim "${item.claimTitle}" - hasAccess: ${hasAccess}`);
-                
-                if (hasAccess) {
-                    acc.push(item.claimTitle);
-                    console.log(`✅ CLAIM-EDITOR: Added claim to dropdown: "${item.claimTitle}"`);
-                } else {
-                    console.log(`❌ CLAIM-EDITOR: Skipped claim (no access): "${item.claimTitle}"`);
-                }
+        // Get unique claim titles first to avoid duplicate permission checks
+        const uniqueTitles = [...new Set(draftData.map(item => item.claimTitle).filter(Boolean))];
+        console.log(`🔍 CLAIM-EDITOR: Found ${uniqueTitles.length} unique claim titles`);
+        
+        const titles = [];
+        const isUserAdmin = isAdmin();
+        
+        for (const claimTitle of uniqueTitles) {
+            const hasAccess = isUserAdmin || canAccessClaim(claimTitle);
+            console.log(`🔍 CLAIM-EDITOR: "${claimTitle}" -> ${hasAccess ? '✅ GRANTED' : '❌ DENIED'}`);
+            
+            if (hasAccess) {
+                titles.push(claimTitle);
             }
-            return acc;
-        }, []);
+        }
         
         console.log(`📋 CLAIM-EDITOR: Final dropdown claims list:`, titles);
         console.log(`📊 CLAIM-EDITOR: Total accessible claims: ${titles.length}`);

@@ -494,21 +494,22 @@ Hasbara Tracker Authentication System
             return true;
         }
         
-        // Normalize strings by replacing ALL types of quotes and special characters for comparison
-        const normalizeQuotes = (str) => {
+        // Normalize strings for fuzzy matching - handles your standard curly quotes/apostrophes
+        const normalizeForMatching = (str) => {
             return str
-                // Replace all types of single quotes with straight single quote
-                .replace(/['''`]/g, "'")
-                // Replace all types of double quotes with straight double quote  
-                .replace(/["""]/g, '"')
-                // Normalize whitespace (replace multiple spaces/tabs/newlines with single space)
+                // Normalize ALL single quote/apostrophe variants to standard curly apostrophe
+                .replace(/['''`ʼ]/g, "'")
+                // Normalize ALL double quote variants to standard curly quotes
+                .replace(/["""]/g, """)
+                // Normalize whitespace (multiple spaces → single space)
                 .replace(/\s+/g, ' ')
-                // Trim leading/trailing whitespace
-                .trim();
+                .trim()
+                // Convert to lowercase for case-insensitive matching
+                .toLowerCase();
         };
         
-        const normalizedClaimTitle = normalizeQuotes(claimTitle);
-        const normalizedAssignedClaims = user.assignedClaims?.map(claim => normalizeQuotes(claim)) || [];
+        const normalizedClaimTitle = normalizeForMatching(claimTitle);
+        const normalizedAssignedClaims = user.assignedClaims?.map(claim => normalizeForMatching(claim)) || [];
         
         const hasAccess = normalizedAssignedClaims.includes(normalizedClaimTitle);
         

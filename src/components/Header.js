@@ -59,87 +59,75 @@ const Header = () =>{
     {/* <input class="hidden" type="checkbox" id="menu-toggle" /> */}
 
     <div className="hidden tablet:flex tablet:items-center tablet:w-auto w-full" id="menu">
-        <nav>
-            {/* <ul class="tablet:flex items-center justify-between text-base text-gray-700 pt-4 tablet:pt-0">
-                <li><a class="tablet:p-0 py-3 px-0 block" href="#">Claim</a></li>
-                <li><a class="tablet:p-4 py-3 px-0 block" href="#">Submit a claim</a></li>
-                <li><a class="tablet:p-4 py-3 px-0 block" href="#">Volunteer</a></li>
-                <li><a class="tablet:p-4 py-3 px-0 block tablet:mb-0 mb-2" href="#">About</a></li>
-            </ul> */}
+        <nav className="w-full">
+            {/* Main site navigation */}
+            <ul className="tablet:flex items-center justify-end gap-4 whitespace-nowrap text-base text-gray-700 pt-4 tablet:pt-0">
+                <li className="undotted">
+                    <NavLink to="/">Claims</NavLink>
+                </li>
 
-<ul className="tablet:flex items-center justify-end gap-4 whitespace-nowrap text-base text-gray-700 pt-4 tablet:pt-0">
-                        <li className="undotted">
-                            <NavLink to="/">Claims</NavLink>
-                        </li>
+                <li className="undotted">
+                    <NavLink to="/submit-claim">Submit a claim</NavLink>
+                </li>
 
-                    <li className="undotted">
-                        <NavLink to="/submit-claim">Submit a claim</NavLink>
-                    </li>
+                <li className="undotted">
+                    <NavLink to="/volunteer">Volunteer</NavLink>
+                </li>
 
-                    <li className="undotted">
-                        <NavLink to="/volunteer">Volunteer</NavLink>
-                    </li>
+                <li className="undotted">
+                    <NavLink to="/about">About</NavLink>
+                </li>
+            </ul>
 
-                    <li className="undotted">
-                        <NavLink to="/about">About</NavLink>
-                    </li>
+            {/* Admin/User functions - second row */}
+            {(isLoggedIn() || isClaimEditorPage) && (
+                <div className="border-t border-gray-200 pt-2 mt-2">
+                    <ul className="tablet:flex items-center justify-end gap-4 whitespace-nowrap text-base text-gray-700">
+                        {/* Authentication-based navigation - show on claim-editor page or when logged in */}
+                        {(isLoggedIn() || isClaimEditorPage) && (
+                            <li className="undotted">
+                                <NavLink to="/claim-editor" className="font-semibold text-blue-600">
+                                    Claim Editor
+                                </NavLink>
+                            </li>
+                        )}
 
-                    {/* Authentication-based navigation - show on claim-editor page or when logged in */}
-                    {(isLoggedIn() || isClaimEditorPage) && (
-                        <li className="undotted">
-                            <NavLink to="/claim-editor" className="font-semibold text-blue-600">
-                                Claim Editor
-                            </NavLink>
-                        </li>
-                    )}
+                        {/* Show Volunteer Manager for admins only when logged in */}
+                        {isLoggedIn() && isAdmin() && (
+                            <li className="undotted">
+                                <NavLink to="/volunteers" className="font-semibold text-green-600">
+                                    Volunteer Manager
+                                </NavLink>
+                            </li>
+                        )}
 
-                    {/* Admin panel hidden for now
-                    {(isAdmin() || isClaimEditorPage) && (
-                        <li className="undotted">
-                            <NavLink to="/admin" className="font-semibold text-purple-600">
-                                Admin
-                            </NavLink>
-                        </li>
-                    )}
-                    */}
-
-                    {/* Show Volunteer Manager for admins only when logged in */}
-                    {isLoggedIn() && isAdmin() && (
-                        <li className="undotted">
-                            <NavLink to="/volunteers" className="font-semibold text-green-600">
-                                Volunteer Manager
-                            </NavLink>
-                        </li>
-                    )}
-
-                    {/* Show user info and logout only when logged in */}
-                    {isLoggedIn() && (
-                        <li className="undotted">
-                            <div className="flex items-center space-x-2">
-                                {/* Admin status indicator */}
-                                <div className="flex items-center space-x-1">
-                                    {isAdmin() ? (
-                                        <span title="Admin User" className="text-yellow-500 text-lg">🔑</span>
-                                    ) : (
-                                        <span title="Regular User" className="text-gray-500 text-lg">👤</span>
-                                    )}
+                        {/* Show user info and logout only when logged in */}
+                        {isLoggedIn() && (
+                            <li className="undotted">
+                                <div className="flex items-center space-x-2">
+                                    {/* Admin status indicator */}
+                                    <div className="flex items-center space-x-1">
+                                        {isAdmin() ? (
+                                            <span title="Admin User" className="text-yellow-500 text-lg">🔑</span>
+                                        ) : (
+                                            <span title="Regular User" className="text-gray-500 text-lg">👤</span>
+                                        )}
+                                    </div>
+                                    <span className="text-sm text-gray-500 hidden sm:inline">
+                                        {user?.email}
+                                    </span>
+                                    <button
+                                        onClick={logout}
+                                        className="text-red-600 hover:text-red-800 font-medium"
+                                    >
+                                        Logout
+                                    </button>
                                 </div>
-                                <span className="text-sm text-gray-500 hidden sm:inline">
-                                    {user?.email}
-                                </span>
-                                <button
-                                    onClick={logout}
-                                    className="text-red-600 hover:text-red-800 font-medium"
-                                >
-                                    Logout
-                                </button>
-                            </div>
-                        </li>
-                    )}
-                    
-                    {/* Login link is only accessible via direct URL /login - not shown in navigation */}
-
-</ul>
+                            </li>
+                        )}
+                    </ul>
+                </div>
+            )}
         </nav>
     </div>
 </header>        

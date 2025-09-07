@@ -8,7 +8,7 @@ import { testVolunteers } from '../data/volunteersData';
 
 import '../App.css';
 
-// Add CSS animations for toast notifications
+// Add CSS animations for toast notifications and typing effect
 const toastStyles = `
 @keyframes fadeInUp {
     from {
@@ -29,6 +29,35 @@ const toastStyles = `
         opacity: 0;
     }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.typing-animation {
+    display: inline-block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.typing-animation .letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInLetter 0.1s ease-in-out forwards;
+}
+
+@keyframes fadeInLetter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 `;
 
 // Inject styles
@@ -38,6 +67,37 @@ if (typeof document !== 'undefined') {
     styleSheet.innerText = toastStyles;
     document.head.appendChild(styleSheet);
 }
+
+// Letter-by-letter typing animation component
+const TypingAnimation = ({ text, speed = 100 }) => {
+    const [displayedLetters, setDisplayedLetters] = useState(0);
+    
+    React.useEffect(() => {
+        if (displayedLetters < text.length) {
+            const timer = setTimeout(() => {
+                setDisplayedLetters(prev => prev + 1);
+            }, speed);
+            return () => clearTimeout(timer);
+        }
+    }, [displayedLetters, text.length, speed]);
+    
+    return (
+        <span className="typing-animation">
+            {text.split('').map((letter, index) => (
+                <span 
+                    key={index}
+                    className="letter"
+                    style={{
+                        animationDelay: `${index * (speed / 1000)}s`,
+                        opacity: index < displayedLetters ? 1 : 0
+                    }}
+                >
+                    {letter === ' ' ? '\u00A0' : letter}
+                </span>
+            ))}
+        </span>
+    );
+};
 
 const VolunteersPage = () => {
     const [volunteers, setVolunteers] = useState([]);
@@ -482,9 +542,11 @@ const VolunteersPage = () => {
         return (
             <>
                 <Header />
-                <div className="content-container">
+                <div className="tracker-container">
                     <div className="text-center py-20">
-                        <div className="text-xl mb-4">Loading volunteers...</div>
+                        <div className="text-xl mb-4">
+                            <TypingAnimation text="Loading volunteers..." speed={80} />
+                        </div>
                         <div className="loader"></div>
                     </div>
                 </div>
@@ -496,31 +558,30 @@ const VolunteersPage = () => {
     return (
         <>
             <Header />
-            <div className="content-container">
+            <div className="tracker-container">
                 <h2 className="subheading">Volunteers Database</h2>
                 
                 {/* Filters Section */}
-                <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-                    <h3 className="text-xl font-bold mb-4">Filters</h3>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 mb-4">
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Search</label>
+                <div className="filters-container bg-white rounded-lg shadow-lg p-4 mb-6">
+                    {/* Horizontal filter layout with aligned heights */}
+                    <div className="flex flex-wrap gap-3 mb-3 items-end">
+                        <div className="flex-shrink-0" style={{minWidth: '200px'}}>
+                            <label className="block text-xs font-medium mb-1">Search</label>
                             <input
                                 type="text"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 placeholder="Search name, email, skills..."
                             />
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Name</label>
+                        <div className="flex-shrink-0" style={{minWidth: '140px'}}>
+                            <label className="block text-xs font-medium mb-1">Name</label>
                             <select
                                 value={nameFilter}
                                 onChange={(e) => setNameFilter(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
                                 <option value="all">All Names</option>
                                 {uniqueNames.map(name => (
@@ -529,12 +590,12 @@ const VolunteersPage = () => {
                             </select>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Tag/Category</label>
+                        <div className="flex-shrink-0" style={{minWidth: '80px', maxWidth: '120px'}}>
+                            <label className="block text-xs font-medium mb-1">Tag</label>
                             <select
                                 value={tagFilter}
                                 onChange={(e) => setTagFilter(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
                                 <option value="all">All Tags</option>
                                 {uniqueTags.map(tag => (
@@ -545,14 +606,14 @@ const VolunteersPage = () => {
                             </select>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Background Skills</label>
+                        <div className="flex-shrink-0" style={{minWidth: '140px'}}>
+                            <label className="block text-xs font-medium mb-1">Background</label>
                             <select
                                 value={backgroundFilter}
                                 onChange={(e) => setBackgroundFilter(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
-                                <option value="all">All Background Skills</option>
+                                <option value="all">All Backgrounds</option>
                                 {uniqueBackgroundSkills.map(skill => (
                                     <option key={skill} value={skill}>
                                         {formatFilterOption(skill)}
@@ -561,12 +622,12 @@ const VolunteersPage = () => {
                             </select>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Experience Level</label>
+                        <div className="flex-shrink-0" style={{minWidth: '120px'}}>
+                            <label className="block text-xs font-medium mb-1">Level</label>
                             <select
                                 value={levelFilter}
                                 onChange={(e) => setLevelFilter(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
                                 <option value="all">All Levels</option>
                                 {uniqueLevels.map(level => (
@@ -575,12 +636,12 @@ const VolunteersPage = () => {
                             </select>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Availability</label>
+                        <div className="flex-shrink-0" style={{minWidth: '130px'}}>
+                            <label className="block text-xs font-medium mb-1">Availability</label>
                             <select
                                 value={availabilityFilter}
                                 onChange={(e) => setAvailabilityFilter(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
                                 <option value="all">All Availability</option>
                                 {uniqueAvailability.map(availability => (
@@ -589,12 +650,12 @@ const VolunteersPage = () => {
                             </select>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Core Skills</label>
+                        <div className="flex-shrink-0" style={{minWidth: '140px'}}>
+                            <label className="block text-xs font-medium mb-1">Skills</label>
                             <select
                                 value={skillsFilter}
                                 onChange={(e) => setSkillsFilter(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
                                 <option value="all">All Skills</option>
                                 {uniqueSkills.map(skill => (
@@ -603,12 +664,12 @@ const VolunteersPage = () => {
                             </select>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Primary Language</label>
+                        <div className="flex-shrink-0" style={{minWidth: '120px'}}>
+                            <label className="block text-xs font-medium mb-1">Language</label>
                             <select
                                 value={languageFilter}
                                 onChange={(e) => setLanguageFilter(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
                                 <option value="all">All Languages</option>
                                 {uniqueLanguages.map(language => (
@@ -617,12 +678,12 @@ const VolunteersPage = () => {
                             </select>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Hours Committed</label>
+                        <div className="flex-shrink-0" style={{minWidth: '110px'}}>
+                            <label className="block text-xs font-medium mb-1">Hours</label>
                             <select
                                 value={hoursFilter}
                                 onChange={(e) => setHoursFilter(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
                                 <option value="all">All Hours</option>
                                 {uniqueHoursCommitted.map(hours => (
@@ -631,12 +692,12 @@ const VolunteersPage = () => {
                             </select>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium mb-2">Assigned Claim</label>
+                        <div className="flex-shrink-0" style={{minWidth: '160px'}}>
+                            <label className="block text-xs font-medium mb-1">Claims</label>
                             <select
                                 value={claimFilter}
                                 onChange={(e) => setClaimFilter(e.target.value)}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
                                 <option value="all">All Claims</option>
                                 <option value="unassigned" className="font-semibold text-red-600">🚫 UNASSIGNED ONLY</option>
@@ -647,15 +708,15 @@ const VolunteersPage = () => {
                         </div>
                     </div>
 
-                    <div className="text-sm text-gray-600">
+                    <div className="text-xs text-gray-600 mt-2">
                         Showing {filteredVolunteers.length} of {volunteers.length} volunteers
                     </div>
                 </div>
 
                 {/* Volunteers Table */}
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="volunteers-table-container bg-white rounded-lg shadow-lg overflow-hidden">
                     <div className="overflow-x-auto">
-                        <table className="w-full">
+                        <table className="w-full min-w-max" style={{minWidth: '1200px'}}>
                             <thead className="bg-gray-50">
                                 <tr>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Name</th>

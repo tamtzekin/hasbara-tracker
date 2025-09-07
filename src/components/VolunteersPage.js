@@ -90,7 +90,10 @@ const VolunteersPage = () => {
                 return;
             }
             
-            const response = await fetch('http://localhost:3001/api/volunteers', {
+            // Always use the live Cloudflare Workers API
+            const apiBaseUrl = 'https://user-backend.izumi-ky.workers.dev/api';
+            
+            const response = await fetch(`${apiBaseUrl}/volunteers`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -124,7 +127,10 @@ const VolunteersPage = () => {
         try {
             const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
             
-            const response = await fetch('http://localhost:3001/api/volunteers/available-claims', {
+            // Always use the live Cloudflare Workers API
+            const apiBaseUrl = 'https://user-backend.izumi-ky.workers.dev/api';
+            
+            const response = await fetch(`${apiBaseUrl}/volunteers/available-claims`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -286,7 +292,10 @@ const VolunteersPage = () => {
         // Then make API call
         try {
             const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
-            const endpoint = `http://localhost:3001/api/volunteers/${volunteerId}/assign`;
+            // Always use the live Cloudflare Workers API
+            const apiBaseUrl = 'https://user-backend.izumi-ky.workers.dev/api';
+            
+            const endpoint = `${apiBaseUrl}/volunteers/${volunteerId}/assign`;
             
             console.log(`📡 Making API call to: ${endpoint}`);
             console.log(`📡 Request body:`, { claimTitle, action });
@@ -413,7 +422,10 @@ const VolunteersPage = () => {
         try {
             const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
             
-            const response = await fetch(`http://localhost:3001/api/volunteers/${volunteerId}`, {
+            // Always use the live Cloudflare Workers API
+            const apiBaseUrl = 'https://user-backend.izumi-ky.workers.dev/api';
+            
+            const response = await fetch(`${apiBaseUrl}/volunteers/${volunteerId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

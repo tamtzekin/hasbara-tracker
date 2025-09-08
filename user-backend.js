@@ -64,11 +64,6 @@ export default {
         return handleGetAvailableClaims(request);
       }
 
-      if (path.startsWith('/api/volunteers/') && method === 'DELETE') {
-        const volunteerId = path.split('/api/volunteers/')[1];
-        return handleDeleteVolunteer(request, volunteerId);
-      }
-
       // Debug Google Sheets auth endpoint
       if (path === '/debug-sheets' && method === 'GET') {
         return handleDebugSheets(env);
@@ -325,38 +320,6 @@ async function handleGetAvailableClaims(request) {
     console.error('❌ Error getting available claims:', error);
     return new Response(JSON.stringify({ 
       error: 'Failed to get available claims',
-      details: error.message 
-    }), {
-      status: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      }
-    });
-  }
-}
-
-// NEW: Handle delete volunteer
-async function handleDeleteVolunteer(request, volunteerId) {
-  try {
-    console.log(`🗑️ Delete request for volunteer ID: ${volunteerId}`);
-    
-    // Mock deletion - in production you'd delete from database
-    // For now, just return success
-    
-    return new Response(JSON.stringify({ 
-      success: true, 
-      message: `Volunteer ${volunteerId} deleted successfully`
-    }), {
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      }
-    });
-  } catch (error) {
-    console.error('❌ Error deleting volunteer:', error);
-    return new Response(JSON.stringify({ 
-      error: 'Failed to delete volunteer',
       details: error.message 
     }), {
       status: 500,

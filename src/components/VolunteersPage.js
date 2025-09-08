@@ -474,39 +474,6 @@ const VolunteersPage = () => {
         });
     };
 
-    const handleDeleteVolunteer = async (volunteerId, volunteerEmail) => {
-        if (!window.confirm(`Are you sure you want to delete volunteer ${volunteerEmail}? This action cannot be undone.`)) {
-            return;
-        }
-
-        try {
-            const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
-            
-            // Always use the live Cloudflare Workers API
-            const apiBaseUrl = 'https://user-backend.izumi-ky.workers.dev/api';
-            
-            const response = await fetch(`${apiBaseUrl}/volunteers/${volunteerId}`, {
-                method: 'DELETE',
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            });
-
-            if (response.ok) {
-                setMessage(`Volunteer ${volunteerEmail} deleted successfully`);
-                setMessageType('success');
-                fetchVolunteers(); // Refresh the list
-            } else {
-                const error = await response.json();
-                setMessage(error.error || 'Failed to delete volunteer');
-                setMessageType('error');
-            }
-        } catch (error) {
-            console.error('Error deleting volunteer:', error);
-            setMessage('Error deleting volunteer');
-            setMessageType('error');
-        }
-    };
 
     // Get unique values for filter dropdowns from actual CSV data
     const uniqueNames = [...new Set(volunteers.map(v => v.name).filter(Boolean))].sort();
@@ -728,7 +695,6 @@ const VolunteersPage = () => {
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Skills</th>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Languages</th>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Assign Claims</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Actions</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-gray-200">
@@ -809,15 +775,6 @@ const VolunteersPage = () => {
                                                     </div>
                                                 )}
                                             </div>
-                                        </td>
-                                        <td className="px-4 py-3 text-sm">
-                                            <button
-                                                onClick={() => handleDeleteVolunteer(volunteer.id, volunteer.email)}
-                                                className="text-red-600 hover:text-red-800 text-sm"
-                                                title={`Delete ${volunteer.name}`}
-                                            >
-                                                ✗
-                                            </button>
                                         </td>
                                     </tr>
                                 ))}

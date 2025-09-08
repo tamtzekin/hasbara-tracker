@@ -58,6 +58,52 @@ const toastStyles = `
         opacity: 1;
     }
 }
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 240px;
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 240px;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+        max-height: 0;
+    }
+}
+
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInResults {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 `;
 
 // Inject styles
@@ -108,6 +154,10 @@ const VolunteersPage = () => {
     const [messageType, setMessageType] = useState('');
     const [toastMessages, setToastMessages] = useState([]);
     const [expandedRows, setExpandedRows] = useState(new Set());
+    const [closingRows, setClosingRows] = useState(new Set());
+    const [processingButtons, setProcessingButtons] = useState(new Set());
+    const [isTableVisible, setIsTableVisible] = useState(false);
+    const [isFiltering, setIsFiltering] = useState(false);
 
     // Filter states
     const [searchTerm, setSearchTerm] = useState('');
@@ -169,6 +219,8 @@ const VolunteersPage = () => {
                 console.log('📋 First volunteer:', volunteersData[0]);
                 setVolunteers(volunteersData);
                 console.log(`📋 Set volunteers state with ${volunteersData.length} volunteers`);
+                // Trigger fade-in animation after data loads
+                setTimeout(() => setIsTableVisible(true), 100);
             } else {
                 const error = await response.json();
                 console.log('❌ API Error:', error);
@@ -292,7 +344,25 @@ const VolunteersPage = () => {
             }
         }
 
-        setFilteredVolunteers(filtered);
+        // Check if results are actually changing
+        const currentIds = filteredVolunteers.map(v => v.id).sort();
+        const newIds = filtered.map(v => v.id).sort();
+        const resultsChanged = JSON.stringify(currentIds) !== JSON.stringify(newIds);
+
+        if (resultsChanged) {
+            // Fade out current results
+            setIsFiltering(true);
+            setTimeout(() => {
+                // Update results and fade back in
+                setFilteredVolunteers(filtered);
+                setTimeout(() => {
+                    setIsFiltering(false);
+                }, 50);
+            }, 200);
+        } else {
+            // No change needed, just update silently
+            setFilteredVolunteers(filtered);
+        }
     };
 
     const showToast = (message, type = 'success') => {
@@ -311,51 +381,30 @@ const VolunteersPage = () => {
         console.log(`🎯 FRONTEND: handleAssignClaim called: volunteerId=${volunteerId}, claimTitle="${claimTitle}", action="${action}"`);
         console.log(`🎯 FRONTEND: Action parameter type:`, typeof action, `Action parameter value:`, action);
         
+        // Create unique button ID for tracking animation state
+        const buttonId = `${volunteerId}-${claimTitle}-${action}`;
+        
+        // Add button to processing state to trigger animation
+        setProcessingButtons(prev => new Set(prev).add(buttonId));
+        
         // Find current volunteer state
         const currentVolunteer = volunteers.find(v => v.id === volunteerId);
         if (!currentVolunteer) {
             console.error(`❌ FRONTEND: Volunteer not found: ${volunteerId}`);
+            // Remove from processing state on error
+            setProcessingButtons(prev => {
+                const newSet = new Set(prev);
+                newSet.delete(buttonId);
+                return newSet;
+            });
             return;
         }
         
         const currentClaims = currentVolunteer.assignedClaims || [];
         console.log(`📋 FRONTEND: Current claims for volunteer:`, currentClaims);
         
-        // Optimistically update UI first
-        setVolunteers(prev => prev.map(volunteer => {
-            if (volunteer.id === volunteerId) {
-                const updatedVolunteer = { ...volunteer };
-                
-                // Initialize assignedClaims if it doesn't exist
-                if (!updatedVolunteer.assignedClaims) {
-                    updatedVolunteer.assignedClaims = [];
-                }
-                
-                console.log(`🔄 Before update - Claims:`, updatedVolunteer.assignedClaims);
-                
-                if (action === 'assign') {
-                    if (!updatedVolunteer.assignedClaims.includes(claimTitle)) {
-                        updatedVolunteer.assignedClaims = [...updatedVolunteer.assignedClaims, claimTitle];
-                        console.log(`✅ OPTIMISTIC ASSIGN: Added "${claimTitle}"`);
-                    } else {
-                        console.log(`⚠️ Claim already assigned: "${claimTitle}"`);
-                    }
-                } else if (action === 'unassign') {
-                    updatedVolunteer.assignedClaims = updatedVolunteer.assignedClaims.filter(c => c !== claimTitle);
-                    console.log(`❌ OPTIMISTIC UNASSIGN: Removed "${claimTitle}"`);
-                }
-                
-                console.log(`🔄 After update - Claims:`, updatedVolunteer.assignedClaims);
-                
-                // Update backward compatibility field
-                updatedVolunteer.assignedClaim = updatedVolunteer.assignedClaims.length > 0 
-                    ? updatedVolunteer.assignedClaims[0] 
-                    : null;
-                
-                return updatedVolunteer;
-            }
-            return volunteer;
-        }));
+        // Don't do optimistic update immediately - let the processing animation show first
+        // The actual update will happen after API response
         
         // Then make API call
         try {
@@ -419,6 +468,13 @@ const VolunteersPage = () => {
             showToast('Error assigning volunteer: ' + error.message, 'error');
             // Revert optimistic update on error
             fetchVolunteers();
+        } finally {
+            // Remove button from processing state to end animation
+            setProcessingButtons(prev => {
+                const newSet = new Set(prev);
+                newSet.delete(buttonId);
+                return newSet;
+            });
         }
     };
 
@@ -474,11 +530,26 @@ const VolunteersPage = () => {
         setExpandedRows(prev => {
             const newSet = new Set(prev);
             if (newSet.has(volunteerId)) {
-                newSet.delete(volunteerId);
+                // Start closing animation
+                setClosingRows(prevClosing => new Set(prevClosing).add(volunteerId));
+                // Remove from expanded after animation duration
+                setTimeout(() => {
+                    setExpandedRows(prevExpanded => {
+                        const updatedSet = new Set(prevExpanded);
+                        updatedSet.delete(volunteerId);
+                        return updatedSet;
+                    });
+                    setClosingRows(prevClosing => {
+                        const updatedSet = new Set(prevClosing);
+                        updatedSet.delete(volunteerId);
+                        return updatedSet;
+                    });
+                }, 300); // Match animation duration
+                return newSet; // Don't change expanded state immediately
             } else {
                 newSet.add(volunteerId);
+                return newSet;
             }
-            return newSet;
         });
     };
 
@@ -705,48 +776,71 @@ const VolunteersPage = () => {
                     </div>
                 </div>
 
+                {/* Loading Spinner */}
+                {loading && (
+                    <div className="flex justify-center items-center py-12">
+                        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                        <span className="ml-3 text-gray-600">Loading volunteers...</span>
+                    </div>
+                )}
+
                 {/* Volunteers Table */}
-                <div className="volunteers-table-container bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div className="overflow-x-auto">
-                        <table className="w-full min-w-max" style={{minWidth: '1300px'}}>
+                {!loading && (
+                    <div 
+                        className="volunteers-table-container bg-white rounded-lg shadow-lg overflow-hidden"
+                        style={{
+                            opacity: isTableVisible ? 1 : 0,
+                            animation: isTableVisible ? 'fadeInTable 0.6s ease-out' : 'none',
+                            transition: isFiltering ? 'opacity 0.3s ease-in-out' : 'none'
+                        }}
+                    >
+                        <div className="overflow-x-auto">
+                            <table className="w-full min-w-max" style={{minWidth: '1300px', tableLayout: 'fixed'}}>
                             <thead className="bg-gray-50">
                                 <tr>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Name</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Email</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Location</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Tag</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Level</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Hours</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Availability</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Skills</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Languages</th>
-                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Assign Claims</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '150px' }}>Name</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '200px' }}>Email</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '120px' }}>Location</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '140px' }}>Tag</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '80px' }}>Level</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '100px' }}>Hours</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '120px' }}>Availability</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '150px' }}>Skills</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '120px' }}>Languages</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900" style={{ width: '280px' }}>Assign Claims</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-gray-200">
+                            <tbody 
+                                className="divide-y divide-gray-200"
+                                style={{
+                                    opacity: isFiltering ? 0 : 1,
+                                    transform: isFiltering ? 'translateY(-5px)' : 'translateY(0)',
+                                    transition: 'all 0.2s ease-in-out'
+                                }}
+                            >
                                 {filteredVolunteers.map((volunteer) => (
                                     <tr key={volunteer.id} className="hover:bg-gray-50">
-                                        <td className="px-4 py-3 text-sm text-gray-900">{volunteer.name}</td>
-                                        <td className="px-4 py-3 text-sm text-gray-600">{volunteer.email}</td>
-                                        <td className="px-4 py-3 text-sm text-gray-600">{volunteer.location || '-'}</td>
-                                        <td className="px-4 py-3 text-sm text-gray-600">{volunteer.tag}</td>
-                                        <td className="px-4 py-3 text-sm text-gray-600">{volunteer.level}</td>
-                                        <td className="px-4 py-3 text-sm text-gray-600">
+                                        <td className="px-4 py-3 text-sm text-gray-900" style={{ width: '150px' }}>{volunteer.name}</td>
+                                        <td className="px-4 py-3 text-sm text-gray-600" style={{ width: '200px' }}>{volunteer.email}</td>
+                                        <td className="px-4 py-3 text-sm text-gray-600" style={{ width: '120px' }}>{volunteer.location || '-'}</td>
+                                        <td className="px-4 py-3 text-sm text-gray-600" style={{ width: '140px' }}>{volunteer.tag}</td>
+                                        <td className="px-4 py-3 text-sm text-gray-600" style={{ width: '80px' }}>{volunteer.level}</td>
+                                        <td className="px-4 py-3 text-sm text-gray-600" style={{ width: '100px' }}>
                                             <div>{volunteer.hoursCommitted}</div>
                                             {volunteer.otherHours && (
                                                 <div className="text-xs text-blue-600">+{volunteer.otherHours}</div>
                                             )}
                                         </td>
-                                        <td className="px-4 py-3 text-sm text-gray-600">{volunteer.availability}</td>
-                                        <td className="px-4 py-3 text-sm text-gray-600">{volunteer.coreSkills}</td>
-                                        <td className="px-4 py-3 text-sm text-gray-600">
+                                        <td className="px-4 py-3 text-sm text-gray-600" style={{ width: '120px' }}>{volunteer.availability}</td>
+                                        <td className="px-4 py-3 text-sm text-gray-600" style={{ width: '150px' }}>{volunteer.coreSkills}</td>
+                                        <td className="px-4 py-3 text-sm text-gray-600" style={{ width: '120px' }}>
                                             <div>{volunteer.language}</div>
                                             {volunteer.arabicHebrew && (
                                                 <div className="text-xs text-blue-600">{volunteer.arabicHebrew}</div>
                                             )}
                                         </td>
-                                        <td className="px-4 py-3 text-sm">
-                                            <div className="max-w-sm">
+                                        <td className="px-4 py-3 text-sm" style={{ width: '280px' }}>
+                                            <div className="w-full">
                                                 <button 
                                                     onClick={() => toggleRowExpansion(volunteer.id)}
                                                     className="mb-2 text-blue-600 hover:text-blue-800 text-xs font-medium flex items-center"
@@ -757,19 +851,24 @@ const VolunteersPage = () => {
                                                     </span>
                                                 </button>
                                                 
-                                                {expandedRows.has(volunteer.id) && (
-                                                    <div className="space-y-1 max-h-60 overflow-y-auto">
+                                                {(expandedRows.has(volunteer.id) || closingRows.has(volunteer.id)) && (
+                                                    <div className="space-y-1 max-h-60 overflow-y-auto" style={{
+                                                        animation: closingRows.has(volunteer.id) 
+                                                            ? 'fadeOutUp 0.3s ease-in' 
+                                                            : 'fadeInDown 0.3s ease-out'
+                                                    }}>
                                                         {availableClaims.map(claim => {
                                                             const isAssigned = volunteer.assignedClaims?.includes(claim);
                                                             return (
                                                                 <div 
                                                                     key={claim} 
-                                                                    className={`p-2 border rounded text-xs flex items-center justify-between ${
-                                                                        isAssigned 
-                                                                            ? 'bg-green-100 border-green-300' 
-                                                                            : 'bg-gray-50 border-gray-200'
-                                                                    }`}
-                                                                    style={isAssigned ? { backgroundColor: 'rgba(176,245,85,.424)' } : {}}
+                                                                    className="p-2 border border-gray-200 rounded text-xs flex items-center justify-between"
+                                                                    style={{
+                                                                        backgroundColor: processingButtons.has(`${volunteer.id}-${claim}-assign`) || processingButtons.has(`${volunteer.id}-${claim}-unassign`)
+                                                                            ? (processingButtons.has(`${volunteer.id}-${claim}-assign`) ? '#c6e39f' : '#d6d6d6')
+                                                                            : (isAssigned ? '#c6e39f' : '#d6d6d6'),
+                                                                        transition: 'background-color 1.5s ease-in-out'
+                                                                    }}
                                                                 >
                                                                     <span className="flex-1 pr-2 text-left" title={claim}>
                                                                         {claim.length > 35 ? `${claim.substring(0, 32)}...` : claim}
@@ -777,7 +876,7 @@ const VolunteersPage = () => {
                                                                     {isAssigned ? (
                                                                         <button
                                                                             onClick={() => handleAssignClaim(volunteer.id, claim, 'unassign')}
-                                                                            className="bg-red-500 text-white px-2 py-1 rounded text-xs hover:bg-red-600 whitespace-nowrap"
+                                                                            className="px-2 py-1 rounded text-xs whitespace-nowrap text-white bg-red-500 hover:bg-red-600"
                                                                             title={`Unassign from ${claim}`}
                                                                         >
                                                                             UNASSIGN
@@ -785,7 +884,7 @@ const VolunteersPage = () => {
                                                                     ) : (
                                                                         <button
                                                                             onClick={() => handleAssignClaim(volunteer.id, claim, 'assign')}
-                                                                            className="bg-blue-500 text-white px-2 py-1 rounded text-xs hover:bg-blue-600 whitespace-nowrap"
+                                                                            className="px-2 py-1 rounded text-xs whitespace-nowrap text-white bg-blue-500 hover:bg-blue-600"
                                                                             title={`Assign to ${claim}`}
                                                                         >
                                                                             ASSIGN
@@ -814,7 +913,8 @@ const VolunteersPage = () => {
                             No volunteers found matching your criteria
                         </div>
                     )}
-                </div>
+                    </div>
+                )}
 
                 {message && (
                     <div className={`mt-6 p-4 rounded-md ${

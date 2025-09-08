@@ -64,6 +64,14 @@ export default {
         return handleGetAvailableClaims(request);
       }
 
+<<<<<<< Updated upstream:user-backend.js
+=======
+      if (path.startsWith('/api/volunteers/') && method === 'DELETE') {
+        const volunteerId = path.split('/api/volunteers/')[1];
+        return handleDeleteVolunteer(request, volunteerId, env);
+      }
+
+>>>>>>> Stashed changes:user-backend-worker-clean.js
       // Debug Google Sheets auth endpoint
       if (path === '/debug-sheets' && method === 'GET') {
         return handleDebugSheets(env);
@@ -331,6 +339,103 @@ async function handleGetAvailableClaims(request) {
   }
 }
 
+=======
+// Handle delete volunteer - removes from Google Sheets and in-memory assignments
+async function handleDeleteVolunteer(request, volunteerId, env) {
+  try {
+    console.log(`🗑️ [DEBUG] Delete request received for volunteer ID: ${volunteerId}`);
+    console.log(`🗑️ [DEBUG] Request method: ${request.method}`);
+    console.log(`🗑️ [DEBUG] Request URL: ${request.url}`);
+    
+    // First, get all volunteers to find the one to delete
+    console.log(`🗑️ [DEBUG] Fetching volunteers from sheets to find volunteer with ID: ${volunteerId}`);
+    const volunteers = await fetchVolunteersFromSheets(env);
+    console.log(`🗑️ [DEBUG] Total volunteers fetched: ${volunteers.length}`);
+    console.log(`🗑️ [DEBUG] First few volunteer IDs:`, volunteers.slice(0, 3).map(v => ({ id: v.id, name: v.name })));
+    
+    const volunteerToDelete = volunteers.find(v => v.id === volunteerId);
+    console.log(`🗑️ [DEBUG] Volunteer search result:`, volunteerToDelete ? 
+      { found: true, id: volunteerToDelete.id, name: volunteerToDelete.name, email: volunteerToDelete.email } : 
+      { found: false, searchedId: volunteerId });
+    
+    if (!volunteerToDelete) {
+      console.log(`🗑️ [DEBUG] Volunteer not found - returning 404`);
+      return new Response(JSON.stringify({ 
+        error: 'Volunteer not found',
+        volunteerId: volunteerId,
+        debug: {
+          availableVolunteerIds: volunteers.map(v => v.id),
+          searchedFor: volunteerId
+        }
+      }), {
+        status: 404,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
+      });
+    }
+
+    console.log(`🗑️ [DEBUG] Found volunteer to delete: ${volunteerToDelete.name} (${volunteerToDelete.email})`);
+
+    // Delete from Google Sheets by finding and removing the row
+    console.log(`🗑️ [DEBUG] Starting Google Sheets deletion process...`);
+    await deleteVolunteerFromSheets(volunteerToDelete, env);
+    console.log(`🗑️ [DEBUG] Google Sheets deletion completed successfully`);
+    
+    // Remove from in-memory assignments if they exist
+    const volunteerEmail = volunteerToDelete.email?.toLowerCase();
+    console.log(`🗑️ [DEBUG] Checking in-memory assignments for email: ${volunteerEmail}`);
+    if (volunteerEmail && VOLUNTEER_ASSIGNMENTS[volunteerEmail]) {
+      delete VOLUNTEER_ASSIGNMENTS[volunteerEmail];
+      console.log(`🗑️ [DEBUG] Removed volunteer ${volunteerEmail} from in-memory assignments`);
+    } else {
+      console.log(`🗑️ [DEBUG] No in-memory assignments found for ${volunteerEmail}`);
+    }
+    
+    console.log(`🗑️ [DEBUG] Delete operation completed successfully - sending response`);
+    return new Response(JSON.stringify({ 
+      success: true, 
+      message: `Volunteer ${volunteerToDelete.name} deleted successfully from database and assignments`,
+      deletedVolunteer: {
+        id: volunteerToDelete.id,
+        name: volunteerToDelete.name,
+        email: volunteerToDelete.email
+      },
+      debug: {
+        deletionTimestamp: new Date().toISOString(),
+        sheetsDeleted: true,
+        memoryDeleted: true
+      }
+    }), {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
+  } catch (error) {
+    console.error('❌ [DEBUG] Error deleting volunteer:', error);
+    console.error('❌ [DEBUG] Error stack:', error.stack);
+    return new Response(JSON.stringify({ 
+      error: 'Failed to delete volunteer',
+      details: error.message,
+      debug: {
+        errorType: error.constructor.name,
+        errorMessage: error.message,
+        volunteerId: volunteerId,
+        timestamp: new Date().toISOString()
+      }
+    }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
+  }
+}
+
+>>>>>>> Stashed changes:user-backend-worker-clean.js
 // Handle volunteer assignment
 async function handleAssignVolunteer(request, volunteerId) {
   try {
@@ -453,7 +558,7 @@ async function fetchVolunteersFromSheets(env) {
     
     // Your Google Sheet ID from the URL
     const SHEET_ID = '1UT-5alGbbykgkvMgjR8lCFHq17p-lneQAXYKZysMOGg';
-    const RANGE = 'Master!A:G'; // Get all data from Master sheet, columns A to G
+    const RANGE = 'Master!A:L'; // Get all data from Master sheet, columns A to L
     
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}`;
     
@@ -486,15 +591,16 @@ async function fetchVolunteersFromSheets(env) {
         id: `vol_${i}`,
         name: row[0] || '',
         email: row[1] || '',
-        tag: row[2] || '',
-        backgroundSkills: row[3] || '',
-        hoursCommitted: row[4] || '',
-        otherHours: row[5] || '',
-        arabicHebrew: row[6] || '',
-        language: row[7] || '',
-        level: row[8] || '',
-        coreSkills: row[9] || '',
-        availability: row[10] || ''
+        location: row[2] || '',
+        tag: row[3] || '',
+        backgroundSkills: row[4] || '',
+        hoursCommitted: row[5] || '',
+        otherHours: row[6] || '',
+        arabicHebrew: row[7] || '',
+        language: row[8] || '',
+        level: row[9] || '',
+        coreSkills: row[10] || '',
+        availability: row[11] || ''
       };
       volunteers.push(volunteer);
     }
@@ -504,6 +610,114 @@ async function fetchVolunteersFromSheets(env) {
     
   } catch (error) {
     console.error('❌ Error fetching from Google Sheets:', error);
+    throw error;
+  }
+}
+
+// Delete a volunteer from Google Sheets by finding and removing their row
+async function deleteVolunteerFromSheets(volunteerToDelete, env) {
+  try {
+    console.log(`🗑️ [SHEETS-DEBUG] Starting deletion for volunteer: ${volunteerToDelete.name} (${volunteerToDelete.email})`);
+    
+    console.log(`🗑️ [SHEETS-DEBUG] Getting Google access token...`);
+    const accessToken = await getGoogleAccessToken(env);
+    console.log(`🗑️ [SHEETS-DEBUG] Access token obtained: ${accessToken ? 'Yes' : 'No'}`);
+    
+    const SHEET_ID = '1UT-5alGbbykgkvMgjR8lCFHq17p-lneQAXYKZysMOGg';
+    console.log(`🗑️ [SHEETS-DEBUG] Using sheet ID: ${SHEET_ID}`);
+    
+    // First, get all data to find the row number
+    const RANGE = 'Master!A:L';
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}`;
+    console.log(`🗑️ [SHEETS-DEBUG] Fetching data from: ${url}`);
+    
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      }
+    });
+    
+    console.log(`🗑️ [SHEETS-DEBUG] Fetch response status: ${response.status} ${response.statusText}`);
+    
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error(`🗑️ [SHEETS-DEBUG] Fetch error response:`, errorText);
+      throw new Error(`Google Sheets API error: ${response.status} - ${errorText}`);
+    }
+    
+    const data = await response.json();
+    const rows = data.values || [];
+    console.log(`🗑️ [SHEETS-DEBUG] Total rows received: ${rows.length}`);
+    console.log(`🗑️ [SHEETS-DEBUG] First few rows:`, rows.slice(0, 3).map((row, i) => `Row ${i}: ${row[0]} | ${row[1]}`));
+    
+    // Find the row to delete (skip header row, so start from index 1)
+    let rowToDelete = -1;
+    console.log(`🗑️ [SHEETS-DEBUG] Searching for volunteer: name="${volunteerToDelete.name}", email="${volunteerToDelete.email}"`);
+    
+    for (let i = 1; i < rows.length; i++) {
+      const row = rows[i];
+      console.log(`🗑️ [SHEETS-DEBUG] Checking row ${i + 1}: name="${row[0]}", email="${row[1]}"`);
+      
+      // Match by name and email to ensure we're deleting the right volunteer
+      if (row[0] === volunteerToDelete.name && row[1] === volunteerToDelete.email) {
+        rowToDelete = i + 1; // Google Sheets uses 1-based indexing
+        console.log(`🗑️ [SHEETS-DEBUG] MATCH FOUND at row ${rowToDelete}!`);
+        break;
+      }
+    }
+    
+    if (rowToDelete === -1) {
+      console.error(`🗑️ [SHEETS-DEBUG] No matching row found. Available rows:`, 
+        rows.slice(1, 6).map((row, i) => `Row ${i + 2}: "${row[0]}" | "${row[1]}"`));
+      throw new Error(`Could not find volunteer ${volunteerToDelete.name} (${volunteerToDelete.email}) in spreadsheet`);
+    }
+    
+    console.log(`🗑️ [SHEETS-DEBUG] Found volunteer at row ${rowToDelete}, preparing delete request...`);
+    
+    // Delete the row using batchUpdate API
+    const deleteUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}:batchUpdate`;
+    console.log(`🗑️ [SHEETS-DEBUG] Delete URL: ${deleteUrl}`);
+    
+    const deleteRequest = {
+      requests: [{
+        deleteDimension: {
+          range: {
+            sheetId: 0, // Master sheet ID (usually 0 for first sheet)
+            dimension: 'ROWS',
+            startIndex: rowToDelete - 1, // 0-based for API
+            endIndex: rowToDelete // 0-based, exclusive end
+          }
+        }
+      }]
+    };
+    
+    console.log(`🗑️ [SHEETS-DEBUG] Delete request payload:`, JSON.stringify(deleteRequest, null, 2));
+    
+    const deleteResponse = await fetch(deleteUrl, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(deleteRequest)
+    });
+    
+    console.log(`🗑️ [SHEETS-DEBUG] Delete response status: ${deleteResponse.status} ${deleteResponse.statusText}`);
+    
+    if (!deleteResponse.ok) {
+      const errorData = await deleteResponse.json();
+      console.error(`🗑️ [SHEETS-DEBUG] Delete error response:`, JSON.stringify(errorData, null, 2));
+      throw new Error(`Failed to delete row from Google Sheets: ${JSON.stringify(errorData)}`);
+    }
+    
+    const successData = await deleteResponse.json();
+    console.log(`🗑️ [SHEETS-DEBUG] Delete success response:`, JSON.stringify(successData, null, 2));
+    console.log(`✅ [SHEETS-DEBUG] Successfully deleted volunteer ${volunteerToDelete.name} from Google Sheets (row ${rowToDelete})`);
+    
+  } catch (error) {
+    console.error('❌ [SHEETS-DEBUG] Error deleting from Google Sheets:', error);
+    console.error('❌ [SHEETS-DEBUG] Error stack:', error.stack);
     throw error;
   }
 }

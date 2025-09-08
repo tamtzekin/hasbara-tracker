@@ -113,6 +113,7 @@ const VolunteersPage = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [nameFilter, setNameFilter] = useState('all');
     const [tagFilter, setTagFilter] = useState('all');
+    const [locationFilter, setLocationFilter] = useState('all');
     const [backgroundFilter, setBackgroundFilter] = useState('all');
     const [levelFilter, setLevelFilter] = useState('all');
     const [availabilityFilter, setAvailabilityFilter] = useState('all');
@@ -136,7 +137,7 @@ const VolunteersPage = () => {
     // Apply filters whenever volunteers or filter criteria change
     useEffect(() => {
         applyFilters();
-    }, [volunteers, searchTerm, nameFilter, tagFilter, backgroundFilter, levelFilter, availabilityFilter, skillsFilter, languageFilter, hoursFilter, claimFilter]);
+    }, [volunteers, searchTerm, nameFilter, tagFilter, locationFilter, backgroundFilter, levelFilter, availabilityFilter, skillsFilter, languageFilter, hoursFilter, claimFilter]);
 
     const fetchVolunteers = async () => {
         try {
@@ -230,6 +231,13 @@ const VolunteersPage = () => {
         if (tagFilter !== 'all') {
             filtered = filtered.filter(volunteer =>
                 volunteer.tag.toLowerCase().includes(tagFilter.toLowerCase())
+            );
+        }
+
+        // Location filter
+        if (locationFilter !== 'all') {
+            filtered = filtered.filter(volunteer =>
+                volunteer.location && volunteer.location.toLowerCase() === locationFilter.toLowerCase()
             );
         }
 
@@ -478,6 +486,7 @@ const VolunteersPage = () => {
     // Get unique values for filter dropdowns from actual CSV data
     const uniqueNames = [...new Set(volunteers.map(v => v.name).filter(Boolean))].sort();
     const uniqueTags = [...new Set(volunteers.map(v => v.tag).filter(Boolean))].sort();
+    const uniqueLocations = [...new Set(volunteers.map(v => v.location).filter(Boolean))].sort();
     
     // Extract key skills/backgrounds from the long background text for filtering
     const extractKeySkills = (backgroundText) => {
@@ -568,6 +577,22 @@ const VolunteersPage = () => {
                                 {uniqueTags.map(tag => (
                                     <option key={tag} value={tag}>
                                         {formatFilterOption(tag)}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <div className="flex-shrink-0" style={{minWidth: '120px', maxWidth: '140px'}}>
+                            <label className="block text-xs font-medium mb-1">Location</label>
+                            <select
+                                value={locationFilter}
+                                onChange={(e) => setLocationFilter(e.target.value)}
+                                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                                <option value="all">All Locations</option>
+                                {uniqueLocations.map(location => (
+                                    <option key={location} value={location}>
+                                        {formatFilterOption(location)}
                                     </option>
                                 ))}
                             </select>
@@ -683,11 +708,12 @@ const VolunteersPage = () => {
                 {/* Volunteers Table */}
                 <div className="volunteers-table-container bg-white rounded-lg shadow-lg overflow-hidden">
                     <div className="overflow-x-auto">
-                        <table className="w-full min-w-max" style={{minWidth: '1200px'}}>
+                        <table className="w-full min-w-max" style={{minWidth: '1300px'}}>
                             <thead className="bg-gray-50">
                                 <tr>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Name</th>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Email</th>
+                                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Location</th>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Tag</th>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Level</th>
                                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Hours</th>
@@ -702,6 +728,7 @@ const VolunteersPage = () => {
                                     <tr key={volunteer.id} className="hover:bg-gray-50">
                                         <td className="px-4 py-3 text-sm text-gray-900">{volunteer.name}</td>
                                         <td className="px-4 py-3 text-sm text-gray-600">{volunteer.email}</td>
+                                        <td className="px-4 py-3 text-sm text-gray-600">{volunteer.location || '-'}</td>
                                         <td className="px-4 py-3 text-sm text-gray-600">{volunteer.tag}</td>
                                         <td className="px-4 py-3 text-sm text-gray-600">{volunteer.level}</td>
                                         <td className="px-4 py-3 text-sm text-gray-600">

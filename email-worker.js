@@ -21,7 +21,28 @@ export default {
     }
 
     try {
-      const { to, subject, html, text, from } = await request.json();
+      const { to, subject, html, text, from, type } = await request.json();
+      
+      // Handle general notification emails (like admin notifications) that don't need approval
+      if (type === 'notification' || to === 'info@hasbaratracker.com' || to === 'swan4444444@protonmail.com') {
+        console.log(`📧 Sending notification email to: ${to}`);
+        const emailResult = await sendEmail({
+          to, subject, html, text,
+          from: from || 'notifications@hasbaratracker.com'
+        }, env);
+
+        return new Response(JSON.stringify({ 
+          success: true, 
+          message: 'Notification email sent successfully',
+          messageId: emailResult.messageId 
+        }), {
+          headers: { 
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+          }
+        });
+      }
+
       console.log(`🔍 Magic link request for: ${to}`);
 
       // Check if user is admin first

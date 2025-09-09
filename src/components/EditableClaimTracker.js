@@ -1,6 +1,7 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { useTable, useSortBy } from 'react-table';
 import { HelmetProvider } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 // Page components
 import '../App.css';
@@ -194,6 +195,7 @@ const publishDraftToLive = async () => {
 
 export default function EditableClaimTracker() {
     const { user, canAccessClaim, isAdmin, logout } = useAuth();
+    const location = useLocation();
     
     const metadataProps = {
         url: "https://hasbaratracker.com/admin/edit",
@@ -494,6 +496,18 @@ export default function EditableClaimTracker() {
             setIsPopulating(false);
         }, 500);
     }, []);
+
+    // Handle URL parameters to auto-select a claim
+    useEffect(() => {
+        const urlParams = new URLSearchParams(location.search);
+        const claimParam = urlParams.get('claim');
+        if (claimParam) {
+            console.log('🔗 Auto-selecting claim from URL:', claimParam);
+            setSelectedClaimTitle(claimParam);
+            // Automatically populate the claim data
+            handleClaimSelection(claimParam);
+        }
+    }, [location.search, handleClaimSelection]);
 
     // Get unique claim titles for dropdown (filtered by user permissions) - using draft data
     const uniqueClaimTitles = useMemo(() => {

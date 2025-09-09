@@ -96,7 +96,7 @@ const Header = () =>{
                         {isLoggedIn() && isAdmin() && (
                             <li className="undotted">
                                 <NavLink to="/status" className="font-semibold text-purple-600">
-                                    Status Page
+                                    Status
                                 </NavLink>
                             </li>
                         )}

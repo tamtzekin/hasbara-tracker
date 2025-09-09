@@ -155,7 +155,7 @@ const StatusPage = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6">
                     <div className="flex justify-between items-center mb-6">
                         <div>
-                            <h1 className="text-2xl font-bold text-gray-900">Claims Status Tracker</h1>
+                            <h1 className="text-2xl font-bold text-gray-900">Status Tracker</h1>
                             <p className="text-gray-600 mt-1">Monitor the progress of all claims</p>
                         </div>
                         <div className="text-sm text-gray-500">
@@ -206,10 +206,10 @@ const StatusPage = () => {
                             <table className="w-full">
                                 <thead className="bg-gray-50">
                                     <tr>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/2">
                                             Claim Title
                                         </th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/2">
                                             Current Status
                                         </th>
                                     </tr>
@@ -217,12 +217,15 @@ const StatusPage = () => {
                                 <tbody className="bg-white divide-y divide-gray-200">
                                     {filteredClaims.map((claim) => (
                                         <tr key={claim.id} className="hover:bg-gray-50">
-                                            <td className="px-6 py-4 whitespace-nowrap">
-                                                <div className="text-sm font-medium text-gray-900">
+                                            <td className="px-6 py-4 w-1/2">
+                                                <button
+                                                    onClick={() => navigate(`/claim-editor?claim=${encodeURIComponent(claim.title)}`)}
+                                                    className="text-sm font-medium text-blue-600 hover:text-blue-800 break-words text-left w-full hover:underline"
+                                                >
                                                     {claim.title}
-                                                </div>
+                                                </button>
                                             </td>
-                                            <td className="px-6 py-4 whitespace-nowrap">
+                                            <td className="px-6 py-4 whitespace-nowrap w-1/2">
                                                 <StatusBadge status={claim.status} />
                                             </td>
                                         </tr>

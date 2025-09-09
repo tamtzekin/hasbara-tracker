@@ -99,37 +99,41 @@ export default function ClaimIsraeliStateDeniesKillingMotherAndDaughterSeekingRe
                         <NavLinks />
                     </span>
 
-                    {/* Claim summary */}
+                    {/* Shows title and summary of the claim */}
                     <ClaimSummary id={5} />
-
-                    {isMobileView ? (
-                        <RenderTrackerMobile
-                            getTableProps={getTableProps}
-                            headerGroups={headerGroups}
-                            getTableBodyProps={getTableBodyProps}
-                            rows={rows}
-                            prepareRow={prepareRow}
-                            globalFilter={globalFilter}
-                            setGlobalFilter={setGlobalFilter}
-                            uniqueClaimTitles={uniqueClaimTitles}
-                            selectedClaimTitle={selectedClaimTitle}
-                            setSelectedClaimTitle={setSelectedClaimTitle}
-                        />
-                    ) : (
-                        <RenderTrackerDesktop
-                            getTableProps={getTableProps}
-                            headerGroups={headerGroups}
-                            getTableBodyProps={getTableBodyProps}
-                            rows={rows}
-                            prepareRow={prepareRow}
-                            globalFilter={globalFilter}
-                            setGlobalFilter={setGlobalFilter}
-                            uniqueClaimTitles={uniqueClaimTitles}
-                            selectedClaimTitle={selectedClaimTitle}
-                            setSelectedClaimTitle={setSelectedClaimTitle}
-                        />
-                    )}
                 </span>
+
+                {/* Show desktop view of Tracker - as a table */}
+                {!isMobileView && (
+                    <RenderTrackerDesktop
+                        {...{
+                            headerGroups,
+                            getTableProps,
+                            getTableBodyProps,
+                            rows,
+                            prepareRow,
+                            globalFilter,
+                            setGlobalFilter,
+                            uniqueClaimTitles,
+                        }}
+                    />
+                )}
+                
+                {/* Show mobile view of Tracker table - as cards */}
+                {isMobileView && (
+                    <RenderTrackerMobile
+                        {...{
+                            headerGroups,
+                            getTableProps,
+                            getTableBodyProps,
+                            rows,
+                            prepareRow,
+                            globalFilter,
+                            setGlobalFilter,
+                            uniqueClaimTitles,
+                        }}
+                    />
+                )}
 
                 <BackToTop />
                 <Footer />

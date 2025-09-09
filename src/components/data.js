@@ -33,8 +33,328 @@ const summaries = [
         "claimSummary": "In an interview with Sky News UK, Mark Regev – former Israeli ambassador to the UK – claimed Palestinian captives were stripped to underwear because of ‘warm weather’."
     },
     {
-        "claimMainTitle": "",
-        "claimSummary": ""
+        "claimMainTitle": "Isaac Herzog says Mein Kampf found in child's bedroom",
+        "claimSummary": "Israeli President Isaac Herzog claimed that a copy of Hitler's Mein Kampf was found in a child's bedroom in Gaza, suggesting indoctrination."
+    },
+    {
+        "claimMainTitle": "Blood found in child's bedroom implying massacre",
+        "claimSummary": "Israeli officials pointed to blood found in children's bedrooms as evidence of massacres committed by Palestinian fighters during October 7 operations."
+    },
+    {
+        "claimMainTitle": "Israel's ambassador to the UK said there is a safe zone for Palestinians called 'Mawasi'",
+        "claimSummary": "Israeli Ambassador to the UK claimed there was a safe zone called 'Mawasi' for Palestinians, while this area was also subjected to Israeli attacks."
+    },
+    {
+        "claimMainTitle": "Bullets in baby crib during Elon Musk's visit",
+        "claimSummary": "During Elon Musk's visit to Israel, officials showed him bullets allegedly found in a baby's crib during Operation Al-Aqsa Flood."
+    },
+    {
+        "claimMainTitle": "Fox News showing Israeli soldiers arresting Hamas member",
+        "claimSummary": "Fox News broadcast footage allegedly showing Israeli soldiers arresting a Hamas member, with questions raised about the context and authenticity of the arrest."
+    },
+    {
+        "claimMainTitle": "Hamas members relinquishing their weapons, but IOF published two videos showing two different takes",
+        "claimSummary": "Israeli forces published contradictory video footage allegedly showing Hamas members surrendering weapons, raising questions about the authenticity of the content."
+    },
+    {
+        "claimMainTitle": "Israeli state finds documents 'proving' Hamas is using mosques for 'terrorist purposes'",
+        "claimSummary": "Israeli forces claimed to discover documents proving Hamas used mosques for military purposes, justifying attacks on religious sites."
+    },
+    {
+        "claimMainTitle": "Hamas tunnel found at the Qatari Hospital",
+        "claimSummary": "Israeli forces claimed to discover Hamas tunnels at the Qatari Hospital, part of broader allegations about Palestinian resistance infrastructure in medical facilities."
+    },
+    {
+        "claimMainTitle": "Israel denies using white phosphorus munitions in Gaza",
+        "claimSummary": "Israeli officials denied using white phosphorus weapons in Gaza, despite documented evidence of their deployment by human rights organizations."
+    },
+    {
+        "claimMainTitle": "The hostages were not held in 'reasonable conditions'",
+        "claimSummary": "Israeli officials characterized the conditions in which hostages were held by Palestinian fighters as unreasonable, while released hostages gave varying accounts."
+    },
+    {
+        "claimMainTitle": "Protestors in Toronto targeted Mt Sinai hospital",
+        "claimSummary": "Claims that pro-Palestinian protesters in Toronto specifically targeted Mt Sinai Hospital, allegedly threatening Jewish patients and staff."
+    },
+    {
+        "claimMainTitle": "IOF claiming to help Palestinian evacuees by giving them water",
+        "claimSummary": "Israeli forces released footage claiming to show them providing water to Palestinian evacuees, while simultaneously restricting access to clean water supplies."
+    },
+    {
+        "claimMainTitle": "The Israeli regime isn't seeking to displace Palestinians in Gaza",
+        "claimSummary": "Israeli officials denied intentions to permanently displace Palestinians from Gaza, while military operations forced mass evacuations and destroyed residential areas."
+    },
+    {
+        "claimMainTitle": "Israeli state denies famine in Gaza",
+        "claimSummary": "Israeli officials denied that famine conditions existed in Gaza, despite warnings from international humanitarian organizations about acute food insecurity."
+    },
+    {
+        "claimMainTitle": "1400 | Revisions of number of Israelis killed",
+        "claimSummary": "The Israeli death toll from October 7 was revised multiple times, from initial claims of 1,400 to a final count of approximately 1,200, raising questions about initial reporting."
+    },
+    {
+        "claimMainTitle": "Babies hung on clotheslines",
+        "claimSummary": "Unsubstantiated and horrific claims spread on social media alleging Palestinian fighters hung babies on clotheslines during Operation Al-Aqsa Flood."
+    },
+    {
+        "claimMainTitle": "Baby baked in oven and/or microwaved",
+        "claimSummary": "Extremely disturbing and unsubstantiated claims spread on social media alleging Palestinian fighters committed horrific acts against infants."
+    },
+    {
+        "claimMainTitle": "Fetus removed from pregnant woman",
+        "claimSummary": "Disturbing and unverified claims that Palestinian fighters removed a fetus from a pregnant woman during Operation Al-Aqsa Flood."
+    },
+    {
+        "claimMainTitle": "Hamas left an ISIS flag behind",
+        "claimSummary": "Israeli officials claimed Hamas fighters left ISIS flags in locations they operated, attempting to link Hamas with ISIS ideology."
+    },
+    {
+        "claimMainTitle": "Hostage gave birth in captivity",
+        "claimSummary": "Claims that a hostage gave birth while in Palestinian captivity, used to highlight the conditions of detention and duration of captivity."
+    },
+    {
+        "claimMainTitle": "Palestinian fighters burned bodies on Oct 7",
+        "claimSummary": "Allegations that Palestinian fighters deliberately burned bodies during Operation Al-Aqsa Flood on October 7."
+    },
+    {
+        "claimMainTitle": "Hamas.com is an official Hamas website, is a debunked counterfeit website",
+        "claimSummary": "A website claiming to be an official Hamas site was revealed to be a counterfeit operation, raising questions about information warfare tactics."
+    },
+    {
+        "claimMainTitle": "Israel denies ordering World Health Organisation remove medical supplies from its warehouse in south Gaza",
+        "claimSummary": "Israeli officials denied ordering WHO to remove medical supplies from their warehouse in southern Gaza, despite WHO statements about forced relocations."
+    },
+    {
+        "claimMainTitle": "Israel said Red Cross would return to al-Nasr Hospital to evacuate babies in ICU",
+        "claimSummary": "Israeli officials claimed the Red Cross would return to evacuate babies from al-Nasr Hospital's intensive care unit, while the Red Cross faced access restrictions."
+    },
+    {
+        "claimMainTitle": "IOF and Israeli state claim they are not bombing or targeting hospitals, Forensic Architecture concludes otherwise",
+        "claimSummary": "Israeli officials consistently denied targeting hospitals in Gaza, while independent analysis by Forensic Architecture documented systematic attacks on medical facilities."
+    },
+    {
+        "claimMainTitle": "IOF find weapons behind MRI scanner at Al-Shifa Hospital",
+        "claimSummary": "Israeli forces claimed to discover weapons hidden behind an MRI scanner at Al-Shifa Hospital, as part of allegations about Hamas using the medical facility."
+    },
+    {
+        "claimMainTitle": "Israeli state denies striking Al-Shifa hospital",
+        "claimSummary": "Israeli officials denied direct strikes on Al-Shifa Hospital while conducting military operations around and within the medical complex."
+    },
+    {
+        "claimMainTitle": "Nurse at Al-Shifa Hospital blaming Hamas",
+        "claimSummary": "Israeli officials released footage of a nurse at Al-Shifa Hospital allegedly blaming Hamas for the hospital's problems, raising questions about the circumstances of the statement."
+    },
+    {
+        "claimMainTitle": "Hamas drugged hostages with Clonazepam before releasing them to make them seem happy",
+        "claimSummary": "Israeli officials claimed Hamas drugged hostages with anti-anxiety medication before release to make them appear content during handovers."
+    },
+    {
+        "claimMainTitle": "The ICJ threw out South Africa's case",
+        "claimSummary": "False claims that the International Court of Justice dismissed South Africa's genocide case against Israel, when the court actually issued provisional measures."
+    },
+    {
+        "claimMainTitle": "Gaza has electricity because Palestinians are using phones",
+        "claimSummary": "Claims that Gaza must have electricity because Palestinians were seen using mobile phones, ignoring battery power and limited generator use."
+    },
+    {
+        "claimMainTitle": "Israeli government spokesperson says exchanged 'Palestinian prisoners… have blood on their hands'",
+        "claimSummary": "Israeli government spokesman characterized Palestinian prisoners released in exchange deals as having 'blood on their hands,' while many were held without charges."
+    },
+    {
+        "claimMainTitle": "Released Palestinian prisoner Isra Gabas was attempted suicide bomber",
+        "claimSummary": "Israeli officials labeled released Palestinian prisoner Isra Gabas as an attempted suicide bomber to justify her detention and characterize prisoner exchanges."
+    },
+    {
+        "claimMainTitle": "There are no churches in Gaza",
+        "claimSummary": "False claims spread that Gaza has no Christian churches, contradicting the documented presence of multiple active Christian communities and places of worship."
+    },
+    {
+        "claimMainTitle": "Hamas planned to use chemical weapons on 7 October",
+        "claimSummary": "Claims that Hamas planned to deploy chemical weapons during Operation Al-Aqsa Flood, expanding on allegations about chemical weapon manuals."
+    },
+    {
+        "claimMainTitle": "Hamas burnt children hostages with exhaust pipes",
+        "claimSummary": "Israeli officials and media spread claims that Hamas burnt children hostages using vehicle exhaust pipes during the October 7 operation."
+    },
+    {
+        "claimMainTitle": "Hamas in video said 'put her back, she's for rape'",
+        "claimSummary": "Unsubstantiated claims that Hamas fighters were recorded making statements about sexual assault during their operations on October 7."
+    },
+    {
+        "claimMainTitle": "Hamas responsible for 260+ deaths in surprise attack on Supernova Festival",
+        "claimSummary": "Israeli officials attributed over 260 deaths at the Supernova Festival specifically to Hamas attacks, while questions remain about casualties from Israeli response fire."
+    },
+    {
+        "claimMainTitle": "Nico Astroga claims he was a survivor of 7 Oct operation at Supernova Festival, says 29 of his friends murdered, wasn't even there",
+        "claimSummary": "A person named Nico Astroga claimed to be a survivor of the October 7 Supernova Festival attack, stating 29 friends were killed, but was later found not to have been present at the event."
+    },
+    {
+        "claimMainTitle": "Palestinian fighters 'raped' babies",
+        "claimSummary": "Extremely disturbing and unsubstantiated allegations spread claiming Palestinian fighters committed sexual violence against infants during October 7."
+    },
+    {
+        "claimMainTitle": "Palestinian fighters cut off breasts of woman",
+        "claimSummary": "Unsubstantiated claims spread widely on social media alleging Palestinian fighters committed acts of sexual mutilation during Operation Al-Aqsa Flood."
+    },
+    {
+        "claimMainTitle": "IOF got confession of Ahmad Kahalot, the director of Kamal Adwan Hospital in Jabaliya, that he's a senior Hamas member",
+        "claimSummary": "Israeli forces claimed to obtain a confession from Ahmad Kahalot, director of Kamal Adwan Hospital, alleging he is a senior Hamas member."
+    },
+    {
+        "claimMainTitle": "Hamas broke the ceasefire",
+        "claimSummary": "Israeli officials blamed Hamas for breaking ceasefire agreements at various points during the conflict, while both sides accused each other of violations."
+    },
+    {
+        "claimMainTitle": "Hamas has rejected offers for a ceasefire",
+        "claimSummary": "Israeli officials claimed Hamas rejected ceasefire proposals during various stages of the conflict, while Palestinian sources disputed the terms and conditions offered."
+    },
+    {
+        "claimMainTitle": "Giving Palestinians a safe passage + 'humanitarian corridor' to evacuate",
+        "claimSummary": "Israeli officials claimed to provide safe passages and humanitarian corridors for Palestinian civilians, while these routes were often subjected to attacks."
+    },
+    {
+        "claimMainTitle": "Israeli politician and former PM Naftali Bennett claims son of one of Hamas' leaders, Ismail Haniyeh, is buying expensive jewellery in Qatar while 'his brothers and sisters are suffering'",
+        "claimSummary": "Former Israeli Prime Minister Naftali Bennett made unsubstantiated claims about Ismail Haniyeh's family members purchasing luxury goods while Palestinians suffer."
+    },
+    {
+        "claimMainTitle": "Israeli state claims Palestinians buried mass graves found at Nasser Hospital",
+        "claimSummary": "Israeli officials claimed Palestinians buried mass graves discovered at Nasser Hospital, while Palestinians stated these were victims of Israeli attacks buried during the siege."
+    },
+    {
+        "claimMainTitle": "Israel bringing medical supplies and incubators to help already incubated babies to Al-Shifa",
+        "claimSummary": "Israeli officials claimed to deliver incubators to Al-Shifa Hospital to help babies, while the hospital already had functioning incubators before the Israeli siege."
+    },
+    {
+        "claimMainTitle": "Israel brought medical supply boxes to al-Shifa Hospital",
+        "claimSummary": "Israeli officials claimed they delivered medical supplies to Al-Shifa Hospital while simultaneously besieging and attacking the medical facility."
+    },
+    {
+        "claimMainTitle": "Hamas hid weapons in incubators in NICU at Kamal Adwan Hospital",
+        "claimSummary": "Israeli forces alleged that Hamas stored weapons inside medical incubators in the neonatal intensive care unit at Kamal Adwan Hospital."
+    },
+    {
+        "claimMainTitle": "Hamas operatives discussing Palestinian Islamic Jihad's responsibility for the al-Ahli Arab Baptist Hospital massacre",
+        "claimSummary": "Israeli officials released audio allegedly of Hamas operatives discussing Palestinian Islamic Jihad's responsibility for the Al-Ahli Hospital attack."
+    },
+    {
+        "claimMainTitle": "Israeli soldier claims Arabic calendar is Hamas 'guard list' at Al-Rantisi Children's Hospital",
+        "claimSummary": "An Israeli soldier claimed that an Arabic calendar found at Al-Rantisi Children's Hospital was actually a Hamas guard duty roster."
+    },
+    {
+        "claimMainTitle": "Israeli forces say they do not target places where the hostages may be",
+        "claimSummary": "Israeli military officials claimed they avoid targeting locations where hostages might be held, while conducting extensive bombing campaigns across Gaza."
+    },
+    {
+        "claimMainTitle": "Israeli officials said hostage Emily Hand was killed",
+        "claimSummary": "Israeli officials initially reported that hostage Emily Hand was killed during Operation Al-Aqsa Flood, before later confirming she was taken hostage and alive."
+    },
+    {
+        "claimMainTitle": "The Israeli state claims it is taking 'immediate and effective measures' to provide humanitarian assistance after ICJ provisional measures ruling",
+        "claimSummary": "Following the ICJ provisional measures ruling, Israeli officials claimed they were taking immediate steps to increase humanitarian aid to Gaza."
+    },
+    {
+        "claimMainTitle": "IOF claims it found Mohammad Deif's Palestinian identity card seized at his sister's house",
+        "claimSummary": "Israeli forces claimed to find the identity card of Hamas military commander Mohammad Deif at his sister's house during a raid."
+    },
+    {
+        "claimMainTitle": "Israel denies attack on UN training centre and refuge in Khan Younis, Gaza",
+        "claimSummary": "Israeli officials denied responsibility for attacks on UN facilities in Khan Younis that served as training centers and refugee shelters."
+    },
+    {
+        "claimMainTitle": "BBC reports released Palestinian prisoner as saying 'Only Hamas cared'",
+        "claimSummary": "Claims that BBC reported a released Palestinian prisoner stating that only Hamas cared for them, allegedly demonstrating Hamas's control over Palestinian sentiment."
+    },
+    {
+        "claimMainTitle": "Israeli state denies involvement in the killing of six-year-old Palestinian girl Hind Rajab",
+        "claimSummary": "Israeli officials denied responsibility for the killing of six-year-old Hind Rajab and her family members, despite evidence linking Israeli forces to the incident."
+    },
+    {
+        "claimMainTitle": "Palestinian corpse in body bag was staged",
+        "claimSummary": "Claims that Palestinian casualties shown in body bags were staged or fake, suggesting Palestinian authorities fabricated death tolls."
+    },
+    {
+        "claimMainTitle": "The Houthi-led embargo on shipping in the Red Sea is what is 'harming Palestinians' and impacting the entry of humanitarian aid into Gaza",
+        "claimSummary": "Israeli officials claimed that Houthi shipping disruptions in the Red Sea, rather than Israeli restrictions, were the primary obstacle to humanitarian aid reaching Gaza."
+    },
+    {
+        "claimMainTitle": "'Top secret' documents found on Palestinian fighters",
+        "claimSummary": "Israeli officials claimed to discover classified or sensitive documents on Palestinian fighters during Operation Al-Aqsa Flood."
+    },
+    {
+        "claimMainTitle": "IOF finds sniper rifle in teddy bear, weapons in UNRWA bags, tunnel under classroom",
+        "claimSummary": "Israeli forces claimed to discover weapons hidden in children's toys, UNRWA supplies, and tunnels under educational facilities in Gaza."
+    },
+    {
+        "claimMainTitle": "The Israeli state is flooding underground tunnels, which it calls 'terrorist infrastructure'",
+        "claimSummary": "Israeli forces announced plans to flood underground tunnel networks in Gaza, labeling them as terrorist infrastructure while raising environmental and humanitarian concerns."
+    },
+    {
+        "claimMainTitle": "Israeli state destroys graveyard claiming Hamas tunnel underneath it",
+        "claimSummary": "Israeli forces destroyed Palestinian graveyards claiming Hamas had built tunnels underneath them, while families disputed these allegations."
+    },
+    {
+        "claimMainTitle": "UNRWA is infiltrated by Hamas",
+        "claimSummary": "Israeli officials claimed UNRWA has been infiltrated by Hamas members, leading to funding suspensions by multiple countries pending investigations."
+    },
+    {
+        "claimMainTitle": "IOF dogs attack Hamas",
+        "claimSummary": "Israeli forces released footage allegedly showing military dogs attacking Hamas fighters, as part of their operations in Gaza."
+    },
+    {
+        "claimMainTitle": "Israel claims Palestinian captives it rounds up are Hamas",
+        "claimSummary": "Israeli forces labeled Palestinian men detained during operations as Hamas members or terrorists, while many were later identified as civilians."
+    },
+    {
+        "claimMainTitle": "'There was a ceasefire on 6 October, 2023'",
+        "claimSummary": "Claims that there was an active ceasefire in place on October 6, 2023, the day before Operation Al-Aqsa Flood, suggesting the operation broke an existing truce."
+    },
+    {
+        "claimMainTitle": "IOF finds hostage photos on laptop at Al-Shifa Hospital",
+        "claimSummary": "Israeli forces claimed to find photographs of hostages on a laptop discovered at Al-Shifa Hospital, suggesting Hamas operations at the medical facility."
+    },
+    {
+        "claimMainTitle": "Hamas stealing flour and food from UNRWA",
+        "claimSummary": "Israeli officials claimed Hamas was stealing flour and food supplies from UNRWA distribution centers, while UNRWA reported Israeli restrictions as the main obstacle to aid distribution."
+    },
+    {
+        "claimMainTitle": "Israeli state denies targeting journalists in Gaza",
+        "claimSummary": "Israeli officials denied deliberately targeting journalists in Gaza, despite the high number of media workers killed during the conflict."
+    },
+    {
+        "claimMainTitle": "Israeli state and AIPAC say the Artists4Ceasefire (A4C) logo is represents Ramallah attack",
+        "claimSummary": "Israeli state officials and AIPAC claimed the Artists4Ceasefire logo represented or celebrated a terrorist attack in Ramallah, mischaracterizing the peace advocacy symbol."
+    },
+    {
+        "claimMainTitle": "Weapons confiscated during the IOF's 3-day offensive in Jenin refugee camp, the items in the photo are mostly children's toys",
+        "claimSummary": "Israeli forces displayed alleged weapons confiscated during operations in Jenin refugee camp, though many items appeared to be children's toys rather than weapons."
+    },
+    {
+        "claimMainTitle": "Dead Palestinian children are dolls",
+        "claimSummary": "Claims spread on social media that Palestinian children shown as casualties were actually dolls, attempting to deny the reality of child deaths in Gaza."
+    },
+    {
+        "claimMainTitle": "Keir Starmer says Israel 'has the right' to cut off power and water",
+        "claimSummary": "UK Labour Party leader Keir Starmer was claimed to have said Israel has the right to cut off power and water to Gaza, later clarifying his statement."
+    },
+    {
+        "claimMainTitle": "Sexual violence used by Palestinian resistance on 7 October",
+        "claimSummary": "Widespread allegations of systematic sexual violence committed by Palestinian fighters during Operation Al-Aqsa Flood, with varying levels of evidence and verification."
+    },
+    {
+        "claimMainTitle": "The pro-Palestine student encampments are an 'organised cell' funded by foreign states",
+        "claimSummary": "Claims that pro-Palestinian student protests and encampments on university campuses were organized and funded by foreign governments rather than organic student movements."
+    },
+    {
+        "claimMainTitle": "'Harvard hates Jews' banner flown by plane across campus by Palestine activists",
+        "claimSummary": "False claims that pro-Palestinian activists flew a banner reading 'Harvard hates Jews' over Harvard campus, when the banner was flown by pro-Israel groups."
+    },
+    {
+        "claimMainTitle": "There is no limit to the amount of aid that can be facilitated into Gaza",
+        "claimSummary": "Israeli officials claimed there were no limits on humanitarian aid entering Gaza, while aid organizations reported severe restrictions and access challenges."
+    },
+    {
+        "claimMainTitle": "Israel detains 'terrorists' in Gaza, strips them down to their clothes",
+        "claimSummary": "Israeli forces released footage of Palestinian men stripped to underwear, labeling them as 'terrorists' while many were later identified as civilians."
     }
 ];
 
@@ -3249,6 +3569,613 @@ const data = [
         "isEditing": true,
         "isNew": true,
         "isDraft": false
+    },
+    {
+        "claimTitle": "Isaac Herzog says Mein Kampf found in child's bedroom",
+        "date": "2023-10-30",
+        "claim": {
+            "claimText": "Claim needs evidence",
+            "claimTag": "unverified-tag"
+        },
+        "description": {
+            "summary": "This claim requires fact-checking and evidence compilation",
+            "details": ""
+        },
+        "sources": [],
+        "isNew": true,
+        "isDraft": true
+    },
+    {
+        "claimTitle": "Blood found in child's bedroom implying massacre",
+        "date": "2023-10-08",
+        "claim": {
+            "claimText": "Claim needs evidence",
+            "claimTag": "unverified-tag"
+        },
+        "description": {
+            "summary": "This claim requires fact-checking and evidence compilation",
+            "details": ""
+        },
+        "sources": [],
+        "isNew": true,
+        "isDraft": true
+    },
+    {
+        "claimTitle": "Israel's ambassador to the UK said there is a safe zone for Palestinians called 'Mawasi'",
+        "date": "2024-01-15",
+        "claim": {
+            "claimText": "Claim needs evidence",
+            "claimTag": "unverified-tag"
+        },
+        "description": {
+            "summary": "This claim requires fact-checking and evidence compilation",
+            "details": ""
+        },
+        "sources": [],
+        "isNew": true,
+        "isDraft": true
+    },
+    {
+        "claimTitle": "Bullets in baby crib during Elon Musk's visit",
+        "date": "2023-11-27",
+        "claim": {
+            "claimText": "Claim needs evidence",
+            "claimTag": "unverified-tag"
+        },
+        "description": {
+            "summary": "This claim requires fact-checking and evidence compilation",
+            "details": ""
+        },
+        "sources": [],
+        "isNew": true,
+        "isDraft": true
+    },
+    {
+        "claimTitle": "Fox News showing Israeli soldiers arresting Hamas member",
+        "date": "2023-12-05",
+        "claim": {
+            "claimText": "Claim needs evidence",
+            "claimTag": "unverified-tag"
+        },
+        "description": {
+            "summary": "This claim requires fact-checking and evidence compilation",
+            "details": ""
+        },
+        "sources": [],
+        "isNew": true,
+        "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas members relinquishing their weapons, but IOF published two videos showing two different takes",
+        "date": "2023-12-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli state finds documents 'proving' Hamas is using mosques for 'terrorist purposes'",
+        "date": "2023-11-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas tunnel found at the Qatari Hospital",
+        "date": "2023-11-20",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israel denies using white phosphorus munitions in Gaza",
+        "date": "2023-10-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "The hostages were not held in 'reasonable conditions'",
+        "date": "2023-11-24",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Protestors in Toronto targeted Mt Sinai hospital",
+        "date": "2023-11-05",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "IOF claiming to help Palestinian evacuees by giving them water",
+        "date": "2023-10-20",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "The Israeli regime isn't seeking to displace Palestinians in Gaza",
+        "date": "2023-10-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli state denies famine in Gaza",
+        "date": "2024-03-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "1400 | Revisions of number of Israelis killed",
+        "date": "2023-10-08",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Babies hung on clotheslines",
+        "date": "2023-10-08",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Baby baked in oven and/or microwaved",
+        "date": "2023-10-08",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Fetus removed from pregnant woman",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas left an ISIS flag behind",
+        "date": "2023-10-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hostage gave birth in captivity",
+        "date": "2023-12-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Palestinian fighters burned bodies on Oct 7",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas.com is an official Hamas website, is a debunked counterfeit website",
+        "date": "2023-10-20",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israel denies ordering World Health Organisation remove medical supplies from its warehouse in south Gaza",
+        "date": "2024-02-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israel said Red Cross would return to al-Nasr Hospital to evacuate babies in ICU",
+        "date": "2023-11-20",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "IOF and Israeli state claim they are not bombing or targeting hospitals, Forensic Architecture concludes otherwise",
+        "date": "2023-12-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "IOF find weapons behind MRI scanner at Al-Shifa Hospital",
+        "date": "2023-11-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli state denies striking Al-Shifa hospital",
+        "date": "2023-11-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Nurse at Al-Shifa Hospital blaming Hamas",
+        "date": "2023-11-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas drugged hostages with Clonazepam before releasing them to make them seem happy",
+        "date": "2023-11-24",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "The ICJ threw out South Africa's case",
+        "date": "2024-01-26",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Gaza has electricity because Palestinians are using phones",
+        "date": "2023-10-20",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli government spokesperson says exchanged 'Palestinian prisoners… have blood on their hands'",
+        "date": "2023-11-24",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Released Palestinian prisoner Isra Gabas was attempted suicide bomber",
+        "date": "2023-11-24",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "There are no churches in Gaza",
+        "date": "2023-10-20",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas planned to use chemical weapons on 7 October",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas burnt children hostages with exhaust pipes",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas in video said 'put her back, she's for rape'",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas responsible for 260+ deaths in surprise attack on Supernova Festival",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Nico Astroga claims he was a survivor of 7 Oct operation at Supernova Festival, says 29 of his friends murdered, wasn't even there",
+        "date": "2023-10-08",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Palestinian fighters 'raped' babies",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Palestinian fighters cut off breasts of woman",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "IOF got confession of Ahmad Kahalot, the director of Kamal Adwan Hospital in Jabaliya, that he's a senior Hamas member",
+        "date": "2023-12-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas broke the ceasefire",
+        "date": "2023-12-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas has rejected offers for a ceasefire",
+        "date": "2023-10-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Giving Palestinians a safe passage + 'humanitarian corridor' to evacuate",
+        "date": "2023-10-13",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli politician and former PM Naftali Bennett claims son of one of Hamas' leaders, Ismail Haniyeh, is buying expensive jewellery in Qatar while 'his brothers and sisters are suffering'",
+        "date": "2023-10-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli state claims Palestinians buried mass graves found at Nasser Hospital",
+        "date": "2024-04-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israel bringing medical supplies and incubators to help already incubated babies to Al-Shifa",
+        "date": "2023-11-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israel brought medical supply boxes to al-Shifa Hospital",
+        "date": "2023-11-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas hid weapons in incubators in NICU at Kamal Adwan Hospital",
+        "date": "2023-12-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas operatives discussing Palestinian Islamic Jihad's responsibility for the al-Ahli Arab Baptist Hospital massacre",
+        "date": "2023-10-17",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli soldier claims Arabic calendar is Hamas 'guard list' at Al-Rantisi Children's Hospital",
+        "date": "2023-11-20",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli forces say they do not target places where the hostages may be",
+        "date": "2023-10-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli officials said hostage Emily Hand was killed",
+        "date": "2023-10-08",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "The Israeli state claims it is taking 'immediate and effective measures' to provide humanitarian assistance after ICJ provisional measures ruling",
+        "date": "2024-01-26",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "IOF claims it found Mohammad Deif's Palestinian identity card seized at his sister's house",
+        "date": "2024-01-05",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israel denies attack on UN training centre and refuge in Khan Younis, Gaza",
+        "date": "2024-01-10",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "BBC reports released Palestinian prisoner as saying 'Only Hamas cared'",
+        "date": "2023-11-24",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli state denies involvement in the killing of six-year-old Palestinian girl Hind Rajab",
+        "date": "2024-01-29",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Palestinian corpse in body bag was staged",
+        "date": "2023-10-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "The Houthi-led embargo on shipping in the Red Sea is what is 'harming Palestinians' and impacting the entry of humanitarian aid into Gaza",
+        "date": "2024-01-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "'Top secret' documents found on Palestinian fighters",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "IOF finds sniper rifle in teddy bear, weapons in UNRWA bags, tunnel under classroom",
+        "date": "2023-11-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "The Israeli state is flooding underground tunnels, which it calls 'terrorist infrastructure'",
+        "date": "2023-12-20",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli state destroys graveyard claiming Hamas tunnel underneath it",
+        "date": "2023-12-10",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "UNRWA is infiltrated by Hamas",
+        "date": "2024-01-26",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "IOF dogs attack Hamas",
+        "date": "2023-12-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israel claims Palestinian captives it rounds up are Hamas",
+        "date": "2023-12-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "'There was a ceasefire on 6 October, 2023'",
+        "date": "2023-10-06",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "IOF finds hostage photos on laptop at Al-Shifa Hospital",
+        "date": "2023-11-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Hamas stealing flour and food from UNRWA",
+        "date": "2023-11-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli state denies targeting journalists in Gaza",
+        "date": "2023-10-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israeli state and AIPAC say the Artists4Ceasefire (A4C) logo is represents Ramallah attack",
+        "date": "2023-11-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Weapons confiscated during the IOF's 3-day offensive in Jenin refugee camp, the items in the photo are mostly children's toys",
+        "date": "2023-07-03",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Dead Palestinian children are dolls",
+        "date": "2023-10-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Keir Starmer says Israel 'has the right' to cut off power and water",
+        "date": "2023-10-12",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Sexual violence used by Palestinian resistance on 7 October",
+        "date": "2023-10-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "The pro-Palestine student encampments are an 'organised cell' funded by foreign states",
+        "date": "2024-04-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "'Harvard hates Jews' banner flown by plane across campus by Palestine activists",
+        "date": "2023-11-15",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "There is no limit to the amount of aid that can be facilitated into Gaza",
+        "date": "2023-11-01",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
+    },
+    {
+        "claimTitle": "Israel detains 'terrorists' in Gaza, strips them down to their clothes",
+        "date": "2023-12-07",
+        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
+        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
+        "sources": [], "isNew": true, "isDraft": true
     }
 ];
 

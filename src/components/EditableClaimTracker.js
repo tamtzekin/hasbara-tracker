@@ -55,9 +55,21 @@ try {
     const savedDraft = localStorage.getItem('hasbaratracker_draft_save');
     if (savedDraft) {
         const parsed = JSON.parse(savedDraft);
-        draftData = parsed.draftData || [...data];
-        draftSummaries = parsed.draftSummaries || [...summaries];
+        const savedDraftData = parsed.draftData || [...data];
+        const savedDraftSummaries = parsed.draftSummaries || [...summaries];
+        
+        // Merge new claims from data.js that aren't in the saved draft
+        const savedClaimTitles = new Set(savedDraftSummaries.map(s => s.claimMainTitle));
+        const newSummaries = summaries.filter(s => !savedClaimTitles.has(s.claimMainTitle));
+        
+        const savedDataTitles = new Set(savedDraftData.map(d => d.claimTitle));
+        const newDataEntries = data.filter(d => !savedDataTitles.has(d.claimTitle));
+        
+        draftData = [...savedDraftData, ...newDataEntries];
+        draftSummaries = [...savedDraftSummaries, ...newSummaries];
+        
         console.log('📝 Loaded previously saved draft from', new Date(parsed.savedAt).toLocaleString());
+        console.log(`🔄 Merged ${newSummaries.length} new summaries and ${newDataEntries.length} new data entries from data.js`);
     }
 } catch (error) {
     console.warn('Failed to load saved draft, using fresh copy of data:', error);

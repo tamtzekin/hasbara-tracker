@@ -21,7 +21,7 @@ const VolunteerForm = () => {
         "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", 
         "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", 
         "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", 
-        "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", 
+        "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", 
         "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", 
         "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", 
         "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", 
@@ -29,7 +29,7 @@ const VolunteerForm = () => {
         "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", 
         "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", 
         "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", 
-        "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", 
+        "Palestine (1948)", "Palestine (Gaza)", "Palestine (West Bank)", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", 
         "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", 
         "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", 
         "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", 
@@ -42,14 +42,54 @@ const VolunteerForm = () => {
         "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
     ];
 
+    const professionalBackgroundOptions = [
+        "Legal (lawyer, law student, legal research)",
+        "Medical/Healthcare",
+        "Education (teacher, academic, researcher)",
+        "Engineering/Architecture",
+        "Human Rights/NGO work",
+        "Journalism/Media",
+        "Government/Policy",
+        "Business/Finance",
+        "Arts/Creative industries",
+        "Science/Research (academic)",
+        "Technology/IT",
+        "No specific professional background",
+        "Other"
+    ];
+
+    const contributionOptions = [
+        "Research & fact-checking",
+        "Technical development (databases, websites)",
+        "Content review & editing",
+        "Data organization & archiving",
+        "Social media monitoring",
+        "Translation work",
+        "OSINT investigation",
+        "Analysis & report writing",
+        "I'm flexible - assign me where needed"
+    ];
+
+    const languageOptions = [
+        "English", "Spanish", "French", "German", "Italian", "Portuguese", "Dutch", 
+        "Polish", "Swedish", "Norwegian", "Danish", "Finnish", "Czech", "Hungarian", 
+        "Greek", "Romanian", "Ukrainian", "Arabic", "Hebrew", "Russian", "Chinese", 
+        "Japanese", "Korean", "Turkish", "Hindi", "Other"
+    ];
+
     const initialFormData = {
-        fullName: '',
+        firstName: '',
+        lastName: '',
         email: '',
         location: '',
+        professionalBackground: [],
+        otherProfessionalBackground: '',
         backgroundAndSkills: '',
         hoursCommitted: '',
         otherAmountOfHours: '',
-        languageSkill: '',
+        contributionTypes: [],
+        languageSkills: [],
+        otherLanguage: '',
         signUpForUpdates: false,
     };
 
@@ -72,6 +112,20 @@ const VolunteerForm = () => {
             ...prevData,
             [name]: value,
         }));
+    };
+
+    const handleMultiSelectChange = (name, value) => {
+        setFormData((prevData) => {
+            const currentValues = prevData[name] || [];
+            const updatedValues = currentValues.includes(value)
+                ? currentValues.filter(item => item !== value)
+                : [...currentValues, value];
+            
+            return {
+                ...prevData,
+                [name]: updatedValues,
+            };
+        });
     };
 
     // Function to send admin notification email
@@ -106,13 +160,15 @@ const VolunteerForm = () => {
                     <div style="background: #d6d6d6; border: 1px solid #e0e0e0; border-radius: 3px; padding: 20px; margin: 25px 0;">
                         <h3 style="color: #333; margin-top: 0; font-size: 16px; font-weight: bold;">Volunteer Details:</h3>
                         <ul style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
-                            <li><strong>Full Name:</strong> ${formData.fullName || 'Not provided'}</li>
+                            <li><strong>Name:</strong> ${formData.firstName || ''} ${formData.lastName || ''}</li>
                             <li><strong>Email:</strong> ${formData.email || 'Not provided'}</li>
                             <li><strong>Location:</strong> ${formData.location || 'Not provided'}</li>
+                            <li><strong>Professional Background:</strong> ${Array.isArray(formData.professionalBackground) ? formData.professionalBackground.join(', ') : 'Not provided'}${formData.otherProfessionalBackground ? ` (Other: ${formData.otherProfessionalBackground})` : ''}</li>
                             <li><strong>Background & Skills:</strong> ${formData.backgroundAndSkills || 'Not provided'}</li>
                             <li><strong>Hours Committed:</strong> ${formData.hoursCommitted || 'Not provided'}</li>
                             ${formData.otherAmountOfHours ? `<li><strong>Other Hours:</strong> ${formData.otherAmountOfHours}</li>` : ''}
-                            <li><strong>Language Skills:</strong> ${formData.languageSkill || 'Not provided'}</li>
+                            <li><strong>How they want to contribute:</strong> ${Array.isArray(formData.contributionTypes) ? formData.contributionTypes.join(', ') : 'Not provided'}</li>
+                            <li><strong>Language Skills:</strong> ${Array.isArray(formData.languageSkills) ? formData.languageSkills.join(', ') : 'Not provided'}${formData.otherLanguage ? ` (Other: ${formData.otherLanguage})` : ''}</li>
                             <li><strong>Signup Date:</strong> ${formData.dateTime || 'Not provided'}</li>
                         </ul>
                     </div>
@@ -173,7 +229,7 @@ const VolunteerForm = () => {
             to: 'info@hasbaratracker.com',
             subject: 'New Volunteer Signup - Hasbara Tracker',
             html: emailBody,
-            text: `New Volunteer Signup\n\nA new volunteer has signed up:\n\nFull Name: ${formData.fullName}\nEmail: ${formData.email}\nLocation: ${formData.location}\nBackground: ${formData.backgroundAndSkills}\nHours: ${formData.hoursCommitted}\nLanguages: ${formData.languageSkill}\nDate: ${formData.dateTime}`,
+            text: `New Volunteer Signup\n\nA new volunteer has signed up:\n\nName: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nLocation: ${formData.location}\nProfessional Background: ${Array.isArray(formData.professionalBackground) ? formData.professionalBackground.join(', ') : 'Not provided'}\nBackground & Skills: ${formData.backgroundAndSkills}\nHours: ${formData.hoursCommitted}\nContribution Types: ${Array.isArray(formData.contributionTypes) ? formData.contributionTypes.join(', ') : 'Not provided'}\nLanguages: ${Array.isArray(formData.languageSkills) ? formData.languageSkills.join(', ') : 'Not provided'}\nDate: ${formData.dateTime}`,
             from: 'notifications@hasbaratracker.com',
             type: 'notification'
         };
@@ -196,12 +252,8 @@ const VolunteerForm = () => {
     };
 
     // Function to sign up user to MailerLite newsletter
-    const signUpToMailerLite = async (name, email) => {
+    const signUpToMailerLite = async (firstName, lastName, email) => {
         try {
-            // Split fullName into first and last name
-            const nameParts = name.trim().split(' ');
-            const firstName = nameParts[0] || '';
-            const lastName = nameParts.slice(1).join(' ') || '';
 
             const mailerLiteResponse = await fetch('https://assets.mailerlite.com/jsonp/855095/forms/114882690970289440/subscribe', {
                 method: 'POST',
@@ -229,6 +281,17 @@ const VolunteerForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        // Validation for required multi-select fields
+        if (formData.professionalBackground.length === 0) {
+            alert('Please select at least one professional/education background option.');
+            return;
+        }
+        
+        if (formData.contributionTypes.length === 0) {
+            alert('Please select at least one way you would like to contribute.');
+            return;
+        }
+
         try {
             setIsLoading(true);
 
@@ -236,17 +299,60 @@ const VolunteerForm = () => {
             const currentDate = new Date();
             const formattedDate = currentDate.toLocaleString();
 
-            // Include current date and time in form data
+            // Include current date and time in form data and format arrays
+            // Handle professional background - concatenate "Other" text with other selected options
+            let professionalBackgroundValue = '';
+            if (Array.isArray(formData.professionalBackground) && formData.professionalBackground.length > 0) {
+                // Get all selected options except "Other"
+                const selectedOptions = formData.professionalBackground.filter(option => option !== 'Other');
+                let backgroundParts = [...selectedOptions];
+                
+                // If "Other" was selected, add the custom text
+                if (formData.professionalBackground.includes('Other') && formData.otherProfessionalBackground) {
+                    backgroundParts.push(formData.otherProfessionalBackground);
+                }
+                
+                professionalBackgroundValue = backgroundParts.join(', ');
+            }
+
+            // Handle hours - use "Other" text input if "other" is selected
+            const hoursValue = formData.hoursCommitted === 'other' 
+                ? formData.otherAmountOfHours 
+                : formData.hoursCommitted;
+
             const updatedFormData = {
-                dateTime: formattedDate, // Add dateTime field to form data
-                ...formData
+                dateTime: formattedDate,
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                email: formData.email,
+                location: formData.location,
+                professionEducation: professionalBackgroundValue,
+                backgroundAndSkills: formData.backgroundAndSkills,
+                hoursCommitted: hoursValue,
+                otherAmountOfHours: formData.otherAmountOfHours, // Keep this for compatibility
+                contribution: Array.isArray(formData.contributionTypes) ? formData.contributionTypes.join(', ') : '',
+                languages: (() => {
+                    let languageParts = [];
+                    if (Array.isArray(formData.languageSkills) && formData.languageSkills.length > 0) {
+                        // Get all selected options except "Other"
+                        const selectedLanguages = formData.languageSkills.filter(lang => lang !== 'Other');
+                        languageParts = [...selectedLanguages];
+                        
+                        // If "Other" was selected, add the custom text
+                        if (formData.languageSkills.includes('Other') && formData.otherLanguage) {
+                            languageParts.push(formData.otherLanguage);
+                        }
+                    }
+                    return languageParts.join(', ');
+                })(),
+                signedUpToEmail: formData.signUpForUpdates ? 'YES' : 'NO'
             };
 
 
             const response = await fetch('https://script.google.com/macros/s/AKfycby2hpFtciSrCZjBvGKZD4Zy8WjlhcggfteNdYsCdhWoMgKtW_yrlvp85QIcD3f8TI7QPA/exec', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                 },
                 body: new URLSearchParams(updatedFormData).toString(),
             });
@@ -262,7 +368,7 @@ const VolunteerForm = () => {
                 // Sign up to MailerLite if checkbox is checked
                 if (formData.signUpForUpdates) {
                     try {
-                        await signUpToMailerLite(formData.fullName, formData.email);
+                        await signUpToMailerLite(formData.firstName, formData.lastName, formData.email);
                     } catch (mailerLiteError) {
                         // Don't block form submission if MailerLite signup fails
                     }
@@ -313,21 +419,35 @@ const VolunteerForm = () => {
                             receipts.
                         </div>
 
-                        <form className="mt-5" onSubmit={handleSubmit}>
-                            <label>
-                                <b>Full name</b><span className="required-field">*</span>
-                                <br />
-                                <input
-                                    className="w-full p-1 mt-[2.5%] mb-9"
-                                    type="text"
-                                    name="fullName"
-                                    value={formData.fullName}
-                                    onChange={handleChange}
-                                    required
-                                    maxLength={30}
-                                />
-                            </label>
-                            <br />
+                        <form className="mt-5" onSubmit={handleSubmit} acceptCharset="UTF-8">
+                            <div className="flex gap-4 mb-9">
+                                <label className="flex-1">
+                                    <b>First name</b><span className="required-field">*</span>
+                                    <br />
+                                    <input
+                                        className="w-full p-1 mt-[2.5%]"
+                                        type="text"
+                                        name="firstName"
+                                        value={formData.firstName}
+                                        onChange={handleChange}
+                                        required
+                                        maxLength={30}
+                                    />
+                                </label>
+                                <label className="flex-1">
+                                    <b>Last name</b><span className="required-field">*</span>
+                                    <br />
+                                    <input
+                                        className="w-full p-1 mt-[2.5%]"
+                                        type="text"
+                                        name="lastName"
+                                        value={formData.lastName}
+                                        onChange={handleChange}
+                                        required
+                                        maxLength={30}
+                                    />
+                                </label>
+                            </div>
 
                             <label>
                             <b>Email</b><span className="required-field">*</span>
@@ -361,6 +481,41 @@ const VolunteerForm = () => {
                                         </option>
                                     ))}
                                 </select>
+                            </label>
+                            <br />
+
+                            <label>
+                                <b>Professional/Education Background</b><span className="required-field">*</span>
+                                <br />
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-[2.5%] mb-4 text-sm">
+                                    {professionalBackgroundOptions.map((option) => (
+                                        <label key={option} className="flex items-start gap-2 cursor-pointer p-2 hover:bg-gray-50 rounded">
+                                            <input
+                                                type="checkbox"
+                                                checked={formData.professionalBackground.includes(option)}
+                                                onChange={() => handleMultiSelectChange('professionalBackground', option)}
+                                                className="mt-0.5 min-w-4 h-4"
+                                            />
+                                            <span className="text-sm">{option}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                                {formData.professionalBackground.includes('Other') && (
+                                    <div className="mt-2 mb-4">
+                                        <label>
+                                            <b>Please specify other professional background:</b>
+                                            <input
+                                                type="text"
+                                                name="otherProfessionalBackground"
+                                                value={formData.otherProfessionalBackground}
+                                                onChange={handleChange}
+                                                className="w-full p-2 mt-1 border border-gray-300 rounded"
+                                                maxLength={100}
+                                                placeholder="Enter your professional background"
+                                            />
+                                        </label>
+                                    </div>
+                                )}
                             </label>
                             <br />
 
@@ -414,15 +569,56 @@ const VolunteerForm = () => {
                             )}
 
                             <label>
-                                <b>This isn’t necessary, but do you understand Arabic and/or Hebrew? Let us know what level.</b>
-                                <input
-                                    className="w-full p-5 mt-[2.5%]"
-                                    type="text"
-                                    name="languageSkill"
-                                    value={formData.languageSkill}
-                                    onChange={handleChange}
-                                    maxLength={150}
-                                />
+                                <b>How would you like to contribute? (what you want to do)</b><span className="required-field">*</span>
+                                <br />
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-[2.5%] mb-9 text-sm">
+                                    {contributionOptions.map((option) => (
+                                        <label key={option} className="flex items-start gap-2 cursor-pointer p-2 hover:bg-gray-50 rounded">
+                                            <input
+                                                type="checkbox"
+                                                checked={formData.contributionTypes.includes(option)}
+                                                onChange={() => handleMultiSelectChange('contributionTypes', option)}
+                                                className="mt-0.5 min-w-4 h-4"
+                                            />
+                                            <span className="text-sm">{option}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                            </label>
+                            <br />
+
+                            <label>
+                                <b>Language Skills</b>
+                                <br />
+                                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-[2.5%] mb-4 text-sm">
+                                    {languageOptions.map((language) => (
+                                        <label key={language} className="flex items-start gap-2 cursor-pointer p-2 hover:bg-gray-50 rounded">
+                                            <input
+                                                type="checkbox"
+                                                checked={formData.languageSkills.includes(language)}
+                                                onChange={() => handleMultiSelectChange('languageSkills', language)}
+                                                className="mt-0.5 min-w-4 h-4"
+                                            />
+                                            <span className="text-sm">{language}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                                {formData.languageSkills.includes('Other') && (
+                                    <div className="mt-2 mb-4">
+                                        <label>
+                                            <b>Please specify other language:</b>
+                                            <input
+                                                type="text"
+                                                name="otherLanguage"
+                                                value={formData.otherLanguage}
+                                                onChange={handleChange}
+                                                className="w-full p-2 mt-1 border border-gray-300 rounded"
+                                                maxLength={50}
+                                                placeholder="Enter language and proficiency level"
+                                            />
+                                        </label>
+                                    </div>
+                                )}
                             </label>
                             <br />
                             <br />

@@ -92,6 +92,15 @@ const Header = () =>{
                             </li>
                         )}
 
+                        {/* Show Status Page for admins only when logged in */}
+                        {isLoggedIn() && isAdmin() && (
+                            <li className="undotted">
+                                <NavLink to="/status" className="font-semibold text-purple-600">
+                                    Status Page
+                                </NavLink>
+                            </li>
+                        )}
+
                         {/* Show Volunteer Manager for admins only when logged in */}
                         {isLoggedIn() && isAdmin() && (
                             <li className="undotted">

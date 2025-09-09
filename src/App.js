@@ -19,6 +19,7 @@ import MailSignUpForm from './components/MailSignUpForm';
 import Login from './components/Login';
 import AdminPanel from './components/AdminPanel';
 import VolunteersPage from './components/VolunteersPage';
+import StatusPage from './components/StatusPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
 import ClaimFortyBeheadedBabies from './components/ClaimFortyBeheadedBabies';
@@ -64,6 +65,11 @@ const App = () => {
                 <Route path="/volunteers" element={
                     <ProtectedRoute requireAdmin={true}>
                         <VolunteersPage />
+                    </ProtectedRoute>
+                } />
+                <Route path="/status" element={
+                    <ProtectedRoute requireAdmin={true}>
+                        <StatusPage />
                     </ProtectedRoute>
                 } />
                 <Route path="/about" element={<About />} />

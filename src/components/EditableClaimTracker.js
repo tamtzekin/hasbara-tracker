@@ -438,6 +438,26 @@ export default function EditableClaimTracker() {
         linkElement.click();
     };
 
+    // Status update functions for Phase 1
+    const updateClaimStatus = (status) => {
+        if (!selectedClaimTitle) {
+            alert('Please select a claim first');
+            return;
+        }
+        
+        const statusKey = `claim_status_${selectedClaimTitle}`;
+        localStorage.setItem(statusKey, status);
+        
+        // Show confirmation message
+        const statusLabels = {
+            'IN_PROGRESS': 'In Progress',
+            'NEEDS_REVIEW': 'Needs Review', 
+            'READY_TO_PUBLISH': 'Ready to Publish'
+        };
+        
+        alert(`✅ Status updated: "${selectedClaimTitle}" → ${statusLabels[status]}`);
+    };
+
     // Function to populate table with selected claim data
     const handleClaimSelection = useCallback((claimTitle) => {
         if (!claimTitle) {
@@ -1163,8 +1183,9 @@ First download the file/image/video, and then upload it into the corresponding G
                                 onClick={() => {
                                     try {
                                         saveDraft();
+                                        updateClaimStatus('IN_PROGRESS');
                                         setLastDraftSave(new Date().toISOString());
-                                        alert('✅ Draft saved successfully! Your changes are now saved locally.');
+                                        alert('✅ Draft saved successfully! Status updated to "In Progress".');
                                     } catch (error) {
                                         console.error('Error saving draft:', error);
                                         alert('❌ Error saving draft. Please try again.');
@@ -1177,6 +1198,64 @@ First download the file/image/video, and then upload it into the corresponding G
                                 }}
                             >
                                 SAVE AS DRAFT
+                            </button>
+                            <button
+                                onClick={() => {
+                                    try {
+                                        saveDraft();
+                                        updateClaimStatus('NEEDS_REVIEW');
+                                        setLastDraftSave(new Date().toISOString());
+                                    } catch (error) {
+                                        console.error('Error updating status:', error);
+                                        alert('❌ Error updating status. Please try again.');
+                                    }
+                                }}
+                                className="btn-green"
+                                style={{
+                                    backgroundColor: '#fac798',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                NEEDS REVIEW
+                            </button>
+                            <button
+                                onClick={() => {
+                                    try {
+                                        saveDraft();
+                                        updateClaimStatus('READY_TO_PUBLISH');
+                                        setLastDraftSave(new Date().toISOString());
+                                    } catch (error) {
+                                        console.error('Error updating status:', error);
+                                        alert('❌ Error updating status. Please try again.');
+                                    }
+                                }}
+                                className="btn-green"
+                                style={{
+                                    backgroundColor: '#bffb9b',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                READY TO PUBLISH
+                            </button>
+                            <button
+                                onClick={() => {
+                                    try {
+                                        saveDraft();
+                                        updateClaimStatus('PUBLISHED');
+                                        setLastDraftSave(new Date().toISOString());
+                                    } catch (error) {
+                                        console.error('Error updating status:', error);
+                                        alert('❌ Error updating status. Please try again.');
+                                    }
+                                }}
+                                className="btn-green"
+                                style={{
+                                    backgroundColor: '#78ff96',
+                                    fontWeight: 'bold',
+                                    color: '#333'
+                                }}
+                            >
+                                PUBLISHED
                             </button>
                             {isAdmin() && (
                                 <button

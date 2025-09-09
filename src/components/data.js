@@ -169,10 +169,6 @@ const summaries = [
         "claimSummary": "False claims spread that Gaza has no Christian churches, contradicting the documented presence of multiple active Christian communities and places of worship."
     },
     {
-        "claimMainTitle": "Hamas planned to use chemical weapons on 7 October",
-        "claimSummary": "Claims that Hamas planned to deploy chemical weapons during Operation Al-Aqsa Flood, expanding on allegations about chemical weapon manuals."
-    },
-    {
         "claimMainTitle": "Hamas burnt children hostages with exhaust pipes",
         "claimSummary": "Israeli officials and media spread claims that Hamas burnt children hostages using vehicle exhaust pipes during the October 7 operation."
     },
@@ -3844,13 +3840,6 @@ const data = [
     {
         "claimTitle": "There are no churches in Gaza",
         "date": "2023-10-20",
-        "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
-        "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
-        "sources": [], "isNew": true, "isDraft": true
-    },
-    {
-        "claimTitle": "Hamas planned to use chemical weapons on 7 October",
-        "date": "2023-10-07",
         "claim": { "claimText": "Claim needs evidence", "claimTag": "unverified-tag" },
         "description": { "summary": "This claim requires fact-checking and evidence compilation", "details": "" },
         "sources": [], "isNew": true, "isDraft": true

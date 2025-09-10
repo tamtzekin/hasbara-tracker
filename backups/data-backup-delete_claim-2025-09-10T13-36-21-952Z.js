@@ -96,6 +96,11 @@ const summaries = [
         "claimSummary": "Israeli officials denied that famine conditions existed in Gaza, despite warnings from international humanitarian organizations about acute food insecurity."
     },
     {
+        "claimMainTitle": "1400 | Revisions of number of Israelis killed",
+        "claimSummary": "The Israeli death toll from October 7 was revised multiple times, from initial claims of 1,400 to a final count of approximately 1,200, raising questions about initial reporting.",
+        "customUrl": "number-killed"
+    },
+    {
         "claimMainTitle": "Babies hung on clotheslines",
         "claimSummary": "Unsubstantiated and horrific claims spread on social media alleging Palestinian fighters hung babies on clotheslines during Operation Al-Aqsa Flood."
     },
@@ -359,11 +364,6 @@ const summaries = [
         "claimMainTitle": "claim",
         "claimSummary": "THIS IS A TEST",
         "customUrl": "claim-two-three"
-    },
-    {
-        "claimMainTitle": "1400 | Revisions of number of Israelis killed",
-        "claimSummary": "The Israeli death toll from October 7 was revised multiple times, from initial claims of 1,400 to a final count of approximately 1,200, raising questions about initial reporting.",
-        "customUrl": "number-killed"
     }
 ];
 
@@ -4788,26 +4788,20 @@ const data = [
     },
     {
         "claimTitle": "1400 | Revisions of number of Israelis killed",
-        "date": "",
+        "date": "2023-10-08",
         "claim": {
-            "claimText": "",
-            "claimTag": ""
+            "claimText": "Claim needs evidence",
+            "claimTag": "unverified-tag"
         },
         "description": {
-            "summary": "The Israeli death toll from October 7 was revised multiple times, from initial claims of 1,400 to a final count of approximately 1,200, raising questions about initial reporting.",
-            "details": ""
+            "summary": "This claim requires fact-checking and evidence compilation",
+            "details": "<br>Type<br><br><br>Typing wor&nbsp;<b>Bold text&nbsp;<i>Italics text&nbsp;</i></b><i>Bold text&nbsp;</i><br><i><br></i><br>Typing works now<br>"
         },
-        "sources": [
-            {
-                "sourceName": "",
-                "sourceLink": "",
-                "archiveLink": "",
-                "videoPreviewLink": ""
-            }
-        ],
-        "isDraft": true,
-        "lastEditedBy": "current_user",
-        "lastEditedAt": "2025-09-10T13:36:35.291Z"
+        "sources": [],
+        "isNew": true,
+        "isDraft": false,
+        "lastEditedBy": "swan4444444@protonmail.com",
+        "lastEditedAt": "2025-09-10T13:33:20.584Z"
     }
 ];
 

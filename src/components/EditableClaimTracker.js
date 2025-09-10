@@ -119,6 +119,15 @@ const animationStyles = `
 }
 
 /* Hover states - fade in colors */
+.flow-button.in-progress:hover {
+    background-color: #b7fbf3;
+    border-left-color: #2dd4bf;
+}
+
+.flow-button.in-progress:hover::after {
+    border-left-color: #b7fbf3;
+}
+
 .flow-button.review:hover {
     background-color: #fac798;
     border-left-color: #f4a261;
@@ -147,6 +156,15 @@ const animationStyles = `
 }
 
 /* Active states - when status is current */
+.flow-button.in-progress.active {
+    background-color: #b7fbf3;
+    border-left-color: #2dd4bf;
+}
+
+.flow-button.in-progress.active::after {
+    border-left-color: #b7fbf3;
+}
+
 .flow-button.review.active {
     background-color: #fac798;
     border-left-color: #f4a261;
@@ -177,6 +195,23 @@ const animationStyles = `
 .flow-button:hover {
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Disabled state */
+.flow-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.flow-button.disabled::after {
+    border-left-color: #d1d5db;
+}
+
+.flow-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 `;
 
@@ -615,30 +650,6 @@ const updateClaimSummaryAndUrl = async (claimTitle, newSummary, newUrl) => {
     }
 };
 
-// Helper function to populate data.js with Google Sheets data (only Needs Review items)
-const populateFromGoogleSheets = async () => {
-    try {
-        const response = await fetch('https://user-backend.izumi-ky.workers.dev/api/populate-from-sheets', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Worker-Secret': 'hasbara-sync-secret-2025'
-            }
-        });
-
-        if (response.ok) {
-            const result = await response.json();
-            console.log('✅ Successfully populated data from Google Sheets:', result);
-            return result;
-        } else {
-            const error = await response.json();
-            throw new Error(error.error || 'Failed to populate from Google Sheets');
-        }
-    } catch (error) {
-        console.error('❌ Error populating from Google Sheets:', error);
-        throw error;
-    }
-};
 
 // Helper function to send email notifications for review/approval actions only
 const sendEmailNotification = async (action, claimTitle, userEmail, additionalData = {}) => {
@@ -880,7 +891,10 @@ export default function EditableClaimTracker() {
     const [claimDataVersion, setClaimDataVersion] = useState(0); // To trigger dropdown re-render
     const [isDeletingClaim, setIsDeletingClaim] = useState(false); // Flag to prevent auto-saving during deletion
     const [isTableVisible, setIsTableVisible] = useState(false); // For fade-in animation
+    const [isEditingTitle, setIsEditingTitle] = useState(false);
     const [isEditingSummary, setIsEditingSummary] = useState(false);
+    const [isEditingUrl, setIsEditingUrl] = useState(false);
+    const [editedTitle, setEditedTitle] = useState('');
     const [editedSummary, setEditedSummary] = useState('');
     const [editedUrl, setEditedUrl] = useState('');
     const [currentClaimUrl, setCurrentClaimUrl] = useState(''); // Track the current claim's URL
@@ -1116,14 +1130,15 @@ export default function EditableClaimTracker() {
         // Trigger custom event to update ClaimsList.js
         window.dispatchEvent(new CustomEvent('claimsUpdated'));
         
-        // Show confirmation message
+        // Show confirmation message in console instead of alert
         const statusLabels = {
             'IN_PROGRESS': 'In Progress',
             'NEEDS_REVIEW': 'To review', 
-            'READY_TO_PUBLISH': 'Ready to Publish'
+            'READY_TO_PUBLISH': 'Ready to Publish',
+            'PUBLISHED': 'Published'
         };
         
-        alert(`✅ Status updated: "${selectedClaimTitle}" → ${statusLabels[status]}`);
+        console.log(`✅ Status updated: "${selectedClaimTitle}" → ${statusLabels[status]}`);
     };
 
     // Function to populate table with selected claim data
@@ -1360,6 +1375,13 @@ export default function EditableClaimTracker() {
                             placeholder="Summary"
                         />
                         <div
+                            ref={(el) => {
+                                // Only set initial content when element first mounts and doesn't have content
+                                if (el && !el.hasAttribute('data-initialized')) {
+                                    el.innerHTML = row.original.description.details || '';
+                                    el.setAttribute('data-initialized', 'true');
+                                }
+                            }}
                             contentEditable
                             suppressContentEditableWarning={true}
                             onInput={(e) => {
@@ -1391,9 +1413,6 @@ export default function EditableClaimTracker() {
                                     .replace(/<div>/g, '<br>')
                                     .replace(/<\/div>/g, '');
                                 updateField(row.index, 'description.details', htmlContent);
-                            }}
-                            dangerouslySetInnerHTML={{ 
-                                __html: row.original.description.details || '' 
                             }}
                             style={{
                                 width: '100%',
@@ -1812,8 +1831,70 @@ First download the file/image/video, and then upload it into the corresponding G
                                         }}
                                     />
                                 </div>
+                            ) : selectedClaimTitle ? (
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                                    {isEditingTitle ? (
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, flexWrap: 'wrap' }}>
+                                            <input
+                                                type="text"
+                                                value={editedTitle}
+                                                onChange={(e) => setEditedTitle(e.target.value)}
+                                                style={{
+                                                    flex: 1,
+                                                    minWidth: '300px',
+                                                    padding: '6px 10px',
+                                                    border: '1px solid #ccc',
+                                                    borderRadius: '4px',
+                                                    fontSize: '14px',
+                                                    backgroundColor: '#cbcbcb'
+                                                }}
+                                            />
+                                            <button
+                                                onClick={async () => {
+                                                    // Save title logic would go here
+                                                    console.log('Save title:', editedTitle);
+                                                    setIsEditingTitle(false);
+                                                }}
+                                                style={{
+                                                    padding: '6px 12px',
+                                                    backgroundColor: '#cbcbcb',
+                                                    color: 'black',
+                                                    border: '1px solid #999',
+                                                    borderRadius: '4px',
+                                                    fontSize: '12px',
+                                                    cursor: 'pointer'
+                                                }}
+                                                onMouseEnter={(e) => e.target.style.backgroundColor = '#b0b0b0'}
+                                                onMouseLeave={(e) => e.target.style.backgroundColor = '#cbcbcb'}
+                                            >
+                                                Save
+                                            </button>
+                                        </div>
+                                    ) : (
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                                            <span>'{selectedClaimTitle}'</span>
+                                            <button
+                                                onClick={() => {
+                                                    setIsEditingTitle(true);
+                                                    setEditedTitle(selectedClaimTitle);
+                                                }}
+                                                style={{
+                                                    padding: '4px 8px',
+                                                    backgroundColor: '#cbcbcb',
+                                                    color: 'black',
+                                                    border: '1px solid #999',
+                                                    borderRadius: '4px',
+                                                    fontSize: '11px',
+                                                    cursor: 'pointer'
+                                                }}
+                                            >
+                                                Edit
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
                             ) : (
-                                selectedClaimTitle ? `'${selectedClaimTitle}'` : 'Editable Claims Tracker'
+                                'Editable Claims Tracker'
                             )}</div>
 
                         <div className="mobile:text-xs mobile:mb-5 laptop:w-[60%] display:flex text-sm text-grey-faded mt-2 leading-6">
@@ -1914,61 +1995,116 @@ First download the file/image/video, and then upload it into the corresponding G
                             ) : (
                                 <div>
                                     {selectedClaimTitle ? (
-                                        <div>
-                                            {isEditingSummary ? (
-                                                <div style={{ marginBottom: '15px' }}>
-                                                    <textarea
-                                                        value={editedSummary}
-                                                        onChange={(e) => setEditedSummary(e.target.value)}
-                                                        placeholder="Enter claim summary..."
-                                                        rows="3"
-                                                        style={{
-                                                            width: '100%',
-                                                            padding: '8px 12px',
-                                                            border: '1px solid #ccc',
-                                                            borderRadius: '4px',
-                                                            fontSize: '14px',
-                                                            resize: 'vertical',
-                                                            backgroundColor: '#f9f9f9',
-                                                            marginBottom: '10px'
-                                                        }}
-                                                    />
-                                                    <input
-                                                        type="text"
-                                                        value={editedUrl}
-                                                        onChange={(e) => setEditedUrl(e.target.value)}
-                                                        placeholder="Custom URL (e.g., makeup, beheaded-babies)"
-                                                        style={{
-                                                            width: '100%',
-                                                            padding: '8px 12px',
-                                                            border: '1px solid #ccc',
-                                                            borderRadius: '4px',
-                                                            fontSize: '14px',
-                                                            backgroundColor: '#f9f9f9',
-                                                            marginBottom: '10px'
-                                                        }}
-                                                    />
-                                                    <div>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                                            {/* Summary Field */}
+                                            <div>
+                                                <div style={{ fontSize: '13px', fontWeight: 'bold', marginBottom: '8px', color: '#555' }}>
+                                                    Summary:
+                                                </div>
+                                                {isEditingSummary ? (
+                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', flexWrap: 'wrap' }}>
+                                                        <textarea
+                                                            value={editedSummary}
+                                                            onChange={(e) => setEditedSummary(e.target.value)}
+                                                            placeholder="Enter claim summary..."
+                                                            rows="3"
+                                                            style={{
+                                                                flex: 1,
+                                                                minWidth: '300px',
+                                                                padding: '8px 12px',
+                                                                border: '1px solid #ccc',
+                                                                borderRadius: '4px',
+                                                                fontSize: '14px',
+                                                                resize: 'vertical',
+                                                                backgroundColor: '#cbcbcb'
+                                                            }}
+                                                        />
+                                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                                            <button
+                                                                onClick={async () => {
+                                                                    const success = await updateClaimSummaryAndUrl(selectedClaimTitle, editedSummary, selectedClaimUrl);
+                                                                    if (success) {
+                                                                        setClaimDataVersion(prev => prev + 1);
+                                                                        setIsEditingSummary(false);
+                                                                        setTimeout(() => {
+                                                                            if (selectedClaimTitle) {
+                                                                                handleClaimSelection(selectedClaimTitle);
+                                                                            }
+                                                                        }, 50);
+                                                                    }
+                                                                }}
+                                                                style={{
+                                                                    padding: '6px 12px',
+                                                                    backgroundColor: '#cbcbcb',
+                                                                    color: 'black',
+                                                                    border: '1px solid #999',
+                                                                    borderRadius: '4px',
+                                                                    fontSize: '12px',
+                                                                    cursor: 'pointer',
+                                                                    whiteSpace: 'nowrap'
+                                                                }}
+                                                                onMouseEnter={(e) => e.target.style.backgroundColor = '#b0b0b0'}
+                                                                onMouseLeave={(e) => e.target.style.backgroundColor = '#cbcbcb'}
+                                                            >
+                                                                Save
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', flexWrap: 'wrap' }}>
+                                                        <div style={{ flex: 1, minWidth: '200px', lineHeight: '1.4' }}>
+                                                            {selectedClaimSummary}
+                                                        </div>
+                                                        <button
+                                                            onClick={() => {
+                                                                setIsEditingSummary(true);
+                                                                setEditedSummary(selectedClaimSummary);
+                                                            }}
+                                                            style={{
+                                                                padding: '4px 8px',
+                                                                backgroundColor: '#cbcbcb',
+                                                                color: 'black',
+                                                                border: '1px solid #999',
+                                                                borderRadius: '4px',
+                                                                fontSize: '11px',
+                                                                cursor: 'pointer'
+                                                            }}
+                                                        >
+                                                            Edit
+                                                        </button>
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            {/* URL Field */}
+                                            <div>
+                                                <div style={{ fontSize: '13px', fontWeight: 'bold', marginBottom: '8px', color: '#555' }}>
+                                                    URL:
+                                                </div>
+                                                {isEditingUrl ? (
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                                                        <input
+                                                            type="text"
+                                                            value={editedUrl}
+                                                            onChange={(e) => setEditedUrl(e.target.value)}
+                                                            placeholder="Custom URL (e.g., makeup, beheaded-babies)"
+                                                            style={{
+                                                                flex: 1,
+                                                                minWidth: '300px',
+                                                                padding: '6px 10px',
+                                                                border: '1px solid #ccc',
+                                                                borderRadius: '4px',
+                                                                fontSize: '14px',
+                                                                backgroundColor: '#cbcbcb'
+                                                            }}
+                                                        />
                                                         <button
                                                             onClick={async () => {
-                                                                console.log('💾 Save button clicked with:', {
-                                                                    selectedClaimTitle,
-                                                                    editedSummary: editedSummary?.substring(0, 30) + '...',
-                                                                    editedUrl,
-                                                                    selectedClaimUrl
-                                                                });
-                                                                const success = await updateClaimSummaryAndUrl(selectedClaimTitle, editedSummary, editedUrl);
+                                                                const success = await updateClaimSummaryAndUrl(selectedClaimTitle, selectedClaimSummary, editedUrl);
                                                                 if (success) {
-                                                                    // Immediately update the current URL state to reflect the change
                                                                     setCurrentClaimUrl(editedUrl);
-                                                                    
-                                                                    // Update the claimDataVersion to trigger memo recalculation
                                                                     setClaimDataVersion(prev => prev + 1);
-                                                                    
-                                                                    // Close editing mode
-                                                                    setIsEditingSummary(false);
-                                                                    
-                                                                    // Small delay to ensure all state has settled
+                                                                    setIsEditingUrl(false);
                                                                     setTimeout(() => {
                                                                         if (selectedClaimTitle) {
                                                                             handleClaimSelection(selectedClaimTitle);
@@ -1977,75 +2113,49 @@ First download the file/image/video, and then upload it into the corresponding G
                                                                 }
                                                             }}
                                                             style={{
-                                                                backgroundColor: '#16a34a',
-                                                                color: 'white',
-                                                                border: 'none',
-                                                                borderRadius: '4px',
                                                                 padding: '6px 12px',
-                                                                fontSize: '13px',
-                                                                cursor: 'pointer',
-                                                                marginRight: '8px'
+                                                                backgroundColor: '#cbcbcb',
+                                                                color: 'black',
+                                                                border: '1px solid #999',
+                                                                borderRadius: '4px',
+                                                                fontSize: '12px',
+                                                                cursor: 'pointer'
                                                             }}
+                                                            onMouseEnter={(e) => e.target.style.backgroundColor = '#b0b0b0'}
+                                                            onMouseLeave={(e) => e.target.style.backgroundColor = '#cbcbcb'}
                                                         >
                                                             Save
                                                         </button>
+                                                    </div>
+                                                ) : (
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                                                        <div style={{ fontSize: '13px', color: '#666', fontFamily: 'monospace' }}>
+                                                            /{selectedClaimUrl}
+                                                        </div>
                                                         <button
-                                                            onClick={() => setIsEditingSummary(false)}
+                                                            onClick={() => {
+                                                                const currentSummary = draftSummaries.find(s => s.claimMainTitle === selectedClaimTitle);
+                                                                const currentUrl = currentClaimUrl || 
+                                                                    currentSummary?.customUrl || 
+                                                                    selectedClaimTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                                                                setIsEditingUrl(true);
+                                                                setEditedUrl(currentUrl);
+                                                            }}
                                                             style={{
-                                                                backgroundColor: '#dc2626',
-                                                                color: 'white',
-                                                                border: 'none',
+                                                                padding: '4px 8px',
+                                                                backgroundColor: '#cbcbcb',
+                                                                color: 'black',
+                                                                border: '1px solid #999',
                                                                 borderRadius: '4px',
-                                                                padding: '6px 12px',
-                                                                fontSize: '13px',
+                                                                fontSize: '11px',
                                                                 cursor: 'pointer'
                                                             }}
                                                         >
-                                                            Cancel
+                                                            Edit
                                                         </button>
                                                     </div>
-                                                </div>
-                                            ) : (
-                                                <div>
-                                                    <div style={{ marginBottom: '10px' }}>
-                                                        {selectedClaimSummary}
-                                                    </div>
-                                                    <div style={{ fontSize: '13px', color: '#666', marginBottom: '10px' }}>
-                                                        URL: /{selectedClaimUrl}
-                                                    </div>
-                                                    <button
-                                                        onClick={() => {
-                                                            // Get the most current URL directly from the arrays instead of memo
-                                                            const currentSummary = draftSummaries.find(s => s.claimMainTitle === selectedClaimTitle);
-                                                            const currentUrl = currentClaimUrl || 
-                                                                currentSummary?.customUrl || 
-                                                                selectedClaimTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-                                                            
-                                                            console.log('✏️ Edit button clicked, setting inputs to:', {
-                                                                selectedClaimSummary: selectedClaimSummary?.substring(0, 30) + '...',
-                                                                selectedClaimUrl,
-                                                                currentClaimUrl,
-                                                                currentUrl,
-                                                                fromArray: currentSummary?.customUrl
-                                                            });
-                                                            setIsEditingSummary(true);
-                                                            setEditedSummary(selectedClaimSummary);
-                                                            setEditedUrl(currentUrl);
-                                                        }}
-                                                        style={{
-                                                            backgroundColor: '#cbcbcb',
-                                                            color: 'black',
-                                                            border: '1px solid #999',
-                                                            borderRadius: '4px',
-                                                            padding: '6px 12px',
-                                                            fontSize: '13px',
-                                                            cursor: 'pointer'
-                                                        }}
-                                                    >
-                                                        Edit Summary & URL
-                                                    </button>
-                                                </div>
-                                            )}
+                                                )}
+                                            </div>
                                         </div>
                                     ) : (
                                         'Live editing interface for claims data. Click "Edit" to modify rows, add sources, and export JSON for your data.js file.'
@@ -2081,36 +2191,41 @@ First download the file/image/video, and then upload it into the corresponding G
                                     return (
                                         <>
                                             <button
-                                                onClick={() => setShowReviewModal(true)}
-                                                className={`flow-button review ${currentStatus === 'NEEDS_REVIEW' ? 'active' : ''}`}
+                                                onClick={() => {
+                                                    if (!selectedClaimTitle) return;
+                                                    try {
+                                                        saveDraft();
+                                                        updateClaimStatus('IN_PROGRESS');
+                                                        setLastDraftSave(new Date().toISOString());
+                                                    } catch (error) {
+                                                        console.error('Error updating status:', error);
+                                                    }
+                                                }}
+                                                disabled={!selectedClaimTitle}
+                                                className={`flow-button in-progress ${currentStatus === 'IN_PROGRESS' ? 'active' : ''} ${!selectedClaimTitle ? 'disabled' : ''}`}
+                                            >
+                                                IN PROGRESS
+                                            </button>
+                                            <button
+                                                onClick={() => {
+                                                    if (!selectedClaimTitle) return;
+                                                    setShowReviewModal(true);
+                                                }}
+                                                disabled={!selectedClaimTitle}
+                                                className={`flow-button review ${currentStatus === 'NEEDS_REVIEW' ? 'active' : ''} ${!selectedClaimTitle ? 'disabled' : ''}`}
                                             >
                                                 TO REVIEW
                                             </button>
                                             <button
-                                                onClick={() => setShowReadyToPublishModal(true)}
-                                                className={`flow-button ready ${currentStatus === 'READY_TO_PUBLISH' ? 'active' : ''}`}
+                                                onClick={() => {
+                                                    if (!selectedClaimTitle) return;
+                                                    setShowReadyToPublishModal(true);
+                                                }}
+                                                disabled={!selectedClaimTitle}
+                                                className={`flow-button ready ${currentStatus === 'READY_TO_PUBLISH' ? 'active' : ''} ${!selectedClaimTitle ? 'disabled' : ''}`}
                                             >
                                                 READY TO PUBLISH
                                             </button>
-                                            {isAdmin() && (
-                                                <button
-                                                    onClick={() => {
-                                                        try {
-                                                            saveDraft();
-                                                            updateClaimStatus('PUBLISHED');
-                                                            setLastDraftSave(new Date().toISOString());
-                                                            
-                                                            // Note: Email notification removed - only send for review/approval actions
-                                                        } catch (error) {
-                                                            console.error('Error updating status:', error);
-                                                            alert('❌ Error updating status. Please try again.');
-                                                        }
-                                                    }}
-                                                    className={`flow-button published ${currentStatus === 'PUBLISHED' ? 'active' : ''}`}
-                                                >
-                                                    PUBLISHED
-                                                </button>
-                                            )}
                                         </>
                                     );
                                 })()}
@@ -2197,31 +2312,6 @@ First download the file/image/video, and then upload it into the corresponding G
                             )}
                             {isAdmin() && (
                                 <button
-                                    onClick={async () => {
-                                        const confirmed = window.confirm('⚠️ This will populate data.js with Google Sheets data (only Needs Review items). Continue?');
-                                        if (confirmed) {
-                                            try {
-                                                const result = await populateFromGoogleSheets();
-                                                alert(`✅ Successfully populated ${result.imported || 0} Needs Review items from Google Sheets`);
-                                                
-                                                // Trigger page refresh to load new data
-                                                window.location.reload();
-                                            } catch (error) {
-                                                console.error('Error populating from Google Sheets:', error);
-                                                alert(`❌ Error populating from Google Sheets: ${error.message}`);
-                                            }
-                                        }
-                                    }}
-                                    className="px-3 py-1 text-black font-medium rounded-md border border-solid border-gray-400 transition-colors duration-200"
-                                    style={{ backgroundColor: '#cbcbcb', borderWidth: '1px' }}
-                                    onMouseEnter={(e) => e.target.style.backgroundColor = '#b0b0b0'}
-                                    onMouseLeave={(e) => e.target.style.backgroundColor = '#cbcbcb'}
-                                >
-                                    Import from Sheets
-                                </button>
-                            )}
-                            {isAdmin() && (
-                                <button
                                 onClick={async () => {
                                     if (!selectedClaimTitle) {
                                         alert('❌ Please select a claim from the dropdown first');
@@ -2231,12 +2321,12 @@ First download the file/image/video, and then upload it into the corresponding G
                                     if (confirmed) {
                                         try {
                                             await publishDraftToLive(selectedClaimTitle);
-                                            alert(`✅ Successfully published "${selectedClaimTitle}" to data.js and homepage!`);
+                                            console.log(`✅ Successfully published "${selectedClaimTitle}" to data.js and homepage!`);
                                             // Force re-render to show updated data
                                             setClaimDataVersion(prev => prev + 1);
                                         } catch (error) {
                                             console.error('Error publishing data:', error);
-                                            alert(`❌ Error publishing data: ${error.message}`);
+                                            console.error(`❌ Error publishing data: ${error.message}`);
                                         }
                                     }
                                 }}
@@ -2462,7 +2552,6 @@ First download the file/image/video, and then upload it into the corresponding G
                                             alert(`✅ Claim "${selectedClaimTitle}" sent to review` + (message ? ' with message' : '') + (screenshot ? ' with screenshot' : ''));
                                         } catch (error) {
                                             console.error('Error updating status:', error);
-                                            alert('❌ Error updating status. Please try again.');
                                         }
                                     }}
                                     className="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
@@ -2541,10 +2630,9 @@ First download the file/image/video, and then upload it into the corresponding G
                                             });
                                             
                                             setShowReadyToPublishModal(false);
-                                            alert(`✅ Claim "${selectedClaimTitle}" marked as ready to publish` + (message ? ' with message' : '') + (screenshot ? ' with screenshot' : ''));
+                                            console.log(`✅ Claim "${selectedClaimTitle}" marked as ready to publish` + (message ? ' with message' : '') + (screenshot ? ' with screenshot' : ''));
                                         } catch (error) {
                                             console.error('Error updating status:', error);
-                                            alert('❌ Error updating status. Please try again.');
                                         }
                                     }}
                                     className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors"

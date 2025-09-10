@@ -96,6 +96,11 @@ const summaries = [
         "claimSummary": "Israeli officials denied that famine conditions existed in Gaza, despite warnings from international humanitarian organizations about acute food insecurity."
     },
     {
+        "claimMainTitle": "1400 | Revisions of number of Israelis killed",
+        "claimSummary": "The Israeli death toll from October 7 was revised multiple times, from initial claims of 1,400 to a final count of approximately 1,200, raising questions about initial reporting.",
+        "customUrl": "number-killed"
+    },
+    {
         "claimMainTitle": "Babies hung on clotheslines",
         "claimSummary": "Unsubstantiated and horrific claims spread on social media alleging Palestinian fighters hung babies on clotheslines during Operation Al-Aqsa Flood."
     },
@@ -359,11 +364,6 @@ const summaries = [
         "claimMainTitle": "claim",
         "claimSummary": "THIS IS A TEST",
         "customUrl": "claim-two-three"
-    },
-    {
-        "claimMainTitle": "1400 | Revisions of number of Israelis killed",
-        "claimSummary": "The Israeli death toll from October 7 was revised multiple times, from initial claims of 1,400 to a final count of approximately 1,200, raising questions about initial reporting.",
-        "customUrl": "number-killed"
     }
 ];
 
@@ -3417,6 +3417,21 @@ const data = [
         "isDraft": true
     },
     {
+        "claimTitle": "1400 | Revisions of number of Israelis killed",
+        "date": "2023-10-08",
+        "claim": {
+            "claimText": "Claim needs evidence",
+            "claimTag": "unverified-tag"
+        },
+        "description": {
+            "summary": "This claim requires fact-checking and evidence compilation",
+            "details": ""
+        },
+        "sources": [],
+        "isNew": true,
+        "isDraft": true
+    },
+    {
         "claimTitle": "Babies hung on clotheslines",
         "date": "2023-10-08",
         "claim": {
@@ -4785,29 +4800,6 @@ const data = [
         "isEditing": true,
         "isNew": true,
         "isDraft": false
-    },
-    {
-        "claimTitle": "1400 | Revisions of number of Israelis killed",
-        "date": "",
-        "claim": {
-            "claimText": "",
-            "claimTag": ""
-        },
-        "description": {
-            "summary": "The Israeli death toll from October 7 was revised multiple times, from initial claims of 1,400 to a final count of approximately 1,200, raising questions about initial reporting.",
-            "details": ""
-        },
-        "sources": [
-            {
-                "sourceName": "",
-                "sourceLink": "",
-                "archiveLink": "",
-                "videoPreviewLink": ""
-            }
-        ],
-        "isDraft": true,
-        "lastEditedBy": "current_user",
-        "lastEditedAt": "2025-09-10T13:36:35.291Z"
     }
 ];
 

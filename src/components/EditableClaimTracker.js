@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { useTable, useSortBy } from 'react-table';
 import { HelmetProvider } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 
 // Page components
 import '../App.css';
@@ -15,7 +15,170 @@ import BackToTop from './BackToTop';
 import Header from './Header';
 import { data, summaries } from './data';
 import { useAuth } from '../contexts/AuthContext';
-import { NavLink } from 'react-router-dom';
+
+// Add CSS animations for fade effects
+const animationStyles = `
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Arrow-style publication flow buttons */
+.publication-flow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.flow-button {
+    position: relative;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 13px;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+    min-width: 130px;
+    text-align: center;
+    color: #333;
+    background-color: #d1d5db;
+    border-left: 3px solid #9ca3af;
+}
+
+.flow-button:first-child {
+    border-radius: 8px 0 0 8px;
+    padding-right: 30px;
+}
+
+.flow-button:last-child {
+    border-radius: 0 8px 8px 0;
+    padding-left: 30px;
+}
+
+.flow-button:not(:first-child):not(:last-child) {
+    padding: 8px 30px;
+}
+
+.flow-button::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -16px;
+    width: 0;
+    height: 0;
+    border-left: 16px solid #d1d5db;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.flow-button::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -17px;
+    width: 0;
+    height: 0;
+    border-left: 17px solid #000;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    z-index: 1;
+}
+
+.flow-button:last-child::after,
+.flow-button:last-child::before {
+    display: none;
+}
+
+/* Hover states - fade in colors */
+.flow-button.review:hover {
+    background-color: #fac798;
+    border-left-color: #f4a261;
+}
+
+.flow-button.review:hover::after {
+    border-left-color: #fac798;
+}
+
+.flow-button.ready:hover {
+    background-color: #bffb9b;
+    border-left-color: #a8e063;
+}
+
+.flow-button.ready:hover::after {
+    border-left-color: #bffb9b;
+}
+
+.flow-button.published:hover {
+    background-color: #78ff96;
+    border-left-color: #52c93f;
+}
+
+.flow-button.published:hover::after {
+    border-left-color: #78ff96;
+}
+
+/* Active states - when status is current */
+.flow-button.review.active {
+    background-color: #fac798;
+    border-left-color: #f4a261;
+}
+
+.flow-button.review.active::after {
+    border-left-color: #fac798;
+}
+
+.flow-button.ready.active {
+    background-color: #bffb9b;
+    border-left-color: #a8e063;
+}
+
+.flow-button.ready.active::after {
+    border-left-color: #bffb9b;
+}
+
+.flow-button.published.active {
+    background-color: #78ff96;
+    border-left-color: #52c93f;
+}
+
+.flow-button.published.active::after {
+    border-left-color: #78ff96;
+}
+
+.flow-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+`;
 
 // Helper function to format date as "9 Nov 2023"
 const formatDisplayDate = (dateString) => {
@@ -23,6 +186,103 @@ const formatDisplayDate = (dateString) => {
     const date = new Date(dateString);
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+};
+
+// Custom dropdown component with status colors
+const CustomDropdown = ({ value, onChange, options, statusColors }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = React.useRef(null);
+    
+    // Close dropdown when clicking outside
+    React.useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+    
+    const handleSelect = (option) => {
+        onChange(option);
+        setIsOpen(false);
+    };
+
+    const getStatusColor = (title) => {
+        if (!title || title === '' || title === 'CREATE_NEW') return '#ffffff';
+        const status = localStorage.getItem(`claim_status_${title}`) || 'UNASSIGNED';
+        return statusColors[status] || statusColors['UNASSIGNED'];
+    };
+
+    return (
+        <div ref={dropdownRef} style={{ position: 'relative', width: '100%' }}>
+            <div
+                onClick={() => setIsOpen(!isOpen)}
+                style={{
+                    width: '100%',
+                    padding: '8px 12px',
+                    border: '1px solid #ccc',
+                    borderRadius: '4px',
+                    backgroundColor: getStatusColor(value),
+                    fontSize: '14px',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
+                }}
+            >
+                <span>{value === 'CREATE_NEW' ? '+ CREATE NEW CLAIM' : (value || '-- Select a claim to edit --')}</span>
+                <span style={{ fontSize: '12px', color: '#666' }}>▼</span>
+            </div>
+            
+            {isOpen && (
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: '100%',
+                        left: 0,
+                        right: 0,
+                        backgroundColor: 'white',
+                        border: '1px solid #ccc',
+                        borderTop: 'none',
+                        borderRadius: '0 0 4px 4px',
+                        maxHeight: '300px',
+                        overflowY: 'auto',
+                        zIndex: 1000
+                    }}
+                >
+                    {options.map((option) => (
+                        <div
+                            key={option.value}
+                            onClick={() => handleSelect(option.value)}
+                            style={{
+                                padding: '8px 12px',
+                                backgroundColor: getStatusColor(option.value),
+                                cursor: 'pointer',
+                                fontSize: '14px',
+                                borderBottom: '1px solid #eee',
+                                ':hover': { backgroundColor: '#f0f0f0' }
+                            }}
+                            onMouseEnter={(e) => {
+                                if (option.value !== '' && option.value !== 'CREATE_NEW') {
+                                    e.target.style.filter = 'brightness(0.9)';
+                                }
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.filter = 'brightness(1)';
+                            }}
+                        >
+                            {option.label}
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
 };
 
 // Animated message component with fade-in animation
@@ -77,11 +337,12 @@ try {
 }
 
 // Function to save new claim to draft (not live data)
-const saveNewClaimToDraft = (claimTitle, claimSummary) => {
+const saveNewClaimToDraft = (claimTitle, claimSummary, customUrl = '') => {
     // Create the new summary object
     const newSummary = {
         claimMainTitle: claimTitle,
         claimSummary: claimSummary,
+        customUrl: customUrl || claimTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''),
     };
     
     // Create the default claim object structure
@@ -139,29 +400,45 @@ const saveDraft = () => {
     }
 };
 
-// Function to publish draft data to live data.js
-const publishDraftToLive = async () => {
+// Function to publish draft data to live data.js (only for selected claim)
+const publishDraftToLive = async (claimTitle) => {
+    if (!claimTitle) {
+        throw new Error('No claim selected for publishing');
+    }
+    
     try {
-        // Prepare the data to send to the server
-        const cleanedData = draftData.map(item => ({ ...item, isDraft: false }));
+        // Only publish data for the selected claim
+        const selectedClaimData = draftData.filter(item => item.claimTitle === claimTitle);
+        const selectedClaimSummary = draftSummaries.find(summary => summary.claimMainTitle === claimTitle);
+        
+        if (selectedClaimData.length === 0) {
+            throw new Error(`No draft data found for claim: "${claimTitle}"`);
+        }
+        
+        if (!selectedClaimSummary) {
+            throw new Error(`No summary found for claim: "${claimTitle}"`);
+        }
+        
+        // Prepare the data to send to the server (just the claim title)
         const payload = {
-            summaries: draftSummaries,
-            data: cleanedData
+            claimTitle: claimTitle
         };
 
         // Debug: Log the payload being sent
-        console.log('📤 Publishing:', {
-            summaries: payload.summaries.length,
-            data: payload.data.length
-        });
+        console.log('📤 Publishing claim:', claimTitle);
 
-        // Send POST request to the server API - use full URL to bypass proxy issues
-        const response = await fetch('http://localhost:3001/api/publish-data', {
+        // Write claim to data.js and mark as PUBLISHED
+        const response = await fetch('http://localhost:3001/api/write-to-datajs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify({
+                action: 'add_claim',
+                claimTitle: claimTitle,
+                summary: selectedClaimSummary,
+                data: selectedClaimData.map(item => ({ ...item, isDraft: false }))
+            })
         });
 
         if (!response.ok) {
@@ -173,13 +450,13 @@ const publishDraftToLive = async () => {
 
         const result = await response.json();
         
-        // Update the in-memory data arrays only after successful server write
-        data.length = 0;
-        summaries.length = 0;
-        data.push(...cleanedData);
-        summaries.push(...draftSummaries);
+        // Mark as PUBLISHED in localStorage so it appears in ClaimsList
+        localStorage.setItem(`claim_status_${claimTitle}`, 'PUBLISHED');
         
-        console.log('✅ Draft data successfully published to live data.js');
+        // Trigger update for ClaimsList
+        window.dispatchEvent(new CustomEvent('claimsUpdated'));
+        
+        console.log(`✅ Claim "${claimTitle}" successfully published to data.js and marked as PUBLISHED`);
         return result;
     } catch (error) {
         console.error('❌ Error publishing draft data:', error);
@@ -193,9 +470,375 @@ const publishDraftToLive = async () => {
     }
 };
 
+
+// Function to delete claim from both draft and live data
+const deleteClaimCompletely = async (claimTitle) => {
+    if (!claimTitle) {
+        throw new Error('No claim selected for deletion');
+    }
+    
+    try {
+        // Remove from draft data
+        const filteredDraftData = draftData.filter(item => item.claimTitle !== claimTitle);
+        const filteredDraftSummaries = draftSummaries.filter(summary => summary.claimMainTitle !== claimTitle);
+        
+        // Update draft arrays
+        draftData.length = 0;
+        draftSummaries.length = 0;
+        draftData.push(...filteredDraftData);
+        draftSummaries.push(...filteredDraftSummaries);
+        
+        // Remove from live data
+        const filteredLiveData = data.filter(item => item.claimTitle !== claimTitle);
+        const filteredLiveSummaries = summaries.filter(summary => summary.claimMainTitle !== claimTitle);
+        
+        // Update live arrays
+        data.length = 0;
+        summaries.length = 0;
+        data.push(...filteredLiveData);
+        summaries.push(...filteredLiveSummaries);
+        
+        // Send DELETE request to server to update data.js file
+        const response = await fetch('http://localhost:3001/api/write-to-datajs', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                action: 'delete_claim',
+                claimTitle: claimTitle
+            })
+        });
+
+        if (!response.ok) {
+            let errorMessage = 'Failed to delete claim from server';
+            try {
+                const errorData = await response.json();
+                errorMessage = errorData.error || errorMessage;
+            } catch (parseError) {
+                // If JSON parsing fails, use response text
+                const errorText = await response.text();
+                errorMessage = `Server error (${response.status}): ${errorText.substring(0, 200)}`;
+            }
+            throw new Error(errorMessage);
+        }
+
+        // Remove from localStorage
+        localStorage.removeItem(`claim_status_${claimTitle}`);
+        localStorage.removeItem(`review_data_${claimTitle}`);
+        localStorage.removeItem(`ready_data_${claimTitle}`);
+        
+        // Trigger update for ClaimsList to remove it from homepage
+        window.dispatchEvent(new CustomEvent('claimsUpdated'));
+        
+        // Save draft after deletion
+        saveDraft();
+        
+        console.log(`✅ Claim "${claimTitle}" completely deleted from system`);
+        return { success: true };
+        
+    } catch (error) {
+        console.error('❌ Error deleting claim:', error);
+        throw error;
+    }
+};
+
+// Function to update claim summary and custom URL - DIRECTLY writes to data.js
+const updateClaimSummaryAndUrl = async (claimTitle, newSummary, newUrl) => {
+    try {
+        console.log('🔧 updateClaimSummaryAndUrl called with:', {
+            claimTitle,
+            newSummary: newSummary?.substring(0, 50) + '...',
+            newUrl
+        });
+        
+        const updatedSummary = {
+            claimMainTitle: claimTitle,
+            claimSummary: newSummary,
+            customUrl: newUrl || claimTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
+        };
+        
+        console.log('📦 Sending to server:', updatedSummary);
+
+        // Send directly to server to write to data.js
+        const response = await fetch('http://localhost:3001/api/write-to-datajs', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                action: 'update_summary',
+                claimTitle: claimTitle,
+                summary: updatedSummary
+            })
+        });
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Failed to update data.js: ${errorText}`);
+        }
+
+        // Update in-memory data to match what's now in data.js
+        const summaryIndex = summaries.findIndex(s => s.claimMainTitle === claimTitle);
+        if (summaryIndex !== -1) {
+            summaries[summaryIndex] = updatedSummary;
+        } else {
+            summaries.push(updatedSummary);
+        }
+
+        // Update draft summaries to stay in sync - create new array to trigger React updates
+        const draftIndex = draftSummaries.findIndex(s => s.claimMainTitle === claimTitle);
+        if (draftIndex !== -1) {
+            draftSummaries[draftIndex] = { ...updatedSummary };
+        } else {
+            draftSummaries.push({ ...updatedSummary });
+        }
+        
+        // Force React to recognize the array change by creating new reference
+        const newDraftSummaries = [...draftSummaries];
+        draftSummaries.length = 0;
+        draftSummaries.push(...newDraftSummaries);
+        
+        // Trigger ClaimsList update event for homepage sync
+        window.dispatchEvent(new CustomEvent('claimsUpdated'));
+        
+        // Force component re-render by updating data version
+        window.dispatchEvent(new CustomEvent('dataUpdated'));
+        
+        console.log(`✅ Updated summary and URL for "${claimTitle}" directly in data.js`);
+        return true;
+        
+    } catch (error) {
+        console.error('❌ Error updating summary and URL:', error);
+        alert(`❌ Error updating summary: ${error.message}`);
+        return false;
+    }
+};
+
+// Helper function to populate data.js with Google Sheets data (only Needs Review items)
+const populateFromGoogleSheets = async () => {
+    try {
+        const response = await fetch('https://user-backend.izumi-ky.workers.dev/api/populate-from-sheets', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Worker-Secret': 'hasbara-sync-secret-2025'
+            }
+        });
+
+        if (response.ok) {
+            const result = await response.json();
+            console.log('✅ Successfully populated data from Google Sheets:', result);
+            return result;
+        } else {
+            const error = await response.json();
+            throw new Error(error.error || 'Failed to populate from Google Sheets');
+        }
+    } catch (error) {
+        console.error('❌ Error populating from Google Sheets:', error);
+        throw error;
+    }
+};
+
+// Helper function to send email notifications for review/approval actions only
+const sendEmailNotification = async (action, claimTitle, userEmail, additionalData = {}) => {
+    try {
+        // Only send emails for these specific actions
+        if (!['Sent to Review', 'Ready to Publish'].includes(action)) {
+            return;
+        }
+        
+        const currentTime = new Date().toLocaleString();
+        const actionColor = action === 'Sent to Review' ? '#ff9500' : '#16a34a';
+        const actionIcon = action === 'Sent to Review' ? '📝' : '✅';
+        
+        // Convert screenshot file to base64 if provided
+        let screenshotBase64 = '';
+        if (additionalData.screenshot && additionalData.screenshot instanceof File) {
+            try {
+                screenshotBase64 = await fileToBase64(additionalData.screenshot);
+            } catch (error) {
+                console.warn('Failed to convert screenshot to base64:', error);
+            }
+        }
+
+        const emailBody = `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Claims Editor - ${action}</title>
+                <style>
+                    body { font-family: Helvetica, Arial, sans-serif; line-height: 1.4; color: #333; margin: 0; padding: 0; background-color: #f4f4f4; }
+                    .email-container { max-width: 600px; margin: 0 auto; background-color: #d6d6d6; }
+                    .header { background-color: #d6d6d6; padding: 30px 20px; text-align: center; border-radius: 3px; margin-bottom: 20px; }
+                    .content { background: #d6d6d6; padding: 40px 30px; border-radius: 3px; border: 1px solid #cbcbcb; }
+                    .details-box { background: #d6d6d6; border: 1px solid #e0e0e0; border-radius: 3px; padding: 20px; margin: 25px 0; }
+                    .action-buttons { text-align: center; margin: 35px 0; }
+                    .action-button { display: inline-flex; justify-content: center; align-items: center; background-color: #bffb9b; color: #333; padding: 12px 24px; text-decoration: none; border-radius: 3px; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; border: solid 1px #5e5e5e; margin: 0 10px 15px 0; }
+                    .footer { text-align: center; margin-top: 30px; padding: 20px; color: #595959; font-size: 12px; }
+                    .screenshot { max-width: 100%; border-radius: 3px; border: 1px solid #ccc; margin: 15px 0; }
+                    ul { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6; }
+                    h2 { color: #333; margin-top: 0; font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: normal; }
+                    h3 { color: #333; margin-top: 0; font-size: 16px; font-weight: bold; }
+                </style>
+            </head>
+            <body>
+                <div class="email-container">
+                    <!-- Header with Hasbara Tracker logo -->
+                    <div class="header">
+                        <img src="https://files.hasbaratracker.com/ht-logo-with-slogan.svg" 
+                             alt="Hasbara Tracker - Debunking Israeli propaganda" 
+                             style="max-width: 300px; width: 100%; height: auto;" />
+                    </div>
+                    
+                    <!-- Main content -->
+                    <div class="content">
+                        <h2 style="color: ${actionColor};">
+                            ${actionIcon} Claims Editor: ${action}
+                        </h2>
+                        
+                        <p style="margin-bottom: 20px; font-size: 14px; line-height: 1.5;">
+                            A claim has been marked as "${action}" in the Claims Editor.
+                        </p>
+                        
+                        <!-- Claim Details -->
+                        <div class="details-box">
+                            <h3>Claim Details:</h3>
+                            <ul>
+                                <li><strong>Claim Title:</strong> ${claimTitle}</li>
+                                <li><strong>Action:</strong> ${action}</li>
+                                <li><strong>Editor:</strong> ${userEmail}</li>
+                                <li><strong>Time:</strong> ${currentTime}</li>
+                                ${additionalData.message ? `<li><strong>Message:</strong><br/><em>"${additionalData.message}"</em></li>` : ''}
+                            </ul>
+                        </div>
+                        
+                        ${screenshotBase64 ? `
+                        <!-- Screenshot -->
+                        <div class="details-box">
+                            <h3>Attached Screenshot:</h3>
+                            <img src="data:image/png;base64,${screenshotBase64}" 
+                                 alt="Screenshot" 
+                                 class="screenshot" />
+                        </div>
+                        ` : ''}
+                        
+                        <!-- Action Buttons -->
+                        <div class="action-buttons">
+                            <a href="https://hasbaratracker.com/claim-editor" class="action-button">
+                                Open Claims Editor
+                            </a>
+                            <a href="https://hasbaratracker.com/status" class="action-button">
+                                View Status Page
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Footer -->
+                    <div class="footer">
+                        <p style="margin: 0;">
+                            This notification was sent automatically from the Claims Editor at <a href="https://hasbaratracker.com/claim-editor" target="_blank">hasbaratracker.com/claim-editor</a>.
+                        </p>
+                    </div>
+                </div>
+            </body>
+            </html>
+        `;
+
+        const emailData = {
+            to: 'info@hasbaratracker.com',
+            from: 'notifications@hasbaratracker.com',
+            subject: `${actionIcon} Claims Editor: ${action} - ${claimTitle}`,
+            type: 'notification',
+            html: emailBody,
+            text: `Claims Editor: ${action}\n\nClaim: ${claimTitle}\nEditor: ${userEmail}\nAction: ${action}\nTime: ${currentTime}${additionalData.message ? `\nMessage: ${additionalData.message}` : ''}${additionalData.screenshot ? '\n\nScreenshot attached' : ''}\n\nView at: https://hasbaratracker.com/claim-editor`
+        };
+
+        // Send directly to email worker (same as volunteer form)
+        const response = await fetch('https://email-worker.izumi-ky.workers.dev', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(emailData)
+        });
+
+        if (response.ok) {
+            console.log(`✅ Email notification sent for: ${action}`);
+        } else {
+            console.warn(`⚠️ Failed to send email notification for: ${action} (Status: ${response.status})`);
+        }
+    } catch (error) {
+        console.warn('⚠️ Email notification failed (non-critical):', error.message);
+        // Don't throw error for email failures - they shouldn't block user actions
+    }
+};
+
+// Helper function to convert file to base64
+const fileToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => {
+            // Remove data URL prefix (data:image/png;base64,)
+            const base64 = reader.result.split(',')[1];
+            resolve(base64);
+        };
+        reader.onerror = error => reject(error);
+    });
+};
+
 export default function EditableClaimTracker() {
     const { user, canAccessClaim, isAdmin, logout } = useAuth();
     const location = useLocation();
+    
+    // Mark published claims to match live site (run once)
+    React.useEffect(() => {
+        const publishedClaims = [
+            "Forty beheaded babies",
+            "Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces", 
+            "Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas",
+            "Makeup used in Gaza to fake injuries",
+            "Hamas were carrying instructions on how to make chemical weapons",
+            "Israeli state denies killing mother and daughter seeking refuge in Gaza's Holy Family Parish",
+            "Israeli soldier helps elderly Palestinian man in 'safe corridor'",
+            "Palestinian captives stripped down naked because of 'warm weather' in the Middle East, says Mark Regev"
+        ];
+        
+        publishedClaims.forEach(claimTitle => {
+            if (!localStorage.getItem(`claim_status_${claimTitle}`)) {
+                localStorage.setItem(`claim_status_${claimTitle}`, 'PUBLISHED');
+            }
+        });
+
+        // Mark additional claims as IN_PROGRESS
+        const inProgressClaims = [
+            "Hamas stealing flour and food from UNRWA",
+            "Israeli state denies targeting journalists in Gaza",
+            "Israeli state and AIPAC say the Artists4Ceasefire (A4C) logo represents Ramallah attack",
+            "Weapons confiscated during the IOF's 3-day offensive in Jenin refugee camp",
+            "Dead Palestinian children are dolls",
+            "Keir Starmer says Israel 'has the right' to cut off power and water",
+            "Sexual violence used by Palestinian resistance on 7 October",
+            "The pro-Palestine student encampments are an 'organised cell' funded by foreign states",
+            "Harvard hates Jews' banner flown by plane across campus by Palestine activists",
+            "There is no limit to the amount of aid that can be facilitated into Gaza",
+            "Israel detains 'terrorists' in Gaza, strips them down to their clothes"
+        ];
+        
+        inProgressClaims.forEach(claimTitle => {
+            if (!localStorage.getItem(`claim_status_${claimTitle}`)) {
+                localStorage.setItem(`claim_status_${claimTitle}`, 'IN_PROGRESS');
+            }
+        });
+        
+        // Trigger ClaimsList update
+        window.dispatchEvent(new CustomEvent('claimsUpdated'));
+        
+        console.log('✅ Marked claims as PUBLISHED to match live site');
+    }, []);
     
     const metadataProps = {
         url: "https://hasbaratracker.com/admin/edit",
@@ -232,9 +875,17 @@ export default function EditableClaimTracker() {
     const [isCreatingNew, setIsCreatingNew] = useState(false);
     const [newClaimTitle, setNewClaimTitle] = useState('');
     const [newClaimSummary, setNewClaimSummary] = useState('');
+    const [newClaimUrl, setNewClaimUrl] = useState('');
     const [showSaveMessage, setShowSaveMessage] = useState(false);
     const [claimDataVersion, setClaimDataVersion] = useState(0); // To trigger dropdown re-render
     const [isDeletingClaim, setIsDeletingClaim] = useState(false); // Flag to prevent auto-saving during deletion
+    const [isTableVisible, setIsTableVisible] = useState(false); // For fade-in animation
+    const [isEditingSummary, setIsEditingSummary] = useState(false);
+    const [editedSummary, setEditedSummary] = useState('');
+    const [editedUrl, setEditedUrl] = useState('');
+    const [currentClaimUrl, setCurrentClaimUrl] = useState(''); // Track the current claim's URL
+    const [showReviewModal, setShowReviewModal] = useState(false); // For TO REVIEW message modal
+    const [showReadyToPublishModal, setShowReadyToPublishModal] = useState(false); // For READY TO PUBLISH message modal
     const [lastDraftSave, setLastDraftSave] = useState(() => {
         try {
             const savedDraft = localStorage.getItem('hasbaratracker_draft_save');
@@ -462,10 +1113,13 @@ export default function EditableClaimTracker() {
         const statusKey = `claim_status_${selectedClaimTitle}`;
         localStorage.setItem(statusKey, status);
         
+        // Trigger custom event to update ClaimsList.js
+        window.dispatchEvent(new CustomEvent('claimsUpdated'));
+        
         // Show confirmation message
         const statusLabels = {
             'IN_PROGRESS': 'In Progress',
-            'NEEDS_REVIEW': 'Needs Review', 
+            'NEEDS_REVIEW': 'To review', 
             'READY_TO_PUBLISH': 'Ready to Publish'
         };
         
@@ -476,10 +1130,12 @@ export default function EditableClaimTracker() {
     const handleClaimSelection = useCallback((claimTitle) => {
         if (!claimTitle) {
             setSelectedClaimTitle('');
+            setCurrentClaimUrl(''); // Clear current URL when no claim selected
             return;
         }
 
         setSelectedClaimTitle(claimTitle);
+        setCurrentClaimUrl(''); // Reset URL state when switching claims
         setIsPopulating(true);
 
         // Filter DRAFT data by selected claim title
@@ -508,6 +1164,15 @@ export default function EditableClaimTracker() {
             handleClaimSelection(claimParam);
         }
     }, [location.search, handleClaimSelection]);
+
+    // Trigger fade-in animation on component load
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsTableVisible(true);
+        }, 300); // Delay the animation slightly for better effect
+        
+        return () => clearTimeout(timer);
+    }, []);
 
     // Get unique claim titles for dropdown (filtered by user permissions) - using draft data
     const uniqueClaimTitles = useMemo(() => {
@@ -540,7 +1205,12 @@ export default function EditableClaimTracker() {
         
         console.log(`📋 CLAIM-EDITOR: Final dropdown claims list:`, titles);
         console.log(`📊 CLAIM-EDITOR: Total accessible claims: ${titles.length}`);
-        return titles.sort();
+        return titles.sort((a, b) => {
+            // Remove quotes for comparison
+            const titleA = a.replace(/^['"]|['"]$/g, '');
+            const titleB = b.replace(/^['"]|['"]$/g, '');
+            return titleA.localeCompare(titleB);
+        });
     }, [isAdmin, canAccessClaim, claimDataVersion, user]);
 
     // Get selected claim summary - using draft summaries
@@ -549,6 +1219,19 @@ export default function EditableClaimTracker() {
         const summary = draftSummaries.find(s => s.claimMainTitle === selectedClaimTitle);
         return summary?.claimSummary || '';
     }, [selectedClaimTitle, claimDataVersion]);
+
+    // Get selected claim custom URL - using draft summaries or current state
+    const selectedClaimUrl = useMemo(() => {
+        if (!selectedClaimTitle) return '';
+        
+        // Use currentClaimUrl state if it's for the current claim and has been set
+        if (currentClaimUrl && selectedClaimTitle) {
+            return currentClaimUrl;
+        }
+        
+        const summary = draftSummaries.find(s => s.claimMainTitle === selectedClaimTitle);
+        return summary?.customUrl || selectedClaimTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    }, [selectedClaimTitle, claimDataVersion, currentClaimUrl]);
 
     // Tooltip component
     const Tooltip = ({ text, children }) => (
@@ -676,14 +1359,42 @@ export default function EditableClaimTracker() {
                             rows="2"
                             placeholder="Summary"
                         />
-                        <textarea
-                            value={row.original.description.details || ''}
-                            onChange={(e) => {
+                        <div
+                            contentEditable
+                            suppressContentEditableWarning={true}
+                            onInput={(e) => {
                                 e.stopPropagation();
-                                updateField(row.index, 'description.details', e.target.value);
+                                // Get HTML content but clean it up
+                                const htmlContent = e.target.innerHTML
+                                    .replace(/<div><br><\/div>/g, '<br>')
+                                    .replace(/<div>/g, '<br>')
+                                    .replace(/<\/div>/g, '');
+                                updateField(row.index, 'description.details', htmlContent);
                             }}
-                            onKeyDown={(e) => e.stopPropagation()}
-                            onInput={(e) => e.stopPropagation()}
+                            onKeyDown={(e) => {
+                                e.stopPropagation();
+                                // Handle formatting shortcuts
+                                if (e.ctrlKey || e.metaKey) {
+                                    if (e.key === 'b') {
+                                        e.preventDefault();
+                                        document.execCommand('bold', false, null);
+                                    } else if (e.key === 'i') {
+                                        e.preventDefault();
+                                        document.execCommand('italic', false, null);
+                                    }
+                                }
+                            }}
+                            onBlur={(e) => {
+                                // Ensure content is saved on blur with cleanup
+                                const htmlContent = e.target.innerHTML
+                                    .replace(/<div><br><\/div>/g, '<br>')
+                                    .replace(/<div>/g, '<br>')
+                                    .replace(/<\/div>/g, '');
+                                updateField(row.index, 'description.details', htmlContent);
+                            }}
+                            dangerouslySetInnerHTML={{ 
+                                __html: row.original.description.details || '' 
+                            }}
                             style={{
                                 width: '100%',
                                 padding: '4px',
@@ -692,10 +1403,10 @@ export default function EditableClaimTracker() {
                                 backgroundColor: '#cbcbcb',
                                 fontSize: '0.9em',
                                 fontFamily: 'Helvetica, sans-serif',
-                                resize: 'vertical'
+                                minHeight: '80px',
+                                outline: 'none'
                             }}
-                            rows="4"
-                            placeholder="Details"
+                            data-placeholder="Details (Ctrl+B for bold, Ctrl+I for italic)"
                         />
                     </div>
                 ) : (
@@ -1030,6 +1741,9 @@ First download the file/image/video, and then upload it into the corresponding G
         <HelmetProvider>
             <>
                 <PageMetadata {...metadataProps} />
+                
+                {/* Inject animation styles */}
+                <style>{animationStyles}</style>
 
                 {/* Header */}
                 <Header />
@@ -1040,41 +1754,36 @@ First download the file/image/video, and then upload it into the corresponding G
                             <label className="block text-sm font-medium mb-0 font-lores">
                                 <strong>SELECT CLAIM</strong>
                             </label>
-                            <select
+                            <CustomDropdown
                                 value={isCreatingNew ? 'CREATE_NEW' : selectedClaimTitle}
-                                onChange={(e) => {
-                                    if (e.target.value === 'CREATE_NEW') {
+                                onChange={(value) => {
+                                    if (value === 'CREATE_NEW') {
                                         setIsCreatingNew(true);
                                         setSelectedClaimTitle('');
                                         setNewClaimTitle('');
                                         setNewClaimSummary('');
+                                        setNewClaimUrl('');
                                         // Clear the table data
                                         setClaimData([]);
                                         setEditingRows(new Set());
                                     } else {
                                         setIsCreatingNew(false);
-                                        handleClaimSelection(e.target.value);
+                                        handleClaimSelection(value);
                                     }
                                 }}
-                                style={{
-                                    width: '100%',
-                                    maxWidth: '500px',
-                                    padding: '8px 12px',
-                                    border: '1px solid #ccc',
-                                    borderRadius: '4px',
-                                    backgroundColor: 'white',
-                                    fontSize: '14px',
-                                    cursor: 'pointer'
+                                statusColors={{
+                                    'UNASSIGNED': '#b9b9b9',
+                                    'IN_PROGRESS': '#b7fbf3', 
+                                    'NEEDS_REVIEW': '#fac798',
+                                    'READY_TO_PUBLISH': '#bffb9b',
+                                    'PUBLISHED': '#78ff96'
                                 }}
-                            >
-                                <option value="">-- Select a claim to edit --</option>
-                                <option value="CREATE_NEW">+ CREATE NEW CLAIM</option>
-                                {uniqueClaimTitles.map((title) => (
-                                    <option key={title} value={title}>
-                                        {title}
-                                    </option>
-                                ))}
-                            </select>
+                                options={[
+                                    { value: '', label: '-- Select a claim to edit --' },
+                                    ...(isAdmin() ? [{ value: 'CREATE_NEW', label: '+ CREATE NEW CLAIM' }] : []),
+                                    ...uniqueClaimTitles.map(title => ({ value: title, label: title }))
+                                ]}
+                            />
                         </div>
                     </div>
 
@@ -1127,6 +1836,23 @@ First download the file/image/video, and then upload it into the corresponding G
                                         }}
                                     />
                                     
+                                    <input
+                                        type="text"
+                                        value={newClaimUrl}
+                                        onChange={(e) => setNewClaimUrl(e.target.value)}
+                                        placeholder="Custom URL (e.g., makeup, beheaded-babies, hospital-attack)"
+                                        style={{
+                                            width: '100%',
+                                            maxWidth: '600px',
+                                            padding: '8px 12px',
+                                            border: '1px solid #ccc',
+                                            borderRadius: '4px',
+                                            fontSize: '14px',
+                                            backgroundColor: '#cbcbcb',
+                                            marginBottom: '15px'
+                                        }}
+                                    />
+                                    
                                     {showSaveMessage ? (
                                         <div 
                                             style={{
@@ -1144,7 +1870,7 @@ First download the file/image/video, and then upload it into the corresponding G
                                                 if (newClaimTitle.trim() && newClaimSummary.trim()) {
                                                     try {
                                                         // Add new claim to DRAFT (not live data)
-                                                        saveNewClaimToDraft(newClaimTitle, newClaimSummary);
+                                                        saveNewClaimToDraft(newClaimTitle, newClaimSummary, newClaimUrl);
                                                         
                                                         // Force dropdown to re-render with new claim
                                                         setClaimDataVersion(prev => prev + 1);
@@ -1163,6 +1889,7 @@ First download the file/image/video, and then upload it into the corresponding G
                                                         setTimeout(() => {
                                                             setNewClaimTitle('');
                                                             setNewClaimSummary('');
+                                                            setNewClaimUrl('');
                                                             setShowSaveMessage(false);
                                                         }, 3000);
                                                         
@@ -1185,7 +1912,145 @@ First download the file/image/video, and then upload it into the corresponding G
                                     )}
                                 </div>
                             ) : (
-                                selectedClaimSummary || 'Live editing interface for claims data. Click "Edit" to modify rows, add sources, and export JSON for your data.js file.'
+                                <div>
+                                    {selectedClaimTitle ? (
+                                        <div>
+                                            {isEditingSummary ? (
+                                                <div style={{ marginBottom: '15px' }}>
+                                                    <textarea
+                                                        value={editedSummary}
+                                                        onChange={(e) => setEditedSummary(e.target.value)}
+                                                        placeholder="Enter claim summary..."
+                                                        rows="3"
+                                                        style={{
+                                                            width: '100%',
+                                                            padding: '8px 12px',
+                                                            border: '1px solid #ccc',
+                                                            borderRadius: '4px',
+                                                            fontSize: '14px',
+                                                            resize: 'vertical',
+                                                            backgroundColor: '#f9f9f9',
+                                                            marginBottom: '10px'
+                                                        }}
+                                                    />
+                                                    <input
+                                                        type="text"
+                                                        value={editedUrl}
+                                                        onChange={(e) => setEditedUrl(e.target.value)}
+                                                        placeholder="Custom URL (e.g., makeup, beheaded-babies)"
+                                                        style={{
+                                                            width: '100%',
+                                                            padding: '8px 12px',
+                                                            border: '1px solid #ccc',
+                                                            borderRadius: '4px',
+                                                            fontSize: '14px',
+                                                            backgroundColor: '#f9f9f9',
+                                                            marginBottom: '10px'
+                                                        }}
+                                                    />
+                                                    <div>
+                                                        <button
+                                                            onClick={async () => {
+                                                                console.log('💾 Save button clicked with:', {
+                                                                    selectedClaimTitle,
+                                                                    editedSummary: editedSummary?.substring(0, 30) + '...',
+                                                                    editedUrl,
+                                                                    selectedClaimUrl
+                                                                });
+                                                                const success = await updateClaimSummaryAndUrl(selectedClaimTitle, editedSummary, editedUrl);
+                                                                if (success) {
+                                                                    // Immediately update the current URL state to reflect the change
+                                                                    setCurrentClaimUrl(editedUrl);
+                                                                    
+                                                                    // Update the claimDataVersion to trigger memo recalculation
+                                                                    setClaimDataVersion(prev => prev + 1);
+                                                                    
+                                                                    // Close editing mode
+                                                                    setIsEditingSummary(false);
+                                                                    
+                                                                    // Small delay to ensure all state has settled
+                                                                    setTimeout(() => {
+                                                                        if (selectedClaimTitle) {
+                                                                            handleClaimSelection(selectedClaimTitle);
+                                                                        }
+                                                                    }, 50);
+                                                                }
+                                                            }}
+                                                            style={{
+                                                                backgroundColor: '#16a34a',
+                                                                color: 'white',
+                                                                border: 'none',
+                                                                borderRadius: '4px',
+                                                                padding: '6px 12px',
+                                                                fontSize: '13px',
+                                                                cursor: 'pointer',
+                                                                marginRight: '8px'
+                                                            }}
+                                                        >
+                                                            Save
+                                                        </button>
+                                                        <button
+                                                            onClick={() => setIsEditingSummary(false)}
+                                                            style={{
+                                                                backgroundColor: '#dc2626',
+                                                                color: 'white',
+                                                                border: 'none',
+                                                                borderRadius: '4px',
+                                                                padding: '6px 12px',
+                                                                fontSize: '13px',
+                                                                cursor: 'pointer'
+                                                            }}
+                                                        >
+                                                            Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <div>
+                                                    <div style={{ marginBottom: '10px' }}>
+                                                        {selectedClaimSummary}
+                                                    </div>
+                                                    <div style={{ fontSize: '13px', color: '#666', marginBottom: '10px' }}>
+                                                        URL: /{selectedClaimUrl}
+                                                    </div>
+                                                    <button
+                                                        onClick={() => {
+                                                            // Get the most current URL directly from the arrays instead of memo
+                                                            const currentSummary = draftSummaries.find(s => s.claimMainTitle === selectedClaimTitle);
+                                                            const currentUrl = currentClaimUrl || 
+                                                                currentSummary?.customUrl || 
+                                                                selectedClaimTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                                                            
+                                                            console.log('✏️ Edit button clicked, setting inputs to:', {
+                                                                selectedClaimSummary: selectedClaimSummary?.substring(0, 30) + '...',
+                                                                selectedClaimUrl,
+                                                                currentClaimUrl,
+                                                                currentUrl,
+                                                                fromArray: currentSummary?.customUrl
+                                                            });
+                                                            setIsEditingSummary(true);
+                                                            setEditedSummary(selectedClaimSummary);
+                                                            setEditedUrl(currentUrl);
+                                                        }}
+                                                        style={{
+                                                            backgroundColor: '#cbcbcb',
+                                                            color: 'black',
+                                                            border: '1px solid #999',
+                                                            borderRadius: '4px',
+                                                            padding: '6px 12px',
+                                                            fontSize: '13px',
+                                                            cursor: 'pointer'
+                                                        }}
+                                                    >
+                                                        Edit Summary & URL
+                                                    </button>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        'Live editing interface for claims data. Click "Edit" to modify rows, add sources, and export JSON for your data.js file.'
+                                    )}
+                                </div>
                             )}
                         </div>
 
@@ -1197,100 +2062,176 @@ First download the file/image/video, and then upload it into the corresponding G
                         )}
 
 
-                        {/* Admin controls */}
-                        <div className="flex gap-2 mt-4 mb-6">
+                        {/* Status Controls - First Row */}
+                        <div 
+                            className="flex gap-2 mt-4 mb-4"
+                            style={{
+                                opacity: isTableVisible ? 1 : 0,
+                                animation: isTableVisible ? 'fadeInUp 0.4s ease-out 0.2s both' : 'none'
+                            }}
+                        >
+                            {/* Publication Flow Arrow Design */}
+                            <div className="publication-flow">
+                                {(() => {
+                                    // Get current status for the selected claim
+                                    const currentStatus = selectedClaimTitle ? 
+                                        (localStorage.getItem(`claim_status_${selectedClaimTitle}`) || 'UNASSIGNED') : 
+                                        'UNASSIGNED';
+                                    
+                                    return (
+                                        <>
+                                            <button
+                                                onClick={() => setShowReviewModal(true)}
+                                                className={`flow-button review ${currentStatus === 'NEEDS_REVIEW' ? 'active' : ''}`}
+                                            >
+                                                TO REVIEW
+                                            </button>
+                                            <button
+                                                onClick={() => setShowReadyToPublishModal(true)}
+                                                className={`flow-button ready ${currentStatus === 'READY_TO_PUBLISH' ? 'active' : ''}`}
+                                            >
+                                                READY TO PUBLISH
+                                            </button>
+                                            {isAdmin() && (
+                                                <button
+                                                    onClick={() => {
+                                                        try {
+                                                            saveDraft();
+                                                            updateClaimStatus('PUBLISHED');
+                                                            setLastDraftSave(new Date().toISOString());
+                                                            
+                                                            // Note: Email notification removed - only send for review/approval actions
+                                                        } catch (error) {
+                                                            console.error('Error updating status:', error);
+                                                            alert('❌ Error updating status. Please try again.');
+                                                        }
+                                                    }}
+                                                    className={`flow-button published ${currentStatus === 'PUBLISHED' ? 'active' : ''}`}
+                                                >
+                                                    PUBLISHED
+                                                </button>
+                                            )}
+                                        </>
+                                    );
+                                })()}
+                            </div>
+                        </div>
+
+                        {/* Action Controls - Second Row with Grey Rounded Styling */}
+                        <div 
+                            className="flex gap-3 mb-6"
+                            style={{
+                                opacity: isTableVisible ? 1 : 0,
+                                animation: isTableVisible ? 'fadeInUp 0.4s ease-out 0.4s both' : 'none'
+                            }}
+                        >
                             <button
-                                onClick={exportData}
-                                className="btn-green"
-                            >
-                                Export JSON
-                            </button>
-                            <button
-                                onClick={() => {
+                                onClick={async () => {
+                                    if (!selectedClaimTitle) {
+                                        alert('❌ Please select a claim from the dropdown first');
+                                        return;
+                                    }
+                                    
                                     try {
-                                        saveDraft();
+                                        // Get current claim data
+                                        const claimData = draftData.filter(item => item.claimTitle === selectedClaimTitle);
+                                        const claimSummary = draftSummaries.find(s => s.claimMainTitle === selectedClaimTitle);
+                                        
+                                        if (!claimSummary) {
+                                            alert('❌ No summary found for this claim');
+                                            return;
+                                        }
+
+                                        // Write directly to data.js
+                                        const response = await fetch('http://localhost:3001/api/write-to-datajs', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json',
+                                            },
+                                            body: JSON.stringify({
+                                                action: 'add_claim',
+                                                claimTitle: selectedClaimTitle,
+                                                summary: claimSummary,
+                                                data: claimData
+                                            })
+                                        });
+
+                                        if (!response.ok) {
+                                            const errorText = await response.text();
+                                            throw new Error(`Failed to save to data.js: ${errorText}`);
+                                        }
+
+                                        // Update localStorage status and save draft for UI consistency
                                         updateClaimStatus('IN_PROGRESS');
-                                        setLastDraftSave(new Date().toISOString());
-                                        alert('✅ Draft saved successfully! Status updated to "In Progress".');
-                                    } catch (error) {
-                                        console.error('Error saving draft:', error);
-                                        alert('❌ Error saving draft. Please try again.');
-                                    }
-                                }}
-                                className="btn-green"
-                                style={{
-                                    backgroundColor: '#b7fbf3',
-                                    fontWeight: 'bold'
-                                }}
-                            >
-                                SAVE AS DRAFT
-                            </button>
-                            <button
-                                onClick={() => {
-                                    try {
                                         saveDraft();
-                                        updateClaimStatus('NEEDS_REVIEW');
                                         setLastDraftSave(new Date().toISOString());
+                                        
+                                        // Note: Email notification removed - only send for review/approval actions
+                                        
+                                        alert('✅ Claim saved directly to data.js! Status updated to "In Progress".');
                                     } catch (error) {
-                                        console.error('Error updating status:', error);
-                                        alert('❌ Error updating status. Please try again.');
+                                        console.error('Error saving to data.js:', error);
+                                        alert(`❌ Error saving to data.js: ${error.message}`);
                                     }
                                 }}
-                                className="btn-green"
-                                style={{
-                                    backgroundColor: '#fac798',
-                                    fontWeight: 'bold'
-                                }}
+                                className="px-3 py-1 text-black font-medium rounded-md border border-solid border-gray-400 transition-colors duration-200"
+                                style={{ backgroundColor: '#cbcbcb', borderWidth: '1px' }}
+                                onMouseEnter={(e) => e.target.style.backgroundColor = '#b0b0b0'}
+                                onMouseLeave={(e) => e.target.style.backgroundColor = '#cbcbcb'}
                             >
-                                NEEDS REVIEW
-                            </button>
-                            <button
-                                onClick={() => {
-                                    try {
-                                        saveDraft();
-                                        updateClaimStatus('READY_TO_PUBLISH');
-                                        setLastDraftSave(new Date().toISOString());
-                                    } catch (error) {
-                                        console.error('Error updating status:', error);
-                                        alert('❌ Error updating status. Please try again.');
-                                    }
-                                }}
-                                className="btn-green"
-                                style={{
-                                    backgroundColor: '#bffb9b',
-                                    fontWeight: 'bold'
-                                }}
-                            >
-                                READY TO PUBLISH
-                            </button>
-                            <button
-                                onClick={() => {
-                                    try {
-                                        saveDraft();
-                                        updateClaimStatus('PUBLISHED');
-                                        setLastDraftSave(new Date().toISOString());
-                                    } catch (error) {
-                                        console.error('Error updating status:', error);
-                                        alert('❌ Error updating status. Please try again.');
-                                    }
-                                }}
-                                className="btn-green"
-                                style={{
-                                    backgroundColor: '#78ff96',
-                                    fontWeight: 'bold',
-                                    color: '#333'
-                                }}
-                            >
-                                PUBLISHED
+                                Save
                             </button>
                             {isAdmin() && (
                                 <button
+                                    onClick={() => {
+                                        exportData();
+                                        // Note: Email notification removed - only send for review/approval actions
+                                    }}
+                                    className="px-3 py-1 text-black font-medium rounded-md border border-solid border-gray-400 transition-colors duration-200"
+                                    style={{ backgroundColor: '#cbcbcb', borderWidth: '1px' }}
+                                    onMouseEnter={(e) => e.target.style.backgroundColor = '#b0b0b0'}
+                                    onMouseLeave={(e) => e.target.style.backgroundColor = '#cbcbcb'}
+                                >
+                                    Export JSON
+                                </button>
+                            )}
+                            {isAdmin() && (
+                                <button
+                                    onClick={async () => {
+                                        const confirmed = window.confirm('⚠️ This will populate data.js with Google Sheets data (only Needs Review items). Continue?');
+                                        if (confirmed) {
+                                            try {
+                                                const result = await populateFromGoogleSheets();
+                                                alert(`✅ Successfully populated ${result.imported || 0} Needs Review items from Google Sheets`);
+                                                
+                                                // Trigger page refresh to load new data
+                                                window.location.reload();
+                                            } catch (error) {
+                                                console.error('Error populating from Google Sheets:', error);
+                                                alert(`❌ Error populating from Google Sheets: ${error.message}`);
+                                            }
+                                        }
+                                    }}
+                                    className="px-3 py-1 text-black font-medium rounded-md border border-solid border-gray-400 transition-colors duration-200"
+                                    style={{ backgroundColor: '#cbcbcb', borderWidth: '1px' }}
+                                    onMouseEnter={(e) => e.target.style.backgroundColor = '#b0b0b0'}
+                                    onMouseLeave={(e) => e.target.style.backgroundColor = '#cbcbcb'}
+                                >
+                                    Import from Sheets
+                                </button>
+                            )}
+                            {isAdmin() && (
+                                <button
                                 onClick={async () => {
-                                    const confirmed = window.confirm('Are you sure you want to publish all draft changes to the live data.js file? This action cannot be undone.');
+                                    if (!selectedClaimTitle) {
+                                        alert('❌ Please select a claim from the dropdown first');
+                                        return;
+                                    }
+                                    const confirmed = window.confirm(`Are you sure you want to publish "${selectedClaimTitle}" to the homepage? This will make it visible to all visitors.`);
                                     if (confirmed) {
                                         try {
-                                            await publishDraftToLive();
-                                            alert('✅ Successfully published draft data to live data.js file!');
+                                            await publishDraftToLive(selectedClaimTitle);
+                                            alert(`✅ Successfully published "${selectedClaimTitle}" to data.js and homepage!`);
                                             // Force re-render to show updated data
                                             setClaimDataVersion(prev => prev + 1);
                                         } catch (error) {
@@ -1299,139 +2240,66 @@ First download the file/image/video, and then upload it into the corresponding G
                                         }
                                     }
                                 }}
-                                className="btn-green"
-                                style={{
-                                    backgroundColor: '#78ff96',
-                                    fontWeight: 'bold'
-                                }}
+                                className="px-3 py-1 text-black font-medium rounded-md border border-solid border-gray-400 transition-colors duration-200"
+                                style={{ backgroundColor: '#cbcbcb', borderWidth: '1px' }}
+                                onMouseEnter={(e) => e.target.style.backgroundColor = '#b0b0b0'}
+                                onMouseLeave={(e) => e.target.style.backgroundColor = '#cbcbcb'}
                             >
                                 PUBLISH
                             </button>
-                        )}
-                            {selectedClaimTitle && isAdmin() && (
+                            )}
+                            {isAdmin() && selectedClaimTitle && (
                                 <button
                                     onClick={async () => {
-                                        const doubleConfirm = window.confirm(`⚠️ WARNING: You are about to permanently delete the entire claim "${selectedClaimTitle}" from the database.\n\nThis will:\n- Remove all data for this claim\n- Create a backup of the current data.js file\n- This action CANNOT be undone\n\nAre you absolutely sure you want to proceed?`);
+                                        // First confirmation
+                                        const firstConfirm = window.confirm(`⚠️ WARNING: You are about to PERMANENTLY DELETE "${selectedClaimTitle}" from the entire system.\n\nThis will remove it from:\n- Claims Editor\n- data.js file\n- localStorage\n- ClaimsList\n\nThis action CANNOT be undone!\n\nAre you sure you want to continue?`);
                                         
-                                        if (doubleConfirm) {
-                                            const finalConfirm = window.confirm(`FINAL CONFIRMATION: Type "${selectedClaimTitle}" in the next prompt to confirm deletion.`);
-                                            if (finalConfirm) {
-                                                const userInput = window.prompt(`Type the exact claim title to confirm deletion:\n"${selectedClaimTitle}"`);
-                                                if (userInput === selectedClaimTitle) {
-                                                    try {
-                                                        // Set deletion flag to prevent auto-saving
-                                                        setIsDeletingClaim(true);
-                                                        console.log('🚫 Deletion mode activated - auto-save disabled');
-                                                        
-                                                        // Create backup first
-                                                        const backupData = {
-                                                            data: [...data],
-                                                            summaries: [...summaries],
-                                                            deletedAt: new Date().toISOString(),
-                                                            deletedClaim: selectedClaimTitle
-                                                        };
-                                                        
-                                                        // Clean up old backups to prevent localStorage quota issues
-                                                        const backupKey = `hasbara_backup_${Date.now()}`;
-                                                        try {
-                                                            // Remove old backups (keep only latest 3)
-                                                            const allKeys = Object.keys(localStorage);
-                                                            const backupKeys = allKeys.filter(key => key.startsWith('hasbara_backup_')).sort();
-                                                            while (backupKeys.length > 2) { // Keep 2, add 1 = 3 total
-                                                                localStorage.removeItem(backupKeys.shift());
-                                                            }
-                                                            localStorage.setItem(backupKey, JSON.stringify(backupData));
-                                                            console.log('💾 Backup saved:', backupKey);
-                                                        } catch (quotaError) {
-                                                            console.warn('⚠️ localStorage quota exceeded, skipping backup:', quotaError);
-                                                        }
-                                                        
-                                                        // Remove from draft data
-                                                        console.log('🔍 DELETE Debug Info:');
-                                                        console.log('- Selected claim title:', selectedClaimTitle);
-                                                        console.log('- Draft data count before filter:', draftData.length);
-                                                        console.log('- Draft summaries count before filter:', draftSummaries.length);
-                                                        
-                                                        const newDraftData = draftData.filter(item => item.claimTitle !== selectedClaimTitle);
-                                                        const newDraftSummaries = draftSummaries.filter(item => item.claimMainTitle !== selectedClaimTitle);
-                                                        
-                                                        console.log('- Draft data count after filter:', newDraftData.length);
-                                                        console.log('- Draft summaries count after filter:', newDraftSummaries.length);
-                                                        console.log('- Deletion successful:', draftData.length > newDraftData.length || draftSummaries.length > newDraftSummaries.length);
-                                                        
-                                                        draftData.length = 0;
-                                                        draftSummaries.length = 0;
-                                                        draftData.push(...newDraftData);
-                                                        draftSummaries.push(...newDraftSummaries);
-                                                        
-                                                        // Delete the associated component file
-                                                        try {
-                                                            const token = sessionStorage.getItem('hasbaratracker_token') || localStorage.getItem('hasbaratracker_token');
-                                                            const response = await fetch(`http://localhost:3001/api/claims/${encodeURIComponent(selectedClaimTitle)}/file`, {
-                                                                method: 'DELETE',
-                                                                headers: {
-                                                                    'Authorization': `Bearer ${token}`,
-                                                                    'Content-Type': 'application/json'
-                                                                }
-                                                            });
-                                                            
-                                                            if (response.ok) {
-                                                                const result = await response.json();
-                                                                console.log('✅ Component file deletion result:', result.message);
-                                                            } else {
-                                                                console.warn('⚠️ Failed to delete component file:', await response.text());
-                                                            }
-                                                        } catch (fileDeleteError) {
-                                                            console.error('❌ Error deleting component file:', fileDeleteError);
-                                                            // Don't block the claim deletion if file deletion fails
-                                                        }
-                                                        
-                                                        // Publish the deletion
-                                                        await publishDraftToLive();
-                                                        
-                                                        // Clear the localStorage draft to prevent restoration of deleted claim
-                                                        localStorage.removeItem('hasbaratracker_draft_save');
-                                                        console.log('🗑️ Cleared localStorage draft after deletion (key: hasbaratracker_draft_save)');
-                                                        
-                                                        alert(`✅ Claim "${selectedClaimTitle}" has been successfully deleted.\n\n🔒 A backup has been saved locally in case you need to recover the data.`);
-                                                        
-                                                        // Reset the interface
-                                                        setSelectedClaimTitle('');
-                                                        setClaimData([createEmptyRow()]);
-                                                        setEditingRows(new Set([0]));
-                                                        setClaimDataVersion(prev => prev + 1);
-                                                        
-                                                        // Clear deletion flag
-                                                        setIsDeletingClaim(false);
-                                                        console.log('✅ Deletion mode deactivated - auto-save re-enabled');
-                                                        
-                                                    } catch (error) {
-                                                        console.error('Error deleting claim:', error);
-                                                        console.error('Draft data length:', draftData.length);
-                                                        console.error('Draft summaries length:', draftSummaries.length);
-                                                        console.error('Selected claim title:', selectedClaimTitle);
-                                                        alert(`❌ Error deleting claim: ${error.message}\n\nCheck browser console for more details.`);
-                                                        
-                                                        // Clear deletion flag even on error
-                                                        setIsDeletingClaim(false);
-                                                        console.log('🔄 Deletion mode deactivated after error - auto-save re-enabled');
-                                                    }
-                                                } else {
-                                                    alert('❌ Deletion cancelled - claim title did not match.');
-                                                }
-                                            }
+                                        if (!firstConfirm) return;
+                                        
+                                        // Second confirmation - type the title
+                                        const typedTitle = prompt(`To confirm deletion, please type the EXACT claim title below:\n\n"${selectedClaimTitle}"`);
+                                        
+                                        if (typedTitle !== selectedClaimTitle) {
+                                            alert('❌ Title does not match. Deletion cancelled for safety.');
+                                            return;
+                                        }
+                                        
+                                        // Final confirmation
+                                        const finalConfirm = window.confirm(`🚨 FINAL CONFIRMATION\n\nYou typed the correct title. This is your LAST CHANCE to cancel.\n\nDelete "${selectedClaimTitle}" permanently?\n\n⚠️ THIS CANNOT BE UNDONE ⚠️`);
+                                        
+                                        if (!finalConfirm) return;
+                                        
+                                        try {
+                                            await deleteClaimCompletely(selectedClaimTitle);
+                                            alert(`✅ Successfully deleted "${selectedClaimTitle}" from the entire system.`);
+                                            
+                                            // Clear selection and refresh
+                                            setSelectedClaimTitle('');
+                                            setClaimData([]);
+                                            setClaimDataVersion(prev => prev + 1);
+                                            
+                                        } catch (error) {
+                                            console.error('Error deleting claim:', error);
+                                            alert(`❌ Error deleting claim: ${error.message}`);
                                         }
                                     }}
-                                    className="btn-green"
                                     style={{
-                                        backgroundColor: '#ff6b6b',
-                                        fontWeight: 'bold',
-                                        color: 'white'
+                                        backgroundColor: '#dc2626',
+                                        color: 'white',
+                                        padding: '10px 20px',
+                                        borderRadius: '8px',
+                                        border: 'none',
+                                        cursor: 'pointer',
+                                        fontSize: '14px',
+                                        fontWeight: '500',
+                                        marginLeft: '10px'
                                     }}
+                                    onMouseEnter={(e) => e.target.style.backgroundColor = '#b91c1c'}
+                                    onMouseLeave={(e) => e.target.style.backgroundColor = '#dc2626'}
                                 >
                                     DELETE CLAIM
                                 </button>
-                            )}
+                        )}
                         </div>
 
                         {/* Last Draft Saved Message */}
@@ -1442,7 +2310,13 @@ First download the file/image/video, and then upload it into the corresponding G
                         )}
                     </div>
 
-                <div className={`tracker-container transition-all duration-500 ${isPopulating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'}`}>
+                <div 
+                    className={`tracker-container transition-all duration-500 ${isPopulating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'}`}
+                    style={{
+                        opacity: isTableVisible ? 1 : 0,
+                        animation: isTableVisible ? 'fadeInTable 0.6s ease-out' : 'none'
+                    }}
+                >
                     <table {...getTableProps()}>
                         <thead className="font-mono sticky top-0">
                             {headerGroups.map(headerGroup => (
@@ -1517,6 +2391,170 @@ First download the file/image/video, and then upload it into the corresponding G
 
                 {/* <BackToTop /> */}
                 {/* <Footer /> */}
+
+                {/* TO REVIEW Modal */}
+                {showReviewModal && (
+                    <div className="fixed inset-0 flex items-center justify-center" style={{ zIndex: 9999, backgroundColor: 'rgba(0, 0, 0, 0.75)' }}>
+                        <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4" style={{ backgroundColor: 'white' }}>
+                            <h3 className="text-lg font-bold mb-4">Send to Review</h3>
+                            <p className="text-sm text-gray-600 mb-4">
+                                Add an optional message or attach a screenshot to provide context for the review.
+                            </p>
+                            
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium mb-2">Message (optional)</label>
+                                <textarea
+                                    id="reviewMessage"
+                                    rows="3"
+                                    className="w-full p-2 border border-gray-300 rounded-md resize-none"
+                                    placeholder="Add any notes or context for the reviewer..."
+                                />
+                            </div>
+
+                            <div className="mb-6">
+                                <label className="block text-sm font-medium mb-2">Screenshot (optional)</label>
+                                <input
+                                    type="file"
+                                    id="reviewScreenshot"
+                                    accept="image/*"
+                                    className="w-full p-2 border border-gray-300 rounded-md"
+                                />
+                                <p className="text-xs text-gray-500 mt-1">
+                                    Attach a screenshot if it helps explain the issue
+                                </p>
+                            </div>
+
+                            <div className="flex gap-3 justify-end">
+                                <button
+                                    onClick={() => setShowReviewModal(false)}
+                                    className="px-4 py-2 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        const message = document.getElementById('reviewMessage').value;
+                                        const screenshot = document.getElementById('reviewScreenshot').files[0];
+                                        
+                                        try {
+                                            saveDraft();
+                                            updateClaimStatus('NEEDS_REVIEW');
+                                            setLastDraftSave(new Date().toISOString());
+                                            
+                                            // Store review message and screenshot info if provided
+                                            if (message || screenshot) {
+                                                const reviewData = {
+                                                    message: message,
+                                                    screenshot: screenshot?.name || null,
+                                                    timestamp: new Date().toISOString(),
+                                                    user: user?.email || 'anonymous'
+                                                };
+                                                localStorage.setItem(`review_data_${selectedClaimTitle}`, JSON.stringify(reviewData));
+                                            }
+                                            
+                                            // Send email notification
+                                            sendEmailNotification('Sent to Review', selectedClaimTitle, user?.email || 'anonymous', {
+                                                message: message,
+                                                screenshot: screenshot
+                                            });
+                                            
+                                            setShowReviewModal(false);
+                                            alert(`✅ Claim "${selectedClaimTitle}" sent to review` + (message ? ' with message' : '') + (screenshot ? ' with screenshot' : ''));
+                                        } catch (error) {
+                                            console.error('Error updating status:', error);
+                                            alert('❌ Error updating status. Please try again.');
+                                        }
+                                    }}
+                                    className="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
+                                >
+                                    Send to Review
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* READY TO PUBLISH Modal */}
+                {showReadyToPublishModal && (
+                    <div className="fixed inset-0 flex items-center justify-center" style={{ zIndex: 9999, backgroundColor: 'rgba(0, 0, 0, 0.75)' }}>
+                        <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4" style={{ backgroundColor: 'white' }}>
+                            <h3 className="text-lg font-bold mb-4">Ready to Publish</h3>
+                            <p className="text-sm text-gray-600 mb-4">
+                                Add an optional message or attach a screenshot to provide context for the approval.
+                            </p>
+                            
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium mb-2">Message (optional)</label>
+                                <textarea
+                                    id="readyToPublishMessage"
+                                    rows="3"
+                                    className="w-full p-2 border border-gray-300 rounded-md resize-none"
+                                    placeholder="Add any notes or context for the approver..."
+                                />
+                            </div>
+
+                            <div className="mb-6">
+                                <label className="block text-sm font-medium mb-2">Screenshot (optional)</label>
+                                <input
+                                    type="file"
+                                    id="readyToPublishScreenshot"
+                                    accept="image/*"
+                                    className="w-full p-2 border border-gray-300 rounded-md"
+                                />
+                                <p className="text-xs text-gray-500 mt-1">
+                                    Attach a screenshot if it helps explain the changes
+                                </p>
+                            </div>
+
+                            <div className="flex gap-3 justify-end">
+                                <button
+                                    onClick={() => setShowReadyToPublishModal(false)}
+                                    className="px-4 py-2 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        const message = document.getElementById('readyToPublishMessage').value;
+                                        const screenshot = document.getElementById('readyToPublishScreenshot').files[0];
+                                        
+                                        try {
+                                            saveDraft();
+                                            updateClaimStatus('READY_TO_PUBLISH');
+                                            setLastDraftSave(new Date().toISOString());
+                                            
+                                            // Store ready to publish message and screenshot info if provided
+                                            if (message || screenshot) {
+                                                const readyData = {
+                                                    message: message,
+                                                    screenshot: screenshot?.name || null,
+                                                    timestamp: new Date().toISOString(),
+                                                    user: user?.email || 'anonymous'
+                                                };
+                                                localStorage.setItem(`ready_data_${selectedClaimTitle}`, JSON.stringify(readyData));
+                                            }
+                                            
+                                            // Send email notification
+                                            sendEmailNotification('Ready to Publish', selectedClaimTitle, user?.email || 'anonymous', {
+                                                message: message,
+                                                screenshot: screenshot
+                                            });
+                                            
+                                            setShowReadyToPublishModal(false);
+                                            alert(`✅ Claim "${selectedClaimTitle}" marked as ready to publish` + (message ? ' with message' : '') + (screenshot ? ' with screenshot' : ''));
+                                        } catch (error) {
+                                            console.error('Error updating status:', error);
+                                            alert('❌ Error updating status. Please try again.');
+                                        }
+                                    }}
+                                    className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors"
+                                >
+                                    Send for Approval
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </>
         </HelmetProvider>
     );

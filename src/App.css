@@ -658,3 +658,15 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 /* @media only screen and (min-width: 1200px) {
 
 } */
+
+/* Rich text editor placeholder styling */
+[contenteditable][data-placeholder]:not(:focus):empty::before {
+    content: attr(data-placeholder);
+    color: #999;
+    font-style: italic;
+}
+
+[contenteditable] {
+    outline: none;
+}
+

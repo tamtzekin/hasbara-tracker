@@ -21,13 +21,13 @@ import RenderTrackerMobile from './RenderTrackerMobile';
 
 export default function ClaimIsraelDeniesChurchKilling() {    
     const metadataProps = {
-        url: "https://hasbaratracker.com/israel-denies-church-killing",
+        url: "https://hasbaratracker.com/church",
         title: summaries[5].claimMainTitle,
         description: summaries[5].claimSummary,
         
         twitterTitle: summaries[5].claimMainTitle,
         twitterDescription: summaries[5].claimSummary,
-        twitterUrl: "https://hasbaratracker.com/israel-denies-church-killing",
+        twitterUrl: "https://hasbaratracker.com/church",
     };
 
     // defines claim tags for dropdown (ClaimFilter.js)

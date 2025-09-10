@@ -9,7 +9,7 @@ import Footer from './Footer';
 const STATUS_TYPES = {
     UNASSIGNED: { label: 'Unassigned', color: '#b9b9b9' },
     IN_PROGRESS: { label: 'In Progress', color: '#b7fbf3' },
-    NEEDS_REVIEW: { label: 'Needs Review', color: '#fac798' },
+    NEEDS_REVIEW: { label: 'To review', color: '#fac798' },
     READY_TO_PUBLISH: { label: 'Ready to Publish', color: '#bffb9b' },
     PUBLISHED: { label: 'Published', color: '#78ff96' }
 };
@@ -97,7 +97,12 @@ const StatusPage = () => {
         }));
         
         console.log('🔍 STATUS-PAGE: Final claims list:', claimsData);
-        return claimsData.sort((a, b) => a.title.localeCompare(b.title));
+        return claimsData.sort((a, b) => {
+            // Remove quotes for comparison
+            const titleA = a.title.replace(/^['"]|['"]$/g, '');
+            const titleB = b.title.replace(/^['"]|['"]$/g, '');
+            return titleA.localeCompare(titleB);
+        });
     }, [refreshTrigger]);
 
     // Filter claims based on selected status

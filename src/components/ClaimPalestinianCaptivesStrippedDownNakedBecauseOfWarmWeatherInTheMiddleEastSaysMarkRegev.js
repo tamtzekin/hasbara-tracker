@@ -99,41 +99,37 @@ export default function ClaimPalestinianCaptivesStrippedDownNakedBecauseOfWarmWe
                         <NavLinks />
                     </span>
 
-                    {/* Shows title and summary of the claim */}
+                    {/* Claim summary */}
                     <ClaimSummary id={7} />
-                </span>
 
-                {/* Show desktop view of Tracker - as a table */}
-                {!isMobileView && (
-                    <RenderTrackerDesktop
-                        {...{
-                            headerGroups,
-                            getTableProps,
-                            getTableBodyProps,
-                            rows,
-                            prepareRow,
-                            globalFilter,
-                            setGlobalFilter,
-                            uniqueClaimTitles,
-                        }}
-                    />
-                )}
-                
-                {/* Show mobile view of Tracker table - as cards */}
-                {isMobileView && (
-                    <RenderTrackerMobile
-                        {...{
-                            headerGroups,
-                            getTableProps,
-                            getTableBodyProps,
-                            rows,
-                            prepareRow,
-                            globalFilter,
-                            setGlobalFilter,
-                            uniqueClaimTitles,
-                        }}
-                    />
-                )}
+                    {isMobileView ? (
+                        <RenderTrackerMobile
+                            getTableProps={getTableProps}
+                            headerGroups={headerGroups}
+                            getTableBodyProps={getTableBodyProps}
+                            rows={rows}
+                            prepareRow={prepareRow}
+                            globalFilter={globalFilter}
+                            setGlobalFilter={setGlobalFilter}
+                            uniqueClaimTitles={uniqueClaimTitles}
+                            selectedClaimTitle={selectedClaimTitle}
+                            setSelectedClaimTitle={setSelectedClaimTitle}
+                        />
+                    ) : (
+                        <RenderTrackerDesktop
+                            getTableProps={getTableProps}
+                            headerGroups={headerGroups}
+                            getTableBodyProps={getTableBodyProps}
+                            rows={rows}
+                            prepareRow={prepareRow}
+                            globalFilter={globalFilter}
+                            setGlobalFilter={setGlobalFilter}
+                            uniqueClaimTitles={uniqueClaimTitles}
+                            selectedClaimTitle={selectedClaimTitle}
+                            setSelectedClaimTitle={setSelectedClaimTitle}
+                        />
+                    )}
+                </span>
 
                 <BackToTop />
                 <Footer />

@@ -221,6 +221,120 @@ export default function ${componentName}() {
 `;
 }
 
+// Function to create backup and manage backup limit (max 5 backups)
+function createBackup(action, claimTitle = 'bulk') {
+    const dataFilePath = path.join(__dirname, 'src', 'components', 'data.js');
+    const backupDir = path.join(__dirname, 'backups');
+    
+    // Ensure backup directory exists
+    if (!fs.existsSync(backupDir)) {
+        fs.mkdirSync(backupDir, { recursive: true });
+    }
+    
+    // Create backup if data.js exists
+    if (fs.existsSync(dataFilePath)) {
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        const backupPath = path.join(backupDir, `data-backup-${action}-${timestamp}.js`);
+        
+        fs.copyFileSync(dataFilePath, backupPath);
+        console.log(`💾 Created backup: ${backupPath}`);
+        
+        // Clean up old backups - keep only 5 most recent
+        try {
+            const backupFiles = fs.readdirSync(backupDir)
+                .filter(file => file.startsWith('data-backup-') && file.endsWith('.js'))
+                .map(file => ({
+                    name: file,
+                    path: path.join(backupDir, file),
+                    mtime: fs.statSync(path.join(backupDir, file)).mtime
+                }))
+                .sort((a, b) => b.mtime - a.mtime); // Sort by modification time, newest first
+            
+            // If we have more than 5 backups, delete the oldest ones
+            if (backupFiles.length > 5) {
+                const filesToDelete = backupFiles.slice(5); // Keep first 5, delete the rest
+                filesToDelete.forEach(file => {
+                    fs.unlinkSync(file.path);
+                    console.log(`🗑️ Deleted old backup: ${file.name}`);
+                });
+                console.log(`📁 Backup cleanup: Kept ${Math.min(backupFiles.length, 5)} most recent backups`);
+            }
+        } catch (error) {
+            console.warn('⚠️ Failed to clean up old backups:', error.message);
+        }
+        
+        return backupPath;
+    }
+    
+    return null;
+}
+
+// Function to update App.js routes when custom URL changes
+function updateAppJsRoute(claimTitle, newCustomUrl) {
+    const appJsPath = path.join(__dirname, 'src', 'App.js');
+    
+    try {
+        // Read current App.js content
+        const appJsContent = fs.readFileSync(appJsPath, 'utf8');
+        
+        // Create a mapping of claim titles to component names
+        const claimToComponentMap = {
+            'Palestinian captives stripped down naked because of \'warm weather\' in the Middle East, says Mark Regev': 'ClaimCaptivesStripped',
+            'Israeli state denies killing mother and daughter seeking refuge in Gaza\'s Holy Family Parish': 'ClaimIsraelDeniesChurchKilling',
+            'Israeli soldier helps elderly Palestinian man in \'safe corridor\'': 'ClaimIsraelHelpsElderlyMan',
+            'Makeup used in Gaza to fake injuries': 'ClaimMakeup',
+            'Forty beheaded babies': 'ClaimFortyBeheadedBabies',
+            'Al-Ahli Hospital was attacked by Palestinian rockets, not Israeli forces': 'ClaimAlAhliAttacked',
+            'Israeli state offered fuel to Al-Shifa Hospital and it was refused by Hamas': 'ClaimAlShifaFuel',
+            'Hamas were carrying instructions on how to make chemical weapons': 'ClaimHamasChemicalWeapons'
+        };
+        
+        const componentName = claimToComponentMap[claimTitle];
+        if (!componentName) {
+            console.log(`⚠️ No component mapping found for "${claimTitle}"`);
+            return;
+        }
+        
+        // Find existing route pattern for this component
+        const routePattern = new RegExp(`<Route\\s+path="\/([^"]+)"\\s+element={<${componentName}\\s*\/>}\\s*\/>`, 'g');
+        const matches = [...appJsContent.matchAll(routePattern)];
+        
+        if (matches.length === 0) {
+            // If no existing route, add a new one in the short URLs section
+            const shortUrlsSection = appJsContent.indexOf('{/* Short URLs for main claims */}');
+            if (shortUrlsSection !== -1) {
+                const insertAfter = appJsContent.indexOf('</Route>', shortUrlsSection + 1);
+                if (insertAfter !== -1) {
+                    const newRoute = `                <Route path="/${newCustomUrl}" element={<${componentName} />} />`;
+                    const updatedContent = appJsContent.slice(0, insertAfter + 8) + '\n' + newRoute + appJsContent.slice(insertAfter + 8);
+                    fs.writeFileSync(appJsPath, updatedContent, 'utf8');
+                    console.log(`✅ Added new route /${newCustomUrl} for ${componentName}`);
+                }
+            }
+        } else {
+            // Update existing routes - find the shortest URL (main route) and update it
+            let shortestRoute = matches[0];
+            for (const match of matches) {
+                if (match[1].length < shortestRoute[1].length) {
+                    shortestRoute = match;
+                }
+            }
+            
+            // Replace the shortest route with the new URL
+            const oldRoute = shortestRoute[0];
+            const newRoute = oldRoute.replace(`path="/${shortestRoute[1]}"`, `path="/${newCustomUrl}"`);
+            
+            const updatedContent = appJsContent.replace(oldRoute, newRoute);
+            fs.writeFileSync(appJsPath, updatedContent, 'utf8');
+            console.log(`✅ Updated route from /${shortestRoute[1]} to /${newCustomUrl} for ${componentName}`);
+        }
+        
+    } catch (error) {
+        console.error('❌ Error updating App.js routes:', error);
+        throw error;
+    }
+}
+
 // Debug middleware to log all requests
 app.use((req, res, next) => {
     if (req.path.startsWith('/api')) {
@@ -233,159 +347,417 @@ app.use((req, res, next) => {
     next();
 });
 
-// API endpoint to write data.js file and handle new claims
-app.post('/api/publish-data', async (req, res) => {
+// Universal endpoint to write directly to data.js file
+app.post('/api/write-to-datajs', (req, res) => {
     try {
-        console.log('🔄 Processing publish-data request...');
-        const { summaries, data } = req.body;
+        const { action, claimTitle, summary, data: claimData, newData, newSummaries } = req.body;
         
-        if (!summaries || !data) {
-            console.log('❌ Missing data in request:', { summaries: !!summaries, data: !!data });
-            return res.status(400).json({ error: 'Missing summaries or data in request body' });
+        console.log(`🔄 Direct data.js write - Action: ${action}, Claim: ${claimTitle || 'bulk'}`);
+        
+        const dataFilePath = path.join(__dirname, 'src', 'components', 'data.js');
+        
+        // Create backup before modification
+        const backupPath = createBackup(action, claimTitle);
+        
+        // Read current data.js
+        const currentContent = fs.readFileSync(dataFilePath, 'utf8');
+        
+        // Parse the current data
+        const summariesMatch = currentContent.match(/const summaries = (\[[\s\S]*?\]);/);
+        const dataMatch = currentContent.match(/const data = (\[[\s\S]*?\]);/);
+        
+        if (!summariesMatch || !dataMatch) {
+            return res.status(500).json({ error: 'Could not parse current data.js file' });
         }
-
-        // Create the data.js file content
-        const dataFileContent = `// The title + summary of claim at the top of each Claim page 
-const summaries = ${JSON.stringify(summaries, null, 4)};
+        
+        let currentSummaries = JSON.parse(summariesMatch[1]);
+        let currentData = JSON.parse(dataMatch[1]);
+        
+        // Handle different actions
+        switch (action) {
+            case 'update_summary':
+                if (!summary || !claimTitle) {
+                    return res.status(400).json({ error: 'Summary and claimTitle required for update_summary' });
+                }
+                
+                const summaryIndex = currentSummaries.findIndex(s => s.claimMainTitle === claimTitle);
+                if (summaryIndex !== -1) {
+                    currentSummaries[summaryIndex] = summary;
+                } else {
+                    currentSummaries.push(summary);
+                }
+                console.log(`✅ Updated/added summary for "${claimTitle}"`);
+                break;
+                
+            case 'add_claim':
+                if (!summary || !claimTitle) {
+                    return res.status(400).json({ error: 'Summary and claimTitle required for add_claim' });
+                }
+                
+                // Add summary if it doesn't exist
+                const existingSummary = currentSummaries.find(s => s.claimMainTitle === claimTitle);
+                if (!existingSummary) {
+                    currentSummaries.push(summary);
+                }
+                
+                // Add claim data if provided
+                if (claimData && Array.isArray(claimData)) {
+                    // Remove existing data for this claim
+                    currentData = currentData.filter(item => item.claimTitle !== claimTitle);
+                    // Add new data
+                    currentData.push(...claimData);
+                }
+                console.log(`✅ Added claim "${claimTitle}" to data.js`);
+                break;
+                
+            case 'bulk_update':
+                if (newSummaries) {
+                    currentSummaries = newSummaries;
+                }
+                if (newData) {
+                    currentData = newData;
+                }
+                console.log(`✅ Bulk updated data.js`);
+                break;
+                
+            case 'delete_claim':
+                if (!claimTitle) {
+                    return res.status(400).json({ error: 'claimTitle required for delete_claim' });
+                }
+                
+                currentSummaries = currentSummaries.filter(s => s.claimMainTitle !== claimTitle);
+                currentData = currentData.filter(item => item.claimTitle !== claimTitle);
+                console.log(`✅ Deleted claim "${claimTitle}" from data.js`);
+                break;
+                
+            default:
+                return res.status(400).json({ error: `Unknown action: ${action}` });
+        }
+        
+        // Write the updated data.js
+        const newContent = `// The title + summary of claim at the top of each Claim page 
+const summaries = ${JSON.stringify(currentSummaries, null, 4)};
 
 
 // All claims data, stored in the tracker
-const data = ${JSON.stringify(data, null, 4)};
+const data = ${JSON.stringify(currentData, null, 4)};
 
 export { data, summaries };
 `;
+        
+        fs.writeFileSync(dataFilePath, newContent, 'utf8');
+        
+        console.log(`✅ Successfully wrote to data.js - Action: ${action}`);
+        console.log(`📁 Backup saved to ${backupPath}`);
+        
+        // If this was an update_summary action with a custom URL, also update App.js routes
+        if (action === 'update_summary' && summary && summary.customUrl) {
+            try {
+                updateAppJsRoute(claimTitle, summary.customUrl);
+                console.log(`🛣️ Updated App.js route for "${claimTitle}" -> /${summary.customUrl}`);
+            } catch (routeError) {
+                console.error('⚠️ Failed to update App.js route:', routeError);
+                // Don't fail the main operation if route update fails
+            }
+        }
+        
+        res.json({ 
+            success: true, 
+            message: `Action "${action}" completed successfully`,
+            backupPath: backupPath
+        });
+        
+    } catch (error) {
+        console.error('❌ Error writing to data.js:', error);
+        res.status(500).json({ 
+            error: 'Failed to write to data.js', 
+            details: error.message 
+        });
+    }
+});
 
-        // Write to the data.js file
+// API endpoint to publish a claim (mark as PUBLISHED in localStorage)
+app.post('/api/publish-data', async (req, res) => {
+    try {
+        console.log('🔄 Processing publish request...');
+        const { claimTitle } = req.body;
+        
+        if (!claimTitle) {
+            return res.status(400).json({ error: 'Claim title is required' });
+        }
+
+        console.log(`📤 Publishing claim "${claimTitle}" to homepage...`);
+
+        // Read the current data.js to verify the claim exists
         const dataFilePath = path.join(__dirname, 'src', 'components', 'data.js');
         
-        // Create backup first
-        const backupPath = path.join(__dirname, 'src', 'components', `data.backup.${Date.now()}.js`);
-        if (fs.existsSync(dataFilePath)) {
-            fs.copyFileSync(dataFilePath, backupPath);
+        if (!fs.existsSync(dataFilePath)) {
+            return res.status(404).json({ error: 'data.js file not found' });
         }
 
-        // Write the new data file
-        fs.writeFileSync(dataFilePath, dataFileContent, 'utf8');
-
-        // Check for new claims and generate components
-        const existingRoutes = [
-            'israel-helps-elderly-man',
-            'forty-beheaded-babies', 
-            'al-ahli-attacked',
-            'al-shifa-fuel',
-            'makeup',
-            'hamas-chemical-weapons',
-            'israel-denies-church-killing',
-            'captives-stripped'
-        ];
-
-        const newClaims = [];
-        const allClaimLinks = [];
-
-        summaries.forEach((summary, index) => {
-            const slug = titleToSlug(summary.claimMainTitle);
-            const componentName = titleToComponentName(summary.claimMainTitle);
-            
-            allClaimLinks.push({
-                slug: slug,
-                title: summary.claimMainTitle,
-                componentName: componentName
-            });
-
-            if (!existingRoutes.includes(slug)) {
-                // This is a new claim - create component file
-                const componentContent = generateClaimComponent(summary.claimMainTitle, index, slug);
-                const componentFilePath = path.join(__dirname, 'src', 'components', `${componentName}.js`);
-                
-                fs.writeFileSync(componentFilePath, componentContent, 'utf8');
-                console.log(`📄 Created new component: ${componentName}.js`);
-                
-                newClaims.push({
-                    slug: slug,
-                    title: summary.claimMainTitle,
-                    componentName: componentName,
-                    index: index
-                });
-            }
-        });
-
-        // Update ClaimsList.js - only if we have actual claims to show
-        const validClaims = allClaimLinks.filter(claim => claim.title && claim.title.trim() !== '');
+        const dataContent = fs.readFileSync(dataFilePath, 'utf8');
         
-        if (validClaims.length > 0) {
-            const claimsListContent = `import React from 'react';
-import { Link } from 'react-router-dom';
-
-const ClaimsList = () => {
-    return (
-    <>
-        <h2 className="subheading mb-1 mobile:mb-4">Claims</h2>
-
-${validClaims.map(claim => 
-        `        <Link to="/${claim.slug}"><div className="claim-link">'${claim.title}'</div></Link>\n`
-    ).join('')}
-        <div className="claim-coming-soon">+ more coming soon</div>
-
-        </>
-    )
-}
-
-export default ClaimsList;
-`;
-
-            const claimsListPath = path.join(__dirname, 'src', 'components', 'ClaimsList.js');
-            fs.writeFileSync(claimsListPath, claimsListContent, 'utf8');
-            console.log(`📄 Updated ClaimsList.js with ${validClaims.length} valid claims`);
-        } else {
-            console.log('⚠️  No valid claims found - NOT updating ClaimsList.js to prevent data loss');
+        // Parse the summaries from data.js to verify claim exists
+        const summariesMatch = dataContent.match(/const summaries = (\[[\s\S]*?\]);/);
+        
+        if (!summariesMatch) {
+            return res.status(500).json({ error: 'Could not parse summaries from data.js' });
+        }
+        
+        const summaries = JSON.parse(summariesMatch[1]);
+        const targetSummary = summaries.find(s => s.claimMainTitle === claimTitle);
+        
+        if (!targetSummary) {
+            return res.status(404).json({ error: `Claim "${claimTitle}" not found in data.js` });
         }
 
-        // Update App.js if there are new claims
-        if (newClaims.length > 0) {
-            const appJsPath = path.join(__dirname, 'src', 'App.js');
-            let appJsContent = fs.readFileSync(appJsPath, 'utf8');
+        // Generate URL slug for the claim
+        const customUrl = targetSummary.customUrl || claimTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
-            // Add imports for new components
-            newClaims.forEach(claim => {
-                const importStatement = `import ${claim.componentName} from './components/${claim.componentName}';\n`;
-                if (!appJsContent.includes(importStatement.trim())) {
-                    // Find the last import statement for claim components and add after it
-                    const lastClaimImport = appJsContent.lastIndexOf('import Claim');
-                    const endOfLine = appJsContent.indexOf('\n', lastClaimImport);
-                    appJsContent = appJsContent.slice(0, endOfLine + 1) + importStatement + appJsContent.slice(endOfLine + 1);
-                }
-            });
-
-            // Add routes for new components
-            newClaims.forEach(claim => {
-                const routeStatement = `                <Route path="/${claim.slug}" element={<${claim.componentName} />} />\n`;
-                if (!appJsContent.includes(routeStatement.trim())) {
-                    // Find the last claim route and add after it
-                    const lastClaimRoute = appJsContent.lastIndexOf('<Route path="/captives-stripped"');
-                    const endOfLine = appJsContent.indexOf('\n', lastClaimRoute);
-                    appJsContent = appJsContent.slice(0, endOfLine + 1) + routeStatement + appJsContent.slice(endOfLine + 1);
-                }
-            });
-
-            fs.writeFileSync(appJsPath, appJsContent, 'utf8');
-            console.log(`📄 Updated App.js with ${newClaims.length} new routes`);
-        }
-
-        console.log(`✅ Successfully published data to ${dataFilePath}`);
-        console.log(`📁 Backup saved to ${backupPath}`);
+        console.log(`✅ Claim "${claimTitle}" verified in data.js`);
+        console.log(`📄 ClaimsList.js is now dynamic and will automatically show this claim`);
 
         res.json({ 
             success: true, 
-            message: 'Data successfully published to data.js',
-            backupPath: backupPath,
-            newClaims: newClaims,
-            totalClaims: summaries.length
+            message: `Claim "${claimTitle}" successfully published to homepage`,
+            claimTitle: claimTitle,
+            customUrl: customUrl,
+            note: 'ClaimsList.js is now dynamic and will automatically display all claims marked as PUBLISHED in localStorage'
         });
 
     } catch (error) {
-        console.error('❌ Error publishing data:', error);
+        console.error('❌ Error publishing claim:', error);
         res.status(500).json({ 
-            error: 'Failed to publish data', 
+            error: 'Failed to publish claim', 
+            details: error.message 
+        });
+    }
+});
+
+// API endpoint to update a claim's summary and custom URL in data.js
+app.post('/api/update-summary', (req, res) => {
+    try {
+        const { claimTitle, newSummary, customUrl } = req.body;
+        
+        if (!claimTitle || !newSummary) {
+            return res.status(400).json({ error: 'Claim title and new summary are required' });
+        }
+        
+        console.log(`🔄 Processing summary update for claim: "${claimTitle}"`);
+        
+        const dataFilePath = path.join(__dirname, 'src', 'components', 'data.js');
+        
+        // Create backup before modification
+        const backupPath = createBackup('summary-update', claimTitle);
+        
+        // Read current data.js
+        const currentContent = fs.readFileSync(dataFilePath, 'utf8');
+        
+        // Parse the current data
+        const summariesMatch = currentContent.match(/const summaries = (\[[\s\S]*?\]);/);
+        const dataMatch = currentContent.match(/const data = (\[[\s\S]*?\]);/);
+        
+        if (!summariesMatch || !dataMatch) {
+            return res.status(500).json({ error: 'Could not parse current data.js file' });
+        }
+        
+        let currentSummaries = JSON.parse(summariesMatch[1]);
+        let currentData = JSON.parse(dataMatch[1]);
+        
+        // Find and update the summary
+        const summaryIndex = currentSummaries.findIndex(s => s.claimMainTitle === claimTitle);
+        
+        if (summaryIndex === -1) {
+            return res.status(404).json({ error: `Claim "${claimTitle}" not found in summaries` });
+        }
+        
+        // Update the summary
+        currentSummaries[summaryIndex] = {
+            claimMainTitle: claimTitle,
+            claimSummary: newSummary,
+            customUrl: customUrl || claimTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
+        };
+        
+        // Write the updated data.js
+        const newContent = `// The title + summary of claim at the top of each Claim page 
+const summaries = ${JSON.stringify(currentSummaries, null, 4)};
+
+
+// All claims data, stored in the tracker
+const data = ${JSON.stringify(currentData, null, 4)};
+
+export { data, summaries };
+`;
+        
+        fs.writeFileSync(dataFilePath, newContent, 'utf8');
+        
+        console.log(`✅ Successfully updated summary for claim "${claimTitle}"`);
+        console.log(`📁 Backup saved to ${backupPath}`);
+        
+        res.json({ 
+            success: true, 
+            message: `Summary for "${claimTitle}" successfully updated`,
+            updatedSummary: currentSummaries[summaryIndex],
+            backupPath: backupPath
+        });
+        
+    } catch (error) {
+        console.error('❌ Error updating summary:', error);
+        res.status(500).json({ 
+            error: 'Failed to update summary', 
+            details: error.message 
+        });
+    }
+});
+
+// API endpoint to save a new claim to data.js
+app.post('/api/save-claim', (req, res) => {
+    try {
+        const { summary, data } = req.body;
+        
+        if (!summary || !summary.claimMainTitle) {
+            return res.status(400).json({ error: 'Summary with claimMainTitle is required' });
+        }
+        
+        console.log(`🔄 Processing save request for new claim: "${summary.claimMainTitle}"`);
+        
+        const dataFilePath = path.join(__dirname, 'src', 'components', 'data.js');
+        
+        // Create backup before modification
+        const backupPath = createBackup('save-claim', summary.claimMainTitle);
+        
+        // Read current data.js
+        const currentContent = fs.readFileSync(dataFilePath, 'utf8');
+        
+        // Parse the current data
+        const summariesMatch = currentContent.match(/const summaries = (\[[\s\S]*?\]);/);
+        const dataMatch = currentContent.match(/const data = (\[[\s\S]*?\]);/);
+        
+        if (!summariesMatch || !dataMatch) {
+            return res.status(500).json({ error: 'Could not parse current data.js file' });
+        }
+        
+        let currentSummaries = JSON.parse(summariesMatch[1]);
+        let currentData = JSON.parse(dataMatch[1]);
+        
+        // Check if claim already exists
+        const existingSummary = currentSummaries.find(s => s.claimMainTitle === summary.claimMainTitle);
+        if (existingSummary) {
+            return res.status(409).json({ error: `Claim "${summary.claimMainTitle}" already exists in data.js` });
+        }
+        
+        // Add the new summary and data
+        currentSummaries.push(summary);
+        if (data && Array.isArray(data)) {
+            currentData.push(...data);
+        }
+        
+        // Write the updated data.js
+        const newContent = `// The title + summary of claim at the top of each Claim page 
+const summaries = ${JSON.stringify(currentSummaries, null, 4)};
+
+
+// All claims data, stored in the tracker
+const data = ${JSON.stringify(currentData, null, 4)};
+
+export { data, summaries };
+`;
+        
+        fs.writeFileSync(dataFilePath, newContent, 'utf8');
+        
+        console.log(`✅ Successfully saved new claim "${summary.claimMainTitle}" to data.js`);
+        console.log(`📁 Backup saved to ${backupPath}`);
+        
+        res.json({ 
+            success: true, 
+            message: `New claim "${summary.claimMainTitle}" successfully saved to data.js`,
+            backupPath: backupPath
+        });
+        
+    } catch (error) {
+        console.error('❌ Error saving claim:', error);
+        res.status(500).json({ 
+            error: 'Failed to save claim', 
+            details: error.message 
+        });
+    }
+});
+
+// API endpoint to delete a claim from data.js
+app.post('/api/delete-claim', (req, res) => {
+    try {
+        const { claimTitle } = req.body;
+        
+        if (!claimTitle) {
+            return res.status(400).json({ error: 'Claim title is required' });
+        }
+        
+        console.log(`🗑️ Processing deletion request for claim: "${claimTitle}"`);
+        
+        const dataFilePath = path.join(__dirname, 'src', 'components', 'data.js');
+        
+        // Create backup before deletion
+        const backupPath = createBackup('delete-claim', claimTitle);
+        
+        // Read current data.js
+        const currentContent = fs.readFileSync(dataFilePath, 'utf8');
+        
+        // Parse the current data
+        const summariesMatch = currentContent.match(/const summaries = (\[[\s\S]*?\]);/);
+        const dataMatch = currentContent.match(/const data = (\[[\s\S]*?\]);/);
+        
+        if (!summariesMatch || !dataMatch) {
+            return res.status(500).json({ error: 'Could not parse current data.js file' });
+        }
+        
+        let currentSummaries = JSON.parse(summariesMatch[1]);
+        let currentData = JSON.parse(dataMatch[1]);
+        
+        // Remove the claim from both arrays
+        const originalSummariesLength = currentSummaries.length;
+        const originalDataLength = currentData.length;
+        
+        currentSummaries = currentSummaries.filter(summary => summary.claimMainTitle !== claimTitle);
+        currentData = currentData.filter(item => item.claimTitle !== claimTitle);
+        
+        const deletedSummaries = originalSummariesLength - currentSummaries.length;
+        const deletedDataItems = originalDataLength - currentData.length;
+        
+        if (deletedSummaries === 0 && deletedDataItems === 0) {
+            return res.status(404).json({ error: `Claim "${claimTitle}" not found in data.js` });
+        }
+        
+        // Write the updated data.js
+        const newContent = `// The title + summary of claim at the top of each Claim page 
+const summaries = ${JSON.stringify(currentSummaries, null, 4)};
+
+
+// All claims data, stored in the tracker
+const data = ${JSON.stringify(currentData, null, 4)};
+
+export { data, summaries };
+`;
+        
+        fs.writeFileSync(dataFilePath, newContent, 'utf8');
+        
+        console.log(`✅ Successfully deleted claim "${claimTitle}" from data.js`);
+        console.log(`📊 Deleted: ${deletedSummaries} summary(s), ${deletedDataItems} data item(s)`);
+        console.log(`📁 Backup saved to ${backupPath}`);
+        
+        res.json({ 
+            success: true, 
+            message: `Claim "${claimTitle}" successfully deleted from data.js`,
+            deleted: {
+                summaries: deletedSummaries,
+                dataItems: deletedDataItems
+            },
+            backupPath: backupPath
+        });
+        
+    } catch (error) {
+        console.error('❌ Error deleting claim:', error);
+        res.status(500).json({ 
+            error: 'Failed to delete claim', 
             details: error.message 
         });
     }

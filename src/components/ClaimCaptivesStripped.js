@@ -21,13 +21,13 @@ import RenderTrackerMobile from './RenderTrackerMobile';
 
 export default function ClaimCaptivesStripped() {    
     const metadataProps = {
-        url: "https://hasbaratracker.com/captives-stripped",
+        url: "https://hasbaratracker.com/captives",
         title: summaries[7].claimMainTitle,
         description: summaries[7].claimSummary,
         
         twitterTitle: summaries[7].claimMainTitle,
         twitterDescription: summaries[7].claimSummary,
-        twitterUrl: "https://hasbaratracker.com/captives-stripped",
+        twitterUrl: "https://hasbaratracker.com/captives",
     };
 
     // defines claim tags for dropdown (ClaimFilter.js)

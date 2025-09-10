@@ -21,13 +21,13 @@ import RenderTrackerMobile from './RenderTrackerMobile';
 
 export default function ClaimIsraelHelpsElderlyMan() {    
     const metadataProps = {
-        url: "https://hasbaratracker.com/israel-helps-elderly-man",
+        url: "https://hasbaratracker.com/elderly",
         title: summaries[6].claimMainTitle,
         description: summaries[6].claimSummary,
         
         twitterTitle: summaries[6].claimMainTitle,
         twitterDescription: summaries[6].claimSummary,
-        twitterUrl: "https://hasbaratracker.com/israel-helps-elderly-man",
+        twitterUrl: "https://hasbaratracker.com/elderly",
     };
 
     // defines claim tags for dropdown (ClaimFilter.js)
